@@ -163,6 +163,9 @@ def replay(  # noqa: C901
             {
                 "type": "transfer",
                 "time": clock.isoformat(),
+                "effective_time": (
+                    clock if not curve else clock + pd.Timedelta(minutes=5)
+                ).isoformat(),
                 "amount": delta,
                 "quote_delta": -delta,
                 "futures_delta": delta,

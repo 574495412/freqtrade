@@ -166,3 +166,29 @@ def test_gross_reduction_keeps_one_campaign_and_delays_fills():
     assert len(reductions) == 2
     assert all(e["time"] == "2025-01-01T00:15:00+00:00" for e in reductions)
     assert len(result["trades"]) == 1 and result["capacity"]["hedge_failures"] == 0
+
+
+def test_flat_wallet_transfer_has_explicit_next_mark_and_restart_does_not_revise_history():
+    parts = list(fixture())
+    parts[4].extend(
+        [
+            {"time": "2025-01-01T00:10:00+00:00", "assets": {"X": {"entry": False, "exit": True}}},
+            {"time": "2025-01-01T00:20:00+00:00", "assets": {"X": {"entry": False, "exit": False}}},
+        ]
+    )
+    full = run(parts, end="2025-01-01 00:40")
+    transfers = [e for e in full["events"] if e["type"] == "transfer"]
+    assert transfers[1]["time"] == "2025-01-01T00:20:00+00:00"
+    assert transfers[1]["effective_time"] == "2025-01-01T00:25:00+00:00"
+    first = run(parts, end="2025-01-01 00:20", final_end="2025-01-01 00:40")
+    second = engine.replay(
+        *parts,
+        "2025-01-01 00:20",
+        "2025-01-01 00:40",
+        initial_state=json.loads(json.dumps(first["resume_state"])),
+        final_end="2025-01-01 00:40",
+    )
+    pd.testing.assert_frame_equal(
+        pd.concat([first["curve"], second["curve"].iloc[1:]], ignore_index=True), full["curve"]
+    )
+    assert first["events"] + second["events"] == full["events"]
