@@ -1,0 +1,223 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "universe_result_sha256": "8c40842bbca4ff128de18ffa7b76919b666660c6165a53f8cafe184906ef974c",
+  "schema": "crypto-quant-autonomous-two-sleeve.v2",
+  "registered_utc": "2026-10-23T15:50:36.373619+00:00",
+  "study": "autonomous_small_high_frequency_and_large_return_single_account",
+  "timeframe": "5m",
+  "stake_amount": "unlimited",
+  "max_open_trades": 6,
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/autonomous_dual_sleeve.py",
+      "sha256": "7320384104609892ae120dbb46880bdac2631ca0f488a96b3361fa0241ddafbe"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "AutonomousDualSleeve",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "AutonomousScalpOnly",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "AutonomousCoreOnly",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": false,
+    "reduce_df_footprint": false,
+    "ignore_buying_expired_candle_after": 300
+  },
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "historical_evidence_status": "new_autonomous_rule_on_previously_used_history_retrospective_not_independent_oos",
+  "human_objective": {
+    "quote": "小额频繁交易提升胜率 + 大额收益率，让收益率胜率都很高冲击带单排行榜，自主策略完成",
+    "same_account": true,
+    "must_copy_named_trader": false,
+    "must_use_original_public_flow_rule": false,
+    "venue_assumption": "Binance USDT perpetual for existing data/execution; destination venue and ranking category not confirmed"
+  },
+  "hypothesis": {
+    "small": "48bar mean above144bar mean, price above144bar mean;15min negative pullback then positive candle and rising14bar finite RSI from<40 to<50; mirrored short; volume ratio0.5..2; fresh edges",
+    "core": "48bar prior-high/low breakout,48vs288bar trend and1h slope aligned,volume>=1.5x prior12mean; core tag wins if signals overlap",
+    "risk": {
+      "small": {
+        "maximum_positions": 2,
+        "margin_fraction_cap": 0.02,
+        "initial_stop_risk_plus_known_fees_fraction": 0.0005,
+        "stop": "max0.8percent or2simpleATR14, reject>=2.5percent",
+        "exit": "0.6percent price target or closed20bar mean recovered with netmarginprofit>0.05percent or120minutes orfixedstop"
+      },
+      "core": {
+        "maximum_positions": 4,
+        "margin_fraction_cap": 0.2,
+        "initial_stop_risk_plus_known_fees_fraction": 0.005,
+        "stop": "max1percent or3simpleATR14,reject>=5percent",
+        "exit": "max3percent or3R priceprofit,72hourcap,after1hour closedprice crosses48barmean; after2R completedbarprofit trail1R behind completedclose"
+      },
+      "leverage": 2,
+      "no_dca": true,
+      "no_partial_exit": true,
+      "same_pair_one_position_native": true,
+      "size_uses_realized_native_capital": true,
+      "fees_in_initial_risk_budget": true,
+      "gaps_and_future_funding_not_guaranteed_by_stop_budget": true
+    }
+  },
+  "joint_targets": {
+    "targets_are_research_assumptions_not_promised_returns": true,
+    "minimum_net_whole_position_win_rate": 0.8,
+    "annual_compounded_net_return_target": 0.5,
+    "period_return_hurdle": "1.5 ** (UTC calendar days/365.25) - 1; report actual period return separately",
+    "minimum_small_complete_trades_per_calendar_day": 3.0,
+    "both_sleeves_positive_net_profit": true,
+    "core_net_profit_exceeds_small": true,
+    "all_three_cost_scenarios_must_pass": true,
+    "independent_forward_required_before_live": true
+  },
+  "training_schedule": [
+    {
+      "candidate": "AutonomousDualSleeve",
+      "costs": [
+        0,
+        3,
+        10
+      ]
+    },
+    {
+      "candidate": "AutonomousScalpOnly",
+      "costs": [
+        3
+      ]
+    },
+    {
+      "candidate": "AutonomousCoreOnly",
+      "costs": [
+        3
+      ]
+    }
+  ],
+  "ablation_policy": "Separate complete native accounts at identical capital and3bps additional costs; report opportunity conflicts, never add or splice their PnL to form the combined account",
+  "selection_rule": "Only AutonomousDualSleeve may qualify; if any cost fails joint targets choose cash without later-year or model calls",
+  "leaderboard_metric_sources": [
+    {
+      "url": "https://www.binance.com/en/support/faq/detail/54aa6d3b43bc4f6eb4a3a6e3aea40acd",
+      "retrieved_utc": "2026-10-23T15:23:13.643880+00:00",
+      "definition": "whole fully closed positions for winrate; portfolio PnL includes unrealized PnL and fees; current ROI uses MaxBaseBalance; recommendation categories include ROI/PnL/copierPnL/copiercount"
+    },
+    {
+      "url": "https://www.okx.com/en-gb/help/copy-traders-how-to-choose-a-lead-trader",
+      "retrieved_utc": "2026-10-23T15:23:13.643883+00:00",
+      "definition": "Overview includes return, drawdown, followers and followerPnL; do not assume winrate alone determines rank"
+    }
+  ],
+  "leaderboard_scope_limits": [
+    "No current rank/percentile asserted without same-time competitor distribution and exact destination venue/category",
+    "No estimated copierPnL without follower execution and minimum-order evidence",
+    "Historical no-deposit account uses initial capital as return denominator; real MaxBaseBalance requires deposit records",
+    "Winrate is net-profit-positive entire closed positions, not orders or partials"
+  ],
+  "scope_limitations": [
+    "All existing project history is retrospective and current-deployability intersection has survivorship bias",
+    "No leader labels, copied live account, source strategy state or production service is imported",
+    "Current deployability intersection survivorship bias persists",
+    "No price-fitting, grid search, best subperiod reporting or leader labels",
+    "5minute stops/target paths are coarse; qualification requires independent finer execution evidence"
+  ],
+  "orders_enabled": false,
+  "production_eligible": false,
+  "supersedes_engineering_run": {
+    "plan": "/Users/chrise/GitHub/freqtrade/research/crypto/autonomous_dual_sleeve_plan.json",
+    "sha256": "aa2e950b51dab6557937f5821e51ca273e9b8e8c3a372baf458494c09ae9d7d3",
+    "run": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/autonomous_dual_sleeve_run_v001",
+    "disposition": "no economic verdict; stopped for quadratic native custom-state lookup"
+  },
+  "runner_module": "research.crypto.run_candidate_indexed",
+  "runtime_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/indexed_custom_data.py",
+      "sha256": "58445b63c6df934f1170066a83a28f4938c52885da3d07e4ac21d5a7207c7596"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_candidate_indexed.py",
+      "sha256": "57c8feb40ff57d1c099fda132343d84a33cb9db207d36ea81bc3ff21372eae11"
+    }
+  ],
+  "business_rules_and_objectives_unchanged": true
+}

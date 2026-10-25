@@ -1,0 +1,144 @@
+{
+  "schema": "crypto-quant-perpetual-public-flow.v1",
+  "registered_utc": "2026-10-23T14:47:29.652774+00:00",
+  "instrument_scope": "USDT perpetual futures only; spot and spot-perpetual carry suspended from main research",
+  "user_reference": "Omofun and DAmorne style, not claimed as private strategy replication",
+  "reference_code_head": "9dab77ec002fda1b2539ab0238cc60ad65694cac",
+  "references": [
+    {
+      "source": "/Users/chrise/GitHub/CZ-Agent/cz/trading/crypto/meme/damorne/launch/selection/public_rule_selector.py",
+      "snapshot": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/external_sources_20261023/perpetual_references/public_rule_selector.py",
+      "sha256": "a651f0679c12e26d9846ad8afa3ae4a9dd51fc416cce74063ac2255b11baed14"
+    },
+    {
+      "source": "/Users/chrise/GitHub/CZ-Agent/cz/trading/crypto/meme/damorne/launch/lifecycle/public_rule_lifecycle.py",
+      "snapshot": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/external_sources_20261023/perpetual_references/public_rule_lifecycle.py",
+      "sha256": "86069fa8e4770e2bab9fe1cba74c47f00bc7458b14b59f199f119aaa28de4430"
+    },
+    {
+      "source": "/Users/chrise/GitHub/CZ-Agent/cz/trading/crypto/meme/omofun/strategy/fast_attention.py",
+      "snapshot": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/external_sources_20261023/perpetual_references/fast_attention.py",
+      "sha256": "ccdf16a3f3cd635a0fc59b961c8911fcfa0f062933f521e61bd34a0e7f1622b1"
+    }
+  ],
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "klines_stage": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002_klines",
+  "klines_receipts_sha256": "bcbd3a20bac350b6bc2bc26ce9dc39edc5d51ca640b27a09a281f8070c41d0c4",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "feature_start": "2023-12-01",
+  "feature_end": "2026-09-01",
+  "features": {
+    "clock": "5m open labels; complete bar only available after open+5min; next native bar execution",
+    "return_20": "close/close.shift4-1",
+    "residual": "20-minute return minus same-time median of complete40-member population",
+    "volume_ratio": "current5m quote volume divided by prior6bar quote-volume mean",
+    "liquidity": "12bar quote-volume sum, cross-sectional rank",
+    "flow": "2*taker_buy_quote/quote_volume-1 from actual5m archive field; unknown zero-volume flow stays unknown",
+    "selection": "volume rank>=.9, liquidity rank>=.5; top20m return decile/residual>0/flow>0 long, bottom decile/residual<0/flow<0 short; rising direction edges, one highest volume-rank then absolute residual then symbol perbar",
+    "missingness": "all40 exact aligned candles required; unknown features produce no entry",
+    "adaptation": "3minute public flow becomes archived5minute flow; crypto-only40 instead of original larger crypto/TradFi population; no positioning data synthesized"
+  },
+  "account": {
+    "initial_equity_usdt": 1000,
+    "stake_cap_usdt": 150,
+    "max_open_trades": 4,
+    "fixed_leverage": 1,
+    "risk_fraction_per_seed": 0.0025,
+    "initial_stop": "2*14bar simple-average true-range, fixed at filled entry; reject distance>=5percent;5percent native fallback",
+    "holding_limit_minutes": 60,
+    "fees_per_side": 0.0005,
+    "extra_cost_bps_per_side": [
+      0,
+      3,
+      10
+    ]
+  },
+  "candidates": {
+    "PerpFlowFast": "full1percent price-profit harvest, loss of residual or flow confirmation,60minute cap or fixedATRstop; no additions",
+    "PerpFlowFunded": "same seed and risk; one half-size exit at1percent priceprofit; one addition only after actual net-positive realized profit including native fees/funding, still-current direction confirmation, added stop-risk bounded by realized profit, added stake<=half initial; maximum2entries and1partial harvest; full2percentprofit or original confirmation/time/ATR exits"
+  },
+  "screening_targets": {
+    "positive_all_costs": true,
+    "minimum_closed_trades_per_phase": 30,
+    "minimum_profit_factor": 1.1,
+    "maximum_observed_drawdown": 0.1,
+    "fast_minimum_complete_trades_per_calendar_day": 1.0
+  },
+  "initial_stages": {
+    "train": [
+      "2024-01-01",
+      "2025-01-01"
+    ],
+    "validation": [
+      "2025-01-01",
+      "2026-01-01"
+    ],
+    "holdout": [
+      "2026-01-01",
+      "2026-09-01"
+    ],
+    "continuous": [
+      "2025-01-01",
+      "2026-09-01"
+    ]
+  },
+  "capacity_after_eligibility": {
+    "capital_scenarios_usdt": [
+      10000,
+      100000
+    ],
+    "stake_cap_fraction_of_initial_capital": 0.15,
+    "native_account_must_be_rerun": true,
+    "capacity_not_proven_by_linear_pnl_scaling": true
+  },
+  "limits": [
+    "All existing project history is retrospective and current-deployability intersection has survivorship bias",
+    "No leader labels, copied live account, source strategy state or production service is imported",
+    "No simultaneous long and short on one pair in native Freqtrade; no full Omofun hedge/grid replication claim",
+    "Historical public-flow panel is only an economic research input; a validated current-bar feed is required before paper/live eligibility"
+  ],
+  "orders_enabled": false,
+  "production_eligible": false
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "crypto-quant-nfi-universe.v1",
+  "author_commit": "16395b32d3c36ba728b2b489e9e51e44d3a8ff8c",
+  "author_pairlist": "configs/pairlist-backtest-static-binance-futures-usdt.json",
+  "target_size": 40,
+  "ranking_period": "2023-12",
+  "ranking_metric": "sum of official Binance futures daily quote_volume",
+  "tie_break": "symbol ascending",
+  "minimum_history": "current contract onboardDate at most 2021-10-01; complete Dec2023 day calendar required; subsequent data preparation must verify 800 daily candles before2024",
+  "deployable_contract_filter": "must be active in current Binance linear USDT perpetual market metadata and present in the author2023 list",
+  "history_limitation": "present-day deployable intersection introduces survivorship bias; historical returns are retrospective, not independent universe OOS",
+  "selection_uses_strategy_returns": false,
+  "orders_enabled": false
+}

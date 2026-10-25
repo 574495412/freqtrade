@@ -234,7 +234,7 @@ certifi = "2 days"
 [tool.ruff]
 line-length = 100
 # TODO: markdown files should be linted.
-extend-exclude = [".env", ".venv", "*.md"]
+extend-exclude = [".env", ".venv", "*.md", "research/crypto/strategies/Supertrend2022Base.py"]
 
 [tool.ruff.lint]
 extend-select = [
@@ -285,6 +285,12 @@ extend-ignore = [
 
 
 [tool.ruff.lint.per-file-ignores]
+"freqtrade/research/**.py" = [
+  "RUF001", "RUF002", "RUF003", # 中文研究说明使用中文标点
+]
+"research/crypto/**.py" = [
+  "RUF001", "RUF002", "RUF003",
+]
 "freqtrade/freqai/**/*.py" = [
   "S311",  # Standard pseudo-random generators are not suitable for cryptographic purposes
 ]

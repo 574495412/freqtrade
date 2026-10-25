@@ -1,0 +1,29 @@
+{
+  "schema": "three-project-quant-mainline.v2",
+  "effective_date_shanghai": "2026-10-25",
+  "user_direction": "统一因子目录供股票/加密共用，研发更多因子及宏观新闻/预测，在现有HTML界面组合，使用代表性窗口快速产出量化结果",
+  "supersedes_scope": "Original two-candidate/no-expansion research restriction superseded by explicit later instructions; frozen older outcomes remain unchanged",
+  "canonical_factor_root": "/Users/chrise/GitHub/TradingAgents/factors",
+  "factor_catalog": "/Users/chrise/GitHub/TradingAgents/factors/catalog.json",
+  "ownership": {
+    "TradingAgents": "canonical factors, cross-asset adapters, training, news timing, forecasts, independent audit",
+    "Freqtrade": "crypto capacity/cost/funding account execution research",
+    "CZ-Agent": "existing research UI and fixed local research API; separate production ownership"
+  },
+  "active_study": "/Users/chrise/GitHub/TradingAgents/results/research/factor_lab_20261025_v004",
+  "active_audit": "/Users/chrise/GitHub/TradingAgents/results/research/factor_lab_20261025_audit_v003",
+  "committed_summary": "/Users/chrise/GitHub/TradingAgents/docs/research/factor_lab_20261025/summary.json",
+  "active_factors": 74,
+  "equity_compatible_factors": 69,
+  "historical_source_files": 195,
+  "forecast_models": 12,
+  "historical_accounts": 64,
+  "representative_window_days": 28,
+  "representative_windows": 7,
+  "news_source": "22 official FOMC releases, no fabricated CPI or consensus data",
+  "frozen_execution_snapshots": "CZ existing production factor files and old immutable research snapshots retain their original versions; no symlink or live research import",
+  "production_eligible": false,
+  "orders_enabled": false,
+  "independent_oos": false,
+  "note": "Mixed window results; current study does not establish stable alpha. Commit is local; deployment and live trading remain separate."
+}

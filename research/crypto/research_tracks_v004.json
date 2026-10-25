@@ -1,0 +1,68 @@
+{
+  "schema": "three-project-quant-mainline.v1",
+  "effective_date_shanghai": "2026-10-25",
+  "user_authorized_direction": "流动性充足币种的中低频趋势／动量，完整验证扣费收益、回撤与容量，找到有效收益源后再扩展",
+  "active_lane": "liquid_crypto_medium_low_frequency_trend_momentum",
+  "ownership": {
+    "TradingAgents": "研究协议、冻结试验编排、独立复核、盈亏归因和下一步决策",
+    "Freqtrade": "加密公开历史数据与容量约束研究回放；保留原生交易引擎边界",
+    "CZ-Agent": "只读研究展示与独立生产交易职责；研究结果不自动生成订单"
+  },
+  "entry_command": "python3 /Users/chrise/GitHub/TradingAgents/scripts/trend_mainline.py --name trend_mainline_<fresh_version>",
+  "protocol": "/Users/chrise/GitHub/freqtrade/research/crypto/trend_mainline_v001.json",
+  "latest_primary": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trend_mainline_20261025_v001",
+  "latest_audit": "/Users/chrise/GitHub/TradingAgents/results/research/trend_mainline_20261025_audit_v002",
+  "latest_review": "/Users/chrise/GitHub/TradingAgents/results/research/trend_mainline_20261025_review_v002",
+  "latest_capacity_stress": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trend_mainline_capacity_20261025_v001",
+  "latest_capacity_audit": "/Users/chrise/GitHub/TradingAgents/results/research/trend_mainline_capacity_20261025_audit_v002",
+  "candidates": [
+    "Donchian55",
+    "Momentum63"
+  ],
+  "controls": [
+    "cash_zero_interest",
+    "LongOnlyControl_same_ex_ante_risk_rules"
+  ],
+  "new_parameter_optimization_allowed": false,
+  "new_strategy_families_allowed": false,
+  "other_research_status": {
+    "leader_replication": "preserved_offline_hypothesis_source_queued",
+    "funding_factor_discovery": "preserved_queued",
+    "NFI_DCA_optimization": "preserved_queued",
+    "equities_HK_US": "preserved_queued",
+    "intraday_high_frequency": "preserved_queued"
+  },
+  "existing_account_or_process_changes": false,
+  "workflow": [
+    "register_and_hash",
+    "source_quality_and_time_checks",
+    "all_training_cost_cases",
+    "freeze_selection_or_cash",
+    "declared_diagnostic_time_windows",
+    "capital_reruns_with_partial_fill_and_persistent_exit",
+    "independent_cash_funding_NAV_capacity_audit",
+    "causal_prefix_and_attribution_review",
+    "explicit_continue_reject_or_missing_evidence_decision"
+  ],
+  "current_selection": "cash",
+  "valid_return_source_established": false,
+  "expansion_allowed": false,
+  "next_experiment_requires": [
+    "documented failure mechanism and falsifiable hypothesis",
+    "declared search budget including cumulative prior attempts",
+    "fixed risk and realistic cost assumptions",
+    "new evidence or a genuinely justified mechanism change; preserve all failures",
+    "untouched data reserved before outcomes if claiming independent OOS"
+  ],
+  "expansion_requires": [
+    "credible cost-adjusted incremental return against declared controls",
+    "drawdown and open lifecycle attribution acceptable under frozen risk budget",
+    "capital scenarios and partial exits reconciled",
+    "independent evidence addressing repeated-search and universe-selection bias",
+    "explicit research review decision"
+  ],
+  "production_eligible": false,
+  "orders_enabled": false,
+  "routine": "每周汇总新增证据、失败归因、成本与容量变化；按证据推进。未创建定时任务，未设强制等待天数。",
+  "screening_threshold_scope": "本版事前研究筛选线；不是行业统一标准，不因失败事后降低。"
+}

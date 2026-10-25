@@ -1,0 +1,198 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "universe_result_sha256": "8c40842bbca4ff128de18ffa7b76919b666660c6165a53f8cafe184906ef974c",
+  "runtime_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/indexed_custom_data.py",
+      "sha256": "58445b63c6df934f1170066a83a28f4938c52885da3d07e4ac21d5a7207c7596"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_candidate_indexed.py",
+      "sha256": "57c8feb40ff57d1c099fda132343d84a33cb9db207d36ea81bc3ff21372eae11"
+    }
+  ],
+  "historical_evidence_status": "new_autonomous_rule_on_previously_used_history_retrospective_not_independent_oos",
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "human_objective": {
+    "quote": "小额频繁交易提升胜率 + 大额收益率，让收益率胜率都很高冲击带单排行榜，自主策略完成",
+    "same_account": true,
+    "must_copy_named_trader": false,
+    "must_use_original_public_flow_rule": false,
+    "venue_assumption": "Binance USDT perpetual for existing data/execution; destination venue and ranking category not confirmed"
+  },
+  "leaderboard_scope_limits": [
+    "No current rank/percentile asserted without same-time competitor distribution and exact destination venue/category",
+    "No estimated copierPnL without follower execution and minimum-order evidence",
+    "Historical no-deposit account uses initial capital as return denominator; real MaxBaseBalance requires deposit records",
+    "Winrate is net-profit-positive entire closed positions, not orders or partials"
+  ],
+  "schema": "crypto-quant-inventory-recovery-and-risk-target.v2",
+  "registered_utc": "2026-10-23T19:55:34.130216+00:00",
+  "study": "fixed_two_mechanism_factorial_recovery_entry_and_risk_scaled_exit",
+  "timeframe": "5m",
+  "stake_amount": "unlimited",
+  "max_open_trades": 4,
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/bounded_inventory.py",
+      "sha256": "5c823e5b72d3252b06d0234bc2d684ac78cd5ef88b397a30d0923ba7df8109a2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/inventory_recovery_risk.py",
+      "sha256": "5ba408a83c676ad93faa848d6987449cef392b2a481ae4920e8adad56a7f3acb"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "InventoryRecovered",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "InventoryRiskTarget",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "InventoryRecoveredRisk",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": false,
+    "reduce_df_footprint": false,
+    "ignore_buying_expired_candle_after": 300
+  },
+  "runner_module": "research.crypto.run_candidate_indexed",
+  "orders_enabled": false,
+  "production_eligible": false,
+  "hypothesis": {
+    "small_entry": "Completed5minute close above completed4hourEMA200 andbelow min(completed1hourEMA12,EMA48)-max0.6percentclose or1.5hourATR14; mirrored short below4htrend andaboveupperEMAband. Freshedges.",
+    "core_entry": "Same overall4hourEMA200 direction; gap beyondEMA band>=max2percentclose or1.5completed4hourATR14. Corepriority ifbothsleeves signal samepair.",
+    "risk": "Leverage2,small2slots/core2slots;campaign budget includes ALL future planned fills andknown fees. Small0.1percent realizedcapital initial loss budget and2percent campaign margincap;core0.5percent and20percent cap. Initial stop max3percent/4hourATR14 small, reject>10percent; core max8percent/4slow4hATR14,reject>30percent. Absolute initial stop never widens.",
+    "tranches": "Control1entry, treatment atmost3equal-dollar stakes; planned levels firstprice, firstprice plus/minus25percent and50percent of original stopdistance. First stake chosen againstsum of all3planned stoplosses andfees. Adds require lastcompleted5mclose andcurrententryrate tohave crossednextlevel butcurrentrate stillon safe sideoforiginalstop. Recompute remaining risk includingknownnegativefunding andmargincap beforeeach add;never double stake.",
+    "exit": "NativeROI1.6percent netmargin small,6percent core; fullposition exitonly, no partialharvest. Small4hour/core72hourtimecap includeslosingcampaigns; fixedcampaignstop. Report completecampaign netwinrate, not individualfills.",
+    "comparison": "Prior InventoryGrid3 remains unchanged baseline. RecoveryOnly changesentry; RiskTargetOnly changesROI; RecoveredRisk combinesboth. Allthree fixedaccounts compared; no outcome-driven threshold grid or posthoc selection.",
+    "limitations": "Fixed stops cannot guarantee gap/futurefundinglosslimit. Native5minuteOHLCmatching needsfiner pathvalidation ifqualified. Strategy only inspiredbyEMA inventory mechanism, notPassivbot sourceorconfigreplication.",
+    "entry_increment": "Within last3completed5minbars, price was beyond original EMA band threshold. Current completed close reclaims the threshold and priorclose, candlebody hasrecovery direction, close_location>=0.6long/<=0.4short, original4hEMA200direction and dataavailability stillrequired. First fresh recovery edge only; deep core signals retainpriority. No BTC filter or new symbol choice.",
+    "exit_increment": "R is currentfilledprefix dollar loss to fixedoriginalstop withboth knownfees plus accruednegativefunding, no positivefundingcredit. Target netcash is0.75Rsmall/1.5Rcore convertedusing nativefee-adjusted openvalue and2xleverage. Recomputedonlyfrompast/currentfills andknownfunding; no futureprices/labels. Original4h/72h fullposition timecap andfixedstop, equal tranches andriskbudgets unchanged.",
+    "rationale": "Observed originalsmall andcore exitpayoffs lose despitehighwinrate. Test recovery timing andrisk-scaled reward independently before assuming edge."
+  },
+  "source_inspiration": [
+    {
+      "url": "https://github.com/enarjord/passivbot/blob/master/README.md",
+      "role": "EMA band contrarian perpetualinventory idea; currentmasterdoc, not pre2024source or profitability evidence."
+    },
+    {
+      "url": "https://github.com/enarjord/passivbot/blob/master/docs/risk_management.md",
+      "role": "Inventory/exposure andstuck-position risks. Our fixedcampaignrisk,stop,tranches/timecap rules independentlyspecified."
+    },
+    {
+      "url": "https://www.freqtrade.io/en/stable/strategy-callbacks/",
+      "role": "NativecustomROI callback and leverage/fee conventions; our newrules are separatelyfrozenhypotheses."
+    }
+  ],
+  "execution_schedule": {
+    "discovery": "Allthree fixed2024complete native accounts at3bps, plus frozenpriorbaseline. No strategy mutation afterfirstoutcome. Allscorecards reportmarkedROI/Sharpe/Sortino/Calmarcomparisons/PF/expectancy/wholewinrate/frequency/sleevePNL.",
+    "followup": "Onlya candidatewithnetpositivewholeaccount, bothpositivesleevesandgenericrisk/PF/tradescreen receives0/10bps costand2025validation unchanged. Joint80percentwin/50percentannual/3smallcampaignsperdaytargetsremainresearchassumptions,notofficialthresholds; passinggenericgateisnotjointqualification.",
+    "history": "Existing2024/2025/2026history previouslyexamined; no independentOOSclaim. Actualforwardandconcreteaccount/host requiredbeforelive."
+  },
+  "metric_contract": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/performance_metric_contract_v003.json",
+    "sha256": "58dd4786047d2cd161cb99d094735418ddcd68fb4a41fb6107542e63c2c906b2"
+  },
+  "prefix_checker": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/check_inventory_recovery_prefix.py",
+    "sha256": "c25426fa8c6b9cfe486f90c8e2508fc268c4e7edb3485407224f10bde8269b76"
+  },
+  "prior_control_result_observed_before_design": {
+    "core_net_win_rate": 0.7484472049689441,
+    "core_mean_win_usdt": 0.7095346518672199,
+    "core_mean_loss_usdt": 2.290895633209877,
+    "control_net_return": -0.04972676001,
+    "not_independent_oos": true
+  },
+  "joint_targets": {
+    "targets_are_research_assumptions_not_promised_returns": true,
+    "minimum_net_whole_position_win_rate": 0.8,
+    "annual_compounded_net_return_target": 0.5,
+    "period_return_hurdle": "1.5 ** (UTC calendar days/365.25) - 1; report actual period return separately",
+    "minimum_small_complete_trades_per_calendar_day": 3.0,
+    "both_sleeves_positive_net_profit": true,
+    "core_net_profit_exceeds_small": true,
+    "all_three_cost_scenarios_must_pass": true,
+    "independent_forward_required_before_live": true
+  },
+  "superseded_plan_sha256": "cbe709bb402ad032339573b0e110fd872c98384f85f31e187b323d06fce51e43",
+  "engineering_disposition": "Before any economic account: prefix calculations finished but receipt save failed because parent directory absent. Add parent creation and bind immediate loop closure; no strategy/economic outcome changed."
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "crypto-quant-forward-microstructure.v1",
+  "registered_date": "2026-10-24 Asia/Shanghai",
+  "objective": "Improve the autonomous same-account small frequent net-win sleeve with real forward book and trade observations; retain the core crowding/absorption clue without promoting it",
+  "stage": "forward_capture_and_causal_feature_feasibility_only",
+  "symbols": ["BTCUSDT", "ETHUSDT", "BNBUSDT", "SOLUSDT", "XRPUSDT", "DOGEUSDT"],
+  "instrument_scope": "Binance USDT perpetual futures only",
+  "sources": {
+    "depth": "wss://fstream.binance.com/public/stream",
+    "trades": "wss://fstream.binance.com/market/stream",
+    "clock": "https://fapi.binance.com/fapi/v1/time",
+    "depth_stream": "{symbol}@depth20@100ms",
+    "trade_stream": "{symbol}@aggTrade",
+    "depth_excludes_rpi": true,
+    "trade_normal_quantity": "nq excludes RPI; q includes all market trades; preserve both",
+    "public_only": true
+  },
+  "profiles": {"pilot": {"duration_seconds": 180}, "main": {"duration_seconds": 3600}},
+  "capture": {
+    "chunk_seconds": 60,
+    "maximum_uncompressed_bytes": 600000000,
+    "minimum_free_disk_bytes": 2000000000,
+    "status_seconds": 5,
+    "clock_interval_seconds": 60,
+    "socket_timeout_seconds": 10,
+    "reconnect_delay_seconds": 1,
+    "maximum_reconnect_delay_seconds": 10,
+    "maximum_reconnects_per_channel": 20,
+    "receive_record": "original raw combined JSON plus local wall nanoseconds, monotonic nanoseconds, channel, connection epoch and capture sequence",
+    "on_restart": "new directory and new epochs; never append or hide disconnections",
+    "write_failure": "stop run and preserve partial evidence",
+    "credentials_required": false
+  },
+  "feature_clock": {
+    "cadence_seconds": 1,
+    "availability": "only raw messages already received by decision monotonic time",
+    "book_maximum_age_ms": 1000,
+    "trade_maximum_age_ms": 5000,
+    "wall_clock_step_tolerance_ms": 50,
+    "window_seconds": [30, 120],
+    "flow_requires": "positive observed volume, consecutive aggregate trade IDs in one uninterrupted connection epoch, first observation before window and a recent trade; gaps reset warmup",
+    "no_missing_filling": true,
+    "late_events": "remain first visible at actual receipt; never backdated into a prior feature row"
+  },
+  "factors": {
+    "spread_bps": "10000*(ask1-bid1)/mid",
+    "imbalance_l1": "(bid1_quantity-ask1_quantity)/(bid1_quantity+ask1_quantity)",
+    "imbalance_l5": "signed notional imbalance of current top5 visible bid and ask levels",
+    "imbalance_l20": "signed notional imbalance of current top20 visible bid and ask levels",
+    "microprice_deviation_bps": "10000*((ask1*bid1_quantity+bid1*ask1_quantity)/(bid1_quantity+ask1_quantity)/mid-1)",
+    "received_flow_30s": "sum signed p*nq /sum p*nq for actual received trades in last30seconds; buyer maker means negative aggressor sign",
+    "received_flow_120s": "same definition for120seconds",
+    "received_total_flow_30s": "same30second signed measure using all quantity q, reported separately from visible-book-compatible nq",
+    "received_rpi_share_30s": "sum p*(q-nq)/sum p*q in received30second window",
+    "persistence_30s": "share of six5second bins with positive normal-quantity signed flow minus share negative; every bin requires positive volume",
+    "flow_x_imbalance": "received_flow_30s *imbalance_l5",
+    "flow_x_microprice": "received_flow_30s *microprice_deviation_bps"
+  },
+  "preserved_failures": "Prior34features and6combination screens remain rejected; no change of thresholds, costs or historical conclusions",
+  "core_reference": "conditional_context_screen_v001/CrowdingAbsorption is an unqualified clue with20labels across8days; not an eligible strategy",
+  "evaluation_boundary": "This stage does not fit models, compute forward-return labels, infer profit or qualify execution; register an economic protocol before outcome analysis",
+  "future_cost_policy": "Retain actual funding and5bps fees per side plus0/3/10bps cost scenarios; no assumed maker rebate or touch-equals-fill",
+  "documentation": [
+    "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/ws-streams/public",
+    "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/ws-streams/market"
+  ],
+  "orders_enabled": false,
+  "production_eligible": false
+}

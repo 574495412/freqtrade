@@ -1,0 +1,201 @@
+{
+  "schema": "crypto-quant-cross-asset-crowding-combination.v1",
+  "registered_date": "2026-10-24 Asia/Shanghai",
+  "human_objective": "继续更多因子的策略研究，找出更优秀的因子组合；同账户净胜率与净收益联合优化",
+  "instrument_scope": "Binance USDT perpetual futures only; long and short",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "DOGEUSDT"
+  ],
+  "universe_reason": "Original six-coin liquid baseline registered before40coin experiments; no result-based asset selection",
+  "base_dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "base_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "flow_archives": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002_klines",
+  "flow_archive_receipts_sha256": "bcbd3a20bac350b6bc2bc26ce9dc39edc5d51ca640b27a09a281f8070c41d0c4",
+  "feature_start": "2023-12-01",
+  "feature_end": "2025-01-01",
+  "fit_start": "2024-01-01",
+  "fit_end": "2024-07-01",
+  "selection_start": "2024-07-01",
+  "selection_end": "2024-10-01",
+  "reserved_test_start": "2024-10-01",
+  "reserved_test_end": "2025-01-01",
+  "historical_scope": "Retrospective project history; reserved split prevents computation leakage within this experiment, not project-level independent OOS",
+  "clock": {
+    "bar_minutes": 5,
+    "features_available": "bar open+5minutes",
+    "entry": "bar open+10minutes; one complete buffer bar",
+    "metrics_visibility": "raw timestamp+10minutes; exact raw clock only, no forward interpolation",
+    "funding_visibility": "actual raw event timestamp+5minutes; past events only in features",
+    "training_labels_must_end_strictly_before_fit_end": true
+  },
+  "groups": {
+    "CrossAssetRotation": [
+      "return20",
+      "return60",
+      "return24h",
+      "atr_fraction",
+      "close_location",
+      "range_fraction",
+      "volume_ratio",
+      "distance_mean24",
+      "btc_return24h",
+      "flow20",
+      "flow60",
+      "impact_residual20",
+      "path_efficiency60",
+      "flow_exhaustion20",
+      "btc_residual60",
+      "relative_return20",
+      "market_return20",
+      "market_dispersion20",
+      "breadth20",
+      "compression60_vs24h"
+    ],
+    "CrowdingAbsorption": [
+      "CrossAssetRotation",
+      "global_account_logratio",
+      "global_account_change60",
+      "crowding_x_residual20",
+      "crowding_x_flow20"
+    ],
+    "CrowdingFundingStress": [
+      "CrowdingAbsorption",
+      "funding_sum24h",
+      "funding_x_crowding",
+      "oi_contraction60",
+      "contraction_x_crowding"
+    ]
+  },
+  "factor_definitions": {
+    "return20": "4bar log-close difference",
+    "return60": "12bar log-close difference",
+    "return24h": "288bar log-close difference",
+    "atr_fraction": "simple14bar true-range mean /close",
+    "close_location": "2*(close-low)/(high-low)-1; flat range unknown",
+    "range_fraction": "(high-low)/close",
+    "volume_ratio": "current quote volume /prior12bar quote mean",
+    "distance_mean24": "close/24bar rolling mean-1",
+    "btc_return24h": "same-time completed BTC24h return",
+    "flow20": "2*sum4bar actual taker quote/sum4bar quote-1",
+    "flow60": "same12bar window",
+    "impact_residual20": "20min realized log return minus response expected from intercept and beta fit on prior24five-minute bars ending before current4bar window, divided by prior log-return volatility*sqrt4",
+    "path_efficiency60": "absolute12bar log return /sum12bar absolute log returns",
+    "flow_exhaustion20": "negative flow20*return20 /prior volatility; conditional price-flow interaction",
+    "funding_sum24h": "sum actual visible rates in past24h; unknown without full source coverage and at least1event",
+    "funding_change24h": "past24h sum minus preceding24h sum",
+    "oi_contraction60": "max(-log(OI_u/OI_u_minus60min),0), exact delayed positive endpoints only; zero/missing endpoints unknown",
+    "interactions": "direct products of named contemporaneously available factors",
+    "btc_residual60": "12bar return minus prior288bar OLS intercept*12 and beta*BTC12bar return; fit window ends before current12bar window",
+    "relative_return20": "contract return20 minus equal-weight mean return20 of the other five fixed contracts",
+    "market_return20": "equal-weight leave-one-out mean return20 of the other five; requires all six finite",
+    "market_dispersion20": "population standard deviation of six current completed return20 values",
+    "breadth20": "share of six completed return20 values positive minus0.5; all six required",
+    "compression60_vs24h": "std12bar five-minute returns divided by std288bar returns ending before current12bar window; positive denominator required",
+    "global_account_logratio": "log delayed raw count_long_short_ratio, positive known value at raw t-5min, visible at feature t+5min",
+    "global_account_change60": "current global_account_logratio minus exact raw60min-earlier logratio; no interpolation",
+    "crowding_x_residual20": "global_account_logratio * impact_residual20",
+    "crowding_x_flow20": "global_account_logratio * flow20",
+    "funding_x_crowding": "visible actual funding_sum24h * global_account_logratio",
+    "contraction_x_crowding": "positive-only oi_contraction60 * global_account_logratio"
+  },
+  "failed_hypotheses_preserved": [
+    "H02 top-position/account tilt prediction increment failed",
+    "H03 positive OI expansion x flow prediction increment failed",
+    "H04 spot/perpetual carry rejected and outside current scope",
+    "Public direction and autonomous OHLCV baseline rejected; no same-rule parameter search"
+  ],
+  "labels": {
+    "small": {
+      "take_price_fraction": 0.006,
+      "stop_price_fraction": 0.012,
+      "maximum_bars": 24
+    },
+    "core": {
+      "take_price_fraction": 0.06,
+      "stop_price_fraction": 0.02,
+      "maximum_bars": 288
+    },
+    "entry_price": "actual open2bars after featurebar",
+    "ambiguous_bar": "stop before target; gap beyond stop uses worse open; profitable gap capped at target",
+    "base_fee_per_side": 0.0005,
+    "training_extra_cost_bps_per_side": 3,
+    "funding": "actual future events and hourly mark proxy in labels only; never in input features",
+    "label_is_not_a_continuous_account": true
+  },
+  "model": {
+    "type": "per-direction and per-sleeve pooled logistic L2 net-win classification plus ridge net-return regression",
+    "standardization": "fit rows only; primary group comparison uses the same full-feature complete population",
+    "lambda": 0.01,
+    "logistic_max_iterations": 200,
+    "optimizer": "scipy L-BFGS-B with analytic gradient; intercept unpenalized; no hyperparameter search",
+    "symbol_specific_rules": false
+  },
+  "signal_selection": {
+    "small_minimum_win_probability": 0.8,
+    "core_minimum_win_probability": 0.55,
+    "minimum_predicted_net_return": 0.001,
+    "ranking": "highest predicted net return, at most1small and1core proposal perbar; deterministic symbol tie break",
+    "small_max_open": 2,
+    "core_max_open": 2,
+    "same_pair_one_native_position": true,
+    "leverage": 2,
+    "small_risk_fraction": 0.0005,
+    "core_risk_fraction": 0.005,
+    "small_margin_fraction_cap": 0.02,
+    "core_margin_fraction_cap": 0.2
+  },
+  "prediction_screen": {
+    "minimum_signals_per_sleeve": 30,
+    "positive_average_net_label_both_sleeves": true,
+    "net_win_rate_small_at_least": 0.8,
+    "net_win_rate_core_at_least": 0.55,
+    "all_groups_and_cash_reported": true,
+    "paired_common_population_increment_required_for_factor_claim": true,
+    "overlapping_labels_not_summed_as_account_pnl": true,
+    "no_trades_is_failure_not_profit": true
+  },
+  "native_stage": "Only prediction-eligible frozen groups enter whole native selection-period accounts with3cost scenarios; labels alone do not qualify profitability",
+  "joint_account_target_source": "/Users/chrise/GitHub/freqtrade/research/crypto/autonomous_dual_sleeve_v002_plan.json",
+  "metrics_download": {
+    "base_url": "https://data.binance.vision/data/futures/um/daily/metrics",
+    "start": "2023-12-01",
+    "end": "2025-01-01",
+    "max_workers": 6,
+    "official_sha256_required": true,
+    "no_missing_value_filling": true
+  },
+  "sources": [
+    {
+      "url": "https://github.com/binance/binance-public-data",
+      "use": "official archives and checksums"
+    },
+    {
+      "url": "https://arxiv.org/abs/2608.21888",
+      "use": "discovery only; reported reversal edge below benchmark capture cost is not profitability evidence"
+    },
+    {
+      "url": "https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Long-Short-Ratio",
+      "use": "global account ratio field interpretation only, no profitability evidence"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false,
+  "hypothesis": "Cross-asset relative rotation and volatility compression contain conditional information; delayed global account crowding interacts with absorption and funding/deleveraging. No account-position ratio divergence or positive OI-expansion formula reused.",
+  "prior_failed_round": {
+    "plan_sha256": "6b6644659081be90906034133d5404985a552c09486670c6ac16ddac6dbbf063",
+    "screen": "user_data/crypto_quant/conditional_factor_screen_v001",
+    "eligible": [],
+    "outcomes_observed": "2024 Q3 retrospective labels",
+    "change": "New cross-asset and global-account state mechanisms; labels, costs, learner and thresholds unchanged"
+  },
+  "base_feature_panel": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/conditional_factor_panel_v003",
+  "base_feature_panel_receipts_sha256": "d0a9941a4fe90673805a4a8bd9932ea85aaa7599404e9683cee0a86a7284ea85",
+  "metrics_dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/conditional_metrics_v002",
+  "metrics_receipts_sha256": "0adcd25b176d9421e3c12f9d09680ee2547e9bab9b4e3898c2830e75c8568cd8",
+  "reserved_test_policy": "No2024Q4 labels or returns computed; no independent project OOS claim; all2024Q3 evaluation remains retrospective"
+}

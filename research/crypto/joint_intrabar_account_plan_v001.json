@@ -1,0 +1,452 @@
+{
+  "schema": "crypto-quant-registered-candidates.v1",
+  "timeframe": "5m",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    3
+  ],
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "registered_utc": "2026-10-24T01:08:12.858263+00:00",
+  "study": "joint_intrabar_small_three_policies_by_two_admission_rules_v001",
+  "symbols": [
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "train_start": "2024-07-01",
+  "train_end": "2025-01-01",
+  "stake_amount": "unlimited",
+  "max_open_trades": 4,
+  "runner_module": "research.crypto.run_ranked_first_hit_account",
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/first_hit_dual.py",
+      "sha256": "bc02c623318387a4d4f3f5f4e6e1a6e056417b81ef4a0e16541d58994f52d9f5"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/first_hit_dual_v2.py",
+      "sha256": "92d6c3128990ba44f8fde76fcd4a5cf6ef99a2bfcdd46d82c3a6ffb6becd4245"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/intrabar_small.py",
+      "sha256": "58f6910a2b07bd6fbee275247027e14d9e76be3cb4dbd470bd1438b3af6a96eb"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/ranked_first_hit.py",
+      "sha256": "da409dd6756075ff69b84a3dac848504d50c827693eaef134b54a4f1f48d1425"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/joint_intrabar_ranked.py",
+      "sha256": "12244a79a905998271f34bdd56582a302ad4fb819acbdb7702d049289add0228"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "JointIntrabarLinear",
+      "policy": "LinearStatic",
+      "ranked": false,
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "JointIntrabarStatic",
+      "policy": "BoostStatic",
+      "ranked": false,
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "JointIntrabarMonthly",
+      "policy": "BoostMonthly",
+      "ranked": false,
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "JointRankedLinear",
+      "policy": "LinearStatic",
+      "ranked": true,
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "JointRankedStatic",
+      "policy": "BoostStatic",
+      "ranked": true,
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "JointRankedMonthly",
+      "policy": "BoostMonthly",
+      "ranked": true,
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": false,
+    "reduce_df_footprint": false,
+    "ignore_buying_expired_candle_after": 300,
+    "research_initial_equity_usdt": 1000,
+    "research_first_hit_panels": {
+      "LinearStatic": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/joint_intrabar_ranked_inputs_v001/LinearStatic",
+        "hashes": {
+          "AAVEUSDT": "ffb5c664920ab86ed8047602984c715e8ea475312ba40fc80eff66ed868dc129",
+          "ADAUSDT": "81d5213d7bd72f3be0d29754fa3718897c5d11f4a206bcddcb612611a82967de",
+          "ALGOUSDT": "078f7a9ad2ace5132cfcfaff19d4d19c930f91fe88cfbaa4e2d99bd8a5df2503",
+          "ATOMUSDT": "e49778e614226427a6ec57aa20c6677f173f60179205f24bfdf629df0edd29be",
+          "AVAXUSDT": "ef56ee426ece1ab4b79f5d68198ab2d327ce7f7070aaf46e53c48f2c60df68c5",
+          "AXSUSDT": "a9189c6d85969b530330185cd935e902a6128c60c7e595c97a02a84cabc82e29",
+          "BCHUSDT": "8c853cd34b50ca65889eab71c3a5e92d9678a3b4157dd5000e1e382e0036f5b1",
+          "BNBUSDT": "79c340f890fe45e2ec6d5bb0ac3dc6ca6ffc3ef3c66b767f533199d9f44efa83",
+          "CELOUSDT": "7eb37c14340cb9aa4c9d0cba89b604209080e0313b94f0ac9db06839c829bfda",
+          "CRVUSDT": "769aba146aa48c6120cb95293bb0dca87706888eb21b008cf0bd32870ab3d491",
+          "DOGEUSDT": "cf757a2d04c0fb041783547f7f535a0a37c620838fb8b81a646b116c1dfca68d",
+          "DOTUSDT": "861ceb8da6b580d68f7dffa7d000af280284d36e2e45396d368dbf84088d13f4",
+          "DYDXUSDT": "a5743e863ac44c7c5068e115bf13c40284ae2ec72f9e3858259aff54447db1ef",
+          "EGLDUSDT": "e577a0d23b401465f86c72ee907886eae5f90546673d5fe5918607273786264d",
+          "ETCUSDT": "77354d9d2dc45a08567cb2b41cc435841be8860d2ca3c2898b2d5825e48169e1",
+          "ETHUSDT": "a0db92b853bd0c1a0a29e54e1a24719b9d9218b7354b2f673fb51f496642fa8b",
+          "FILUSDT": "0b6827f6eb65d3bf938e4cf1763b881eb1f2275061ad626a165e03bed5f4259e",
+          "GALAUSDT": "77023118cb05d7a2aab1ce03ab7a2f719524a97ad8969bfb598c7864043af552",
+          "GRTUSDT": "d6e83946ab42a568e236687f8668ba93a733e3ef2dcb46d28e29c899d6f9f3f4",
+          "IOTAUSDT": "e708fa7c4d086b825cb3f5c9eb22fa87ee19e996bcc1e645cb0076f1fe4053ab",
+          "IOTXUSDT": "e54a5c80c7e279944cd2f3cc18b6d5e1f036db90c0f92e147c135f3c9ae0d5b1",
+          "KSMUSDT": "d37f86e34199dc723e64481a78ea4ad11252753dddaee71b17b6caebef22ef54",
+          "LINKUSDT": "1077a508d0d3ae0bcd3777935c564c04e05afe56bc415e04772f1a42bb29c359",
+          "LTCUSDT": "c4c0395aad309e9e186eb5d670fa859ab0dc6ed9e3a07964e25d28310b22bd02",
+          "MANAUSDT": "5683a0618384fa45a65f25bedf34cea2230c7e11188729f5d0f746536b706db4",
+          "MASKUSDT": "bc5d9a2a23babadc478212cb46b030a82ed31a36e602eb0926b653ef03ee91cd",
+          "NEARUSDT": "d62b59ab83ded6f826946dbf896aa43e5d575cec7b7cf0d209aa5a67820802a7",
+          "NEOUSDT": "5c406a5b437f447b60b05f62eb5cc3d1313ff9027a163237d73b19ab93305a13",
+          "RUNEUSDT": "6065ea76f1ef9651d5eded0d0e471898f1bcd892ea4bcdc643acb5b720c09923",
+          "SANDUSDT": "884e96504cb79b60c105fbe35d301c5c84f5304f100e791bf46a8e7ae2ebc164",
+          "SKLUSDT": "4d37fbbcb0af4f9aa767ee44867380006459704289fa217c8e3360c95a494107",
+          "SNXUSDT": "a536dc2b01a0c007efa17bbb99ecb069cac0e3a30c6477f3d032ba6af1463c11",
+          "SOLUSDT": "96fbb66270acad33e92bdef30f25411982d0697a86e6e9bc3d7068c621e1753e",
+          "SUSHIUSDT": "30c248d64706f7ce653942092f6b44b7a7365eaeba06d7ee3fa660ccf6a4d0bb",
+          "THETAUSDT": "6ea29dce7ebc4d91a82dc7bdb6d3032c187ff9f6b3305c75d0d6cdd117108a6a",
+          "TRBUSDT": "e7b0af3ae89cf879b735516261a7d61c53ba66fdb997462ca9629c7f3903bf35",
+          "TRXUSDT": "8114e0fc85eda226fdd684ceabb381ae759efbea8254ca80f70fc79b6035ddda",
+          "UNIUSDT": "4d4ae5ccd07bc3df5399cc6bb8229dcd097c1363c764e5af5c3e41658602560a",
+          "XRPUSDT": "0ca399653a818250eb22de19a23ee8dbd4e3019f2c75161c3d432588c4ba416e"
+        },
+        "ranking_path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/joint_intrabar_ranked_inputs_v001/LinearStatic/ranking.parquet",
+        "ranking_sha256": "3305b8dad31133bf0ffdef080ff131342dc02959e6365717f6c93cbf42ef6c3d"
+      },
+      "BoostStatic": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/joint_intrabar_ranked_inputs_v001/BoostStatic",
+        "hashes": {
+          "AAVEUSDT": "ffb5c664920ab86ed8047602984c715e8ea475312ba40fc80eff66ed868dc129",
+          "ADAUSDT": "81d5213d7bd72f3be0d29754fa3718897c5d11f4a206bcddcb612611a82967de",
+          "ALGOUSDT": "078f7a9ad2ace5132cfcfaff19d4d19c930f91fe88cfbaa4e2d99bd8a5df2503",
+          "ATOMUSDT": "e49778e614226427a6ec57aa20c6677f173f60179205f24bfdf629df0edd29be",
+          "AVAXUSDT": "ef56ee426ece1ab4b79f5d68198ab2d327ce7f7070aaf46e53c48f2c60df68c5",
+          "AXSUSDT": "a9189c6d85969b530330185cd935e902a6128c60c7e595c97a02a84cabc82e29",
+          "BCHUSDT": "8c853cd34b50ca65889eab71c3a5e92d9678a3b4157dd5000e1e382e0036f5b1",
+          "BNBUSDT": "308d2a7b25ebe4db58e65c1d00bcfaaa8274556c34bfc6f57e44ffeb159d5544",
+          "CELOUSDT": "7eb37c14340cb9aa4c9d0cba89b604209080e0313b94f0ac9db06839c829bfda",
+          "CRVUSDT": "769aba146aa48c6120cb95293bb0dca87706888eb21b008cf0bd32870ab3d491",
+          "DOGEUSDT": "a7b5eff535ed9c07caae07a7d4100f93db37cc9340fb2ae5fc37b3400e81063c",
+          "DOTUSDT": "861ceb8da6b580d68f7dffa7d000af280284d36e2e45396d368dbf84088d13f4",
+          "DYDXUSDT": "a5743e863ac44c7c5068e115bf13c40284ae2ec72f9e3858259aff54447db1ef",
+          "EGLDUSDT": "79684c86030b4bb679d64a48e11108dde10e70f85ddb6aebf441e53089b40a10",
+          "ETCUSDT": "77354d9d2dc45a08567cb2b41cc435841be8860d2ca3c2898b2d5825e48169e1",
+          "ETHUSDT": "2b0879eed407d38a5a3cf78d57027610dd011897f6dd2051e3a6b3c2c9640cf9",
+          "FILUSDT": "0b6827f6eb65d3bf938e4cf1763b881eb1f2275061ad626a165e03bed5f4259e",
+          "GALAUSDT": "77023118cb05d7a2aab1ce03ab7a2f719524a97ad8969bfb598c7864043af552",
+          "GRTUSDT": "d6e83946ab42a568e236687f8668ba93a733e3ef2dcb46d28e29c899d6f9f3f4",
+          "IOTAUSDT": "e708fa7c4d086b825cb3f5c9eb22fa87ee19e996bcc1e645cb0076f1fe4053ab",
+          "IOTXUSDT": "e54a5c80c7e279944cd2f3cc18b6d5e1f036db90c0f92e147c135f3c9ae0d5b1",
+          "KSMUSDT": "07bf1c6d949e6a4481178edeeafecd7e556739cd57e42e1ce2b04415cef04fab",
+          "LINKUSDT": "1077a508d0d3ae0bcd3777935c564c04e05afe56bc415e04772f1a42bb29c359",
+          "LTCUSDT": "c4c0395aad309e9e186eb5d670fa859ab0dc6ed9e3a07964e25d28310b22bd02",
+          "MANAUSDT": "5683a0618384fa45a65f25bedf34cea2230c7e11188729f5d0f746536b706db4",
+          "MASKUSDT": "bc5d9a2a23babadc478212cb46b030a82ed31a36e602eb0926b653ef03ee91cd",
+          "NEARUSDT": "d62b59ab83ded6f826946dbf896aa43e5d575cec7b7cf0d209aa5a67820802a7",
+          "NEOUSDT": "5c406a5b437f447b60b05f62eb5cc3d1313ff9027a163237d73b19ab93305a13",
+          "RUNEUSDT": "6065ea76f1ef9651d5eded0d0e471898f1bcd892ea4bcdc643acb5b720c09923",
+          "SANDUSDT": "884e96504cb79b60c105fbe35d301c5c84f5304f100e791bf46a8e7ae2ebc164",
+          "SKLUSDT": "7bd3091f134358d45af8509b6c144a3256cc9c7b4a9361ab3cf75368884a3a74",
+          "SNXUSDT": "a536dc2b01a0c007efa17bbb99ecb069cac0e3a30c6477f3d032ba6af1463c11",
+          "SOLUSDT": "b10d817ecfb75c99eac81c7d10cbcdb6aeb33455d3e3b9ad8a6b99aa85ffd63d",
+          "SUSHIUSDT": "30c248d64706f7ce653942092f6b44b7a7365eaeba06d7ee3fa660ccf6a4d0bb",
+          "THETAUSDT": "6ea29dce7ebc4d91a82dc7bdb6d3032c187ff9f6b3305c75d0d6cdd117108a6a",
+          "TRBUSDT": "e7b0af3ae89cf879b735516261a7d61c53ba66fdb997462ca9629c7f3903bf35",
+          "TRXUSDT": "8114e0fc85eda226fdd684ceabb381ae759efbea8254ca80f70fc79b6035ddda",
+          "UNIUSDT": "4d4ae5ccd07bc3df5399cc6bb8229dcd097c1363c764e5af5c3e41658602560a",
+          "XRPUSDT": "0ca399653a818250eb22de19a23ee8dbd4e3019f2c75161c3d432588c4ba416e"
+        },
+        "ranking_path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/joint_intrabar_ranked_inputs_v001/BoostStatic/ranking.parquet",
+        "ranking_sha256": "a666a7e8a49b2b2f34514fb4fbfb8200552f6a55c306c0ad07e197a8b7151a89"
+      },
+      "BoostMonthly": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/joint_intrabar_ranked_inputs_v001/BoostMonthly",
+        "hashes": {
+          "AAVEUSDT": "700bbbdd9ff644f3818bc7975c73295a77c426b38f1b13b26b505a8fbc4db2d5",
+          "ADAUSDT": "7c2ec6198552756ff383a9b4cc64a12c543eac984ec1f16a8bae2757963cd9b3",
+          "ALGOUSDT": "b268cb14d25e17737ce4e124a36c2afea14d9a74d462dba1139f2cd3d2dd47e5",
+          "ATOMUSDT": "88597ac4a3941c21e3397aadabb83e048cb3b3f6ab7a3c6788c9c0bdc0f70f93",
+          "AVAXUSDT": "433c1db58e6bcc3f1707446579bd1600777fb49a5b2f1a308c17685a81b17fc7",
+          "AXSUSDT": "11b8213822e07799bb6d5312ddb807791869afa9c8766773973b642c2fb79a8b",
+          "BCHUSDT": "7272709f3dd2087a9063a5c44fa34a21bf67e5a5d9cfc75cb6c6b9fadc5810d2",
+          "BNBUSDT": "dbd0155558885ec1212cc87af58fcc4e49fec6c233d4da948aa58ee26729024c",
+          "CELOUSDT": "c9fe563c3ddaa3f78c63880b1167d06d40752be15e4f229eb2e94adc2804e82b",
+          "CRVUSDT": "91639bce2ec45034cb457d1f279825975b9f1a73f546025912fecf83ca73ada2",
+          "DOGEUSDT": "96df9a7aded422ce08ff8d1b68337e5658a6f66153beb862621d0061f21207c6",
+          "DOTUSDT": "ff9bd007427ef993a798207e1e90d5ce16485721354de343d5b2ae14215d1f7f",
+          "DYDXUSDT": "4210e83cc7d11aa32af457a5e688a171124cdcfca5d8b86eb24980206c567c23",
+          "EGLDUSDT": "043810ffd9b0a9312680fda99c68ab16185decddb85a4a4be1607ab9e0b07e34",
+          "ETCUSDT": "641f0f717c8f3a8b9f7a879be0e693ef87b32570373e571cdf4c59f227fa97e4",
+          "ETHUSDT": "7ea62d627705693d3ca88e627459dc711ed957531779c606c9657464ce7cf78f",
+          "FILUSDT": "480b4a0ff81c674bb333c617047d2fba48aca2fc22cb538398fe496ac5219252",
+          "GALAUSDT": "51d51ab015cf752707883bf349ead9e1a3851ad28f9d4cd8c83ab621767fae02",
+          "GRTUSDT": "656fd4dfbeadca77caa5cc4f115a315df627601acaa2499cd7503dd02b0d87b2",
+          "IOTAUSDT": "9f20b9d648f20e53592f4dd95b10686faf566b202bb208de6001a934109e08ca",
+          "IOTXUSDT": "ee98c071bfd06340b239deaae397b629228b18e1108d3e5a97b88bf3f9fd95f5",
+          "KSMUSDT": "4687036c1a729a82f4947723a2274a73a8c4759353644e5223435d5fdea1b7fe",
+          "LINKUSDT": "57c7e2e7e397befa01d131218aade0acaca511a6b0538dad45da7b5fc4d6fe62",
+          "LTCUSDT": "45853708a08f7600a6e0aeea54a94868d8e556d740740dd854cad331f6fd2f8e",
+          "MANAUSDT": "a38883dee3240019bbae9654af03f1e003cfd504d8c22a0f5f50bc4233cf073c",
+          "MASKUSDT": "2e2f24c60f71f35cae3586fcad4d8ccd32e97f41aa2d1497b13c9c58876215dd",
+          "NEARUSDT": "24edf286590274b77db235befd68bd79eb467ec86a4ad84a64019146e037a682",
+          "NEOUSDT": "4b9d84c2837bb65f6c3d07250721529e2b8b809bfa765754e2546d3c18185569",
+          "RUNEUSDT": "8caf2281a54dfa91b6e69511026ceeabac194e2a8790affecb25c850c494fc67",
+          "SANDUSDT": "a2b77ca851228af45bdd90baebb3a08237cec798d26c1fc7281d179ac5c6b5ee",
+          "SKLUSDT": "6bea0c2855761ffb120261cee1f15163185bc4deaaa269d68ba820f55870fa47",
+          "SNXUSDT": "78dc943385b9d7104f716382199bb4addf04f95257a16fd50f49d6782d051746",
+          "SOLUSDT": "ae09fd2b6b19d8ab0193ae5c13c479576834e6ad0c35e46fa1222d3242e8569f",
+          "SUSHIUSDT": "c01a71ddab9cbae8ab9229470270d0dcc9228030dd23ee562f7929b78201184b",
+          "THETAUSDT": "b4310d70cd6cbe4fe761f3cd8cf8632c6c766a2eb60b8c2a32429a0ecf9eb4f8",
+          "TRBUSDT": "245c35803bc36502985c600716e95aa51985967d98648667c1635f668389aa93",
+          "TRXUSDT": "8114e0fc85eda226fdd684ceabb381ae759efbea8254ca80f70fc79b6035ddda",
+          "UNIUSDT": "62fcb9437066b3d41362ced7a4a789a84645500ad002a21ee9f84d44fbdac718",
+          "XRPUSDT": "4d33158ece799ee650cde00755a2cb6bf747558e6eb8f7f5ee02d9dfc6f21b45"
+        },
+        "ranking_path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/joint_intrabar_ranked_inputs_v001/BoostMonthly/ranking.parquet",
+        "ranking_sha256": "020109ed84d6cab4ab491cdf52458290b536e5f656da81e924b8bf0c4adad378"
+      }
+    },
+    "research_precision_cache": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/ranked_first_hit_inputs_v001/precision/receipt.json",
+      "sha256": "f9f4c0cd4b47cd1ac5c7f5866bc5a42853dc19b6f91110d93eb09f3c6650b968"
+    }
+  },
+  "native_source_reference": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_lifecycle_run_v002/train/NFIBoundedPartial/cost_3bps/freeze.json",
+    "sha256": "1656d98a954d02e08ec139de3fb6cc5efc9564256b716623ad8e73225ea68721"
+  },
+  "metric_contract": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/performance_metric_contract_v003.json",
+    "sha256": "58dd4786047d2cd161cb99d094735418ddcd68fb4a41fb6107542e63c2c906b2"
+  },
+  "joint_targets": {
+    "targets_are_research_assumptions_not_promised_returns": true,
+    "minimum_net_whole_position_win_rate": 0.8,
+    "annual_compounded_net_return_target": 0.5,
+    "period_return_hurdle": "1.5 ** (UTC calendar days/365.25) - 1; report actual period return separately",
+    "minimum_small_complete_trades_per_calendar_day": 3.0,
+    "both_sleeves_positive_net_profit": true,
+    "core_net_profit_exceeds_small": true,
+    "all_three_cost_scenarios_must_pass": true,
+    "independent_forward_required_before_live": true
+  },
+  "historical_evidence_status": "Previously observed 2024H2, separately preregistered fixed-policy capacity diagnostic; no independent OOS",
+  "source_forecast_export": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/joint_intrabar_ranked_inputs_v001/receipt.json",
+    "sha256": "9ba6c43e6b14e7ccbb8eb1aeeb45f9e88e01f769e94ecd542f6af8eac910fc8a"
+  },
+  "predecessor_joint_unit_admission": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/intrabar_small_learning_run_v001/evaluation/result.json",
+    "sha256": "ffe623d375faedffce5632b312b121198b4f50e2f4a8c2934389d6266a473983",
+    "passed": false
+  },
+  "scope": "Separately preregistered joint capital/capacity diagnostic; small screen failed9cases duefrequency/date support. Same frozen MonthlyCore control across3 small policies, crossed with original pair-order vs causal expected-dollar/risk ranking. Not a promotion or independent OOS.",
+  "hypothesis": {
+    "purpose": "Measure complete-position net winrate, both layer cashcontributions,accountROI/Sharpe/MDD and actualfrequency for small intrabar quarterR plus frozen MonthlyCore, under finitefunds. Preserve Small unit failures and all6 crossed controls.",
+    "small": "Same freshly frozen7Small bundles: LinearStatic,BoostStatic,BoostMonthly. Net.25R target through nativeintrabarROI,regularstopbeforeROI,4h fullcap. Bothfees/funding;no averaging/partials.",
+    "core": "Same old frozen BoostMonthly checkpoint2R/24h predictions shared acrossall6;priornativecore+2percent on184dayswasweakretrospectiveclue,notstablelivecandidate.",
+    "ranking": "Atfirsteligibleproposal per5mclock/layer,snapshot actualopenpairs/global/layercounts. Fromforecasts published5mearlier,excludeopenpairs. Score predictednet timesestimatednotional atknownclosed-candleATRfraction: min(.99*fixedrisk/loss_fraction,2*fixedmargin). Round dollar score10decimals,tie symbolascending. Reserve topmin(2-layeropen,4-totalopen) for thatclock. No futureprices/exits andno rerankingafterearlycandidatesfill/fail.",
+    "capital": "Initial1000USDT,reference990,smallrisk.99USD margin39.6;corerisk4.95USDmargin198;max4total/2perlayer,2x,no compounding. Gaps/futurefundingmayexceedplannedbudget.",
+    "precision": "Reuse exact causal_ticks cache for2024 with9actualprefixes andall39parquetroundtrips;currententryproposals/precision/openpairstates recorded. Samealready-closed-candle proxy asbaseline;notactualhistoricalexchangemetadata.",
+    "engineering": "Nativeprotectedcallbacks andafter-fill stop return retained. Everyactualunitpath,capitalbudget,proposalstate andrankingdecision independentlyreplayed.",
+    "costs": "Primarynative3bpsextra+5bpsbase per side only. Othernativecosts/years/independentforwardremainrequired.",
+    "prior_controls": "Three previous native first-hit accounts andfailedunitstudies remainunchanged. This6accountfactorial is retrospective; do notcalltreatmentselection OOS orqualifiedstrategy."
+  },
+  "orders_enabled": false,
+  "production_eligible": false,
+  "runtime_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_candidate.py",
+      "sha256": "fef080b3ed8402f2b27abb2838a392cb8887c6493482d262a05c0c984a1465b3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_nfi.py",
+      "sha256": "3ac0af875fe1ad3654c44feae2cf82e8808f62e9889f8d3858d07d14da3925e5"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/indexed_custom_data.py",
+      "sha256": "58445b63c6df934f1170066a83a28f4938c52885da3d07e4ac21d5a7207c7596"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/causal_precision_account.py",
+      "sha256": "0aefc8138433767a034fffdf5276b2fb9e3c8fb49ca0d5af91d5a17183f3be56"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_first_hit_account.py",
+      "sha256": "25a4496b68c9fcb33708fa8c5e327270db8837893be4467746b65d41a6be323a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/first_hit_paths.py",
+      "sha256": "6f892238aefe214fbc57b5ebf1ec837568f2dda9cff617228facbadfb70278ac"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/intrabar_small_paths.py",
+      "sha256": "5764a4692c4298ed825bd5080225e43b10fa2bf976e2be07d56384109739c031"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/replay_intrabar_small.py",
+      "sha256": "d208a31ab45f49a9dc1e61a2be4c846494c4645fbb77dc5a4c2f756dc93eed2a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_ranked_first_hit_account.py",
+      "sha256": "ff96c1a036fe627961b9a546232f593e42b8748487034c39fdd19ff47e2ad11f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/audit_intrabar_small_account.py",
+      "sha256": "35d7da5fa4b7763bdb412a9358864d4072c74191d584a3010e254ea9fff8a280"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/audit_joint_intrabar_ranked.py",
+      "sha256": "347b63c02c0892b72b47cc31f571434f70512f403e04fc6b9771516b651d6ad3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_joint_intrabar_accounts.py",
+      "sha256": "c30d4eb37203acfc3cf15282a209f09f71ab413814969e49b406bfe9369d6002"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/check_joint_intrabar_prefix.py",
+      "sha256": "932fdea6a115fa0c610dd1b615490c4dbcc0dc42b9fae40d2440252d07e0c6c0"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/review_ranked_first_hit.py",
+      "sha256": "1d93cdcb0cce97e5de0ebfcf1df11811d595130c44451a3fa93c34725c9a31fc"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/performance_scorecard.py",
+      "sha256": "97c11130055801cb65bc7a6149f31cd2594621f20cb0b5939e88da4741b31eed"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/audit_contract_screen.py",
+      "sha256": "2ab4bd7e7c70977b6bdb64e78d7ea0e0354f7ac8b30a10bb192e1f6ed19b61f6"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/audit_ensemble.py",
+      "sha256": "57481bd267c69bf3df5c98c1c7b6bb6914eca1abe8011372ffbe28fbdb5b28ea"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/autonomous_study.py",
+      "sha256": "0ac73667439b200d48946b6bc95d75c98110aba9b64dbbd491bfa1a9f80f6f5d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/tests/research/test_ranked_first_hit.py",
+      "sha256": "631ca1610779d55a866b5238a99a5543a7e3381b19b0d17d4a78a9e75cda686d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/joint_intrabar_ranked_inputs_v001/receipt.json",
+      "sha256": "9ba6c43e6b14e7ccbb8eb1aeeb45f9e88e01f769e94ecd542f6af8eac910fc8a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/intrabar_small_learning_run_v001/learning/receipt.json",
+      "sha256": "ab6d342cd9435babfc766583e0c59bbd45806d3bc3877798fd3d58f794af8a4d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/intrabar_small_learning_run_v001/independent_audit.json",
+      "sha256": "213f2bc300b71432604aba0082c0ac3c4c87c51d2ee289f78588fd0973dbcb09"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/intrabar_small_learning_plan_v001.json",
+      "sha256": "a1f10aad1329ea259550ae1313aebf32675e9446d47bdd12b6181451c6fcda07"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/first_hit_account_run_v002/summary.json",
+      "sha256": "a9de34cff5b717ad2e57c3b24883dd1fac2f48741b6fa627c7cfbff1cd577c81"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/first_hit_account_run_v002/independent_review.json",
+      "sha256": "42887a3a55eac71e1f456fe34884a62766ba9aeb07bbb6fb83d91eee6d9b19ac"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/ranked_first_hit_inputs_v001/precision/receipt.json",
+      "sha256": "f9f4c0cd4b47cd1ac5c7f5866bc5a42853dc19b6f91110d93eb09f3c6650b968"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/ranked_first_hit_inputs_v001/prepare_source_snapshot.py",
+      "sha256": "2e5e78d8a6e3630f75c8de9aa9bcaace26c27c914bad1d5f490cc8da7d0d3d3f"
+    }
+  ]
+}

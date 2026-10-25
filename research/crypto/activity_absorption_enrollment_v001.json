@@ -1,0 +1,111 @@
+{
+  "schema": "crypto-quant-activity-absorption-enrollment.v1",
+  "registered_utc": "2026-10-24T01:30:15.269439+00:00",
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "flow_archives": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002_klines",
+  "flow_archive_receipts_sha256": "bcbd3a20bac350b6bc2bc26ce9dc39edc5d51ca640b27a09a281f8070c41d0c4",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "feature_start": "2023-12-01",
+  "start": "2024-01-01",
+  "evaluate_start": "2024-07-01",
+  "end": "2025-01-01",
+  "source_hashes": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/activity_absorption_features.py": "bfb6f9adb95883dd74f31ad576a6575436c7124c23347d895ff4d8ec2c408fcc",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/prepare_activity_absorption.py": "9d76dcc5ed0a7641f4e3df12cb087a37321d2e845098ad4a4d8a68be819d9152",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/interaction_features.py": "35c42b59a9ded8548da81b3904b8ac654f5a14788b5a8c4bb9953886e04d22ac",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/interaction_models.py": "383206eb77f5095824db5cd7fdc8e6e014df09c223bdde8598b808456066a5cf",
+    "/Users/chrise/GitHub/freqtrade/tests/research/test_activity_absorption.py": "979d687be55c5864b7de41a476ce58c9d21877bbb5efd0557799ec063d11f77d"
+  },
+  "expected_shared_versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "pyarrow": "26.0.0",
+    "joblib": "1.6.0"
+  },
+  "native_source_reference": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_lifecycle_run_v002/train/NFIBoundedPartial/cost_3bps/freeze.json",
+    "sha256": "1656d98a954d02e08ec139de3fb6cc5efc9564256b716623ad8e73225ea68721"
+  },
+  "hypothesis": "Aggressive flow against the proposed position with a strong opposite candle close and quote-volume burst is conditional price absorption. Test whether actual flow and count/mean-size innovations improve net0.25R target forecasts beyond25price/regime inputs on identical fresh5minute events. Not a previously established alpha.",
+  "trigger": {
+    "signed_actual_flow5_at_most": -0.25,
+    "signed_log_close_over_open_at_least": 0,
+    "signed_close_location_at_least": 0.5,
+    "quote_over_prior12bar_mean_at_least": 1.5,
+    "fresh_only": "current trigger true and previous fullbar trigger false,previous5m flow known",
+    "directions": [
+      1,
+      -1
+    ],
+    "no_BTC_trading": true
+  },
+  "clock": {
+    "features_available": "baropen+5m",
+    "native_entry": "baropen+10m",
+    "worst_boundary_purge": "24h+5m for comparability;not future earlyexit based",
+    "funding_feature_delay": "raw event+1hour,unchanged prior25features"
+  },
+  "groups": {
+    "Price": 25,
+    "Flow": 29,
+    "FlowActivity": 33
+  },
+  "source_definition_url": "https://github.com/binance/binance-public-data",
+  "historical_status": "Already observed project2024history,not independent forward OOS",
+  "prefix_symbols": [
+    "ETHUSDT",
+    "AVAXUSDT",
+    "DOGEUSDT"
+  ],
+  "prefix_cuts": [
+    "2024-03-15",
+    "2024-08-15",
+    "2024-11-15"
+  ],
+  "outcomes_authorized_in_this_stage": false,
+  "orders_enabled": false,
+  "production_eligible": false
+}

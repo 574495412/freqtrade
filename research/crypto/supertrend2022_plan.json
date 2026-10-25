@@ -1,0 +1,108 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "schema": "crypto-quant-registered-candidates.v1",
+  "study": "supertrend2022_author_rules_pool40",
+  "timeframe": "1h",
+  "stake_amount": 150,
+  "max_open_trades": 4,
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/Supertrend2022Base.py",
+      "sha256": "52a1d227dc7172085099a8e35d9d8dff40f7691cfee5a8075e221ac794838271"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/supertrend2022.py",
+      "sha256": "a82dfbfdf828ae985d1b9ab7357e77f6d6297ce412ea56e223a35c1404f67594"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Supertrend2022",
+      "allowed_leverage": [
+        1.0
+      ],
+      "can_short": false
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": false,
+    "reduce_df_footprint": false
+  },
+  "historical_evidence_status": "2022_source_parameters_and_pre2024_volume_ranking_but_current_deployability_intersection_survivorship_possible",
+  "source_commit": "bcca7d7aef0df373c29b80532c8c02663f25ae3f",
+  "source_date": "2022-07-10T13:14:30Z",
+  "selection_rule": "highest_training_3bps_return_subject_to_all_training_cost_screens_else_cash",
+  "orders_enabled": false,
+  "universe_result_sha256": "8c40842bbca4ff128de18ffa7b76919b666660c6165a53f8cafe184906ef974c",
+  "scope_limitations": [
+    "Current deployability intersection has survivorship bias; not independent universe OOS",
+    "Already-consumed project historical periods remain retrospective evidence",
+    "Parent source copy changes only its class name and removes an unused obsolete NumPy import; derived class replaces chained mutation with formula-equivalent arrays and uses800-hour warmup",
+    "Native backtest limit/trailing fills are approximations; not tick or live-fill equivalence"
+  ],
+  "numerical_storage": "float64 arrays, exact legacy formula compatibility checked separately; 800 hourly warmup; original ROI/trailing/stoploss and fixed parameters retained"
+}

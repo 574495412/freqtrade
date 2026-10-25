@@ -1,0 +1,120 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "schema": "crypto-quant-registered-candidates.v1",
+  "study": "cluc2022_intraday_pool40",
+  "timeframe": "5m",
+  "stake_amount": 150,
+  "max_open_trades": 4,
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/external_sources_20261023/intraday_pre2024/ClucMay72018.py",
+      "sha256": "d146f7bc8285b5f1e48514d5d6acc53b37b0ca00299780210e3bdf84564978aa"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/cluc2022.py",
+      "sha256": "b83de8199194bc62906ce27f91924e0636fc3bb583c248f9b87a33d107eb5158"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "Cluc2022",
+      "allowed_leverage": [
+        1.0
+      ],
+      "can_short": false
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": false,
+    "reduce_df_footprint": false
+  },
+  "historical_evidence_status": "pre2024_author_5m_source_on_previously_consumed40_member_history_not_independent_oos",
+  "source_commit": "7f91ff52bb664423ae673092a6a18d76c50c2c29",
+  "source_date": "2022-07-10T09:44:41Z",
+  "selection_rule": "highest_training_3bps_return_subject_to_all_training_cost_screens_else_cash",
+  "orders_enabled": false,
+  "universe_result_sha256": "8c40842bbca4ff128de18ffa7b76919b666660c6165a53f8cafe184906ef974c",
+  "scope_limitations": [
+    "Current40-member deployability intersection has survivorship bias",
+    "All existing historical periods are retrospective, not independent OOS",
+    "Original5m rules, ROI1percent and stop5percent retained; no DCA; 1x futures account is an explicit venue adaptation",
+    "Fixed per-side fees are execution proxies; hourly observed NAV does not capture worst intrahour risk"
+  ],
+  "numerical_storage": "original author indicators, float64; 200 completed5m warmup; no optimization",
+  "frequency_screen": {
+    "minimum_complete_round_trips_per_calendar_day": 1.0,
+    "definition": "whole native closed trades / all UTC calendar days, including zero-trade days",
+    "target_is_research_assumption_not_user_requirement": true,
+    "required_in_addition_to_economic_audit": true
+  },
+  "factor_definition": {
+    "entry": "close belowEMA50 and0.985*BB20lower, volume below20*prior30bar mean",
+    "exit": "close aboveBB20middle, original ROI1percent or native5percent stop",
+    "position": "150USDT, max4,1x,no DCA",
+    "training_eligibility": "all3cost economic screens plus at least1 complete trade/calendar day in each cost account"
+  }
+}

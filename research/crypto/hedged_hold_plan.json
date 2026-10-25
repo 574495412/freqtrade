@@ -1,0 +1,77 @@
+{
+  "schema": "crypto-quant-hedged-hold.v1",
+  "study": "btc_eth_unconditional_hedged_carry",
+  "registered_utc": "2026-10-23T14:21:15.461031+00:00",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT"
+  ],
+  "parent_dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "parent_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "start": "2024-01-01",
+  "end": "2026-09-01",
+  "train": [
+    "2024-01-01",
+    "2025-01-01"
+  ],
+  "validation": [
+    "2025-01-01",
+    "2026-01-01"
+  ],
+  "holdout": [
+    "2026-01-01",
+    "2026-09-01"
+  ],
+  "continuous": [
+    "2025-01-01",
+    "2026-09-01"
+  ],
+  "spot_data_start": "2023-12-01",
+  "spot_timeframe": "1h",
+  "capital_scenarios_usdt": [
+    1000,
+    10000,
+    100000
+  ],
+  "spot_fee_per_side": 0.001,
+  "perpetual_fee_per_side": 0.0005,
+  "slippage_bps_per_fill": [
+    3,
+    10,
+    15
+  ],
+  "asset_weights": [
+    0.5,
+    0.5
+  ],
+  "asset_spot_budget_fraction": 0.25,
+  "asset_isolated_margin_fraction": 0.7,
+  "asset_cash_reserve_fraction": 0.05,
+  "rules": {
+    "entry": "each fixed asset at first01:00UTCopen; long spot, equal-net-base short perpetual; no funding forecasts or timing",
+    "holding": "fixed base quantity without rebalancing until last23:00UTCopen before phase end, unless known-hour margin-equity/notional<=20percent or portfolio marked drawdown>=5percent triggers next-hour whole-book exit",
+    "funding": "actual events with original millisecond clock; entry<event<=exit; mark at containing-hour open is explicitly a settlement proxy",
+    "fee_inventory": "spot entry fee charged in base with gross=q/(1-fee), spot exit fee in quote; exact same net q short perp; continuous quantities at initial economic screen",
+    "capital": "each asset25percent spot,70percent isolated short collateral,5percent reserve; no borrowing or external deposits",
+    "sampling": "full hourly NAV; all complete calendar month returns including marked inventory; one continuous account per scenario"
+  },
+  "screening_targets": {
+    "positive_net_return_every_cost_and_phase": true,
+    "maximum_hourly_observed_drawdown": 0.05,
+    "minimum_positive_full_month_fraction": 0.6,
+    "minimum_funding_events": 300,
+    "minimum_full_calendar_months": 8,
+    "must_not_trigger_margin_guard": true,
+    "maximum_entry_notional_to_previous_hour_quote_volume": 0.0001
+  },
+  "gates_scope": "A distinct continuous economic baseline, not H04 prediction-window retuning; closed-trade minimum30 from directional experiments is not relabelled as passed. Funding events and months are dependence-aware diagnostic coverage, not independent trade samples. Native lot/partial-fill and historical maintenance-tier proof remain mandatory before any live eligibility.",
+  "source_context": {
+    "prior_rejected_study": "TradingAgents H04 24-hour funding regression; unchanged result retained",
+    "difference": "unconditional long-horizon two-asset continuous cash account with explicit collateral, no forecast or funding-timing selection",
+    "bis": "https://www.bis.org/publications/working-paper-1087-crypto-carry",
+    "exchange_formula": "https://www.binance.com/en/support/faq/detail/360033525031"
+  },
+  "independent_oos": false,
+  "production_eligible": false,
+  "orders_enabled": false
+}

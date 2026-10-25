@@ -1,0 +1,191 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "schema": "crypto-quant-registered-candidates.v1",
+  "study": "nfi_bounded_lifecycle_three_accounts_v001",
+  "timeframe": "5m",
+  "stake_amount": "unlimited",
+  "max_open_trades": 4,
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/external_sources_20261022/nfi_pre2024/NostalgiaForInfinityX4.py",
+      "sha256": "e2885c502ae2d069e2aa69d00c29fd10c3fec7f5eb7a2ba9b471d82606dea6eb"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/nfi2023_compact.py",
+      "sha256": "4dbbc1897e4824f2a62ef65f1d076fb91b8e645803b4c9038df14cc7a93e8821"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/nfi_bounded_lifecycle.py",
+      "sha256": "dc6dd6666e98327d0cc16858138c6a59b60a9d8d2bf89495959509d46000f398"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "NFIBoundedPartial",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": false
+    },
+    {
+      "name": "NFIBoundedFullExit",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": false
+    },
+    {
+      "name": "NFIBoundedDualExit",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": false
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": true,
+    "reduce_df_footprint": false,
+    "research_initial_equity_usdt": 1000
+  },
+  "historical_evidence_status": "Prior2024NFI outcomes already observed; new lifecycle variants are retrospective, not independent OOS",
+  "source_commit": "16395b32d3c36ba728b2b489e9e51e44d3a8ff8c",
+  "source_date": "2023-12-31T11:43:27Z",
+  "orders_enabled": false,
+  "universe_result_sha256": "8c40842bbca4ff128de18ffa7b76919b666660c6165a53f8cafe184906ef974c",
+  "numerical_storage": "native reduce_dataframe_footprint inside populate_indicators, including dry_run/live; OHLCV preserved; remaining indicators float32; no parameter optimization",
+  "registered_utc": "2026-10-23T21:26:14.687579+00:00",
+  "runner_module": "research.crypto.run_candidate_indexed",
+  "production_eligible": false,
+  "runtime_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/indexed_custom_data.py",
+      "sha256": "58445b63c6df934f1170066a83a28f4938c52885da3d07e4ac21d5a7207c7596"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_candidate_indexed.py",
+      "sha256": "57c8feb40ff57d1c099fda132343d84a33cb9db207d36ea81bc3ff21372eae11"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_nfi_lifecycle_study.py",
+      "sha256": "b24bfd5ff3e6950f3bb4d4a554c061e2e8049c3046f21e555d6e6f7244f9b147"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/audit_nfi_lifecycle.py",
+      "sha256": "8dc4c2d2a7fe01e780bd367bad659d8504b73eb57444d94891a598076dd618df"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/check_nfi_lifecycle_prefix.py",
+      "sha256": "8ad78848f12b07839beedce050c41846fd73ff9d83a6b840b32b4aa059989608"
+    }
+  ],
+  "metric_contract": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/performance_metric_contract_v003.json",
+    "sha256": "58dd4786047d2cd161cb99d094735418ddcd68fb4a41fb6107542e63c2c906b2"
+  },
+  "joint_targets": {
+    "targets_are_research_assumptions_not_promised_returns": true,
+    "minimum_net_whole_position_win_rate": 0.8,
+    "annual_compounded_net_return_target": 0.5,
+    "period_return_hurdle": "1.5 ** (UTC calendar days/365.25) - 1; report actual period return separately",
+    "minimum_small_complete_trades_per_calendar_day": 3.0,
+    "both_sleeves_positive_net_profit": true,
+    "core_net_profit_exceeds_small": true,
+    "all_three_cost_scenarios_must_pass": true,
+    "independent_forward_required_before_live": true
+  },
+  "scope": "Forty USDT perpetual contracts, long only. Preserved source has no short-entry implementation. Fixed initial-dollar risk, no spot legs or real orders.",
+  "hypothesis": {
+    "mechanism": "Unchanged pinned pre2024 NFI multi-timeframe entries and management proposals, compare partial reductions with complete-position exits under identical bounded risk. No new entry factors or hindsight-selected symbols.",
+    "layers": "Pure entry tag set61 is core; all other recognized original tag combinations small. Mixed61tags remain small. Original raw tags preserved.",
+    "control": "NFIBoundedPartial clamps negative source adjustments to owned stake and preserves partial reductions; original full exits also retained.",
+    "full": "NFIBoundedFullExit maps every source negative adjustment, winning or losing, to -trade.stake_amount for a complete exit.",
+    "dual": "NFIBoundedDualExit maps a source negative adjustment to a full exit only for small sleeve if entire current campaign including prior realized cash has positive native net PNL; else bounded partial. Core remains partial.",
+    "risk": "All2x, maximum2small/2core campaigns. Fixed initial1000*.99 reference. Per campaign small risk.001/margin.02, core risk.005/margin.20. Risk budget includes stop-price entry/exit fees with1percent stake buffer; gaps and unknown future funding can exceed budget.",
+    "sizing": "First fill reserves one additional equal-stake fill at no higher price. Additional stake never exceeds first stake, source proposal, remaining margin, nativeavailable stake or remaining stop-and-fee budget; known negative funding deducted. Max2entries, no further entry after any exit.",
+    "stop": "First entry locks absolute stop max6percent/4simpleATR14 small reject>12percent; core max10percent/8ATR reject>20percent. Never widen. Enable all risk exits: pinned source originally rejects ordinary stop_loss.",
+    "time": "Close whole campaign after6hours small/72hours core, winning or losing; unchanged source full exits may happen earlier.",
+    "accounting": "Only fully closed campaign is a win/loss. All actual fees/funding and hourly marked unrealized equity included. Partial fills never counted as separate wins. Fixed dollar budgets do not reinvest open partial profits.",
+    "data_causality": "RawOHLCV preserved; native compact float32 original indicators; newATRfloat64. Closed5m source bar only, same causal multi-timeframe informative merges. Actual-data prefixes before accounts.",
+    "comparison": "Run all3full2024 accounts at3bps extra cost per side, same40coins, initial1000,fee5bps per side+actualfunding. Freeze beforefirstresult; no threshold grid or posthoc entry selection.",
+    "metric_evaluation": "Use immutable official-source metric contractv003, joint netreturn/Sharpe/hourlymarkedMDD; disclose native and proxy formulas. AlsoSortino/Calmar/PF/SQN/expectancy/consistency/recovery/costs/sleeves/frequency."
+  },
+  "execution_schedule": {
+    "discovery": "Allthree2024completeaccounts at3bps, independent actualfill cash and bound audit, fullmetric scorecards; preserve failures and zero accounts.",
+    "followup": "OnlygenericpositivePNL/PF>=1.1/DD<=15percent/30positions with both positive sleeves advances unchanged to0/10bps and2025historicalvalidation. Joint thresholds are research assumptions; no universal officialSharpe threshold asserted.",
+    "production": "Retrospective comparisons do not establish independent forward profitability or ranking. No live adapter/account/host mutation."
+  },
+  "source_inspiration": [
+    {
+      "url": "https://github.com/iterativv/NostalgiaForInfinity/blob/16395b32d3c36ba728b2b489e9e51e44d3a8ff8c/NostalgiaForInfinityX4.py",
+      "role": "Pinned unmodified original pre2024 implementation; this subclass is an independent bounded experiment, not an author-endorsed strategy."
+    },
+    {
+      "url": "https://www.freqtrade.io/en/stable/strategy-callbacks/",
+      "role": "Full negative adjustment -trade.stake_amount; native complete position lifecycle and stop veto semantics."
+    }
+  ]
+}

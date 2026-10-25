@@ -1,0 +1,153 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "universe_result_sha256": "8c40842bbca4ff128de18ffa7b76919b666660c6165a53f8cafe184906ef974c",
+  "runtime_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/indexed_custom_data.py",
+      "sha256": "58445b63c6df934f1170066a83a28f4938c52885da3d07e4ac21d5a7207c7596"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_candidate_indexed.py",
+      "sha256": "57c8feb40ff57d1c099fda132343d84a33cb9db207d36ea81bc3ff21372eae11"
+    }
+  ],
+  "historical_evidence_status": "new_autonomous_rule_on_previously_used_history_retrospective_not_independent_oos",
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "human_objective": {
+    "quote": "小额频繁交易提升胜率 + 大额收益率，让收益率胜率都很高冲击带单排行榜，自主策略完成",
+    "same_account": true,
+    "must_copy_named_trader": false,
+    "must_use_original_public_flow_rule": false,
+    "venue_assumption": "Binance USDT perpetual for existing data/execution; destination venue and ranking category not confirmed"
+  },
+  "leaderboard_scope_limits": [
+    "No current rank/percentile asserted without same-time competitor distribution and exact destination venue/category",
+    "No estimated copierPnL without follower execution and minimum-order evidence",
+    "Historical no-deposit account uses initial capital as return denominator; real MaxBaseBalance requires deposit records",
+    "Winrate is net-profit-positive entire closed positions, not orders or partials"
+  ],
+  "schema": "crypto-quant-compression-retest-uniform-half-risk.v1",
+  "registered_utc": "2026-10-23T18:26:02.678960+00:00",
+  "study": "uniform_half_risk_response_to_both_compression_drawdown_failures",
+  "timeframe": "1h",
+  "stake_amount": "unlimited",
+  "max_open_trades": 4,
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/compression_retest.py",
+      "sha256": "7244ea803e77100d0aea7d0474a4cd46d82c349f4429b4837900bfd7cec98283"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/compression_half_risk.py",
+      "sha256": "6a192a384559d738aec15eec6bfdd3d350e0b28b8f7480fe7584a4e48982718b"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "CompressionBreakoutHalfRisk",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "CompressionRetestHalfRisk",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": false,
+    "reduce_df_footprint": false,
+    "ignore_buying_expired_candle_after": 3600
+  },
+  "runner_module": "research.crypto.run_candidate_indexed",
+  "orders_enabled": false,
+  "production_eligible": false,
+  "hypothesis": {
+    "core": "Prior48hour high-low width/previous close below previous480width25th percentile, volume>=1.5x previous24hour mean, close beyond channel in direction of own240hour mean. Direct control enters nextbar. Retest treatment waits1..6later completedbars for touch within0.25breakoutATR of original level and directional close back across level; invalidate close1breakoutATR through level. One retest per event.",
+    "exit": "24hour opposite channel or fixed entry2ATR24 stop floored2percent,reject>8percent;7day cap.",
+    "risk": "Both original variants uniformly halve initial loss budget0.5percent to0.25percent and margin cap20percent to10percent; original signals, exits,2x and4slots unchanged. One risk adjustment only; no subsequent sizing search in this study.",
+    "causality": "All quantiles exclude current width; prior channels exclude current candle; breakout bar cannot confirm its own retest; next native hourly open execution.",
+    "research_question": "Does delayed retest improve false breakout losses compared with a fixed compression control? Lower frequency is reported, not called highfrequency."
+  },
+  "source_inspiration": [],
+  "execution_schedule": {
+    "discovery": "Both full2024half-risk accounts at3bps; preserve unscaled failures and report realized trade-count differences.",
+    "followup": "If a half-risk candidate passes the unchanged30trades/netpositive/PF1.1/DD15percent gate: run unchanged2025,2026Jan-Aug,2025-Aug2026continuous at3bps plus2024cost0/10. All later history remains retrospective, not independent OOS. If either later separated segment fails, stop remaining promotion work for that candidate.",
+    "goal_status": "Core sleeve mechanism study only; does not independently fulfill joint high winrate/high ROI objective.",
+    "history": "All previously used history is retrospective project history. Later-year label here is not independent OOS. No production promotion from this study."
+  },
+  "superseded_mechanism_results": {
+    "original_study": "compression_retest_run_v001",
+    "both_failed_drawdown_gate": true,
+    "direct2024_net_return": 0.23487958722,
+    "retest2024_net_return": 0.4241328511,
+    "post_observation_risk_adjustment_not_independent_alpha": true
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "universe_result_sha256": "8c40842bbca4ff128de18ffa7b76919b666660c6165a53f8cafe184906ef974c",
+  "runtime_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/indexed_custom_data.py",
+      "sha256": "58445b63c6df934f1170066a83a28f4938c52885da3d07e4ac21d5a7207c7596"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_candidate_indexed.py",
+      "sha256": "57c8feb40ff57d1c099fda132343d84a33cb9db207d36ea81bc3ff21372eae11"
+    }
+  ],
+  "historical_evidence_status": "new_autonomous_rule_on_previously_used_history_retrospective_not_independent_oos",
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "human_objective": {
+    "quote": "小额频繁交易提升胜率 + 大额收益率，让收益率胜率都很高冲击带单排行榜，自主策略完成",
+    "same_account": true,
+    "must_copy_named_trader": false,
+    "must_use_original_public_flow_rule": false,
+    "venue_assumption": "Binance USDT perpetual for existing data/execution; destination venue and ranking category not confirmed"
+  },
+  "leaderboard_scope_limits": [
+    "No current rank/percentile asserted without same-time competitor distribution and exact destination venue/category",
+    "No estimated copierPnL without follower execution and minimum-order evidence",
+    "Historical no-deposit account uses initial capital as return denominator; real MaxBaseBalance requires deposit records",
+    "Winrate is net-profit-positive entire closed positions, not orders or partials"
+  ],
+  "schema": "crypto-quant-rsi2-dual-horizon.v1",
+  "registered_utc": "2026-10-23T18:34:43.865874+00:00",
+  "study": "rsi2_hourly_small_daily_core_same_account",
+  "timeframe": "1h",
+  "stake_amount": "unlimited",
+  "max_open_trades": 5,
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/compression_retest.py",
+      "sha256": "7244ea803e77100d0aea7d0474a4cd46d82c349f4429b4837900bfd7cec98283"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/rsi2_dual_horizon.py",
+      "sha256": "310c9a3128a27d3ff5a7bae52a7f6825871f07a5b4bf5701f6dcbb86e00299e0"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "RSI2HourlyOnly",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "RSI2DailyOnly",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "RSI2DualHorizon",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": false,
+    "reduce_df_footprint": false,
+    "ignore_buying_expired_candle_after": 3600
+  },
+  "runner_module": "research.crypto.run_candidate_indexed",
+  "orders_enabled": false,
+  "production_eligible": false,
+  "hypothesis": {
+    "small": "Completed hourly WilderRSI2<5 and close<mean5 while completed daily close>mean200; mirrorRSI2>95 and dailyclose<mean200 forshort. Only fresh edges.",
+    "core": "Completed dailyRSI2<5 and close>mean200 long;mirror>95 belowmean200short. Signal only on23:00hourly bar so daily close is actually available at00:00entry.",
+    "exit": "Hourly close above/below5hour mean or12hour cap. Daily close above/below5day mean or10day cap. Exits can realize losses; no profit-only exit filter.",
+    "risk": "2x,noDCA,no partials;small2slots/2percent margin/0.05percent capital initial risk;core3slots/10percent margin/0.25percent initial risk. Fixed2ATRstop, floor1percent/ceiling5percent hourly orfloor3percent/ceiling30percent daily. Include known fee in sizing. Native minimum orders can reject small risk budgets.",
+    "adaptation": "RSI2/longtrend/shortmean recovery inspiration from public equity rules; this crypto-futures mirrored, risk-limited, intraday adaptation is new and unvalidated. No equity claimed return is transferred."
+  },
+  "source_inspiration": [
+    {
+      "url": "https://tradingmarkets.com/recent/dynamic_exits_how_to_properly_exit_a_trade-641067",
+      "role": "Larry Connors2009author discussion of5period mean dynamic exit in stocks/ETFs; no claim of crypto profitability."
+    }
+  ],
+  "execution_schedule": {
+    "discovery": "Three complete2024accounts at3bps, all results reported; no parameter search.",
+    "followup": "Candidates passing the unchanged30trades/PF1.1/netpositive/DD15percent gate advance unchanged2025 first. If2025 fails, stop. Ifpasses,2026Jan-Aug,continuous and0/10cost comparisons. All retrospective.",
+    "goal_status": "Combined must establish both sleeves positive and actual high net winrate/ROI; individual success is partial only.",
+    "history": "All previously used history is retrospective project history. Later-year label here is not independent OOS. No production promotion from this study."
+  },
+  "source_revision": {
+    "predecessor_plan_sha256": "46dc28beca04933fe4698377c9a57917d31b8596099d2fbbe31e74b2b615f0d8",
+    "v001_economic_source_snapshot": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/rsi2_dual_horizon_run_v001/registered_source_before_style_cleanup.py",
+    "v001_source_sha256": "32561cbaea04e5c6fb80359fd68bdb906cb7def6e3b1b15e486c13f536fec0e6",
+    "current_source_sha256": "310c9a3128a27d3ff5a7bae52a7f6825871f07a5b4bf5701f6dcbb86e00299e0",
+    "change": "Remove unused pandas import and format import group only",
+    "all_non_import_ast_nodes_identical": true,
+    "v001_economic_results_not_relabelled_as_new_runs": true
+  }
+}

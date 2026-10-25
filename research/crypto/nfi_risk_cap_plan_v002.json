@@ -1,0 +1,192 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "schema": "crypto-quant-nfi-risk-cap.v2",
+  "study": "nfi_risk_cap_market_execution_v002",
+  "timeframe": "5m",
+  "stake_amount": "unlimited",
+  "max_open_trades": 6,
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/external_sources_20261022/nfi_pre2024/NostalgiaForInfinityX4.py",
+      "sha256": "e2885c502ae2d069e2aa69d00c29fd10c3fec7f5eb7a2ba9b471d82606dea6eb"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/nfi2023_compact.py",
+      "sha256": "4dbbc1897e4824f2a62ef65f1d076fb91b8e645803b4c9038df14cc7a93e8821"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/nfi_risk_cap.py",
+      "sha256": "f3296432ed11859445846b511c1943bde287fb12452b9de3725d9de09d0ea4a2"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "NFIRiskCapOneX",
+      "allowed_leverage": [
+        1.0
+      ],
+      "can_short": false
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": true,
+    "reduce_df_footprint": false,
+    "research_initial_equity_usdt": 1000,
+    "order_types": {
+      "entry": "limit",
+      "exit": "market",
+      "emergency_exit": "market",
+      "force_exit": "market",
+      "stoploss": "market",
+      "stoploss_on_exchange": true,
+      "stoploss_on_exchange_interval": 10,
+      "stoploss_price_type": "mark"
+    }
+  },
+  "historical_evidence_status": "Previously observed 2024-2026 history; new frozen risk intervention is retrospective, not independent forward",
+  "source_commit": "16395b32d3c36ba728b2b489e9e51e44d3a8ff8c",
+  "source_date": "2023-12-31T11:43:27Z",
+  "selection_rule": "highest_training_3bps_return_subject_to_all_training_cost_screens_else_cash",
+  "orders_enabled": false,
+  "universe_result_sha256": "8c40842bbca4ff128de18ffa7b76919b666660c6165a53f8cafe184906ef974c",
+  "scope_limitations": [
+    "Current deployable intersection has survivorship bias; not independent universe OOS",
+    "Native float32 indicator storage used to fit the40-pair account in local memory; no lower precision for OHLCV",
+    "Only fixed1x production-oriented profile; original5x/3x retained as six-pair reference results",
+    "provisional onboardDate did not prove uninterrupted warmup; final pool requires actual pre2024 daily calendars"
+  ],
+  "numerical_storage": "native reduce_dataframe_footprint inside populate_indicators, including dry_run/live; OHLCV preserved; remaining indicators float32; no parameter optimization",
+  "registered_utc": "2026-10-24T09:45:22.342564+00:00",
+  "runtime_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/indexed_custom_data.py",
+      "sha256": "58445b63c6df934f1170066a83a28f4938c52885da3d07e4ac21d5a7207c7596"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_candidate_indexed.py",
+      "sha256": "57c8feb40ff57d1c099fda132343d84a33cb9db207d36ea81bc3ff21372eae11"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_candidate.py",
+      "sha256": "fef080b3ed8402f2b27abb2838a392cb8887c6493482d262a05c0c984a1465b3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_nfi.py",
+      "sha256": "3ac0af875fe1ad3654c44feae2cf82e8808f62e9889f8d3858d07d14da3925e5"
+    }
+  ],
+  "risk_contract": {
+    "leverage": 1,
+    "per_campaign_loss_budget_fraction": 0.02,
+    "per_campaign_initial_planning_fraction": 0.0175,
+    "known_funding_rounding_reserve_fraction": 0.0025,
+    "aggregate_planned_stop_risk_fraction": 0.08,
+    "per_campaign_lifetime_margin_fraction": 0.2,
+    "aggregate_current_margin_fraction": 0.8,
+    "fixed_absolute_stop_below_first_fill": 0.12,
+    "maximum_successful_entries": 3,
+    "maximum_additions": 2,
+    "each_addition_at_most_first_stake": true,
+    "no_add_after_any_reduction": true,
+    "one_add_proposal_per_5min": true,
+    "holding_limit_days": 14,
+    "stop_exit_veto_removed": true,
+    "stop_never_widens_after_fill": true,
+    "gap_and_future_funding_not_guaranteed_by_planned_budget": true,
+    "no_dca_control_initial_sizing_identical": true
+  },
+  "selection_protocol": {
+    "objective": "Whole combined account, no sleeve/frequency/win-rate hurdle",
+    "phase1": "Both full2024 native accounts at8bps/side; combine each entire wallet with unchanged Donchian20HalfRisk native wallet at same cost",
+    "historical_portfolio_screen": {
+      "minimum_closed_trades": 30,
+      "minimum_profit_factor": 1.1,
+      "maximum_hourly_or_native_drawdown": 0.15,
+      "minimum_net_return": 0
+    },
+    "select": "Among passing training portfolios choose highest full-calendar daily NAV Sharpe; tie lower drawdown; no posthoc parameter changes",
+    "followup": "Selected frozen risk variant runs continuous2025Jan1-2026Sep1 at8bps then15bps per side. If base fails do not rescue by choosing another validation winner. Preserve zero-cost scenario as uncomputed until run. Calendar subperiods retain positions and open PnL, not fresh wallets.",
+    "forward": "New version needs new paper DB and own forward evidence; old baseline paper remains an observational control only",
+    "tail": "Audit actual fills/cumulative entries/risk/margin/stop state, stress50percent gaps and missing state; stress is not profitability evidence",
+    "production_eligible": false
+  },
+  "execution_change": {
+    "parent_plan_sha256": "41411e7a0043fc6f8a2df6ad8aef3cfc8ff513c7e5bcdff1f6bf32a04b3c0aef",
+    "reason": "Native default local limit stops do not demonstrate outage protection. Make protective stop-market exchange-owned and discretionary/risk exits market; entry/risk sizing unchanged.",
+    "selection_fixed_by": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_risk_cap_run_v001/training_selection.json",
+    "selection_sha256": "2f6c3f26ea0dfe5b563a85cf991bb10a9d402c66adf0fbdd72f2d62f9e8e3d3b",
+    "native_backtest_limitation": "Native backtesting disables stoploss_on_exchange, so historical parity cannot establish exchange acceptance, stop amendments, outage coverage or mark-vs-last trigger execution.",
+    "jobs_frozen_before_execution": [
+      "train cost3",
+      "continuous cost3",
+      "continuous cost10"
+    ],
+    "parallel_cost_execution": true,
+    "acceptance": "All native execution-profile accounts must pass whole-portfolio economic and filled-risk checks. Require exact full2024 trade/order/equity parity for reuse of parent training selection; preserve any difference and no validation winner reselection. Cost0 is uncomputed and cannot be claimed passed.",
+    "real_orders_enabled": false
+  }
+}

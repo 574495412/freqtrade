@@ -1,0 +1,164 @@
+{
+  "schema": "crypto-quant-research-tracks.v2",
+  "created_utc": "2026-10-23T01:24:38.659383+00:00",
+  "status": "measurement_specification_not_executable_experiment",
+  "human_preferences": {
+    "frequent_trading": true,
+    "large_capital_lower_drawdown": true,
+    "small_capital_higher_return": true,
+    "compare_separately": true,
+    "quote": "多策略都有，频繁交易 的 还有大额稳定收益的；两类都研究，分别比较",
+    "confirmed_capital_usdt": null,
+    "confirmed_annual_return_target": null,
+    "confirmed_maximum_drawdown": null,
+    "confirmed_daily_closed_trade_target": null
+  },
+  "profiles": [
+    {
+      "id": "active_intraday",
+      "name": "频繁交易",
+      "objective": "研究短周期、较高实际交易频率且扣费后有正收益的机制",
+      "primary_metrics": [
+        "closed_round_trips_per_calendar_day",
+        "net_profit_per_complete_trade_after_all_costs",
+        "hourly_marked_equity_drawdown"
+      ],
+      "diagnostics": [
+        "median_and_p90_holding_duration",
+        "daily_trade_count_distribution_including_zero_days"
+      ],
+      "research_families": [
+        "有明确源码和固定退出的短周期均值回归",
+        "有明确源码和固定止损的短周期趋势或突破"
+      ],
+      "limitations": [
+        "频繁不等于高收益",
+        "信号、订单和加减仓次数不当作完整交易数",
+        "5m信号不等于毫秒级高频执行"
+      ]
+    },
+    {
+      "id": "capacity_stable",
+      "name": "大资金稳健",
+      "objective": "研究资金规模放大后净收益、回撤和收益分布是否仍可接受",
+      "primary_metrics": [
+        "monthly_net_return_distribution",
+        "hourly_marked_equity_drawdown_and_recovery_duration",
+        "net_return_by_fully_rerun_capital_scenario"
+      ],
+      "diagnostics": [
+        "net_profit_usdt",
+        "fill_and_unhedged_leg_exposure"
+      ],
+      "research_families": [
+        "固定分散化低换手规则",
+        "同币或可交割对应资产的真实双腿对冲carry机制"
+      ],
+      "limitations": [
+        "不能把小资金PnL线性放大称为容量证明",
+        "双腿要分别计算保证金、手续费、资金费、借贷成本和未对冲风险",
+        "既有跨币周换仓亏损不能被双腿名称覆盖"
+      ]
+    },
+    {
+      "id": "return_seeking",
+      "name": "小资金进取",
+      "objective": "研究较高净收益潜力与尾部损失之间的取舍",
+      "primary_metrics": [
+        "period_net_return_after_all_costs",
+        "hourly_marked_equity_drawdown",
+        "monthly_net_return_distribution"
+      ],
+      "diagnostics": [
+        "profit_concentration_by_asset_and_trade",
+        "loss_tail_and_unrealized_inventory"
+      ],
+      "research_families": [
+        "短周期方向策略",
+        "固定规则多策略组合"
+      ],
+      "limitations": [
+        "高收益与平稳性均为待验证目标",
+        "不因该档案自动提高杠杆或启用无限摊平",
+        "不以高胜率代替含浮亏风险"
+      ]
+    }
+  ],
+  "comparison_contract": {
+    "existing_reference_capital_usdt": 1000,
+    "common_capital_first": true,
+    "capacity_scenarios_usdt": [
+      1000,
+      10000,
+      100000
+    ],
+    "capital_scenarios_are_research_assumptions_not_human_allocations": true,
+    "scenario_justification": "以现有1000USDT研究账户为基准作10倍和100倍规模情景；不宣称已测得容量",
+    "full_native_account_required_per_scenario": true,
+    "no_linear_profit_scaling": true,
+    "base_fee_bps_per_side": 5,
+    "additional_cost_bps_per_side": [
+      0,
+      3,
+      10
+    ],
+    "funding": "actual historical events when applicable",
+    "two_leg_capital": "account for both legs and all collateral; report whole-portfolio NAV",
+    "common_reporting": [
+      "net_profit_usdt",
+      "period_net_return",
+      "closed_round_trips",
+      "win_rate",
+      "profit_factor",
+      "hourly_marked_equity_drawdown"
+    ],
+    "stable_metric_scope": "月度净值收益包括未实现损益；不足整月单列，小时回撤不是盘中最坏回撤",
+    "shared_capacity_only_comparisons": true,
+    "track_membership_not_economic_approval": true
+  },
+  "existing_protocols": {
+    "research/crypto/plan.json": "76ce931fafd853c873f4413fa1860175abee587cae043c0c9c47e161ff55cbf7",
+    "research/crypto/ensemble_plan.json": "d740c915bc38d9069e40d08afd3fb720be0bc3b51f51358f31e6accb6a9ea123",
+    "research/crypto/nfi40_compact_v003_plan.json": "6eee2edf6645d6a139db38356df3d287239a3c507abaa4c25ea61279c291f841",
+    "research/crypto/nfi2023_plan.json": "9ad4ac24573ce36ea334b74def372ee258d7a205460b8483e7423c68342a1b61",
+    "research/crypto/daily_donchian_halfrisk_plan.json": "89da3ed0db9310e8c265cc5da5431ec2fe6b4dda5bdf2157e5505e23cf98bec5",
+    "research/crypto/nfi40_compact_v002_plan.json": "6400c00ea84bac61eb56775c705d9e13a9ae9db7635ebff40f4af391d9604621",
+    "research/crypto/nfi40_plan.json": "ed2b54dc7d755197b981c3172d176a6a5a44cbb9f96beaba3b1bdeba75b2c257",
+    "research/crypto/supertrend2022_plan.json": "778aac110e584c1b3198de8c3d7bf53ab9b073bfccc2f807cde610ff2938a6ea",
+    "research/crypto/funding_plan.json": "407e9fc9301888c662ea395563778eda587d1b1eff5c061d7735c5c80a1b24c3",
+    "research/crypto/nfi40_compact_plan.json": "c130c104ff217d9022844b3d21ac95073fd21ea3b91a0f66f03ec05393e900ca",
+    "research/crypto/nfi_plan.json": "52f9350cd7b5013b41714b3020dfc85e2cef33c953747a333b86a5aef65f0628",
+    "research/crypto/nfi2023_compact_check_plan.json": "05cc54e9bba293563a69acd6667cd9f3c41897e51d866b8ba4f343a7b38883a9",
+    "research/crypto/daily_donchian_plan.json": "041bc70a0bc276bc9d24282ed1d5b4d82da13980b014f337559d5c92a16c2b74",
+    "research/crypto/funding_rotation_plan.json": "57a9f257a97a08936006cac8ca7289bbdb196041b49fc90fee89a6685de04526"
+  },
+  "historical_disposition": {
+    "old_results_and_rejections_unchanged": true,
+    "existing_paper_control_agent_recommendation": "cash",
+    "old_historical_windows_not_independent_oos": true,
+    "no_existing_candidate_relabelled_as_passed": true
+  },
+  "before_new_economic_runs": [
+    "freeze exact source commit and SHA, data calendar, universe, and missing-data handling",
+    "freeze actual entry, exit, timeframe, sizing, capital, position count, leverage and costs",
+    "predeclare track-specific frequency, return and risk gates without inspecting new outcomes",
+    "verify appropriate price and execution evidence before any capacity claim",
+    "do not rerun an unchanged rejected mechanism or claim a new independent holdout from old history"
+  ],
+  "execution_scope": {
+    "new_economic_runs_started": false,
+    "paper_processes_started": false,
+    "orders_enabled": false,
+    "new_deployment_authorized": false
+  },
+  "references": [
+    {
+      "url": "https://www.freqtrade.io/en/stable/strategy-customization/",
+      "scope": "strategy timeframe and historical funding support; not return evidence"
+    },
+    {
+      "url": "https://hummingbot.org/strategies/v2-strategies/executors/arbitrage-executor/",
+      "scope": "dual-market order tracking and net-cost execution reference; not an endorsement or a guarantee"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "universe_result_sha256": "8c40842bbca4ff128de18ffa7b76919b666660c6165a53f8cafe184906ef974c",
+  "runtime_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/indexed_custom_data.py",
+      "sha256": "58445b63c6df934f1170066a83a28f4938c52885da3d07e4ac21d5a7207c7596"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_candidate_indexed.py",
+      "sha256": "57c8feb40ff57d1c099fda132343d84a33cb9db207d36ea81bc3ff21372eae11"
+    }
+  ],
+  "historical_evidence_status": "new_autonomous_rule_on_previously_used_history_retrospective_not_independent_oos",
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "human_objective": {
+    "quote": "小额频繁交易提升胜率 + 大额收益率，让收益率胜率都很高冲击带单排行榜，自主策略完成",
+    "same_account": true,
+    "must_copy_named_trader": false,
+    "must_use_original_public_flow_rule": false,
+    "venue_assumption": "Binance USDT perpetual for existing data/execution; destination venue and ranking category not confirmed"
+  },
+  "leaderboard_scope_limits": [
+    "No current rank/percentile asserted without same-time competitor distribution and exact destination venue/category",
+    "No estimated copierPnL without follower execution and minimum-order evidence",
+    "Historical no-deposit account uses initial capital as return denominator; real MaxBaseBalance requires deposit records",
+    "Winrate is net-profit-positive entire closed positions, not orders or partials"
+  ],
+  "schema": "crypto-quant-sweep-relative-momentum.v1",
+  "registered_utc": "2026-10-23T18:20:22.540044+00:00",
+  "study": "range_reclaim_and_relative_momentum_finite_native_accounts",
+  "timeframe": "15m",
+  "stake_amount": "unlimited",
+  "max_open_trades": 5,
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/sweep_rotation.py",
+      "sha256": "ba293d9b3d639f3486fb32cdd5f634d63741526a8ebd9911ba4e1a5863c94212"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "RangeReclaimOnly",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "RelativeMomentumOnly",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "SweepRotation",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": false,
+    "reduce_df_footprint": false,
+    "ignore_buying_expired_candle_after": 900,
+    "research_momentum_panel": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/sweep_rotation_panel_v001/panel.parquet",
+    "research_momentum_panel_sha256": "e0dd45a15fd871db65384d7743ea3523703bccc74834632f1c5aa56810a14d1c"
+  },
+  "runner_module": "research.crypto.run_candidate_indexed",
+  "orders_enabled": false,
+  "production_eligible": false,
+  "hypothesis": {
+    "small": "15m candle sweeps prior32bar high/low then closes back inside with directional body, >=50percent rejection wick and >=1.5x prior24bar volume; ATR14/close0.1..1percent; BTC24h movement not worse than5percent against trade. Price pattern does not establish actual liquidations.",
+    "core": "Daily00:00 signal bar, next15m open execution; rank complete40universe by168hour return / (168hour return standard deviation * sqrt168); strongest3 positive momentum above168hour mean long only when BTC above480hour mean; weakest3 negative below168hour mean short only when BTC below480hour mean; retain positions until nextdaily selection drops them or7day cap or initialstop.",
+    "small_exit": "Fixed entry price target max0.6percent or1entry15mATR; fixed stop max1percent or2ATR, reject>3percent;240minute cap.",
+    "core_exit": "Fixed stop max2percent or2entryhourlyATR24,reject>12percent; daily target membership exit;7day cap.",
+    "risk": {
+      "small_slots": 2,
+      "small_margin_fraction_cap": 0.02,
+      "small_initial_risk_plus_known_fees_fraction": 0.0005,
+      "core_slots": 3,
+      "core_margin_fraction_cap": 0.2,
+      "core_initial_risk_plus_known_fees_fraction": 0.005,
+      "leverage": 2,
+      "no_dca": true,
+      "no_partial_exits": true,
+      "gaps_and_future_funding_not_guaranteed_by_stop": true
+    },
+    "causality": "Hourly features visible only at original hourly open+1hour; 15m feature visible at original open+15minutes; backward asof max59minute age; native nextbar matching. Rank and market context feature panel contains no future outcomes."
+  },
+  "source_inspiration": [
+    {
+      "url": "https://www.nber.org/papers/w25882",
+      "role": "Academic cross-sectional crypto momentum motivation only; this rule is not paper replication and its claims are not native perpetual account evidence."
+    }
+  ],
+  "execution_schedule": {
+    "discovery": "All three complete2024accounts at3bps extra cost per side; no threshold/parameter search. Report all results.",
+    "followup": "Any candidate passing existing30trades,positive net,PF>=1.1,DD<=15percent gate advances unchanged to2025 and2026 historical comparisons at3bps and2024 costs0/10bps. No after-look change to thresholds.",
+    "goal_status": "Individual sleeve success is partial progress only. Combined account must establish both net-positive contributions and high actual net ROI/winrate. Prior80percent win/50percent annual return numbers remain prior research assumptions, not user-confirmed hard gates or promises.",
+    "history": "All previously used history is retrospective project history. Later-year label here is not independent OOS. No production promotion from this study."
+  }
+}

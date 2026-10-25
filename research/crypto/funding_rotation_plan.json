@@ -1,0 +1,182 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "schema": "crypto-quant-registered-candidates.v1",
+  "study": "funding_cross_section_weekly_rotation40",
+  "timeframe": "1h",
+  "stake_amount": 150,
+  "max_open_trades": 4,
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/funding_rotation.py",
+      "sha256": "95502f1355e2876743d8c5f9bd5889f4323664f9d5822b45c2f8fb7d153566e0"
+    },
+    {
+      "path": "/Users/chrise/GitHub/TradingAgents/tradingagents/research/quant/factors/funding.py",
+      "sha256": "6e1446baf43b95a1967407895da5f39ef55a6b77bc28a164554830473e755a10"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "FundingRotation",
+      "allowed_leverage": [
+        1.0
+      ],
+      "can_short": true
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": false,
+    "research_rotation_panel": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_rotation_panel_v001/panel.parquet",
+    "research_rotation_receipts": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_rotation_panel_v001/receipts.json",
+    "research_rotation_factor_sha256": "6e1446baf43b95a1967407895da5f39ef55a6b77bc28a164554830473e755a10",
+    "research_rotation_symbols": [
+      "BTCUSDT",
+      "ETHUSDT",
+      "SOLUSDT",
+      "AVAXUSDT",
+      "TRBUSDT",
+      "DOGEUSDT",
+      "XRPUSDT",
+      "ADAUSDT",
+      "BNBUSDT",
+      "LINKUSDT",
+      "DOTUSDT",
+      "FILUSDT",
+      "NEARUSDT",
+      "ATOMUSDT",
+      "DYDXUSDT",
+      "LTCUSDT",
+      "BCHUSDT",
+      "ETCUSDT",
+      "GALAUSDT",
+      "SANDUSDT",
+      "UNIUSDT",
+      "IOTAUSDT",
+      "RUNEUSDT",
+      "AXSUSDT",
+      "AAVEUSDT",
+      "EGLDUSDT",
+      "ALGOUSDT",
+      "SNXUSDT",
+      "CRVUSDT",
+      "MASKUSDT",
+      "SUSHIUSDT",
+      "KSMUSDT",
+      "IOTXUSDT",
+      "MANAUSDT",
+      "NEOUSDT",
+      "GRTUSDT",
+      "TRXUSDT",
+      "CELOUSDT",
+      "SKLUSDT",
+      "THETAUSDT"
+    ],
+    "ignore_buying_expired_candle_after": 300,
+    "unfilledtimeout": {
+      "entry": 5,
+      "exit": 10,
+      "unit": "minutes"
+    },
+    "research_rotation_panel_sha256": "4be9cf7de4f659c0d6f743d45c8b64d363d80fbfcdfa7af9ee22b7b13c847246",
+    "research_rotation_receipts_sha256": "0dbc7d87c29c5b9b24ebaa8a980d6ef3f85371dccf2d59a5e0578c18b39f6b05"
+  },
+  "historical_evidence_status": "new_fixed_cross_sectional_hypothesis_on_previously_consumed_historical_universe_not_independent_oos",
+  "source_commit": null,
+  "source_date": null,
+  "selection_rule": "highest_training_3bps_return_subject_to_all_training_cost_screens_else_cash",
+  "orders_enabled": false,
+  "universe_result_sha256": "8c40842bbca4ff128de18ffa7b76919b666660c6165a53f8cafe184906ef974c",
+  "scope_limitations": [
+    "Current40-member deployability intersection has survivorship bias",
+    "All historical periods were already used by this project; not independent OOS",
+    "Cross-coin long/short positions do not remove market beta or individual price jumps",
+    "Funding persistence is an unproven hypothesis; past24h rates are not a forecast",
+    "Five-minute archival visibility is a research assumption, not historical first-arrival proof",
+    "Stops can unbalance the long/short book until the next weekly rebalance"
+  ],
+  "numerical_storage": "float64 funding factors; exact Decimal rate accumulation in pinned TradingAgents factor",
+  "factor_definition": {
+    "ranking": "past24h long funding carry = -sum(actual published funding events), with5-minute visibility lag; all40 names required",
+    "snapshot": "Monday01:00UTC; long highest2 carry and short lowest2; deterministic symbol ties; cash if no positive cross-sectional dispersion",
+    "entry": "signal onMonday01:00hour, native fill next02:00bar; expiry02:05UTC; at most one filled entry perpair/week",
+    "exit": "nextMonday01:00UTC or native10percent stop, no DCA or profit target",
+    "capital": "1000USDT, each leg150, max4, default1x; different-asset price and beta risk remains",
+    "not_same_hypothesis": "weekly cross-coin funding spread, not the rejected hourly EMA filter or24h same-asset spot/perp regression",
+    "selection": "one fixed candidate; no direction flip, window search or costs adjustment"
+  },
+  "factor_source": {
+    "path": "/Users/chrise/GitHub/TradingAgents/tradingagents/research/quant/factors/funding.py",
+    "sha256": "6e1446baf43b95a1967407895da5f39ef55a6b77bc28a164554830473e755a10"
+  },
+  "rotation_panel_receipts_sha256": "0dbc7d87c29c5b9b24ebaa8a980d6ef3f85371dccf2d59a5e0578c18b39f6b05",
+  "source_inspiration": {
+    "hummingbot_commit": "9af100d6822da7d2d0291a906c730ef172284ee2",
+    "distinction": "reuse rate/time/cost awareness; cross-coin relative carry is a new hypothesis, not same-asset cross-venue arbitrage",
+    "bis_context": "https://www.bis.org/publications/working-paper-1087-crypto-carry",
+    "bis_scope": "cash-and-carry risk background; does not validate our cross-coin rule or its parameters"
+  }
+}

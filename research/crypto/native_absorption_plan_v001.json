@@ -1,0 +1,159 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "DOGEUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "universe_result_sha256": "8c40842bbca4ff128de18ffa7b76919b666660c6165a53f8cafe184906ef974c",
+  "runtime_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/indexed_custom_data.py",
+      "sha256": "58445b63c6df934f1170066a83a28f4938c52885da3d07e4ac21d5a7207c7596"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_candidate_indexed.py",
+      "sha256": "57c8feb40ff57d1c099fda132343d84a33cb9db207d36ea81bc3ff21372eae11"
+    }
+  ],
+  "historical_evidence_status": "new_autonomous_rule_on_previously_used_history_retrospective_not_independent_oos",
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "human_objective": {
+    "quote": "小额频繁交易提升胜率 + 大额收益率，让收益率胜率都很高冲击带单排行榜，自主策略完成",
+    "same_account": true,
+    "must_copy_named_trader": false,
+    "must_use_original_public_flow_rule": false,
+    "venue_assumption": "Binance USDT perpetual for existing data/execution; destination venue and ranking category not confirmed"
+  },
+  "leaderboard_scope_limits": [
+    "No current rank/percentile asserted without same-time competitor distribution and exact destination venue/category",
+    "No estimated copierPnL without follower execution and minimum-order evidence",
+    "Historical no-deposit account uses initial capital as return denominator; real MaxBaseBalance requires deposit records",
+    "Winrate is net-profit-positive entire closed positions, not orders or partials"
+  ],
+  "schema": "crypto-quant-native-flow-absorption.v1",
+  "registered_utc": "2026-10-23T18:44:43.107507+00:00",
+  "study": "real_flow_open_interest_crowding_increment_on_same_price_rebound",
+  "timeframe": "5m",
+  "stake_amount": "unlimited",
+  "max_open_trades": 4,
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/native_absorption.py",
+      "sha256": "fdcb671ff036526b05acb1dfedaa9b6a309971f42c7e966b462db027f9d4d8b6"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "ReboundPriceControl",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "ReboundFlow",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "ReboundContraction",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "ReboundCrowding",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "AbsorptionCore",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "AbsorptionDual",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": false,
+    "reduce_df_footprint": false,
+    "ignore_buying_expired_candle_after": 300,
+    "research_absorption_panel": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/native_absorption_panel_v001",
+    "research_absorption_panel_hashes": {
+      "BTCUSDT": "948b3527795e8bb49ec8430e1df93c50ca096dd885d6f536d848feda301b153f",
+      "ETHUSDT": "7df6eb165b1fb219581c19d3a29aec4116d91f50db93d4fb4126cf80a97b74cd",
+      "BNBUSDT": "1439f9dc5d9931617f4daf5cbbcdadbf85d2d89b4f05a4d94ae5ee311bfff411",
+      "SOLUSDT": "b41a026826bbe4fa5026d1e40f8c243966c5ff32885e4e54e6ac1b7b70e3e38d",
+      "XRPUSDT": "3e28462a6edb32972009ce40eb60802e56a6e4be251bf90fb1ff2b0731b7d42f",
+      "DOGEUSDT": "fcd1641bb9aca6f954ce3399a6a4fa907209e441c83bf5f8c037987003d94e47"
+    }
+  },
+  "runner_module": "research.crypto.run_candidate_indexed",
+  "orders_enabled": false,
+  "production_eligible": false,
+  "hypothesis": {
+    "price": "Long:1hour log return<-log1.01,5minute return>0,close location>=0.5,quotevolume>=1.5x prior12barmean; mirrored short. Only fresh price-event edges. Finite price,flow,residual,OI andglobalratio required for ALL treatments including pricecontrol.",
+    "flow": "Long prior20minute takerquote imbalance<=-0.2 andimpact residual>=0; short>=0.2 andresidual<=0. Same price events, no fresh edges created by filter.",
+    "contraction": "Flow condition plus delayed logOI contraction>=0.01; OI drop is not proof of forced liquidation.",
+    "crowding": "Contraction condition plus delayed globalaccount long/shortratio>=1.2 forlong or<=1/1.2 forshort; no claim of position size or trader profitability.",
+    "core": "Flow+contraction event, different hold/exit/risk; no crowding filter in fixed core.",
+    "exits": "Native custom ROI1.6percent net-margin ratio small,10percent core; leverage2. Thus NOT1.6percent/10percent price targets. Small4hourtimecap/core24hourcap; fixed entry2ATR14 min0.8percent cap2.5percent small,3ATR14 min1.5percent cap5percent core. Stops use adverse native OHLC first;ROI path is coarse not real execution proof.",
+    "risk": "Small2slots,2percent margin cap,0.05percent realized capital initial loss+knownfee budget;core2slots,10percent cap,0.25percent lossbudget. NoDCA, no partial exits, no profit-only close filter. Core wins simultaneous same-pair signals in combined account.",
+    "timing": "Feature bar open t completes t+5minutes; place its feature/event on native t+5minute signalrow for entry t+10minutes. RawOI/global ratio already delayed10minutes by frozen feature builder. Exact merges, no filling missing values."
+  },
+  "source_inspiration": [
+    {
+      "url": "https://www.freqtrade.io/en/stable/strategy-callbacks/#custom-roi",
+      "use": "Per-entry-tag native ROI callback; checked against local native implementation"
+    },
+    {
+      "url": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data",
+      "use": "OI is total openinterest; crowdingaccount ratio andOI are not realizedprofit/liquidation records"
+    }
+  ],
+  "execution_schedule": {
+    "discovery": "All6complete2024accounts at3bps additional cost per side. No candidate removed for low signalcount or unfavorable outcome.",
+    "followup": "Candidates passing unchanged30complete trades/netpositive/PF1.1/DD15percent receive2024cost0/10stress. Only if allcosts pass, acquire separate2025causal metrics and rununchanged. No2025account using missingfeatures. Both2024halves reported as stabilitydiagnostic, not independentvalidation.",
+    "increment_claim": "Paired feature population and same priceevent definition; separate native opportunity/capital paths mean account differences are descriptive policy comparisons, not matched trade causal effects. No alpha claim from labels or test counts.",
+    "goal_status": "Individual pass is partial only; combined account needs both netpositive contributions, coremajorprofit andhighactual netROI/netwholeposition winrate. No guaranteed ranking.",
+    "history": "All2024prices previouslyused projectwide. New native accounting is not freshOOS. Prior conditional model study rejectedgroups remain rejected; this newmechanistic rule doesnotchange their verdict."
+  },
+  "panel_receipt_sha256": "81acbec28a4647e9f3c0bdbaa3b2a990ad3f027b91e8294a14c8479cbbc5f5c0"
+}

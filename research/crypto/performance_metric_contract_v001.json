@@ -1,0 +1,62 @@
+{
+  "schema": "crypto-quant-official-source-performance-contract.v1",
+  "registered_utc": "2026-10-23T19:33:09.902821+00:00",
+  "human_steering": "量化指标官方不止胜率回测吧，夏普等等也是考核项吧，按照官方的去研究",
+  "primary_venue_assumption": "Existing Binance USDTperpetual research; exact futureliveportfolio andrankcategory unconfirmed",
+  "primary_comparison": [
+    "netmarkedPNL/ROI",
+    "annualizedSharpe",
+    "markedmaxdrawdown"
+  ],
+  "diagnostics": [
+    "Sortino",
+    "Calmar",
+    "CAGR",
+    "PF",
+    "wholecampaignexpectancy",
+    "SQNandnativepvalue",
+    "payoffratio",
+    "profitableday/monthconsistency",
+    "drawdownrecoveryduration",
+    "tradefrequency",
+    "small/corecontribution",
+    "fees/funding",
+    "7/30/60/90/180daycomparisons"
+  ],
+  "official_sources": [
+    {
+      "url": "https://www.binance.com/en/support/faq/detail/54aa6d3b43bc4f6eb4a3a6e3aea40acd",
+      "scope": "Futures copytrading ROI=PNL/MaxBaseBalance;annualSharpe withrf0and365days;wholeclosedpositions winrate;MDD;PNL inclunrealized;SmartFiltercontains multiplecriteria. Sourceupdated2026-07-15."
+    },
+    {
+      "url": "https://www.freqtrade.io/en/stable/backtesting/",
+      "scope": "Sharpe/Sortino/Calmar closedandwalletmetrics,PF,expectancy,SQN,pvalue andlimitations."
+    },
+    {
+      "url": "https://www.okx.com/en-gb/help/lead-traders-lead-trader-profile",
+      "scope": "Separate venue fieldmapping only;not used to redefineBinance ROI/winrate/PF. Officialprofileterminologyhasdifferent denominatorlabels;no claimedOKXaccountvalues."
+    }
+  ],
+  "formulas": {
+    "binance_annual_sharpe_statistic": "mean(dailyROI)/sample_std(dailyROI,ddof1)*sqrt365;rf0. Verifiedagainstpublished13.51/10.38/7.11examples.",
+    "binance_daily_roi_local_proxy": "No-transfer assumption:daily markedPNL/fixed initialMaxBaseBalance. SincepublishedFAQdoesnotfullyspecifyendpoints/rounding,alwayslabel localproxy,notactualplatformvalue.",
+    "nav_daily_sharpe": "mean(dailycompoundedmarkedreturn)/sample_std*sqrt365;separatefromBinancefixedbaseproxy.",
+    "sortino_research_semideviation": "sqrt365*mean(dailyNAVreturn)/sqrt(mean(min(dailyNAVreturn,0)^2)),target0;separatefromnativeconditionalnegativestdSortino.",
+    "calmar_research_cagr_over_mdd": "365dayCAGR/hourlymarkedMDD;separatefromunchangedversion-specificnativeCalmar.",
+    "native_raw": "RetainarchivedclosedtradeSharpe/Sortino/Calmar/SQN/pvalue/expectancy/CAGR unchanged;alsoapplylocalofficialnativebalancefunctionstomarkedinputswiththeiroriginalstd/scalingandsentinels.",
+    "zero_denominator": "Undefined ratios arenull,neverinfinityorwin.Native-100or0sentinelsremainrawwithundefinedstatus."
+  },
+  "clock": "Exact UTCmidnightboundaryequity returns over everycompletecalendarday,includingflatdays. HourlymarkedMDDretained. Missinghoursreject;nozerofill. Includeendterminalflataccount.",
+  "new_evaluation_policy": {
+    "style": "ComparePNL/Sharpe/MDDjointly;noarbitraryweightedscoreorposthocbestmetricselection",
+    "old_results": "Appendnewscorecards,neveroverwriteorretroactivelychangeoldfrozenverdicts",
+    "official_thresholds": "No universalSharpe>=1or2 assertion fromtheseofficialpages.15percentDD/PF1.1/30trades/80percentwin/50percentannualnumbersareearlierresearchassumptions,notexchangeguarantees.",
+    "promotion": "Neednetprofitablewholeaccount,bothpositivecontributinglayers,frequenttradingandadequatesamples,riskadjustedstabilityandindependentforwardevidence;highwinrateorinsampleSharpealonecannotpromote.",
+    "smart_filter": "Evaluateonlyclearlydefinedsimulatedportfoliosubset14winningdays30d,positivePNL30/60/90d,hourlyproxyDD30/90<=20percent. Separateownfutures,officialtradingdaydenominator,AUM/copier/rankdataunknown,sofullplatformeligibilitynotestablished.",
+    "history": "25recentnativeaccounts areretrospectivecomparison,not25independentexperiments orOOSsamples."
+  },
+  "metric_source_sha256": "6ef03efd96f5b415ac0db2e2743f4dceef9101df019f375bfac680fa7bcca6e6",
+  "native_metric_source_sha256": "d5dfd23bcf556efc5faf23f6031d2b758f29feba0c2ace44080140da3de877ae",
+  "orders_enabled": false,
+  "production_eligible": false
+}

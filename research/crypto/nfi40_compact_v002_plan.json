@@ -1,0 +1,108 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "AVAXUSDT",
+    "DOGEUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "UNIUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "IOTXUSDT",
+    "NEOUSDT",
+    "CELOUSDT",
+    "THETAUSDT",
+    "COMPUSDT",
+    "C98USDT",
+    "ONTUSDT",
+    "ANKRUSDT",
+    "ZRXUSDT",
+    "XMRUSDT",
+    "ARUSDT",
+    "BANDUSDT",
+    "QTUMUSDT",
+    "KAVAUSDT",
+    "1INCHUSDT",
+    "ENJUSDT",
+    "IOSTUSDT",
+    "XTZUSDT",
+    "BELUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "schema": "crypto-quant-registered-candidates.v1",
+  "study": "nfi2023_author_pool40",
+  "timeframe": "5m",
+  "stake_amount": "unlimited",
+  "max_open_trades": 6,
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "PENDING_DATA_PREPARATION",
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/external_sources_20261022/nfi_pre2024/NostalgiaForInfinityX4.py",
+      "sha256": "e2885c502ae2d069e2aa69d00c29fd10c3fec7f5eb7a2ba9b471d82606dea6eb"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/nfi2023_compact.py",
+      "sha256": "4dbbc1897e4824f2a62ef65f1d076fb91b8e645803b4c9038df14cc7a93e8821"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "NFI2023OneXCompact",
+      "allowed_leverage": [
+        1.0
+      ],
+      "can_short": false
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": true,
+    "reduce_df_footprint": false
+  },
+  "historical_evidence_status": "2023_source_and_pre2024_volume_ranking_but_current_deployability_intersection_survivorship_possible",
+  "source_commit": "16395b32d3c36ba728b2b489e9e51e44d3a8ff8c",
+  "source_date": "2023-12-31T11:43:27Z",
+  "selection_rule": "highest_training_3bps_return_subject_to_all_training_cost_screens_else_cash",
+  "orders_enabled": false,
+  "universe_result_sha256": "2f98e100fbd6ca642bd09fe8fd0f1a801de4029c085796b0047142a813c0a47a",
+  "scope_limitations": [
+    "Current deployable intersection has survivorship bias; not independent universe OOS",
+    "Native float32 indicator storage used to fit the40-pair account in local memory; no lower precision for OHLCV",
+    "Only fixed1x production-oriented profile; original5x/3x retained as six-pair reference results",
+    "provisional onboardDate did not prove uninterrupted warmup; final pool requires actual pre2024 daily calendars"
+  ],
+  "numerical_storage": "native reduce_dataframe_footprint inside populate_indicators, including dry_run/live; OHLCV preserved; remaining indicators float32; no parameter optimization"
+}

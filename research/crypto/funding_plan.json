@@ -1,0 +1,67 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "BNBUSDT",
+    "SOLUSDT",
+    "XRPUSDT",
+    "DOGEUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "schema": "crypto-quant-registered-candidates.v1",
+  "study": "funding_carry_filter",
+  "timeframe": "1h",
+  "stake_amount": 150,
+  "max_open_trades": 4,
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/data_v003",
+  "data_receipts_sha256": "e613c2ffba6baf1c8bb41eec35ad50b2608e0924202ae86dddb256988abb38c6",
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/funding_trend.py",
+      "sha256": "587143aa22943945a15afc1fe59ff300d629a093da0b80cb0710abf58a04be7c"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "TrendControl",
+      "allowed_leverage": [
+        1.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "FundingTrend",
+      "allowed_leverage": [
+        1.0
+      ],
+      "can_short": true
+    }
+  ],
+  "settings": {
+    "research_funding_dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/data_v003",
+    "research_factor_path": "/Users/chrise/GitHub/TradingAgents/tradingagents/research/quant/factors/funding.py",
+    "research_factor_sha256": "6e1446baf43b95a1967407895da5f39ef55a6b77bc28a164554830473e755a10"
+  },
+  "historical_evidence_status": "retrospective_fixed_increment_not_independent_oos",
+  "selection_rule": "highest_training_3bps_return_subject_to_all_training_cost_screens_else_cash",
+  "orders_enabled": false,
+  "factor_definition": "carry=-sum(actual funding rates in previous24h ending5min before completed1h decision); permit long ifcarry>=0 and short ifcarry<=0; unchanged trend entries exits size and leverage"
+}

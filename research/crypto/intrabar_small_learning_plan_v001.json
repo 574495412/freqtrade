@@ -1,0 +1,260 @@
+{
+  "schema": "crypto-quant-small-intrabar-component-study.v1",
+  "registered_utc": "2026-10-24T00:53:58.384239+00:00",
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "warmup_start": "2023-12-01",
+  "start": "2024-01-01",
+  "evaluate_start": "2024-07-01",
+  "end": "2025-01-01",
+  "models": [
+    "LinearStatic",
+    "BoostStatic",
+    "BoostMonthly"
+  ],
+  "features": [
+    "signed_r1",
+    "signed_r12",
+    "signed_r48",
+    "signed_r288",
+    "signed_vwap_gap",
+    "signed_z20",
+    "signed_z96",
+    "signed_location",
+    "signed_body",
+    "signed_flow12",
+    "signed_pressure14",
+    "signed_btc12",
+    "signed_btc288",
+    "signed_relative12",
+    "signed_relative48",
+    "funding_credit8",
+    "funding_change8",
+    "atr_fraction",
+    "vol_ratio",
+    "efficiency12",
+    "efficiency288",
+    "log_volume_ratio",
+    "log_dollar_volume",
+    "btc_vol",
+    "side"
+  ],
+  "source_hashes": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/intrabar_small_paths.py": "5764a4692c4298ed825bd5080225e43b10fa2bf976e2be07d56384109739c031",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/intrabar_small.py": "58f6910a2b07bd6fbee275247027e14d9e76be3cb4dbd470bd1438b3af6a96eb",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/replay_intrabar_small.py": "d208a31ab45f49a9dc1e61a2be4c846494c4645fbb77dc5a4c2f756dc93eed2a",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/prepare_intrabar_small_panel.py": "6aba142180e82e994be7d2753c88cfbee6d3493c01356780d7d49045672aad44",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/run_intrabar_small_learning.py": "545756d978e45b95957b3ba26dc1e483d308d99a3a8e60f4df29ffa0fa8cf135",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/audit_intrabar_small_learning.py": "f0d80033d1df7fbb2a9fb83620527d7e54a6ae6b86a1f63ca6e6f70b99aba927",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/screen_intrabar_small_learning.py": "c9a515dd69a99842678ff0256f086aa2738b6d4cd962d2c70e493216bf0f929d",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/run_intrabar_small_study.py": "b4f6f8555d65f8a3bd217d29332507af1c68673a47e62c8c0440c9d921df2d7d",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/first_hit_paths.py": "6f892238aefe214fbc57b5ebf1ec837568f2dda9cff617228facbadfb70278ac",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/first_hit_dual.py": "bc02c623318387a4d4f3f5f4e6e1a6e056417b81ef4a0e16541d58994f52d9f5",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/first_hit_dual_v2.py": "92d6c3128990ba44f8fde76fcd4a5cf6ef99a2bfcdd46d82c3a6ffb6becd4245",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/interaction_features.py": "35c42b59a9ded8548da81b3904b8ac654f5a14788b5a8c4bb9953886e04d22ac",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/interaction_models.py": "383206eb77f5095824db5cd7fdc8e6e014df09c223bdde8598b808456066a5cf",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/conditional_learning.py": "55e03f8115d3c968570fb78ededb27e4e390f2b095f238800a70db690eee77c5",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/screen_interaction_learning.py": "f63b02333fa07df259cd8a90b6dd2e44e15ae22178cafd5ab227a7cad354a1b7",
+    "/Users/chrise/GitHub/freqtrade/tests/research/test_intrabar_small.py": "b827cb90888a2013586a0c29ad3bb0e92fcbe141bbf37cfc1537b475dd65719c",
+    "/Users/chrise/GitHub/freqtrade/tests/research/test_first_hit_paths.py": "0a920180dea10ef60684991a0cc7aa47c02336b276292f88f7b8d9def010bc7f"
+  },
+  "runtime_manifest": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/dependencies/sklearn_1_9_1_manifest.json",
+    "sha256": "da2c27ecf24c828a989c7fdc7c8d8abd4cd11410b7d0945cbd1e78f9941c1851"
+  },
+  "expected_shared_versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "pyarrow": "26.0.0",
+    "joblib": "1.6.0"
+  },
+  "native_source_reference": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_lifecycle_run_v002/train/NFIBoundedPartial/cost_3bps/freeze.json",
+    "sha256": "1656d98a954d02e08ec139de3fb6cc5efc9564256b716623ad8e73225ea68721"
+  },
+  "boosting_parameters": {
+    "max_iter": 80,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 15,
+    "max_depth": 4,
+    "min_samples_leaf": 200,
+    "l2_regularization": 10.0,
+    "max_bins": 63,
+    "early_stopping": false,
+    "categorical_features": null,
+    "random_state": 20261024
+  },
+  "linear_penalty": 0.01,
+  "calibration_penalty": 0.001,
+  "maximum_model_threads": 4,
+  "minimum_fit_rows": 1000,
+  "minimum_calibration_rows": 200,
+  "minimum_probability": {
+    "small": 0.8,
+    "core": 0.55
+  },
+  "minimum_predicted_net": {
+    "small": 0.0008,
+    "core": 0.0016
+  },
+  "fee_per_side": 0.0005,
+  "primary_extra_cost_bps": 3,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "minimum_evaluation_units": 30,
+  "minimum_distinct_days": 30,
+  "minimum_small_opportunities_per_day": 3,
+  "minimum_observed_positive_fraction": {
+    "small": 0.8,
+    "core": 0.55
+  },
+  "maximum_unified_qvalue": 0.05,
+  "bootstrap_replicates": 1000,
+  "block_days": 7,
+  "random_seed": 20261024,
+  "prefix_symbols": [
+    "ETHUSDT",
+    "SOLUSDT",
+    "XRPUSDT"
+  ],
+  "prefix_cuts": [
+    "2024-03-15T12:00:00",
+    "2024-07-01T00:00:00",
+    "2024-11-14T23:00:00"
+  ],
+  "metric_contract": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/performance_metric_contract_v003.json",
+    "sha256": "58dd4786047d2cd161cb99d094735418ddcd68fb4a41fb6107542e63c2c906b2"
+  },
+  "joint_targets": {
+    "targets_are_research_assumptions_not_promised_returns": true,
+    "minimum_net_whole_position_win_rate": 0.8,
+    "annual_compounded_net_return_target": 0.5,
+    "period_return_hurdle": "1.5 ** (UTC calendar days/365.25) - 1; report actual period return separately",
+    "minimum_small_complete_trades_per_calendar_day": 3.0,
+    "both_sleeves_positive_net_profit": true,
+    "core_net_profit_exceeds_small": true,
+    "all_three_cost_scenarios_must_pass": true,
+    "independent_forward_required_before_live": true
+  },
+  "hypothesis": {
+    "mechanism": "Small net take-profit.25R through native intrabar customROI, hardstop1R,4h full cap. Test whether25 causal price/volume/regime/funding factors can identify sufficiently frequent high-probability net winners. Core is unchanged frozen Monthly checkpoint control, not a newly validated stable strategy.",
+    "features": "25 features: side-signed1/12/48/288bar logreturns,VWAP24h/ATR gap,z20/z96,body/location,signed-volume proxy,14bar returnpressure;BTC andcomplete40coin contemporaneousmedian context;knownfunding8hequivalent/change;ATR,volatilityratio,efficiency,volume/liquidity proxies andside. Proxyflow is not actual taker flow.",
+    "population": "Same39 alt USDTperpetuals and frozen850298feature rows, both directions. Small hourly sourcebar, featureknown+5m,entry+10m. Original4h source schedule forcore control. No new source outcomes infeatures.",
+    "labels": "Small native regularstop beforeROI inside same5m candle, with earlier custom time/gap/open-profit exit atknownopen. Net target.25 of initial planned stop+bothfees; floor.8percent or2ATR,ceiling2.5percent;4h cap. Quantize target toward profit, use native8decimal ROI threshold and inverse including accruedfunding. No partial wins, no averaging. Core labels remain original2R/24h5mcheckpoint control.",
+    "chronology": "New small fits only:7bundles acrossstaticlinear/staticboost/monthlyboost. Same train[M-138d,M-18d),calibration[M-16d,M-2d),commonworst24h+5m purge. Six old MonthlyCore bundles and allcoreforecasts copied unchanged, sourcehashverified; reuse is not a new independent trial.",
+    "probability": "SeparatemonotonePlatt calibration onpastcalibrationwindow,nonnegative slope,L2 .001. No inversion of a degraded classifier and no futurecalibration. Predicted80percent doesnotprove actual80percent netcomplete-positionwinrate.",
+    "selection": "SmallcalibratedP>=.8andpredictednet>=8bps;coreP>=.55andnet>=16bps,allat3bpsprimarycost. Choosehighestpredictednet side percoin/time/sleeve,longtie; corepreempts smallsamecoin/time. Selectionfrozenbeforepostevaluation,identicalunits for0/3/10costs.",
+    "inference": "Seven-daycircularUTCdayblockbootstrap1000replicates forselectedunitmean,centered one-sidednull andpercentileCI. UnifiedBH18cases=3models*2sleeves*3costs. Doesnotadjust allpriorprojectexplorations. Allcosts,bothlayers,positiveCI,q<=.05,count/days/positivefraction/frequency gates before a nativecandidate.",
+    "scope": "Previously inspected2024history. Nine new Small tests across3policies/3costs,7day day-block bootstrap and unifiedBH across9. Core is a reused retrospectivecontrol, not counted asnewhypotheses. Small-unit eligibility is only conditional access tojointnativecapitaldiagnostics, not fullgoal success. Prior unit/native verdicts unchanged. Need same-account two-sleeve profit, actualfrequency/netwin/ROI/Sharpe/MDD, allcosts andindependentforward beforelive.",
+    "precision": "Cumulative maximum price decimals from candles already closed before entry, starting2023-12-01, fixed for each position. A causal proxy, not historical exchange tick evidence. New research observer changes precision selection only; native matching sources stay unchanged. Previous native monthly maximum can include later-month decimals; old accounts retained with this limitation.",
+    "costs": "Base5bps per side plus0/3/10extra. Full small exit paths recomputed percost;3bps primary forfits. Model thresholds stayp>=.8 andprednet>=8bps forSmall. Entry-risk ceilings are applied atentrytime, not used tosilentlyremoveunfavorableforecasts."
+  },
+  "official_algorithm_sources": [
+    "https://scikit-learn.org/stable/modules/ensemble.html",
+    "https://scikit-learn.org/stable/modules/calibration.html"
+  ],
+  "next": "Onlyunitforecastcandidatepassingall18relevantchecksforbothsleeves canenterexactnativeaccountscreen; costs,funding,fullcampaigns,markedmetrics and independentforward required.",
+  "orders_enabled": false,
+  "production_eligible": false,
+  "study": "SMALL_NET_QUARTER_R_NATIVE_INTRABAR_WITH_FROZEN_MONTHLY_CORE",
+  "source_feature_panel": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/interaction_learning_run_v001/panel",
+    "receipt_sha256": "d9bbc9413dc6bd63061372af420ca6bf47b2623062ba5606ea2bd62f5959981c"
+  },
+  "first_hit_specs": {
+    "small": {
+      "floor": 0.008,
+      "atr_multiple": 2,
+      "ceiling": 0.025,
+      "hours": 4,
+      "target_r": 0.25
+    },
+    "core": {
+      "floor": 0.015,
+      "atr_multiple": 6,
+      "ceiling": 0.12,
+      "hours": 24,
+      "target_r": 2.0
+    }
+  },
+  "engineering_validation": {
+    "native_roi_fee_funding_stop_precedence_tests": 52,
+    "passed": true,
+    "core_mechanism_exact_control_checked": true
+  },
+  "account_policy": {
+    "initial_equity_usdt": 1000,
+    "leverage": 2,
+    "max_total_positions": 4,
+    "max_positions_per_sleeve": 2,
+    "fixed_reference_capital": 990,
+    "small_entry_risk_fraction": 0.001,
+    "core_entry_risk_fraction": 0.005,
+    "small_margin_fraction": 0.04,
+    "core_margin_fraction": 0.2,
+    "stake_safety_factor": 0.99,
+    "no_compounding": true,
+    "no_additions_or_partial_exits": true,
+    "entry_priority": "core before small on same coin/time; fixed original universe order across coins",
+    "causal_precision_observer": "research.crypto.causal_precision_account.CausalPrecisionBacktesting"
+  },
+  "prior_joint_unit_verdict_changed": false,
+  "frozen_core_learning": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/first_hit_learning_run_v001/learning",
+    "receipt_sha256": "98018362d6ced716735a1fb2bd9d058dc59ada99ceff365b42a7f9495ef0513c",
+    "policy": "BoostMonthly",
+    "same_control_for_all_small_models": true
+  },
+  "small_component_gate": {
+    "comparisons": 9,
+    "three_costs_must_pass_for_each_small_policy": true,
+    "native_diagnostic_scope": "Small-qualified forecasts may proceed to a separately frozen joint capital diagnostic with the same core control. This does not reverse the earlier joint unit failure or qualify production."
+  }
+}

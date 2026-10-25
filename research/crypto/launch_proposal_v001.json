@@ -1,0 +1,143 @@
+{
+  "schema": "crypto-quant-launch-proposal.v1",
+  "reviewed_utc": "2026-10-23T14:08:31.653667+00:00",
+  "release_id": "crypto-paper-v1",
+  "readiness": "READY_FOR_REVIEWED_LOCAL_PAPER_LAUNCH_ONLY",
+  "candidate": "NFI_Donchian_EqualInitialCapital",
+  "mode": "paper_fixed_rule_control",
+  "strategy_changes_since_native_backtests": false,
+  "initial_equity_usdt": 2000,
+  "capital_rebalanced": false,
+  "maximum_open_positions": 12,
+  "leverage": 1,
+  "components": [
+    {
+      "name": "NFI2023OneXCompact",
+      "directory": "nfi",
+      "timeframe": "5m",
+      "initial_paper_wallet_usdt": 1000,
+      "max_open_trades": 6,
+      "stake_amount": "unlimited",
+      "trading_mode": "futures",
+      "margin_mode": "isolated",
+      "fee_bps_per_side": 7.999999999999999,
+      "pair_count": 40,
+      "db_url": "sqlite:////Users/chrise/GitHub/freqtrade/user_data/crypto_quant/ensemble_paper_control_v001/nfi/paper.sqlite",
+      "ledger_counts_at_review": {
+        "trades": 0,
+        "orders": 0
+      }
+    },
+    {
+      "name": "Donchian20HalfRisk",
+      "directory": "trend",
+      "timeframe": "1h",
+      "initial_paper_wallet_usdt": 1000,
+      "max_open_trades": 6,
+      "stake_amount": 150,
+      "trading_mode": "futures",
+      "margin_mode": "isolated",
+      "fee_bps_per_side": 7.999999999999999,
+      "pair_count": 40,
+      "db_url": "sqlite:////Users/chrise/GitHub/freqtrade/user_data/crypto_quant/ensemble_paper_control_v001/trend/paper.sqlite",
+      "ledger_counts_at_review": {
+        "trades": 0,
+        "orders": 0
+      }
+    }
+  ],
+  "historical_summary_8bps_per_side": [
+    {
+      "phase": "train",
+      "start": "2024-01-01",
+      "end": "2025-01-01",
+      "net_return": 0.16194425871999998,
+      "closed_trades": 182,
+      "win_rate": 0.5824175824175825,
+      "hourly_observed_drawdown": 0.058449025989728454
+    },
+    {
+      "phase": "validation",
+      "start": "2025-01-01",
+      "end": "2026-01-01",
+      "net_return": 0.101761291095,
+      "closed_trades": 172,
+      "win_rate": 0.5813953488372093,
+      "hourly_observed_drawdown": 0.05616474676565775
+    },
+    {
+      "phase": "holdout",
+      "start": "2026-01-01",
+      "end": "2026-09-01",
+      "net_return": 0.051388978785,
+      "closed_trades": 91,
+      "win_rate": 0.4725274725274725,
+      "hourly_observed_drawdown": 0.026137099655651364
+    },
+    {
+      "phase": "continuous",
+      "start": "2025-01-01",
+      "end": "2026-09-01",
+      "net_return": 0.14460307893000002,
+      "closed_trades": 265,
+      "win_rate": 0.5358490566037736,
+      "hourly_observed_drawdown": 0.05616474676565775
+    }
+  ],
+  "historical_assembly_after_components_observed": true,
+  "independent_oos": false,
+  "agent_recommendation": "cash",
+  "agent_endorsed": false,
+  "production_eligible": false,
+  "real_orders_enabled": false,
+  "current_paper_process_state": "VERIFIED_STOPPED",
+  "current_static_preflight_passed": true,
+  "static_file_sha256": {
+    "user_data/crypto_quant/ensemble_paper_control_v001/nfi/package.json": "0082e7391effb454e91cd2f05d4f6a721af7cd96f946891738b52957d3212c28",
+    "user_data/crypto_quant/ensemble_paper_control_v001/nfi/settings.json": "52cd5151f5844562f6d866eb51a15d9e4f1093ed0603bf414c0a6d1e2c958375",
+    "user_data/crypto_quant/ensemble_paper_control_v001/nfi/run_paper.py": "14206ee689111d10099f8eca9ef8dfe3e7dc6ac9d9fb2ac0c5232321de63124e",
+    "user_data/crypto_quant/ensemble_paper_control_v001/nfi/requirements.lock.txt": "54437b50dab3b990fc00db22dda081f8467893adde61e42cb01d127ed274e691",
+    "user_data/crypto_quant/ensemble_paper_control_v001/nfi/strategies/NostalgiaForInfinityX4.py": "e2885c502ae2d069e2aa69d00c29fd10c3fec7f5eb7a2ba9b471d82606dea6eb",
+    "user_data/crypto_quant/ensemble_paper_control_v001/nfi/strategies/nfi2023_compact.py": "4dbbc1897e4824f2a62ef65f1d076fb91b8e645803b4c9038df14cc7a93e8821",
+    "user_data/crypto_quant/ensemble_paper_control_v001/trend/package.json": "3378a670e1e044cf7b5b8b0df9b62e849a6358cf88d82821009ca863f070aa65",
+    "user_data/crypto_quant/ensemble_paper_control_v001/trend/settings.json": "7540b25f845ed69f96b324411982134253f724dc0a2b54985d5c2d7992005000",
+    "user_data/crypto_quant/ensemble_paper_control_v001/trend/run_paper.py": "14206ee689111d10099f8eca9ef8dfe3e7dc6ac9d9fb2ac0c5232321de63124e",
+    "user_data/crypto_quant/ensemble_paper_control_v001/trend/requirements.lock.txt": "54437b50dab3b990fc00db22dda081f8467893adde61e42cb01d127ed274e691",
+    "user_data/crypto_quant/ensemble_paper_control_v001/trend/strategies/daily_donchian.py": "e7541a1b4ef1e1799956fc3c077fef59145b247bcb39acb595c805ef3d8c7876",
+    "user_data/crypto_quant/ensemble_paper_control_v001/trend/strategies/daily_donchian_risk.py": "95ab222f30aecd4f906f6676ce73812a3225c147c98d07437ee3a1da57ea7430",
+    "user_data/crypto_quant/ensemble_paper_control_v001/package.json": "a4ac177b748a9df8e7214797d21aa35875492a8a690bd51498e7510f1d1cf892",
+    "user_data/crypto_quant/ensemble_paper_control_v001/run_portfolio_paper.py": "8c089ae954d0063c841455fecc2feabd0e3a2f3c7602959339ed2e233e8a026e",
+    "user_data/crypto_quant/ensemble_paper_control_v001/stop_portfolio_paper.py": "49082513c3f7e6b590f27884af85768ec76dd8b7684241dac614f94d56c8d601",
+    "user_data/crypto_quant/ensemble_run_v002/plan.json": "d740c915bc38d9069e40d08afd3fb720be0bc3b51f51358f31e6accb6a9ea123",
+    "user_data/crypto_quant/ensemble_run_v002/evaluation.json": "943ef71b136369d0e015344a49f64e47ac586b0b1f83bcb7bad1842e552d8300",
+    "user_data/crypto_quant/ensemble_run_v002/portfolio_audit.json": "5797688176c03746203e4efc16bf7dfdd4e7593e9cd90a6e108effc538653b5c",
+    "user_data/crypto_quant/ensemble_run_v002/selection.json": "d9df3be348eb8ad06697d8dc81588b7c9052a73904f4133428ed41255d0c6a92"
+  },
+  "commands": {
+    "local_paper_start": [
+      "/Users/chrise/GitHub/freqtrade/.venv/bin/python",
+      "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/ensemble_paper_control_v001/run_portfolio_paper.py"
+    ],
+    "local_paper_stop": [
+      "/Users/chrise/GitHub/freqtrade/.venv/bin/python",
+      "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/ensemble_paper_control_v001/stop_portfolio_paper.py"
+    ]
+  },
+  "native_runtime_identity_sha256": "da7b8f287edc13472ed57110f40e1bb8455e73697a97b4c0cecccb2e2ec93562",
+  "future_real_deployment_constraints": [
+    "Requalify economics and independent execution evidence while preserving agent cash and historical failures",
+    "Bound and validate NFI DCA exposure and portfolio loss response; old native fallback stop is -0.99",
+    "One exclusive futures exchange account per native component; never share account with CZ services",
+    "Any change in capital, pair count, max positions, leverage, entries or exits requires a new evaluated version",
+    "A server deployment requires exact target paths, rebuilt locked runtime, source manifest and operating scope",
+    "Real account and capital approval cannot be inferred from this paper proposal"
+  ],
+  "scope_limitations": [
+    "Retrospective combination, no independent alpha claim",
+    "No natural paper trades yet; nonempty recovery only proven in a separate synthetic persistence fixture",
+    "Not a frequent-trading strategy and no larger-capital capacity proof",
+    "Hourly observed drawdown is not intrahour worst-case"
+  ],
+  "no_new_economic_experiments_started": true,
+  "no_service_started_or_deployed_in_this_review": true
+}

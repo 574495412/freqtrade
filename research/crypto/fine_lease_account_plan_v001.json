@@ -1,0 +1,459 @@
+{
+  "schema": "crypto-quant-registered-candidates.v1",
+  "timeframe": "5m",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    3,
+    0,
+    10
+  ],
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/fine_detail_overlay_v002",
+  "data_receipts_sha256": "ecfff2a08fc778914825f6abfc6b68736ef6c71c4702fcbd465615edec7bd5ba",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "registered_utc": "2026-10-24T03:05:03.102026+00:00",
+  "study": "MINUTE_OBSERVED_PAYOFF_RETENTION_V001",
+  "symbols": [
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "train_start": "2024-07-01",
+  "train_end": "2025-01-01",
+  "stake_amount": "unlimited",
+  "max_open_trades": 4,
+  "runner_module": "research.crypto.run_fine_lease_account",
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/first_hit_dual.py",
+      "sha256": "bc02c623318387a4d4f3f5f4e6e1a6e056417b81ef4a0e16541d58994f52d9f5"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/first_hit_dual_v2.py",
+      "sha256": "92d6c3128990ba44f8fde76fcd4a5cf6ef99a2bfcdd46d82c3a6ffb6becd4245"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/intrabar_small.py",
+      "sha256": "58f6910a2b07bd6fbee275247027e14d9e76be3cb4dbd470bd1438b3af6a96eb"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/ranked_first_hit.py",
+      "sha256": "da409dd6756075ff69b84a3dac848504d50c827693eaef134b54a4f1f48d1425"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/joint_intrabar_ranked.py",
+      "sha256": "12244a79a905998271f34bdd56582a302ad4fb819acbdb7702d049289add0228"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/signal_lease.py",
+      "sha256": "68e67ffc7c327469ac26aeae79dcf1c2c7d8d3686b46ee805bed1b4adfd78a80"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/fine_lease.py",
+      "sha256": "35fa7feb09d6e3fb51bead506b83ce1b33b9fd52ce9bd638d241da5bfe004de6"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "FineLeaseQuarter",
+      "policy": "CoreParent",
+      "ranked": true,
+      "maximum_cycles": 4,
+      "protect_core": false,
+      "small_reward_r": 0.25,
+      "retain_small": false,
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "FineLeaseOneR",
+      "policy": "CoreParent",
+      "ranked": true,
+      "maximum_cycles": 4,
+      "protect_core": false,
+      "small_reward_r": 1.0,
+      "retain_small": false,
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "FineLeaseRetain",
+      "policy": "CoreParent",
+      "ranked": true,
+      "maximum_cycles": 4,
+      "protect_core": false,
+      "small_reward_r": 1.0,
+      "retain_small": true,
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": false,
+    "reduce_df_footprint": false,
+    "ignore_buying_expired_candle_after": 300,
+    "research_initial_equity_usdt": 1000,
+    "research_first_hit_panels": {
+      "CoreParent": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/signal_lease_inputs_v001",
+        "hashes": {
+          "AAVEUSDT": "5d72a21567bcc1b0b59f3aeba2f4553debdc01e584ec416413fee2086781b6e3",
+          "ADAUSDT": "9c2dac2ddded60d22caae3f38d501fc42f0bc1d9d71c66a95087a8c7f4af17ff",
+          "ALGOUSDT": "427bd305eb5e7bc42bea109f0c4ade38d0976586911e230c80ccde3da0ed3903",
+          "ATOMUSDT": "709b129e30d91272797721b4aecbb15d331e92f2e7eb48c19e7181d95e89185a",
+          "AVAXUSDT": "557b361c858a055fd47b300fd5de06ee04b7b77f01432cd31a2d30e9d9137f56",
+          "AXSUSDT": "56503128982ea51e2ed3f9d6387c28fa368249ec361c6a2f094c2bf4eb6704ee",
+          "BCHUSDT": "79981fee010a593a0273dceb09f4e241535b31aa77fe4ed42058ab9e408fe835",
+          "BNBUSDT": "ea1c37af0f3655811bbb6862a08ae84aa3b6a2003366adde28415ae37cee6217",
+          "CELOUSDT": "cd363ddce7563a17f6af0a7b56d980cb7616b56c570991fa374de61f8fdf4fc3",
+          "CRVUSDT": "bd8e9f2cbd98358dd0212901e64d280cee947ce236a777fe828abf9e6fc5caf4",
+          "DOGEUSDT": "7980edccbe63f0cb4283fa2b7fcfc071cc27a8db95b9e14b756b32bb2d3957d5",
+          "DOTUSDT": "bc9f853e6cbe47f9e665d29759a50167ead8f970a2d5cfbdd898c49dbed119db",
+          "DYDXUSDT": "ab433341435bec020bef1d1949cb5e4a6005178656c116d507545fdec7825ff1",
+          "EGLDUSDT": "fd215dcaac66b86fc3c97c17ef917a62787dcd9bf0cadc705150571591953218",
+          "ETCUSDT": "b1bb74146f4b800a5ac9220b6c0cafedf79e7b0314e6a1d5850c14cb14bab5bf",
+          "ETHUSDT": "a1dd908e24c1e03be837e61848381a22e3323b4c2ee1424f3ddbd243f9549ed8",
+          "FILUSDT": "8b6f8aae21dfd7f509c347c2c42ce6d50d134753ec1db60f3d038218a8f88e81",
+          "GALAUSDT": "7d4522e6d508f34145831b03163ee2d6a1333a385407c1c2dd9ae0588d568277",
+          "GRTUSDT": "eda81598993cff5168c5946fa219001f0d5505406245f2ac5f6dcb7e1467cf2e",
+          "IOTAUSDT": "1e91f8b527ab727f956bf48ff70ceadfe6f009d7454439db98f868e70bb286ac",
+          "IOTXUSDT": "c43b0f1bfa3f1b7ae24e3dcf2c9202ff8fd996a69bb88738be83a002ea50939a",
+          "KSMUSDT": "23874ce91743a995ed36a92b193d24da82a525518bfbd28631aff3ea3f5cbd9d",
+          "LINKUSDT": "562c0952d9167583e7ae08345bc09bbb2206d2f04016718f621e1a217bbf798b",
+          "LTCUSDT": "cb75b3263de217d2c548d7e12ad369fbdc071cfdad3edb883bb58907d52d5a81",
+          "MANAUSDT": "1993bfb58159484b389e8c9e44eb199d715f93351c5a311cf6b2bd8f9524ebe6",
+          "MASKUSDT": "5ff12e66234c34d449e7c9a97e5d0afae2573c02358c5c6f89fd0c8b8c4c2e29",
+          "NEARUSDT": "a9517c1556be11688aea47595ff2e657e9b31fc95a059c7daec82c00443c823d",
+          "NEOUSDT": "1b3082306b11f9d2e63295d6d9da35233f3660c5464e058c4cb7adf5366270fb",
+          "RUNEUSDT": "a284a748f8e251592ae3716c542666f8bfb2282953d4bbfbec4868d024af8a16",
+          "SANDUSDT": "d229629f19a456bdfcd903de052fc5db2fc8d0fa9470514c40641096247ad3d5",
+          "SKLUSDT": "a2f72c3ac9c65d419522d50248d7dcf910d182949d9e26f5a3adb8349f21eb4f",
+          "SNXUSDT": "503f23e35f0cf21aa6d388b4803a687ae9e79b644d7371f9dcb61f0db92d7177",
+          "SOLUSDT": "3e806aef6f63c0c30712a16581c5e341135e60fff72763039d97bacbda969527",
+          "SUSHIUSDT": "f3c932f531deb6d950e3211ff39416627fad5754e6581fff5888d396a791d273",
+          "THETAUSDT": "e854e8f98bd8d9b54a63777a1b616d65bdf610732759b414402ab8c894d02e08",
+          "TRBUSDT": "338faae242de5e75b2d3781951b91208898132d38e7abbba3bea373469baa577",
+          "TRXUSDT": "5d89604c52597abfc71a3c20a85a03432c1e1d96071f76ca23d1f179c8a14aa1",
+          "UNIUSDT": "80b61408733ca800c2c89faaef24d8e35059ef4e59b938040b527faf3a09d56c",
+          "XRPUSDT": "9d5676ee556d4dd776db40de1bc3a745882e5396e815f21c75d64b0ff751794f"
+        },
+        "ranking_path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/signal_lease_inputs_v001/ranking.parquet",
+        "ranking_sha256": "be4870fab7d644f8e6a596daa438c9230ed95b0e35712417c4824a6e14377874"
+      }
+    },
+    "research_precision_cache": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/ranked_first_hit_inputs_v001/precision/receipt.json",
+      "sha256": "f9f4c0cd4b47cd1ac5c7f5866bc5a42853dc19b6f91110d93eb09f3c6650b968"
+    },
+    "timeframe_detail": "1m",
+    "research_detail_manifest": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/fine_detail_overlay_v002/detail_manifest.json",
+      "sha256": "9f14eda58849729fb06c3dca3260829a031a3db5bb67cbd93c792236a7384254"
+    }
+  },
+  "native_source_reference": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_lifecycle_run_v002/train/NFIBoundedPartial/cost_3bps/freeze.json",
+    "sha256": "1656d98a954d02e08ec139de3fb6cc5efc9564256b716623ad8e73225ea68721"
+  },
+  "metric_contract": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/performance_metric_contract_v003.json",
+    "sha256": "58dd4786047d2cd161cb99d094735418ddcd68fb4a41fb6107542e63c2c906b2"
+  },
+  "joint_targets": {
+    "targets_are_research_assumptions_not_promised_returns": true,
+    "minimum_net_whole_position_win_rate": 0.8,
+    "annual_compounded_net_return_target": 0.5,
+    "period_return_hurdle": "1.5 ** (UTC calendar days/365.25) - 1; report actual period return separately",
+    "minimum_small_complete_trades_per_calendar_day": 3.0,
+    "both_sleeves_positive_net_profit": true,
+    "core_net_profit_exceeds_small": true,
+    "all_three_cost_scenarios_must_pass": true,
+    "independent_forward_required_before_live": true
+  },
+  "historical_evidence_status": "Alreadyobservedprojecthistory,not independentforward or actualexecutionproof.",
+  "source_forecast_export": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/signal_lease_inputs_v001/receipt.json",
+    "sha256": "38e8f0ff03b2fe4fadd02813949a0512a854a72c848301e20e5d7ecf799b2039"
+  },
+  "predecessor_joint_unit_admission": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/intrabar_small_learning_run_v001/evaluation/result.json",
+    "sha256": "ffe623d375faedffce5632b312b121198b4f50e2f4a8c2934389d6266a473983",
+    "passed": false
+  },
+  "scope": "Retrospective2024H2;1mOHLC executionproxy withno-observed-trade gate,5mcausal signalclockandCoreprofitcheckpoints. Fullpositionsonly,upto4profitablechildcycles. Parent24h scores are notchildprobabilities;allcurrentunqualifiedstrategyblocksretained.",
+  "hypothesis": "Onunchangedfrozenparent signalsandfixedcapital,comparequarterRsmalltarget,oneRtarget,andoneRtargetwithobservedminute-openquarterRactivation/.1Rsoftretention. Primary3bpsjointaccountsfirst;stress0/10onlyafterfrozenpositive-sleeve/frequency/mechanismgate. No repeated thresholdsearch orpreviousverdictchange.",
+  "orders_enabled": false,
+  "production_eligible": false,
+  "runtime_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_candidate.py",
+      "sha256": "fef080b3ed8402f2b27abb2838a392cb8887c6493482d262a05c0c984a1465b3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_nfi.py",
+      "sha256": "3ac0af875fe1ad3654c44feae2cf82e8808f62e9889f8d3858d07d14da3925e5"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/indexed_custom_data.py",
+      "sha256": "58445b63c6df934f1170066a83a28f4938c52885da3d07e4ac21d5a7207c7596"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/causal_precision_account.py",
+      "sha256": "0aefc8138433767a034fffdf5276b2fb9e3c8fb49ca0d5af91d5a17183f3be56"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_first_hit_account.py",
+      "sha256": "25a4496b68c9fcb33708fa8c5e327270db8837893be4467746b65d41a6be323a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/first_hit_paths.py",
+      "sha256": "6f892238aefe214fbc57b5ebf1ec837568f2dda9cff617228facbadfb70278ac"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/intrabar_small_paths.py",
+      "sha256": "5764a4692c4298ed825bd5080225e43b10fa2bf976e2be07d56384109739c031"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/replay_intrabar_small.py",
+      "sha256": "d208a31ab45f49a9dc1e61a2be4c846494c4645fbb77dc5a4c2f756dc93eed2a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_ranked_first_hit_account.py",
+      "sha256": "ff96c1a036fe627961b9a546232f593e42b8748487034c39fdd19ff47e2ad11f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/audit_intrabar_small_account.py",
+      "sha256": "35d7da5fa4b7763bdb412a9358864d4072c74191d584a3010e254ea9fff8a280"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/audit_joint_intrabar_ranked.py",
+      "sha256": "347b63c02c0892b72b47cc31f571434f70512f403e04fc6b9771516b651d6ad3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_joint_intrabar_accounts.py",
+      "sha256": "c30d4eb37203acfc3cf15282a209f09f71ab413814969e49b406bfe9369d6002"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/check_joint_intrabar_prefix.py",
+      "sha256": "932fdea6a115fa0c610dd1b615490c4dbcc0dc42b9fae40d2440252d07e0c6c0"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/review_ranked_first_hit.py",
+      "sha256": "1d93cdcb0cce97e5de0ebfcf1df11811d595130c44451a3fa93c34725c9a31fc"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/performance_scorecard.py",
+      "sha256": "97c11130055801cb65bc7a6149f31cd2594621f20cb0b5939e88da4741b31eed"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/audit_contract_screen.py",
+      "sha256": "2ab4bd7e7c70977b6bdb64e78d7ea0e0354f7ac8b30a10bb192e1f6ed19b61f6"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/audit_ensemble.py",
+      "sha256": "57481bd267c69bf3df5c98c1c7b6bb6914eca1abe8011372ffbe28fbdb5b28ea"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/autonomous_study.py",
+      "sha256": "0ac73667439b200d48946b6bc95d75c98110aba9b64dbbd491bfa1a9f80f6f5d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/tests/research/test_ranked_first_hit.py",
+      "sha256": "631ca1610779d55a866b5238a99a5543a7e3381b19b0d17d4a78a9e75cda686d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/joint_intrabar_ranked_inputs_v001/receipt.json",
+      "sha256": "9ba6c43e6b14e7ccbb8eb1aeeb45f9e88e01f769e94ecd542f6af8eac910fc8a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/intrabar_small_learning_run_v001/learning/receipt.json",
+      "sha256": "ab6d342cd9435babfc766583e0c59bbd45806d3bc3877798fd3d58f794af8a4d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/intrabar_small_learning_run_v001/independent_audit.json",
+      "sha256": "213f2bc300b71432604aba0082c0ac3c4c87c51d2ee289f78588fd0973dbcb09"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/intrabar_small_learning_plan_v001.json",
+      "sha256": "a1f10aad1329ea259550ae1313aebf32675e9446d47bdd12b6181451c6fcda07"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/first_hit_account_run_v002/summary.json",
+      "sha256": "a9de34cff5b717ad2e57c3b24883dd1fac2f48741b6fa627c7cfbff1cd577c81"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/first_hit_account_run_v002/independent_review.json",
+      "sha256": "42887a3a55eac71e1f456fe34884a62766ba9aeb07bbb6fb83d91eee6d9b19ac"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/ranked_first_hit_inputs_v001/precision/receipt.json",
+      "sha256": "f9f4c0cd4b47cd1ac5c7f5866bc5a42853dc19b6f91110d93eb09f3c6650b968"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/ranked_first_hit_inputs_v001/prepare_source_snapshot.py",
+      "sha256": "2e5e78d8a6e3630f75c8de9aa9bcaace26c27c914bad1d5f490cc8da7d0d3d3f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/signal_lease.py",
+      "sha256": "68e67ffc7c327469ac26aeae79dcf1c2c7d8d3686b46ee805bed1b4adfd78a80"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/prepare_signal_lease.py",
+      "sha256": "3b90f3bffd137b8f3dd3353bf66441c8fdcdb6594d4ce26363fa434ae7a45985"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/replay_signal_lease.py",
+      "sha256": "6261fadf8f1071d7f28704efb1c25cdfcd94f30e4aa94035f97772df58dcd9f6"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/audit_signal_lease_positions.py",
+      "sha256": "ff44a2126fc34f0a70ca762025a48c93bce90bb9c0a66185ca605882756ff5c2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/audit_signal_lease.py",
+      "sha256": "f1b52aded7aa0d51eeb594f194b57991e427ce2e27011862d34967a273629a0b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_signal_lease_accounts.py",
+      "sha256": "9f8ea48245216d4d9a4e736116b766848eba6111bae3abc049bbd94e690f5bb9"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/tests/research/test_signal_lease.py",
+      "sha256": "c3dabd4853fb752d0d02bb20a2f4605de35783153dbadbbdc413395fc07a5750"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/fine_lease.py",
+      "sha256": "35fa7feb09d6e3fb51bead506b83ce1b33b9fd52ce9bd638d241da5bfe004de6"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_fine_lease_account.py",
+      "sha256": "69543bb38140df3776db77c031f39f79fee21ffb7d2fab001c4c0f6f2bcbd27a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_fine_lease_study.py",
+      "sha256": "353a7782467c791703f5dc34f8182d001650e0e1c4761b9427424f2425b270e1"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/replay_fine_lease.py",
+      "sha256": "d2c12a8d0fefeef6306e1de4e107c33f80d574382e9d34ab065f2d0b4adc0101"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/audit_fine_lease.py",
+      "sha256": "8e22848eb27064547a18faacc0684860ebac8e90bf61afccdfb82e4d5c0f1317"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/audit_fine_lease_positions.py",
+      "sha256": "8a4feb66e48e5ee16cdb5dfcbfd57030a4fd3c7dae65332a41c102678e61e26c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/tests/research/test_fine_lease.py",
+      "sha256": "cc960c3c763a8833b6092feeb98cd7d33a264a964a594181f5dcdd07ea9f18af"
+    }
+  ],
+  "lease_mechanism": {
+    "source_parents": 438,
+    "parent_distinct_dates": 18,
+    "parent_model": "Unchanged BoostMonthly core2R/24h forecasts",
+    "parent_selection_unchanged": true,
+    "small_first_entry": "Parent publication+10minutes;one bar after parent nativecoreentry",
+    "small_last_entry": "Parent publication+20hours+5minutes",
+    "child_horizon": "4hours;latestchildclose<=parent publication+24hours+5minutes",
+    "overlapping_parent_resolution": "Latest eligible parent perpair supersedes prior future child proposals;doesnot mutate already-open positions",
+    "core_at_parent_publication": "Core proposal takes priority over anychild proposal on samepair/date",
+    "cycle_controls": [
+      1,
+      4
+    ],
+    "recycle_requires": "Every preceding wholechild position of this lease netprofitable andfullyclosed,strictly morethan5minutes since lastclose;anyzero/negativeclose blocks samelease permanently",
+    "risk_budget": "Same fixed0.99USDsmall/4.95USDcore plannedrisk and39.6/198margin caps,2x,no compounding",
+    "core_protection": "At5min opens only,storehighestactualnetROI. Once>=1R,fullmarketexit atfirstlaterobservedROI<=.5R. Originalgap/time/2Rprofit precedence retained;fixedhardstop unchanged. Never arm from currentbar high/low or trade.max_rate.",
+    "small_ranking": "Parent predicted24hnet times estimatedchildnotional is a fixed heuristic,not child expected PNL;allcurrentpositions/cyclehistory use only already-known state",
+    "partial_exits": false,
+    "additional_entries": false,
+    "runtime": "Historicalbacktest only;no livepersistence/restart qualification"
+  },
+  "minute_execution_contract": {
+    "source_overlay_plan_sha256": "1c72371a03939c6f3b7458835085c84a047672b8132202b3c5c8f8476701ccdb",
+    "source_mask_roundtrip_sha256": "29edc255778a487d92d15a410ec4aee4d482fb3b06717ea320df12d6ffe39428",
+    "unchanged_minute_rows": 10333440,
+    "no_observed_trade_minutes": 16427,
+    "matching": "Matchingandstrategyexitchecks skippedwhennoobservedtrades;historicalvolumeisrealisedexecutionobservation,neverapredictivesignal. Firstlaterpositiveprintminute evaluatesfixedstopgapandtimedeadlines. OHLCfirstprinttimeisminute-bucketproxy,nottick/quoteproof.",
+    "entries": "Native1mdetail canacceptstillsame5moldsignalswhenquotes/slotsavailablelaterwithinthatbar;no backdating. SamefiveMinuterankcache.",
+    "cycle_flat_gap": "Existingstrict5minute flatbuffer evaluatedat5mselectionclock;canbeconservative afterminuteclose. Allpriorcyclesmustfullnetwin.",
+    "parent_expiry": "Absoluteparentpublication+24h5min;unknownexecutionminutesdelayexittofirstobservedtrade. Childmax4h;finalparentwindowcanfinishsoonerthan4h.",
+    "small_retention": "Onlyactualobservedminute-open netROI;arm>=.25R,softfullcloseat<=.1R thereafter. Neverarmfromcurrenthigh/low,doesnotmovehardstop;gaps/fundingcanmakeexitnegative. NativeintrabaroneRtargetretained.",
+    "core": "Fixedoriginal2Rtarget;profitcheckonlywhenminute%5==0;finerhardstopandabsoluteparentexpiry.",
+    "precision": "Originalcausal5mclosed-candle proxy retainedviaasoflookup,not actual historicalvenue metadata.",
+    "fills": "Requireoneimmediatecompleteentry/exit onpositiveobserved-trademinutes;unfilled/partialbehaviorinvalidatesregisteredproofratherthanbeinghidden."
+  },
+  "sequential_cost_admission": {
+    "primary_cost": 3,
+    "registered_primary_accounts": 3,
+    "maximum_accounts_if_stress_admitted": 9,
+    "stress_costs": [
+      0,
+      10
+    ],
+    "stress_requires": [
+      "primarynativeeconomicpassed",
+      "smallandcoreeachnetprofitable",
+      "coreprofitlargerthan small",
+      "smallcompletepositions/184>=3"
+    ],
+    "scope": "Mechanismstressadmissiononly. Originaljointwinrate/annualreturn/allcostandindependentforwardrequirementsunchanged;notlaunchqualification.",
+    "all_not_admitted_costs_reported": true
+  }
+}

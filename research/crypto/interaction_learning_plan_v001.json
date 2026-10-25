@@ -1,0 +1,196 @@
+{
+  "schema": "crypto-quant-registered-price-volume-interaction-learning.v1",
+  "registered_utc": "2026-10-23T22:41:03.892936+00:00",
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "warmup_start": "2023-12-01",
+  "start": "2024-01-01",
+  "evaluate_start": "2024-07-01",
+  "end": "2025-01-01",
+  "models": [
+    "LinearStatic",
+    "BoostStatic",
+    "BoostMonthly"
+  ],
+  "features": [
+    "signed_r1",
+    "signed_r12",
+    "signed_r48",
+    "signed_r288",
+    "signed_vwap_gap",
+    "signed_z20",
+    "signed_z96",
+    "signed_location",
+    "signed_body",
+    "signed_flow12",
+    "signed_pressure14",
+    "signed_btc12",
+    "signed_btc288",
+    "signed_relative12",
+    "signed_relative48",
+    "funding_credit8",
+    "funding_change8",
+    "atr_fraction",
+    "vol_ratio",
+    "efficiency12",
+    "efficiency288",
+    "log_volume_ratio",
+    "log_dollar_volume",
+    "btc_vol",
+    "side"
+  ],
+  "source_hashes": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/interaction_features.py": "35c42b59a9ded8548da81b3904b8ac654f5a14788b5a8c4bb9953886e04d22ac",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/interaction_models.py": "383206eb77f5095824db5cd7fdc8e6e014df09c223bdde8598b808456066a5cf",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/prepare_interaction_panel.py": "08349a06ea0e6380c199834aefa6a3720f878730d407ba2576b41e51c8984a2b",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/run_interaction_learning.py": "97f954ab85efe2cc52166b47540c854142d3691f95f7282dcd22f175abcf43d2",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/screen_interaction_learning.py": "f63b02333fa07df259cd8a90b6dd2e44e15ae22178cafd5ab227a7cad354a1b7",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/audit_interaction_learning.py": "18ebf8c8b231383be3746146470d54a2dc160be77f4bb1959db590665f70a231",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/run_interaction_study.py": "066e7bcc13e95d99657bee3b5f9231dad3412e703e40334ec4c522ea7b6915d9",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/conditional_learning.py": "55e03f8115d3c968570fb78ededb27e4e390f2b095f238800a70db690eee77c5",
+    "/Users/chrise/GitHub/freqtrade/tests/research/test_interaction_learning.py": "81f9d3a37c8f93246b9d52b8788ac60728a1e4ed95dfd7841a60f3b161a6e4ed"
+  },
+  "runtime_manifest": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/dependencies/sklearn_1_9_1_manifest.json",
+    "sha256": "da2c27ecf24c828a989c7fdc7c8d8abd4cd11410b7d0945cbd1e78f9941c1851"
+  },
+  "expected_shared_versions": {
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scipy": "1.18.1",
+    "pyarrow": "26.0.0",
+    "joblib": "1.6.0"
+  },
+  "native_source_reference": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_lifecycle_run_v002/train/NFIBoundedPartial/cost_3bps/freeze.json",
+    "sha256": "1656d98a954d02e08ec139de3fb6cc5efc9564256b716623ad8e73225ea68721"
+  },
+  "boosting_parameters": {
+    "max_iter": 80,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 15,
+    "max_depth": 4,
+    "min_samples_leaf": 200,
+    "l2_regularization": 10.0,
+    "max_bins": 63,
+    "early_stopping": false,
+    "categorical_features": null,
+    "random_state": 20261024
+  },
+  "linear_penalty": 0.01,
+  "calibration_penalty": 0.001,
+  "maximum_model_threads": 4,
+  "minimum_fit_rows": 1000,
+  "minimum_calibration_rows": 200,
+  "minimum_probability": {
+    "small": 0.8,
+    "core": 0.55
+  },
+  "minimum_predicted_net": {
+    "small": 0.0008,
+    "core": 0.0016
+  },
+  "fee_per_side": 0.0005,
+  "primary_extra_cost_bps": 3,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "minimum_evaluation_units": 30,
+  "minimum_distinct_days": 30,
+  "minimum_small_opportunities_per_day": 3,
+  "minimum_observed_positive_fraction": {
+    "small": 0.8,
+    "core": 0.55
+  },
+  "maximum_unified_qvalue": 0.05,
+  "bootstrap_replicates": 1000,
+  "block_days": 7,
+  "random_seed": 20261024,
+  "prefix_symbols": [
+    "ETHUSDT",
+    "SOLUSDT",
+    "XRPUSDT"
+  ],
+  "prefix_cuts": [
+    "2024-03-15T12:00:00",
+    "2024-07-01T00:00:00",
+    "2024-11-14T23:00:00"
+  ],
+  "metric_contract": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/performance_metric_contract_v003.json",
+    "sha256": "58dd4786047d2cd161cb99d094735418ddcd68fb4a41fb6107542e63c2c906b2"
+  },
+  "joint_targets": {
+    "targets_are_research_assumptions_not_promised_returns": true,
+    "minimum_net_whole_position_win_rate": 0.8,
+    "annual_compounded_net_return_target": 0.5,
+    "period_return_hurdle": "1.5 ** (UTC calendar days/365.25) - 1; report actual period return separately",
+    "minimum_small_complete_trades_per_calendar_day": 3.0,
+    "both_sleeves_positive_net_profit": true,
+    "core_net_profit_exceeds_small": true,
+    "all_three_cost_scenarios_must_pass": true,
+    "independent_forward_required_before_live": true
+  },
+  "hypothesis": {
+    "mechanism": "Price/volume path and liquidity regime interactions may condition short-horizon and swing return quality. Bothside hourly broadopportunities, no residual z-score or originalNFI entry gates. Funding is one past conditioning input, not a standalone carry strategy.",
+    "features": "25 features: side-signed1/12/48/288bar logreturns,VWAP24h/ATR gap,z20/z96,body/location,signed-volume proxy,14bar returnpressure;BTC andcomplete40coin contemporaneousmedian context;knownfunding8hequivalent/change;ATR,volatilityratio,efficiency,volume/liquidity proxies andside. Proxyflow is not actual taker flow.",
+    "population": "39alt USDTperpetuals,BTCreferenceonly. Sourcebar everyhour00minute, featureknown+5m, hypothetical/nativeentry+10m. Small1h horizon,core24h at4hour sourceclocks. ATRfraction .0005..02,finitecomplete features;bothdirections before predictiongating.",
+    "labels": "Singleleg fixed-horizon unit-notional pricePnL+actualsettledfunding withhourlymarkproxy minusbothfees. 3bps primaryextra plus5bpsbase per side. No stops/targets,capitalcapacity,precision,liquidation oraccountPnL atscreen. All rows require fixedworst24h+5m maturity beforewindowend.",
+    "chronology": "AtmonthM: trainwindow[M-138d,M-18d), calibration[M-16d,M-2d), bothwithcommon24h+5moutcomepurge. StaticJulyfit staysfixedthroughDec;Monthlyrefits atpredeclaredmonthstarts. PastH2labels admitted onlyforlatermonths afterown-monthforecasts werefrozen. No earlystopping orhyperparametersearch.",
+    "probability": "SeparatemonotonePlatt calibration onpastcalibrationwindow,nonnegative slope,L2 .001. No inversion of a degraded classifier and no futurecalibration. Predicted80percent doesnotprove actual80percent netcomplete-positionwinrate.",
+    "selection": "SmallcalibratedP>=.8andpredictednet>=8bps;coreP>=.55andnet>=16bps,allat3bpsprimarycost. Choosehighestpredictednet side percoin/time/sleeve,longtie; corepreempts smallsamecoin/time. Selectionfrozenbeforepostevaluation,identicalunits for0/3/10costs.",
+    "inference": "Seven-daycircularUTCdayblockbootstrap1000replicates forselectedunitmean,centered one-sidednull andpercentileCI. UnifiedBH18cases=3models*2sleeves*3costs. Doesnotadjust allpriorprojectexplorations. Allcosts,bothlayers,positiveCI,q<=.05,count/days/positivefraction/frequency gates before a nativecandidate.",
+    "scope": "Previouslyused2024history,retrospective/prequential researchnotindependentOOS. Neither model norunitstat qualifies live. Full jointaccounttargets unchanged; no accountSharpe fromoverlappingunitlabels."
+  },
+  "official_algorithm_sources": [
+    "https://scikit-learn.org/stable/modules/ensemble.html",
+    "https://scikit-learn.org/stable/modules/calibration.html"
+  ],
+  "next": "Onlyunitforecastcandidatepassingall18relevantchecksforbothsleeves canenterexactnativeaccountscreen; costs,funding,fullcampaigns,markedmetrics and independentforward required.",
+  "orders_enabled": false,
+  "production_eligible": false
+}

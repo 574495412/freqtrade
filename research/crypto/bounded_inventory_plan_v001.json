@@ -1,0 +1,167 @@
+{
+  "symbols": [
+    "BTCUSDT",
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "train_start": "2024-01-01",
+  "train_end": "2025-01-01",
+  "validation_start": "2025-01-01",
+  "validation_end": "2026-01-01",
+  "holdout_start": "2026-01-01",
+  "holdout_end": "2026-09-01",
+  "initial_equity_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    0,
+    3,
+    10
+  ],
+  "dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "data_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "universe_result_sha256": "8c40842bbca4ff128de18ffa7b76919b666660c6165a53f8cafe184906ef974c",
+  "runtime_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/indexed_custom_data.py",
+      "sha256": "58445b63c6df934f1170066a83a28f4938c52885da3d07e4ac21d5a7207c7596"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/run_candidate_indexed.py",
+      "sha256": "57c8feb40ff57d1c099fda132343d84a33cb9db207d36ea81bc3ff21372eae11"
+    }
+  ],
+  "historical_evidence_status": "new_autonomous_rule_on_previously_used_history_retrospective_not_independent_oos",
+  "screening_targets": {
+    "minimum_closed_trades_per_evaluation": 30,
+    "maximum_observed_drawdown": 0.15,
+    "minimum_profit_factor": 1.1,
+    "positive_net_return_all_cost_scenarios": true
+  },
+  "human_objective": {
+    "quote": "小额频繁交易提升胜率 + 大额收益率，让收益率胜率都很高冲击带单排行榜，自主策略完成",
+    "same_account": true,
+    "must_copy_named_trader": false,
+    "must_use_original_public_flow_rule": false,
+    "venue_assumption": "Binance USDT perpetual for existing data/execution; destination venue and ranking category not confirmed"
+  },
+  "leaderboard_scope_limits": [
+    "No current rank/percentile asserted without same-time competitor distribution and exact destination venue/category",
+    "No estimated copierPnL without follower execution and minimum-order evidence",
+    "Historical no-deposit account uses initial capital as return denominator; real MaxBaseBalance requires deposit records",
+    "Winrate is net-profit-positive entire closed positions, not orders or partials"
+  ],
+  "schema": "crypto-quant-bounded-ema-inventory.v1",
+  "registered_utc": "2026-10-23T18:54:26.173027+00:00",
+  "study": "fixed_budget_single_vs_equal_three_tranche_inventory_reversion",
+  "timeframe": "5m",
+  "stake_amount": "unlimited",
+  "max_open_trades": 4,
+  "strategy_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/bounded_inventory.py",
+      "sha256": "5c823e5b72d3252b06d0234bc2d684ac78cd5ef88b397a30d0923ba7df8109a2"
+    }
+  ],
+  "candidates": [
+    {
+      "name": "InventorySingle",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "InventoryGrid3",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "InventorySmallGrid3",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    },
+    {
+      "name": "InventoryCoreGrid3",
+      "allowed_leverage": [
+        2.0
+      ],
+      "can_short": true
+    }
+  ],
+  "settings": {
+    "use_exit_signal": true,
+    "exit_profit_only": false,
+    "ignore_roi_if_entry_signal": false,
+    "reduce_df_footprint": false,
+    "ignore_buying_expired_candle_after": 300
+  },
+  "runner_module": "research.crypto.run_candidate_indexed",
+  "orders_enabled": false,
+  "production_eligible": false,
+  "hypothesis": {
+    "small_entry": "Completed5minute close above completed4hourEMA200 andbelow min(completed1hourEMA12,EMA48)-max0.6percentclose or1.5hourATR14; mirrored short below4htrend andaboveupperEMAband. Freshedges.",
+    "core_entry": "Same overall4hourEMA200 direction; gap beyondEMA band>=max2percentclose or1.5completed4hourATR14. Corepriority ifbothsleeves signal samepair.",
+    "risk": "Leverage2,small2slots/core2slots;campaign budget includes ALL future planned fills andknown fees. Small0.1percent realizedcapital initial loss budget and2percent campaign margincap;core0.5percent and20percent cap. Initial stop max3percent/4hourATR14 small, reject>10percent; core max8percent/4slow4hATR14,reject>30percent. Absolute initial stop never widens.",
+    "tranches": "Control1entry, treatment atmost3equal-dollar stakes; planned levels firstprice, firstprice plus/minus25percent and50percent of original stopdistance. First stake chosen againstsum of all3planned stoplosses andfees. Adds require lastcompleted5mclose andcurrententryrate tohave crossednextlevel butcurrentrate stillon safe sideoforiginalstop. Recompute remaining risk includingknownnegativefunding andmargincap beforeeach add;never double stake.",
+    "exit": "NativeROI1.6percent netmargin small,6percent core; fullposition exitonly, no partialharvest. Small4hour/core72hourtimecap includeslosingcampaigns; fixedcampaignstop. Report completecampaign netwinrate, not individualfills.",
+    "comparison": "All4fixedaccounts, same1000USDT/data/costs/riskbudgets. Full-entry and3tranche variants have different exposure timing butsameworst-stop initialbudget. Separate small/coreaccountPnL neveraddedtoformcombinedresult.",
+    "limitations": "Fixed stops cannot guarantee gap/futurefundinglosslimit. Native5minuteOHLCmatching needsfiner pathvalidation ifqualified. Strategy only inspiredbyEMA inventory mechanism, notPassivbot sourceorconfigreplication."
+  },
+  "source_inspiration": [
+    {
+      "url": "https://github.com/enarjord/passivbot/blob/master/README.md",
+      "role": "EMA band contrarian perpetualinventory idea; currentmasterdoc, not pre2024source or profitability evidence."
+    },
+    {
+      "url": "https://github.com/enarjord/passivbot/blob/master/docs/risk_management.md",
+      "role": "Inventory/exposure andstuck-position risks. Our fixedcampaignrisk,stop,tranches/timecap rules independentlyspecified."
+    }
+  ],
+  "execution_schedule": {
+    "discovery": "All4full2024native accounts at3bps; no gridparameteroptimization. Verify actual entrycount, fullcampaigncash andplannedloss caps before economicinterpretation.",
+    "followup": "Any campaign sourceaudit failure invalidates economic interpretation andrequiresnewversion. Candidates passingnetpositive/PF1.1/DD15percent/30campaigns at3bps receive2024cost0/10. Onlyjoint candidatewithbothpositive sleevesandcoremajorprofit thenadvancesunchanged2025and2026historical accounts; allpreviouslyseenhistory retrospective.",
+    "joint_goal": "Reportnetwholecampaignwinrate,frequency,small/coreprofit contribution andmarkedDD together. Positive lowfrequency orlossmakingsmalllayer doesnotqualify objective.",
+    "history": "This is a newboundedinventory mechanism after failedprice/flow/RSI screens; no parametersselected onthismechanisms outcomes. No independentOOS orproductioneligibility."
+  }
+}

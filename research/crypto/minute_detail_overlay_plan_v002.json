@@ -1,0 +1,83 @@
+{
+  "schema": "crypto-quant-masked-minute-overlay.v2",
+  "registered_utc": "2026-10-24T02:54:02.858609+00:00",
+  "symbols": [
+    "ETHUSDT",
+    "SOLUSDT",
+    "AVAXUSDT",
+    "TRBUSDT",
+    "DOGEUSDT",
+    "XRPUSDT",
+    "ADAUSDT",
+    "BNBUSDT",
+    "LINKUSDT",
+    "DOTUSDT",
+    "FILUSDT",
+    "NEARUSDT",
+    "ATOMUSDT",
+    "DYDXUSDT",
+    "LTCUSDT",
+    "BCHUSDT",
+    "ETCUSDT",
+    "GALAUSDT",
+    "SANDUSDT",
+    "UNIUSDT",
+    "IOTAUSDT",
+    "RUNEUSDT",
+    "AXSUSDT",
+    "AAVEUSDT",
+    "EGLDUSDT",
+    "ALGOUSDT",
+    "SNXUSDT",
+    "CRVUSDT",
+    "MASKUSDT",
+    "SUSHIUSDT",
+    "KSMUSDT",
+    "IOTXUSDT",
+    "MANAUSDT",
+    "NEOUSDT",
+    "GRTUSDT",
+    "TRXUSDT",
+    "CELOUSDT",
+    "SKLUSDT",
+    "THETAUSDT"
+  ],
+  "start": "2024-07-01",
+  "end": "2025-01-01",
+  "base_dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "base_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/prepare_fine_detail.py",
+      "sha256": "63a9705e6f9f832c5a024f3738407bd9c33cb9a68384743dc4e49cb1811c45c0"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/prepare_nfi.py",
+      "sha256": "0b2039c6c55679a24d77b96d77bec3f8377ddce9525684ea9a35606c2569646a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/freqtrade/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    }
+  ],
+  "raw_source": "https://data.binance.vision/data/futures/um/monthly/klines",
+  "source_schema_reference": "https://github.com/binance/binance-public-data",
+  "archives": 234,
+  "expected_minute_rows": 10333440,
+  "concurrent_downloads": 4,
+  "official_checksums_required": true,
+  "missing_or_duplicate_clocks": "Fail;no filling or interpolation",
+  "volume_absolute_tolerance": 1e-06,
+  "volume_relative_tolerance": 1e-10,
+  "ohlc_tolerance": "1e-12absolute andrelative",
+  "purpose": "Immutable1mdetailoverlay for new registered lifecycle experiments;originalbase dataneverchanged;further execution-gated research only.",
+  "orders_enabled": false,
+  "production_eligible": false,
+  "minute_source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/minute_detail_source_v001",
+  "quality_audit": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/minute_detail_source_v001/zero_activity_consistency_v001.json",
+    "sha256": "2123ed997d2d18eb3597bbc1aefbc55a3da5b005df1c3fdc00dc496057c7b66e"
+  },
+  "predecessor_source_plan_sha256": "cb1bd17e0ac44f4cb22b607fd077c14786d69a75e50fa14f4b80301f2e22b4f5",
+  "no_observed_trade_policy": "Keepallminute rows andrawprices unchanged;sidecar masks. Researchmatcher skips matchingandcallbacksatemptyminutes;firstlaterpositive minute re-evaluatesgap/time exits. No quotes or immediate fills proved. Masks are realised execution-observation assumptions,not predictive signal inputs."
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "crypto-quant-received-flow-quote-label-screen.v1",
+  "registered_date": "2026-10-24 Asia/Shanghai",
+  "goal": "Find a small frequent net-profitable perpetual sleeve for the original same-account objective; core sleeve remains unqualified",
+  "capture_plan": "research/crypto/microstructure_plan_v001.json",
+  "data_partition": "The next registered main forward capture is discovery screening. Later nonoverlapping forward capture is required for validation. Pilot prices are source checks only; no pilot outcome tuning.",
+  "symbols": ["BTCUSDT", "ETHUSDT", "BNBUSDT", "SOLUSDT", "XRPUSDT", "DOGEUSDT"],
+  "candidates": {
+    "ReceivedFlowControl": {
+      "direction": "sign of received_flow_30s",
+      "entry": "abs(received_flow_30s)>=0.5; direction*received_flow_120s>=0.2; direction*persistence_30s>=2/3"
+    },
+    "ReceivedBookContinuation": {
+      "direction": "sign of received_flow_30s",
+      "entry": "ReceivedFlowControl and direction*imbalance_l5>=0.2 and direction*microprice_deviation_bps>0"
+    },
+    "ReceivedBookAbsorption": {
+      "direction": "negative sign of received_flow_30s",
+      "entry": "abs(received_flow_30s)>=0.5; sign(flow30)*received_flow_120s>=0.2; direction*imbalance_l5>=0.2; direction*microprice_deviation_bps>0; abs(past30second_mid_return_bps)<=5",
+      "past_return": "Most recent already received valid book at decision and30seconds earlier, each within1second; no interpolation"
+    }
+  },
+  "common_filters": {
+    "all12_registered_factors_complete": true,
+    "maximum_spread_bps": 2,
+    "maximum_conservative_event_age_ms": 1000,
+    "maximum_clock_probe_age_seconds": 120,
+    "minimum_clock_probe_rtt_ms": 0,
+    "maximum_clock_probe_rtt_ms": 500,
+    "feature_decision": "UTC minute boundary, last feature row at or before boundary and no older than1second; only received information",
+    "per_candidate_proposals": "At most1proposal perminute across six symbols and both directions; highest abs(flow30)*abs(flow120), then symbol ascending",
+    "control_common_population": "Same all12factor-complete population, not flow-only coverage advantage"
+  },
+  "quote_labels": {
+    "take_price_fraction": 0.004,
+    "stop_price_fraction": 0.004,
+    "maximum_holding_seconds": 1800,
+    "entry": "First valid observed book at least1000ms after minute decision, at most another1000ms later; buy ask/sell bid",
+    "trigger": "First observed executable-side quote crossing price threshold; exit uses first valid observed book at least1000ms after trigger and within another1000ms",
+    "time_exit": "First valid observed book at least1800seconds after entry and within1000ms; preserve unknown if unavailable",
+    "price": "Long opens at ask and closes at bid; short opens at bid and closes at ask; no touch-equals-fill, maker rebate or price-barrier fill assumption",
+    "costs_per_side": {"base_fee": 0.0005, "extra_bps": [0, 3, 10]},
+    "funding": "Verify actual funding history over exact capture bounds after completion; missing or incomplete source is unknown, never assumed zero. At settlements use contemporaneous observed mid proxy and disclose it.",
+    "maturity": "Exclude decisions whose fixed worst-case entry, holding and exit buffer extend beyond capture end; never include tail rows because future exits happened early",
+    "source_gaps": "Any observed connection break, invalid quote or event-age violation affecting the path makes the label unknown; no filling or offline backfill into live features",
+    "not_account_pnl": true
+  },
+  "prediction_admission": {
+    "minimum_mature_signals_each_candidate": 30,
+    "minimum_positive_net_label_fraction": 0.8,
+    "positive_mean_unit_net_label_all_cost_scenarios": true,
+    "no_signal_or_insufficient_signal_is_not_profit": true,
+    "all_candidates_and_cash_reported": true,
+    "unknown_source_population_reported": true,
+    "same_quote_unit_population_for_cost_comparison": true,
+    "native_same_account_followup_required": true,
+    "no_joint_production_admission_until_core_also_qualified": true
+  },
+  "limitations": "Quote labels cannot prove actual exchange fills, maker queue position, contract rounding, full-account risk or leaderboard rank. Screening can reject, but cannot qualify production.",
+  "orders_enabled": false,
+  "production_eligible": false
+}
