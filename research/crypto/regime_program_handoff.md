@@ -1,5 +1,7 @@
 # 多行情、多策略研发执行交接
 
+2026-10-26第二轮新增 `sizing_portfolio.py` 独立版本，只扩展源默认forecast band：按实际持仓标记权重判断区间，越界交易到最近边沿；强制风险、事件缩仓和停机优先。关闭buffer时6个原始对照的账本／指标／请求／JSON状态与首轮精确一致。新轮56成本／容量账户全部独立核算，但没有合格收益源；报告在TradingAgents `docs/research/regime_program/sizing_20261026/`。不修改或重跑覆盖首轮封存结果。
+
 2026-10-26已新增独立版本 `regime_portfolio.py`：目标权重加减仓、同方向生命周期加权成本、事件系数小时变化、退出确认后分配风险额度、持久部分退出与JSON恢复。新仓成交还受实际扣费权益／总敞口限制；相同符号反向先平仓，下一既定调仓才反向进入。旧引擎／旧账户不修改。
 
 TradingAgents `research_tools/regime_program/run.py` 已执行56个成本／容量账户，独立审计在同包 `account_audit.py`，报告见 [首轮账户结果](/Users/chrise/GitHub/TradingAgents/docs/research/regime_program/accounts_20261026/README.md)。全部独立财务重算通过；事件策略全年高成本账户经真实JSON边界恢复，与完整回放逐行一致。8项新执行检查涵盖恢复、资金费、事件加减仓、退出受阻和风险停机。当前无合格盈利策略，研究不等于模拟或实盘交易。
