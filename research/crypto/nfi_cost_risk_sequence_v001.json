@@ -1,0 +1,69 @@
+{
+  "schema": "nfi-cost-risk-decomposition.v1",
+  "registered_ns": 1793114616309984000,
+  "one_strategy_only": true,
+  "new_factors": 0,
+  "same_original_source_commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+  "same_period": "20250101-20250201",
+  "stages": [
+    {
+      "id": "A",
+      "change": "Original fee5bps / leverage3; observer only",
+      "fee_bps": 5,
+      "leverage": 3
+    },
+    {
+      "id": "B",
+      "change": "Add3bps per side as an explicitly labeled execution-cost-equivalent fee proxy",
+      "fee_bps": 8,
+      "leverage": 3
+    },
+    {
+      "id": "C",
+      "change": "Increase the extra per-side cost proxy to10bps",
+      "fee_bps": 15,
+      "leverage": 3
+    },
+    {
+      "id": "D",
+      "change": "Only change all three original leverage settings to1",
+      "fee_bps": 15,
+      "leverage": 1
+    },
+    {
+      "id": "E",
+      "change": "Only add0.8gross reference-NAV cap, if rule can be implemented and verified without changing signals",
+      "fee_bps": 15,
+      "leverage": 1,
+      "gross_cap": 0.8
+    },
+    {
+      "id": "F",
+      "change": "Only add native8percent price stop at1x",
+      "fee_bps": 15,
+      "leverage": 1,
+      "gross_cap": 0.8,
+      "native_stoploss": -0.08
+    },
+    {
+      "id": "G",
+      "change": "Only add15percent permanent reference-NAV drawdown halt",
+      "fee_bps": 15,
+      "leverage": 1,
+      "gross_cap": 0.8,
+      "native_stoploss": -0.08,
+      "permanent_halt": 0.15
+    }
+  ],
+  "interpretation": [
+    "Cost-equivalent fees are not actual executable slippage or queue evidence. No double-counting original5bps.",
+    "Risk rules are hypotheses to compare, not presumed correct or automatically applied to production.",
+    "Incremental effects depend on this fixed order; no grid search, model/factor expansion, strategy selection, or unseen-profit claim.",
+    "If a constraint does not activate, report no evidence about its benefit.",
+    "Only the original-source replication stage is expected to match the author."
+  ],
+  "actual_account_budget": 7,
+  "maximum_financial_workers": 1,
+  "orders_enabled": false,
+  "production_eligible": false
+}
