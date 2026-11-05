@@ -1,0 +1,221 @@
+{
+  "dry_run_wallet": 1000,
+  "grinding_enable": true,
+  "max_open_trades": 6,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "",
+  "timeframe": "5m",
+  "unfilledtimeout": {
+    "entry": 3,
+    "exit": 2,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "emergency_exit": "limit",
+    "force_entry": "limit",
+    "force_exit": "limit",
+    "stoploss": "limit",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60,
+    "stoploss_on_exchange_limit_ratio": 0.99
+  },
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0
+  },
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "bot_name": "cz-nfi-x8-forty-1x-paper-20261105",
+  "strategy": "NostalgiaForInfinityX8",
+  "dry_run": true,
+  "force_entry_enable": false,
+  "initial_state": "running",
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "username": "",
+    "password": ""
+  },
+  "telegram": {
+    "enabled": false,
+    "token": "",
+    "chat_id": ""
+  },
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "password": "",
+    "enable_ws": false,
+    "pair_whitelist": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "SOL/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "TRB/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "XRP/USDT:USDT",
+      "ADA/USDT:USDT",
+      "BNB/USDT:USDT",
+      "LINK/USDT:USDT",
+      "DOT/USDT:USDT",
+      "FIL/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "ATOM/USDT:USDT",
+      "DYDX/USDT:USDT",
+      "LTC/USDT:USDT",
+      "BCH/USDT:USDT",
+      "ETC/USDT:USDT",
+      "GALA/USDT:USDT",
+      "SAND/USDT:USDT",
+      "UNI/USDT:USDT",
+      "IOTA/USDT:USDT",
+      "RUNE/USDT:USDT",
+      "AXS/USDT:USDT",
+      "AAVE/USDT:USDT",
+      "EGLD/USDT:USDT",
+      "ALGO/USDT:USDT",
+      "SNX/USDT:USDT",
+      "CRV/USDT:USDT",
+      "MASK/USDT:USDT",
+      "SUSHI/USDT:USDT",
+      "KSM/USDT:USDT",
+      "IOTX/USDT:USDT",
+      "MANA/USDT:USDT",
+      "NEO/USDT:USDT",
+      "GRT/USDT:USDT",
+      "TRX/USDT:USDT",
+      "CELO/USDT:USDT",
+      "SKL/USDT:USDT",
+      "THETA/USDT:USDT"
+    ],
+    "pair_blacklist": [],
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "timeout": 20000
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "timeout": 20000
+    }
+  },
+  "fee": 0.0008,
+  "nfi_parameters": {
+    "futures_mode_leverage": 1.0,
+    "futures_mode_leverage_rebuy_mode": 1.0,
+    "futures_mode_leverage_grind_mode": 1.0
+  },
+  "webhook": {
+    "enabled": true,
+    "format": "json",
+    "timeout": 5,
+    "retries": 0,
+    "allow_custom_messages": false,
+    "entry": {
+      "msgtype": "text",
+      "text": {
+        "content": "[CZ-Agent 合约模拟盘] 开仓委托\n{pair} {direction}\n交易编号 {trade_id}，数量 {amount}，委托价 {order_rate}\n投入 {stake_amount} {stake_currency}"
+      }
+    },
+    "entry_fill": {
+      "msgtype": "text",
+      "text": {
+        "content": "[CZ-Agent 合约模拟盘] 开仓成交\n{pair} {direction}\n交易编号 {trade_id}，数量 {amount}，委托价 {order_rate}\n投入 {stake_amount} {stake_currency}"
+      }
+    },
+    "entry_cancel": {
+      "msgtype": "text",
+      "text": {
+        "content": "[CZ-Agent 合约模拟盘] 开仓取消\n{pair} {direction}\n交易编号 {trade_id}，数量 {amount}，委托价 {order_rate}\n投入 {stake_amount} {stake_currency}\n原因 {reason}"
+      }
+    },
+    "exit": {
+      "msgtype": "text",
+      "text": {
+        "content": "[CZ-Agent 合约模拟盘] 平仓委托\n{pair} {direction}\n交易编号 {trade_id}，数量 {amount}，委托价 {order_rate}\n投入 {stake_amount} {stake_currency}\n盈亏 {profit_amount:.4f} {stake_currency} ({profit_ratio:.2%})\n原因 {exit_reason}"
+      }
+    },
+    "exit_fill": {
+      "msgtype": "text",
+      "text": {
+        "content": "[CZ-Agent 合约模拟盘] 平仓成交\n{pair} {direction}\n交易编号 {trade_id}，数量 {amount}，委托价 {order_rate}\n投入 {stake_amount} {stake_currency}\n盈亏 {profit_amount:.4f} {stake_currency} ({profit_ratio:.2%})\n原因 {exit_reason}"
+      }
+    },
+    "exit_cancel": {
+      "msgtype": "text",
+      "text": {
+        "content": "[CZ-Agent 合约模拟盘] 平仓取消\n{pair} {direction}\n交易编号 {trade_id}，数量 {amount}，委托价 {order_rate}\n投入 {stake_amount} {stake_currency}\n原因 {reason}"
+      }
+    },
+    "status": {
+      "msgtype": "text",
+      "text": {
+        "content": "[CZ-Agent 合约模拟盘] {status}"
+      }
+    },
+    "startup": {
+      "msgtype": "text",
+      "text": {
+        "content": "[CZ-Agent 合约模拟盘] {status}"
+      }
+    },
+    "warning": {
+      "msgtype": "text",
+      "text": {
+        "content": "[CZ-Agent 合约模拟盘] {status}"
+      }
+    },
+    "exception": {
+      "msgtype": "text",
+      "text": {
+        "content": "[CZ-Agent 合约模拟盘] 运行异常，请检查本地运行日志。"
+      }
+    },
+    "protection_trigger": {
+      "msgtype": "text",
+      "text": {
+        "content": "[CZ-Agent 合约模拟盘] 风控锁定 {pair}\n原因 {reason}\n结束时间 {lock_end_time}"
+      }
+    },
+    "protection_trigger_global": {
+      "msgtype": "text",
+      "text": {
+        "content": "[CZ-Agent 合约模拟盘] 风控锁定 {pair}\n原因 {reason}\n结束时间 {lock_end_time}"
+      }
+    },
+    "liquidation_warning": {
+      "msgtype": "text",
+      "text": {
+        "content": "[CZ-Agent 合约模拟盘] 模拟仓位强平预警 {pair} {direction}\n当前价 {current_rate}，强平价 {liquidation_price}"
+      }
+    }
+  }
+}

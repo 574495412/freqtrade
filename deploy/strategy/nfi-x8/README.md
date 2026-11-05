@@ -1,0 +1,120 @@
+# NostalgiaForInfinity
+
+[![GitHub Pages](https://img.shields.io/badge/docs-online-blue)](https://iterativv.github.io/NostalgiaForInfinity/)
+
+## 📖 Documentation
+
+Full documentation is available online at:  
+👉 [https://iterativv.github.io/NostalgiaForInfinity/](https://iterativv.github.io/NostalgiaForInfinity/)
+
+## Introduction
+
+Trading strategy for the [Freqtrade](https://www.freqtrade.io) crypto bot. For backtesting results, check out the comments in the individual [commit](https://github.com/iterativv/NostalgiaForInfinity/commits/main) page.
+
+## General Recommendations
+
+For optimal performance, suggested to use between 6 and 12 open trades, with unlimited stake.
+
+A pairlist with 40 to 80 pairs. Volume pairlist works well.
+
+Prefer stable coin (USDT, USDC etc) pairs, instead of BTC or ETH pairs.
+
+Highly recommended to blacklist leveraged tokens (*BULL, *BEAR, *UP, *DOWN etc).
+
+Ensure that you don't override any variables in you config.json. Especially the timeframe (must be 5m).
+
+- `use_exit_signal` must set to true (or not set at all).
+- `exit_profit_only` must set to false (or not set at all).
+- `ignore_roi_if_entry_signal` must set to true (or not set at all).
+
+## Automatic Updates (Standalone Script)
+
+For users who are not using the Docker Compose updater, the repository also includes the [`tools/checkupdates.sh`](tools/checkupdates.sh) script.
+
+**What this script does:**
+- Checks the NFI repository for updates and downloads the latest release or main branch commit
+- Extracts the archive and updates the strategy files and all blacklist JSON files
+- Cleans up downloaded and extracted files
+- Optionally restarts a Docker container and sends Telegram notifications
+
+The script supports two update modes:
+- `releases` - Use official GitHub releases and update to the latest stable release
+- `commits` - Use the latest commit from the main branch
+
+**How to automate the update process:**
+1. Run the script manually first to create the configuration file and select your preferred update mode.
+2. After the configuration file is created, set up a cron job to run the script periodically.
+3. Run `crontab -e` and add a line such as the following to run the script every hour:
+
+```cron
+0 * * * * /path/to/your/script/checkupdates.sh
+```
+
+## Automatic Updates (Docker)
+
+The repository includes an `nfi-updater` sidecar service for Docker Compose users that keeps the strategy, blacklist, and pairlist automatically up to date without manual intervention.
+
+**What it does:**
+- Checks the strategy file, blacklist, and pairlist against the latest version on GitHub on a configurable schedule (default: every day at 10:00 AM in your timezone)
+- Watches the blacklist file via HTTP ETag every 60 seconds and applies critical updates immediately
+- Automatically restarts the freqtrade container only when a file actually changed
+
+**How to enable it:**
+
+The `nfi-updater` service is already defined in `docker-compose.yml`. It starts alongside freqtrade automatically when you run:
+
+```bash
+docker compose up -d --build
+```
+
+**Configuration (add to your `.env`):**
+
+```env
+# Timezone for the cron schedule
+TZ=Europe/London
+
+# How often to check for updates (cron syntax, default: daily at 10:00 AM)
+NFI_UPDATE_CRON=0 10 * * *
+
+# Docker Compose project name — must match what 'docker compose ls' shows
+# Docker uses the lowercase folder name by default
+COMPOSE_PROJECT_NAME=nostalgiaforinfinity
+```
+
+**View updater logs:**
+
+```bash
+docker compose logs -f nfi-updater
+```
+
+## Discord Link
+This is where we chat, hangout and contribute as a community (both links is the same server)
+
+- [Discord Invite 1](https://discord.gg/DeAmv3btxQ)
+- [Discord Invite 2](https://discord.gg/nzVeNvZsQq)
+
+## Referral Links
+If you like to help, you can also use the following links to sign up to various exchanges:
+
+- [Kucoin: (20% lifetime discount on trading fees)](https://www.kucoin.com/r/af/QBSSS5J2)
+- [Gate: (20% lifetime discount on trading fees)](https://www.gate.com/share/NFINFITY)
+- [ByBit: (signup bonuses)](https://partner.bybit.com/b/nfi)
+- [ByBit.EU: (signup bonuses)](https://partner.bybit.eu/b/NFINFINITY)
+- [Bitget: (lifetime 20% rebate all plus 10% discount on spot fees)](https://bonus.bitget.com/nfinfinity)
+- [Kraken: (lifetime 20% cashback)](https://proinvite.kraken.com/rrru/hn3g8qxg)
+- [MEXC: (10% discount on trading fees)](https://promote.mexc.com/b/nfinfinity)
+- [OKX: (20% discount on trading fees)](https://www.okx.com/join/11749725931)
+- [HTX: (signup bonuses)](https://www.htx.com/invite/en-us/1f?invite_code=ubpt2223)
+- [Bitvavo: (no fees for the first € 10000)](https://bitvavo.com/invite?a=D22103A4BC)
+- [BitMart: (20% lifetime discount on trading fees)](https://www.bitmart.com/invite/nfinfinity)
+- [Binance: (20% discount on trading fees)](https://www.binance.com/join?ref=C68K26A9)
+
+## Donations
+Absolutely not required. However, will be accepted as a token of appreciation.
+
+- BTC: `bc1qvflsvddkmxh7eqhc4jyu5z5k6xcw3ay8jl49sk`
+- ETH (ERC20): `0x83D3cFb8001BDC5d2211cBeBB8cB3461E5f7Ec91`
+- BEP20/BSC (USDT, ETH, BNB, ...): `0x86A0B21a20b39d16424B7c8003E4A7e12d78ABEe`
+- TRC20/TRON (USDT, TRON, ...): `TTAa9MX6zMLXNgWMhg7tkNormVHWCoq8Xk`
+
+- Patreon : https://www.patreon.com/iterativ
