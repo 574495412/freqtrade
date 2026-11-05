@@ -1,0 +1,10 @@
+{
+  "run_id": "P1_B2_AVERAGE_NATIVE_futures_S_base",
+  "registration_directory": "user_data/crypto_quant/rd_program_20261105_v1/registrations/P1_B2_AVERAGE_NATIVE_futures_S_base__determinism1",
+  "kind": "determinism_rerun",
+  "parent_manifest_sha256": "a94337940edba54659f5b03d7d349d515ecfaa251483fa1b40d2423a411ccbcb",
+  "selection_rule": "One B2 futures and one B3 spot short base cell, covers both native strategies/markets without selecting highest return; no new economic model",
+  "compare": "all minified trade/order/funding fields literal equality plus every 5m observation row and fill-cash audit; paths, execution wall clock and engine Git describe metadata excluded",
+  "max_determinism_reruns": 2,
+  "orders_enabled": false
+}
