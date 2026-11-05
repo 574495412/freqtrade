@@ -1,0 +1,792 @@
+{
+  "schema_version": 1,
+  "program_id": "crypto_rd_20261105_v1",
+  "registration_status": "frozen_before_new_runs_after_historical_results_observed",
+  "historical_records": [
+    {
+      "family": "trend",
+      "source_path": "docs/crypto-trend-mainline-20261025.md",
+      "source_sha256": "4e1d06619c687c53a447043398491abd80ee717031bb4829683ff06a26e66c66",
+      "outcome_summary": "Donchian55/Momentum63 selected cash; no eligible candidate",
+      "treatment": "retain_original_verdict_no_retuning"
+    },
+    {
+      "family": "carry",
+      "source_path": "docs/crypto-factor-screen-20261023.md",
+      "source_sha256": "1183840fcd7f46bf106a18a6c246cb50fb23e2137db119ff4df8d5db49501cf8",
+      "outcome_summary": "FundingTrend/weekly rotation failed; old Supertrend also failed",
+      "treatment": "retain_original_verdict_no_retuning"
+    },
+    {
+      "family": "nfi_risk",
+      "source_path": "docs/crypto-nfi-risk-cap-20261024.md",
+      "source_sha256": "edbeb545584c2501f02a65a357ba0e720c14141c8fb2add276cc45bb4a6f2873",
+      "outcome_summary": "3.08% net/0.55 Sharpe,2025 negative; not qualified",
+      "treatment": "retain_original_verdict_no_retuning"
+    },
+    {
+      "family": "reversion",
+      "source_path": "docs/crypto-factor-map.md",
+      "source_sha256": "31040461f84d064c53b0e69b2814673bc3b06cd2b8a297ea1acfc1c5ba8220a4",
+      "outcome_summary": "20h mean +/-2sigma/RSI family failed",
+      "treatment": "retain_original_verdict_no_retuning"
+    },
+    {
+      "family": "ml",
+      "source_path": "docs/crypto-cost-aware-entry-20261024.md",
+      "source_sha256": "c70c0b24e1f68773d98330cc116f6006138d7d587925d337ea1baff09a5ea6b4",
+      "outcome_summary": "cost-aware controls/models failed or zero trades",
+      "treatment": "retain_original_verdict_no_retuning"
+    },
+    {
+      "family": "conditional_features",
+      "source_path": "docs/crypto-conditional-factors-20261024.md",
+      "source_sha256": "2e9c8e766167122b41eef01c690bbbe0828528f6927fe6af7ee91b5e5cc027d7",
+      "outcome_summary": "34 features/6 combinations/24 models none passed",
+      "treatment": "retain_original_verdict_no_retuning"
+    },
+    {
+      "family": "partial_exit",
+      "source_path": "docs/crypto-nfi-lifecycle-carry-20261024.md",
+      "source_sha256": "ea24b286af127ced209536e32614be797ef002c6a65f533836be0c75b21e3b8e",
+      "outcome_summary": "intervention inactive; identical returns do not validate it",
+      "treatment": "retain_original_verdict_no_retuning"
+    }
+  ],
+  "historical_unique_trial_count": null,
+  "runs": [
+    {
+      "id": "P1_B0_CASH_spot_L_base",
+      "phase": "P1",
+      "baseline_id": "B0_CASH",
+      "market": "spot",
+      "window_id": "L",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B0_CASH_spot_L_stress",
+      "phase": "P1",
+      "baseline_id": "B0_CASH",
+      "market": "spot",
+      "window_id": "L",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B0_CASH_spot_S_base",
+      "phase": "P1",
+      "baseline_id": "B0_CASH",
+      "market": "spot",
+      "window_id": "S",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B0_CASH_spot_S_stress",
+      "phase": "P1",
+      "baseline_id": "B0_CASH",
+      "market": "spot",
+      "window_id": "S",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B0_CASH_futures_L_base",
+      "phase": "P1",
+      "baseline_id": "B0_CASH",
+      "market": "futures",
+      "window_id": "L",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B0_CASH_futures_L_stress",
+      "phase": "P1",
+      "baseline_id": "B0_CASH",
+      "market": "futures",
+      "window_id": "L",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B0_CASH_futures_S_base",
+      "phase": "P1",
+      "baseline_id": "B0_CASH",
+      "market": "futures",
+      "window_id": "S",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B0_CASH_futures_S_stress",
+      "phase": "P1",
+      "baseline_id": "B0_CASH",
+      "market": "futures",
+      "window_id": "S",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B1_BTC_HOLD_spot_L_base",
+      "phase": "P1",
+      "baseline_id": "B1_BTC_HOLD",
+      "market": "spot",
+      "window_id": "L",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B1_BTC_HOLD_spot_L_stress",
+      "phase": "P1",
+      "baseline_id": "B1_BTC_HOLD",
+      "market": "spot",
+      "window_id": "L",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B1_BTC_HOLD_spot_S_base",
+      "phase": "P1",
+      "baseline_id": "B1_BTC_HOLD",
+      "market": "spot",
+      "window_id": "S",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B1_BTC_HOLD_spot_S_stress",
+      "phase": "P1",
+      "baseline_id": "B1_BTC_HOLD",
+      "market": "spot",
+      "window_id": "S",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B1_BTC_HOLD_futures_L_base",
+      "phase": "P1",
+      "baseline_id": "B1_BTC_HOLD",
+      "market": "futures",
+      "window_id": "L",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B1_BTC_HOLD_futures_L_stress",
+      "phase": "P1",
+      "baseline_id": "B1_BTC_HOLD",
+      "market": "futures",
+      "window_id": "L",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B1_BTC_HOLD_futures_S_base",
+      "phase": "P1",
+      "baseline_id": "B1_BTC_HOLD",
+      "market": "futures",
+      "window_id": "S",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B1_BTC_HOLD_futures_S_stress",
+      "phase": "P1",
+      "baseline_id": "B1_BTC_HOLD",
+      "market": "futures",
+      "window_id": "S",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B2_AVERAGE_NATIVE_spot_L_base",
+      "phase": "P1",
+      "baseline_id": "B2_AVERAGE_NATIVE",
+      "market": "spot",
+      "window_id": "L",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B2_AVERAGE_NATIVE_spot_L_stress",
+      "phase": "P1",
+      "baseline_id": "B2_AVERAGE_NATIVE",
+      "market": "spot",
+      "window_id": "L",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B2_AVERAGE_NATIVE_spot_S_base",
+      "phase": "P1",
+      "baseline_id": "B2_AVERAGE_NATIVE",
+      "market": "spot",
+      "window_id": "S",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B2_AVERAGE_NATIVE_spot_S_stress",
+      "phase": "P1",
+      "baseline_id": "B2_AVERAGE_NATIVE",
+      "market": "spot",
+      "window_id": "S",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B2_AVERAGE_NATIVE_futures_L_base",
+      "phase": "P1",
+      "baseline_id": "B2_AVERAGE_NATIVE",
+      "market": "futures",
+      "window_id": "L",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B2_AVERAGE_NATIVE_futures_L_stress",
+      "phase": "P1",
+      "baseline_id": "B2_AVERAGE_NATIVE",
+      "market": "futures",
+      "window_id": "L",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B2_AVERAGE_NATIVE_futures_S_base",
+      "phase": "P1",
+      "baseline_id": "B2_AVERAGE_NATIVE",
+      "market": "futures",
+      "window_id": "S",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B2_AVERAGE_NATIVE_futures_S_stress",
+      "phase": "P1",
+      "baseline_id": "B2_AVERAGE_NATIVE",
+      "market": "futures",
+      "window_id": "S",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B3_NFI_X8_NATIVE_spot_L_base",
+      "phase": "P1",
+      "baseline_id": "B3_NFI_X8_NATIVE",
+      "market": "spot",
+      "window_id": "L",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B3_NFI_X8_NATIVE_spot_L_stress",
+      "phase": "P1",
+      "baseline_id": "B3_NFI_X8_NATIVE",
+      "market": "spot",
+      "window_id": "L",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B3_NFI_X8_NATIVE_spot_S_base",
+      "phase": "P1",
+      "baseline_id": "B3_NFI_X8_NATIVE",
+      "market": "spot",
+      "window_id": "S",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B3_NFI_X8_NATIVE_spot_S_stress",
+      "phase": "P1",
+      "baseline_id": "B3_NFI_X8_NATIVE",
+      "market": "spot",
+      "window_id": "S",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B3_NFI_X8_NATIVE_futures_L_base",
+      "phase": "P1",
+      "baseline_id": "B3_NFI_X8_NATIVE",
+      "market": "futures",
+      "window_id": "L",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B3_NFI_X8_NATIVE_futures_L_stress",
+      "phase": "P1",
+      "baseline_id": "B3_NFI_X8_NATIVE",
+      "market": "futures",
+      "window_id": "L",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B3_NFI_X8_NATIVE_futures_S_base",
+      "phase": "P1",
+      "baseline_id": "B3_NFI_X8_NATIVE",
+      "market": "futures",
+      "window_id": "S",
+      "cost_id": "base",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    },
+    {
+      "id": "P1_B3_NFI_X8_NATIVE_futures_S_stress",
+      "phase": "P1",
+      "baseline_id": "B3_NFI_X8_NATIVE",
+      "market": "futures",
+      "window_id": "S",
+      "cost_id": "stress",
+      "status": "registered_not_run",
+      "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+      "requires": [
+        "P0_SOURCE_ENV",
+        "candidate_data_ready",
+        "separate_ledger"
+      ],
+      "promotion_requires": [
+        "causality_closed",
+        "verified_mark_NAV",
+        "account_parity"
+      ],
+      "result": null
+    }
+  ],
+  "conditional_future_matrices": [
+    {
+      "phase": "P2",
+      "authorized": false,
+      "factor_configs": [
+        "F1_MOM168",
+        "F2_RV24"
+      ],
+      "control_configs": [
+        "B0_CASH",
+        "B2_AVERAGE_RD1_CONTROL"
+      ],
+      "markets": [
+        "spot",
+        "futures"
+      ],
+      "folds": [
+        "WF1",
+        "WF2",
+        "WF3",
+        "WF4"
+      ],
+      "costs": [
+        "base",
+        "stress"
+      ],
+      "max_accounts": 80,
+      "continuous_window": "L",
+      "continuous_extra_accounts": 16
+    },
+    {
+      "phase": "P3",
+      "authorized": false,
+      "configs": [
+        "RD1_only",
+        "RD1_plus_passed_F1",
+        "RD1_plus_passed_F2",
+        "RD1_plus_both_passed"
+      ],
+      "markets": [
+        "spot",
+        "futures"
+      ],
+      "folds": [
+        "WF1",
+        "WF2",
+        "WF3",
+        "WF4"
+      ],
+      "costs": [
+        "base",
+        "stress"
+      ],
+      "max_accounts": 80,
+      "continuous_window": "L",
+      "continuous_extra_accounts": 16
+    }
+  ],
+  "append_only_execution_ledger": "execution_ledger.jsonl created only in later implementation; do not mutate this registration",
+  "technical_retry_policy": "append reason,parent_run_id,unchanged economic contract; maximum2",
+  "hypothesis_retuning_allowed": false
+}

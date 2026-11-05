@@ -1,0 +1,604 @@
+{
+  "schema_version": 1,
+  "program": "crypto-rd-20261105",
+  "access_date": "2026-11-05",
+  "timezone": "Asia/Shanghai",
+  "research_scope": {
+    "repository_limit": 4,
+    "reviewed_repositories": 4,
+    "closed": true,
+    "stop_rule": "已获得固定源码/许可/维护与官方机制语义；首轮不继续扩大GitHub候选、不开收益排名搜索"
+  },
+  "repositories": [
+    {
+      "id": "freqtrade_core",
+      "repository": "freqtrade/freqtrade",
+      "url": "https://github.com/freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "commit_date": "2026-10-22T07:26:11+02:00",
+      "commit_title": "Merge pull request #13704 from freqtrade/renovate/pypi-certifi-vulnerability",
+      "ref_role": "existing execution engine pin; no upgrade",
+      "license": "GNU GPL version 3 license text",
+      "license_url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/LICENSE",
+      "maintenance_evidence": [
+        {
+          "url": "https://github.com/freqtrade/freqtrade/commit/c051e9065c5b677f03817dd1f83cb980af1ed684",
+          "fact": "锁定提交包含certifi安全依赖维护；本地git元数据日期已核验"
+        },
+        {
+          "url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/.github/workflows/ci.yml",
+          "fact": "固定树内存在CI workflow、tests及对应版本文档；本次未执行上游CI，不声称其运行绿灯"
+        }
+      ],
+      "reuse_decision": "采用现有官方引擎、数据/回测/订单/原生protections接口；不另建执行引擎。FreqAI留到有增量证据后的P3。",
+      "profitability_evidence": "none inferred from engineering maturity"
+    },
+    {
+      "id": "freqtrade_strategies",
+      "repository": "freqtrade/freqtrade-strategies",
+      "url": "https://github.com/freqtrade/freqtrade-strategies",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "commit_date": "2026-09-08T18:42:47+02:00",
+      "commit_title": "Merge pull request #341 from Avicennasis/docs/fix-typos",
+      "ref_role": "first-round reference pin observed through git ls-remote; shallow clone verified",
+      "license": "GNU GPL version 3 license text",
+      "license_url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+      "maintenance_evidence": [
+        {
+          "url": "https://github.com/freqtrade/freqtrade-strategies/commit/f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+          "fact": "2026-09-08修正文档/注释；不是策略效果更新证据"
+        },
+        {
+          "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/README.md",
+          "fact": "README明确educational/starting point；固定树无.github/workflows，不能借用Freqtrade核心CI质量声明"
+        }
+      ],
+      "reuse_decision": "只选一个简明趋势例子AverageStrategy默认参数用于对照；不导入整库、不搜索获利截图。",
+      "profitability_evidence": "none; examples require own causal/reproduction checks"
+    },
+    {
+      "id": "nfi_x8",
+      "repository": "iterativv/NostalgiaForInfinity",
+      "url": "https://github.com/iterativv/NostalgiaForInfinity",
+      "commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+      "strategy_version": "NostalgiaForInfinityX8 v18.0.146",
+      "commit_date": "2026-10-22T15:10:00+03:00",
+      "commit_title": "Merge branch 'Rodvask-feat-x8-548-protections'",
+      "ref_role": "existing locked strategy control; no auto-update",
+      "license": "GNU GPL version 3 license text",
+      "license_url": "https://github.com/iterativv/NostalgiaForInfinity/blob/1af55971d3a64703ec449078e09fdec257d0d3c6/LICENSE",
+      "maintenance_evidence": [
+        {
+          "url": "https://github.com/iterativv/NostalgiaForInfinity/commit/1af55971d3a64703ec449078e09fdec257d0d3c6",
+          "fact": "固定提交同时修改X8与新增signal548单元检查；存在unit-tests/backtests workflow，不代表整策略盈利或因果通过"
+        },
+        {
+          "url": "https://github.com/iterativv/NostalgiaForInfinity/blob/1af55971d3a64703ec449078e09fdec257d0d3c6/README.md",
+          "fact": "README给出5m运行约束及更新机制；本计划不采用自动更新以保持可复现"
+        }
+      ],
+      "reuse_decision": "原版锁定对照、先复现；另命名风险变体、独立账本，不继承原版历史收益结论。",
+      "profitability_evidence": "requires current local audit; source activity alone is not profitability"
+    },
+    {
+      "id": "qlib_methods",
+      "repository": "microsoft/qlib",
+      "url": "https://github.com/microsoft/qlib",
+      "commit": "54355232463878d2eebb91fe0ee5fa7fa1f5976c",
+      "commit_date": "2026-10-08T18:15:27+08:00",
+      "commit_date_kind": "patch author Date; commit page and remote exact ref read",
+      "commit_title": "fix(security): constrain config-driven code execution (#2340)",
+      "ref_role": "method-only reference; no dependency added",
+      "license": "MIT",
+      "license_url": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/LICENSE",
+      "maintenance_evidence": [
+        {
+          "url": "https://github.com/microsoft/qlib/commit/54355232463878d2eebb91fe0ee5fa7fa1f5976c",
+          "fact": "配置执行安全修复同时涉及文档、回归测试、CI修复；本次未运行上游CI"
+        },
+        {
+          "url": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/docs/component/workflow.rst",
+          "fact": "明确train/valid/test分段与实验记录；示例为股票SH000300，不是加密因子证据"
+        }
+      ],
+      "reuse_decision": "只借用明确分段、特征/预测/评估记录的方法；不搬股票收益，不装第二交易栈。",
+      "profitability_evidence": "not crypto evidence"
+    }
+  ],
+  "references": [
+    {
+      "id": "ft_protections",
+      "repository_id": "freqtrade_core",
+      "access_date": "2026-11-05",
+      "official_documentation_url": "https://www.freqtrade.io/en/stable/plugins/#protections",
+      "fixed_source_url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/includes/protections.md",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "findings": "原生Protections用于短时停新开仓；回测需--enable-protections。CooldownPeriod在平仓后锁同币；StoplossGuard按窗口内已平仓负收益止损次数；MaxDrawdown默认ratios，equity模式仍只累加已平仓绝对盈亏，不包含浮盈亏。参数示例不是通用最优。",
+      "authority": "pinned source owns current runtime semantics; stable site is live cross-check"
+    },
+    {
+      "id": "ft_stoploss",
+      "repository_id": "freqtrade_core",
+      "access_date": "2026-11-05",
+      "official_documentation_url": "https://www.freqtrade.io/en/stable/stoploss/",
+      "fixed_source_url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/stoploss.md",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "findings": "止损风险按交易资金及杠杆口径解释。交易所止损依交易所/模式支持，止损限价可能不成交，宽止损可能被拒，紧止损也不能保证损失上限；dry-run不验证真实止损触发/撮合。",
+      "authority": "pinned source owns current runtime semantics; stable site is live cross-check"
+    },
+    {
+      "id": "ft_lookahead",
+      "repository_id": "freqtrade_core",
+      "access_date": "2026-11-05",
+      "official_documentation_url": "https://www.freqtrade.io/en/stable/lookahead-analysis/",
+      "fixed_source_url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/lookahead-analysis.md",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "findings": "比较完整回测与切片后的指标/交易变动；工具覆盖的有限信号才被检查。会强制改钱包/仓位/订单及关闭protections，某些策略上下文/限价路径会误报；告警需逐条定位，不能直接判真未来函数或误报。",
+      "authority": "pinned source owns current runtime semantics; stable site is live cross-check"
+    },
+    {
+      "id": "ft_recursive",
+      "repository_id": "freqtrade_core",
+      "access_date": "2026-11-05",
+      "official_documentation_url": "https://www.freqtrade.io/en/stable/recursive-analysis/",
+      "fixed_source_url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/recursive-analysis.md",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "findings": "比较不同warm-up数据长度的指标末值；不是策略收益回测，也不穷尽custom_exit/custom_stoploss。需长基准窗并检查实际交易所启动数据上限，不能仅看某一个指标小误差。",
+      "authority": "pinned source owns current runtime semantics; stable site is live cross-check"
+    },
+    {
+      "id": "ft_backtesting",
+      "repository_id": "freqtrade_core",
+      "access_date": "2026-11-05",
+      "official_documentation_url": "https://www.freqtrade.io/en/stable/backtesting/",
+      "fixed_source_url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/backtesting.md",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "findings": "默认OHLC撮合无滑点且假设限价触达即填；历史精度/交易限制可能采用当前规则；--timeframe-detail可改善但仍非真实逐笔路径。收益比较须另审计费用/滑点/资金费、未平仓和强制结束。",
+      "authority": "pinned source owns current runtime semantics; stable site is live cross-check"
+    },
+    {
+      "id": "ft_leverage",
+      "repository_id": "freqtrade_core",
+      "access_date": "2026-11-05",
+      "official_documentation_url": "https://www.freqtrade.io/en/stable/leverage/",
+      "fixed_source_url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/leverage.md",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "findings": "官方警告杠杆账户独占假设、清算风险；缺失资金费填零会使历史回测不准确。首轮固定1x，缺资金费/mark则该窗口阻塞，不能伪造可交易收益。",
+      "authority": "pinned source owns current runtime semantics; stable site is live cross-check"
+    },
+    {
+      "id": "ft_freqai",
+      "repository_id": "freqtrade_core",
+      "access_date": "2026-11-05",
+      "official_documentation_url": "https://www.freqtrade.io/en/stable/freqai/",
+      "fixed_source_url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/freqai.md",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "findings": "FreqAI提供训练/推断工程和模型重训管理；ExampleStrategy是功能演示，不是生产或盈利策略。P2单因子与消融未过之前不进入ML。",
+      "authority": "pinned source owns current runtime semantics; stable site is live cross-check"
+    },
+    {
+      "id": "ft_freqai_running",
+      "repository_id": "freqtrade_core",
+      "access_date": "2026-11-05",
+      "official_documentation_url": "https://www.freqtrade.io/en/stable/freqai-running/",
+      "fixed_source_url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/freqai-running.md",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "findings": "可设置滚动train_period_days/backtest_period_days；feature工程仍可能对整个区间预计算，使用此框架不自动消除泄漏；记录模型标识/训练截止/预测实际可得时间。",
+      "authority": "pinned source owns current runtime semantics; stable site is live cross-check"
+    },
+    {
+      "id": "ft_maxdrawdown_code",
+      "repository_id": "freqtrade_core",
+      "access_date": "2026-11-05",
+      "url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/freqtrade/plugins/protections/max_drawdown_protection.py",
+      "findings": "_max_drawdown uses get_trades_proxy(is_open=False), equity adds closed profit before rolling window; triggers only drawdown > max_allowed_drawdown, returns lock rather than forced liquidation."
+    },
+    {
+      "id": "ft_stoplossguard_code",
+      "repository_id": "freqtrade_core",
+      "access_date": "2026-11-05",
+      "url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/freqtrade/plugins/protections/stoploss_guard.py",
+      "findings": "锁定源码将负收益liquidation也计入stoploss guard，原生文档摘要未列；仅检查closed trades，不监测账户mark-to-market。"
+    },
+    {
+      "id": "ft_cooldown_code",
+      "repository_id": "freqtrade_core",
+      "access_date": "2026-11-05",
+      "url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/freqtrade/plugins/protections/cooldown_period.py",
+      "findings": "按pair最近closed trade计算到期锁；不自动撤单或强制退出。"
+    },
+    {
+      "id": "average_strategy",
+      "repository_id": "freqtrade_strategies",
+      "access_date": "2026-11-05",
+      "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/AverageStrategy.py",
+      "findings": "4h EMA8/21 crossover; ROI 0.5; stoploss -0.2; volume>0; long-only; 作者明示proof of concept，不保证性能。"
+    },
+    {
+      "id": "qlib_workflow",
+      "repository_id": "qlib_methods",
+      "access_date": "2026-11-05",
+      "url": "https://github.com/microsoft/qlib/blob/54355232463878d2eebb91fe0ee5fa7fa1f5976c/docs/component/workflow.rst",
+      "findings": "train/valid/test segments plus model/data/record config are reusable process ideas, not crypto alpha evidence."
+    }
+  ],
+  "baseline_decisions": [
+    {
+      "id": "B0_CASH",
+      "reuse": "显式零订单USDT账本参考",
+      "markets": [
+        "spot",
+        "futures"
+      ],
+      "source": "research accounting control, not copied strategy",
+      "risk": "USDT不是无风险资产；不计未授权质押/理财收益",
+      "selection_reason": "检验交易复杂度和成本是否有价值"
+    },
+    {
+      "id": "B1_BTC_HOLD",
+      "reuse": "BTC现货买入持有净值参考；共同币池等权持有另为同族预注册诊断，不把它当额外搜索",
+      "markets": [
+        "spot reference for both account scorecards"
+      ],
+      "source": "research accounting control",
+      "risk": "单币集中度；用于标尺而非合约资金费代理，合约比较不能冒称同一市场中性风险",
+      "selection_reason": "解释收益是否只是市场beta"
+    },
+    {
+      "id": "B2_AVERAGE_ORIGINAL",
+      "reuse": "原样复现AverageStrategy默认EMA8/21/4h/ROI50%/SL20%；禁hyperopt",
+      "markets": [
+        "spot",
+        "futures long-only 1x if admitted"
+      ],
+      "source_id": "average_strategy",
+      "license": "GNU GPL version 3 license text",
+      "risk": "震荡磨损、原止损20%不是推荐，warm-up/流动性需审计；作者仅称proof of concept",
+      "selection_reason": "规则少，隔离复杂NFI相对于简明趋势的增量"
+    },
+    {
+      "id": "B3_NFI_X8_LOCKED",
+      "reuse": "现有原版X8默认信号和冻结运行合同",
+      "markets": [
+        "spot",
+        "futures"
+      ],
+      "source_id": "nfi_x8",
+      "license": "GNU GPL version 3 license text",
+      "risk": "DCA/长持仓尾部、-99%止损及现有lookahead未定位；不以漂亮历史数判通过",
+      "selection_reason": "保持已部署模拟基线，可对应已有证据不重做无差异搜索"
+    },
+    {
+      "id": "B4_NFI_X8_RISK_RD1",
+      "reuse": "仅在P0风险验收及P1原版复现可解释后新增命名变体",
+      "markets": [
+        "spot",
+        "futures"
+      ],
+      "source_id": "nfi_x8",
+      "license": "GNU GPL version 3 license text; retain origin attribution",
+      "risk": "风控会改变订单路径和收益，必须全量重跑matched accounting；本轮不实现/激活",
+      "selection_reason": "直接检验减少尾部暴露的成本与收益取舍，不沿用原版结果"
+    }
+  ],
+  "excluded_first_round": [
+    {
+      "source": "freqtrade-strategies/DoesNothingStrategy.py",
+      "reason": "骨架含空loc赋值，不能未经验证就当现金零订单基线。"
+    },
+    {
+      "source": "freqtrade-strategies/futures/FAdxSmaStrategy.py",
+      "reason": "参数自由度多，startup14短于默认SMA48，初轮不纳入；若未来使用须另审计并命名修改。"
+    },
+    {
+      "source": "freqtrade-strategies/futures/TrendFollowingStrategy.py",
+      "reason": "虽位于futures目录，源码未声明can_short=True，不凭名称/目录视作可直接用的多空策略。"
+    },
+    {
+      "source": "FreqAI / Qlib models",
+      "reason": "先原版复现、单因子、相关性与增量消融，P3之前不展开机器学习或强化学习。"
+    }
+  ],
+  "access_limitations": [
+    {
+      "route": "unauthenticated GitHub REST API /repos and /commits",
+      "result": "403 rate limit exceeded for all four repositories",
+      "fallback": "git ls-remote plus shallow read-only strategy clone, raw.githubusercontent.com fixed files, web GitHub commit pages, local pinned Freqtrade/NFI Git metadata",
+      "impact": "不声称核验上游最新CI运行状态或完整维护SLA；固定源码和许可已成功获取。"
+    },
+    {
+      "route": "NFI repository homepage via web",
+      "result": "timeout; tree URL restricted fetch",
+      "fallback": "GitHub exact commit page and fixed raw README/LICENSE succeeded"
+    }
+  ],
+  "file_receipts": [
+    {
+      "repo": "freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c051e9065c5b677f03817dd1f83cb980af1ed684/LICENSE",
+      "status": "ok",
+      "sha256": "589ed823e9a84c56feb95ac58e7cf384626b9cbf4fda2a907bc36e103de1bad2",
+      "bytes": 35141,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "path": "docs/includes/protections.md",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/includes/protections.md",
+      "status": "ok",
+      "sha256": "d141f6f353440d206bdc8f3c07b44beb8c8d31c7f78f6eb82ef36c7962558e46",
+      "bytes": 10079,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "path": "docs/stoploss.md",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/stoploss.md",
+      "status": "ok",
+      "sha256": "427c72d78c1f6efff6cb0de3bffe045b447e4cf6044d87604509e68f4fd59958",
+      "bytes": 14352,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "path": "docs/leverage.md",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/leverage.md",
+      "status": "ok",
+      "sha256": "88a738940ad416a75af7a795cef876d696146b25b6dd8c03cd53c5bb1daef535",
+      "bytes": 13276,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "path": "docs/lookahead-analysis.md",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/lookahead-analysis.md",
+      "status": "ok",
+      "sha256": "74efd3f0fa1de61c70b99464a304fc23581b96132585ef508fa8a303592edd09",
+      "bytes": 7801,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "path": "docs/recursive-analysis.md",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/recursive-analysis.md",
+      "status": "ok",
+      "sha256": "8015e081a6cf06a0235eb40cca7865ffe5b10c0ed6a34ba2537e463053dec260",
+      "bytes": 7896,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "path": "docs/backtesting.md",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/backtesting.md",
+      "status": "ok",
+      "sha256": "dc74cad035e679e4f361fe4c7cff4c8dd2dd62f534c39f7b5b012d307dee7fd9",
+      "bytes": 57906,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "path": "docs/freqai.md",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/freqai.md",
+      "status": "ok",
+      "sha256": "784af9a1da69638095f6a21b1dd8a2e1b69b47a02370cb51cd69d8467a4211fa",
+      "bytes": 11870,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "path": "docs/freqai-running.md",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade/c051e9065c5b677f03817dd1f83cb980af1ed684/docs/freqai-running.md",
+      "status": "ok",
+      "sha256": "cc351728bf365b2f4050726b614708daa0b414c420303c9424736bff7c681637",
+      "bytes": 17354,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "freqtrade/freqtrade-strategies",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/LICENSE",
+      "status": "ok",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+      "bytes": 35147,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "freqtrade/freqtrade-strategies",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/README.md",
+      "status": "ok",
+      "sha256": "50df38eb1b1ed410b5e41f55d8dd95e2a834cf89750781e38faa1b24a796b835",
+      "bytes": 4588,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "iterativv/NostalgiaForInfinity",
+      "commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/iterativv/NostalgiaForInfinity/1af55971d3a64703ec449078e09fdec257d0d3c6/LICENSE",
+      "status": "ok",
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "iterativv/NostalgiaForInfinity",
+      "commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/iterativv/NostalgiaForInfinity/1af55971d3a64703ec449078e09fdec257d0d3c6/README.md",
+      "status": "ok",
+      "sha256": "d81c3f3169edced9d20cb79c108c05497c7a34acffb4f8101977f6f4684ae132",
+      "bytes": 5228,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "microsoft/qlib",
+      "commit": "54355232463878d2eebb91fe0ee5fa7fa1f5976c",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/microsoft/qlib/54355232463878d2eebb91fe0ee5fa7fa1f5976c/LICENSE",
+      "status": "ok",
+      "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+      "bytes": 1141,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "microsoft/qlib",
+      "commit": "54355232463878d2eebb91fe0ee5fa7fa1f5976c",
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/microsoft/qlib/54355232463878d2eebb91fe0ee5fa7fa1f5976c/README.md",
+      "status": "ok",
+      "sha256": "e9f7cc8eeb60e3fe3784ec496e350ecb584157c3240cda0651c20acb26fd9037",
+      "bytes": 44277,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "microsoft/qlib",
+      "commit": "54355232463878d2eebb91fe0ee5fa7fa1f5976c",
+      "path": "docs/component/workflow.rst",
+      "url": "https://raw.githubusercontent.com/microsoft/qlib/54355232463878d2eebb91fe0ee5fa7fa1f5976c/docs/component/workflow.rst",
+      "status": "ok",
+      "sha256": "c097a13241ece803171e84220e3152fae7eb587742edb9a2ecdf478111e2f418",
+      "bytes": 13121,
+      "access_date": "2026-11-05",
+      "access_method": "HTTPS raw.githubusercontent.com pinned commit"
+    },
+    {
+      "repo": "freqtrade/freqtrade-strategies",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "path": "user_data/strategies/berlinguyinca/AverageStrategy.py",
+      "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/AverageStrategy.py",
+      "status": "ok",
+      "sha256": "63606866fdf1cb3d71dc39a951ed0784a31686690b1c4014c12d2481c8dbf094",
+      "bytes": 2630,
+      "access_method": "git shallow clone exact commit; git show",
+      "access_date": "2026-11-05"
+    },
+    {
+      "repo": "freqtrade/freqtrade-strategies",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "path": "user_data/strategies/berlinguyinca/DoesNothingStrategy.py",
+      "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/berlinguyinca/DoesNothingStrategy.py",
+      "status": "ok",
+      "sha256": "8ec83bd94f76e6d67b13ef2d2cb63f5284d8819f576bdf3fe6270335680942be",
+      "bytes": 1182,
+      "access_method": "git shallow clone exact commit; git show",
+      "access_date": "2026-11-05"
+    },
+    {
+      "repo": "freqtrade/freqtrade-strategies",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "path": "user_data/strategies/futures/FAdxSmaStrategy.py",
+      "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/futures/FAdxSmaStrategy.py",
+      "status": "ok",
+      "sha256": "43ae02ecca4553b8a609d4533cb4d5b6517292d35b41fc4c77f54f8e959ced89",
+      "bytes": 4091,
+      "access_method": "git shallow clone exact commit; git show",
+      "access_date": "2026-11-05"
+    },
+    {
+      "repo": "freqtrade/freqtrade-strategies",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "path": "user_data/strategies/futures/TrendFollowingStrategy.py",
+      "url": "https://github.com/freqtrade/freqtrade-strategies/blob/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/futures/TrendFollowingStrategy.py",
+      "status": "ok",
+      "sha256": "6b8f3e272acfd4923539120364b9ddceccc17a385117d12a249dc1460ea53c4f",
+      "bytes": 2441,
+      "access_method": "git shallow clone exact commit; git show",
+      "access_date": "2026-11-05"
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "path": "freqtrade/plugins/protections/max_drawdown_protection.py",
+      "url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/freqtrade/plugins/protections/max_drawdown_protection.py",
+      "status": "ok",
+      "sha256": "614328466e2e90e3dc57dff909e18e7f87bc817cef5ac9b9d1d89ef94b1cccc7",
+      "bytes": 5095,
+      "access_method": "local fixed-commit source inspection",
+      "access_date": "2026-11-05"
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "path": "freqtrade/plugins/protections/stoploss_guard.py",
+      "url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/freqtrade/plugins/protections/stoploss_guard.py",
+      "status": "ok",
+      "sha256": "db3adae62104271ad8a70773d45715718a547cb6447b4b82353b01a54af1ce66",
+      "bytes": 3943,
+      "access_method": "local fixed-commit source inspection",
+      "access_date": "2026-11-05"
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "path": "freqtrade/plugins/protections/cooldown_period.py",
+      "url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/freqtrade/plugins/protections/cooldown_period.py",
+      "status": "ok",
+      "sha256": "fe1e3db75ec829b9bf423685046a73f9d03bc5fa267a3037ebc7e6070cbd8a58",
+      "bytes": 2723,
+      "access_method": "local fixed-commit source inspection",
+      "access_date": "2026-11-05"
+    },
+    {
+      "repo": "freqtrade/freqtrade",
+      "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+      "path": ".github/workflows/ci.yml",
+      "url": "https://github.com/freqtrade/freqtrade/blob/c051e9065c5b677f03817dd1f83cb980af1ed684/.github/workflows/ci.yml",
+      "status": "ok",
+      "sha256": "9126c573dcb5a77b60d8ea1d24915b6d1d93e53d7689623f21ddaf619e087a0e",
+      "bytes": 14801,
+      "access_method": "local fixed-commit source inspection",
+      "access_date": "2026-11-05"
+    },
+    {
+      "repo": "iterativv/NostalgiaForInfinity",
+      "commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+      "path": ".github/workflows/unit-tests.yml",
+      "url": "https://github.com/iterativv/NostalgiaForInfinity/blob/1af55971d3a64703ec449078e09fdec257d0d3c6/.github/workflows/unit-tests.yml",
+      "status": "ok",
+      "sha256": "5c8ff4ac22f62e452659ff0c8e32f48c10ed9c7e602d7a221a039abac60782ae",
+      "bytes": 1039,
+      "access_method": "local fixed-commit source inspection; commit diff also read on GitHub",
+      "access_date": "2026-11-05"
+    },
+    {
+      "repo": "iterativv/NostalgiaForInfinity",
+      "commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+      "path": "tests/unit/test_NFIX8_signal548.py",
+      "url": "https://github.com/iterativv/NostalgiaForInfinity/blob/1af55971d3a64703ec449078e09fdec257d0d3c6/tests/unit/test_NFIX8_signal548.py",
+      "status": "ok",
+      "sha256": "17345b2ddc5606f9a44f1be68672f5e647cf1a817e6dabbddd3275ea5447a672",
+      "bytes": 3618,
+      "access_method": "local fixed-commit source inspection; commit diff also read on GitHub",
+      "access_date": "2026-11-05"
+    }
+  ],
+  "license_scope_note": "只核对这4个仓库的固定LICENSE文本；实际复用须保留相应许可证/来源，依赖的完整SBOM和分发义务在P0再核验；本次没有拷入上游代码或新增依赖。"
+}

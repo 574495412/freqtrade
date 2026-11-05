@@ -1,0 +1,675 @@
+{
+  "schema_version": 1,
+  "program_id": "crypto_rd_20261105_v1",
+  "initiated_date_local": "2026-11-05",
+  "frozen_date_local": "2026-11-06",
+  "timezone": "Asia/Shanghai",
+  "repo_base_commit": "10b84a1a8619942810c7b127c090ce481c17fdd3",
+  "branch": "work/standalone-paper-20261105",
+  "status": "plan_frozen_execution_gated",
+  "user_authorized_scope": [
+    "commit_roadmap",
+    "implement_isolated_P0",
+    "P1_reproduction_subject_to_gates"
+  ],
+  "not_authorized": [
+    "modify_existing_paper_services",
+    "runtime_risk_activation",
+    "P2_P3_execution",
+    "live_orders"
+  ],
+  "runtime_changes_allowed": false,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "source_pins": {
+    "freqtrade": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "nfi": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+    "freqtrade_strategies": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "qlib_method_only": "54355232463878d2eebb91fe0ee5fa7fa1f5976c"
+  },
+  "source_search": {
+    "max_repositories": 4,
+    "completed": true,
+    "new_search_candidates": 0
+  },
+  "markets": {
+    "spot": {
+      "initial_equity_usdt": 1000,
+      "max_capital_usdt": 1000,
+      "leverage": 1,
+      "margin_mode": null,
+      "universe_source": "deploy/configs/spot.json",
+      "universe_sha256": "d07b845b3807d1f3782b7be05c2f1608994f4059672e4cc5b82ba11edb412f9d",
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT",
+        "SOL/USDT",
+        "AVAX/USDT",
+        "DOGE/USDT",
+        "XRP/USDT",
+        "ADA/USDT",
+        "LINK/USDT",
+        "DOT/USDT",
+        "FIL/USDT",
+        "NEAR/USDT",
+        "ATOM/USDT",
+        "DYDX/USDT",
+        "LTC/USDT",
+        "BCH/USDT",
+        "ETC/USDT",
+        "GALA/USDT",
+        "SAND/USDT",
+        "UNI/USDT",
+        "IOTA/USDT",
+        "RUNE/USDT",
+        "AXS/USDT",
+        "EGLD/USDT",
+        "ALGO/USDT",
+        "SNX/USDT",
+        "CRV/USDT",
+        "MASK/USDT",
+        "SUSHI/USDT",
+        "KSM/USDT",
+        "IOTX/USDT",
+        "MANA/USDT",
+        "NEO/USDT",
+        "GRT/USDT",
+        "TRX/USDT",
+        "SKL/USDT",
+        "THETA/USDT"
+      ],
+      "cost_scenarios": [
+        {
+          "id": "base",
+          "fee_bps_per_side": 10,
+          "execution_proxy_bps_per_side": 3,
+          "total_bps_per_side": 13
+        },
+        {
+          "id": "stress",
+          "fee_bps_per_side": 10,
+          "execution_proxy_bps_per_side": 10,
+          "total_bps_per_side": 20
+        }
+      ],
+      "funding": "none",
+      "cost_application": "commission+execution proxy folded into fee only in parity model; no duplicate slippage deduction",
+      "baseline_max_open_trades": 6,
+      "baseline_tradable_balance_ratio": 0.99
+    },
+    "futures": {
+      "initial_equity_usdt": 1000,
+      "max_capital_usdt": 1000,
+      "leverage": 1,
+      "margin_mode": "isolated",
+      "universe_source": "deploy/configs/futures.json",
+      "universe_sha256": "1c57b9bf77f6b5d36dfbf53d2439c237a2ebfb1d61a96d59538789b923626ae3",
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT",
+        "AVAX/USDT:USDT",
+        "TRB/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "XRP/USDT:USDT",
+        "ADA/USDT:USDT",
+        "BNB/USDT:USDT",
+        "LINK/USDT:USDT",
+        "DOT/USDT:USDT",
+        "FIL/USDT:USDT",
+        "NEAR/USDT:USDT",
+        "ATOM/USDT:USDT",
+        "DYDX/USDT:USDT",
+        "LTC/USDT:USDT",
+        "BCH/USDT:USDT",
+        "ETC/USDT:USDT",
+        "GALA/USDT:USDT",
+        "SAND/USDT:USDT",
+        "UNI/USDT:USDT",
+        "IOTA/USDT:USDT",
+        "RUNE/USDT:USDT",
+        "AXS/USDT:USDT",
+        "AAVE/USDT:USDT",
+        "EGLD/USDT:USDT",
+        "ALGO/USDT:USDT",
+        "SNX/USDT:USDT",
+        "CRV/USDT:USDT",
+        "MASK/USDT:USDT",
+        "SUSHI/USDT:USDT",
+        "KSM/USDT:USDT",
+        "IOTX/USDT:USDT",
+        "MANA/USDT:USDT",
+        "NEO/USDT:USDT",
+        "GRT/USDT:USDT",
+        "TRX/USDT:USDT",
+        "CELO/USDT:USDT",
+        "SKL/USDT:USDT",
+        "THETA/USDT:USDT"
+      ],
+      "cost_scenarios": [
+        {
+          "id": "base",
+          "fee_bps_per_side": 5,
+          "execution_proxy_bps_per_side": 3,
+          "total_bps_per_side": 8
+        },
+        {
+          "id": "stress",
+          "fee_bps_per_side": 5,
+          "execution_proxy_bps_per_side": 10,
+          "total_bps_per_side": 15
+        }
+      ],
+      "funding": "actual_events_required_no_zero_fill",
+      "cost_application": "commission+execution proxy folded into fee only in parity model; no duplicate slippage deduction",
+      "baseline_max_open_trades": 6,
+      "baseline_tradable_balance_ratio": 0.99
+    }
+  },
+  "baselines": [
+    {
+      "id": "B0_CASH",
+      "phase": "P1",
+      "rule": "zero orders; zero interest; initial 1000 USDT",
+      "source_type": "accounting_control",
+      "risk_profile": "accounting_control",
+      "RD1_applied": false
+    },
+    {
+      "id": "B1_BTC_HOLD",
+      "phase": "P1",
+      "rule": "one BTC long at first eligible common execution point; 99% budget including costs; no rebalance; spot or 1x perpetual with actual funding; terminal MTM and liquidation sensitivity separately",
+      "source_type": "accounting_control",
+      "risk_profile": "accounting_control",
+      "RD1_applied": false
+    },
+    {
+      "id": "B2_AVERAGE_NATIVE",
+      "phase": "P1",
+      "repository_id": "freqtrade_strategies",
+      "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+      "path": "user_data/strategies/berlinguyinca/AverageStrategy.py",
+      "parameters": {
+        "timeframe": "4h",
+        "ema_short": 8,
+        "ema_long": 21,
+        "stoploss": -0.2,
+        "minimal_roi": {
+          "0": 0.5
+        },
+        "direction": "long_only",
+        "hyperopt": false,
+        "startup_candle_count": 0,
+        "stake_amount": "unlimited",
+        "max_open_trades": 6,
+        "tradable_balance_ratio": 0.99,
+        "order_types": {
+          "entry": "limit",
+          "exit": "limit",
+          "stoploss": "limit",
+          "stoploss_on_exchange": false,
+          "stoploss_on_exchange_interval": 60
+        },
+        "order_time_in_force": {
+          "entry": "GTC",
+          "exit": "GTC"
+        },
+        "unfilledtimeout": {
+          "entry": 3,
+          "exit": 2,
+          "exit_timeout_count": 0,
+          "unit": "minutes"
+        },
+        "timeframe_detail": "5m",
+        "load_external_hyperopt_parameters": false
+      },
+      "source_modified": false,
+      "config_allowlist_policy": "explicit timeframe4h/detail5m; exclude NFI-only overrides and runtime notification/credentials; no blanket reuse of deploy5m config",
+      "warmup_policy": "fixed engine inherited startup0; preserve initial EMA NaNs; no silent warmup extension. Drift => separate version, not original pass.",
+      "pricing_policy": "copy only declared entry_pricing/exit_pricing from pinned per-market deploy config; backtest OHLC matching assumptions recorded, no historical orderbook claim",
+      "risk_profile": "native_baseline",
+      "RD1_applied": false
+    },
+    {
+      "id": "B3_NFI_X8_NATIVE",
+      "phase": "P1",
+      "repository_id": "nfi",
+      "commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+      "strategy_version": "v18.0.146",
+      "path": "deploy/strategy/nfi-x8/NostalgiaForInfinityX8.py",
+      "source_sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3",
+      "source_modified": false,
+      "normalization": "project pinned spot/futures config, futures 1x, not author default 3x",
+      "causality_status": "unresolved_exit_alerts",
+      "risk_profile": "native_baseline",
+      "RD1_applied": false
+    },
+    {
+      "id": "B4_NFI_X8_RISK_RD1",
+      "phase": "P3",
+      "implementation_status": "not_implemented",
+      "requires": [
+        "P0_equity_contract",
+        "P0_risk_fault_tests",
+        "P1_NFI_causality_closed",
+        "P1_NFI_parity"
+      ],
+      "risk_contract": "RD1",
+      "separate_strategy_config_database": true
+    }
+  ],
+  "factors": [
+    {
+      "id": "F1_MOM168",
+      "status": "conditional_future_research",
+      "family": "previously_tested_trend",
+      "novel_alpha_claim": false,
+      "inputs": [
+        "closed_1h_close"
+      ],
+      "formula": "log(close_t/close_t_minus_168h)",
+      "availability": "after complete 1h close and receipt; decision UTC daily 00:00; next 5m execution",
+      "parameters": {
+        "lookback_hours": 168,
+        "top_n_positive": 3,
+        "rebalance_hours": 24,
+        "label_hours": 24,
+        "long_only": true
+      },
+      "risk_contract": "RD1",
+      "parameter_variants": 1,
+      "cost_and_capacity": "both frozen cost cases and funding; no inferred orderbook",
+      "falsification": "fewer than 3/4 positive development folds or pressure-cost net <=0 or failed concentration/causality gate"
+    },
+    {
+      "id": "F2_RV24",
+      "status": "conditional_future_risk_research",
+      "family": "volatility_scaling",
+      "novel_alpha_claim": false,
+      "inputs": [
+        "closed_1h_log_returns"
+      ],
+      "formula": "sigma=sample_std(last24h)*sqrt(24*365); scale=min(1,0.20/sigma)",
+      "availability": "daily UTC00 after last complete hour; next5m execution",
+      "parameters": {
+        "lookback_hours": 24,
+        "annual_vol_target": 0.2,
+        "max_scale": 1,
+        "ddof": 1
+      },
+      "applies_to": "B2_AVERAGE_RD1_CONTROL",
+      "risk_contract": "RD1",
+      "parameter_variants": 1,
+      "missing_or_zero_vol": "block_new_entry",
+      "falsification": "MDD reduction <20% or retains <80% positive control net profit or control net<=0; all comparisons matched full accounts"
+    },
+    {
+      "id": "F3_REVERSION",
+      "status": "archived_attribution_only",
+      "family": "previously_failed_reversion",
+      "input_example": "complete hourly close deviation from past24h mean/std; future6h labels for attribution only",
+      "new_economic_runs": 0,
+      "reopen_condition": "new mechanism/availability/execution evidence and separate registration; lookback change alone insufficient"
+    },
+    {
+      "id": "F4_FUNDING_BASIS",
+      "status": "blocked_data_availability",
+      "family": "previously_failed_carry",
+      "required_inputs": [
+        "published_and_received_funding_timestamps",
+        "settlement_events",
+        "contemporaneous_spot_index_perp_bid_ask",
+        "contract_specifications"
+      ],
+      "observed_final_rates_are_features": false,
+      "proxy_substitution_allowed": false,
+      "new_economic_runs": 0,
+      "candidate_holding_hours": [
+        8,
+        24
+      ],
+      "first_use": "cost/risk attribution only"
+    }
+  ],
+  "risk_contract": {
+    "id": "RD1",
+    "implementation_status": "specified_not_active",
+    "existing_deployment_has_this_contract": false,
+    "threshold_origin": "user absolute capital floor; all tighter limits are frozen conservative engineering hypotheses, not official optimal values",
+    "equity": {
+      "spot": "cash + sum(qty * synchronized_price) - estimated_exit_cost; cash includes paid costs",
+      "futures": "wallet_balance + unrealized_mark_pnl - unpaid_accrued_funding - estimated_exit_cost; settled funding counted once, margin not double counted",
+      "missing_input": "block_increasing_risk",
+      "poll_seconds": 5,
+      "stale_after_seconds": 15
+    },
+    "absolute_equity_floor_usdt": 500,
+    "hard_initial_loss_fraction": 0.5,
+    "gross_exposure_cap": 0.6,
+    "net_absolute_exposure_cap": 0.6,
+    "pair_exposure_cap": 0.1,
+    "correlation_cluster_cap": 0.3,
+    "correlation_threshold": 0.7,
+    "correlation_hours": 720,
+    "missing_correlation": "one_cluster",
+    "max_open_positions": 6,
+    "trade_risk_fraction": 0.005,
+    "stop_price_distance_fraction": 0.05,
+    "dca_max_additions": 0,
+    "leverage_cap": 1,
+    "daily_loss_fraction": 0.02,
+    "day_timezone": "UTC",
+    "hwm_warning_fraction": 0.1,
+    "hwm_warning_gross_target": 0.3,
+    "hwm_halt_fraction": 0.15,
+    "liquidity": {
+      "max_spread_bps": 20,
+      "max_fraction_previous_hour_base_volume": 0.001,
+      "max_fraction_visible_contra_depth_within_20bps": 0.01,
+      "entry_timeout_seconds": 60,
+      "no_historical_depth": "capacity_acceptance_blocked"
+    },
+    "native_protections": [
+      {
+        "method": "CooldownPeriod",
+        "stop_duration": 60
+      },
+      {
+        "method": "StoplossGuard",
+        "lookback_period": 1440,
+        "trade_limit": 4,
+        "stop_duration": 120,
+        "only_per_pair": false,
+        "required_profit": 0
+      },
+      {
+        "method": "MaxDrawdown",
+        "calculation_mode": "equity",
+        "lookback_period": 10080,
+        "trade_limit": 10,
+        "stop_duration": 1440,
+        "max_allowed_drawdown": 0.08
+      }
+    ],
+    "protection_timeframe": "minute parameters; PairLocks still round to next strategy main-timeframe candle, not detail timeframe",
+    "native_protections_are_mtm_fuse": false,
+    "state_machine": [
+      "RUNNING",
+      "ENTRY_BLOCKED",
+      "DE_RISK",
+      "EXIT_PENDING",
+      "HALTED"
+    ],
+    "precedence": [
+      "absolute_floor",
+      "hwm_hard_halt",
+      "daily_loss",
+      "stale_or_unknown_state",
+      "hwm_warning",
+      "exposure_and_liquidity",
+      "strategy_signal"
+    ],
+    "persist": [
+      "initial_equity",
+      "high_water_mark",
+      "utc_day_start_equity",
+      "day_id",
+      "latches",
+      "pending_actions",
+      "event_cursor",
+      "schema_version"
+    ],
+    "hard_latch_restart_reset": false,
+    "hard_latch_recovery": "reconciliation + incident review + explicit reauthorization",
+    "day_latch_recovery": "next UTC day, flat, no open entry orders, reconciliation passed; never overrides hard latch",
+    "technical_latch_recovery": "5 minutes fresh data and matched orders/positions with no hard latch",
+    "network": {
+      "max_clock_skew_seconds": 2,
+      "consecutive_api_errors": 3,
+      "equity_reconciliation_tolerance_usdt": 0.01
+    },
+    "risk_action": "block new trades AND positive adjustments; cancel pending risk-increasing entries; preserve protective exits; idempotent native exits and reconcile before retry",
+    "runtime_activation_authorized": false
+  },
+  "windows": [
+    {
+      "id": "L",
+      "start": "2025-01-01T00:00:00Z",
+      "end_exclusive": "2026-09-01T00:00:00Z",
+      "valuation": "last common 5m snapshot strictly before end; also reconcile archived 23:00 anchor",
+      "evidence_class": "observed_retrospective_development"
+    },
+    {
+      "id": "S",
+      "start": "2026-10-23T00:00:00Z",
+      "end_exclusive": "2026-11-05T00:00:00Z",
+      "valuation": "last common 5m snapshot strictly before end; also reconcile archived 23:00 anchor",
+      "evidence_class": "observed_post_source_history_not_prospective"
+    }
+  ],
+  "walk_forward": {
+    "evidence_class": "all_seen_development_not_independent_oos",
+    "folds": [
+      {
+        "id": "WF1",
+        "train": [
+          "2025-01-01",
+          "2025-07-01"
+        ],
+        "validation": [
+          "2025-07-01",
+          "2025-10-01"
+        ]
+      },
+      {
+        "id": "WF2",
+        "train": [
+          "2025-01-01",
+          "2025-10-01"
+        ],
+        "validation": [
+          "2025-10-01",
+          "2026-01-01"
+        ]
+      },
+      {
+        "id": "WF3",
+        "train": [
+          "2025-01-01",
+          "2026-01-01"
+        ],
+        "validation": [
+          "2026-01-01",
+          "2026-04-01"
+        ]
+      },
+      {
+        "id": "WF4",
+        "train": [
+          "2025-01-01",
+          "2026-04-01"
+        ],
+        "validation": [
+          "2026-04-01",
+          "2026-09-01"
+        ]
+      }
+    ],
+    "intervals": "UTC half-open",
+    "purge": "remove training rows whose full label interval overlaps validation; minimum label horizon",
+    "embargo_hours": 24,
+    "maximum_future_label_hours": 48,
+    "long_campaign_policy": "remove all overlapping outcome labels; reset-fold and continuous results separate"
+  },
+  "final_holdout": {
+    "status": "not_started",
+    "start": null,
+    "end": null,
+    "rule": "T0=next UTC00 after final candidate/code/data instrumentation freeze commit and independent review; record concrete dates before data occurs",
+    "duration_days": 90,
+    "min_natural_complete_campaigns": 100,
+    "min_per_direction_if_claiming_two_sided": 30,
+    "interim_performance_selection": false,
+    "safety_monitoring": true,
+    "automatic_extension": false,
+    "failure_or_insufficient_sample": "retain failure/inconclusive; new registered forward window required"
+  },
+  "metrics": {
+    "required": [
+      "net_marked_return",
+      "five_minute_marked_mdd",
+      "drawdown_duration",
+      "worst_day",
+      "worst_week",
+      "daily_ES95",
+      "daily_NAV_Sharpe_365_ddof1_rf0",
+      "Sortino",
+      "Calmar",
+      "turnover",
+      "fees",
+      "funding",
+      "gross_net_and_direction_exposure",
+      "pair_event_concentration",
+      "capacity",
+      "holding_age",
+      "DCA_orders",
+      "terminal_open_positions"
+    ],
+    "undefined": "null, not zero or infinity",
+    "daily_clock": "UTC with flat days",
+    "conditional_5m_open_is_verified_mark": false
+  },
+  "acceptance": {
+    "parity_cash_tolerance_usdt": 0.01,
+    "parity_return_tolerance_percentage_points": 0.001,
+    "events": "identity/time/side/quantity exact to exchange precision; no omitted rows",
+    "P1": "engineering reproduction only; no profitability claim",
+    "economic_future": {
+      "positive_development_folds_min": 3,
+      "fold_count": 4,
+      "stress_continuous_net_positive": true,
+      "max_verified_5m_marked_mdd": 0.15,
+      "max_single_pair_positive_contribution_share": 0.35,
+      "max_single_day_positive_contribution_share": 0.25,
+      "paired_increment": "paired complete UTC daily NAV-return difference versus cash(F1) or RD1-only(P3 components); centered circular moving-block null bootstrap,block7d,2000draws,seed20261105,one-sided p=(1+count(null_mean>=observed_mean))/2001; Holm alpha.05,new registered families only:m4(P2),m8(P3); failure/missing/risk-only slots p1; unadjusted95% interval descriptive only; old unknown search not corrected",
+      "historical_selection_bias_resolved_by_bootstrap": false
+    }
+  },
+  "budgets": {
+    "P0_max_new_diagnostic_invocations": 8,
+    "P1_max_accounts": 32,
+    "P1_max_determinism_reruns": 2,
+    "max_technical_retries_per_failed_command": 2,
+    "P2_max_accounts": 80,
+    "P3_max_accounts": 80,
+    "hyperopt_trials": 0,
+    "ML_trials": 0,
+    "financial_workers": 1,
+    "max_rss_bytes": 5905580032,
+    "wall_seconds_per_run": 3600
+  },
+  "P0_work_packages": [
+    {
+      "id": "P0_SOURCE_ENV",
+      "deliverable": "new isolated source/dependency/run manifests, no CZ-vendored runtime imports",
+      "pass": "pinned source hashes plus environment and data receipts verified; missing inputs block specific runs"
+    },
+    {
+      "id": "P0_CAUSALITY",
+      "deliverable": "individual 3 spot +3 futures alert state traces; reuse existing24 slices",
+      "pass": "explain each changed exit with causally available data/state or retain BLOCKED; recursive signal-level sensitivity on fixed BTC/ETH/ADA cases",
+      "max_new_diagnostic_invocations": 8,
+      "recursive_protocol": {
+        "markets": [
+          "spot",
+          "futures"
+        ],
+        "assets": [
+          "BTC",
+          "ETH",
+          "ADA"
+        ],
+        "timerange": "20261001-20261101",
+        "startup_candles": [
+          199,
+          499,
+          799,
+          999
+        ],
+        "signal_assertions": "compare actual entry/exit booleans at fixed checkpoints; indicator-only output not strategy pass",
+        "new_invocations_max": 6
+      },
+      "lookahead_new_invocations_max": 2
+    },
+    {
+      "id": "P0_EVENT_NAV",
+      "deliverable": "funding/fill creation-vs-execution event timeline, synchronized full equity specification",
+      "pass": "no unknown same-time ordering affecting acceptance; 5m mark or explicitly blocked rather than OPEN substitution"
+    },
+    {
+      "id": "P0_RISK_MODULE",
+      "deliverable": "offline persistent RD1 state machine and fault tests, not connected to running bots",
+      "pass": "500 equality, floating loss, DCA risk, partial fills, duplicates, day boundary, corrupt/restart state, network/reconcile tests pass"
+    },
+    {
+      "id": "P0_READY_MANIFEST",
+      "deliverable": "per-candidate readiness and append-only execution ledger contract",
+      "pass": "refuse economic acceptance for unresolved causal/mark/data gates; original deployment hashes unchanged"
+    }
+  ],
+  "phase_estimates_person_days": {
+    "P0": [
+      3,
+      5
+    ],
+    "P1": [
+      3,
+      5
+    ],
+    "P2": [
+      5,
+      8
+    ],
+    "P3": [
+      5,
+      8
+    ],
+    "P4_review": [
+      3,
+      5
+    ]
+  },
+  "stop_rules": [
+    "do not alter failed thresholds",
+    "no proxy for missing funding/basis/depth",
+    "preserve failed/inconclusive/zero_trade records",
+    "budget exhaustion writes bounded blocker report",
+    "source/state or event uncertainty blocks relevant promotion",
+    "no full financial worker concurrent with another financial run"
+  ],
+  "execution_manifest_required": [
+    "freeze_sha256",
+    "source_hashes",
+    "dependency_versions",
+    "data_receipt_hashes",
+    "universe_hash",
+    "risk_contract_hash",
+    "cost_scenario",
+    "window",
+    "valuation_endpoint",
+    "command",
+    "isolated_output_path",
+    "start_utc",
+    "candidate_readiness",
+    "risk_profile",
+    "RD1_applied",
+    "resolved_strategy_config_hash",
+    "strategy_main_timeframe",
+    "detail_timeframe",
+    "startup_candle_count",
+    "order_types",
+    "stake_amount"
+  ],
+  "historical_trial_count": null,
+  "historical_trial_count_status": "unknown; old families retained, no independent_oos claim"
+}
