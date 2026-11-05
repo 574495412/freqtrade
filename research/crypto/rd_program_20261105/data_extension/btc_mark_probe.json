@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-11-05T17:48:28.158Z",
+  "tool": "mcp__codex_apps__binance_get_futures_usds_mark_price_kline_candlestick_data",
+  "request": {
+    "symbol": "BTCUSDT",
+    "interval": "5m",
+    "startTime": 1735689600000,
+    "endTime": 1735690499999,
+    "limit": 3
+  },
+  "response": [
+    [
+      1735689600000,
+      "93549.66175177",
+      "93690",
+      "93515.30772340",
+      "93648.40000000",
+      "0",
+      1735689899999,
+      "0",
+      300,
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      1735689900000,
+      "93648.40000000",
+      "93666.70000000",
+      "93581.60000000",
+      "93590.54588652",
+      "0",
+      1735690199999,
+      "0",
+      300,
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      1735690200000,
+      "93590.53312057",
+      "93637.20000000",
+      "93464.44198092",
+      "93637.20000000",
+      "0",
+      1735690499999,
+      "0",
+      300,
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "scope": "availability probe only; 3 bars do not validate 40-symbol full-window coverage, historical receipt or execution prices",
+  "orders_enabled": false
+}
