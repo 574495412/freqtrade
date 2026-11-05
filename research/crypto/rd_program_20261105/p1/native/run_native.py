@@ -115,7 +115,10 @@ def build_plan(run, config_path):
         raw = deepcopy(native_raw)
         candidate = deepcopy(native_candidate)
         candidate["config"] = {"path": str(config_path), "sha256": None}
-    raw.update(dry_run=True, dry_run_wallet=1000, api_server={"enabled": False}, telegram={"enabled": False},
+    raw.update(dry_run=True, dry_run_wallet=1000,
+               api_server={"enabled": False, "listen_ip_address": "127.0.0.1", "listen_port": 8080,
+                           "username": "", "password": ""},
+               telegram={"enabled": False, "token": "", "chat_id": ""},
                export="trades", backtest_cache="none", recursive_strategy_search=False)
     raw.pop("webhook", None)
     for key in ("key", "secret", "password", "uid"):

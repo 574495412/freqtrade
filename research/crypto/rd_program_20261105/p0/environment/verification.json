@@ -1,0 +1,26 @@
+{
+  "observed_at_utc": "2026-11-05T16:46:45.046012+00:00",
+  "unit_checks_passed": 6,
+  "financial_backtests_run_by_author": 0,
+  "live_runtime_modified": false,
+  "files": {
+    "research/crypto/rd_program_20261105/p0/environment/source_environment.json": "0158046400f5f92fab5f53e601fc9432a8b688856f83b1d30c70eddaef346e43",
+    "research/crypto/rd_program_20261105/p0/environment/test_guard.py": "b8944245cef2b6b76affea560f5f4e9ae1d83716451c7f9065f548cfbe7dba61",
+    "research/crypto/rd_program_20261105/p0/environment/data_file_inventory.json": "f0a3b1794f418ba280b0e3d0eeb58cd024623bf3ae351a970a3b0020f465db0b",
+    "research/crypto/rd_program_20261105/p0/environment/standalone_adapter.py": "a52ef9c0310661e9c0c12a9fd49ac519d53f4b4d4f56343409ac38f8e6d194f3",
+    "research/crypto/rd_program_20261105/p0/environment/README.md": "1ff7302f044051a8c5c3ba624277a4dfdc5f37464c92e2a3cf87826bad832b48",
+    "research/crypto/rd_program_20261105/p0/environment/guard.py": "ec2e8f023b206d16a1ca1339edeb77f0507aa1ce0193435a75163ce8f1fa24c7",
+    "research/crypto/rd_program_20261105/p0/environment/data_manifest.json": "e98a03698e93d21cdaaf9dc7c824c461cd6f9b9f10f19e8ae992675903b8000a",
+    "research/crypto/rd_program_20261105/p0/environment/audit_environment.py": "ec9c36ec66e192de665f7eaaf01c4c9acfa808a6651552f39f64bfeb0354bb41",
+    "research/crypto/rd_program_20261105/p0/environment/prepared_plans.json": "e2975ac08ef6e6dfddf41f34c5db29103f8c832319b010d3ab4fd547e561ae85"
+  },
+  "preflight_datasets": [
+    "spot_S",
+    "futures_S"
+  ],
+  "technical_revision": {
+    "first_test_result": "4 portability subcases failed because unused original_source_files metadata retained legacy absolute paths",
+    "resolution": "Removed unused metadata from executable candidate; parent plan/hash untouched before any financial execution",
+    "financial_results_affected": false
+  }
+}

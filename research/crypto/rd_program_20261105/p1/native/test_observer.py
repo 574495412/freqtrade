@@ -130,6 +130,20 @@ class Observer:
 
 
 class NativeConfigurationTests(unittest.TestCase):
+    def test_disabled_transports_satisfy_official_backtest_schema(self):
+        from freqtrade.configuration.config_validation import validate_config_schema
+        from freqtrade.enums import RunMode
+        for market in ("spot", "futures"):
+            for baseline in ("B2_AVERAGE_NATIVE", "B3_NFI_X8_NATIVE"):
+                run = run_native.lookup(f"P1_{baseline}_{market}_S_base")
+                _, config, _ = run_native.build_plan(run, Path("not_written.json"))
+                config["runmode"] = RunMode.BACKTEST
+                validate_config_schema(config, preliminary=True)
+                self.assertFalse(config["telegram"]["enabled"])
+                self.assertFalse(config["api_server"]["enabled"])
+                self.assertEqual(config["telegram"]["token"], "")
+                self.assertEqual(config["api_server"]["password"], "")
+
     def test_retained_hashes_exclude_cache_and_cover_durable_results(self):
         with tempfile.TemporaryDirectory(prefix="hash_test_", dir=Path(__file__).parent) as temporary:
             output = Path(temporary)

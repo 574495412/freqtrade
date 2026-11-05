@@ -1,0 +1,2762 @@
+{
+  "schema_version": 1,
+  "orders_enabled": false,
+  "new_financial_runs": 0,
+  "script_sha256": "fd5c191357a89bd236f0646a1f7b811634af963a95f32e24710d01382a214fbd",
+  "markets": {
+    "spot": {
+      "execution": {
+        "schema_version": 1,
+        "market": "spot",
+        "state": "COMPLETED",
+        "orders_enabled": false,
+        "diagnostic_only": true,
+        "source_mutated": false,
+        "orchestration_intervention": "fresh empty NFI profit-target cache directory for each baseline/entry/exit phase; original source, utility runmode, strategy, matching and callback outputs unchanged",
+        "runner_sha256": "f36aab0f2a11fb4cac8e60af44699447c78bb5bf690d14b381ffdca735f008d7",
+        "manifest_sha256": "7bc3b689fefcf80a81ee017d94a2e70cfab2b4694fc88b81fac23d97e9e349b3",
+        "config_differences": {
+          "webhook": {
+            "before": null,
+            "after": {
+              "enabled": false
+            }
+          },
+          "export": {
+            "before": null,
+            "after": "none"
+          },
+          "backtest_cache": {
+            "before": null,
+            "after": "none"
+          }
+        },
+        "diagnostic_config_sha256": "3807bb368fad0f994162b2121e23142eb89f5a349e6d09bcf7bfe6b1687e9aaa",
+        "command": [
+          "lookahead-analysis",
+          "--config",
+          "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/diagnostic-config.json",
+          "--strategy-path",
+          "/Users/chrise/GitHub/freqtrade/deploy/strategy/nfi-x8",
+          "--strategy",
+          "NostalgiaForInfinityX8",
+          "--datadir",
+          "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+          "--userdir",
+          "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/utility-userdir",
+          "--timerange",
+          "20250101-20250401",
+          "--pairs",
+          "ADA/USDT",
+          "ETH/USDT",
+          "--minimum-trade-amount",
+          "5",
+          "--targeted-trade-amount",
+          "20",
+          "--lookahead-analysis-exportfilename",
+          "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/lookahead-result.csv"
+        ],
+        "started_utc": "2026-11-05T16:47:53.100390+00:00",
+        "official_command_count": 1,
+        "additional_paired_dirty_reruns": 0,
+        "historical_comparator": "user_data/crypto_quant/nfi_x8_spot_lookahead_check_20261105_v001",
+        "environment_result": {
+          "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+          "official_package_files_verified": 360,
+          "unused_nonofficial_python_files": [
+            "freqtrade/research/__init__.py",
+            "freqtrade/research/__main__.py",
+            "freqtrade/research/data.py",
+            "freqtrade/research/engine.py",
+            "freqtrade/research/strategies.py",
+            "freqtrade/research/tradingagents_worker.py",
+            "freqtrade/research/validation.py",
+            "freqtrade/research/workflow.py"
+          ],
+          "legacy_numeric_dependencies_equal": true,
+          "freqtrade_origin": "freqtrade/__init__.py"
+        },
+        "market_snapshot": {
+          "path": "research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+          "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+        },
+        "resource_guard": "internal process-tree RSS/wall watchdog and shared nonblocking flock",
+        "exit_code": 0,
+        "elapsed_seconds": 24.338661582994973,
+        "phase_prepare_attempts": 23,
+        "actual_internal_backtests_started": 23,
+        "actual_internal_backtests_completed": 23,
+        "callback_trace_events": 3999,
+        "future_cache_reads": 0,
+        "phase_calls_sha256": "ef9a3029a5e22a5d32bd9ff1bf6de65f519b489f6fcf94d7b36e3e78cd0110d9",
+        "callback_trace_sha256": "c308c7e6d4807c57f52969637392d5c4c933a4b43d8b3a7a693b24fb0818fda7",
+        "official_csv_sha256": "5dd5e6b4b0ce7fda543f1eef39fd518c5fc063a46dd532ce6c6ec2a48792567c",
+        "engine_and_inputs_reverified": true
+      },
+      "official_csv": {
+        "filename": "NostalgiaForInfinityX8.py",
+        "strategy": "NostalgiaForInfinityX8",
+        "has_bias": "False",
+        "total_signals": "11",
+        "biased_entry_signals": "0",
+        "biased_exit_signals": "0",
+        "biased_indicators": ""
+      },
+      "all_phases_started_empty_cache": true,
+      "distinct_phase_directories": 23,
+      "baseline_trade_count": 11,
+      "baseline_final_cache_exactly_equals_old_final_cache": true,
+      "baseline_final_cache": {
+        "ADA/USDT": {
+          "rate": 1.0423,
+          "profit": 0.04571771273385623,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-01-20T18:55:00+00:00"
+        },
+        "ETH/USDT": {
+          "rate": 2278.9,
+          "profit": 0.0554029728713305,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-03-01T04:45:00+00:00"
+        }
+      },
+      "future_cache_reads": 0,
+      "trace_normalization_ignored_fields": [
+        "id",
+        "order_id",
+        "sequence",
+        "phase"
+      ],
+      "all_checked_clean_target_trade_parity": [
+        {
+          "phase": 2,
+          "pair": "ADA/USDT",
+          "open_date": "2025-01-19T22:50:00.000Z",
+          "close_date": "2025-01-20T06:45:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 4,
+          "pair": "ADA/USDT",
+          "open_date": "2025-01-20T17:40:00.000Z",
+          "close_date": "2025-01-20T21:50:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 6,
+          "pair": "ADA/USDT",
+          "open_date": "2025-02-03T00:45:00.000Z",
+          "close_date": "2025-02-03T01:20:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 8,
+          "pair": "ADA/USDT",
+          "open_date": "2025-02-12T13:40:00.000Z",
+          "close_date": "2025-02-12T13:45:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 10,
+          "pair": "ETH/USDT",
+          "open_date": "2025-02-28T02:35:00.000Z",
+          "close_date": "2025-03-01T06:30:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 12,
+          "pair": "ADA/USDT",
+          "open_date": "2025-03-02T18:35:00.000Z",
+          "close_date": "2025-03-02T18:40:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 14,
+          "pair": "ADA/USDT",
+          "open_date": "2025-03-03T21:55:00.000Z",
+          "close_date": "2025-03-03T22:05:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 16,
+          "pair": "ADA/USDT",
+          "open_date": "2025-03-04T02:20:00.000Z",
+          "close_date": "2025-03-04T02:25:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 18,
+          "pair": "ADA/USDT",
+          "open_date": "2025-03-07T00:40:00.000Z",
+          "close_date": "2025-03-07T01:05:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 20,
+          "pair": "ETH/USDT",
+          "open_date": "2025-03-10T19:00:00.000Z",
+          "close_date": "2025-03-10T19:10:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 22,
+          "pair": "ADA/USDT",
+          "open_date": "2025-03-10T11:45:00.000Z",
+          "close_date": "2025-03-25T10:50:00.000Z",
+          "whole_target_trade_exact_equal": false,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": [
+            {
+              "order_index": 4,
+              "baseline": "grind_5_exit 24",
+              "slice": "grind_5_exit 20"
+            },
+            {
+              "order_index": 6,
+              "baseline": "grind_1_exit 26",
+              "slice": "grind_1_exit 22"
+            },
+            {
+              "order_index": 7,
+              "baseline": "grind_4_exit 20",
+              "slice": "grind_4_exit 18"
+            }
+          ]
+        }
+      ],
+      "grind_tag_normalization_source": {
+        "path": "deploy/strategy/nfi-x8/NostalgiaForInfinityX8.py",
+        "lines": [
+          36960,
+          37356,
+          37494
+        ],
+        "rule": "Only integer suffixes of grind_1/4/5_exit; original source appends grind entry order IDs. Literal differences retained; prices/times/quantities/funding and all other fields stay exact."
+      },
+      "old_baseline_parity": {
+        "scope": "all 11 checked trade pair/open/close identities inferred from 22 logged slice cutoff/pair sequences; reported baseline count 12; complete old trade/order exports absent",
+        "all_logged_phase_sequences_equal": true,
+        "full_trade_order_funding_parity": null,
+        "missing": "Original spot full baseline and per-slice trade exports were not saved",
+        "phase_comparisons": [
+          {
+            "phase": 0,
+            "old": {
+              "to_dt": "2025-04-01T00:00:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-04-01T00:00:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 1,
+            "old": {
+              "to_dt": "2025-01-19T22:55:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-01-19T22:55:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 2,
+            "old": {
+              "to_dt": "2025-01-20T06:50:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-01-20T06:50:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 3,
+            "old": {
+              "to_dt": "2025-01-20T17:45:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-01-20T17:45:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 4,
+            "old": {
+              "to_dt": "2025-01-20T21:55:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-01-20T21:55:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 5,
+            "old": {
+              "to_dt": "2025-02-03T00:50:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-02-03T00:50:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 6,
+            "old": {
+              "to_dt": "2025-02-03T01:25:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-02-03T01:25:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 7,
+            "old": {
+              "to_dt": "2025-02-12T13:45:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-02-12T13:45:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 8,
+            "old": {
+              "to_dt": "2025-02-12T13:50:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-02-12T13:50:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 9,
+            "old": {
+              "to_dt": "2025-02-28T02:40:00+00:00",
+              "pair": "ETH/USDT"
+            },
+            "new_to_dt": "2025-02-28T02:40:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 10,
+            "old": {
+              "to_dt": "2025-03-01T06:35:00+00:00",
+              "pair": "ETH/USDT"
+            },
+            "new_to_dt": "2025-03-01T06:35:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 11,
+            "old": {
+              "to_dt": "2025-03-02T18:40:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-03-02T18:40:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 12,
+            "old": {
+              "to_dt": "2025-03-02T18:45:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-03-02T18:45:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 13,
+            "old": {
+              "to_dt": "2025-03-03T22:00:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-03-03T22:00:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 14,
+            "old": {
+              "to_dt": "2025-03-03T22:10:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-03-03T22:10:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 15,
+            "old": {
+              "to_dt": "2025-03-04T02:25:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-03-04T02:25:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 16,
+            "old": {
+              "to_dt": "2025-03-04T02:30:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-03-04T02:30:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 17,
+            "old": {
+              "to_dt": "2025-03-07T00:45:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-03-07T00:45:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 18,
+            "old": {
+              "to_dt": "2025-03-07T01:10:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-03-07T01:10:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 19,
+            "old": {
+              "to_dt": "2025-03-10T19:05:00+00:00",
+              "pair": "ETH/USDT"
+            },
+            "new_to_dt": "2025-03-10T19:05:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 20,
+            "old": {
+              "to_dt": "2025-03-10T19:15:00+00:00",
+              "pair": "ETH/USDT"
+            },
+            "new_to_dt": "2025-03-10T19:15:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 21,
+            "old": {
+              "to_dt": "2025-03-10T11:50:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-03-10T11:50:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          },
+          {
+            "phase": 22,
+            "old": {
+              "to_dt": "2025-03-25T10:55:00+00:00",
+              "pair": "ADA/USDT"
+            },
+            "new_to_dt": "2025-03-25T10:55:00+00:00",
+            "cutoff_equal": true,
+            "pair_equal": true
+          }
+        ]
+      }
+    },
+    "futures": {
+      "execution": {
+        "schema_version": 1,
+        "market": "futures",
+        "state": "COMPLETED",
+        "orders_enabled": false,
+        "diagnostic_only": true,
+        "source_mutated": false,
+        "orchestration_intervention": "fresh empty NFI profit-target cache directory for each baseline/entry/exit phase; original source, utility runmode, strategy, matching and callback outputs unchanged",
+        "runner_sha256": "f36aab0f2a11fb4cac8e60af44699447c78bb5bf690d14b381ffdca735f008d7",
+        "manifest_sha256": "7bc3b689fefcf80a81ee017d94a2e70cfab2b4694fc88b81fac23d97e9e349b3",
+        "config_differences": {
+          "export": {
+            "before": "trades",
+            "after": "none"
+          },
+          "webhook": {
+            "before": null,
+            "after": {
+              "enabled": false
+            }
+          }
+        },
+        "diagnostic_config_sha256": "98e1b2129af87d41e36eff510fb5524dd66782f507cfda3e0257cb401a34b6ce",
+        "command": [
+          "lookahead-analysis",
+          "--config",
+          "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/diagnostic-config.json",
+          "--strategy-path",
+          "/Users/chrise/GitHub/freqtrade/deploy/strategy/nfi-x8",
+          "--strategy",
+          "NostalgiaForInfinityX8",
+          "--datadir",
+          "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles",
+          "--userdir",
+          "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/utility-userdir",
+          "--timerange",
+          "20250101-20250401",
+          "--pairs",
+          "ADA/USDT:USDT",
+          "ETH/USDT:USDT",
+          "--minimum-trade-amount",
+          "5",
+          "--targeted-trade-amount",
+          "20",
+          "--lookahead-analysis-exportfilename",
+          "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/lookahead-result.csv"
+        ],
+        "started_utc": "2026-11-05T16:47:04.423831+00:00",
+        "official_command_count": 1,
+        "additional_paired_dirty_reruns": 0,
+        "historical_comparator": "user_data/crypto_quant/nfi_x8_lookahead_inspect_20261105_v002",
+        "environment_result": {
+          "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+          "official_package_files_verified": 360,
+          "unused_nonofficial_python_files": [
+            "freqtrade/research/__init__.py",
+            "freqtrade/research/__main__.py",
+            "freqtrade/research/data.py",
+            "freqtrade/research/engine.py",
+            "freqtrade/research/strategies.py",
+            "freqtrade/research/tradingagents_worker.py",
+            "freqtrade/research/validation.py",
+            "freqtrade/research/workflow.py"
+          ],
+          "legacy_numeric_dependencies_equal": true,
+          "freqtrade_origin": "freqtrade/__init__.py"
+        },
+        "market_snapshot": {
+          "path": "research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+          "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+        },
+        "resource_guard": "internal process-tree RSS/wall watchdog and shared nonblocking flock",
+        "exit_code": 0,
+        "elapsed_seconds": 26.848564165993594,
+        "phase_prepare_attempts": 25,
+        "actual_internal_backtests_started": 25,
+        "actual_internal_backtests_completed": 25,
+        "callback_trace_events": 11103,
+        "future_cache_reads": 0,
+        "phase_calls_sha256": "b867c7ee3aa85a5696e045e6757135568faa0923f28d72229468b0fd892d68ee",
+        "callback_trace_sha256": "07bfc120e086b0081e8bcf98b839bae6bbd13a5e41306a4ce795c5ac6b794cc4",
+        "official_csv_sha256": "189a5b742d0af3daaa8e4b8a3695d7faf3cf79c0243a2bf8f01a62e4ed018bd1",
+        "engine_and_inputs_reverified": true
+      },
+      "official_csv": {
+        "filename": "NostalgiaForInfinityX8.py",
+        "strategy": "NostalgiaForInfinityX8",
+        "has_bias": "False",
+        "total_signals": "12",
+        "biased_entry_signals": "0",
+        "biased_exit_signals": "0",
+        "biased_indicators": ""
+      },
+      "all_phases_started_empty_cache": true,
+      "distinct_phase_directories": 25,
+      "baseline_trade_count": 12,
+      "baseline_final_cache_exactly_equals_old_final_cache": true,
+      "baseline_final_cache": {
+        "ADA/USDT:USDT": {
+          "rate": 1.0421,
+          "profit": 0.04717334943639292,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-01-20T18:55:00+00:00"
+        },
+        "ETH/USDT:USDT": {
+          "rate": 3103.93,
+          "profit": 0.06493940948994312,
+          "sell_reason": "exit_profit_short_rebuy_max",
+          "time_profit_reached": "2025-02-01T23:25:00+00:00"
+        }
+      },
+      "future_cache_reads": 0,
+      "trace_normalization_ignored_fields": [
+        "id",
+        "order_id",
+        "sequence",
+        "phase"
+      ],
+      "all_checked_clean_target_trade_parity": [
+        {
+          "phase": 2,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-01-19T22:50:00.000Z",
+          "close_date": "2025-01-20T03:05:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 4,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-01-20T17:40:00.000Z",
+          "close_date": "2025-01-20T21:50:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 6,
+          "pair": "ETH/USDT:USDT",
+          "open_date": "2025-01-27T16:40:00.000Z",
+          "close_date": "2025-02-02T00:45:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 8,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-02-03T00:45:00.000Z",
+          "close_date": "2025-02-03T01:20:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 10,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-02-12T13:40:00.000Z",
+          "close_date": "2025-02-12T13:45:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 12,
+          "pair": "ETH/USDT:USDT",
+          "open_date": "2025-02-28T02:35:00.000Z",
+          "close_date": "2025-03-01T06:20:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 14,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-03-02T18:35:00.000Z",
+          "close_date": "2025-03-02T18:40:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 16,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-03-03T21:55:00.000Z",
+          "close_date": "2025-03-03T22:05:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 18,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-03-04T02:20:00.000Z",
+          "close_date": "2025-03-04T02:25:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 20,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-03-07T00:40:00.000Z",
+          "close_date": "2025-03-07T01:05:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 22,
+          "pair": "ETH/USDT:USDT",
+          "open_date": "2025-03-10T19:00:00.000Z",
+          "close_date": "2025-03-11T12:15:00.000Z",
+          "whole_target_trade_exact_equal": true,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": []
+        },
+        {
+          "phase": 24,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-03-10T11:45:00.000Z",
+          "close_date": "2025-03-25T10:50:00.000Z",
+          "whole_target_trade_exact_equal": false,
+          "equal_after_grind_order_id_suffix_normalization": true,
+          "literal_order_tag_differences": [
+            {
+              "order_index": 2,
+              "baseline": "grind_4_exit 23",
+              "slice": "grind_4_exit 18"
+            }
+          ]
+        }
+      ],
+      "grind_tag_normalization_source": {
+        "path": "deploy/strategy/nfi-x8/NostalgiaForInfinityX8.py",
+        "lines": [
+          36960,
+          37356,
+          37494
+        ],
+        "rule": "Only integer suffixes of grind_1/4/5_exit; original source appends grind entry order IDs. Literal differences retained; prices/times/quantities/funding and all other fields stay exact."
+      },
+      "old_baseline_parity": {
+        "scope": "all 12 archived baseline trades; every exported field including all orders, prices, amounts, tags and funding",
+        "exact_equal": true
+      },
+      "all_24_old_new_slice_comparisons": [
+        {
+          "baseline_index": 0,
+          "kind": "entry",
+          "old_trade_count": 1,
+          "new_trade_count": 1,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 0,
+          "kind": "exit",
+          "old_trade_count": 3,
+          "new_trade_count": 1,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 1,
+          "kind": "entry",
+          "old_trade_count": 4,
+          "new_trade_count": 2,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 1,
+          "kind": "exit",
+          "old_trade_count": 4,
+          "new_trade_count": 2,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 2,
+          "kind": "entry",
+          "old_trade_count": 1,
+          "new_trade_count": 1,
+          "entire_slice_exact_equal": true
+        },
+        {
+          "baseline_index": 2,
+          "kind": "exit",
+          "old_trade_count": 1,
+          "new_trade_count": 1,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 3,
+          "kind": "entry",
+          "old_trade_count": 5,
+          "new_trade_count": 3,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 3,
+          "kind": "exit",
+          "old_trade_count": 5,
+          "new_trade_count": 3,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 4,
+          "kind": "entry",
+          "old_trade_count": 6,
+          "new_trade_count": 4,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 4,
+          "kind": "exit",
+          "old_trade_count": 6,
+          "new_trade_count": 4,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 5,
+          "kind": "entry",
+          "old_trade_count": 2,
+          "new_trade_count": 2,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 5,
+          "kind": "exit",
+          "old_trade_count": 2,
+          "new_trade_count": 2,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 6,
+          "kind": "entry",
+          "old_trade_count": 7,
+          "new_trade_count": 5,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 6,
+          "kind": "exit",
+          "old_trade_count": 7,
+          "new_trade_count": 5,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 7,
+          "kind": "entry",
+          "old_trade_count": 8,
+          "new_trade_count": 6,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 7,
+          "kind": "exit",
+          "old_trade_count": 8,
+          "new_trade_count": 6,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 8,
+          "kind": "entry",
+          "old_trade_count": 9,
+          "new_trade_count": 7,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 8,
+          "kind": "exit",
+          "old_trade_count": 9,
+          "new_trade_count": 7,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 9,
+          "kind": "entry",
+          "old_trade_count": 10,
+          "new_trade_count": 8,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 9,
+          "kind": "exit",
+          "old_trade_count": 10,
+          "new_trade_count": 8,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 10,
+          "kind": "entry",
+          "old_trade_count": 3,
+          "new_trade_count": 3,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 10,
+          "kind": "exit",
+          "old_trade_count": 3,
+          "new_trade_count": 3,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 11,
+          "kind": "entry",
+          "old_trade_count": 11,
+          "new_trade_count": 9,
+          "entire_slice_exact_equal": false
+        },
+        {
+          "baseline_index": 11,
+          "kind": "exit",
+          "old_trade_count": 11,
+          "new_trade_count": 9,
+          "entire_slice_exact_equal": false
+        }
+      ]
+    }
+  },
+  "alerts": [
+    {
+      "id": "spot_0",
+      "market": "spot",
+      "target": {
+        "pair": "ADA/USDT",
+        "open_date": "2025-01-19T22:50:00+00:00",
+        "baseline_close_date": "2025-01-20T06:45:00+00:00"
+      },
+      "old_alert": {
+        "id": "spot_0",
+        "market": "spot",
+        "pair": "ADA/USDT",
+        "open_date": "2025-01-19 22:50:00+00:00",
+        "baseline_close_date": "2025-01-20 06:45:00+00:00",
+        "slice_close_date": null,
+        "slice_exit_reason": null,
+        "status": "blocked_old_spot_slices_not_exported",
+        "missing_evidence": [
+          "old spot per-slice trade output",
+          "pre-phase cache state",
+          "first-divergence callback trace"
+        ],
+        "interpretation": "same source lifecycle mechanism applies, but old spot alert attribution remains unproven"
+      },
+      "clean_exit_slice_phase": 2,
+      "clean_trade_exactly_matches_new_baseline_trade": true,
+      "clean_trade": {
+        "pair": "ADA/USDT",
+        "stake_amount": 9999.96345,
+        "max_stake_amount": 9999.96345,
+        "amount": 10073.5,
+        "open_date": "2025-01-19T22:50:00.000Z",
+        "close_date": "2025-01-20T06:45:00.000Z",
+        "open_rate": 0.9927,
+        "close_rate": 1.036,
+        "fee_open": 0.0013,
+        "fee_close": 0.0013,
+        "trade_duration": 475,
+        "profit_ratio": 0.0409085294,
+        "profit_abs": 409.61560771,
+        "exit_reason": "exit_long_tc_d_4_1 ( 145 )",
+        "initial_stop_loss_abs": 0.01,
+        "initial_stop_loss_ratio": -0.99,
+        "stop_loss_abs": 0.01,
+        "stop_loss_ratio": -0.99,
+        "min_rate": 0.9594,
+        "max_rate": 1.0518,
+        "is_open": false,
+        "enter_tag": "145 ",
+        "leverage": 1.0,
+        "is_short": false,
+        "open_timestamp": 1737327000000,
+        "close_timestamp": 1737355500000,
+        "orders": [
+          {
+            "amount": 10073.5,
+            "safe_price": 0.9927,
+            "ft_order_side": "buy",
+            "order_filled_timestamp": 1737327000000,
+            "ft_is_entry": true,
+            "ft_order_tag": "145 ",
+            "cost": 10012.963402485
+          },
+          {
+            "amount": 10073.5,
+            "safe_price": 1.036,
+            "ft_order_side": "sell",
+            "order_filled_timestamp": 1737355500000,
+            "ft_is_entry": false,
+            "ft_order_tag": "exit_long_tc_d_4_1 ( 145 )",
+            "cost": 10449.7129898
+          }
+        ],
+        "funding_fees": 0.0
+      },
+      "clean_callback_trace_exactly_matches_baseline": true,
+      "compared_callback_events_per_phase": 98,
+      "first_clean_custom_exit": {
+        "sequence": 498,
+        "phase": 2,
+        "event": "custom_exit",
+        "time": "2025-01-19T22:50:00+00:00",
+        "current_rate": 0.9927,
+        "current_profit": -0.00259662,
+        "cache_before": null,
+        "cache_after": null,
+        "cache_from_future": false,
+        "result": null,
+        "trade": {
+          "id": 1,
+          "pair": "ADA/USDT",
+          "open_date": "2025-01-19T22:50:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10073.5,
+          "enter_tag": "145 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0.0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "buy",
+              "created_at": "2025-01-19T22:50:00+00:00",
+              "filled_at": "2025-01-19T22:50:00+00:00",
+              "amount": 10073.5,
+              "filled": 10073.5,
+              "price": 0.9927,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "145 "
+            }
+          ]
+        }
+      },
+      "closing_callback": {
+        "sequence": 594,
+        "phase": 2,
+        "event": "order_filled",
+        "time": "2025-01-20T06:45:00+00:00",
+        "order_id": 2,
+        "recognized_as_backtest": false,
+        "cache_before": {
+          "rate": 1.036,
+          "profit": 0.04096171048655172,
+          "sell_reason": "exit_long_tc_d_4_1",
+          "time_profit_reached": "2025-01-20T06:45:00+00:00"
+        },
+        "cache_after": {
+          "rate": 1.036,
+          "profit": 0.04096171048655172,
+          "sell_reason": "exit_long_tc_d_4_1",
+          "time_profit_reached": "2025-01-20T06:45:00+00:00"
+        },
+        "trade_before": {
+          "id": 1,
+          "pair": "ADA/USDT",
+          "open_date": "2025-01-19T22:50:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10073.5,
+          "enter_tag": "145 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0.0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "buy",
+              "created_at": "2025-01-19T22:50:00+00:00",
+              "filled_at": "2025-01-19T22:50:00+00:00",
+              "amount": 10073.5,
+              "filled": 10073.5,
+              "price": 0.9927,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "145 "
+            },
+            {
+              "id": 2,
+              "order_id": "2",
+              "side": "sell",
+              "created_at": "2025-01-20T06:45:00+00:00",
+              "filled_at": "2025-01-20T06:45:00+00:00",
+              "amount": 10073.5,
+              "filled": 10073.5,
+              "price": 1.036,
+              "status": "closed",
+              "funding_fee": 0.0,
+              "tag": "exit_long_tc_d_4_1 ( 145 )"
+            }
+          ]
+        },
+        "trade_after": {
+          "id": 1,
+          "pair": "ADA/USDT",
+          "open_date": "2025-01-19T22:50:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10073.5,
+          "enter_tag": "145 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0.0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "buy",
+              "created_at": "2025-01-19T22:50:00+00:00",
+              "filled_at": "2025-01-19T22:50:00+00:00",
+              "amount": 10073.5,
+              "filled": 10073.5,
+              "price": 0.9927,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "145 "
+            },
+            {
+              "id": 2,
+              "order_id": "2",
+              "side": "sell",
+              "created_at": "2025-01-20T06:45:00+00:00",
+              "filled_at": "2025-01-20T06:45:00+00:00",
+              "amount": 10073.5,
+              "filled": 10073.5,
+              "price": 1.036,
+              "status": "closed",
+              "funding_fee": 0.0,
+              "tag": "exit_long_tc_d_4_1 ( 145 )"
+            }
+          ]
+        }
+      },
+      "old_final_cache_reproduced_by_clean_baseline": {
+        "rate": 1.0423,
+        "profit": 0.04571771273385623,
+        "sell_reason": "exit_profit_long_tc_max",
+        "time_profit_reached": "2025-01-20T18:55:00+00:00"
+      },
+      "old_final_cache_peak_is_future_to_first_slice_callback": true,
+      "diagnostic_alert_reproduced_after_isolation": false,
+      "not_proven": [
+        "Exact old cache bytes at each historical callback were not captured",
+        "Normal backtest/live path global absence of future-data use",
+        "Other pairs/timeframes/exits/DCA and unseen periods"
+      ],
+      "attribution": "CONSISTENT_WITH_SAME_ORCHESTRATION_MECHANISM_BUT_HISTORICAL_FIRST_DIVERGENCE_BLOCKED: all logged checked-trade identities and final cache agree; old slice exit/order bytes absent",
+      "historical_spot_first_divergence_resolved": false
+    },
+    {
+      "id": "spot_1",
+      "market": "spot",
+      "target": {
+        "pair": "ADA/USDT",
+        "open_date": "2025-01-20T17:40:00+00:00",
+        "baseline_close_date": "2025-01-20T21:50:00+00:00"
+      },
+      "old_alert": {
+        "id": "spot_1",
+        "market": "spot",
+        "pair": "ADA/USDT",
+        "open_date": "2025-01-20 17:40:00+00:00",
+        "baseline_close_date": "2025-01-20 21:50:00+00:00",
+        "slice_close_date": null,
+        "slice_exit_reason": null,
+        "status": "blocked_old_spot_slices_not_exported",
+        "missing_evidence": [
+          "old spot per-slice trade output",
+          "pre-phase cache state",
+          "first-divergence callback trace"
+        ],
+        "interpretation": "same source lifecycle mechanism applies, but old spot alert attribution remains unproven"
+      },
+      "clean_exit_slice_phase": 4,
+      "clean_trade_exactly_matches_new_baseline_trade": true,
+      "clean_trade": {
+        "pair": "ADA/USDT",
+        "stake_amount": 9999.96186,
+        "max_stake_amount": 9999.96186,
+        "amount": 10058.3,
+        "open_date": "2025-01-20T17:40:00.000Z",
+        "close_date": "2025-01-20T21:50:00.000Z",
+        "open_rate": 0.9942,
+        "close_rate": 1.017,
+        "fee_open": 0.0013,
+        "fee_close": 0.0013,
+        "trade_duration": 250,
+        "profit_ratio": 0.0202768387,
+        "profit_abs": 203.03121115,
+        "exit_reason": "exit_profit_long_tc_t_2_1_m ( 142 )",
+        "initial_stop_loss_abs": 0.01,
+        "initial_stop_loss_ratio": -0.99,
+        "stop_loss_abs": 0.01,
+        "stop_loss_ratio": -0.99,
+        "min_rate": 0.97,
+        "max_rate": 1.0446,
+        "is_open": false,
+        "enter_tag": "142 ",
+        "leverage": 1.0,
+        "is_short": false,
+        "open_timestamp": 1737394800000,
+        "close_timestamp": 1737409800000,
+        "orders": [
+          {
+            "amount": 10058.3,
+            "safe_price": 0.9942,
+            "ft_order_side": "buy",
+            "order_filled_timestamp": 1737394800000,
+            "ft_is_entry": true,
+            "ft_order_tag": "142 ",
+            "cost": 10012.961810418
+          },
+          {
+            "amount": 10058.3,
+            "safe_price": 1.017,
+            "ft_order_side": "sell",
+            "order_filled_timestamp": 1737409800000,
+            "ft_is_entry": false,
+            "ft_order_tag": "exit_profit_long_tc_t_2_1_m ( 142 )",
+            "cost": 10242.58917843
+          }
+        ],
+        "funding_fees": 0.0
+      },
+      "clean_callback_trace_exactly_matches_baseline": true,
+      "compared_callback_events_per_phase": 53,
+      "first_clean_custom_exit": {
+        "sequence": 798,
+        "phase": 4,
+        "event": "custom_exit",
+        "time": "2025-01-20T17:40:00+00:00",
+        "current_rate": 0.9942,
+        "current_profit": -0.00259662,
+        "cache_before": {
+          "rate": 1.036,
+          "profit": 0.04096171048655172,
+          "sell_reason": "exit_long_tc_d_4_1",
+          "time_profit_reached": "2025-01-20T06:45:00+00:00"
+        },
+        "cache_after": {
+          "rate": 1.036,
+          "profit": 0.04096171048655172,
+          "sell_reason": "exit_long_tc_d_4_1",
+          "time_profit_reached": "2025-01-20T06:45:00+00:00"
+        },
+        "cache_from_future": false,
+        "result": null,
+        "trade": {
+          "id": 2,
+          "pair": "ADA/USDT",
+          "open_date": "2025-01-20T17:40:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10058.3,
+          "enter_tag": "142 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0.0,
+          "orders": [
+            {
+              "id": 3,
+              "order_id": "3",
+              "side": "buy",
+              "created_at": "2025-01-20T17:40:00+00:00",
+              "filled_at": "2025-01-20T17:40:00+00:00",
+              "amount": 10058.3,
+              "filled": 10058.3,
+              "price": 0.9942,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "142 "
+            }
+          ]
+        }
+      },
+      "closing_callback": {
+        "sequence": 849,
+        "phase": 4,
+        "event": "order_filled",
+        "time": "2025-01-20T21:50:00+00:00",
+        "order_id": 4,
+        "recognized_as_backtest": false,
+        "cache_before": {
+          "rate": 1.0423,
+          "profit": 0.04571771273385623,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-01-20T18:55:00+00:00"
+        },
+        "cache_after": {
+          "rate": 1.0423,
+          "profit": 0.04571771273385623,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-01-20T18:55:00+00:00"
+        },
+        "trade_before": {
+          "id": 2,
+          "pair": "ADA/USDT",
+          "open_date": "2025-01-20T17:40:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10058.3,
+          "enter_tag": "142 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0.0,
+          "orders": [
+            {
+              "id": 3,
+              "order_id": "3",
+              "side": "buy",
+              "created_at": "2025-01-20T17:40:00+00:00",
+              "filled_at": "2025-01-20T17:40:00+00:00",
+              "amount": 10058.3,
+              "filled": 10058.3,
+              "price": 0.9942,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "142 "
+            },
+            {
+              "id": 4,
+              "order_id": "4",
+              "side": "sell",
+              "created_at": "2025-01-20T21:50:00+00:00",
+              "filled_at": "2025-01-20T21:50:00+00:00",
+              "amount": 10058.3,
+              "filled": 10058.3,
+              "price": 1.017,
+              "status": "closed",
+              "funding_fee": 0.0,
+              "tag": "exit_profit_long_tc_t_2_1_m ( 142 )"
+            }
+          ]
+        },
+        "trade_after": {
+          "id": 2,
+          "pair": "ADA/USDT",
+          "open_date": "2025-01-20T17:40:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10058.3,
+          "enter_tag": "142 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0.0,
+          "orders": [
+            {
+              "id": 3,
+              "order_id": "3",
+              "side": "buy",
+              "created_at": "2025-01-20T17:40:00+00:00",
+              "filled_at": "2025-01-20T17:40:00+00:00",
+              "amount": 10058.3,
+              "filled": 10058.3,
+              "price": 0.9942,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "142 "
+            },
+            {
+              "id": 4,
+              "order_id": "4",
+              "side": "sell",
+              "created_at": "2025-01-20T21:50:00+00:00",
+              "filled_at": "2025-01-20T21:50:00+00:00",
+              "amount": 10058.3,
+              "filled": 10058.3,
+              "price": 1.017,
+              "status": "closed",
+              "funding_fee": 0.0,
+              "tag": "exit_profit_long_tc_t_2_1_m ( 142 )"
+            }
+          ]
+        }
+      },
+      "old_final_cache_reproduced_by_clean_baseline": {
+        "rate": 1.0423,
+        "profit": 0.04571771273385623,
+        "sell_reason": "exit_profit_long_tc_max",
+        "time_profit_reached": "2025-01-20T18:55:00+00:00"
+      },
+      "old_final_cache_peak_is_future_to_first_slice_callback": true,
+      "diagnostic_alert_reproduced_after_isolation": false,
+      "not_proven": [
+        "Exact old cache bytes at each historical callback were not captured",
+        "Normal backtest/live path global absence of future-data use",
+        "Other pairs/timeframes/exits/DCA and unseen periods"
+      ],
+      "attribution": "CONSISTENT_WITH_SAME_ORCHESTRATION_MECHANISM_BUT_HISTORICAL_FIRST_DIVERGENCE_BLOCKED: all logged checked-trade identities and final cache agree; old slice exit/order bytes absent",
+      "historical_spot_first_divergence_resolved": false
+    },
+    {
+      "id": "spot_4",
+      "market": "spot",
+      "target": {
+        "pair": "ETH/USDT",
+        "open_date": "2025-02-28T02:35:00+00:00",
+        "baseline_close_date": "2025-03-01T06:30:00+00:00"
+      },
+      "old_alert": {
+        "id": "spot_4",
+        "market": "spot",
+        "pair": "ETH/USDT",
+        "open_date": "2025-02-28 02:35:00+00:00",
+        "baseline_close_date": "2025-03-01 06:30:00+00:00",
+        "slice_close_date": null,
+        "slice_exit_reason": null,
+        "status": "blocked_old_spot_slices_not_exported",
+        "missing_evidence": [
+          "old spot per-slice trade output",
+          "pre-phase cache state",
+          "first-divergence callback trace"
+        ],
+        "interpretation": "same source lifecycle mechanism applies, but old spot alert attribution remains unproven"
+      },
+      "clean_exit_slice_phase": 10,
+      "clean_trade_exactly_matches_new_baseline_trade": true,
+      "clean_trade": {
+        "pair": "ETH/USDT",
+        "stake_amount": 9999.924449,
+        "max_stake_amount": 9999.924449,
+        "amount": 4.6429,
+        "open_date": "2025-02-28T02:35:00.000Z",
+        "close_date": "2025-03-01T06:30:00.000Z",
+        "open_rate": 2153.81,
+        "close_rate": 2238.19,
+        "fee_open": 0.0013,
+        "fee_close": 0.0013,
+        "trade_duration": 1675,
+        "profit_ratio": 0.0364787336,
+        "profit_abs": 365.25880016,
+        "exit_reason": "exit_long_tc_o_3 ( 145 )",
+        "initial_stop_loss_abs": 21.54,
+        "initial_stop_loss_ratio": -0.99,
+        "stop_loss_abs": 21.54,
+        "stop_loss_ratio": -0.99,
+        "min_rate": 2076.26,
+        "max_rate": 2281.14,
+        "is_open": false,
+        "enter_tag": "145 ",
+        "leverage": 1.0,
+        "is_short": false,
+        "open_timestamp": 1740710100000,
+        "close_timestamp": 1740810600000,
+        "orders": [
+          {
+            "amount": 4.6429,
+            "safe_price": 2153.81,
+            "ft_order_side": "buy",
+            "order_filled_timestamp": 1740710100000,
+            "ft_is_entry": true,
+            "ft_order_tag": "145 ",
+            "cost": 10012.9243507837
+          },
+          {
+            "amount": 4.6429,
+            "safe_price": 2238.19,
+            "ft_order_side": "sell",
+            "order_filled_timestamp": 1740810600000,
+            "ft_is_entry": false,
+            "ft_order_tag": "exit_long_tc_o_3 ( 145 )",
+            "cost": 10405.2015510563
+          }
+        ],
+        "funding_fees": 0.0
+      },
+      "clean_callback_trace_exactly_matches_baseline": true,
+      "compared_callback_events_per_phase": 338,
+      "first_clean_custom_exit": {
+        "sequence": 1465,
+        "phase": 10,
+        "event": "custom_exit",
+        "time": "2025-02-28T02:35:00+00:00",
+        "current_rate": 2153.81,
+        "current_profit": -0.00259662,
+        "cache_before": null,
+        "cache_after": null,
+        "cache_from_future": false,
+        "result": null,
+        "trade": {
+          "id": 1,
+          "pair": "ETH/USDT",
+          "open_date": "2025-02-28T02:35:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 4.6429,
+          "enter_tag": "145 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0.0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "buy",
+              "created_at": "2025-02-28T02:35:00+00:00",
+              "filled_at": "2025-02-28T02:35:00+00:00",
+              "amount": 4.6429,
+              "filled": 4.6429,
+              "price": 2153.81,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "145 "
+            }
+          ]
+        }
+      },
+      "closing_callback": {
+        "sequence": 1801,
+        "phase": 10,
+        "event": "order_filled",
+        "time": "2025-03-01T06:30:00+00:00",
+        "order_id": 2,
+        "recognized_as_backtest": false,
+        "cache_before": {
+          "rate": 2278.9,
+          "profit": 0.0554029728713305,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-03-01T04:45:00+00:00"
+        },
+        "cache_after": {
+          "rate": 2278.9,
+          "profit": 0.0554029728713305,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-03-01T04:45:00+00:00"
+        },
+        "trade_before": {
+          "id": 1,
+          "pair": "ETH/USDT",
+          "open_date": "2025-02-28T02:35:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 4.6429,
+          "enter_tag": "145 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0.0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "buy",
+              "created_at": "2025-02-28T02:35:00+00:00",
+              "filled_at": "2025-02-28T02:35:00+00:00",
+              "amount": 4.6429,
+              "filled": 4.6429,
+              "price": 2153.81,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "145 "
+            },
+            {
+              "id": 2,
+              "order_id": "2",
+              "side": "sell",
+              "created_at": "2025-03-01T06:30:00+00:00",
+              "filled_at": "2025-03-01T06:30:00+00:00",
+              "amount": 4.6429,
+              "filled": 4.6429,
+              "price": 2238.19,
+              "status": "closed",
+              "funding_fee": 0.0,
+              "tag": "exit_long_tc_o_3 ( 145 )"
+            }
+          ]
+        },
+        "trade_after": {
+          "id": 1,
+          "pair": "ETH/USDT",
+          "open_date": "2025-02-28T02:35:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 4.6429,
+          "enter_tag": "145 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0.0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "buy",
+              "created_at": "2025-02-28T02:35:00+00:00",
+              "filled_at": "2025-02-28T02:35:00+00:00",
+              "amount": 4.6429,
+              "filled": 4.6429,
+              "price": 2153.81,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "145 "
+            },
+            {
+              "id": 2,
+              "order_id": "2",
+              "side": "sell",
+              "created_at": "2025-03-01T06:30:00+00:00",
+              "filled_at": "2025-03-01T06:30:00+00:00",
+              "amount": 4.6429,
+              "filled": 4.6429,
+              "price": 2238.19,
+              "status": "closed",
+              "funding_fee": 0.0,
+              "tag": "exit_long_tc_o_3 ( 145 )"
+            }
+          ]
+        }
+      },
+      "old_final_cache_reproduced_by_clean_baseline": {
+        "rate": 2278.9,
+        "profit": 0.0554029728713305,
+        "sell_reason": "exit_profit_long_tc_max",
+        "time_profit_reached": "2025-03-01T04:45:00+00:00"
+      },
+      "old_final_cache_peak_is_future_to_first_slice_callback": true,
+      "diagnostic_alert_reproduced_after_isolation": false,
+      "not_proven": [
+        "Exact old cache bytes at each historical callback were not captured",
+        "Normal backtest/live path global absence of future-data use",
+        "Other pairs/timeframes/exits/DCA and unseen periods"
+      ],
+      "attribution": "CONSISTENT_WITH_SAME_ORCHESTRATION_MECHANISM_BUT_HISTORICAL_FIRST_DIVERGENCE_BLOCKED: all logged checked-trade identities and final cache agree; old slice exit/order bytes absent",
+      "historical_spot_first_divergence_resolved": false
+    },
+    {
+      "id": "futures_0",
+      "market": "futures",
+      "target": {
+        "pair": "ADA/USDT:USDT",
+        "open_date": "2025-01-19T22:50:00+00:00",
+        "baseline_close_date": "2025-01-20T03:05:00+00:00"
+      },
+      "old_alert": {
+        "id": "futures_0",
+        "market": "futures",
+        "pair": "ADA/USDT:USDT",
+        "open_date": "2025-01-19T22:50:00.000Z",
+        "baseline_close_date": "2025-01-20T03:05:00.000Z",
+        "baseline_exit_reason": "exit_profit_long_tc_t_0_1_m ( 145 )",
+        "slice_close_date": "2025-01-19T22:55:00.000Z",
+        "slice_exit_reason": "exit_profit_long_tc_t_1_1_m ( 145 )",
+        "baseline_order_count": 2,
+        "slice_order_count": 2,
+        "first_fill_identical": true,
+        "other_captured_baseline_positions_open_at_early_exit": [],
+        "overlap_scope": "saved 12 baseline trades only; not assertion of all internal state",
+        "status": "mechanism_identified_not_yet_attributed_by_controlled_replay",
+        "missing_evidence": [
+          "cache contents immediately before each old baseline/slice",
+          "callback inputs at first path divergence",
+          "clean phase-isolated replay"
+        ],
+        "interpretation": "persistent cache/time reversal fits the exit path; neither full causality pass nor normal-live future-data reading established"
+      },
+      "clean_exit_slice_phase": 2,
+      "clean_trade_exactly_matches_new_baseline_trade": true,
+      "clean_trade": {
+        "pair": "ADA/USDT:USDT",
+        "stake_amount": 9999.36,
+        "max_stake_amount": 9999.36,
+        "amount": 10080.0,
+        "open_date": "2025-01-19T22:50:00.000Z",
+        "close_date": "2025-01-20T03:05:00.000Z",
+        "open_rate": 0.992,
+        "close_rate": 0.9948,
+        "fee_open": 0.0008,
+        "fee_close": 0.0008,
+        "trade_duration": 255,
+        "profit_ratio": 0.0011193968,
+        "profit_abs": 11.2022064,
+        "exit_reason": "exit_profit_long_tc_t_0_1_m ( 145 )",
+        "initial_stop_loss_abs": 0.01,
+        "initial_stop_loss_ratio": -0.99,
+        "stop_loss_abs": 0.01,
+        "stop_loss_ratio": -0.99,
+        "min_rate": 0.9601,
+        "max_rate": 1.015,
+        "is_open": false,
+        "enter_tag": "145 ",
+        "leverage": 1.0,
+        "is_short": false,
+        "open_timestamp": 1737327000000,
+        "close_timestamp": 1737342300000,
+        "orders": [
+          {
+            "amount": 10080.0,
+            "safe_price": 0.992,
+            "ft_order_side": "buy",
+            "order_filled_timestamp": 1737327000000,
+            "ft_is_entry": true,
+            "ft_order_tag": "145 ",
+            "cost": 10007.359488
+          },
+          {
+            "amount": 10080.0,
+            "safe_price": 0.9948,
+            "ft_order_side": "sell",
+            "order_filled_timestamp": 1737342300000,
+            "ft_is_entry": false,
+            "ft_order_tag": "exit_profit_long_tc_t_0_1_m ( 145 )",
+            "cost": 10035.6060672
+          }
+        ],
+        "funding_fees": -1.0002384
+      },
+      "clean_callback_trace_exactly_matches_baseline": true,
+      "compared_callback_events_per_phase": 54,
+      "first_clean_custom_exit": {
+        "sequence": 1657,
+        "phase": 2,
+        "event": "custom_exit",
+        "time": "2025-01-19T22:50:00+00:00",
+        "current_rate": 0.992,
+        "current_profit": -0.00159872,
+        "cache_before": null,
+        "cache_after": null,
+        "cache_from_future": false,
+        "result": null,
+        "trade": {
+          "id": 1,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-01-19T22:50:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10080.0,
+          "enter_tag": "145 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "buy",
+              "created_at": "2025-01-19T22:50:00+00:00",
+              "filled_at": "2025-01-19T22:50:00+00:00",
+              "amount": 10080.0,
+              "filled": 10080.0,
+              "price": 0.992,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "145 "
+            }
+          ]
+        }
+      },
+      "closing_callback": {
+        "sequence": 1709,
+        "phase": 2,
+        "event": "order_filled",
+        "time": "2025-01-20T03:05:00+00:00",
+        "order_id": 2,
+        "recognized_as_backtest": false,
+        "cache_before": {
+          "rate": 1.0148,
+          "profit": 0.02136548387096768,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-01-19T23:00:00+00:00"
+        },
+        "cache_after": {
+          "rate": 1.0148,
+          "profit": 0.02136548387096768,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-01-19T23:00:00+00:00"
+        },
+        "trade_before": {
+          "id": 1,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-01-19T22:50:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10080.0,
+          "enter_tag": "145 ",
+          "funding_fees": -1.0002384,
+          "funding_fee_running": 0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "buy",
+              "created_at": "2025-01-19T22:50:00+00:00",
+              "filled_at": "2025-01-19T22:50:00+00:00",
+              "amount": 10080.0,
+              "filled": 10080.0,
+              "price": 0.992,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "145 "
+            },
+            {
+              "id": 2,
+              "order_id": "2",
+              "side": "sell",
+              "created_at": "2025-01-20T03:05:00+00:00",
+              "filled_at": "2025-01-20T03:05:00+00:00",
+              "amount": 10080.0,
+              "filled": 10080.0,
+              "price": 0.9948,
+              "status": "closed",
+              "funding_fee": -1.0002384,
+              "tag": "exit_profit_long_tc_t_0_1_m ( 145 )"
+            }
+          ]
+        },
+        "trade_after": {
+          "id": 1,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-01-19T22:50:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10080.0,
+          "enter_tag": "145 ",
+          "funding_fees": -1.0002384,
+          "funding_fee_running": 0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "buy",
+              "created_at": "2025-01-19T22:50:00+00:00",
+              "filled_at": "2025-01-19T22:50:00+00:00",
+              "amount": 10080.0,
+              "filled": 10080.0,
+              "price": 0.992,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "145 "
+            },
+            {
+              "id": 2,
+              "order_id": "2",
+              "side": "sell",
+              "created_at": "2025-01-20T03:05:00+00:00",
+              "filled_at": "2025-01-20T03:05:00+00:00",
+              "amount": 10080.0,
+              "filled": 10080.0,
+              "price": 0.9948,
+              "status": "closed",
+              "funding_fee": -1.0002384,
+              "tag": "exit_profit_long_tc_t_0_1_m ( 145 )"
+            }
+          ]
+        }
+      },
+      "old_final_cache_reproduced_by_clean_baseline": {
+        "rate": 1.0421,
+        "profit": 0.04717334943639292,
+        "sell_reason": "exit_profit_long_tc_max",
+        "time_profit_reached": "2025-01-20T18:55:00+00:00"
+      },
+      "old_final_cache_peak_is_future_to_first_slice_callback": true,
+      "diagnostic_alert_reproduced_after_isolation": false,
+      "not_proven": [
+        "Exact old cache bytes at each historical callback were not captured",
+        "Normal backtest/live path global absence of future-data use",
+        "Other pairs/timeframes/exits/DCA and unseen periods"
+      ],
+      "clean_callback_at_old_early_exit": {
+        "sequence": 1658,
+        "phase": 2,
+        "event": "custom_exit",
+        "time": "2025-01-19T22:55:00+00:00",
+        "current_rate": 1.0056,
+        "current_profit": 0.01208904,
+        "cache_before": null,
+        "cache_after": {
+          "rate": 1.0056,
+          "profit": 0.012098709677419328,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-01-19T22:55:00+00:00"
+        },
+        "cache_from_future": false,
+        "result": null,
+        "trade": {
+          "id": 1,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-01-19T22:50:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10080.0,
+          "enter_tag": "145 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "buy",
+              "created_at": "2025-01-19T22:50:00+00:00",
+              "filled_at": "2025-01-19T22:50:00+00:00",
+              "amount": 10080.0,
+              "filled": 10080.0,
+              "price": 0.992,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "145 "
+            }
+          ]
+        }
+      },
+      "attribution": "SUPPORTED_ORCHESTRATION_CACHE_LIFECYCLE: exact full-baseline parity, old final cache regenerated, source-method future-peak counterexample matches old early exit, clean same-time callback returns no exit, complete clean target trace agrees with baseline"
+    },
+    {
+      "id": "futures_1",
+      "market": "futures",
+      "target": {
+        "pair": "ADA/USDT:USDT",
+        "open_date": "2025-01-20T17:40:00+00:00",
+        "baseline_close_date": "2025-01-20T21:50:00+00:00"
+      },
+      "old_alert": {
+        "id": "futures_1",
+        "market": "futures",
+        "pair": "ADA/USDT:USDT",
+        "open_date": "2025-01-20T17:40:00.000Z",
+        "baseline_close_date": "2025-01-20T21:50:00.000Z",
+        "baseline_exit_reason": "exit_profit_long_tc_t_2_1_m ( 142 )",
+        "slice_close_date": "2025-01-20T17:50:00.000Z",
+        "slice_exit_reason": "exit_profit_long_tc_t_0_1_m ( 142 )",
+        "baseline_order_count": 2,
+        "slice_order_count": 2,
+        "first_fill_identical": true,
+        "other_captured_baseline_positions_open_at_early_exit": [],
+        "overlap_scope": "saved 12 baseline trades only; not assertion of all internal state",
+        "status": "mechanism_identified_not_yet_attributed_by_controlled_replay",
+        "missing_evidence": [
+          "cache contents immediately before each old baseline/slice",
+          "callback inputs at first path divergence",
+          "clean phase-isolated replay"
+        ],
+        "interpretation": "persistent cache/time reversal fits the exit path; neither full causality pass nor normal-live future-data reading established"
+      },
+      "clean_exit_slice_phase": 4,
+      "clean_trade_exactly_matches_new_baseline_trade": true,
+      "clean_trade": {
+        "pair": "ADA/USDT:USDT",
+        "stake_amount": 9999.5904,
+        "max_stake_amount": 9999.5904,
+        "amount": 10064.0,
+        "open_date": "2025-01-20T17:40:00.000Z",
+        "close_date": "2025-01-20T21:50:00.000Z",
+        "open_rate": 0.9936,
+        "close_rate": 1.0169,
+        "fee_open": 0.0008,
+        "fee_close": 0.0008,
+        "trade_duration": 250,
+        "profit_ratio": 0.0218138694,
+        "profit_abs": 218.3042624,
+        "exit_reason": "exit_profit_long_tc_t_2_1_m ( 142 )",
+        "initial_stop_loss_abs": 0.01,
+        "initial_stop_loss_ratio": -0.99,
+        "stop_loss_abs": 0.01,
+        "stop_loss_ratio": -0.99,
+        "min_rate": 0.9769,
+        "max_rate": 1.0447,
+        "is_open": false,
+        "enter_tag": "142 ",
+        "leverage": 1.0,
+        "is_short": false,
+        "open_timestamp": 1737394800000,
+        "close_timestamp": 1737409800000,
+        "orders": [
+          {
+            "amount": 10064.0,
+            "safe_price": 0.9936,
+            "ft_order_side": "buy",
+            "order_filled_timestamp": 1737394800000,
+            "ft_is_entry": true,
+            "ft_order_tag": "142 ",
+            "cost": 10007.59007232
+          },
+          {
+            "amount": 10064.0,
+            "safe_price": 1.0169,
+            "ft_order_side": "sell",
+            "order_filled_timestamp": 1737409800000,
+            "ft_is_entry": false,
+            "ft_order_tag": "exit_profit_long_tc_t_2_1_m ( 142 )",
+            "cost": 10242.26886528
+          }
+        ],
+        "funding_fees": 0.0
+      },
+      "clean_callback_trace_exactly_matches_baseline": true,
+      "compared_callback_events_per_phase": 53,
+      "first_clean_custom_exit": {
+        "sequence": 1825,
+        "phase": 4,
+        "event": "custom_exit",
+        "time": "2025-01-20T17:40:00+00:00",
+        "current_rate": 0.9936,
+        "current_profit": -0.00159872,
+        "cache_before": {
+          "rate": 1.0148,
+          "profit": 0.02136548387096768,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-01-19T23:00:00+00:00"
+        },
+        "cache_after": {
+          "rate": 1.0148,
+          "profit": 0.02136548387096768,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-01-19T23:00:00+00:00"
+        },
+        "cache_from_future": false,
+        "result": null,
+        "trade": {
+          "id": 2,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-01-20T17:40:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10064.0,
+          "enter_tag": "142 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0,
+          "orders": [
+            {
+              "id": 3,
+              "order_id": "3",
+              "side": "buy",
+              "created_at": "2025-01-20T17:40:00+00:00",
+              "filled_at": "2025-01-20T17:40:00+00:00",
+              "amount": 10064.0,
+              "filled": 10064.0,
+              "price": 0.9936,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "142 "
+            }
+          ]
+        }
+      },
+      "closing_callback": {
+        "sequence": 1876,
+        "phase": 4,
+        "event": "order_filled",
+        "time": "2025-01-20T21:50:00+00:00",
+        "order_id": 4,
+        "recognized_as_backtest": false,
+        "cache_before": {
+          "rate": 1.0421,
+          "profit": 0.04717334943639292,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-01-20T18:55:00+00:00"
+        },
+        "cache_after": {
+          "rate": 1.0421,
+          "profit": 0.04717334943639292,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-01-20T18:55:00+00:00"
+        },
+        "trade_before": {
+          "id": 2,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-01-20T17:40:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10064.0,
+          "enter_tag": "142 ",
+          "funding_fees": 0,
+          "funding_fee_running": 0,
+          "orders": [
+            {
+              "id": 3,
+              "order_id": "3",
+              "side": "buy",
+              "created_at": "2025-01-20T17:40:00+00:00",
+              "filled_at": "2025-01-20T17:40:00+00:00",
+              "amount": 10064.0,
+              "filled": 10064.0,
+              "price": 0.9936,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "142 "
+            },
+            {
+              "id": 4,
+              "order_id": "4",
+              "side": "sell",
+              "created_at": "2025-01-20T21:50:00+00:00",
+              "filled_at": "2025-01-20T21:50:00+00:00",
+              "amount": 10064.0,
+              "filled": 10064.0,
+              "price": 1.0169,
+              "status": "closed",
+              "funding_fee": 0,
+              "tag": "exit_profit_long_tc_t_2_1_m ( 142 )"
+            }
+          ]
+        },
+        "trade_after": {
+          "id": 2,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-01-20T17:40:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10064.0,
+          "enter_tag": "142 ",
+          "funding_fees": 0,
+          "funding_fee_running": 0,
+          "orders": [
+            {
+              "id": 3,
+              "order_id": "3",
+              "side": "buy",
+              "created_at": "2025-01-20T17:40:00+00:00",
+              "filled_at": "2025-01-20T17:40:00+00:00",
+              "amount": 10064.0,
+              "filled": 10064.0,
+              "price": 0.9936,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "142 "
+            },
+            {
+              "id": 4,
+              "order_id": "4",
+              "side": "sell",
+              "created_at": "2025-01-20T21:50:00+00:00",
+              "filled_at": "2025-01-20T21:50:00+00:00",
+              "amount": 10064.0,
+              "filled": 10064.0,
+              "price": 1.0169,
+              "status": "closed",
+              "funding_fee": 0,
+              "tag": "exit_profit_long_tc_t_2_1_m ( 142 )"
+            }
+          ]
+        }
+      },
+      "old_final_cache_reproduced_by_clean_baseline": {
+        "rate": 1.0421,
+        "profit": 0.04717334943639292,
+        "sell_reason": "exit_profit_long_tc_max",
+        "time_profit_reached": "2025-01-20T18:55:00+00:00"
+      },
+      "old_final_cache_peak_is_future_to_first_slice_callback": true,
+      "diagnostic_alert_reproduced_after_isolation": false,
+      "not_proven": [
+        "Exact old cache bytes at each historical callback were not captured",
+        "Normal backtest/live path global absence of future-data use",
+        "Other pairs/timeframes/exits/DCA and unseen periods"
+      ],
+      "clean_callback_at_old_early_exit": {
+        "sequence": 1827,
+        "phase": 4,
+        "event": "custom_exit",
+        "time": "2025-01-20T17:50:00+00:00",
+        "current_rate": 1.0019,
+        "current_profit": 0.00674139,
+        "cache_before": {
+          "rate": 1.0148,
+          "profit": 0.02136548387096768,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-01-19T23:00:00+00:00"
+        },
+        "cache_after": {
+          "rate": 1.0148,
+          "profit": 0.02136548387096768,
+          "sell_reason": "exit_profit_long_tc_max",
+          "time_profit_reached": "2025-01-19T23:00:00+00:00"
+        },
+        "cache_from_future": false,
+        "result": null,
+        "trade": {
+          "id": 2,
+          "pair": "ADA/USDT:USDT",
+          "open_date": "2025-01-20T17:40:00+00:00",
+          "is_open": true,
+          "is_short": false,
+          "amount": 10064.0,
+          "enter_tag": "142 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0,
+          "orders": [
+            {
+              "id": 3,
+              "order_id": "3",
+              "side": "buy",
+              "created_at": "2025-01-20T17:40:00+00:00",
+              "filled_at": "2025-01-20T17:40:00+00:00",
+              "amount": 10064.0,
+              "filled": 10064.0,
+              "price": 0.9936,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "142 "
+            }
+          ]
+        }
+      },
+      "attribution": "SUPPORTED_ORCHESTRATION_CACHE_LIFECYCLE: exact full-baseline parity, old final cache regenerated, source-method future-peak counterexample matches old early exit, clean same-time callback returns no exit, complete clean target trace agrees with baseline"
+    },
+    {
+      "id": "futures_2",
+      "market": "futures",
+      "target": {
+        "pair": "ETH/USDT:USDT",
+        "open_date": "2025-01-27T16:40:00+00:00",
+        "baseline_close_date": "2025-02-02T00:45:00+00:00"
+      },
+      "old_alert": {
+        "id": "futures_2",
+        "market": "futures",
+        "pair": "ETH/USDT:USDT",
+        "open_date": "2025-01-27T16:40:00.000Z",
+        "baseline_close_date": "2025-02-02T00:45:00.000Z",
+        "baseline_exit_reason": "exit_profit_short_rebuy_t_3_1_m ( 562 )",
+        "slice_close_date": "2025-01-27T16:55:00.000Z",
+        "slice_exit_reason": "exit_profit_short_rebuy_t_0_1_m ( 562 )",
+        "baseline_order_count": 3,
+        "slice_order_count": 2,
+        "first_fill_identical": true,
+        "other_captured_baseline_positions_open_at_early_exit": [],
+        "overlap_scope": "saved 12 baseline trades only; not assertion of all internal state",
+        "status": "mechanism_identified_not_yet_attributed_by_controlled_replay",
+        "missing_evidence": [
+          "cache contents immediately before each old baseline/slice",
+          "callback inputs at first path divergence",
+          "clean phase-isolated replay"
+        ],
+        "interpretation": "persistent cache/time reversal fits the exit path; neither full causality pass nor normal-live future-data reading established"
+      },
+      "clean_exit_slice_phase": 6,
+      "clean_trade_exactly_matches_new_baseline_trade": true,
+      "clean_trade": {
+        "pair": "ETH/USDT:USDT",
+        "stake_amount": 4996.1554,
+        "max_stake_amount": 4996.1554,
+        "amount": 1.556,
+        "open_date": "2025-01-27T16:40:00.000Z",
+        "close_date": "2025-02-02T00:45:00.000Z",
+        "open_rate": 3210.9,
+        "close_rate": 3153.08,
+        "fee_open": 0.0008,
+        "fee_close": 0.0008,
+        "trade_duration": 7685,
+        "profit_ratio": 0.0172594861,
+        "profit_abs": 86.16208971,
+        "exit_reason": "exit_profit_short_rebuy_t_3_1_m ( 562 )",
+        "initial_stop_loss_abs": 6141.33,
+        "initial_stop_loss_ratio": -0.99,
+        "stop_loss_abs": 6141.33,
+        "stop_loss_ratio": -0.99,
+        "min_rate": 3038.0,
+        "max_rate": 3436.39,
+        "is_open": false,
+        "enter_tag": "562 ",
+        "leverage": 1.0,
+        "is_short": true,
+        "open_timestamp": 1737996000000,
+        "close_timestamp": 1738457100000,
+        "orders": [
+          {
+            "amount": 0.81,
+            "safe_price": 3086.1,
+            "ft_order_side": "sell",
+            "order_filled_timestamp": 1737996000000,
+            "ft_is_entry": true,
+            "ft_order_tag": "562 ",
+            "cost": 2501.7407928
+          },
+          {
+            "amount": 0.746,
+            "safe_price": 3346.4,
+            "ft_order_side": "sell",
+            "order_filled_timestamp": 1738327500000,
+            "ft_is_entry": true,
+            "ft_order_tag": "r",
+            "cost": 2498.41153152
+          },
+          {
+            "amount": 1.556,
+            "safe_price": 3153.08,
+            "ft_order_side": "buy",
+            "order_filled_timestamp": 1738457100000,
+            "ft_is_entry": false,
+            "ft_order_tag": "exit_profit_short_rebuy_t_3_1_m ( 562 )",
+            "cost": 4910.117433984
+          }
+        ],
+        "funding_fees": 4.1210480174
+      },
+      "clean_callback_trace_exactly_matches_baseline": true,
+      "compared_callback_events_per_phase": 1541,
+      "first_clean_custom_exit": {
+        "sequence": 1884,
+        "phase": 6,
+        "event": "custom_exit",
+        "time": "2025-01-27T16:40:00+00:00",
+        "current_rate": 3086.1,
+        "current_profit": -0.00160128,
+        "cache_before": null,
+        "cache_after": null,
+        "cache_from_future": false,
+        "result": null,
+        "trade": {
+          "id": 1,
+          "pair": "ETH/USDT:USDT",
+          "open_date": "2025-01-27T16:40:00+00:00",
+          "is_open": true,
+          "is_short": true,
+          "amount": 0.81,
+          "enter_tag": "562 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "sell",
+              "created_at": "2025-01-27T16:40:00+00:00",
+              "filled_at": "2025-01-27T16:40:00+00:00",
+              "amount": 0.81,
+              "filled": 0.81,
+              "price": 3086.1,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "562 "
+            }
+          ]
+        }
+      },
+      "closing_callback": {
+        "sequence": 3423,
+        "phase": 6,
+        "event": "order_filled",
+        "time": "2025-02-02T00:45:00+00:00",
+        "order_id": 3,
+        "recognized_as_backtest": false,
+        "cache_before": {
+          "rate": 3103.93,
+          "profit": 0.06493940948994312,
+          "sell_reason": "exit_profit_short_rebuy_max",
+          "time_profit_reached": "2025-02-01T23:25:00+00:00"
+        },
+        "cache_after": {
+          "rate": 3103.93,
+          "profit": 0.06493940948994312,
+          "sell_reason": "exit_profit_short_rebuy_max",
+          "time_profit_reached": "2025-02-01T23:25:00+00:00"
+        },
+        "trade_before": {
+          "id": 1,
+          "pair": "ETH/USDT:USDT",
+          "open_date": "2025-01-27T16:40:00+00:00",
+          "is_open": true,
+          "is_short": true,
+          "amount": 1.556,
+          "enter_tag": "562 ",
+          "funding_fees": 4.121048017373792,
+          "funding_fee_running": 0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "sell",
+              "created_at": "2025-01-27T16:40:00+00:00",
+              "filled_at": "2025-01-27T16:40:00+00:00",
+              "amount": 0.81,
+              "filled": 0.81,
+              "price": 3086.1,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "562 "
+            },
+            {
+              "id": 2,
+              "order_id": "2",
+              "side": "sell",
+              "created_at": "2025-01-31T12:45:00+00:00",
+              "filled_at": "2025-01-31T12:45:00+00:00",
+              "amount": 0.746,
+              "filled": 0.746,
+              "price": 3346.4,
+              "status": "closed",
+              "funding_fee": 2.108236694207516,
+              "tag": "r"
+            },
+            {
+              "id": 3,
+              "order_id": "3",
+              "side": "buy",
+              "created_at": "2025-02-02T00:45:00+00:00",
+              "filled_at": "2025-02-02T00:45:00+00:00",
+              "amount": 1.556,
+              "filled": 1.556,
+              "price": 3153.08,
+              "status": "closed",
+              "funding_fee": 2.012811323166276,
+              "tag": "exit_profit_short_rebuy_t_3_1_m ( 562 )"
+            }
+          ]
+        },
+        "trade_after": {
+          "id": 1,
+          "pair": "ETH/USDT:USDT",
+          "open_date": "2025-01-27T16:40:00+00:00",
+          "is_open": true,
+          "is_short": true,
+          "amount": 1.556,
+          "enter_tag": "562 ",
+          "funding_fees": 4.121048017373792,
+          "funding_fee_running": 0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "sell",
+              "created_at": "2025-01-27T16:40:00+00:00",
+              "filled_at": "2025-01-27T16:40:00+00:00",
+              "amount": 0.81,
+              "filled": 0.81,
+              "price": 3086.1,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "562 "
+            },
+            {
+              "id": 2,
+              "order_id": "2",
+              "side": "sell",
+              "created_at": "2025-01-31T12:45:00+00:00",
+              "filled_at": "2025-01-31T12:45:00+00:00",
+              "amount": 0.746,
+              "filled": 0.746,
+              "price": 3346.4,
+              "status": "closed",
+              "funding_fee": 2.108236694207516,
+              "tag": "r"
+            },
+            {
+              "id": 3,
+              "order_id": "3",
+              "side": "buy",
+              "created_at": "2025-02-02T00:45:00+00:00",
+              "filled_at": "2025-02-02T00:45:00+00:00",
+              "amount": 1.556,
+              "filled": 1.556,
+              "price": 3153.08,
+              "status": "closed",
+              "funding_fee": 2.012811323166276,
+              "tag": "exit_profit_short_rebuy_t_3_1_m ( 562 )"
+            }
+          ]
+        }
+      },
+      "old_final_cache_reproduced_by_clean_baseline": {
+        "rate": 3103.93,
+        "profit": 0.06493940948994312,
+        "sell_reason": "exit_profit_short_rebuy_max",
+        "time_profit_reached": "2025-02-01T23:25:00+00:00"
+      },
+      "old_final_cache_peak_is_future_to_first_slice_callback": true,
+      "diagnostic_alert_reproduced_after_isolation": false,
+      "not_proven": [
+        "Exact old cache bytes at each historical callback were not captured",
+        "Normal backtest/live path global absence of future-data use",
+        "Other pairs/timeframes/exits/DCA and unseen periods"
+      ],
+      "clean_callback_at_old_early_exit": {
+        "sequence": 1887,
+        "phase": 6,
+        "event": "custom_exit",
+        "time": "2025-01-27T16:55:00+00:00",
+        "current_rate": 3074.96,
+        "current_profit": 0.00201423,
+        "cache_before": null,
+        "cache_after": null,
+        "cache_from_future": false,
+        "result": null,
+        "trade": {
+          "id": 1,
+          "pair": "ETH/USDT:USDT",
+          "open_date": "2025-01-27T16:40:00+00:00",
+          "is_open": true,
+          "is_short": true,
+          "amount": 0.81,
+          "enter_tag": "562 ",
+          "funding_fees": 0.0,
+          "funding_fee_running": 0,
+          "orders": [
+            {
+              "id": 1,
+              "order_id": "1",
+              "side": "sell",
+              "created_at": "2025-01-27T16:40:00+00:00",
+              "filled_at": "2025-01-27T16:40:00+00:00",
+              "amount": 0.81,
+              "filled": 0.81,
+              "price": 3086.1,
+              "status": "closed",
+              "funding_fee": null,
+              "tag": "562 "
+            }
+          ]
+        }
+      },
+      "attribution": "SUPPORTED_ORCHESTRATION_CACHE_LIFECYCLE: exact full-baseline parity, old final cache regenerated, source-method future-peak counterexample matches old early exit, clean same-time callback returns no exit, complete clean target trace agrees with baseline"
+    }
+  ],
+  "decision": "The registered cache-isolated diagnostics remove the six historical exit alerts in the exercised sample. Evidence identifies an official utility orchestration/cache lifecycle mechanism; it does not certify normal-run global causality or strategy acceptance.",
+  "budget": {
+    "new_official_lookahead_commands_observed": 2,
+    "internal_backtests_observed": 48,
+    "additional_dirty_commands": 0,
+    "analysis_script_backtests": 0
+  },
+  "remaining_gates": [
+    "Normal-run callback causality not established by utility-mode diagnostic",
+    "Historical spot first-divergence reconstruction unavailable",
+    "Recursive fixed-checkpoint signals require separate result",
+    "Funding same-time sequencing/publication and certified 5m mark NAV remain blocked",
+    "No strategy/economic/live acceptance"
+  ],
+  "input_receipts": [
+    {
+      "path": "research/crypto/rd_program_20261105/p0/causality/diagnostic_manifest.json",
+      "sha256": "7bc3b689fefcf80a81ee017d94a2e70cfab2b4694fc88b81fac23d97e9e349b3"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p0/causality/saved_evidence.json",
+      "sha256": "be34c718929d979f72f1fcc02718f3c565828bc816c4daf4925424fb174899b9"
+    },
+    {
+      "path": "user_data/crypto_quant/nfi_x8_lookahead_inspect_20261105_v002/captured-slices.json",
+      "sha256": "b5aa572c42e7a48b6f05356e65e011bd1c4b90a458b53478ce3c9ff255de32d5"
+    },
+    {
+      "path": "user_data/crypto_quant/nfi_x8_lookahead_inspect_20261105_v002/nfix8-profit_max-cz-nfi-x8-v18-0-146-baseline-binance-USDT.json",
+      "sha256": "9e72a909d2709a92bfefef9aeedebd6da19ad695d481ad8e02aa06b46e9d03a8"
+    },
+    {
+      "path": "user_data/crypto_quant/nfi_x8_spot_lookahead_check_20261105_v001/lookahead.log",
+      "sha256": "26afd0fe86add4ac6d8f79b68367f2cae8cbb6f2d52448e7d8e3e42e0ce807ad"
+    },
+    {
+      "path": "user_data/crypto_quant/nfi_x8_spot_lookahead_check_20261105_v001/nfix8-profit_max-cz-nfi-x8-spot-36-paper-20261105-binance-USDT.json",
+      "sha256": "61a709365c341d2307b17208eeca7080bcfeacce126f57e15cbb0346affd02ab"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/callback-trace.jsonl",
+      "sha256": "07bfc120e086b0081e8bcf98b839bae6bbd13a5e41306a4ce795c5ac6b794cc4"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/execution.json",
+      "sha256": "dca267843f0483cd1a905354a67f0067b69297801a718d8c8ea5139d40d8d69e"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/lookahead-result.csv",
+      "sha256": "189a5b742d0af3daaa8e4b8a3695d7faf3cf79c0243a2bf8f01a62e4ed018bd1"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-000-baseline-trades.json",
+      "sha256": "7d003a4fb40c065dcf67eb1d6f1fa2eead95f8273916e09908341ec8f1959e75"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-001-entry-trades.json",
+      "sha256": "15d5ade1d459169992e4e4af6a5334af8749f2054013fa8ef9b3f44dce310030"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-002-exit-trades.json",
+      "sha256": "21282c121d9b190abde984aae6238e6968ac01bd1b310a33a2ddb18f74fcc8bf"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-003-entry-trades.json",
+      "sha256": "9905cb5d3da46aa55b003c07d10ccf817e0bf2efe9f330d903472edb9ba0d8ee"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-004-exit-trades.json",
+      "sha256": "c08be9d44938411299d11c35fb30137195ca6e03b7dec3222952f00981befa5b"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-005-entry-trades.json",
+      "sha256": "913e7590c6f19eb4ca74bbdf4ce3d8bff8a4d668128751657bd8d95efb64c74f"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-006-exit-trades.json",
+      "sha256": "0b10300539a0a8fc3224b9b689b43ab9b289840281cb24cf2571c998e004fa8a"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-007-entry-trades.json",
+      "sha256": "47e0ed994333184e1ad9d99fa8e1f87cca46ed32ea74cec8ba1c6f081a3a38da"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-008-exit-trades.json",
+      "sha256": "0a57a31f70ef8c6078df7089b07072971176ec70dcc6f7da804796b5d2ac4c20"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-009-entry-trades.json",
+      "sha256": "720a77b18c8430becd431a12d3f994887a09cbafb6530bc99db13abb9c0a8d3f"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-010-exit-trades.json",
+      "sha256": "720a77b18c8430becd431a12d3f994887a09cbafb6530bc99db13abb9c0a8d3f"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-011-entry-trades.json",
+      "sha256": "cf3bad745c7e200ee65a3b2f15ac3102de71e602d4a1695d9a1488ecad83bef1"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-012-exit-trades.json",
+      "sha256": "a097c2e80573f1e3900d00543cf824bee49802421edec5eef0be9a0142e6f68b"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-013-entry-trades.json",
+      "sha256": "736061bd18123c970e3bce33fe5fee3732b4c97b46cd197879ff4bbf1279f62f"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-014-exit-trades.json",
+      "sha256": "736061bd18123c970e3bce33fe5fee3732b4c97b46cd197879ff4bbf1279f62f"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-015-entry-trades.json",
+      "sha256": "5a0fe3b30bae49a29b7d47b55f9c06c2203b2a3f3e91ad21af40e5a33275ad6a"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-016-exit-trades.json",
+      "sha256": "43c6cb6180338d7c61a3edb9837e00a6ed8efd332350a77730092e9657ab214d"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-017-entry-trades.json",
+      "sha256": "b12b96b2dfb3f1b8700e670436d395ff88c37575c3dfc54232a5bd9510c422aa"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-018-exit-trades.json",
+      "sha256": "b12b96b2dfb3f1b8700e670436d395ff88c37575c3dfc54232a5bd9510c422aa"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-019-entry-trades.json",
+      "sha256": "7e0408d85b09c336780480dbf0f65b8bf7394fd58935a3630cd6b1b8969d7fee"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-020-exit-trades.json",
+      "sha256": "62f05afd514342f160aeae99fc74aa45d6bdbeef66008aee485dfe30034ba1c9"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-021-entry-trades.json",
+      "sha256": "32d8e1e4db501b5084b89322f48428bba20f48e7286ffdcd7aa66bfe33dce1b9"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-022-exit-trades.json",
+      "sha256": "e1d3b0042247d28dce95d3d08b0248f9ad975fd618b3a5566e51d5cba9a0c553"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-023-entry-trades.json",
+      "sha256": "94ea3929cda6aca0be02fa8ccd94623cb67f786d94d648385e2b89d0da067149"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-024-exit-trades.json",
+      "sha256": "36247409cba36be220d71ad8522c9fe539527f7c7ede8408c968955f26e5cfb1"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-calls.json",
+      "sha256": "b867c7ee3aa85a5696e045e6757135568faa0923f28d72229468b0fd892d68ee"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_futures_phase_isolated_v001/phase-userdirs/000-baseline/nfix8-profit_max-cz-nfi-x8-v18-0-146-baseline-binance-USDT.json",
+      "sha256": "9e72a909d2709a92bfefef9aeedebd6da19ad695d481ad8e02aa06b46e9d03a8"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/callback-trace.jsonl",
+      "sha256": "c308c7e6d4807c57f52969637392d5c4c933a4b43d8b3a7a693b24fb0818fda7"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/execution.json",
+      "sha256": "aff96723243c0173dc789e389c515b3e6df4edb8f5e3e7382e4c1834e3b871ff"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/lookahead-result.csv",
+      "sha256": "5dd5e6b4b0ce7fda543f1eef39fd518c5fc063a46dd532ce6c6ec2a48792567c"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-000-baseline-trades.json",
+      "sha256": "67186ce8ed37ef457a54ca692d6054e44cf201bb6aa8146da956bac91f30ba8f"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-001-entry-trades.json",
+      "sha256": "f4fedc19855c8e42c4f8daf9a276c6b9e0b72c09540440bd820e073f70510463"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-002-exit-trades.json",
+      "sha256": "db99396ede567bca55ad5f7e459e44ad1af2b4787e95f3aeec38a4e6791147d0"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-003-entry-trades.json",
+      "sha256": "07136c3b5b1e9960481a8380488561a9b421950e5b60f0fdf37fcece8d0cec99"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-004-exit-trades.json",
+      "sha256": "797f2d0eb0a2eb720b5384d7cfcccba16ef68b373380160a90869fb48a24a4a8"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-005-entry-trades.json",
+      "sha256": "cf0781a1fd37344f0a6ba5e49cafe5554aa51728e767e24c2b1605eeac0d7075"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-006-exit-trades.json",
+      "sha256": "6d6cd29998ec0a5cc5d0d047b2e68aa315591f21eecdcf3ca47dfff4583067e4"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-007-entry-trades.json",
+      "sha256": "1128c7e334aec3d58089f0773e1f02a9e0823c19542a99e2103d71a8400d8154"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-008-exit-trades.json",
+      "sha256": "1128c7e334aec3d58089f0773e1f02a9e0823c19542a99e2103d71a8400d8154"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-009-entry-trades.json",
+      "sha256": "d6c3246a91f20d85ea85724fcdfb355740df34cc4f3f666313e6a6a007b39e52"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-010-exit-trades.json",
+      "sha256": "26a1b8e43b9fba1722eef65b37745f14ce27c8d9a61a71568e7fd8b5fba4b1e3"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-011-entry-trades.json",
+      "sha256": "808bc10f94541ee3cae9a0e290a5d9e7d191c1c0aed8ab61b4417b9668393dc1"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-012-exit-trades.json",
+      "sha256": "808bc10f94541ee3cae9a0e290a5d9e7d191c1c0aed8ab61b4417b9668393dc1"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-013-entry-trades.json",
+      "sha256": "75c333a4847b8863fd9a6f38a0640078c6d422d5a99fa0eee5255e92af13ada4"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-014-exit-trades.json",
+      "sha256": "1989bbde1df5e929e72a3ab6bd83b2063dc115dce5158c5ba3a9bb3fa4e1bcd4"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-015-entry-trades.json",
+      "sha256": "7815ee570643d56b95aa4ee642822ef3d8e363e6fd9464342bf21dfc7ddc80c7"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-016-exit-trades.json",
+      "sha256": "7815ee570643d56b95aa4ee642822ef3d8e363e6fd9464342bf21dfc7ddc80c7"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-017-entry-trades.json",
+      "sha256": "9c6889d29a04146312af71be2e2d5d4bf7da396eafee783bf503d503736686e9"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-018-exit-trades.json",
+      "sha256": "03be277cc3ea4419db1131c90866a72d3d086ba94417b86d97d69e5053587cf5"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-019-entry-trades.json",
+      "sha256": "abc11d303d44b37a6f2c80d644c59c58e1b0574636c71b875563ce5636cb067c"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-020-exit-trades.json",
+      "sha256": "0725b2adb7541794bd98f1fb8c60b14b19b04871fa995182fb933e9ceb319f34"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-021-entry-trades.json",
+      "sha256": "de5213f564c4db452f114dc5da8890b91405e403c597098f4553544d9d616a94"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-022-exit-trades.json",
+      "sha256": "ddfba79410f0b259da9ea53bdf9fb4afa17586f3200803b3d7347be56a9918c4"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-calls.json",
+      "sha256": "ef9a3029a5e22a5d32bd9ff1bf6de65f519b489f6fcf94d7b36e3e78cd0110d9"
+    },
+    {
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/p0/lookahead_spot_phase_isolated_v001/phase-userdirs/000-baseline/nfix8-profit_max-cz-nfi-x8-spot-36-paper-20261105-binance-USDT.json",
+      "sha256": "61a709365c341d2307b17208eeca7080bcfeacce126f57e15cbb0346affd02ab"
+    }
+  ]
+}
