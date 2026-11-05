@@ -1,0 +1,44 @@
+{
+  "observed_at_utc": "2026-11-05T16:56:04.748363+00:00",
+  "unit_checks_passed": 9,
+  "financial_backtests_run_by_author": 0,
+  "live_runtime_modified": false,
+  "files": {
+    "research/crypto/rd_program_20261105/p1/native/observer.py": "020ddc2649948c684069f9921e595c82bb04b1163e63e71e6924794336ec3f9a",
+    "research/crypto/rd_program_20261105/p1/native/test_observer.py": "791098fe4b5cdcd0dbc7d275e7fc2b2efaf44d59516048100c7e560c8106d6c3",
+    "research/crypto/rd_program_20261105/p1/native/README.md": "cedf102df1aaf43ed5926653260a0a490dcdb03c7f721a3589c5a77c5565f127",
+    "research/crypto/rd_program_20261105/p1/native/run_native.py": "8cb12ac4ddc7c636a459854664b5549508398e6d2d465594ec48e0432140fdef",
+    "research/crypto/rd_program_20261105/p1/native/sources/average/LICENSE": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "research/crypto/rd_program_20261105/p1/native/sources/average/AverageStrategy.py": "63606866fdf1cb3d71dc39a951ed0784a31686690b1c4014c12d2481c8dbf094"
+  },
+  "official_strategy_resolver_checked": [
+    "spot",
+    "futures"
+  ],
+  "resolved_average": {
+    "timeframe": "4h",
+    "startup_candle_count": 0,
+    "can_short": false,
+    "ema_short": 8,
+    "ema_long": 21,
+    "stoploss": -0.2,
+    "roi": 0.5,
+    "external_parameters": {}
+  },
+  "resource_guard": {
+    "disk_min_bytes": 10737418240,
+    "cache_cleanup_scope": "only current-run owned lossless_cache after verification",
+    "durable_evidence_hashes_before_cleanup": true
+  },
+  "pre_financial_revision": {
+    "issue": "outside-window cash could backfill an earlier nonflat missing interval",
+    "resolution": "freeze observer before first current_time >= end yield; later native items pass through unchanged",
+    "regression_cases": [
+      "position opened 00:05; first outside-window exit at 00:30 or 00:35; 00:10..00:25 remain missing",
+      "flat window; cash change at end cannot replace prior 1000 cash with 900"
+    ],
+    "native_matching_changed": false,
+    "independent_reviewer": "runtime_audit: boundary implementation and 7 then-current tests independently verified"
+  },
+  "manifest_strategy_fields_explicit": true
+}
