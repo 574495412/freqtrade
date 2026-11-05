@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "audited_at_utc": "2026-11-05T18:33:32.094422+00:00",
+  "scope": "Finite authorized research deliverables; completion does not mean profitability or P2 execution.",
+  "delivery_state": "DELIVERED_WITH_EXPLICIT_CONDITIONAL_EXPERIMENT_BLOCKS",
+  "requirements": [
+    {
+      "id": "P0_SOURCE_ENV",
+      "disposition": "DELIVERED_PINNED_ENVIRONMENT_VERIFIED",
+      "evidence": [
+        {
+          "path": "research/crypto/rd_program_20261105/p0/environment/verification.json",
+          "sha256": "2a2de35f5e10adc5cf3b69778aede745eb458b11f25d22771d179118b1491801"
+        },
+        {
+          "path": "research/crypto/rd_program_20261105/p0/environment/data_manifest.json",
+          "sha256": "e98a03698e93d21cdaaf9dc7c824c461cd6f9b9f10f19e8ae992675903b8000a"
+        }
+      ]
+    },
+    {
+      "id": "P0_CAUSALITY",
+      "disposition": "DELIVERED_BOUNDED_DIAGNOSTICS_WITH_CAUSALITY_BLOCKS",
+      "evidence": [
+        {
+          "path": "research/crypto/rd_program_20261105/p0/causality/isolated_evidence.json",
+          "sha256": "245d5914ccfb66d05e56009bb252f2504a80c6dfe7ece6c6c3067a729b8d3a79"
+        },
+        {
+          "path": "research/crypto/rd_program_20261105/p0/causality/recursive_evidence.json",
+          "sha256": "913feb2ba3860e62f4ff730168d048054d52835c49c789f703aae958ed20d110"
+        },
+        {
+          "path": "research/crypto/rd_program_20261105/p0/causality/saved_evidence.json",
+          "sha256": "be34c718929d979f72f1fcc02718f3c565828bc816c4daf4925424fb174899b9"
+        }
+      ]
+    },
+    {
+      "id": "P0_EVENT_NAV",
+      "disposition": "DELIVERED_SPECIFICATION_AND_MARK_REVALUATION_EVENT_ORDER_BLOCKED",
+      "evidence": [
+        {
+          "path": "research/crypto/rd_program_20261105/p0/event_nav_contract.md",
+          "sha256": "314410a36108fa0df7b378f30aa691533be87eb165559588373be8816ed8f5f4"
+        },
+        {
+          "path": "research/crypto/rd_program_20261105/data_extension/mark_data_audit.json",
+          "sha256": "2b49bf4fc1c8180128c2b8862635b67d1c4e6de802446f5509b22293a7f8bf8b"
+        },
+        {
+          "path": "research/crypto/rd_program_20261105/data_extension/mark_valuation_result.json",
+          "sha256": "20588c51698cb741ce8834761c85fdfb018caa58fe5fa0d3b932c76396728c4a"
+        }
+      ]
+    },
+    {
+      "id": "P0_RISK_MODULE",
+      "disposition": "DELIVERED_OFFLINE_ONLY_44_TESTS",
+      "evidence": [
+        {
+          "path": "research/crypto/rd_program_20261105/p0/risk/summary.json",
+          "sha256": "76bb51a6378002b0c7095c6e73897d899ddc0f2a7553a603590313f874e7c1e8"
+        }
+      ]
+    },
+    {
+      "id": "P0_READY_MANIFEST",
+      "disposition": "DELIVERED_CANDIDATE_GATES_AND_LEDGER",
+      "evidence": [
+        {
+          "path": "research/crypto/rd_program_20261105/candidate_readiness_mark_update_20261106.json",
+          "sha256": "36ba782cc243a1a79e5e7936dea65bbf2404542d3460da9a00c7cdc3085fbf0e"
+        },
+        {
+          "path": "research/crypto/rd_program_20261105/p1/execution_ledger.jsonl",
+          "sha256": "0b990d98c62b4fdeb8059713c34e9020833a04040651272573cc7501933ec603"
+        }
+      ]
+    },
+    {
+      "id": "P1_FIXED_BASELINES",
+      "disposition": "DELIVERED_32_CELLS_2_DETERMINISM_CHECKS",
+      "evidence": [
+        {
+          "path": "research/crypto/rd_program_20261105/p1/control_scorecard.json",
+          "sha256": "3335d4d4abb2de2e0dc0f636f2fce876857dcea8be490e6bdfb67729e316b2cd"
+        },
+        {
+          "path": "research/crypto/rd_program_20261105/p1/native/native_scorecard.json",
+          "sha256": "34a186726ba8a7702045e4f374adb4c94dea73edba2b5f0bc9f130a7956b94f4"
+        },
+        {
+          "path": "research/crypto/rd_program_20261105/p1/control_manifest_field_map.json",
+          "sha256": "62c129edc6b5aad4dc14d7d1ffd49a6739d1b3dcf8e77d5314e286572df1e1e5"
+        }
+      ]
+    },
+    {
+      "id": "F1_F2_FIXED_FEATURES",
+      "disposition": "DELIVERED_COMPUTATION_9_SYNTHETIC_TESTS",
+      "evidence": [
+        {
+          "path": "research/crypto/rd_program_20261105/factors/features.py",
+          "sha256": "3a6bab75f1663bc5af97111d5116f7a1be7f34d961e0c8ed4fecd9dcde8a88d4"
+        },
+        {
+          "path": "research/crypto/rd_program_20261105/factors/test_features.py",
+          "sha256": "6123a9675d3b44a1ef71c9f07995b953580cf494a6cdfdffe32af95380d93bd3"
+        },
+        {
+          "path": "research/crypto/rd_program_20261105/factors/README.md",
+          "sha256": "5462917d85843278f92ec30bd3cf2aba6dc89b6529634c4add860b5375e2c8bb"
+        }
+      ]
+    },
+    {
+      "id": "P2_CONDITIONAL_PAIRED_EXPERIMENTS",
+      "disposition": "BLOCKED_NOT_RUN_PER_FROZEN_GATES",
+      "evidence": [
+        {
+          "path": "research/crypto/rd_program_20261105/candidate_readiness_mark_update_20261106.json",
+          "sha256": "36ba782cc243a1a79e5e7936dea65bbf2404542d3460da9a00c7cdc3085fbf0e"
+        },
+        {
+          "path": "research/crypto/rd_program_20261105/factor_task_20261106.json",
+          "sha256": "7f933c687fb95aea7efeecb55b9b6e009427662cc7127bd333aa30bbe1b1c64a"
+        }
+      ]
+    }
+  ],
+  "final_report": {
+    "path": "docs/crypto-factor-delivery-20261106.md",
+    "sha256": "a182be0b4a503dfc3bf685ced8878dd599817fc193607719a5f2cf2e8353fb5f"
+  },
+  "original_frozen_plan": {
+    "path": "research/crypto/rd_program_20261105/plan.json",
+    "sha256": "91845eed78faa0788f4ac6fde6c0e92ff370cff26b6d1b3cc0dadc47be920034"
+  },
+  "task": {
+    "path": "research/crypto/rd_program_20261105/factor_task_20261106.json",
+    "sha256": "7f933c687fb95aea7efeecb55b9b6e009427662cc7127bd333aa30bbe1b1c64a"
+  },
+  "verification": {
+    "P1_unique_results": 32,
+    "determinism_passes": 2,
+    "matched_historical_NFI_parity": 7,
+    "execution_ledger_rows": 35,
+    "ledger_result_hashes_verified": true,
+    "mark_valuation_curves_verified": 16,
+    "mark_valuation_input_hashes_verified": 3548,
+    "local_report_links_valid": true,
+    "all_candidate_economic_gates_remain_closed": true
+  },
+  "updated_mark_pairwise_differences": [
+    {
+      "id": "P1_B2_AVERAGE_NATIVE_futures_L_base",
+      "conditional_mark_net_return_difference": {
+        "B0_CASH": -0.542430443858071,
+        "B1_BTC_HOLD": -0.32362317086754466
+      },
+      "economic_qualified": false
+    },
+    {
+      "id": "P1_B2_AVERAGE_NATIVE_futures_L_stress",
+      "conditional_mark_net_return_difference": {
+        "B0_CASH": -0.6462373655122633,
+        "B1_BTC_HOLD": -0.4262248794217369
+      },
+      "economic_qualified": false
+    },
+    {
+      "id": "P1_B2_AVERAGE_NATIVE_futures_S_base",
+      "conditional_mark_net_return_difference": {
+        "B0_CASH": -0.13491541937301788,
+        "B1_BTC_HOLD": -0.12162840171267908
+      },
+      "economic_qualified": false
+    },
+    {
+      "id": "P1_B2_AVERAGE_NATIVE_futures_S_stress",
+      "conditional_mark_net_return_difference": {
+        "B0_CASH": -0.14098551699128126,
+        "B1_BTC_HOLD": -0.12633965233094246
+      },
+      "economic_qualified": false
+    },
+    {
+      "id": "P1_B3_NFI_X8_NATIVE_futures_L_base",
+      "conditional_mark_net_return_difference": {
+        "B0_CASH": 1.4120919597300001,
+        "B1_BTC_HOLD": 1.6308992327205265
+      },
+      "economic_qualified": false
+    },
+    {
+      "id": "P1_B3_NFI_X8_NATIVE_futures_L_stress",
+      "conditional_mark_net_return_difference": {
+        "B0_CASH": 1.356707643350001,
+        "B1_BTC_HOLD": 1.5767201294405273
+      },
+      "economic_qualified": false
+    },
+    {
+      "id": "P1_B3_NFI_X8_NATIVE_futures_S_base",
+      "conditional_mark_net_return_difference": {
+        "B0_CASH": 0.009215358779999905,
+        "B1_BTC_HOLD": 0.0225023764403387
+      },
+      "economic_qualified": false
+    },
+    {
+      "id": "P1_B3_NFI_X8_NATIVE_futures_S_stress",
+      "conditional_mark_net_return_difference": {
+        "B0_CASH": 0.00850755243000001,
+        "B1_BTC_HOLD": 0.0231534170903388
+      },
+      "economic_qualified": false
+    }
+  ],
+  "stop_rule": "Unresolved historical source/event/depth evidence blocks conditional P2; P0 diagnostic budget exhausted. Frozen plan permits explicit BLOCKED outcomes, no extra searches or fabricated timestamps.",
+  "open_dependencies": [
+    "Historical feature publication/receipt time evidence",
+    "Contemporaneous executable bid/ask and20bps depth plus historical rules",
+    "Full funding/fill/account event sequence or a certified decision-invariant ambiguity bound",
+    "Native RD1 historical adapter and atomic risk reservation after input contract is met",
+    "Matched Average+RD1 control forF2"
+  ],
+  "profit_improvement_established": false,
+  "new_factor_financial_runs": 0,
+  "P3_activated": false,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "existing_paper_runtime_modified": false
+}
