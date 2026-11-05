@@ -1,0 +1,78 @@
+"""Render already audited account evidence into the repository checkpoint."""
+import argparse
+import json
+from pathlib import Path
+
+import score_accounts as audit
+
+
+def percent(value):
+    return '—' if value is None else f'{value*100:.2f}%'
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--scorecard',type=Path,required=True)
+    parser.add_argument('--output',type=Path,required=True)
+    args=parser.parse_args()
+    native=json.loads(args.scorecard.read_text())
+    controls=json.loads((audit.HERE.parent/'control_scorecard.json').read_text())
+    if native['native_account_count']!=16 or native['control_account_count']!=16 or len(native['determinism'])!=2:
+        raise ValueError('Incomplete P1 evidence; cannot render final checkpoint')
+    for record in native['input_receipts']:
+        if audit.sha(audit.ROOT/record['path'])!=record['sha256']:raise ValueError('Scorecard input drift')
+    if native['source_sha256']!=audit.sha(audit.HERE/'score_accounts.py'):
+        raise ValueError('Scorecard source drift')
+    rows=native['rows'];det_pass=sum(r['passed'] for r in native['determinism'])
+    parity=[r for r in rows if r['historical_parity']['status']!='no_matching_archived_account_assigned']
+    parity_pass=sum(r['historical_parity']['status']=='exact_native_trades_and_hourly_anchor_within_tolerance' for r in parity)
+    max_cash=max(abs(r['cash_aggregate_error_usdt']) for r in rows)
+    max_nav=max(r['filled_position_audit']['terminal_nav_reconstruction_error_usdt'] for r in rows)
+    text=['# 因子研发 P0/P1 检查点（2026-11-06）','',
+        '本轮完成固定基线运行与因子计算模块；**尚未证实新因子提高收益，没有候选取得经济或生产准入**。F1/F2 的配对金融试验因历史可得时刻、执行数据与 RD1 集成证据不足而阻塞，实际运行数为 0。冻结路线图 v1、经济参数和验收门槛未改写。','',
+        '## 已完成的可核验工作','',
+        f'- P1：32 个独立基线单元全部产生结果（16 个现金／BTC 会计控制、16 个原生策略账户）；另 2 次确定性复跑，{det_pass}/2 通过。首次原生尝试在配置校验失败、未进入交易回测；保留失败，并以新注册目录完成 1 次技术重试。',
+        f'- 全部原生账户现金审计通过，最大聚合差 {max_cash:.3g} USDT；从原始成交重建的终值最大差 {max_nav:.3g} USDT。所有 5m 参考日历完整性由逐行证据给出，不把参考价改称真实 mark 或可成交价。',
+        f'- {parity_pass}/{len(parity)} 个已分配且身份匹配的历史 NFI 账户通过完整交易／订单／资金费字段与旧小时锚点对照。另一合约短窗压力账户没有对应旧档案，不声称历史精确复现。',
+        '- P0：360 份固定核心文件、920 份行情文件与冻结依赖已有收据；RD1 离线 44 项边界／故障测试通过，未部署。2 次 lookahead 与 6 次 recursive 用尽 8 次命令预算；两次 lookahead 内含 48 次回测，recursive 内含 42 次指标 preparation，均不算新增收益候选。',
+        '- F1/F2 固定计算代码的 9 项合成因果／边界测试通过；追加的逐笔持仓核算 5 项测试覆盖部分退出、DCA、回填日期的强制退出、端点成交与空头资金费符号。工程测试不代表行情收益验证。','',
+        '## 原生基线完整账户参考结果','',
+        'L：2025-01-01 至 2026-09-01（右端不含）；S：2026-10-23 至 2026-11-05（右端不含）。终值为末日 23:55 UTC 的事件前参考净值。现货成本为 13/20 bps 每边，合约为 8/15 bps 每边加模型资金费；执行成本代理已经计入 fee，不再扣第二遍。','',
+        '| 基线 | 市场 | 窗口 | 成本 | 净参考收益 | 5m 参考 MDD | 权益曾≤500 | 自然完成持仓 | 期末未平仓 |',
+        '|---|---|---|---|---:|---:|---|---:|---:|']
+    for row in rows:
+        a=row['filled_position_audit']
+        text.append(f"| {'Average' if row['baseline']=='B2_AVERAGE_NATIVE' else 'NFI X8'} | {'现货' if row['market']=='spot' else '合约'} | {row['window']} | {'基准' if row['cost_id']=='base' else '压力'} | {percent(row['net_reference_return'])} | {percent(row['drawdown']['mdd']) if row['drawdown'] else '缺失'} | {'是' if row['reference_initial_500_floor_breached'] else '否'} | {a['natural_completed_campaigns_before_reference_endpoint']} | {a['terminal_filled_open_position_count']} |")
+    text+=['','这些账户保留原版信号、DCA 和退出行为，未附加 RD1。Average 的严重亏损保留为失败证据，不因其作为教育基线而降低标准。NFI 的正收益是已经观察过的历史参考结果；L 早于策略代码发布，不能称独立 OOS、实盘表现或新因子增益。压力成本改变净利润触发的退出和后续状态，因此个别结果不一定随成本单调下降。','',
+        '## 现金与 BTC 对照','',
+        '8 个现金单元均为 1000 USDT、零收益；其零分母 Sharpe／Sortino／Calmar 为 null。BTC 控制在期末仍有未平仓持仓、自然完成 campaign 为 0，假想退出费是估值储备。','',
+        '| 市场 | 窗口 | 成本 | BTC 净参考收益 | 5m 参考 MDD |','|---|---|---|---:|---:|']
+    for row in controls['rows']:
+        if row['baseline']=='B1_BTC_HOLD':
+            text.append(f"| {'现货' if row['market']=='spot' else '合约'} | {row['window']} | {'基准' if row['cost_id']=='base' else '压力'} | {percent(row['net_reference_return'])} | {percent(row['drawdown']['mdd'])} |")
+    text+=['','各原生结果与相同市场、窗口和成本的现金／BTC 收益差已保存在机器评分表，不能跨账户复利合并。','',
+        '## 因子结论与未闭合项','',
+        '| 项目 | 本轮结论 | 证据边界／下一项必要证据 |','|---|---|---|',
+        '| F1 168h 动量 | BLOCKED，金融运行 0 | 固定参数计算可复现；缺历史真实发布／接收时刻、历史执行数据和 RD1 历史集成，不能删币或填造可得时间启动经济试验 |',
+        '| F2 RV24 缩放 | BLOCKED，金融运行 0 | 固定 24 个收益的 ddof=1 缩放可复现；缺上述证据及匹配的 Average+RD1 控制。原版 Average 亏损不能替代 RD1 控制结果 |',
+        '| F3 均值回归 | 历史失败归因范围，金融运行 0 | 没有新机制证据，不换回看期重启搜索 |',
+        '| F4 funding/basis | BLOCKED，金融运行 0 | 缺真实发布／接收、结算及同期报价，不把事后最终费率当提前可得因子 |',
+        '| NFI 因果 | 有限诊断完成，经济准入未过 | 干净缓存下旧六条退出告警不再出现；旧 spot 全量订单缺失，recursive 固定点信号全空，未证明激活路径全局无泄漏 |',
+        '| 事件／估值 | 规格已交付，证据未齐 | 缺 5m 合约 mark、真实 funding/fill 同刻顺序、历史盘口与逐时规则；OPEN 参考和聚合现金对账不能替代它们 |',
+        '| RD1 | 仅离线通过 | 尚缺原生适配、原子入场风险预留、历史／模拟盘／真实执行层证据；本任务未部署 500 权益熔断 |','',
+        '若后续补齐依赖，仍沿用固定 P2 预算和验收标准：4 折至少 3 折为正、连续压力账户净收益为正、可信 5m MDD≤15%、本金底线、集中度及预注册配对统计要求。缺失项不能当作零收益补入统计。90 天最终前瞻留出尚未开始；没有候选／数据冻结和具体启动日期，不能将现有历史窗改名留出集。','',
+        '## 核算范围与交付位置','',
+        '评分表包含回撤持续时间、最差完整 UTC 日／周、ES95、每日 NAV Sharpe、Sortino、同区间 Calmar、模型费用、资金费、换手、方向敞口、DCA、持仓年龄与逐币／完整持仓贡献。自然交易与 terminal force_exit 分开。逐币贡献只有终值恒等式和导出时间范围可对齐时才给值；它是模型归因，不是已验证的资金费事件顺序。容量依旧 unknown。','',
+        'S 只有 12 个完整日和 1 个完整周，年化与尾部统计仅作描述。所有历史窗均已看过；bootstrap、更多单元测试或现金相等不能消除历史选择偏差。','',
+        '- [冻结路线图](crypto-rd-roadmap-20261105.md) 与 [本轮任务书](crypto-factor-task-20261106.md)',
+        '- [现金／BTC 评分表](../research/crypto/rd_program_20261105/p1/control_scorecard.json)',
+        '- [原生账户评分表](../research/crypto/rd_program_20261105/p1/native/native_scorecard.json)',
+        '- [执行台账](../research/crypto/rd_program_20261105/p1/execution_ledger.jsonl)',
+        '- [候选准入](../research/crypto/rd_program_20261105/candidate_readiness_20261106.json)、[事件合同](../research/crypto/rd_program_20261105/p0/event_nav_contract.md)、[因果证据](../research/crypto/rd_program_20261105/p0/causality/README.md)',
+        '- [固定因子代码与测试范围](../research/crypto/rd_program_20261105/factors/README.md)','',
+        '本任务未修改、停止或重启原有 paper 服务，未写运行配置或 DB，未改策略信号。研究入口没有真实下单路径；没有读取秘密、发送外部研究通知或激活生产风控。']
+    with args.output.open('x') as stream:stream.write('\n'.join(text)+'\n')
+    print(json.dumps({'report':str(args.output),'native_rows':len(rows),'determinism_passes':det_pass,'new_financial_runs':0}))
+
+
+if __name__=='__main__':main()

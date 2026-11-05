@@ -3,7 +3,6 @@ from __future__ import annotations
 
 import argparse
 from datetime import datetime, timezone
-import hashlib
 import json
 from pathlib import Path
 import sys
@@ -14,12 +13,15 @@ import pandas as pd
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE.parent))
+sys.path.insert(0, str(HERE))
 import control_scorecard as metrics
+import audit_positions
 
 ROOT = HERE.parents[4]
 PROGRAM = HERE.parents[1]
 DATA = ROOT / 'user_data/crypto_quant/rd_program_20261105_v1'
 INPUTS = set()
+PRICE_CACHE = {}
 
 
 def read(path):
@@ -59,6 +61,25 @@ def verify_artifacts(output):
     return len(receipt['files'])
 
 
+def load_prices(plan, market, native_trades):
+    receipt_path = Path(plan['data_receipts']['path'])
+    if sha(receipt_path) != plan['data_receipts']['sha256']:
+        raise ValueError('Raw data receipt drift')
+    receipt = read(receipt_path)
+    prices = {}
+    for pair in {t['pair'] for t in native_trades}:
+        stem = pair.replace('/','_').replace(':','_')
+        relative = f'futures/{stem}-5m-futures.feather' if market=='futures' else f'{stem}-5m.feather'
+        path = Path(plan['datadir']) / relative
+        if path not in PRICE_CACHE:
+            if sha(path) != receipt[relative]:
+                raise ValueError('Frozen 5m price changed')
+            INPUTS.add(path)
+            PRICE_CACHE[path] = pd.read_feather(path).set_index('date')['open']
+        prices[pair] = PRICE_CACHE[path]
+    return prices
+
+
 def registration(run_id, suffix=''):
     if run_id == 'P1_B2_AVERAGE_NATIVE_spot_S_base' and not suffix:
         suffix = '__retry1'
@@ -84,7 +105,10 @@ def historical_output(run):
         folder = 'spot_baseline_long_run_20261105_v001' if window == 'L' else 'spot_baseline_short_run_20261105_v003'
         return root / folder / ('nfi-x8-spot-cost' + ('13' if cost == 'base' else '20'))
     if window == 'L':
-        return root / 'matched_strategy_comparison_20261105_v002' / ('nfi-x8-1x-cost' + ('8' if cost == 'base' else '15'))
+        # The matched-strategy archive uses SIX pairs, not this frozen 40-pair
+        # universe. Select by source/input identity, never by return similarity.
+        folder = 'wide_strategy_comparison_20261105_v001' if cost == 'base' else 'wide_strategy_cost15_20261105_v001'
+        return root / folder / ('nfi-x8-1x-cost' + ('8' if cost == 'base' else '15'))
     if cost == 'base':
         return root / 'nfi40_post_source_account_20261105_v001/nfi-x8-1x-cost8'
     return None
@@ -111,6 +135,9 @@ def score(run):
         raise ValueError('Initial equity mismatch')
     positive_path = complete and bool((curve.equity > 0).all())
     native_trades = trades(output, native['strategy'])
+    position_audit = audit_positions.reconstruct(native_trades, curve.index,
+        load_prices(plan, run['market'], native_trades), curve.gross,
+        result['new_endpoint_reference_equity'], manifest['cost_scenario']) if complete else None
     row = {
         'id': run['id'], 'baseline': run['baseline_id'], 'market': run['market'],
         'window': run['window_id'], 'cost_id': run['cost_id'],
@@ -130,7 +157,7 @@ def score(run):
             'gross_mean_over_nav': float((curve.gross/curve.equity).mean()) if positive_path else None,
             'gross_max_over_nav': float((curve.gross/curve.equity).max()) if positive_path else None,
             'nonzero_gross_snapshot_fraction': float((curve.gross > 0).mean()) if complete else None,
-            'net_exposure': 'not reconstructed; short direction not present in aggregate gross observer',
+            'net_exposure': 'reconstructed separately from saved entry/exit fills; see filled_position_audit',
         },
         'campaign_counts_at_old_hourly_anchor': result['old_hourly_anchor_metrics'],
         'native_terminal': {key: native[key] for key in ['native_terminal_return','native_terminal_balance','native_terminal_trade_count','native_terminal_exit_times','native_funding_net_usdt']},
@@ -142,8 +169,9 @@ def score(run):
             'fee_and_execution_proxy_usdt': sum(o['amount']*o['safe_price']*(t['fee_open'] if o['ft_is_entry'] else t['fee_close']) for t in native_trades for o in t['orders']),
             'scope': 'native export only; includes synthetic terminal exits, not matched observer-window cost decomposition',
         },
-        'single_pair_full_account_contribution_share': None,
-        'contribution_status': 'not reconstructed from aggregate observer; partial exits and final campaign funding cannot certify full per-pair path',
+        'filled_position_audit': position_audit,
+        'single_pair_full_account_contribution_share': position_audit['max_positive_pair_contribution_share'] if position_audit else None,
+        'contribution_status': 'terminal native-model attribution only when full-account identity reconciles; not verified funding event chronology',
         'capacity_status': 'unknown; historical orderbook/depth/queues unavailable',
         'five_minute_executable_or_futures_mark_verified': False,
         'economic_acceptance': False, 'RD1_applied': False, 'orders_enabled': False,
@@ -159,6 +187,11 @@ def score(run):
         identity = {k: oldplan[k] == plan[k] for k in ['start','end','pairs','initial_equity_usdt']}
         identity['fee'] = oldconfig['fee'] == config['fee']
         identity['strategy'] = old['strategy'] == native['strategy']
+        identity['engine_commit'] = oldplan['engine_commit'] == plan['engine_commit']
+        for key in ['data_receipts','storage_source','market_snapshot','environment']:
+            identity[key+'_sha256'] = oldplan[key]['sha256'] == plan[key]['sha256']
+        old_source = old['source_strategy_files']
+        identity['strategy_source_hashes'] = {k:v['sha256'] for k,v in old_source.items()} == {k:v['sha256'] for k,v in native['source_strategy_files'].items()}
         equal_trades = trades(previous, native['strategy']) == native_trades
         delta = result['old_hourly_anchor_metrics'][0]['ending_marked_equity'] - old['periods'][0]['ending_marked_equity']
         row['historical_parity'] = {'status': 'exact_native_trades_and_hourly_anchor_within_tolerance' if all(identity.values()) and equal_trades and abs(delta)<=.01 else 'difference_requires_explanation',
@@ -200,10 +233,21 @@ def main():
         matched = [r for r in controls if (r['market'],r['window'],r['cost_id'])==(row['market'],row['window'],row['cost_id'])]
         row['matched_control_return_differences'] = {r['baseline']:row['net_reference_return']-r['net_reference_return'] if row['net_reference_return'] is not None else None for r in matched}
     replay = determinism()
+    cost_pairs = []
+    for baseline in ['B2_AVERAGE_NATIVE','B3_NFI_X8_NATIVE']:
+        for market in ['spot','futures']:
+            for window in ['L','S']:
+                group = {r['cost_id']:r for r in rows if (r['baseline'],r['market'],r['window'])==(baseline,market,window)}
+                base,stress = group['base'],group['stress']
+                cost_pairs.append({'baseline':baseline,'market':market,'window':window,
+                    'stress_minus_base_reference_return':stress['net_reference_return']-base['net_reference_return'] if base['net_reference_return'] is not None and stress['net_reference_return'] is not None else None,
+                    'stress_minus_base_reference_mdd':stress['drawdown']['mdd']-base['drawdown']['mdd'] if base['drawdown'] and stress['drawdown'] else None,
+                    'scope':'matched whole accounts; fees may change native exits, quantities and subsequent state, so not a fixed-order fee derivative'})
     result = {'schema_version':1,'generated_at_utc':datetime.now(timezone.utc).isoformat(),
         'source_sha256':sha(Path(__file__)),'metric_helper_sha256':sha(Path(metrics.__file__)),
+        'position_audit_source_sha256':sha(Path(audit_positions.__file__)),
         'native_account_count':len(rows),'control_account_count':len(controls), 'rows':rows,
-        'determinism':replay,'new_financial_runs_by_this_script':0,
+        'determinism':replay,'paired_cost_scenarios':cost_pairs,'new_financial_runs_by_this_script':0,
         'input_receipts':[{'path':str(p.relative_to(ROOT)), 'sha256':sha(p)} for p in sorted(INPUTS)],
         'evidence_class':'retrospective_engineering_reference_not_strategy_qualification',
         'orders_enabled':False,'production_eligible':False}

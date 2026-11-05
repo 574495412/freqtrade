@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-11-05T17:43:38.633369+00:00",
+  "read_only_position_tests": 5,
+  "tests_passed": true,
+  "source_hashes": {
+    "research/crypto/rd_program_20261105/p1/native/audit_positions.py": "c9f1db2cde1b6d7c9d516dcccb4c2bc1e4b725f4167c0fd1cc81b688ee1c60eb",
+    "research/crypto/rd_program_20261105/p1/native/test_positions.py": "5d4918426649b8a60de17a4eb969ad598443bf2adc5777d815643e7278f05d88",
+    "research/crypto/rd_program_20261105/p1/native/score_accounts.py": "2e536326449ea2ab5d88be1c8789a9313c481a6c645083a245197c26c231b960",
+    "research/crypto/rd_program_20261105/p1/native/position_audit_tests.txt": "e65d2bc77c4ad55827407e8605935225fd583c5efe1ca1803d6094f55038f548"
+  },
+  "actual_account_scope_checked_before_final_report": [
+    "all eight native short cells",
+    "B2 futures long base",
+    "B3 futures long base"
+  ],
+  "largest_terminal_NAV_error_in_checked_cells_usdt": 6.7365287594553e-08,
+  "financial_runs_by_audit": 0,
+  "historical_comparator_correction": "Initial draft pointed futures L at six-pair matched-strategy archive. Identity check rejected it. Corrected to the already-existing fixed 40-pair wide archives with same universe order, source/data hashes and fees before final report; no financial rerun or threshold change.",
+  "orders_enabled": false
+}
