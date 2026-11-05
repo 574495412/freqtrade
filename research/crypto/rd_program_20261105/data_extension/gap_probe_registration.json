@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "registered_at_utc": "2026-11-05T18:02:30.598425+00:00",
+  "purpose": "diagnose common June/October grid failures on two fixed BTC archives; do not assume other symbols identical",
+  "jobs": [
+    {
+      "symbol": "BTCUSDT",
+      "frequency": "monthly",
+      "filename": "BTCUSDT-5m-2026-06.zip",
+      "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/5m/BTCUSDT-5m-2026-06.zip",
+      "start": "2026-06-01T00:00:00Z",
+      "end_exclusive": "2026-07-01T00:00:00Z"
+    },
+    {
+      "symbol": "BTCUSDT",
+      "frequency": "monthly",
+      "filename": "BTCUSDT-5m-2026-10.zip",
+      "url": "https://data.binance.vision/data/futures/um/monthly/markPriceKlines/BTCUSDT/5m/BTCUSDT-5m-2026-10.zip",
+      "start": "2026-10-01T00:00:00Z",
+      "end_exclusive": "2026-11-01T00:00:00Z"
+    }
+  ],
+  "script_sha256": "18357c10a9706202ff62f4575b3ab854160d6c827a9765cec05e6d916134ac1e",
+  "output_directory": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_gap_probe_v001",
+  "financial_runs": 0,
+  "orders_enabled": false,
+  "failure_receipts_modified": false
+}
