@@ -1,0 +1,613 @@
+{
+  "guard_source": {
+    "path": "research/crypto/rd_program_20261105/p0/environment/guard.py",
+    "sha256": "ec2e8f023b206d16a1ca1339edeb77f0507aa1ce0193435a75163ce8f1fa24c7"
+  },
+  "environment": {
+    "path": "research/crypto/rd_program_20261105/p0/environment/source_environment.json",
+    "sha256": "0158046400f5f92fab5f53e601fc9432a8b688856f83b1d30c70eddaef346e43"
+  },
+  "dependencies": {
+    "SQLAlchemy": "2.1.4",
+    "TA-Lib": "0.8.2",
+    "aiohttp": "3.14.5",
+    "ccxt": "4.5.89",
+    "jsonschema": "4.26.0",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "psutil": "7.2.2",
+    "pyarrow": "26.0.0",
+    "pydantic": "2.14.1",
+    "python-rapidjson": "1.25",
+    "requests": "2.34.2",
+    "scipy": "1.18.1",
+    "technical": "1.7.0"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "worker_lock": "user_data/crypto_quant/rd_program_20261105_native_worker.lock",
+  "max_rss_bytes": 5905580032,
+  "wall_seconds_per_run": 3600,
+  "schema": "freqtrade.rd.p0-recursive-signals.v1",
+  "registered_date": "2026-11-06",
+  "execution_status": "PREPARED_NOT_EXECUTED",
+  "requires_parent_review_and_commit": true,
+  "runner_sha256": "79f3620e878b3e5ea70824d8aace8cb0ff5e34bf083ba57866adc9988adc0397",
+  "runtime_sha256": "24417300829698bde2d2a74f91e904df05b06d24a9d609ea65fe58d917186b81",
+  "orders_enabled": false,
+  "diagnostic_only": true,
+  "strategy": {
+    "path": "deploy/strategy/nfi-x8/NostalgiaForInfinityX8.py",
+    "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+  },
+  "timerange": "20261001-20261101",
+  "startup_candles": [
+    199,
+    499,
+    799,
+    999
+  ],
+  "expected_native_startups": [
+    199,
+    499,
+    799,
+    800,
+    999
+  ],
+  "maximum_official_commands": 6,
+  "maximum_indicator_preparations_per_command": 7,
+  "maximum_financial_backtests": 0,
+  "primary_recursive_checkpoints": [
+    "2026-10-31T23:55:00+00:00"
+  ],
+  "early_lookahead_checkpoints": [
+    "2026-10-01T00:45:00+00:00"
+  ],
+  "checkpoints": [
+    "2026-10-01T00:45:00+00:00",
+    "2026-10-01T00:50:00+00:00",
+    "2026-10-31T23:55:00+00:00",
+    "2026-11-01T00:00:00+00:00"
+  ],
+  "native_boundary_semantics": "Official trim_dataframe includes stop timestamp. Record native 00:00 row, but primary frozen-window recursive signal comparison is Oct31 23:55; early check is Oct1 00:45.",
+  "native_extra_control": "Unmodified official RecursiveAnalysis automatically adds original strategy startup_candle_count=800. This is reported as native automatic control; frozen CLI remains exactly 199/499/799/999.",
+  "signal_scope": "Call unchanged ft_advise_signals once on a deep copy of each native indicator dataframe; record booleans via column == 1 plus raw values/presence and tags. These are vector signals only, not trade/callback/funding or normal-run causality proof.",
+  "data_selection": "Before first execution choose existing spot_L long histories for informative warmup; futures post_source dataset already contains long candle histories. No download, no timewindow or pair changes.",
+  "pass_scope": "Even all observed boolean signals equal is only fixed-checkpoint stability. Custom exits/DCA and remaining six-alert causal admission are separate. Missing checkpoints and insufficient informative history are blocked, never pass.",
+  "retry_policy": "No automatic retry. Failed command consumes invocation budget; any new attempt requires new registration/output and parent budget decision.",
+  "cases": {
+    "spot_BTC": {
+      "pair": "BTC/USDT",
+      "config": {
+        "path": "research/crypto/spot_baseline_20261105/nfi-x8-spot.json",
+        "sha256": "2277440c2116f5dddedad0828632fb1ffbe3db421946036fe5c9fead8c648d89"
+      },
+      "market_snapshot": {
+        "path": "research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "datadir": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+        "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+      },
+      "selected_data": {
+        "BTC_USDT-5m.feather": "366afbdd6214d8d5b502c9c12bb3794aac31581b83f97d15730f6f359062e638",
+        "BTC_USDT-4h.feather": "202d3e736a8489d04967374f899c3c8078438a6945c36ca3797ddad0af5254ae",
+        "BTC_USDT-1d.feather": "55ded0b005bc6e20c903d6e856db3de3f39008cab4316beb4bd65fa6094f9d1f",
+        "BTC_USDT-15m.feather": "21fe2edbb8190889373a8a9d3da167deb8cea5898e6c362b7a1c805fb33a39a4",
+        "BTC_USDT-1h.feather": "beed6bde8f88040b0af3457543d9d9a6cd0d15716b521cec1614ebe9e14a3a76"
+      },
+      "data_coverage": {
+        "BTC_USDT-5m.feather": {
+          "rows": 220320,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:55:00+00:00"
+        },
+        "BTC_USDT-4h.feather": {
+          "rows": 4956,
+          "first_utc": "2024-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T20:00:00+00:00"
+        },
+        "BTC_USDT-1d.feather": {
+          "rows": 1496,
+          "first_utc": "2022-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T00:00:00+00:00"
+        },
+        "BTC_USDT-15m.feather": {
+          "rows": 73440,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:45:00+00:00"
+        },
+        "BTC_USDT-1h.feather": {
+          "rows": 18360,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        }
+      },
+      "output_directory": "user_data/crypto_quant/rd_program_20261105_v1/p0/recursive_spot_BTC_signals_v001",
+      "command": [
+        ".venv-paper/bin/python",
+        "-B",
+        "research/crypto/rd_program_20261105/p0/causality/observe_recursive.py",
+        "--case",
+        "spot_BTC",
+        "--execute"
+      ]
+    },
+    "spot_ETH": {
+      "pair": "ETH/USDT",
+      "config": {
+        "path": "research/crypto/spot_baseline_20261105/nfi-x8-spot.json",
+        "sha256": "2277440c2116f5dddedad0828632fb1ffbe3db421946036fe5c9fead8c648d89"
+      },
+      "market_snapshot": {
+        "path": "research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "datadir": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+        "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+      },
+      "selected_data": {
+        "BTC_USDT-5m.feather": "366afbdd6214d8d5b502c9c12bb3794aac31581b83f97d15730f6f359062e638",
+        "BTC_USDT-4h.feather": "202d3e736a8489d04967374f899c3c8078438a6945c36ca3797ddad0af5254ae",
+        "BTC_USDT-1d.feather": "55ded0b005bc6e20c903d6e856db3de3f39008cab4316beb4bd65fa6094f9d1f",
+        "BTC_USDT-15m.feather": "21fe2edbb8190889373a8a9d3da167deb8cea5898e6c362b7a1c805fb33a39a4",
+        "BTC_USDT-1h.feather": "beed6bde8f88040b0af3457543d9d9a6cd0d15716b521cec1614ebe9e14a3a76",
+        "ETH_USDT-5m.feather": "407c6748bed2d85fa9739f5e6ef7eba174f6b1ab7b8db84ffb71a65f6248793c",
+        "ETH_USDT-4h.feather": "63b39e09301b7f0a5d1e7675d3c9a4fe7b35a645355c14ffa4e3a70664a0b46f",
+        "ETH_USDT-1d.feather": "8263f44836cc93c7d5cfdcaf77fdce87cc8d535e297a9d824bce2bea260ad34c",
+        "ETH_USDT-15m.feather": "53cad3914157646b447e916876779828140f2e412daa5929ecbaaa2f3c1e1e0d",
+        "ETH_USDT-1h.feather": "1a7e97e71696dc76472fb89c5c474824085f0a4601fc6a4007c1911780d51957"
+      },
+      "data_coverage": {
+        "BTC_USDT-5m.feather": {
+          "rows": 220320,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:55:00+00:00"
+        },
+        "BTC_USDT-4h.feather": {
+          "rows": 4956,
+          "first_utc": "2024-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T20:00:00+00:00"
+        },
+        "BTC_USDT-1d.feather": {
+          "rows": 1496,
+          "first_utc": "2022-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T00:00:00+00:00"
+        },
+        "BTC_USDT-15m.feather": {
+          "rows": 73440,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:45:00+00:00"
+        },
+        "BTC_USDT-1h.feather": {
+          "rows": 18360,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        },
+        "ETH_USDT-5m.feather": {
+          "rows": 220320,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:55:00+00:00"
+        },
+        "ETH_USDT-4h.feather": {
+          "rows": 4956,
+          "first_utc": "2024-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T20:00:00+00:00"
+        },
+        "ETH_USDT-1d.feather": {
+          "rows": 1496,
+          "first_utc": "2022-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T00:00:00+00:00"
+        },
+        "ETH_USDT-15m.feather": {
+          "rows": 73440,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:45:00+00:00"
+        },
+        "ETH_USDT-1h.feather": {
+          "rows": 18360,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        }
+      },
+      "output_directory": "user_data/crypto_quant/rd_program_20261105_v1/p0/recursive_spot_ETH_signals_v001",
+      "command": [
+        ".venv-paper/bin/python",
+        "-B",
+        "research/crypto/rd_program_20261105/p0/causality/observe_recursive.py",
+        "--case",
+        "spot_ETH",
+        "--execute"
+      ]
+    },
+    "spot_ADA": {
+      "pair": "ADA/USDT",
+      "config": {
+        "path": "research/crypto/spot_baseline_20261105/nfi-x8-spot.json",
+        "sha256": "2277440c2116f5dddedad0828632fb1ffbe3db421946036fe5c9fead8c648d89"
+      },
+      "market_snapshot": {
+        "path": "research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "datadir": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+        "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+      },
+      "selected_data": {
+        "BTC_USDT-5m.feather": "366afbdd6214d8d5b502c9c12bb3794aac31581b83f97d15730f6f359062e638",
+        "BTC_USDT-4h.feather": "202d3e736a8489d04967374f899c3c8078438a6945c36ca3797ddad0af5254ae",
+        "BTC_USDT-1d.feather": "55ded0b005bc6e20c903d6e856db3de3f39008cab4316beb4bd65fa6094f9d1f",
+        "BTC_USDT-15m.feather": "21fe2edbb8190889373a8a9d3da167deb8cea5898e6c362b7a1c805fb33a39a4",
+        "BTC_USDT-1h.feather": "beed6bde8f88040b0af3457543d9d9a6cd0d15716b521cec1614ebe9e14a3a76",
+        "ADA_USDT-5m.feather": "44b0de41b84cd7c1800fea6b3a934e616e5f374e68a6cbca731ac4177138f1ae",
+        "ADA_USDT-4h.feather": "44205a964edb4fe8c3a424b6fbd88261e6439345a182aef868c848a0b997c194",
+        "ADA_USDT-1d.feather": "6e8dc0035975ca95193ff3f311a3d8d52104716ed76a0a356a938db6eaa5af2a",
+        "ADA_USDT-15m.feather": "1bbb3c21dba9066da4ad19cc70984408a3079d6c5875d0c9cdca61bf5892eb3a",
+        "ADA_USDT-1h.feather": "ef505b1e26c4beed685cfddbde03110bb2f11b11ec2b8aa5d631c1449981d9ae"
+      },
+      "data_coverage": {
+        "BTC_USDT-5m.feather": {
+          "rows": 220320,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:55:00+00:00"
+        },
+        "BTC_USDT-4h.feather": {
+          "rows": 4956,
+          "first_utc": "2024-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T20:00:00+00:00"
+        },
+        "BTC_USDT-1d.feather": {
+          "rows": 1496,
+          "first_utc": "2022-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T00:00:00+00:00"
+        },
+        "BTC_USDT-15m.feather": {
+          "rows": 73440,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:45:00+00:00"
+        },
+        "BTC_USDT-1h.feather": {
+          "rows": 18360,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        },
+        "ADA_USDT-5m.feather": {
+          "rows": 220320,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:55:00+00:00"
+        },
+        "ADA_USDT-4h.feather": {
+          "rows": 4956,
+          "first_utc": "2024-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T20:00:00+00:00"
+        },
+        "ADA_USDT-1d.feather": {
+          "rows": 1496,
+          "first_utc": "2022-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T00:00:00+00:00"
+        },
+        "ADA_USDT-15m.feather": {
+          "rows": 73440,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:45:00+00:00"
+        },
+        "ADA_USDT-1h.feather": {
+          "rows": 18360,
+          "first_utc": "2024-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        }
+      },
+      "output_directory": "user_data/crypto_quant/rd_program_20261105_v1/p0/recursive_spot_ADA_signals_v001",
+      "command": [
+        ".venv-paper/bin/python",
+        "-B",
+        "research/crypto/rd_program_20261105/p0/causality/observe_recursive.py",
+        "--case",
+        "spot_ADA",
+        "--execute"
+      ]
+    },
+    "futures_BTC": {
+      "pair": "BTC/USDT:USDT",
+      "config": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/nfi-x8-1x.json",
+        "sha256": "3f920566d920fff5ddeef2458a995a8f28a1bf25fd9d2059e211766e5f338129"
+      },
+      "market_snapshot": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+        "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+      },
+      "datadir": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+        "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e"
+      },
+      "selected_data": {
+        "futures/BTC_USDT_USDT-5m-futures.feather": "cf962c1257676c54ec95996e73c0029533e6abd658ee650b3572c51ef5146b1e",
+        "futures/BTC_USDT_USDT-1d-futures.feather": "b56dd1e319c66f7ab5e38cb78471145a15efaa017e8e4fbd02cc3acf71bb343d",
+        "futures/BTC_USDT_USDT-1h-mark.feather": "6444bc1f50d6e168f47a55f7a98786566476d116a3a215aabc46cc18280b53c1",
+        "futures/BTC_USDT_USDT-15m-futures.feather": "01a5eccbf03d5d0632859de01db38928fa4091030d57a5d95a09a0db05aa80d3",
+        "futures/BTC_USDT_USDT-1h-futures.feather": "311819b1147e85588f6fd7baaddec12fa325bde29dbd7487617d87c886c63740",
+        "futures/BTC_USDT_USDT-4h-futures.feather": "8b59528e37e9ebb0cef430c41cdf2d8868bc191073758dc336a6544b819fabf8",
+        "futures/BTC_USDT_USDT-1h-funding_rate.feather": "81b80dfa3e7f99182e2628c1989ce5e51afca38d13c3f038dfb4966b10dc5be5"
+      },
+      "data_coverage": {
+        "futures/BTC_USDT_USDT-5m-futures.feather": {
+          "rows": 343296,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:55:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-1d-futures.feather": {
+          "rows": 1861,
+          "first_utc": "2021-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T00:00:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-1h-mark.feather": {
+          "rows": 25680,
+          "first_utc": "2023-12-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-15m-futures.feather": {
+          "rows": 114432,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:45:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-1h-futures.feather": {
+          "rows": 28608,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-4h-futures.feather": {
+          "rows": 7152,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T20:00:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-1h-funding_rate.feather": {
+          "rows": 3210,
+          "first_utc": "2023-12-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T16:00:00+00:00"
+        }
+      },
+      "output_directory": "user_data/crypto_quant/rd_program_20261105_v1/p0/recursive_futures_BTC_signals_v001",
+      "command": [
+        ".venv-paper/bin/python",
+        "-B",
+        "research/crypto/rd_program_20261105/p0/causality/observe_recursive.py",
+        "--case",
+        "futures_BTC",
+        "--execute"
+      ]
+    },
+    "futures_ETH": {
+      "pair": "ETH/USDT:USDT",
+      "config": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/nfi-x8-1x.json",
+        "sha256": "3f920566d920fff5ddeef2458a995a8f28a1bf25fd9d2059e211766e5f338129"
+      },
+      "market_snapshot": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+        "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+      },
+      "datadir": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+        "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e"
+      },
+      "selected_data": {
+        "futures/BTC_USDT_USDT-5m-futures.feather": "cf962c1257676c54ec95996e73c0029533e6abd658ee650b3572c51ef5146b1e",
+        "futures/BTC_USDT_USDT-1d-futures.feather": "b56dd1e319c66f7ab5e38cb78471145a15efaa017e8e4fbd02cc3acf71bb343d",
+        "futures/BTC_USDT_USDT-1h-mark.feather": "6444bc1f50d6e168f47a55f7a98786566476d116a3a215aabc46cc18280b53c1",
+        "futures/BTC_USDT_USDT-15m-futures.feather": "01a5eccbf03d5d0632859de01db38928fa4091030d57a5d95a09a0db05aa80d3",
+        "futures/BTC_USDT_USDT-1h-futures.feather": "311819b1147e85588f6fd7baaddec12fa325bde29dbd7487617d87c886c63740",
+        "futures/BTC_USDT_USDT-4h-futures.feather": "8b59528e37e9ebb0cef430c41cdf2d8868bc191073758dc336a6544b819fabf8",
+        "futures/BTC_USDT_USDT-1h-funding_rate.feather": "81b80dfa3e7f99182e2628c1989ce5e51afca38d13c3f038dfb4966b10dc5be5",
+        "futures/ETH_USDT_USDT-5m-futures.feather": "dc5777bdf401b2a9eb975b4fc04f0dad28e19fa2c94b44091976b8674dc4651e",
+        "futures/ETH_USDT_USDT-1d-futures.feather": "8947b5d09f46bce55144b13f729bed203f45079fabea28d97c45822ef49b43de",
+        "futures/ETH_USDT_USDT-1h-mark.feather": "188f154f4dae7a98519d507af3541924adad4be3004c5eef16988cb5c2fa3c05",
+        "futures/ETH_USDT_USDT-15m-futures.feather": "0e580287bb4974cae446df1c13aa95f69e41bd0c9145291dfab492664d17ce0b",
+        "futures/ETH_USDT_USDT-1h-futures.feather": "580953ba9772e6e610234ddd7e3a305d7f1fa68e544314ce6871e23780cb59d4",
+        "futures/ETH_USDT_USDT-4h-futures.feather": "ce2da6853972f6aea8ca52fa199e431c290bc799e1562b668aa35f32dbfda34c",
+        "futures/ETH_USDT_USDT-1h-funding_rate.feather": "274ddb1bbd166518d59b370a4a1c08182288199f97124b8a2335d116c3a34784"
+      },
+      "data_coverage": {
+        "futures/BTC_USDT_USDT-5m-futures.feather": {
+          "rows": 343296,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:55:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-1d-futures.feather": {
+          "rows": 1861,
+          "first_utc": "2021-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T00:00:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-1h-mark.feather": {
+          "rows": 25680,
+          "first_utc": "2023-12-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-15m-futures.feather": {
+          "rows": 114432,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:45:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-1h-futures.feather": {
+          "rows": 28608,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-4h-futures.feather": {
+          "rows": 7152,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T20:00:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-1h-funding_rate.feather": {
+          "rows": 3210,
+          "first_utc": "2023-12-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T16:00:00+00:00"
+        },
+        "futures/ETH_USDT_USDT-5m-futures.feather": {
+          "rows": 343296,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:55:00+00:00"
+        },
+        "futures/ETH_USDT_USDT-1d-futures.feather": {
+          "rows": 1861,
+          "first_utc": "2021-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T00:00:00+00:00"
+        },
+        "futures/ETH_USDT_USDT-1h-mark.feather": {
+          "rows": 25680,
+          "first_utc": "2023-12-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        },
+        "futures/ETH_USDT_USDT-15m-futures.feather": {
+          "rows": 114432,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:45:00+00:00"
+        },
+        "futures/ETH_USDT_USDT-1h-futures.feather": {
+          "rows": 28608,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        },
+        "futures/ETH_USDT_USDT-4h-futures.feather": {
+          "rows": 7152,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T20:00:00+00:00"
+        },
+        "futures/ETH_USDT_USDT-1h-funding_rate.feather": {
+          "rows": 3210,
+          "first_utc": "2023-12-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T16:00:00+00:00"
+        }
+      },
+      "output_directory": "user_data/crypto_quant/rd_program_20261105_v1/p0/recursive_futures_ETH_signals_v001",
+      "command": [
+        ".venv-paper/bin/python",
+        "-B",
+        "research/crypto/rd_program_20261105/p0/causality/observe_recursive.py",
+        "--case",
+        "futures_ETH",
+        "--execute"
+      ]
+    },
+    "futures_ADA": {
+      "pair": "ADA/USDT:USDT",
+      "config": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/nfi-x8-1x.json",
+        "sha256": "3f920566d920fff5ddeef2458a995a8f28a1bf25fd9d2059e211766e5f338129"
+      },
+      "market_snapshot": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+        "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+      },
+      "datadir": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+        "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e"
+      },
+      "selected_data": {
+        "futures/BTC_USDT_USDT-5m-futures.feather": "cf962c1257676c54ec95996e73c0029533e6abd658ee650b3572c51ef5146b1e",
+        "futures/BTC_USDT_USDT-1d-futures.feather": "b56dd1e319c66f7ab5e38cb78471145a15efaa017e8e4fbd02cc3acf71bb343d",
+        "futures/BTC_USDT_USDT-1h-mark.feather": "6444bc1f50d6e168f47a55f7a98786566476d116a3a215aabc46cc18280b53c1",
+        "futures/BTC_USDT_USDT-15m-futures.feather": "01a5eccbf03d5d0632859de01db38928fa4091030d57a5d95a09a0db05aa80d3",
+        "futures/BTC_USDT_USDT-1h-futures.feather": "311819b1147e85588f6fd7baaddec12fa325bde29dbd7487617d87c886c63740",
+        "futures/BTC_USDT_USDT-4h-futures.feather": "8b59528e37e9ebb0cef430c41cdf2d8868bc191073758dc336a6544b819fabf8",
+        "futures/BTC_USDT_USDT-1h-funding_rate.feather": "81b80dfa3e7f99182e2628c1989ce5e51afca38d13c3f038dfb4966b10dc5be5",
+        "futures/ADA_USDT_USDT-5m-futures.feather": "b6032927b9be6e9c371bc0db6a994821c993688abdf03d9e6ae31a842b5bc769",
+        "futures/ADA_USDT_USDT-1d-futures.feather": "9d505c42ebd2cce5d794c12d0ad3e5a51313691e57212bf7d033f8e319e4b9db",
+        "futures/ADA_USDT_USDT-1h-mark.feather": "f97fb47591c77a83d20267ece8131aad6679cff9859dce50a90a54c6162f67eb",
+        "futures/ADA_USDT_USDT-15m-futures.feather": "bbe11c92c5e6de9c6a4808a076630308901b26921f23353b126a563834e9c3f7",
+        "futures/ADA_USDT_USDT-1h-futures.feather": "454065eb92f12f8aa8dad697f454806291deaa5cef80606bd278518e32c5a549",
+        "futures/ADA_USDT_USDT-4h-futures.feather": "21a30509a8763253184daf7cd3909bc333517834d39c1da7040a7b2c39f2ebff",
+        "futures/ADA_USDT_USDT-1h-funding_rate.feather": "43fe367827ec27dac8b09e0103a9f3b25de28d76fca87e9e6d189da9b5f81cc5"
+      },
+      "data_coverage": {
+        "futures/BTC_USDT_USDT-5m-futures.feather": {
+          "rows": 343296,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:55:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-1d-futures.feather": {
+          "rows": 1861,
+          "first_utc": "2021-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T00:00:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-1h-mark.feather": {
+          "rows": 25680,
+          "first_utc": "2023-12-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-15m-futures.feather": {
+          "rows": 114432,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:45:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-1h-futures.feather": {
+          "rows": 28608,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-4h-futures.feather": {
+          "rows": 7152,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T20:00:00+00:00"
+        },
+        "futures/BTC_USDT_USDT-1h-funding_rate.feather": {
+          "rows": 3210,
+          "first_utc": "2023-12-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T16:00:00+00:00"
+        },
+        "futures/ADA_USDT_USDT-5m-futures.feather": {
+          "rows": 343296,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:55:00+00:00"
+        },
+        "futures/ADA_USDT_USDT-1d-futures.feather": {
+          "rows": 1861,
+          "first_utc": "2021-10-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T00:00:00+00:00"
+        },
+        "futures/ADA_USDT_USDT-1h-mark.feather": {
+          "rows": 25680,
+          "first_utc": "2023-12-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        },
+        "futures/ADA_USDT_USDT-15m-futures.feather": {
+          "rows": 114432,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:45:00+00:00"
+        },
+        "futures/ADA_USDT_USDT-1h-futures.feather": {
+          "rows": 28608,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T23:00:00+00:00"
+        },
+        "futures/ADA_USDT_USDT-4h-futures.feather": {
+          "rows": 7152,
+          "first_utc": "2023-08-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T20:00:00+00:00"
+        },
+        "futures/ADA_USDT_USDT-1h-funding_rate.feather": {
+          "rows": 3210,
+          "first_utc": "2023-12-01T00:00:00+00:00",
+          "last_utc": "2026-11-04T16:00:00+00:00"
+        }
+      },
+      "output_directory": "user_data/crypto_quant/rd_program_20261105_v1/p0/recursive_futures_ADA_signals_v001",
+      "command": [
+        ".venv-paper/bin/python",
+        "-B",
+        "research/crypto/rd_program_20261105/p0/causality/observe_recursive.py",
+        "--case",
+        "futures_ADA",
+        "--execute"
+      ]
+    }
+  }
+}
