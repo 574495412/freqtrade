@@ -76,6 +76,7 @@ S 只有 12 个完整日和 1 个完整周，年化与尾部统计仅作描述�
 - [现金／BTC 评分表](../research/crypto/rd_program_20261105/p1/control_scorecard.json)
 - [原生账户评分表](../research/crypto/rd_program_20261105/p1/native/native_scorecard.json)
 - [执行台账](../research/crypto/rd_program_20261105/p1/execution_ledger.jsonl)
+- [控制账户登记字段映射](../research/crypto/rd_program_20261105/p1/control_manifest_field_map.json)：原登记以 `dependencies` 保存依赖版本，实际开始时刻在运行前写入的 runtime manifest；另表映射到合同字段名称，不回写或倒填原清单。
 - [候选准入](../research/crypto/rd_program_20261105/candidate_readiness_20261106.json)、[事件合同](../research/crypto/rd_program_20261105/p0/event_nav_contract.md)、[因果证据](../research/crypto/rd_program_20261105/p0/causality/README.md)
 - [固定因子代码与测试范围](../research/crypto/rd_program_20261105/factors/README.md)
 
