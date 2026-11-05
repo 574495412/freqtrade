@@ -1,0 +1,1148 @@
+{
+  "spot_L": {
+    "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "start": "2025-01-01T00:00:00Z",
+    "end": "2026-09-01T00:00:00Z",
+    "comparison_end": "2026-08-31T23:00:00Z",
+    "pairs": [
+      "BTC/USDT",
+      "ETH/USDT",
+      "SOL/USDT",
+      "AVAX/USDT",
+      "DOGE/USDT",
+      "XRP/USDT",
+      "ADA/USDT",
+      "LINK/USDT",
+      "DOT/USDT",
+      "FIL/USDT",
+      "NEAR/USDT",
+      "ATOM/USDT",
+      "DYDX/USDT",
+      "LTC/USDT",
+      "BCH/USDT",
+      "ETC/USDT",
+      "GALA/USDT",
+      "SAND/USDT",
+      "UNI/USDT",
+      "IOTA/USDT",
+      "RUNE/USDT",
+      "AXS/USDT",
+      "EGLD/USDT",
+      "ALGO/USDT",
+      "SNX/USDT",
+      "CRV/USDT",
+      "MASK/USDT",
+      "SUSHI/USDT",
+      "KSM/USDT",
+      "IOTX/USDT",
+      "MANA/USDT",
+      "NEO/USDT",
+      "GRT/USDT",
+      "TRX/USDT",
+      "SKL/USDT",
+      "THETA/USDT"
+    ],
+    "initial_equity_usdt": 1000,
+    "allowed_leverage": 1.0,
+    "total_cost_bps_per_side": [
+      13,
+      20
+    ],
+    "periods": [
+      {
+        "name": "continuous",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-08-31T23:00:00Z"
+      },
+      {
+        "name": "calendar-2025",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-01-01T00:00:00Z"
+      },
+      {
+        "name": "calendar-2026-through-august",
+        "start": "2026-01-01T00:00:00Z",
+        "end": "2026-08-31T23:00:00Z"
+      }
+    ],
+    "memory_guard_bytes": 5905580032,
+    "wall_guard_seconds": 3600,
+    "schema": "freqtrade.rd.standalone-parity-adapter.v1",
+    "dataset_id": "spot_L",
+    "parent_plan": {
+      "path": "research/crypto/spot_baseline_20261105_v003/plan-long.json",
+      "sha256": "ee471524b1b3892a9a85219b3d3ac04e8a7837a69157000ebe489f59d1763d60"
+    },
+    "engine_source": ".",
+    "engine_manifest": {
+      "path": "deploy/upstream-source.json",
+      "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+    },
+    "datadir": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+    "data_receipts": {
+      "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+      "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+    },
+    "storage_source": {
+      "path": "research/crypto/nfi_original_storage.py",
+      "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+    },
+    "observer_source": {
+      "path": "research/crypto/spot_baseline_20261105/spot_observer.py",
+      "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+    },
+    "market_snapshot": {
+      "path": "research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+      "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+    },
+    "environment": {
+      "path": "research/crypto/strategy_comparison_20261105/environment.json",
+      "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+    },
+    "marks": {
+      "BTC/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/BTC_USDT-1h.feather",
+        "sha256": "beed6bde8f88040b0af3457543d9d9a6cd0d15716b521cec1614ebe9e14a3a76"
+      },
+      "ETH/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/ETH_USDT-1h.feather",
+        "sha256": "1a7e97e71696dc76472fb89c5c474824085f0a4601fc6a4007c1911780d51957"
+      },
+      "SOL/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/SOL_USDT-1h.feather",
+        "sha256": "3935e5b787bea8f757051b09364d07ab2bfa63adb9b7d6a8223d77a8100d4ed3"
+      },
+      "AVAX/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/AVAX_USDT-1h.feather",
+        "sha256": "157c9db472cc43130422063f8eabb861bbe2fb7257fbf3880ea686e2d4093877"
+      },
+      "DOGE/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/DOGE_USDT-1h.feather",
+        "sha256": "b2243ef3fe91a616818bcc98bad7c548d6f1c6fb603dc91405279e521fbea254"
+      },
+      "XRP/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/XRP_USDT-1h.feather",
+        "sha256": "5cbe5647608e5d6df2e5eeedbf21d7cf47a6036307a5bcda6814e8b1b1428d86"
+      },
+      "ADA/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/ADA_USDT-1h.feather",
+        "sha256": "ef505b1e26c4beed685cfddbde03110bb2f11b11ec2b8aa5d631c1449981d9ae"
+      },
+      "LINK/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/LINK_USDT-1h.feather",
+        "sha256": "35a4bfdd0fba9d78e10b977aa3729816082a7a2c22c08200051d0bb2a077c743"
+      },
+      "DOT/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/DOT_USDT-1h.feather",
+        "sha256": "91ec42e87490c833df842b4a49b51cc281d599908df3dd7bf7f96a0dac407bf8"
+      },
+      "FIL/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/FIL_USDT-1h.feather",
+        "sha256": "36e610b3915683b2e8ece9afdfcfc48b407c8a7460787f350e4817dbe54e7eb0"
+      },
+      "NEAR/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/NEAR_USDT-1h.feather",
+        "sha256": "77c58f27b92248918b4eb7b4acae70c4f690fdc89211d95e025a76e99a16ff19"
+      },
+      "ATOM/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/ATOM_USDT-1h.feather",
+        "sha256": "49a18a91d08d421b12bdd4ac0c2a972b44720ff7ba89fcc30969e3fe815678b7"
+      },
+      "DYDX/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/DYDX_USDT-1h.feather",
+        "sha256": "f34a2681350211e3f779f2a6bd95a40e221d18a7b10ac1a3e29187b4d51f57ec"
+      },
+      "LTC/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/LTC_USDT-1h.feather",
+        "sha256": "0c6bb0616a9073a24c22ad92659e51874923b8a37197b570f571090109afd904"
+      },
+      "BCH/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/BCH_USDT-1h.feather",
+        "sha256": "bad2dfff9d8e78c714ab947e3344e6fa1a24992ca0a6ca8e916a560b6dc9129c"
+      },
+      "ETC/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/ETC_USDT-1h.feather",
+        "sha256": "4b144ba9817a818571ab082b9c78dac86e7ba446bc02de4efe9b68a7508f7694"
+      },
+      "GALA/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/GALA_USDT-1h.feather",
+        "sha256": "fef6e32a885dfa046e6dce3f1ed4e7289a2b228a3882db2569dfd189ec58e35e"
+      },
+      "SAND/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/SAND_USDT-1h.feather",
+        "sha256": "8f1753813742318986d58e11beef274e664bd4e9c55b4b6ee07023ed6e367360"
+      },
+      "UNI/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/UNI_USDT-1h.feather",
+        "sha256": "2e097e484aa1a71ac25febe37ae7136e022213669d66efc1e7b92166ceafcc96"
+      },
+      "IOTA/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/IOTA_USDT-1h.feather",
+        "sha256": "9d995271cf03be24389d1ee5f2c99389013201249c086c0af7950bee5635ecc3"
+      },
+      "RUNE/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/RUNE_USDT-1h.feather",
+        "sha256": "85bc4908251a8400d939382a63c8aff22b266c380ae1d0168232765d817e1112"
+      },
+      "AXS/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/AXS_USDT-1h.feather",
+        "sha256": "2bd58582f591361a786ea32401f8c29eb0aa2f9eecf065693ad0ce9e038d0bf6"
+      },
+      "EGLD/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/EGLD_USDT-1h.feather",
+        "sha256": "5c3a1c19f407d4286e36081108c2ab649609cf4d28434c63a2d8744c7d7bb59e"
+      },
+      "ALGO/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/ALGO_USDT-1h.feather",
+        "sha256": "1576887982b7d6c8ccb35a5f0bbb4a659a755ce664a66a27c8d403d93cf8673f"
+      },
+      "SNX/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/SNX_USDT-1h.feather",
+        "sha256": "5220a0250908157567377835e8bf3fab4d8f9103f7cdf62f286ed16ade0bfaae"
+      },
+      "CRV/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/CRV_USDT-1h.feather",
+        "sha256": "bc6c435da99f8da35d95c238aaad64c4622bb5b21b7e91bf48301709f4fe0c63"
+      },
+      "MASK/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/MASK_USDT-1h.feather",
+        "sha256": "b5841cca23578828a09cb54304a240632ad6635ca6c0ff249ef727006d86cc36"
+      },
+      "SUSHI/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/SUSHI_USDT-1h.feather",
+        "sha256": "60b00e3ca1c23d12d0e4f48a9def71fc75a43dae2e2aa7901c37388ca3f32dee"
+      },
+      "KSM/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/KSM_USDT-1h.feather",
+        "sha256": "be0f5f2448387aa29406a9e4527e090cf58e9d6a2c62bf7b22fd7fff942eb1ad"
+      },
+      "IOTX/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/IOTX_USDT-1h.feather",
+        "sha256": "e0ec01b6f44657fc448d52c4244ac97b3540097208c9e931601162f436cd5916"
+      },
+      "MANA/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/MANA_USDT-1h.feather",
+        "sha256": "657e4bef05a8f2294007daee6694d7434e8067aee45ef21cdcb6c83462d8e7c1"
+      },
+      "NEO/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/NEO_USDT-1h.feather",
+        "sha256": "60363e08a18d37b6368eea87ff57973ce2efe97602b4228ae6544b51f4e373ac"
+      },
+      "GRT/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/GRT_USDT-1h.feather",
+        "sha256": "6a989ddaf221551f929bb30131c413bff91221e2169dfcbc39a5602e64fc54e1"
+      },
+      "TRX/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/TRX_USDT-1h.feather",
+        "sha256": "07cce9ae5165f02d795edc4110566cb692a267ea214ba49f8da9674a2aaf4c55"
+      },
+      "SKL/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/SKL_USDT-1h.feather",
+        "sha256": "e958178e2895dac78738cae7d28114ffd014375093848a2590c0893ea2924d33"
+      },
+      "THETA/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/THETA_USDT-1h.feather",
+        "sha256": "a1f02dd55331b6a125299799c65f4beb81032f1557a72564b3fb899fb7b9c10f"
+      }
+    },
+    "candidates": [
+      {
+        "name": "nfi-x8-spot",
+        "strategy": "NostalgiaForInfinityX8",
+        "config": {
+          "path": "research/crypto/spot_baseline_20261105/nfi-x8-spot.json",
+          "sha256": "2277440c2116f5dddedad0828632fb1ffbe3db421946036fe5c9fead8c648d89"
+        },
+        "source_files": {
+          "NostalgiaForInfinityX8.py": {
+            "path": "research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+            "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+          }
+        },
+        "max_open_trades": 6,
+        "stake_amount": "unlimited",
+        "signal_timeframe": "5m",
+        "matching_timeframe": "5m",
+        "source_and_risk_behavior": "unchanged upstream native spot signals and position lifecycle; long-only"
+      }
+    ],
+    "research_support": {},
+    "runner": {
+      "path": "research/crypto/spot_baseline_20261105_v003/run_spot_comparison.py",
+      "sha256": "a1a17d549876f2595e40ea67ee226e41782a0c334ca4456b8dce4e79f18da9ed"
+    },
+    "runner_sha256": "a1a17d549876f2595e40ea67ee226e41782a0c334ca4456b8dce4e79f18da9ed",
+    "risk_profile": "native_baseline",
+    "RD1_applied": false,
+    "scope": "legacy hourly-anchor engineering parity only; not new P1 endpoint or economic qualification",
+    "financial_runs_started": 0,
+    "guard_source": {
+      "path": "research/crypto/rd_program_20261105/p0/environment/guard.py",
+      "sha256": "ec2e8f023b206d16a1ca1339edeb77f0507aa1ce0193435a75163ce8f1fa24c7"
+    }
+  },
+  "spot_S": {
+    "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "start": "2026-10-23T00:00:00Z",
+    "end": "2026-11-05T00:00:00Z",
+    "comparison_end": "2026-11-04T23:00:00Z",
+    "pairs": [
+      "BTC/USDT",
+      "ETH/USDT",
+      "SOL/USDT",
+      "AVAX/USDT",
+      "DOGE/USDT",
+      "XRP/USDT",
+      "ADA/USDT",
+      "LINK/USDT",
+      "DOT/USDT",
+      "FIL/USDT",
+      "NEAR/USDT",
+      "ATOM/USDT",
+      "DYDX/USDT",
+      "LTC/USDT",
+      "BCH/USDT",
+      "ETC/USDT",
+      "GALA/USDT",
+      "SAND/USDT",
+      "UNI/USDT",
+      "IOTA/USDT",
+      "RUNE/USDT",
+      "AXS/USDT",
+      "EGLD/USDT",
+      "ALGO/USDT",
+      "SNX/USDT",
+      "CRV/USDT",
+      "MASK/USDT",
+      "SUSHI/USDT",
+      "KSM/USDT",
+      "IOTX/USDT",
+      "MANA/USDT",
+      "NEO/USDT",
+      "GRT/USDT",
+      "TRX/USDT",
+      "SKL/USDT",
+      "THETA/USDT"
+    ],
+    "initial_equity_usdt": 1000,
+    "allowed_leverage": 1.0,
+    "total_cost_bps_per_side": [
+      13,
+      20
+    ],
+    "periods": [
+      {
+        "name": "post-source-period",
+        "start": "2026-10-23T00:00:00Z",
+        "end": "2026-11-04T23:00:00Z"
+      }
+    ],
+    "memory_guard_bytes": 5905580032,
+    "wall_guard_seconds": 3600,
+    "schema": "freqtrade.rd.standalone-parity-adapter.v1",
+    "dataset_id": "spot_S",
+    "parent_plan": {
+      "path": "research/crypto/spot_baseline_20261105_v003/plan-short.json",
+      "sha256": "4efa1a0501af31eeaecc5074d5b30d68a9fd34e124bc1cc860b9a4d8af12606a"
+    },
+    "engine_source": ".",
+    "engine_manifest": {
+      "path": "deploy/upstream-source.json",
+      "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+    },
+    "datadir": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles",
+    "data_receipts": {
+      "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/data-receipts.json",
+      "sha256": "d1c55449e6b38b67a577da3fcae4d2884e2af6274f27e12b0f147ffc6d0715ff"
+    },
+    "storage_source": {
+      "path": "research/crypto/nfi_original_storage.py",
+      "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+    },
+    "observer_source": {
+      "path": "research/crypto/spot_baseline_20261105/spot_observer.py",
+      "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+    },
+    "market_snapshot": {
+      "path": "research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+      "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+    },
+    "environment": {
+      "path": "research/crypto/strategy_comparison_20261105/environment.json",
+      "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+    },
+    "marks": {
+      "BTC/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/BTC_USDT-1h.feather",
+        "sha256": "1bc7479a88987814c274cc0d71e0758ce563fb8d47fe0bad7307381a6c9dbf77"
+      },
+      "ETH/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/ETH_USDT-1h.feather",
+        "sha256": "cc2336921d695cc7dc0dcbea0ed53ba2993d974ce1d89c25876a4deb2a2b0b1b"
+      },
+      "SOL/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/SOL_USDT-1h.feather",
+        "sha256": "dc189dde2c51a360b5e1e9036b4bf8694e7a67acb357ed98999d3056cd78c2c2"
+      },
+      "AVAX/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/AVAX_USDT-1h.feather",
+        "sha256": "6daf663f0e1accbf37eb7525508e35108626a88c3b584c119bbfec7e3e1c888c"
+      },
+      "DOGE/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/DOGE_USDT-1h.feather",
+        "sha256": "e38c404464290e4867a5499517bfa0d13dafb6396216037c3d27905d3b59a26a"
+      },
+      "XRP/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/XRP_USDT-1h.feather",
+        "sha256": "99391c10daa756eda0e6b6f95511f670ea893af8be4458430da49bf774d0575a"
+      },
+      "ADA/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/ADA_USDT-1h.feather",
+        "sha256": "1567afe355ab4f9f0cd25f2cb2eff62ccf63cf701f69eca77fd02093380d5679"
+      },
+      "LINK/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/LINK_USDT-1h.feather",
+        "sha256": "21639a7f77ed413ba41ca92be6caf4501f633f2610fadcc8c15b8c3112eb8c91"
+      },
+      "DOT/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/DOT_USDT-1h.feather",
+        "sha256": "95309cc32b14650e4651db73e3eba485d9354f22f3a105b7efab63f33be39a47"
+      },
+      "FIL/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/FIL_USDT-1h.feather",
+        "sha256": "c9bf027625f935db63b295fc19811032446a274b35b3bdb649f8d74ce0a60eab"
+      },
+      "NEAR/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/NEAR_USDT-1h.feather",
+        "sha256": "7ef813fce316533cfb638fa3f7787d7d19307dc6a9895ba73a65696a0b6e3595"
+      },
+      "ATOM/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/ATOM_USDT-1h.feather",
+        "sha256": "bb5c34cab30a49cd288e2fba116d3e74cce1bdf864594b101ef711092df0c192"
+      },
+      "DYDX/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/DYDX_USDT-1h.feather",
+        "sha256": "0381f5a259b05dc1a3aff20a445b310f63f6be63395f398ea960e2b5be17a011"
+      },
+      "LTC/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/LTC_USDT-1h.feather",
+        "sha256": "fd08d7607da2005634f0bab8cf8508cbf1252d879da0345f178b08d66a595d31"
+      },
+      "BCH/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/BCH_USDT-1h.feather",
+        "sha256": "34fe94d51bebabac33705f1346c0a5f4b303b0d3f477a4642714853276b5be46"
+      },
+      "ETC/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/ETC_USDT-1h.feather",
+        "sha256": "068f14d7f759a7be5f685972103d8338c68189e761ca053b6bc74f073e432fe3"
+      },
+      "GALA/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/GALA_USDT-1h.feather",
+        "sha256": "a20e15824ae306331a20cdc1fef01694e78ce428eb03cc05d5909a61c7adb847"
+      },
+      "SAND/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/SAND_USDT-1h.feather",
+        "sha256": "34e61a19ad542d86ac49749b87d81a461d34b6b9472d68c6558663b5650ec458"
+      },
+      "UNI/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/UNI_USDT-1h.feather",
+        "sha256": "a0f300bb5c117dd3f257b281bc21238f4f481fa60715f50594709c0a97f323fd"
+      },
+      "IOTA/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/IOTA_USDT-1h.feather",
+        "sha256": "41392637a4cd9d2117189b218a7ef1395c7aa04078e954a221ca348aa89d6279"
+      },
+      "RUNE/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/RUNE_USDT-1h.feather",
+        "sha256": "45e28fc517a8d5a090b13dc0f38318ca6865b760c84c7728f18ae90fc50032a4"
+      },
+      "AXS/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/AXS_USDT-1h.feather",
+        "sha256": "d1341395248f24bcb190dd8eb201fccb826ec288484f4059d74d09497f79f1db"
+      },
+      "EGLD/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/EGLD_USDT-1h.feather",
+        "sha256": "1e76ef86f8d862c74879edb3380da4eb9940b431830f06b142b3f4de5d9d72b9"
+      },
+      "ALGO/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/ALGO_USDT-1h.feather",
+        "sha256": "b266c25d456c7e0eb6957434da9b4b7e9f4d393bdb034ad358abde1d91b74e38"
+      },
+      "SNX/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/SNX_USDT-1h.feather",
+        "sha256": "06f6b4d48a78f2bb6cd2c968b99b37dec39e43a4b0da3234451919d9c197be3d"
+      },
+      "CRV/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/CRV_USDT-1h.feather",
+        "sha256": "9d2f092b753ea744c315274bc1c0e4389a498b1285a856aa0dbd866f933e7c20"
+      },
+      "MASK/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/MASK_USDT-1h.feather",
+        "sha256": "663d9f6bd02c7524c9a97ec9acc75e3cc424a18e1d94777b60c95f4daa3bc798"
+      },
+      "SUSHI/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/SUSHI_USDT-1h.feather",
+        "sha256": "34db98ead99f55d8552cbcf0bd774544e0f3cc22e06549a50d87398dafaefec0"
+      },
+      "KSM/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/KSM_USDT-1h.feather",
+        "sha256": "dba28cb5ccd9b852ac107a4fe7dff0abb018c59e3b0b8d44f4dd1799363ac0bd"
+      },
+      "IOTX/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/IOTX_USDT-1h.feather",
+        "sha256": "c1db27bab794cc0053f4c4e0d12db4e039dc512d71499d3408958a42924402d0"
+      },
+      "MANA/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/MANA_USDT-1h.feather",
+        "sha256": "5b3718ed4c29277bee0aab4e94a49d3876e7a2ed09e8d4d97a48b6db26a34f5a"
+      },
+      "NEO/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/NEO_USDT-1h.feather",
+        "sha256": "e5ed688c3e9dbdac2bd461573e7c5f9e04af3d114fa3afe14755955f678dff13"
+      },
+      "GRT/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/GRT_USDT-1h.feather",
+        "sha256": "329127ab9b02eae2790df6a0e41564f627129365ebb37eccceb715faff932a69"
+      },
+      "TRX/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/TRX_USDT-1h.feather",
+        "sha256": "56b0c770bc225b93d0c29d7c7967d5a129fbb7d1b55b5cbaf822e5f3b2c1aa18"
+      },
+      "SKL/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/SKL_USDT-1h.feather",
+        "sha256": "717fe4861434af2d4bf8facb13cc1d47f00941e9618343a5c3d0bd93a99ef510"
+      },
+      "THETA/USDT": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles/THETA_USDT-1h.feather",
+        "sha256": "63f89a522138be332b632519cd295dfcea46cdde6dc5d8ed3e5042038edd51e9"
+      }
+    },
+    "candidates": [
+      {
+        "name": "nfi-x8-spot",
+        "strategy": "NostalgiaForInfinityX8",
+        "config": {
+          "path": "research/crypto/spot_baseline_20261105/nfi-x8-spot.json",
+          "sha256": "2277440c2116f5dddedad0828632fb1ffbe3db421946036fe5c9fead8c648d89"
+        },
+        "source_files": {
+          "NostalgiaForInfinityX8.py": {
+            "path": "research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+            "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+          }
+        },
+        "max_open_trades": 6,
+        "stake_amount": "unlimited",
+        "signal_timeframe": "5m",
+        "matching_timeframe": "5m",
+        "source_and_risk_behavior": "unchanged upstream native spot signals and position lifecycle; long-only"
+      }
+    ],
+    "research_support": {},
+    "runner": {
+      "path": "research/crypto/spot_baseline_20261105_v003/run_spot_comparison.py",
+      "sha256": "a1a17d549876f2595e40ea67ee226e41782a0c334ca4456b8dce4e79f18da9ed"
+    },
+    "runner_sha256": "a1a17d549876f2595e40ea67ee226e41782a0c334ca4456b8dce4e79f18da9ed",
+    "risk_profile": "native_baseline",
+    "RD1_applied": false,
+    "scope": "legacy hourly-anchor engineering parity only; not new P1 endpoint or economic qualification",
+    "financial_runs_started": 0,
+    "guard_source": {
+      "path": "research/crypto/rd_program_20261105/p0/environment/guard.py",
+      "sha256": "ec2e8f023b206d16a1ca1339edeb77f0507aa1ce0193435a75163ce8f1fa24c7"
+    }
+  },
+  "futures_L": {
+    "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "start": "2025-01-01T00:00:00Z",
+    "end": "2026-09-01T00:00:00Z",
+    "comparison_end": "2026-08-31T23:00:00Z",
+    "pairs": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "SOL/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "TRB/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "XRP/USDT:USDT",
+      "ADA/USDT:USDT",
+      "BNB/USDT:USDT",
+      "LINK/USDT:USDT",
+      "DOT/USDT:USDT",
+      "FIL/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "ATOM/USDT:USDT",
+      "DYDX/USDT:USDT",
+      "LTC/USDT:USDT",
+      "BCH/USDT:USDT",
+      "ETC/USDT:USDT",
+      "GALA/USDT:USDT",
+      "SAND/USDT:USDT",
+      "UNI/USDT:USDT",
+      "IOTA/USDT:USDT",
+      "RUNE/USDT:USDT",
+      "AXS/USDT:USDT",
+      "AAVE/USDT:USDT",
+      "EGLD/USDT:USDT",
+      "ALGO/USDT:USDT",
+      "SNX/USDT:USDT",
+      "CRV/USDT:USDT",
+      "MASK/USDT:USDT",
+      "SUSHI/USDT:USDT",
+      "KSM/USDT:USDT",
+      "IOTX/USDT:USDT",
+      "MANA/USDT:USDT",
+      "NEO/USDT:USDT",
+      "GRT/USDT:USDT",
+      "TRX/USDT:USDT",
+      "CELO/USDT:USDT",
+      "SKL/USDT:USDT",
+      "THETA/USDT:USDT"
+    ],
+    "initial_equity_usdt": 1000,
+    "allowed_leverage": 1.0,
+    "total_cost_bps_per_side": [
+      8
+    ],
+    "periods": [
+      {
+        "name": "continuous",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-08-31T23:00:00Z"
+      },
+      {
+        "name": "calendar-2025",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-01-01T00:00:00Z"
+      },
+      {
+        "name": "calendar-2026-through-august",
+        "start": "2026-01-01T00:00:00Z",
+        "end": "2026-08-31T23:00:00Z"
+      }
+    ],
+    "memory_guard_bytes": 5905580032,
+    "wall_guard_seconds": 3600,
+    "schema": "freqtrade.rd.standalone-parity-adapter.v1",
+    "dataset_id": "futures_L",
+    "parent_plan": {
+      "path": "research/crypto/strategy_comparison_wide_20261105/plan.json",
+      "sha256": "1b0fea99e5d5809e8b0f24c028ebb6adc1be163eea840775d96892db40d5edc6"
+    },
+    "engine_source": ".",
+    "engine_manifest": {
+      "path": "deploy/upstream-source.json",
+      "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+    },
+    "datadir": "user_data/crypto_quant/nfi40_data_v002/candles",
+    "data_receipts": {
+      "path": "research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+      "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47"
+    },
+    "storage_source": {
+      "path": "research/crypto/nfi_original_storage.py",
+      "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+    },
+    "observer_source": {
+      "path": "user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+      "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+    },
+    "market_snapshot": {
+      "path": "research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+      "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+    },
+    "environment": {
+      "path": "research/crypto/strategy_comparison_20261105/environment.json",
+      "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+    },
+    "marks": {
+      "AAVE/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/AAVE_USDT_USDT-1h-mark.feather",
+        "sha256": "38bdccdaec7e348a6056390666b715e5c18df0b9c0f79feb5795d9371d2a87fb"
+      },
+      "ADA/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/ADA_USDT_USDT-1h-mark.feather",
+        "sha256": "dc3b578e04fa23c3c58e64b64916eb17c7471aee910d7334b279840bd58dd7be"
+      },
+      "ALGO/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/ALGO_USDT_USDT-1h-mark.feather",
+        "sha256": "38a72f320fa0419d7c80e093db3ac8d5b8c0a3fd736720fdd0bc3844c17bf6fc"
+      },
+      "ATOM/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/ATOM_USDT_USDT-1h-mark.feather",
+        "sha256": "01aa0fb297b66261581a00ae85b9260ed84ea73cf2faea9f839068c348fa61bd"
+      },
+      "AVAX/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/AVAX_USDT_USDT-1h-mark.feather",
+        "sha256": "e7deb6537e934eb2775cc6bc31fe036335002f6898d869af6da636133d6a1d46"
+      },
+      "AXS/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/AXS_USDT_USDT-1h-mark.feather",
+        "sha256": "76c88ede541477ac1f60386c4e1d8afce362218e52638701b1e2ba4b399a8718"
+      },
+      "BCH/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/BCH_USDT_USDT-1h-mark.feather",
+        "sha256": "c8abf623f885bd41c6608124a0271f0dea7cee66337deb0e5adc863407daa988"
+      },
+      "BNB/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/BNB_USDT_USDT-1h-mark.feather",
+        "sha256": "aa19bfe19bc1b7ffe90e9d6a5bb5da1f806f8f5aa3f67e6a6405e62a91a392be"
+      },
+      "BTC/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+        "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+      },
+      "CELO/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/CELO_USDT_USDT-1h-mark.feather",
+        "sha256": "59c4b837ebed5a08c3ed9923f054e69033aa426fec272dbb3c9e83d9dc35993b"
+      },
+      "CRV/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/CRV_USDT_USDT-1h-mark.feather",
+        "sha256": "3c6209fe6cdcf397c28455622f661ca48cf58eb8b0a1da0ef4a4b7e1135bde3d"
+      },
+      "DOGE/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/DOGE_USDT_USDT-1h-mark.feather",
+        "sha256": "1acea3fba1b5f6035dc9ec3d3e1d814ff43081cd2439106433a52bb2ddccbb25"
+      },
+      "DOT/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/DOT_USDT_USDT-1h-mark.feather",
+        "sha256": "045ce00af8852a27fdaeb3bda7d7719642b3bde0186c178e462686d99c5c0afa"
+      },
+      "DYDX/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/DYDX_USDT_USDT-1h-mark.feather",
+        "sha256": "deebd22cdd106f64ab35d91aaefcac8ffe16cc7d4a92a145c9df590700e9ae7f"
+      },
+      "EGLD/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/EGLD_USDT_USDT-1h-mark.feather",
+        "sha256": "50f47be9e90565203673aca6e69e7ec87ab3d68b717503b2c888dd04dd94b472"
+      },
+      "ETC/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/ETC_USDT_USDT-1h-mark.feather",
+        "sha256": "b8e72f8b8af30610257028b5227a668c2a2875c8c9aeb2f00f1b9755735a5d6b"
+      },
+      "ETH/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+        "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+      },
+      "FIL/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/FIL_USDT_USDT-1h-mark.feather",
+        "sha256": "005cb9c910940ebc32877f86acfba18ffef040110fbdd68765936e9fbe81751c"
+      },
+      "GALA/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/GALA_USDT_USDT-1h-mark.feather",
+        "sha256": "a2d6e16d219784969f22dbd4372f8b5368d705c95975f1cabf5808bf13e202af"
+      },
+      "GRT/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/GRT_USDT_USDT-1h-mark.feather",
+        "sha256": "888a75ff79a1765010eefe8d609b6ad90af64cb815995b48c035041dccaa0bad"
+      },
+      "IOTA/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/IOTA_USDT_USDT-1h-mark.feather",
+        "sha256": "9871cb4866c5889cad59377a329273efa75b5768b434b286dbfcfb031a4ecfbd"
+      },
+      "IOTX/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/IOTX_USDT_USDT-1h-mark.feather",
+        "sha256": "eaab88e11324c4267889f7f51252e4d1ff476a2872fe4a4bfa5de4e596928511"
+      },
+      "KSM/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/KSM_USDT_USDT-1h-mark.feather",
+        "sha256": "12388a3f1319895bd671e156ea62c1d67ddefd147ff0d9535d05dbc403ad1e33"
+      },
+      "LINK/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/LINK_USDT_USDT-1h-mark.feather",
+        "sha256": "1a982092bca60cba7b74254c4c63254493565badf87bdd1913a86785f56549cd"
+      },
+      "LTC/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/LTC_USDT_USDT-1h-mark.feather",
+        "sha256": "05e04be247cc13f8127c7a809f8b1032e974586e60bdfddd07ba6d5a8ae581e1"
+      },
+      "MANA/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/MANA_USDT_USDT-1h-mark.feather",
+        "sha256": "accfd57d92a4bd5d47c12a42594359656201aa8cdcc8d6758b8c3ede4476aa8c"
+      },
+      "MASK/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/MASK_USDT_USDT-1h-mark.feather",
+        "sha256": "a8da4a5a03b1f88140266521811d22bf0e380cacc700a9267ae2226ac4d0f5fa"
+      },
+      "NEAR/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/NEAR_USDT_USDT-1h-mark.feather",
+        "sha256": "bb5c568f61c0914eabb32b8070b433589734e07640ed60831ac8c661118f024f"
+      },
+      "NEO/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/NEO_USDT_USDT-1h-mark.feather",
+        "sha256": "7f1b2d607e1e955807b31e9ff86126e8be42b0868a97839a8420821684b70ddf"
+      },
+      "RUNE/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/RUNE_USDT_USDT-1h-mark.feather",
+        "sha256": "e551a3c2aa5e48bcfe600ee45024520566ae5b22b70d143afa7278c3112d51c4"
+      },
+      "SAND/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/SAND_USDT_USDT-1h-mark.feather",
+        "sha256": "1ad3d82d0e6005820df40f5b7d02b828c65f7378dbf2aabeac5b373993cf5b61"
+      },
+      "SKL/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/SKL_USDT_USDT-1h-mark.feather",
+        "sha256": "0a7df2e2d6b7d916a8bb70bc122171e14ea2483b22c3c1082509250bfb0a9aad"
+      },
+      "SNX/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/SNX_USDT_USDT-1h-mark.feather",
+        "sha256": "8ff1ca880660c71c9cb7f3b587884bb58c7872c2ab648ebb51fb5f8e5fa114be"
+      },
+      "SOL/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/SOL_USDT_USDT-1h-mark.feather",
+        "sha256": "c9e5089e38745a2f2d168b1190c9d866ca915225e2ffa22b52a1b2f7382e895b"
+      },
+      "SUSHI/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/SUSHI_USDT_USDT-1h-mark.feather",
+        "sha256": "77ddd351117bba249d756ded4a39f3554a76d832a9cc1661e8ceab053be693a9"
+      },
+      "THETA/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/THETA_USDT_USDT-1h-mark.feather",
+        "sha256": "5103c75188045a77c337a06f86296ea630f9d4323cd03d7623a27d537f1d3c6a"
+      },
+      "TRB/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/TRB_USDT_USDT-1h-mark.feather",
+        "sha256": "dfcf7f2b5d02de406a24d61ecafd1fbcb599adb8a35f44658f6a726762f4b0b0"
+      },
+      "TRX/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/TRX_USDT_USDT-1h-mark.feather",
+        "sha256": "53e8caee9894e6a5ace2e24a228966fe1aa69570184f871368857120b6690118"
+      },
+      "UNI/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/UNI_USDT_USDT-1h-mark.feather",
+        "sha256": "af4e27b504902bae1816ff9ba606957665b1d188cce9a262994427bbe0ba896c"
+      },
+      "XRP/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/XRP_USDT_USDT-1h-mark.feather",
+        "sha256": "e821b1b0b56da2a98337e49c605661aa8d62e4a383550c64c94edc060d41c89a"
+      }
+    },
+    "candidates": [
+      {
+        "name": "nfi-x8-1x",
+        "strategy": "NostalgiaForInfinityX8",
+        "config": {
+          "path": "research/crypto/strategy_comparison_wide_20261105/nfi-x8-1x.json",
+          "sha256": "3f920566d920fff5ddeef2458a995a8f28a1bf25fd9d2059e211766e5f338129"
+        },
+        "source_files": {
+          "NostalgiaForInfinityX8.py": {
+            "path": "research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+            "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+          }
+        },
+        "max_open_trades": 6,
+        "stake_amount": "unlimited",
+        "signal_timeframe": "5m",
+        "matching_timeframe": "5m",
+        "source_and_risk_behavior": "frozen existing source; common 1x normalization; existing compact and half-risk variants retained"
+      }
+    ],
+    "research_support": {},
+    "runner": {
+      "path": "research/crypto/strategy_comparison_wide_20261105/run_wide_comparison.py",
+      "sha256": "866d2792d8f8ac7469b378d800e0846ade27dbe0e8f71e9a8cf7854ef0f86ba5"
+    },
+    "runner_sha256": "866d2792d8f8ac7469b378d800e0846ade27dbe0e8f71e9a8cf7854ef0f86ba5",
+    "risk_profile": "native_baseline",
+    "RD1_applied": false,
+    "scope": "legacy hourly-anchor engineering parity only; not new P1 endpoint or economic qualification",
+    "financial_runs_started": 0,
+    "guard_source": {
+      "path": "research/crypto/rd_program_20261105/p0/environment/guard.py",
+      "sha256": "ec2e8f023b206d16a1ca1339edeb77f0507aa1ce0193435a75163ce8f1fa24c7"
+    }
+  },
+  "futures_S": {
+    "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "start": "2026-10-23T00:00:00Z",
+    "end": "2026-11-05T00:00:00Z",
+    "comparison_end": "2026-11-04T23:00:00Z",
+    "pairs": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "SOL/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "TRB/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "XRP/USDT:USDT",
+      "ADA/USDT:USDT",
+      "BNB/USDT:USDT",
+      "LINK/USDT:USDT",
+      "DOT/USDT:USDT",
+      "FIL/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "ATOM/USDT:USDT",
+      "DYDX/USDT:USDT",
+      "LTC/USDT:USDT",
+      "BCH/USDT:USDT",
+      "ETC/USDT:USDT",
+      "GALA/USDT:USDT",
+      "SAND/USDT:USDT",
+      "UNI/USDT:USDT",
+      "IOTA/USDT:USDT",
+      "RUNE/USDT:USDT",
+      "AXS/USDT:USDT",
+      "AAVE/USDT:USDT",
+      "EGLD/USDT:USDT",
+      "ALGO/USDT:USDT",
+      "SNX/USDT:USDT",
+      "CRV/USDT:USDT",
+      "MASK/USDT:USDT",
+      "SUSHI/USDT:USDT",
+      "KSM/USDT:USDT",
+      "IOTX/USDT:USDT",
+      "MANA/USDT:USDT",
+      "NEO/USDT:USDT",
+      "GRT/USDT:USDT",
+      "TRX/USDT:USDT",
+      "CELO/USDT:USDT",
+      "SKL/USDT:USDT",
+      "THETA/USDT:USDT"
+    ],
+    "initial_equity_usdt": 1000,
+    "allowed_leverage": 1.0,
+    "total_cost_bps_per_side": [
+      8
+    ],
+    "periods": [
+      {
+        "name": "post-source-period",
+        "start": "2026-10-23T00:00:00Z",
+        "end": "2026-11-04T23:00:00Z"
+      }
+    ],
+    "memory_guard_bytes": 5905580032,
+    "wall_guard_seconds": 3600,
+    "schema": "freqtrade.rd.standalone-parity-adapter.v1",
+    "dataset_id": "futures_S",
+    "parent_plan": {
+      "path": "research/crypto/strategy_comparison_wide_20261105/plan-post-source.json",
+      "sha256": "7eb38fd353d5ec59122f337db541a60def5c27ac00fcea5bb1e590f1b1899293"
+    },
+    "engine_source": ".",
+    "engine_manifest": {
+      "path": "deploy/upstream-source.json",
+      "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+    },
+    "datadir": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles",
+    "data_receipts": {
+      "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+      "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e"
+    },
+    "storage_source": {
+      "path": "research/crypto/nfi_original_storage.py",
+      "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+    },
+    "observer_source": {
+      "path": "user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+      "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+    },
+    "market_snapshot": {
+      "path": "research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+      "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+    },
+    "environment": {
+      "path": "research/crypto/strategy_comparison_20261105/environment.json",
+      "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+    },
+    "marks": {
+      "BTC/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+        "sha256": "6444bc1f50d6e168f47a55f7a98786566476d116a3a215aabc46cc18280b53c1"
+      },
+      "ETH/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+        "sha256": "188f154f4dae7a98519d507af3541924adad4be3004c5eef16988cb5c2fa3c05"
+      },
+      "SOL/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SOL_USDT_USDT-1h-mark.feather",
+        "sha256": "8822193b6dbadbf8c808b267a5e5a18a9e58332049bf80b106c682fc31948e08"
+      },
+      "AVAX/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/AVAX_USDT_USDT-1h-mark.feather",
+        "sha256": "447cb384247ec2e0e7c3858a683f95615467920092b6b9d46b19031ecd25e2fd"
+      },
+      "TRB/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/TRB_USDT_USDT-1h-mark.feather",
+        "sha256": "7407b5569b80a0dc5cace0de75b1aa3d35c38ce796914936e4b54e8763955fa3"
+      },
+      "DOGE/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/DOGE_USDT_USDT-1h-mark.feather",
+        "sha256": "6244704d001a8e206fdb0f794982ae82a0c876af3bdc44641e222c6d4a1ffc5d"
+      },
+      "XRP/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/XRP_USDT_USDT-1h-mark.feather",
+        "sha256": "ee93bb0325769292f19dfa8656b11e716d4050d189847db4ec7bf592709d24ca"
+      },
+      "ADA/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ADA_USDT_USDT-1h-mark.feather",
+        "sha256": "f97fb47591c77a83d20267ece8131aad6679cff9859dce50a90a54c6162f67eb"
+      },
+      "BNB/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/BNB_USDT_USDT-1h-mark.feather",
+        "sha256": "714d1531145d33d69cd9cbdc096daadf0bfc2324a98158a49af8266d01a51343"
+      },
+      "LINK/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/LINK_USDT_USDT-1h-mark.feather",
+        "sha256": "f3048f28041e822cbf5eaa812a73d8f7dc0cb76389ccba0b70901260743a2cc1"
+      },
+      "DOT/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/DOT_USDT_USDT-1h-mark.feather",
+        "sha256": "87a404c9d8ba9dea6ecb046086aefa7d9adbc1ed609d79923eb03e6aeaf75b77"
+      },
+      "FIL/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/FIL_USDT_USDT-1h-mark.feather",
+        "sha256": "a90c8ec97761f53bded6bc74288934e83136622bf202c226ae2baf9c537d0614"
+      },
+      "NEAR/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/NEAR_USDT_USDT-1h-mark.feather",
+        "sha256": "8d6d23cdd1fc2aec1513a9ceed9e615578b8c6b32cec735084fe31438b699aa7"
+      },
+      "ATOM/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ATOM_USDT_USDT-1h-mark.feather",
+        "sha256": "31f520004cf8f59e01d346f817e51ba1816fa726814531628ce75b2216f5403f"
+      },
+      "DYDX/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/DYDX_USDT_USDT-1h-mark.feather",
+        "sha256": "3e54d5c28b691e351eb3d53946eca2a3b6dde0f506c007872dc094271bdd7619"
+      },
+      "LTC/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/LTC_USDT_USDT-1h-mark.feather",
+        "sha256": "ad57f2715dc703b56183bc3aa1eaa17f85f0c75f6c83caa5430558ebbae41762"
+      },
+      "BCH/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/BCH_USDT_USDT-1h-mark.feather",
+        "sha256": "dc68faebd81bb82796cde178fee6899109fe9119a3672f55089b7321bbe794a4"
+      },
+      "ETC/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ETC_USDT_USDT-1h-mark.feather",
+        "sha256": "2d1913cfd93363447200bb77d1d4b073793c47553d7c862304eaadf0c5e7647c"
+      },
+      "GALA/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/GALA_USDT_USDT-1h-mark.feather",
+        "sha256": "7b0558b28a41f3f64124097249b05ac37dbe04ad51a373736a3ffa8341cb26c6"
+      },
+      "SAND/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SAND_USDT_USDT-1h-mark.feather",
+        "sha256": "33be5e2182bcdf4d49c661789dcda1adc2b46fdc840f8533b6774d534eca79e4"
+      },
+      "UNI/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/UNI_USDT_USDT-1h-mark.feather",
+        "sha256": "e868e2a87343a6cdcd65fc78bb3f26de320756e554b7041250cf12ac596368ad"
+      },
+      "IOTA/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/IOTA_USDT_USDT-1h-mark.feather",
+        "sha256": "22400ff2ba7615b0aed3a0d9229378bcf268a180b8fa1f3ab6f0db3c2ad42607"
+      },
+      "RUNE/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/RUNE_USDT_USDT-1h-mark.feather",
+        "sha256": "d89b624b0065b5507caa4a129d19f774b4e16d4f878cd5d135cc5ff4a96ae9c7"
+      },
+      "AXS/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/AXS_USDT_USDT-1h-mark.feather",
+        "sha256": "1d74ed17c5cc87c319cdc9b9fd7ea63c7b3550ff2dd097d764be42f139303000"
+      },
+      "AAVE/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/AAVE_USDT_USDT-1h-mark.feather",
+        "sha256": "a11e8ed83307c4db0367c51482cf0ac81f7992aff7882cce5b6e8c12f16c2229"
+      },
+      "EGLD/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/EGLD_USDT_USDT-1h-mark.feather",
+        "sha256": "23454c4744cf1f62a278ff433309dc6b6b6a5bbb22ea5cb3a810b4f2fd74faf1"
+      },
+      "ALGO/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ALGO_USDT_USDT-1h-mark.feather",
+        "sha256": "112d10101ce968dd915eb2280bc364fca745b3469089400d55abdab22155204b"
+      },
+      "SNX/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SNX_USDT_USDT-1h-mark.feather",
+        "sha256": "f117d7784fad6e5bc7d4bbe6f012c11f249366960304caa78d3e121a3f5f53da"
+      },
+      "CRV/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/CRV_USDT_USDT-1h-mark.feather",
+        "sha256": "1de382ba842755a947cce16fac3f02990ea536c7b3250de163c022b8c9d4f6b2"
+      },
+      "MASK/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/MASK_USDT_USDT-1h-mark.feather",
+        "sha256": "85673cea6d82d7b45b20d073a58f6bd270675665c8fdcb929d175820067b577d"
+      },
+      "SUSHI/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SUSHI_USDT_USDT-1h-mark.feather",
+        "sha256": "46dc7ed034a59f715bad86bd3d2814edfa0d10eee585b9cf0544137fba40a15d"
+      },
+      "KSM/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/KSM_USDT_USDT-1h-mark.feather",
+        "sha256": "8170bee4a1c8f0049759c42378167753ed4357e53fe3cad2116445b3e3a5da59"
+      },
+      "IOTX/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/IOTX_USDT_USDT-1h-mark.feather",
+        "sha256": "96019792b768249e30be7ea0881c0b5f9d10585b7c902c9706b0984ab080eed4"
+      },
+      "MANA/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/MANA_USDT_USDT-1h-mark.feather",
+        "sha256": "06d6a5db995bc879b6d03dd52669daaa92acd8f879ffd877335b549f080db568"
+      },
+      "NEO/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/NEO_USDT_USDT-1h-mark.feather",
+        "sha256": "12ce5f72216b994330cadb8d25d98c57e9ac07d76f67e4415c4543e3e09de9f1"
+      },
+      "GRT/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/GRT_USDT_USDT-1h-mark.feather",
+        "sha256": "7767903612e575633233d435d00606dface92f6852227464d8936fab07b6fb0b"
+      },
+      "TRX/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/TRX_USDT_USDT-1h-mark.feather",
+        "sha256": "b759a791f3488341c6367488fbf9fcef29cd505728313156eb110e29812bb54a"
+      },
+      "CELO/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/CELO_USDT_USDT-1h-mark.feather",
+        "sha256": "f895bc111bad2d5e04d9b2597aa12423acfec1d65ca3aebdccfb7b38bafe1437"
+      },
+      "SKL/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SKL_USDT_USDT-1h-mark.feather",
+        "sha256": "75968a1b255b2d3cc541e3ae97cf27cccebf8f194246505dbcdf593db7aeee15"
+      },
+      "THETA/USDT:USDT": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/THETA_USDT_USDT-1h-mark.feather",
+        "sha256": "0611773b1b2656905169b7d1786390f17f48fc88187214d3d4dfc74c2c8e9596"
+      }
+    },
+    "candidates": [
+      {
+        "name": "nfi-x8-1x",
+        "strategy": "NostalgiaForInfinityX8",
+        "config": {
+          "path": "research/crypto/strategy_comparison_wide_20261105/nfi-x8-1x.json",
+          "sha256": "3f920566d920fff5ddeef2458a995a8f28a1bf25fd9d2059e211766e5f338129"
+        },
+        "source_files": {
+          "NostalgiaForInfinityX8.py": {
+            "path": "research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+            "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+          }
+        },
+        "max_open_trades": 6,
+        "stake_amount": "unlimited",
+        "signal_timeframe": "5m",
+        "matching_timeframe": "5m",
+        "source_and_risk_behavior": "frozen existing source; common 1x normalization; existing compact and half-risk variants retained"
+      }
+    ],
+    "research_support": {},
+    "runner": {
+      "path": "research/crypto/strategy_comparison_wide_20261105/run_wide_comparison.py",
+      "sha256": "866d2792d8f8ac7469b378d800e0846ade27dbe0e8f71e9a8cf7854ef0f86ba5"
+    },
+    "runner_sha256": "866d2792d8f8ac7469b378d800e0846ade27dbe0e8f71e9a8cf7854ef0f86ba5",
+    "risk_profile": "native_baseline",
+    "RD1_applied": false,
+    "scope": "legacy hourly-anchor engineering parity only; not new P1 endpoint or economic qualification",
+    "financial_runs_started": 0,
+    "guard_source": {
+      "path": "research/crypto/rd_program_20261105/p0/environment/guard.py",
+      "sha256": "ec2e8f023b206d16a1ca1339edeb77f0507aa1ce0193435a75163ce8f1fa24c7"
+    }
+  }
+}

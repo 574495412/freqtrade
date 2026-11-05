@@ -1,0 +1,328 @@
+{
+  "schema": "freqtrade.rd.data-readiness.v1",
+  "observed_at_utc": "2026-11-05T16:26:28.557479+00:00",
+  "datasets": [
+    {
+      "id": "spot_L",
+      "market": "spot",
+      "window_id": "L",
+      "parent_plan": {
+        "path": "research/crypto/spot_baseline_20261105_v003/plan-long.json",
+        "sha256": "ee471524b1b3892a9a85219b3d3ac04e8a7837a69157000ebe489f59d1763d60"
+      },
+      "datadir": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+        "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+      },
+      "file_count": 180,
+      "total_bytes": 233262976,
+      "start": "2025-01-01T00:00:00Z",
+      "end_exclusive": "2026-09-01T00:00:00Z",
+      "old_valuation_endpoint": "2026-08-31T23:00:00Z",
+      "new_valuation_endpoint": "2026-08-31T23:55:00+00:00",
+      "support_records": {
+        "storage_source": {
+          "path": "research/crypto/nfi_original_storage.py",
+          "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+        },
+        "observer_source": {
+          "path": "research/crypto/spot_baseline_20261105/spot_observer.py",
+          "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+        },
+        "market_snapshot": {
+          "path": "research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+          "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+        },
+        "environment": {
+          "path": "research/crypto/strategy_comparison_20261105/environment.json",
+          "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+        },
+        "runner": {
+          "path": "research/crypto/spot_baseline_20261105_v003/run_spot_comparison.py",
+          "sha256": "a1a17d549876f2595e40ea67ee226e41782a0c334ca4456b8dce4e79f18da9ed"
+        },
+        "strategy": {
+          "path": "research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        },
+        "native_config": {
+          "path": "research/crypto/spot_baseline_20261105/nfi-x8-spot.json",
+          "sha256": "2277440c2116f5dddedad0828632fb1ffbe3db421946036fe5c9fead8c648d89"
+        }
+      },
+      "source_payload_verification": {
+        "dataset_id": "spot_L",
+        "files": 180,
+        "bytes": 233262976,
+        "payload_hashes_verified": true,
+        "economic_validation": false
+      },
+      "legacy_runtime_dependency": "engine_source and engine_manifest referred to the other project; new adapter uses repository pinned core only",
+      "date_audit": {
+        "file_count": 180,
+        "failures": [],
+        "all_registered_evaluation_grids_complete": true,
+        "kind_timeframe_file_counts": {
+          "spot/5m": 36,
+          "spot/4h": 36,
+          "spot/1d": 36,
+          "spot/15m": 36,
+          "spot/1h": 36
+        },
+        "scope": "all receipt payload hashes and all date columns; OHLC/volume values not independently re-audited"
+      },
+      "five_minute_mark_available": true,
+      "valuation_evidence": "spot 5m OPEN reference, not executable bid",
+      "blocks": [
+        "X8 exit-alert causality unresolved",
+        "native same-time event trace not yet reconciled",
+        "new 23:55 endpoint not evaluated"
+      ]
+    },
+    {
+      "id": "spot_S",
+      "market": "spot",
+      "window_id": "S",
+      "parent_plan": {
+        "path": "research/crypto/spot_baseline_20261105_v003/plan-short.json",
+        "sha256": "4efa1a0501af31eeaecc5074d5b30d68a9fd34e124bc1cc860b9a4d8af12606a"
+      },
+      "datadir": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/data-receipts.json",
+        "sha256": "d1c55449e6b38b67a577da3fcae4d2884e2af6274f27e12b0f147ffc6d0715ff"
+      },
+      "file_count": 180,
+      "total_bytes": 22790072,
+      "start": "2026-10-23T00:00:00Z",
+      "end_exclusive": "2026-11-05T00:00:00Z",
+      "old_valuation_endpoint": "2026-11-04T23:00:00Z",
+      "new_valuation_endpoint": "2026-11-04T23:55:00+00:00",
+      "support_records": {
+        "storage_source": {
+          "path": "research/crypto/nfi_original_storage.py",
+          "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+        },
+        "observer_source": {
+          "path": "research/crypto/spot_baseline_20261105/spot_observer.py",
+          "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+        },
+        "market_snapshot": {
+          "path": "research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+          "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+        },
+        "environment": {
+          "path": "research/crypto/strategy_comparison_20261105/environment.json",
+          "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+        },
+        "runner": {
+          "path": "research/crypto/spot_baseline_20261105_v003/run_spot_comparison.py",
+          "sha256": "a1a17d549876f2595e40ea67ee226e41782a0c334ca4456b8dce4e79f18da9ed"
+        },
+        "strategy": {
+          "path": "research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        },
+        "native_config": {
+          "path": "research/crypto/spot_baseline_20261105/nfi-x8-spot.json",
+          "sha256": "2277440c2116f5dddedad0828632fb1ffbe3db421946036fe5c9fead8c648d89"
+        }
+      },
+      "source_payload_verification": {
+        "dataset_id": "spot_S",
+        "files": 180,
+        "bytes": 22790072,
+        "payload_hashes_verified": true,
+        "economic_validation": false
+      },
+      "legacy_runtime_dependency": "engine_source and engine_manifest referred to the other project; new adapter uses repository pinned core only",
+      "date_audit": {
+        "file_count": 180,
+        "failures": [],
+        "all_registered_evaluation_grids_complete": true,
+        "kind_timeframe_file_counts": {
+          "spot/5m": 36,
+          "spot/4h": 36,
+          "spot/1d": 36,
+          "spot/15m": 36,
+          "spot/1h": 36
+        },
+        "scope": "all receipt payload hashes and all date columns; OHLC/volume values not independently re-audited"
+      },
+      "five_minute_mark_available": true,
+      "valuation_evidence": "spot 5m OPEN reference, not executable bid",
+      "blocks": [
+        "X8 exit-alert causality unresolved",
+        "native same-time event trace not yet reconciled",
+        "new 23:55 endpoint not evaluated"
+      ]
+    },
+    {
+      "id": "futures_L",
+      "market": "futures",
+      "window_id": "L",
+      "parent_plan": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/plan.json",
+        "sha256": "1b0fea99e5d5809e8b0f24c028ebb6adc1be163eea840775d96892db40d5edc6"
+      },
+      "datadir": "user_data/crypto_quant/nfi40_data_v002/candles",
+      "data_receipt": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+        "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47"
+      },
+      "file_count": 280,
+      "total_bytes": 439527656,
+      "start": "2025-01-01T00:00:00Z",
+      "end_exclusive": "2026-09-01T00:00:00Z",
+      "old_valuation_endpoint": "2026-08-31T23:00:00Z",
+      "new_valuation_endpoint": "2026-08-31T23:55:00+00:00",
+      "support_records": {
+        "storage_source": {
+          "path": "research/crypto/nfi_original_storage.py",
+          "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+        },
+        "observer_source": {
+          "path": "user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+          "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+        },
+        "market_snapshot": {
+          "path": "research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+          "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+        },
+        "environment": {
+          "path": "research/crypto/strategy_comparison_20261105/environment.json",
+          "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+        },
+        "runner": {
+          "path": "research/crypto/strategy_comparison_wide_20261105/run_wide_comparison.py",
+          "sha256": "866d2792d8f8ac7469b378d800e0846ade27dbe0e8f71e9a8cf7854ef0f86ba5"
+        },
+        "strategy": {
+          "path": "research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        },
+        "native_config": {
+          "path": "research/crypto/strategy_comparison_wide_20261105/nfi-x8-1x.json",
+          "sha256": "3f920566d920fff5ddeef2458a995a8f28a1bf25fd9d2059e211766e5f338129"
+        }
+      },
+      "source_payload_verification": {
+        "dataset_id": "futures_L",
+        "files": 280,
+        "bytes": 439527656,
+        "payload_hashes_verified": true,
+        "economic_validation": false
+      },
+      "legacy_runtime_dependency": "engine_source and engine_manifest referred to the other project; new adapter uses repository pinned core only",
+      "date_audit": {
+        "file_count": 280,
+        "failures": [],
+        "all_registered_evaluation_grids_complete": true,
+        "kind_timeframe_file_counts": {
+          "futures/15m": 40,
+          "futures/1d": 40,
+          "funding_rate/1h": 40,
+          "futures/1h": 40,
+          "mark/1h": 40,
+          "futures/4h": 40,
+          "futures/5m": 40
+        },
+        "scope": "all receipt payload hashes and all date columns; OHLC/volume values not independently re-audited"
+      },
+      "five_minute_mark_available": false,
+      "valuation_evidence": "only hourly mark; 5m trade OPEN is conditional reference, not certified mark",
+      "blocks": [
+        "X8 exit-alert causality unresolved",
+        "native same-time event trace not yet reconciled",
+        "new 23:55 endpoint not evaluated",
+        "5m mark absent; prior simplified orders lack creation time"
+      ]
+    },
+    {
+      "id": "futures_S",
+      "market": "futures",
+      "window_id": "S",
+      "parent_plan": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/plan-post-source.json",
+        "sha256": "7eb38fd353d5ec59122f337db541a60def5c27ac00fcea5bb1e590f1b1899293"
+      },
+      "datadir": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+        "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e"
+      },
+      "file_count": 280,
+      "total_bytes": 550516624,
+      "start": "2026-10-23T00:00:00Z",
+      "end_exclusive": "2026-11-05T00:00:00Z",
+      "old_valuation_endpoint": "2026-11-04T23:00:00Z",
+      "new_valuation_endpoint": "2026-11-04T23:55:00+00:00",
+      "support_records": {
+        "storage_source": {
+          "path": "research/crypto/nfi_original_storage.py",
+          "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+        },
+        "observer_source": {
+          "path": "user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+          "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+        },
+        "market_snapshot": {
+          "path": "research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+          "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+        },
+        "environment": {
+          "path": "research/crypto/strategy_comparison_20261105/environment.json",
+          "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+        },
+        "runner": {
+          "path": "research/crypto/strategy_comparison_wide_20261105/run_wide_comparison.py",
+          "sha256": "866d2792d8f8ac7469b378d800e0846ade27dbe0e8f71e9a8cf7854ef0f86ba5"
+        },
+        "strategy": {
+          "path": "research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        },
+        "native_config": {
+          "path": "research/crypto/strategy_comparison_wide_20261105/nfi-x8-1x.json",
+          "sha256": "3f920566d920fff5ddeef2458a995a8f28a1bf25fd9d2059e211766e5f338129"
+        }
+      },
+      "source_payload_verification": {
+        "dataset_id": "futures_S",
+        "files": 280,
+        "bytes": 550516624,
+        "payload_hashes_verified": true,
+        "economic_validation": false
+      },
+      "legacy_runtime_dependency": "engine_source and engine_manifest referred to the other project; new adapter uses repository pinned core only",
+      "date_audit": {
+        "file_count": 280,
+        "failures": [],
+        "all_registered_evaluation_grids_complete": true,
+        "kind_timeframe_file_counts": {
+          "futures/5m": 40,
+          "futures/1d": 40,
+          "mark/1h": 40,
+          "futures/15m": 40,
+          "futures/1h": 40,
+          "futures/4h": 40,
+          "funding_rate/1h": 40
+        },
+        "scope": "all receipt payload hashes and all date columns; OHLC/volume values not independently re-audited"
+      },
+      "five_minute_mark_available": false,
+      "valuation_evidence": "only hourly mark; 5m trade OPEN is conditional reference, not certified mark",
+      "blocks": [
+        "X8 exit-alert causality unresolved",
+        "native same-time event trace not yet reconciled",
+        "new 23:55 endpoint not evaluated",
+        "5m mark absent; prior simplified orders lack creation time"
+      ]
+    }
+  ],
+  "data_downloaded": false,
+  "financial_runs": 0,
+  "historical_availability_certified": false,
+  "economic_acceptance": false
+}

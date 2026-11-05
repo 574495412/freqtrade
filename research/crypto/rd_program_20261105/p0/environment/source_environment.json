@@ -1,0 +1,55 @@
+{
+  "schema": "freqtrade.rd.source-environment.v1",
+  "observed_at_utc": "2026-11-05T16:26:28.557479+00:00",
+  "root_resolution": "repository root relative to this script; no legacy execution import path",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "python_path": ".venv-paper/bin/python",
+  "platform": "macOS-27.0.1-arm64-arm-64bit",
+  "dependencies": {
+    "SQLAlchemy": "2.1.4",
+    "TA-Lib": "0.8.2",
+    "aiohttp": "3.14.5",
+    "ccxt": "4.5.89",
+    "jsonschema": "4.26.0",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "psutil": "7.2.2",
+    "pyarrow": "26.0.0",
+    "pydantic": "2.14.1",
+    "python-rapidjson": "1.25",
+    "requests": "2.34.2",
+    "scipy": "1.18.1",
+    "technical": "1.7.0"
+  },
+  "upstream_manifest": "deploy/upstream-source.json",
+  "upstream_manifest_sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64",
+  "source_check": {
+    "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "official_package_files_verified": 360,
+    "unused_nonofficial_python_files": [
+      "freqtrade/research/__init__.py",
+      "freqtrade/research/__main__.py",
+      "freqtrade/research/data.py",
+      "freqtrade/research/engine.py",
+      "freqtrade/research/strategies.py",
+      "freqtrade/research/tradingagents_worker.py",
+      "freqtrade/research/validation.py",
+      "freqtrade/research/workflow.py"
+    ],
+    "legacy_numeric_dependencies_equal": true,
+    "freqtrade_origin": "freqtrade/__init__.py"
+  },
+  "legacy_environment": {
+    "path": "research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "runtime_guards": [
+    "reject FREQTRADE environment overrides",
+    "reject legacy project sys.path",
+    "deny cz and freqtrade.research imports",
+    "deny outbound sockets",
+    "disable bytecode writes"
+  ],
+  "live_runtime_modified": false,
+  "financial_backtests_run": 0
+}
