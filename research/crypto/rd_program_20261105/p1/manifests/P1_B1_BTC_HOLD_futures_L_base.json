@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "P1_B1_BTC_HOLD_futures_L_base",
+  "phase": "P1",
+  "baseline_id": "B1_BTC_HOLD",
+  "market": "futures",
+  "window_id": "L",
+  "cost_id": "base",
+  "status": "registered_not_run",
+  "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+  "requires": [
+    "P0_SOURCE_ENV",
+    "candidate_data_ready",
+    "separate_ledger"
+  ],
+  "promotion_requires": [
+    "causality_closed",
+    "verified_mark_NAV",
+    "account_parity"
+  ],
+  "result": null,
+  "registered_at_utc": "2026-11-05T16:29:10.854994+00:00",
+  "freeze_sha256": "22d71d0cc57eb7a5f2456f755ab4bb524eddc5014c90c7290e472e40d3ae603d",
+  "source_hashes": {
+    "research/crypto/rd_program_20261105/p1/account_controls.py": "f40b10ec3786877d591c4d2598c6f70d1985e4d75a0282a7faad732a1f76bd7e"
+  },
+  "window": {
+    "id": "L",
+    "start": "2025-01-01T00:00:00Z",
+    "end_exclusive": "2026-09-01T00:00:00Z",
+    "valuation": "last common 5m snapshot strictly before end; also reconcile archived 23:00 anchor",
+    "evidence_class": "observed_retrospective_development"
+  },
+  "cost_scenario": {
+    "id": "base",
+    "fee_bps_per_side": 5,
+    "execution_proxy_bps_per_side": 3,
+    "total_bps_per_side": 8
+  },
+  "risk_profile": "accounting_control",
+  "RD1_applied": false,
+  "risk_contract_hash": "91845eed78faa0788f4ac6fde6c0e92ff370cff26b6d1b3cc0dadc47be920034",
+  "universe_hash": "1c57b9bf77f6b5d36dfbf53d2439c237a2ebfb1d61a96d59538789b923626ae3",
+  "initial_equity_usdt": 1000,
+  "allocation_fraction": 0.99,
+  "entry_delay_minutes": 5,
+  "valuation_endpoint": "end_exclusive minus5minutes; snapshot BEFORE same-time entry/funding events",
+  "strategy_main_timeframe": null,
+  "detail_timeframe": "5m",
+  "startup_candle_count": 0,
+  "stake_amount": "99% initial capital inclusive entry fee; round quantity down to archived amount step",
+  "order_types": null,
+  "resolved_strategy_config_hash": "91845eed78faa0788f4ac6fde6c0e92ff370cff26b6d1b3cc0dadc47be920034",
+  "command": ".venv-paper/bin/python research/crypto/rd_program_20261105/p1/account_controls.py run --id P1_B1_BTC_HOLD_futures_L_base",
+  "isolated_output_path": "user_data/crypto_quant/rd_program_20261105_v1/P1_B1_BTC_HOLD_futures_L_base",
+  "candidate_readiness": "accounting_only_no_live_execution_claim",
+  "data_receipt_hashes": {
+    "prices": {
+      "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-5m-futures.feather",
+      "sha256": "1b2aa3459498da24b5db7da63bd561283e6103b92af93c874e2238536637bb97"
+    },
+    "market_rules": {
+      "path": "research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+      "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+    },
+    "marks": {
+      "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    "funding": {
+      "path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "efe1f9d8482a6a1801005cc44874818a2c42e2020cdb0b46044a8077c38ad781"
+    },
+    "parent_receipt": {
+      "path": "research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+      "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47"
+    }
+  },
+  "dependencies": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "pyarrow": "26.0.0"
+  },
+  "orders_enabled": false,
+  "production_eligible": false,
+  "limitations": [
+    "historically observed data",
+    "archived current market precision is not proven point-in-time",
+    "OPEN-price matching and fee proxy do not establish executable fills",
+    "no depth/queue/impact or liquidation simulation",
+    "no new signal; BTC beta accounting reference",
+    "5m trade OPEN is conditional reference, not verified5m mark; hourly actual marks separately",
+    "settled funding is cost only, not a decision feature"
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "id": "P1_B1_BTC_HOLD_futures_S_base",
+  "phase": "P1",
+  "baseline_id": "B1_BTC_HOLD",
+  "market": "futures",
+  "window_id": "S",
+  "cost_id": "base",
+  "status": "registered_not_run",
+  "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+  "requires": [
+    "P0_SOURCE_ENV",
+    "candidate_data_ready",
+    "separate_ledger"
+  ],
+  "promotion_requires": [
+    "causality_closed",
+    "verified_mark_NAV",
+    "account_parity"
+  ],
+  "result": null,
+  "registered_at_utc": "2026-11-05T16:29:10.876090+00:00",
+  "freeze_sha256": "22d71d0cc57eb7a5f2456f755ab4bb524eddc5014c90c7290e472e40d3ae603d",
+  "source_hashes": {
+    "research/crypto/rd_program_20261105/p1/account_controls.py": "f40b10ec3786877d591c4d2598c6f70d1985e4d75a0282a7faad732a1f76bd7e"
+  },
+  "window": {
+    "id": "S",
+    "start": "2026-10-23T00:00:00Z",
+    "end_exclusive": "2026-11-05T00:00:00Z",
+    "valuation": "last common 5m snapshot strictly before end; also reconcile archived 23:00 anchor",
+    "evidence_class": "observed_post_source_history_not_prospective"
+  },
+  "cost_scenario": {
+    "id": "base",
+    "fee_bps_per_side": 5,
+    "execution_proxy_bps_per_side": 3,
+    "total_bps_per_side": 8
+  },
+  "risk_profile": "accounting_control",
+  "RD1_applied": false,
+  "risk_contract_hash": "91845eed78faa0788f4ac6fde6c0e92ff370cff26b6d1b3cc0dadc47be920034",
+  "universe_hash": "1c57b9bf77f6b5d36dfbf53d2439c237a2ebfb1d61a96d59538789b923626ae3",
+  "initial_equity_usdt": 1000,
+  "allocation_fraction": 0.99,
+  "entry_delay_minutes": 5,
+  "valuation_endpoint": "end_exclusive minus5minutes; snapshot BEFORE same-time entry/funding events",
+  "strategy_main_timeframe": null,
+  "detail_timeframe": "5m",
+  "startup_candle_count": 0,
+  "stake_amount": "99% initial capital inclusive entry fee; round quantity down to archived amount step",
+  "order_types": null,
+  "resolved_strategy_config_hash": "91845eed78faa0788f4ac6fde6c0e92ff370cff26b6d1b3cc0dadc47be920034",
+  "command": ".venv-paper/bin/python research/crypto/rd_program_20261105/p1/account_controls.py run --id P1_B1_BTC_HOLD_futures_S_base",
+  "isolated_output_path": "user_data/crypto_quant/rd_program_20261105_v1/P1_B1_BTC_HOLD_futures_S_base",
+  "candidate_readiness": "accounting_only_no_live_execution_claim",
+  "data_receipt_hashes": {
+    "prices": {
+      "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/BTC_USDT_USDT-5m-futures.feather",
+      "sha256": "cf962c1257676c54ec95996e73c0029533e6abd658ee650b3572c51ef5146b1e"
+    },
+    "market_rules": {
+      "path": "research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+      "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+    },
+    "marks": {
+      "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "6444bc1f50d6e168f47a55f7a98786566476d116a3a215aabc46cc18280b53c1"
+    },
+    "funding": {
+      "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/BTC_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "81b80dfa3e7f99182e2628c1989ce5e51afca38d13c3f038dfb4966b10dc5be5"
+    },
+    "parent_receipt": {
+      "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+      "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e"
+    }
+  },
+  "dependencies": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "pyarrow": "26.0.0"
+  },
+  "orders_enabled": false,
+  "production_eligible": false,
+  "limitations": [
+    "historically observed data",
+    "archived current market precision is not proven point-in-time",
+    "OPEN-price matching and fee proxy do not establish executable fills",
+    "no depth/queue/impact or liquidation simulation",
+    "no new signal; BTC beta accounting reference",
+    "5m trade OPEN is conditional reference, not verified5m mark; hourly actual marks separately",
+    "settled funding is cost only, not a decision feature"
+  ]
+}

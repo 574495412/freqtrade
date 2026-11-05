@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "id": "P1_B1_BTC_HOLD_spot_L_base",
+  "phase": "P1",
+  "baseline_id": "B1_BTC_HOLD",
+  "market": "spot",
+  "window_id": "L",
+  "cost_id": "base",
+  "status": "registered_not_run",
+  "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+  "requires": [
+    "P0_SOURCE_ENV",
+    "candidate_data_ready",
+    "separate_ledger"
+  ],
+  "promotion_requires": [
+    "causality_closed",
+    "verified_mark_NAV",
+    "account_parity"
+  ],
+  "result": null,
+  "registered_at_utc": "2026-11-05T16:29:10.830928+00:00",
+  "freeze_sha256": "22d71d0cc57eb7a5f2456f755ab4bb524eddc5014c90c7290e472e40d3ae603d",
+  "source_hashes": {
+    "research/crypto/rd_program_20261105/p1/account_controls.py": "f40b10ec3786877d591c4d2598c6f70d1985e4d75a0282a7faad732a1f76bd7e"
+  },
+  "window": {
+    "id": "L",
+    "start": "2025-01-01T00:00:00Z",
+    "end_exclusive": "2026-09-01T00:00:00Z",
+    "valuation": "last common 5m snapshot strictly before end; also reconcile archived 23:00 anchor",
+    "evidence_class": "observed_retrospective_development"
+  },
+  "cost_scenario": {
+    "id": "base",
+    "fee_bps_per_side": 10,
+    "execution_proxy_bps_per_side": 3,
+    "total_bps_per_side": 13
+  },
+  "risk_profile": "accounting_control",
+  "RD1_applied": false,
+  "risk_contract_hash": "91845eed78faa0788f4ac6fde6c0e92ff370cff26b6d1b3cc0dadc47be920034",
+  "universe_hash": "d07b845b3807d1f3782b7be05c2f1608994f4059672e4cc5b82ba11edb412f9d",
+  "initial_equity_usdt": 1000,
+  "allocation_fraction": 0.99,
+  "entry_delay_minutes": 5,
+  "valuation_endpoint": "end_exclusive minus5minutes; snapshot BEFORE same-time entry/funding events",
+  "strategy_main_timeframe": null,
+  "detail_timeframe": "5m",
+  "startup_candle_count": 0,
+  "stake_amount": "99% initial capital inclusive entry fee; round quantity down to archived amount step",
+  "order_types": null,
+  "resolved_strategy_config_hash": "91845eed78faa0788f4ac6fde6c0e92ff370cff26b6d1b3cc0dadc47be920034",
+  "command": ".venv-paper/bin/python research/crypto/rd_program_20261105/p1/account_controls.py run --id P1_B1_BTC_HOLD_spot_L_base",
+  "isolated_output_path": "user_data/crypto_quant/rd_program_20261105_v1/P1_B1_BTC_HOLD_spot_L_base",
+  "candidate_readiness": "accounting_only_no_live_execution_claim",
+  "data_receipt_hashes": {
+    "prices": {
+      "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/BTC_USDT-5m.feather",
+      "sha256": "366afbdd6214d8d5b502c9c12bb3794aac31581b83f97d15730f6f359062e638"
+    },
+    "market_rules": {
+      "path": "research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+      "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+    },
+    "parent_receipt": {
+      "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+      "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+    }
+  },
+  "dependencies": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "pyarrow": "26.0.0"
+  },
+  "orders_enabled": false,
+  "production_eligible": false,
+  "limitations": [
+    "historically observed data",
+    "archived current market precision is not proven point-in-time",
+    "OPEN-price matching and fee proxy do not establish executable fills",
+    "no depth/queue/impact or liquidation simulation",
+    "no new signal; BTC beta accounting reference"
+  ]
+}

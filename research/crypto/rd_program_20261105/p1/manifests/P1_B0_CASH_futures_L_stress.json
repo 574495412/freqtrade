@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "id": "P1_B0_CASH_futures_L_stress",
+  "phase": "P1",
+  "baseline_id": "B0_CASH",
+  "market": "futures",
+  "window_id": "L",
+  "cost_id": "stress",
+  "status": "registered_not_run",
+  "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+  "requires": [
+    "P0_SOURCE_ENV",
+    "candidate_data_ready",
+    "separate_ledger"
+  ],
+  "promotion_requires": [
+    "causality_closed",
+    "verified_mark_NAV",
+    "account_parity"
+  ],
+  "result": null,
+  "registered_at_utc": "2026-11-05T16:29:10.822056+00:00",
+  "freeze_sha256": "22d71d0cc57eb7a5f2456f755ab4bb524eddc5014c90c7290e472e40d3ae603d",
+  "source_hashes": {
+    "research/crypto/rd_program_20261105/p1/account_controls.py": "f40b10ec3786877d591c4d2598c6f70d1985e4d75a0282a7faad732a1f76bd7e"
+  },
+  "window": {
+    "id": "L",
+    "start": "2025-01-01T00:00:00Z",
+    "end_exclusive": "2026-09-01T00:00:00Z",
+    "valuation": "last common 5m snapshot strictly before end; also reconcile archived 23:00 anchor",
+    "evidence_class": "observed_retrospective_development"
+  },
+  "cost_scenario": {
+    "id": "stress",
+    "fee_bps_per_side": 5,
+    "execution_proxy_bps_per_side": 10,
+    "total_bps_per_side": 15
+  },
+  "risk_profile": "accounting_control",
+  "RD1_applied": false,
+  "risk_contract_hash": "91845eed78faa0788f4ac6fde6c0e92ff370cff26b6d1b3cc0dadc47be920034",
+  "universe_hash": "1c57b9bf77f6b5d36dfbf53d2439c237a2ebfb1d61a96d59538789b923626ae3",
+  "initial_equity_usdt": 1000,
+  "allocation_fraction": 0.99,
+  "entry_delay_minutes": 5,
+  "valuation_endpoint": "end_exclusive minus5minutes; snapshot BEFORE same-time entry/funding events",
+  "strategy_main_timeframe": null,
+  "detail_timeframe": "5m",
+  "startup_candle_count": 0,
+  "stake_amount": "99% initial capital inclusive entry fee; round quantity down to archived amount step",
+  "order_types": null,
+  "resolved_strategy_config_hash": "91845eed78faa0788f4ac6fde6c0e92ff370cff26b6d1b3cc0dadc47be920034",
+  "command": ".venv-paper/bin/python research/crypto/rd_program_20261105/p1/account_controls.py run --id P1_B0_CASH_futures_L_stress",
+  "isolated_output_path": "user_data/crypto_quant/rd_program_20261105_v1/P1_B0_CASH_futures_L_stress",
+  "candidate_readiness": "accounting_only_no_live_execution_claim",
+  "data_receipt_hashes": {},
+  "dependencies": {
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "pyarrow": "26.0.0"
+  },
+  "orders_enabled": false,
+  "production_eligible": false,
+  "limitations": [
+    "USDT-denominated zero-order control; no interest or USD peg valuation",
+    "cash has undefined Sharpe/Sortino/Calmar when denominator zero"
+  ]
+}
