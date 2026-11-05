@@ -1,0 +1,143 @@
+{
+  "schema": "freqtrade.rd.p1-native-run-manifest.v1",
+  "registered_at_utc": "2026-11-05T17:12:26.286483+00:00",
+  "run_id": "P1_B2_AVERAGE_NATIVE_futures_L_base",
+  "registry_record": {
+    "id": "P1_B2_AVERAGE_NATIVE_futures_L_base",
+    "phase": "P1",
+    "baseline_id": "B2_AVERAGE_NATIVE",
+    "market": "futures",
+    "window_id": "L",
+    "cost_id": "base",
+    "status": "registered_not_run",
+    "purpose": "isolated_engineering_reproduction_and_descriptive_account_comparison",
+    "requires": [
+      "P0_SOURCE_ENV",
+      "candidate_data_ready",
+      "separate_ledger"
+    ],
+    "promotion_requires": [
+      "causality_closed",
+      "verified_mark_NAV",
+      "account_parity"
+    ],
+    "result": null
+  },
+  "freeze_sha256": "22d71d0cc57eb7a5f2456f755ab4bb524eddc5014c90c7290e472e40d3ae603d",
+  "source_hashes": [
+    {
+      "path": "research/crypto/rd_program_20261105/p1/native/run_native.py",
+      "sha256": "779dc76a64b809b6f5d81acd13208454ba5314614976a1325bf623d10d530d58"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p1/native/observer.py",
+      "sha256": "020ddc2649948c684069f9921e595c82bb04b1163e63e71e6924794336ec3f9a"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p0/environment/guard.py",
+      "sha256": "ec2e8f023b206d16a1ca1339edeb77f0507aa1ce0193435a75163ce8f1fa24c7"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p0/environment/standalone_adapter.py",
+      "sha256": "a52ef9c0310661e9c0c12a9fd49ac519d53f4b4d4f56343409ac38f8e6d194f3"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p0/environment/source_environment.json",
+      "sha256": "0158046400f5f92fab5f53e601fc9432a8b688856f83b1d30c70eddaef346e43"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p0/environment/data_manifest.json",
+      "sha256": "e98a03698e93d21cdaaf9dc7c824c461cd6f9b9f10f19e8ae992675903b8000a"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p0/environment/prepared_plans.json",
+      "sha256": "e2975ac08ef6e6dfddf41f34c5db29103f8c832319b010d3ab4fd547e561ae85"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p1/native/sources/average/AverageStrategy.py",
+      "sha256": "63606866fdf1cb3d71dc39a951ed0784a31686690b1c4014c12d2481c8dbf094"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p1/native/sources/average/LICENSE",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    }
+  ],
+  "plan": {
+    "path": "user_data/crypto_quant/rd_program_20261105_v1/registrations/P1_B2_AVERAGE_NATIVE_futures_L_base/plan.json",
+    "sha256": "ca6ab905aa11e41cff4fd7f2c46688d0693865fa6c3d496d9d570684b0322dbd"
+  },
+  "dependency_versions": {
+    "SQLAlchemy": "2.1.4",
+    "TA-Lib": "0.8.2",
+    "aiohttp": "3.14.5",
+    "ccxt": "4.5.89",
+    "jsonschema": "4.26.0",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "psutil": "7.2.2",
+    "pyarrow": "26.0.0",
+    "pydantic": "2.14.1",
+    "python-rapidjson": "1.25",
+    "requests": "2.34.2",
+    "scipy": "1.18.1",
+    "technical": "1.7.0"
+  },
+  "data_receipt_hashes": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+      "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47"
+    }
+  ],
+  "universe_hash": "1c57b9bf77f6b5d36dfbf53d2439c237a2ebfb1d61a96d59538789b923626ae3",
+  "risk_profile": "native_baseline",
+  "RD1_applied": false,
+  "risk_contract_hash": "93641685882c5ce9e749417f7bcb68db0c5ab3310c685de497b520e698430b58",
+  "cost_scenario": {
+    "id": "base",
+    "fee_bps_per_side": 5,
+    "execution_proxy_bps_per_side": 3,
+    "total_bps_per_side": 8
+  },
+  "window": {
+    "start": "2025-01-01T00:00:00Z",
+    "end_exclusive": "2026-09-01T00:00:00Z"
+  },
+  "valuation_endpoint": "2026-08-31T23:55:00+00:00",
+  "command": [
+    ".venv-paper/bin/python",
+    "-B",
+    "research/crypto/rd_program_20261105/p1/native/run_native.py",
+    "--execute",
+    "user_data/crypto_quant/rd_program_20261105_v1/registrations/P1_B2_AVERAGE_NATIVE_futures_L_base/run_manifest.json"
+  ],
+  "isolated_output_path": "user_data/crypto_quant/rd_program_20261105_v1/accounts/P1_B2_AVERAGE_NATIVE_futures_L_base",
+  "start_utc": null,
+  "candidate_readiness": {
+    "source_environment": "passed",
+    "data_hashes": "passed",
+    "date_grid": "passed",
+    "causality": "not_yet_diagnosed",
+    "five_minute_mark": "not_certified",
+    "scope": "engineering_only"
+  },
+  "resource_guards": {
+    "min_free_disk_bytes": 10737418240,
+    "cache_cleanup": "only fresh account output/lossless_cache after verified completion"
+  },
+  "orders_enabled": false,
+  "economic_qualified": false,
+  "runtime_modified": false,
+  "resolved_strategy_config_hash": "8d4d63bee4bf191d74f08279b8529f0031d60854747212ece7ab5e238126d5ee",
+  "strategy_main_timeframe": "4h",
+  "detail_timeframe": "5m",
+  "startup_candle_count": 0,
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "stoploss": "limit",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60
+  },
+  "stake_amount": "unlimited",
+  "strategy_config_hash_scope": "registered config; full runtime effective_config retained in output"
+}
