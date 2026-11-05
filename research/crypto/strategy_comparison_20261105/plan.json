@@ -1,0 +1,278 @@
+{
+  "schema": "cz.matched-native-strategy-comparison.v1",
+  "registered_at": "2026-11-05T11:17:53.720362+00:00",
+  "economic_results_observed_at_registration": false,
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "BNB/USDT:USDT",
+    "SOL/USDT:USDT",
+    "XRP/USDT:USDT",
+    "DOGE/USDT:USDT"
+  ],
+  "initial_equity_usdt": 1000,
+  "allowed_leverage": 1.0,
+  "total_cost_bps_per_side": [
+    5,
+    8,
+    15
+  ],
+  "cost_model": "5bps commission plus 0/3/10bps fee proxy; actual dataset funding separately; not orderbook fill/slippage proof",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/data-receipts.json",
+    "sha256": "972cd56a72ce33187e33d583cd972def24c85f6a496706976ab7107653819991"
+  },
+  "original_dataset_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/receipts.json",
+    "sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06"
+  },
+  "marks": {
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    "ETH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+    },
+    "BNB/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BNB_USDT_USDT-1h-mark.feather",
+      "sha256": "aa19bfe19bc1b7ffe90e9d6a5bb5da1f806f8f5aa3f67e6a6405e62a91a392be"
+    },
+    "SOL/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/SOL_USDT_USDT-1h-mark.feather",
+      "sha256": "c9e5089e38745a2f2d168b1190c9d866ca915225e2ffa22b52a1b2f7382e895b"
+    },
+    "XRP/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/XRP_USDT_USDT-1h-mark.feather",
+      "sha256": "e821b1b0b56da2a98337e49c605661aa8d62e4a383550c64c94edc060d41c89a"
+    },
+    "DOGE/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/DOGE_USDT_USDT-1h-mark.feather",
+      "sha256": "1acea3fba1b5f6035dc9ec3d3e1d814ff43081cd2439106433a52bb2ddccbb25"
+    }
+  },
+  "candidates": [
+    {
+      "name": "nfi-x8-1x",
+      "strategy": "NostalgiaForInfinityX8",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/configs/nfi-x8-1x.json",
+        "sha256": "c38ba47c6646a35b4e47c68d8efb8a794405adf2f4e922e609961b1994417cf1"
+      },
+      "source_files": {
+        "NostalgiaForInfinityX8.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        }
+      },
+      "original_source_files": {
+        "/Users/chrise/GitHub/CZ-Agent/vendor/nfi-x8/NostalgiaForInfinityX8.py": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+      },
+      "max_open_trades": 6,
+      "stake_amount": "unlimited",
+      "signal_timeframe": "5m",
+      "matching_timeframe": "5m",
+      "source_and_risk_behavior": "frozen existing source; common 1x normalization; existing compact and half-risk variants retained"
+    },
+    {
+      "name": "nfi-x7-1x",
+      "strategy": "NostalgiaForInfinityX7",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/configs/nfi-x7-1x.json",
+        "sha256": "2a87859ff3756450188e6ee9f472915f04d2b1fdc124a9591b78b73265ed1969"
+      },
+      "source_files": {
+        "NostalgiaForInfinityX7.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x7-1x/NostalgiaForInfinityX7.py",
+          "sha256": "43daba51f067942f69c242fa6559fd591bb8adf1fa766e3c625f1c3ef1af0732"
+        }
+      },
+      "original_source_files": {
+        "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/external_sources_20261022/iterativv_NostalgiaForInfinity/NostalgiaForInfinityX7.py": "43daba51f067942f69c242fa6559fd591bb8adf1fa766e3c625f1c3ef1af0732"
+      },
+      "max_open_trades": 6,
+      "stake_amount": "unlimited",
+      "signal_timeframe": "5m",
+      "matching_timeframe": "5m",
+      "source_and_risk_behavior": "frozen existing source; common 1x normalization; existing compact and half-risk variants retained"
+    },
+    {
+      "name": "nfi-x4-compact-1x",
+      "strategy": "NFI2023OneXCompact",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/configs/nfi-x4-compact-1x.json",
+        "sha256": "b4965ed627bf900f4bca05659fa060992cf15a300d73079f940303a8eb81bc1f"
+      },
+      "source_files": {
+        "NostalgiaForInfinityX4.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x4-compact-1x/NostalgiaForInfinityX4.py",
+          "sha256": "e2885c502ae2d069e2aa69d00c29fd10c3fec7f5eb7a2ba9b471d82606dea6eb"
+        },
+        "nfi2023_compact.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x4-compact-1x/nfi2023_compact.py",
+          "sha256": "4dbbc1897e4824f2a62ef65f1d076fb91b8e645803b4c9038df14cc7a93e8821"
+        }
+      },
+      "original_source_files": {
+        "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/external_sources_20261022/nfi_pre2024/NostalgiaForInfinityX4.py": "e2885c502ae2d069e2aa69d00c29fd10c3fec7f5eb7a2ba9b471d82606dea6eb",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/nfi2023_compact.py": "4dbbc1897e4824f2a62ef65f1d076fb91b8e645803b4c9038df14cc7a93e8821"
+      },
+      "max_open_trades": 6,
+      "stake_amount": "unlimited",
+      "signal_timeframe": "5m",
+      "matching_timeframe": "5m",
+      "source_and_risk_behavior": "frozen existing source; common 1x normalization; existing compact and half-risk variants retained"
+    },
+    {
+      "name": "donchian20-half-risk",
+      "strategy": "Donchian20HalfRisk",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/configs/donchian20-half-risk.json",
+        "sha256": "0cc67da5dfdb6601238fb8cfc67a32906b1bcc4fb3fc89b0385dfb27bd298862"
+      },
+      "source_files": {
+        "daily_donchian.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/donchian20-half-risk/daily_donchian.py",
+          "sha256": "e7541a1b4ef1e1799956fc3c077fef59145b247bcb39acb595c805ef3d8c7876"
+        },
+        "daily_donchian_risk.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/donchian20-half-risk/daily_donchian_risk.py",
+          "sha256": "95ab222f30aecd4f906f6676ce73812a3225c147c98d07437ee3a1da57ea7430"
+        }
+      },
+      "original_source_files": {
+        "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/daily_donchian.py": "e7541a1b4ef1e1799956fc3c077fef59145b247bcb39acb595c805ef3d8c7876",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/daily_donchian_risk.py": "95ab222f30aecd4f906f6676ce73812a3225c147c98d07437ee3a1da57ea7430"
+      },
+      "max_open_trades": 6,
+      "stake_amount": 150,
+      "signal_timeframe": "1h",
+      "matching_timeframe": "5m",
+      "source_and_risk_behavior": "frozen existing source; common 1x normalization; existing compact and half-risk variants retained"
+    },
+    {
+      "name": "trend-control",
+      "strategy": "TrendControl",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/configs/trend-control.json",
+        "sha256": "425b899bd4ebea948e2d7310f57428f60db49c8916983ceb54486ce1276a169b"
+      },
+      "source_files": {
+        "funding_trend.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/trend-control/funding_trend.py",
+          "sha256": "587143aa22943945a15afc1fe59ff300d629a093da0b80cb0710abf58a04be7c"
+        }
+      },
+      "original_source_files": {
+        "/Users/chrise/GitHub/freqtrade/research/crypto/strategies/funding_trend.py": "587143aa22943945a15afc1fe59ff300d629a093da0b80cb0710abf58a04be7c"
+      },
+      "max_open_trades": 4,
+      "stake_amount": 150,
+      "signal_timeframe": "1h",
+      "matching_timeframe": "5m",
+      "source_and_risk_behavior": "frozen existing source; common 1x normalization; existing compact and half-risk variants retained"
+    }
+  ],
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "runner_sha256": "d12b7c34e420a1f95c4b02ce6c6404ccdfcdc630897f3508cc254f45a24e2751",
+  "memory_guard_bytes": 5905580032,
+  "wall_guard_seconds": 1800,
+  "maximum_financial_workers": 1,
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "selection_protocol": {
+    "primary": "Pareto dominance across all periods and all three cost levels: return >= and hourly order-cost marked drawdown <=; at least one strict advantage; report no unique best if frontier has >1",
+    "native_cash_and_order_identity_required": true,
+    "screening_distinct_from_ranking": {
+      "source": "existing nfi_plan.json thresholds retained as diagnostics, not user-approved live risk",
+      "minimum_completed_campaigns_each_period": 30,
+      "maximum_observed_drawdown": 0.15,
+      "minimum_profit_factor": 1.1,
+      "positive_return_all_costs": true
+    },
+    "no_post_result_retuning": true,
+    "no_stopping_loser_evaluation": true,
+    "cash_reference_return": 0.0,
+    "cash_reference_drawdown": 0.0,
+    "inferential_superiority_claimed": false
+  },
+  "known_limitations": [
+    "Retrospective previously-used history, not independent OOS",
+    "Six fixed major coins do not test all markets or author 40-80 coin recommendation",
+    "Source-native budgets, slots, long/short, DCA and exit rules retained; equal leverage does not mean equal realized risk",
+    "1h strategies use official 5m detail instead of prior 1h-only execution; explicit research contract change",
+    "All ranking NAV uses same hourly real mark OPEN; not intrahour worst risk or executable live equity",
+    "Common endpoint is pre-bar 2026-08-31 23:00 UTC; native forced terminal liquidation reported separately",
+    "Contemporary public market rules, not certified historical exchange limits",
+    "Five frozen existing representatives, not global optimum over every catalog record"
+  ],
+  "new_factors": 0,
+  "parameter_optimization": false,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/public-market-rules-six.json",
+    "sha256": "1f468a2b48a6f53de4276ecba2791f3ceff00e7da1e88afe2457a1dc666f5c3c"
+  },
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "registration_completed_at": "2026-11-05T11:52:17.586200+00:00",
+  "storage_policy": {
+    "lossless_indicator_map_lru": 1,
+    "lossless_trim_map_lru": 1,
+    "analyzed_provider_lru": 6,
+    "reason": "six fixed account pairs cached for native callback access; 5.5GiB process guard; no new downcast"
+  },
+  "technical_revision": 2,
+  "revision_reason": "Explicit native datadir CLI option required; first attempt stopped before loading market candles or calculating economics. Frozen economic contract unchanged.",
+  "revision_at": "2026-11-05T11:53:52.025182+00:00"
+}

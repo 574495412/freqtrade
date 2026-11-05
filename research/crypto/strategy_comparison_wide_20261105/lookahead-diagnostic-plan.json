@@ -1,0 +1,18 @@
+{
+  "schema": "cz.nfi-lookahead-diagnostic.v1",
+  "registered_at_utc": "2026-11-05T13:20:43.713350+00:00",
+  "strategy": "NostalgiaForInfinityX8",
+  "source_sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3",
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "pairs": [
+    "ADA/USDT:USDT",
+    "ETH/USDT:USDT"
+  ],
+  "timerange": "20250101-20250401",
+  "minimum_trade_amount": 5,
+  "targeted_trade_amount": 20,
+  "selection_timing": "Pair and period chosen after historical results were known; ADA had most X8 trades, ETH provides a liquid major. Diagnostic is limited to these pairs, dates, and exercised signal paths.",
+  "engine_overrides": "Official lookahead-analysis uses synthetic large wallet, market orders and modified slots; its account output is not economic performance.",
+  "reference": "https://www.freqtrade.io/en/stable/lookahead-analysis/",
+  "orders_enabled": false
+}

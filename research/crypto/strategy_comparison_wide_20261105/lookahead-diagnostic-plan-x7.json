@@ -1,0 +1,49 @@
+{
+  "schema": "cz.nfi-lookahead-x7-diagnostic.v1",
+  "registered_at_utc": "2026-11-05T14:54:35.680143+00:00",
+  "selection_timing": "Registered after X8 lookahead flagged 3 exit signals and after X7/X8 historical economic outcomes were known; diagnostic comparison is post-result, not blind or independent OOS.",
+  "strategy": "NostalgiaForInfinityX7",
+  "strategy_version": "v17.5.175",
+  "strategy_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x7-1x/NostalgiaForInfinityX7.py",
+    "sha256": "43daba51f067942f69c242fa6559fd591bb8adf1fa766e3c625f1c3ef1af0732"
+  },
+  "upstream_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/external_sources_20261022/iterativv_NostalgiaForInfinity/NostalgiaForInfinityX7.py",
+    "sha256": "43daba51f067942f69c242fa6559fd591bb8adf1fa766e3c625f1c3ef1af0732"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "engine_manifest_sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64",
+  "config": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/nfi-x7-1x.json",
+    "sha256": "a42fc883e47d1d65e0902d73534e37eb0d05041a97c7c8fd42bfa9bb11624c34"
+  },
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+    "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47"
+  },
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles",
+  "pairs": [
+    "ADA/USDT:USDT",
+    "ETH/USDT:USDT"
+  ],
+  "timerange": "20250101-20250401",
+  "minimum_trade_amount": 5,
+  "targeted_trade_amount": 20,
+  "memory_guard_bytes": 5905580032,
+  "wall_guard_seconds": 900,
+  "max_financial_workers": 1,
+  "x8_result": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_x8_lookahead_check_20261105_v001/lookahead-result.csv",
+    "sha256": "0d89fa2f4c1f0fb352604b138d9cbb820fbf5a24da968e1034c2620835538f7a"
+  },
+  "runner_sha256": "d237852cc9ccb4595e47f46fa55072b5664dca62d535b7027c2aadf0da8f1a57",
+  "engine_overrides": "Official lookahead-analysis uses synthetic large wallet, market orders and modified slots; its account output is not economic performance.",
+  "limitations": [
+    "X7 frozen account config differs from X8 in strategy-specific settings; official diagnostic applies synthetic wallet/orders/slots; no return comparison.",
+    "Two pairs, a historical quarter, sampled signal paths, and selected X8 outcome known. Absence of flags cannot prove absence of bias.",
+    "Do not retune or modify strategy based on diagnostic."
+  ],
+  "orders_enabled": false,
+  "credentials_allowed": false
+}

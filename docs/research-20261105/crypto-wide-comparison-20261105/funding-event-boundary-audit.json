@@ -1,0 +1,789 @@
+{
+  "schema": "cz.funding-boundary-audit.v1",
+  "created_at_utc": "2026-11-05T14:24:56.184284+00:00",
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "engine_manifest_sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64",
+  "engine_sources": {
+    "freqtrade/optimize/backtesting.py": "1d45e0b34ddf30813bbdf51a20be6e8345a65b668f373f8ce2fbb6e93271b234",
+    "freqtrade/exchange/exchange.py": "37c31dce2a4cd73f3f929c341d7ac3b848417657050cc563a881ad5db526f4b5",
+    "freqtrade/persistence/trade_model.py": "a011ca8686a205fd279ef665a2a3d5a1a4e3fb8cec9cbbac7f429eed0da85c2d"
+  },
+  "input_data_receipt": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+    "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47"
+  },
+  "funding_and_mark_file_hashes": {
+    "futures/IOTA_USDT_USDT-1h-funding_rate.feather": "b2409682586482416188798c0d609c4c721a3012ebd14a8eecb87ce6e13e73a4",
+    "futures/IOTA_USDT_USDT-1h-mark.feather": "9871cb4866c5889cad59377a329273efa75b5768b434b286dbfcfb031a4ecfbd",
+    "futures/AAVE_USDT_USDT-1h-funding_rate.feather": "9e431f34772c37b80a0499e685b2791711cef79c422b4121a6ddd5d289579cfd",
+    "futures/AAVE_USDT_USDT-1h-mark.feather": "38bdccdaec7e348a6056390666b715e5c18df0b9c0f79feb5795d9371d2a87fb",
+    "futures/UNI_USDT_USDT-1h-funding_rate.feather": "77f21bc104f82d061626ea18063437e1d5a78f997a8d96d6404102559f6097cd",
+    "futures/UNI_USDT_USDT-1h-mark.feather": "af4e27b504902bae1816ff9ba606957665b1d188cce9a262994427bbe0ba896c",
+    "futures/CRV_USDT_USDT-1h-funding_rate.feather": "11b6ca6c5c91277100725ddd8690ac6e4fabdbebfb8551b8a5bab4b86e4644ab",
+    "futures/CRV_USDT_USDT-1h-mark.feather": "3c6209fe6cdcf397c28455622f661ca48cf58eb8b0a1da0ef4a4b7e1135bde3d",
+    "futures/LINK_USDT_USDT-1h-funding_rate.feather": "bb6964f1df212cec1e2ce08c0d94a0798ae85d44cd891fd4884d1177f66355df",
+    "futures/LINK_USDT_USDT-1h-mark.feather": "1a982092bca60cba7b74254c4c63254493565badf87bdd1913a86785f56549cd",
+    "futures/SOL_USDT_USDT-1h-funding_rate.feather": "3263415561fd28b54c336ce73f80b3690f1fa7f7fcc99d40360ab7551fb40a1a",
+    "futures/SOL_USDT_USDT-1h-mark.feather": "c9e5089e38745a2f2d168b1190c9d866ca915225e2ffa22b52a1b2f7382e895b",
+    "futures/RUNE_USDT_USDT-1h-funding_rate.feather": "30a4cea7a8b973888776ceaa3702983c653d603ec85ce42bba2935c6fa1c6fe0",
+    "futures/RUNE_USDT_USDT-1h-mark.feather": "e551a3c2aa5e48bcfe600ee45024520566ae5b22b70d143afa7278c3112d51c4",
+    "futures/ADA_USDT_USDT-1h-funding_rate.feather": "6d259e87775a44147a8d45cc83600526978fa42c8e18074eae767ac84ddef282",
+    "futures/ADA_USDT_USDT-1h-mark.feather": "dc3b578e04fa23c3c58e64b64916eb17c7471aee910d7334b279840bd58dd7be",
+    "futures/XRP_USDT_USDT-1h-funding_rate.feather": "8e8b88053fac5a77b584b6e7f1e7e091ad30f82db0f3d19ec04030828ec1a066",
+    "futures/XRP_USDT_USDT-1h-mark.feather": "e821b1b0b56da2a98337e49c605661aa8d62e4a383550c64c94edc060d41c89a",
+    "futures/ALGO_USDT_USDT-1h-funding_rate.feather": "a20b2f8cb13cb528d20e21314de4b778255cd7ebebcaeb9ae925f590905cc8c1",
+    "futures/ALGO_USDT_USDT-1h-mark.feather": "38a72f320fa0419d7c80e093db3ac8d5b8c0a3fd736720fdd0bc3844c17bf6fc",
+    "futures/GALA_USDT_USDT-1h-funding_rate.feather": "a232efac72de24e02db337938a95af7c918c472a80b339a9df254ba70c2ef78a",
+    "futures/GALA_USDT_USDT-1h-mark.feather": "a2d6e16d219784969f22dbd4372f8b5368d705c95975f1cabf5808bf13e202af",
+    "futures/SAND_USDT_USDT-1h-funding_rate.feather": "d01b188a0c1985b2765796ba5d5b8a2cfb0ef394ef91693eda28bea61cf385bc",
+    "futures/SAND_USDT_USDT-1h-mark.feather": "1ad3d82d0e6005820df40f5b7d02b828c65f7378dbf2aabeac5b373993cf5b61",
+    "futures/THETA_USDT_USDT-1h-funding_rate.feather": "dfa1f681451486256f6b8eee20532fa1c97e6752749ae60b92669d5b1d67a5b5",
+    "futures/THETA_USDT_USDT-1h-mark.feather": "5103c75188045a77c337a06f86296ea630f9d4323cd03d7623a27d537f1d3c6a",
+    "futures/DOT_USDT_USDT-1h-funding_rate.feather": "c85a55f55460516260a561e7817303985329e9dc187a5114ffb4c31d73811cce",
+    "futures/DOT_USDT_USDT-1h-mark.feather": "045ce00af8852a27fdaeb3bda7d7719642b3bde0186c178e462686d99c5c0afa",
+    "futures/FIL_USDT_USDT-1h-funding_rate.feather": "1a2f34162dc84cc4f6d3939334abedb782e84e71ac0abe9e45c0bacfd6fc0482",
+    "futures/FIL_USDT_USDT-1h-mark.feather": "005cb9c910940ebc32877f86acfba18ffef040110fbdd68765936e9fbe81751c",
+    "futures/LTC_USDT_USDT-1h-funding_rate.feather": "0b65b3911a3b0d3022691c7c068cc9aa14dd8978ab70bae726899e18b7675ce4",
+    "futures/LTC_USDT_USDT-1h-mark.feather": "05e04be247cc13f8127c7a809f8b1032e974586e60bdfddd07ba6d5a8ae581e1",
+    "futures/AVAX_USDT_USDT-1h-funding_rate.feather": "d95d569acbbf9aa6d9857e0ce63cd33b2d1eeab73c3a3419a2538dda190f67ca",
+    "futures/AVAX_USDT_USDT-1h-mark.feather": "e7deb6537e934eb2775cc6bc31fe036335002f6898d869af6da636133d6a1d46",
+    "futures/TRB_USDT_USDT-1h-funding_rate.feather": "155515ca31b685a51422a322f553ea20646bc1d4c112bd69903d9d03b981b1df",
+    "futures/TRB_USDT_USDT-1h-mark.feather": "dfcf7f2b5d02de406a24d61ecafd1fbcb599adb8a35f44658f6a726762f4b0b0",
+    "futures/KSM_USDT_USDT-1h-funding_rate.feather": "9afa89cb47b2565baf7cbb537abbee24d0d5eba890f7e67ff6e8660ede4b7288",
+    "futures/KSM_USDT_USDT-1h-mark.feather": "12388a3f1319895bd671e156ea62c1d67ddefd147ff0d9535d05dbc403ad1e33",
+    "futures/NEO_USDT_USDT-1h-funding_rate.feather": "cfbde3e68e8c981413537480ea8ddcc70f283b3b7c95b4858026c37b56c61979",
+    "futures/NEO_USDT_USDT-1h-mark.feather": "7f1b2d607e1e955807b31e9ff86126e8be42b0868a97839a8420821684b70ddf",
+    "futures/DOGE_USDT_USDT-1h-funding_rate.feather": "830e678f0457dc3b947cf148a18d9db72345c6826a98fec3eeee85be9346b0e0",
+    "futures/DOGE_USDT_USDT-1h-mark.feather": "1acea3fba1b5f6035dc9ec3d3e1d814ff43081cd2439106433a52bb2ddccbb25",
+    "futures/IOTX_USDT_USDT-1h-funding_rate.feather": "031b5da64f82e6c88e30a0e1320ca211c2f670f873251faef61c2139de6f784b",
+    "futures/IOTX_USDT_USDT-1h-mark.feather": "eaab88e11324c4267889f7f51252e4d1ff476a2872fe4a4bfa5de4e596928511",
+    "futures/SKL_USDT_USDT-1h-funding_rate.feather": "15021e342d4781fa9adc070af01b7a92b69c15d64fea3ef14742aff9f20067bf",
+    "futures/SKL_USDT_USDT-1h-mark.feather": "0a7df2e2d6b7d916a8bb70bc122171e14ea2483b22c3c1082509250bfb0a9aad",
+    "futures/MASK_USDT_USDT-1h-funding_rate.feather": "38b3977cec46720ac0bd31686570d2740599581b16792db2860bdb0254d76986",
+    "futures/MASK_USDT_USDT-1h-mark.feather": "a8da4a5a03b1f88140266521811d22bf0e380cacc700a9267ae2226ac4d0f5fa",
+    "futures/ETC_USDT_USDT-1h-funding_rate.feather": "34d4e2864f4ff7f30520dd181744c847547017724cefa902e30e18e0b1ca07ba",
+    "futures/ETC_USDT_USDT-1h-mark.feather": "b8e72f8b8af30610257028b5227a668c2a2875c8c9aeb2f00f1b9755735a5d6b",
+    "futures/SUSHI_USDT_USDT-1h-funding_rate.feather": "b0779c92c60739d77e3afdff8975ef9ea3daf0ed65aa66300d1eed3b7df13380",
+    "futures/SUSHI_USDT_USDT-1h-mark.feather": "77ddd351117bba249d756ded4a39f3554a76d832a9cc1661e8ceab053be693a9",
+    "futures/SNX_USDT_USDT-1h-funding_rate.feather": "adb58a1605a61409b061e42c72abfcf5cffa38b7ec3ed1a3670227b705541539",
+    "futures/SNX_USDT_USDT-1h-mark.feather": "8ff1ca880660c71c9cb7f3b587884bb58c7872c2ab648ebb51fb5f8e5fa114be",
+    "futures/AXS_USDT_USDT-1h-funding_rate.feather": "4024f9d50c7f7ec3e9272cb0583e14f7994df980d6f9426139195b8d3af1ccbb",
+    "futures/AXS_USDT_USDT-1h-mark.feather": "76c88ede541477ac1f60386c4e1d8afce362218e52638701b1e2ba4b399a8718",
+    "futures/NEAR_USDT_USDT-1h-funding_rate.feather": "d85e33c046420c8b9c791d5558f8d70bf4a17c1388f0643fa591f8e5b849de80",
+    "futures/NEAR_USDT_USDT-1h-mark.feather": "bb5c568f61c0914eabb32b8070b433589734e07640ed60831ac8c661118f024f",
+    "futures/BCH_USDT_USDT-1h-funding_rate.feather": "79482f72686d4d0a1e9288216f2fdbfda01b45bed91aa861999e319272c174fb",
+    "futures/BCH_USDT_USDT-1h-mark.feather": "c8abf623f885bd41c6608124a0271f0dea7cee66337deb0e5adc863407daa988",
+    "futures/DYDX_USDT_USDT-1h-funding_rate.feather": "8aecb4d38b1dde9c475b94053cdd466bf704346ebe4789233e8bd2b3e8d9b985",
+    "futures/DYDX_USDT_USDT-1h-mark.feather": "deebd22cdd106f64ab35d91aaefcac8ffe16cc7d4a92a145c9df590700e9ae7f",
+    "futures/ETH_USDT_USDT-1h-funding_rate.feather": "a8d281b330a9793eceb94db22c7fd302cb55802aea8bb9a02e01e1e97fd048ae",
+    "futures/ETH_USDT_USDT-1h-mark.feather": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764",
+    "futures/EGLD_USDT_USDT-1h-funding_rate.feather": "3bc59c4fc84748d380764b76cd6ee3ff52e5edd045a31c10cf808161583e7e9f",
+    "futures/EGLD_USDT_USDT-1h-mark.feather": "50f47be9e90565203673aca6e69e7ec87ab3d68b717503b2c888dd04dd94b472",
+    "futures/BNB_USDT_USDT-1h-funding_rate.feather": "e691fdc560d6ea0239d1425483ee432abec41f4282fe43f21c19ce6188e04602",
+    "futures/BNB_USDT_USDT-1h-mark.feather": "aa19bfe19bc1b7ffe90e9d6a5bb5da1f806f8f5aa3f67e6a6405e62a91a392be",
+    "futures/TRX_USDT_USDT-1h-funding_rate.feather": "d99485ec1ec71242dbba4507194437c3c4fc6ea9ace994841595faf99c37a13b",
+    "futures/TRX_USDT_USDT-1h-mark.feather": "53e8caee9894e6a5ace2e24a228966fe1aa69570184f871368857120b6690118",
+    "futures/ATOM_USDT_USDT-1h-funding_rate.feather": "90f8af9757bd352cb2efe5b01f394babf27a851991f0cca48c4736bb526a8483",
+    "futures/ATOM_USDT_USDT-1h-mark.feather": "01aa0fb297b66261581a00ae85b9260ed84ea73cf2faea9f839068c348fa61bd",
+    "futures/GRT_USDT_USDT-1h-funding_rate.feather": "c3d617bbcc9b11f24001691cb8bbbf70f04fbb03d811435a89f0d6c483f93a71",
+    "futures/GRT_USDT_USDT-1h-mark.feather": "888a75ff79a1765010eefe8d609b6ad90af64cb815995b48c035041dccaa0bad",
+    "futures/MANA_USDT_USDT-1h-funding_rate.feather": "b8e03f091537920fb52ec05c06dd09cd8ff81c3a5982e28ae14bab6db008a1e5",
+    "futures/MANA_USDT_USDT-1h-mark.feather": "accfd57d92a4bd5d47c12a42594359656201aa8cdcc8d6758b8c3ede4476aa8c",
+    "futures/CELO_USDT_USDT-1h-funding_rate.feather": "7fd5ef9017ec48e532efe4f68352d46f61fd91ee81d2ddfb1517fbf380299244",
+    "futures/CELO_USDT_USDT-1h-mark.feather": "59c4b837ebed5a08c3ed9923f054e69033aa426fec272dbb3c9e83d9dc35993b",
+    "futures/BTC_USDT_USDT-1h-funding_rate.feather": "efe1f9d8482a6a1801005cc44874818a2c42e2020cdb0b46044a8077c38ad781",
+    "futures/BTC_USDT_USDT-1h-mark.feather": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+  },
+  "baseline": "Fee per event on position strictly before same-time fills. This is an explicit accounting reference, not verified actual exchange settlement.",
+  "model": "Baseline plus funding on the position immediately after each same-time fill; independently matched to all native trade funding totals.",
+  "scope": "Archived simulated fills and native funding. No strategy replay, no market execution or account settlement evidence. Additional amount is a fixed-fill accounting difference, not a counterfactual backtest or a claim that exchange charged twice.",
+  "result_affects_existing_archives": false,
+  "orders_enabled": false,
+  "accounts": [
+    {
+      "account": "nfi-x4-compact-1x-cost8",
+      "archive_sha256": "b6e5a77c18a9d2ff88ff45bbbb78a22d1f4cd6fcb89ee687ab2fe108a7f3abf0",
+      "trades": 68,
+      "funding_boundary_events_with_fills": 1,
+      "events_with_multiple_same_time_fills": 0,
+      "events_with_nonzero_additional_model_funding": 0,
+      "net_additional_model_funding_usdt": 0.0,
+      "net_additional_model_funding_percent_of_initial_1000": 0.0,
+      "maximum_model_minus_native_abs_usdt": 2.220446049250313e-16,
+      "events": [
+        {
+          "pair": "SAND/USDT:USDT",
+          "trade_open": "2025-05-23 12:30:00+00:00",
+          "trade_close": "2025-05-23 16:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-05-23T16:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.32298,
+          "qty_before": 587.0,
+          "fills_at_boundary": [
+            {
+              "entry": false,
+              "quantity": 587.0,
+              "quantity_after": 0.0
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.018958926,
+          "additional_model_funding_usdt": -0.0
+        }
+      ]
+    },
+    {
+      "account": "nfi-x8-1x-cost8",
+      "archive_sha256": "80e731e8528e6c95a424e71ae8867b1fe48f914ecbb4569e34c8f131f9743c73",
+      "trades": 286,
+      "funding_boundary_events_with_fills": 6,
+      "events_with_multiple_same_time_fills": 0,
+      "events_with_nonzero_additional_model_funding": 3,
+      "net_additional_model_funding_usdt": -0.059717630327499986,
+      "net_additional_model_funding_percent_of_initial_1000": -0.005971763032749999,
+      "maximum_model_minus_native_abs_usdt": 3.3306690738754696e-16,
+      "events": [
+        {
+          "pair": "IOTX/USDT:USDT",
+          "trade_open": "2025-02-02 23:05:00+00:00",
+          "trade_close": "2025-02-03 00:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-02-03T00:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.02375979,
+          "qty_before": 2020.0,
+          "fills_at_boundary": [
+            {
+              "entry": false,
+              "quantity": 2020.0,
+              "quantity_after": 0.0
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.00479947758,
+          "additional_model_funding_usdt": -0.0
+        },
+        {
+          "pair": "GALA/USDT:USDT",
+          "trade_open": "2025-05-15 21:25:00+00:00",
+          "trade_close": "2025-06-20 00:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-06-20T00:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.01418548,
+          "qty_before": 564.0,
+          "fills_at_boundary": [
+            {
+              "entry": false,
+              "quantity": 564.0,
+              "quantity_after": 0.0
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0008000610720000001,
+          "additional_model_funding_usdt": -0.0
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2025-09-08 00:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-08-10T16:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.98230766,
+          "qty_before": 8.599999999999966,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 60.6,
+              "quantity_after": 69.19999999999996
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0008447845875999967,
+          "additional_model_funding_usdt": -0.0067975690071999965
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2025-09-08 00:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-08-13T00:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.97926179,
+          "qty_before": 8.599999999999959,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 60.7,
+              "quantity_after": 69.29999999999995
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.000842165139399996,
+          "additional_model_funding_usdt": -0.006786284204699996
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2025-09-08 00:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-09-08T00:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.76828367,
+          "qty_before": 10.399999999999949,
+          "fills_at_boundary": [
+            {
+              "entry": false,
+              "quantity": 10.4,
+              "quantity_after": -5.1514348342607263e-14
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0007990150167999961,
+          "additional_model_funding_usdt": 3.957763260231673e-18
+        },
+        {
+          "pair": "XRP/USDT:USDT",
+          "trade_open": "2026-08-22 08:05:00+00:00",
+          "trade_close": "2026-08-23 14:50:00+00:00",
+          "side": "long",
+          "funding_time": "2026-08-23T08:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 1.46178001,
+          "qty_before": 261.2,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 54.4,
+              "quantity_after": 315.59999999999997
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0381816938612,
+          "additional_model_funding_usdt": -0.046133777115599996
+        }
+      ]
+    },
+    {
+      "account": "nfi-x4-compact-1x-cost15",
+      "archive_sha256": "4c586726635a1a9429a0417d4cfda5c462b3b82dd1795a322e5a669f13bd2b92",
+      "trades": 68,
+      "funding_boundary_events_with_fills": 0,
+      "events_with_multiple_same_time_fills": 0,
+      "events_with_nonzero_additional_model_funding": 0,
+      "net_additional_model_funding_usdt": 0.0,
+      "net_additional_model_funding_percent_of_initial_1000": 0.0,
+      "maximum_model_minus_native_abs_usdt": 2.220446049250313e-16,
+      "events": []
+    },
+    {
+      "account": "nfi-x8-1x-cost15",
+      "archive_sha256": "e2ff3c9a7de5960375b63270e2ce1ee35a4eca47a43a28ad1ad2cc3a08624fb3",
+      "trades": 282,
+      "funding_boundary_events_with_fills": 5,
+      "events_with_multiple_same_time_fills": 0,
+      "events_with_nonzero_additional_model_funding": 3,
+      "net_additional_model_funding_usdt": -0.05914753612359999,
+      "net_additional_model_funding_percent_of_initial_1000": -0.005914753612359999,
+      "maximum_model_minus_native_abs_usdt": 3.3306690738754696e-16,
+      "events": [
+        {
+          "pair": "GALA/USDT:USDT",
+          "trade_open": "2025-05-15 21:25:00+00:00",
+          "trade_close": "2025-06-20 00:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-06-20T00:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.01418548,
+          "qty_before": 563.0,
+          "fills_at_boundary": [
+            {
+              "entry": false,
+              "quantity": 563.0,
+              "quantity_after": 0.0
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0007986425240000001,
+          "additional_model_funding_usdt": -0.0
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2025-09-08 00:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-08-10T16:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.98230766,
+          "qty_before": 8.599999999999966,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 60.6,
+              "quantity_after": 69.19999999999996
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0008447845875999967,
+          "additional_model_funding_usdt": -0.0067975690071999965
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2025-09-08 00:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-08-13T00:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.97926179,
+          "qty_before": 8.599999999999959,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 60.7,
+              "quantity_after": 69.29999999999995
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.000842165139399996,
+          "additional_model_funding_usdt": -0.006786284204699996
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2025-09-08 00:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-09-08T00:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.76828367,
+          "qty_before": 10.399999999999949,
+          "fills_at_boundary": [
+            {
+              "entry": false,
+              "quantity": 10.4,
+              "quantity_after": -5.1514348342607263e-14
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0007990150167999961,
+          "additional_model_funding_usdt": 3.957763260231673e-18
+        },
+        {
+          "pair": "XRP/USDT:USDT",
+          "trade_open": "2026-08-22 08:05:00+00:00",
+          "trade_close": "2026-08-23 15:00:00+00:00",
+          "side": "long",
+          "funding_time": "2026-08-23T08:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 1.46178001,
+          "qty_before": 258.0,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 53.7,
+              "quantity_after": 311.7
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.037713924258,
+          "additional_model_funding_usdt": -0.0455636829117
+        }
+      ]
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "archive_sha256": "d78b249c8d73c0db7d2b1b4a2a9e65a9b1c32331bfe5c55ab91b5af6d3bab98f",
+      "trades": 198,
+      "funding_boundary_events_with_fills": 11,
+      "events_with_multiple_same_time_fills": 0,
+      "events_with_nonzero_additional_model_funding": 10,
+      "net_additional_model_funding_usdt": -0.054546218419985956,
+      "net_additional_model_funding_percent_of_initial_1000": -0.005454621841998596,
+      "maximum_model_minus_native_abs_usdt": 1.7763568394002505e-15,
+      "events": [
+        {
+          "pair": "LTC/USDT:USDT",
+          "trade_open": "2025-02-03 00:45:00+00:00",
+          "trade_close": "2025-02-03 16:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-02-03T16:00:00+00:00",
+          "funding_rate": 2.976e-05,
+          "mark_open": 103.09422068,
+          "qty_before": 1.7819999999999996,
+          "fills_at_boundary": [
+            {
+              "entry": false,
+              "quantity": 1.782,
+              "quantity_after": -4.440892098500626e-16
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.005467325701252377,
+          "additional_model_funding_usdt": 1.3625030026162223e-18
+        },
+        {
+          "pair": "GALA/USDT:USDT",
+          "trade_open": "2025-05-15 21:25:00+00:00",
+          "trade_close": "2025-07-11 01:05:00+00:00",
+          "side": "long",
+          "funding_time": "2025-05-27T08:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.01953,
+          "qty_before": 413.0,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 2636.0,
+              "quantity_after": 3049.0
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0008065889999999999,
+          "additional_model_funding_usdt": -0.005954696999999999
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2026-08-22 15:40:00+00:00",
+          "side": "long",
+          "funding_time": "2025-08-10T16:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.98230766,
+          "qty_before": 8.499999999999986,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 53.8,
+              "quantity_after": 62.29999999999998
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0008349615109999987,
+          "additional_model_funding_usdt": -0.006119776721799999
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2026-08-22 15:40:00+00:00",
+          "side": "long",
+          "funding_time": "2025-08-13T00:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.97926179,
+          "qty_before": 8.499999999999986,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 53.9,
+              "quantity_after": 62.399999999999984
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0008323725214999986,
+          "additional_model_funding_usdt": -0.006110593569599998
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2026-08-22 15:40:00+00:00",
+          "side": "long",
+          "funding_time": "2025-10-14T16:00:00+00:00",
+          "funding_rate": -5.162e-05,
+          "mark_open": 0.59455824,
+          "qty_before": 23.799999999999955,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 88.9,
+              "quantity_after": 112.69999999999996
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": 0.0007304480931014386,
+          "additional_model_funding_usdt": 0.003458886558509759
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2026-08-22 15:40:00+00:00",
+          "side": "long",
+          "funding_time": "2025-10-18T00:00:00+00:00",
+          "funding_rate": -5.682e-05,
+          "mark_open": 0.50978713,
+          "qty_before": 23.899999999999963,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 103.9,
+              "quantity_after": 127.79999999999997
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": 0.0006922899029657389,
+          "additional_model_funding_usdt": 0.0037018681840594787
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2026-08-22 15:40:00+00:00",
+          "side": "long",
+          "funding_time": "2026-02-07T16:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.25683399,
+          "qty_before": 34.19999999999999,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 205.8,
+              "quantity_after": 240.0
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0008783722457999998,
+          "additional_model_funding_usdt": -0.0061640157600000006
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2026-08-22 15:40:00+00:00",
+          "side": "long",
+          "funding_time": "2026-03-01T00:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.251,
+          "qty_before": 244.4,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 175.6,
+              "quantity_after": 420.0
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0061344400000000006,
+          "additional_model_funding_usdt": -0.010542
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2026-08-22 15:40:00+00:00",
+          "side": "long",
+          "funding_time": "2026-04-20T16:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.228,
+          "qty_before": 36.30000000000001,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 232.0,
+              "quantity_after": 268.3
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0008276400000000004,
+          "additional_model_funding_usdt": -0.00611724
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2026-08-22 15:40:00+00:00",
+          "side": "long",
+          "funding_time": "2026-04-26T16:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.22749596,
+          "qty_before": 36.400000000000006,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 232.0,
+              "quantity_after": 268.4
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0008280852944000003,
+          "additional_model_funding_usdt": -0.0061059915664
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2026-08-22 15:40:00+00:00",
+          "side": "long",
+          "funding_time": "2026-07-21T16:00:00+00:00",
+          "funding_rate": 7.617e-05,
+          "mark_open": 0.21381711,
+          "qty_before": 689.7999999999997,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 206.2,
+              "quantity_after": 895.9999999999998
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.011234392705549255,
+          "additional_model_funding_usdt": -0.014592658544755197
+        }
+      ]
+    },
+    {
+      "account": "nfi-x7-1x-cost8",
+      "archive_sha256": "3c3a907800d361afe2e2cd01eb964b9b2a5f11141898e6cfdf44c35acb008773",
+      "trades": 207,
+      "funding_boundary_events_with_fills": 9,
+      "events_with_multiple_same_time_fills": 0,
+      "events_with_nonzero_additional_model_funding": 9,
+      "net_additional_model_funding_usdt": -0.03616049031716816,
+      "net_additional_model_funding_percent_of_initial_1000": -0.0036160490317168168,
+      "maximum_model_minus_native_abs_usdt": 2.220446049250313e-16,
+      "events": [
+        {
+          "pair": "GALA/USDT:USDT",
+          "trade_open": "2025-05-15 21:25:00+00:00",
+          "trade_close": "2025-07-11 01:10:00+00:00",
+          "side": "long",
+          "funding_time": "2025-05-27T08:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.01953,
+          "qty_before": 415.0,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 2699.0,
+              "quantity_after": 3114.0
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0008104949999999999,
+          "additional_model_funding_usdt": -0.006081641999999999
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2025-11-28 11:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-08-10T16:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.98230766,
+          "qty_before": 8.600000000000009,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 55.3,
+              "quantity_after": 63.900000000000006
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0008447845876000009,
+          "additional_model_funding_usdt": -0.0062769459474
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2025-11-28 11:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-08-13T00:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.97926179,
+          "qty_before": 8.600000000000009,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 55.4,
+              "quantity_after": 64.0
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.0008421651394000008,
+          "additional_model_funding_usdt": -0.006267275456
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2025-11-28 11:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-10-14T16:00:00+00:00",
+          "funding_rate": -5.162e-05,
+          "mark_open": 0.59455824,
+          "qty_before": 23.80000000000001,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 91.2,
+              "quantity_after": 115.00000000000001
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": 0.0007304480931014404,
+          "additional_model_funding_usdt": 0.0035294760801120005
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "trade_open": "2025-07-29 14:05:00+00:00",
+          "trade_close": "2025-11-28 11:00:00+00:00",
+          "side": "long",
+          "funding_time": "2025-10-18T00:00:00+00:00",
+          "funding_rate": -5.682e-05,
+          "mark_open": 0.50978713,
+          "qty_before": 23.80000000000001,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 106.7,
+              "quantity_after": 130.5
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": 0.0006893932924930803,
+          "additional_model_funding_usdt": 0.0037800766668213
+        },
+        {
+          "pair": "BCH/USDT:USDT",
+          "trade_open": "2025-12-10 03:25:00+00:00",
+          "trade_close": "2025-12-27 09:20:00+00:00",
+          "side": "long",
+          "funding_time": "2025-12-12T00:00:00+00:00",
+          "funding_rate": -0.0001613,
+          "mark_open": 573.84,
+          "qty_before": 0.05800000000000001,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 0.118,
+              "quantity_after": 0.176
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": 0.005368502736000001,
+          "additional_model_funding_usdt": 0.016290628992
+        },
+        {
+          "pair": "GALA/USDT:USDT",
+          "trade_open": "2026-03-05 16:10:00+00:00",
+          "trade_close": "2026-05-06 21:40:00+00:00",
+          "side": "long",
+          "funding_time": "2026-04-26T00:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 0.003475,
+          "qty_before": 2706.0,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 20236.0,
+              "quantity_after": 22942.0
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.000940335,
+          "additional_model_funding_usdt": -0.007972345
+        },
+        {
+          "pair": "LINK/USDT:USDT",
+          "trade_open": "2026-06-04 01:25:00+00:00",
+          "trade_close": "2026-08-11 08:05:00+00:00",
+          "side": "long",
+          "funding_time": "2026-07-26T16:00:00+00:00",
+          "funding_rate": -1.147e-05,
+          "mark_open": 8.59524303,
+          "qty_before": 19.58,
+          "fills_at_boundary": [
+            {
+              "entry": false,
+              "quantity": 7.13,
+              "quantity_after": 12.45
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": 0.001930342027309278,
+          "additional_model_funding_usdt": 0.001227413597548545
+        },
+        {
+          "pair": "LINK/USDT:USDT",
+          "trade_open": "2026-06-04 01:25:00+00:00",
+          "trade_close": "2026-08-11 08:05:00+00:00",
+          "side": "long",
+          "funding_time": "2026-08-11T00:00:00+00:00",
+          "funding_rate": 0.0001,
+          "mark_open": 8.29671345,
+          "qty_before": 34.21,
+          "fills_at_boundary": [
+            {
+              "entry": true,
+              "quantity": 7.24,
+              "quantity_after": 41.45
+            }
+          ],
+          "baseline_strict_pre_fill_funding_usdt": -0.028383056712450002,
+          "additional_model_funding_usdt": -0.03438987725025001
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "schema": "cz.genetrader-late-comparator-plan.v1",
+  "registered_at_utc": "2026-11-05T14:18:43.725204+00:00",
+  "status": "REGISTERED_DIAGNOSTIC_ONLY_NO_ACCOUNT_EXECUTION",
+  "selection_timing": "Supplemental candidate selected after GeneTrader author claimed +231.74%, 36-pair spot short results and some X8 long results were available; this is post-result research, not blind selection or independent OOS.",
+  "existing_long_results_available_at_registration": [
+    "nfi-x8-spot-cost13/result.json",
+    "nfi-x8-spot-cost20/result.json"
+  ],
+  "original_contract_reproduction": false,
+  "original_report_missing": [
+    "captured exact engine and dependency versions",
+    "actual run config and precise fee assumptions",
+    "historical source data and hashes",
+    "original native trade/order/inventory export"
+  ],
+  "intended_common_contract": {
+    "market": "Binance USDT spot, long-only, no funding",
+    "pairs": [
+      "BTC/USDT",
+      "ETH/USDT",
+      "SOL/USDT",
+      "AVAX/USDT",
+      "DOGE/USDT",
+      "XRP/USDT",
+      "ADA/USDT",
+      "LINK/USDT",
+      "DOT/USDT",
+      "FIL/USDT",
+      "NEAR/USDT",
+      "ATOM/USDT",
+      "DYDX/USDT",
+      "LTC/USDT",
+      "BCH/USDT",
+      "ETC/USDT",
+      "GALA/USDT",
+      "SAND/USDT",
+      "UNI/USDT",
+      "IOTA/USDT",
+      "RUNE/USDT",
+      "AXS/USDT",
+      "EGLD/USDT",
+      "ALGO/USDT",
+      "SNX/USDT",
+      "CRV/USDT",
+      "MASK/USDT",
+      "SUSHI/USDT",
+      "KSM/USDT",
+      "IOTX/USDT",
+      "MANA/USDT",
+      "NEO/USDT",
+      "GRT/USDT",
+      "TRX/USDT",
+      "SKL/USDT",
+      "THETA/USDT"
+    ],
+    "start": "2025-01-01T00:00:00Z",
+    "end": "2026-09-01T00:00:00Z",
+    "comparison_end": "2026-08-31T23:00:00Z",
+    "periods": [
+      {
+        "name": "continuous",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-08-31T23:00:00Z"
+      },
+      {
+        "name": "calendar-2025",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-01-01T00:00:00Z"
+      },
+      {
+        "name": "calendar-2026-through-august",
+        "start": "2026-01-01T00:00:00Z",
+        "end": "2026-08-31T23:00:00Z"
+      }
+    ],
+    "wallet_usdt": 1000,
+    "max_open_trades": 6,
+    "cost_bps_per_side": [
+      13,
+      20
+    ],
+    "cost_model": "10bps public regular-user spot fee plus 3/10bps execution-cost proxy per side; not proof of actual account tier, discount or slippage",
+    "wallet_separate_per_scenario": true,
+    "data_receipts": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+      "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+    },
+    "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+    "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+    "engine_manifest": {
+      "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+      "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+    },
+    "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "market_snapshot": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+      "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+    },
+    "reference_plan": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105_v003/plan-long.json",
+      "sha256": "ee471524b1b3892a9a85219b3d3ac04e8a7837a69157000ebe489f59d1763d60"
+    }
+  },
+  "candidate": {
+    "class": "GeneTrader_gen10_1734895087_6007",
+    "upstream_repository": "https://github.com/imsatoshi/GeneTrader",
+    "upstream_commit": "20053ba673a58976d5f5ab05cb2ec09018cbfd96",
+    "source": {
+      "path": "/Users/chrise/GitHub/TradingAgents/data/research/github_genetrader_source_20261028_v001/GeneTrader_gen10_1734895087_6007.py",
+      "sha256": "cf46b4b7fec71d508e69ce588c54bbc4af6856652c662d8ef2cc7ea9d7075819"
+    },
+    "source_unchanged": true,
+    "license": {
+      "path": "/Users/chrise/GitHub/CZ-Agent/docs/crypto-spot-baseline-20261105/genetrader-upstream-MIT-LICENSE.txt",
+      "sha256": "51645678130030012eb4b2a99cd894f2faa84e5a47f041fbb301b6aceeedef3b",
+      "name": "MIT"
+    },
+    "source_semantics": "preserve original code and strategy parameters, including callbacks and stop settings; no retuning or rescue"
+  },
+  "pre_account_checks": [
+    "Verify 36 spot 5m data timestamps align exactly with BTC and recorded hash manifests; repeat on actual data loaded by engine, including startup and callback paths.",
+    "Test source loading and callback behavior against pinned spot Freqtrade and installed dependencies in a separate disposable diagnostic; preserve output and hash; loading success is not historical parity.",
+    "Run official lookahead analysis and independent prefix/informative-alignment tests against the actual frozen data; preserve conditional synthetic counterexample and all failures.",
+    "Verify original 1h RSI/CMF assignments use base-5m computed values assigned by index; do not silently alter source or relabel them as native 1h indicators.",
+    "Register an exact separate runner/config and hash all data, engine, source, settings and diagnostic results before any economic outcome.",
+    "If safety/causality diagnostics fail, stop and record as failed or unverified; no retuning or silent fixes."
+  ],
+  "account_if_diagnostics_pass": [
+    "Run two independent accounts at 13 and 20 bps one at a time only after existing spot replay finishes.",
+    "Reconcile all native fills and fees with independent cash oracle; compare full UTC hourly spot OPEN inventory NAV, common terminal time, withdrawals none, full-calendar and overlapping calendar slices.",
+    "Retain negative results, rejected entries and ending positions; no candidate selection based on one window or cost."
+  ],
+  "known_counterexample": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/docs/crypto-spot-baseline-20261105/genetrader-causality-counterexample.json",
+    "sha256": "7c72964ae620d891d851f76bbed3af03efac3432b19fabd0135881477598f4fb",
+    "scope": "conditional future dependence in BTC entry predicate with offset candle indices, not observed from author report or verified in current dataset"
+  },
+  "orders_enabled": false,
+  "financial_backtests_started": false,
+  "production_eligible": false
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "cz.nfi-official-spot-lookahead.v1",
+  "registered_at_utc": "2026-11-05T14:57:29.717072+00:00",
+  "registration_note": "Registered after observing futures X8 official warning and completed spot account returns; diagnostic only, not independent hypothesis or economic performance.",
+  "mode": "spot",
+  "strategy": "NostalgiaForInfinityX8",
+  "strategy_source": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/nfi-x8/NostalgiaForInfinityX8.py",
+    "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+  },
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "runner_sha256": "5595d1cb754f00bb75460f68aaf67f9ccfcddb151bfe03bb3dd3c85e4176705d",
+  "config": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/nfi-x8-spot.json",
+    "sha256": "2277440c2116f5dddedad0828632fb1ffbe3db421946036fe5c9fead8c648d89"
+  },
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+    "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+  },
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+  "selected_data": {
+    "BTC_USDT-5m.feather": "366afbdd6214d8d5b502c9c12bb3794aac31581b83f97d15730f6f359062e638",
+    "BTC_USDT-15m.feather": "21fe2edbb8190889373a8a9d3da167deb8cea5898e6c362b7a1c805fb33a39a4",
+    "BTC_USDT-1h.feather": "beed6bde8f88040b0af3457543d9d9a6cd0d15716b521cec1614ebe9e14a3a76",
+    "BTC_USDT-4h.feather": "202d3e736a8489d04967374f899c3c8078438a6945c36ca3797ddad0af5254ae",
+    "BTC_USDT-1d.feather": "55ded0b005bc6e20c903d6e856db3de3f39008cab4316beb4bd65fa6094f9d1f",
+    "ADA_USDT-5m.feather": "44b0de41b84cd7c1800fea6b3a934e616e5f374e68a6cbca731ac4177138f1ae",
+    "ADA_USDT-15m.feather": "1bbb3c21dba9066da4ad19cc70984408a3079d6c5875d0c9cdca61bf5892eb3a",
+    "ADA_USDT-1h.feather": "ef505b1e26c4beed685cfddbde03110bb2f11b11ec2b8aa5d631c1449981d9ae",
+    "ADA_USDT-4h.feather": "44205a964edb4fe8c3a424b6fbd88261e6439345a182aef868c848a0b997c194",
+    "ADA_USDT-1d.feather": "6e8dc0035975ca95193ff3f311a3d8d52104716ed76a0a356a938db6eaa5af2a",
+    "ETH_USDT-5m.feather": "407c6748bed2d85fa9739f5e6ef7eba174f6b1ab7b8db84ffb71a65f6248793c",
+    "ETH_USDT-15m.feather": "53cad3914157646b447e916876779828140f2e412daa5929ecbaaa2f3c1e1e0d",
+    "ETH_USDT-1h.feather": "1a7e97e71696dc76472fb89c5c474824085f0a4601fc6a4007c1911780d51957",
+    "ETH_USDT-4h.feather": "63b39e09301b7f0a5d1e7675d3c9a4fe7b35a645355c14ffa4e3a70664a0b46f",
+    "ETH_USDT-1d.feather": "8263f44836cc93c7d5cfdcaf77fdce87cc8d535e297a9d824bce2bea260ad34c"
+  },
+  "historical_spot_plan": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105_v003/plan-long.json",
+    "sha256": "ee471524b1b3892a9a85219b3d3ac04e8a7837a69157000ebe489f59d1763d60"
+  },
+  "observed_futures_diagnostic": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_x8_lookahead_check_20261105_v001/lookahead-result.csv",
+    "sha256": "0d89fa2f4c1f0fb352604b138d9cbb820fbf5a24da968e1034c2620835538f7a"
+  },
+  "pairs": [
+    "ADA/USDT",
+    "ETH/USDT"
+  ],
+  "timerange": "20250101-20250401",
+  "minimum_trade_amount": 5,
+  "targeted_trade_amount": 20,
+  "memory_guard_bytes": 5905580032,
+  "wall_guard_seconds": 900,
+  "output_directory": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_x8_spot_lookahead_check_20261105_v001",
+  "engine_overrides": "Official lookahead analysis uses synthetic large wallet, market orders, modified max positions and 10k stake; output not investment performance.",
+  "credentials": "config blank, subprocess environment allowlist, no FREQTRADE overrides",
+  "orders_enabled": false,
+  "production_eligible": false
+}

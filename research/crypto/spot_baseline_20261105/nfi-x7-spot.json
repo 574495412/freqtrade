@@ -1,0 +1,126 @@
+{
+  "dry_run_wallet": 1000,
+  "grinding_enable": true,
+  "max_open_trades": 6,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "",
+  "timeframe": "5m",
+  "unfilledtimeout": {
+    "entry": 3,
+    "exit": 2,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "emergency_exit": "limit",
+    "force_entry": "limit",
+    "force_exit": "limit",
+    "stoploss": "limit",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60,
+    "stoploss_on_exchange_limit_ratio": 0.99
+  },
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": false,
+    "order_book_top": 1,
+    "price_last_balance": 0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": false,
+    "order_book_top": 1,
+    "price_last_balance": 0
+  },
+  "trading_mode": "spot",
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "bot_name": "cz-nfi-x8-spot-36-paper-20261105",
+  "strategy": "NostalgiaForInfinityX7",
+  "dry_run": true,
+  "force_entry_enable": false,
+  "initial_state": "stopped",
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "username": "",
+    "password": ""
+  },
+  "telegram": {
+    "enabled": false,
+    "token": "",
+    "chat_id": ""
+  },
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "password": "",
+    "enable_ws": false,
+    "pair_whitelist": [
+      "BTC/USDT",
+      "ETH/USDT",
+      "SOL/USDT",
+      "AVAX/USDT",
+      "DOGE/USDT",
+      "XRP/USDT",
+      "ADA/USDT",
+      "LINK/USDT",
+      "DOT/USDT",
+      "FIL/USDT",
+      "NEAR/USDT",
+      "ATOM/USDT",
+      "DYDX/USDT",
+      "LTC/USDT",
+      "BCH/USDT",
+      "ETC/USDT",
+      "GALA/USDT",
+      "SAND/USDT",
+      "UNI/USDT",
+      "IOTA/USDT",
+      "RUNE/USDT",
+      "AXS/USDT",
+      "EGLD/USDT",
+      "ALGO/USDT",
+      "SNX/USDT",
+      "CRV/USDT",
+      "MASK/USDT",
+      "SUSHI/USDT",
+      "KSM/USDT",
+      "IOTX/USDT",
+      "MANA/USDT",
+      "NEO/USDT",
+      "GRT/USDT",
+      "TRX/USDT",
+      "SKL/USDT",
+      "THETA/USDT"
+    ],
+    "pair_blacklist": [],
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "timeout": 20000
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "timeout": 20000
+    }
+  },
+  "fee": 0.0013
+}

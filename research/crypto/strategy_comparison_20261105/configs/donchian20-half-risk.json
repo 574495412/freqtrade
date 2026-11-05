@@ -1,0 +1,98 @@
+{
+  "dry_run": true,
+  "dry_run_wallet": 1000,
+  "stake_currency": "USDT",
+  "stake_amount": 150,
+  "tradable_balance_ratio": 0.99,
+  "max_open_trades": 6,
+  "fiat_display_currency": "",
+  "timeframe": "1h",
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "fee": 0.0008,
+  "strategy": "Donchian20HalfRisk",
+  "recursive_strategy_search": false,
+  "dataformat_ohlcv": "feather",
+  "export": "trades",
+  "backtest_cache": "none",
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "password": "",
+    "enable_ws": false,
+    "pair_whitelist": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "BNB/USDT:USDT",
+      "SOL/USDT:USDT",
+      "XRP/USDT:USDT",
+      "DOGE/USDT:USDT"
+    ],
+    "pair_blacklist": [],
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "timeout": 20000,
+      "options": {
+        "fetchMarkets": {
+          "types": [
+            "linear"
+          ]
+        },
+        "fetchCurrencies": false
+      }
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "timeout": 20000,
+      "options": {
+        "fetchMarkets": {
+          "types": [
+            "linear"
+          ]
+        },
+        "fetchCurrencies": false
+      }
+    }
+  },
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1
+  },
+  "unfilledtimeout": {
+    "entry": 10,
+    "exit": 10,
+    "unit": "minutes"
+  },
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "use_exit_signal": true,
+  "exit_profit_only": false,
+  "ignore_roi_if_entry_signal": false,
+  "reduce_df_footprint": false,
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "username": "",
+    "password": ""
+  },
+  "telegram": {
+    "enabled": false,
+    "token": "",
+    "chat_id": ""
+  },
+  "timeframe_detail": "5m"
+}

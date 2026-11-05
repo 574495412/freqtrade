@@ -1,0 +1,1574 @@
+{
+  "observed_at": "2026-11-05T11:47:13.408669+00:00",
+  "exchange": "binance",
+  "markets": {
+    "BTC/USDT:USDT": {
+      "id": "BTCUSDT",
+      "lowercaseId": "btcusdt",
+      "symbol": "BTC/USDT:USDT",
+      "base": "BTC",
+      "quote": "USDT",
+      "settle": "USDT",
+      "baseId": "BTC",
+      "quoteId": "USDT",
+      "settleId": "USDT",
+      "type": "swap",
+      "spot": false,
+      "margin": false,
+      "swap": true,
+      "future": false,
+      "option": false,
+      "index": null,
+      "active": true,
+      "contract": true,
+      "linear": true,
+      "inverse": false,
+      "subType": "linear",
+      "taker": 0.0005,
+      "maker": 0.0002,
+      "contractSize": 1.0,
+      "expiry": null,
+      "expiryDatetime": null,
+      "strike": null,
+      "optionType": null,
+      "precision": {
+        "amount": 0.001,
+        "price": 0.1,
+        "base": 1e-08,
+        "quote": 1e-08
+      },
+      "limits": {
+        "leverage": {
+          "min": null,
+          "max": null
+        },
+        "amount": {
+          "min": 0.001,
+          "max": 1000.0
+        },
+        "price": {
+          "min": 556.8,
+          "max": 4529764.0
+        },
+        "cost": {
+          "min": 50.0,
+          "max": null
+        },
+        "market": {
+          "min": 0.001,
+          "max": 120.0
+        }
+      },
+      "marginModes": {
+        "cross": true,
+        "isolated": true
+      },
+      "created": 1567965300000,
+      "info": {
+        "symbol": "BTCUSDT",
+        "pair": "BTCUSDT",
+        "contractType": "PERPETUAL",
+        "deliveryDate": 4133404800000,
+        "onboardDate": 1567965300000,
+        "status": "TRADING",
+        "maintMarginPercent": "2.5000",
+        "requiredMarginPercent": "5.0000",
+        "baseAsset": "BTC",
+        "quoteAsset": "USDT",
+        "marginAsset": "USDT",
+        "pricePrecision": 2,
+        "quantityPrecision": 3,
+        "baseAssetPrecision": 8,
+        "quotePrecision": 8,
+        "underlyingType": "COIN",
+        "underlyingSubType": [
+          "PoW",
+          "Crypto"
+        ],
+        "triggerProtect": "0.0300",
+        "liquidationFee": "0.012500",
+        "marketTakeBound": "0.03",
+        "maxMoveOrderLimit": 10000,
+        "filters": [
+          {
+            "minPrice": "556.80",
+            "filterType": "PRICE_FILTER",
+            "maxPrice": "4529764",
+            "tickSize": "0.10"
+          },
+          {
+            "stepSize": "0.001",
+            "maxQty": "1000",
+            "filterType": "LOT_SIZE",
+            "minQty": "0.001"
+          },
+          {
+            "minQty": "0.001",
+            "filterType": "MARKET_LOT_SIZE",
+            "stepSize": "0.001",
+            "maxQty": "120"
+          },
+          {
+            "filterType": "MAX_NUM_ORDERS",
+            "limit": 200
+          },
+          {
+            "filterType": "MIN_NOTIONAL",
+            "notional": "50"
+          },
+          {
+            "multiplierDown": "0.9700",
+            "multiplierDecimal": "4",
+            "multiplierUp": "1.0300",
+            "filterType": "PERCENT_PRICE"
+          },
+          {
+            "positionControlSide": "NONE",
+            "filterType": "POSITION_RISK_CONTROL"
+          }
+        ],
+        "orderTypes": [
+          "LIMIT",
+          "MARKET",
+          "STOP",
+          "STOP_MARKET",
+          "TAKE_PROFIT",
+          "TAKE_PROFIT_MARKET",
+          "TRAILING_STOP_MARKET"
+        ],
+        "timeInForce": [
+          "GTC",
+          "IOC",
+          "FOK",
+          "GTX",
+          "GTD"
+        ],
+        "permissionSets": [
+          "GRID",
+          "COPY",
+          "DCA",
+          "PSB"
+        ]
+      },
+      "tierBased": false,
+      "percentage": true,
+      "feeSide": "get",
+      "stock": false
+    },
+    "ETH/USDT:USDT": {
+      "id": "ETHUSDT",
+      "lowercaseId": "ethusdt",
+      "symbol": "ETH/USDT:USDT",
+      "base": "ETH",
+      "quote": "USDT",
+      "settle": "USDT",
+      "baseId": "ETH",
+      "quoteId": "USDT",
+      "settleId": "USDT",
+      "type": "swap",
+      "spot": false,
+      "margin": false,
+      "swap": true,
+      "future": false,
+      "option": false,
+      "index": null,
+      "active": true,
+      "contract": true,
+      "linear": true,
+      "inverse": false,
+      "subType": "linear",
+      "taker": 0.0005,
+      "maker": 0.0002,
+      "contractSize": 1.0,
+      "expiry": null,
+      "expiryDatetime": null,
+      "strike": null,
+      "optionType": null,
+      "precision": {
+        "amount": 0.001,
+        "price": 0.01,
+        "base": 1e-08,
+        "quote": 1e-08
+      },
+      "limits": {
+        "leverage": {
+          "min": null,
+          "max": null
+        },
+        "amount": {
+          "min": 0.001,
+          "max": 10000.0
+        },
+        "price": {
+          "min": 39.86,
+          "max": 306177.0
+        },
+        "cost": {
+          "min": 20.0,
+          "max": null
+        },
+        "market": {
+          "min": 0.001,
+          "max": 2000.0
+        }
+      },
+      "marginModes": {
+        "cross": true,
+        "isolated": true
+      },
+      "created": 1574840700000,
+      "info": {
+        "symbol": "ETHUSDT",
+        "pair": "ETHUSDT",
+        "contractType": "PERPETUAL",
+        "deliveryDate": 4133404800000,
+        "onboardDate": 1574840700000,
+        "status": "TRADING",
+        "maintMarginPercent": "2.5000",
+        "requiredMarginPercent": "5.0000",
+        "baseAsset": "ETH",
+        "quoteAsset": "USDT",
+        "marginAsset": "USDT",
+        "pricePrecision": 2,
+        "quantityPrecision": 3,
+        "baseAssetPrecision": 8,
+        "quotePrecision": 8,
+        "underlyingType": "COIN",
+        "underlyingSubType": [
+          "Layer-1",
+          "Crypto"
+        ],
+        "triggerProtect": "0.0300",
+        "liquidationFee": "0.012500",
+        "marketTakeBound": "0.03",
+        "maxMoveOrderLimit": 10000,
+        "filters": [
+          {
+            "filterType": "PRICE_FILTER",
+            "minPrice": "39.86",
+            "maxPrice": "306177",
+            "tickSize": "0.01"
+          },
+          {
+            "filterType": "LOT_SIZE",
+            "maxQty": "10000",
+            "stepSize": "0.001",
+            "minQty": "0.001"
+          },
+          {
+            "maxQty": "2000",
+            "filterType": "MARKET_LOT_SIZE",
+            "minQty": "0.001",
+            "stepSize": "0.001"
+          },
+          {
+            "filterType": "MAX_NUM_ORDERS",
+            "limit": 200
+          },
+          {
+            "notional": "20",
+            "filterType": "MIN_NOTIONAL"
+          },
+          {
+            "filterType": "PERCENT_PRICE",
+            "multiplierDecimal": "4",
+            "multiplierDown": "0.9700",
+            "multiplierUp": "1.0300"
+          },
+          {
+            "filterType": "POSITION_RISK_CONTROL",
+            "positionControlSide": "NONE"
+          }
+        ],
+        "orderTypes": [
+          "LIMIT",
+          "MARKET",
+          "STOP",
+          "STOP_MARKET",
+          "TAKE_PROFIT",
+          "TAKE_PROFIT_MARKET",
+          "TRAILING_STOP_MARKET"
+        ],
+        "timeInForce": [
+          "GTC",
+          "IOC",
+          "FOK",
+          "GTX",
+          "GTD"
+        ],
+        "permissionSets": [
+          "GRID",
+          "COPY",
+          "DCA",
+          "PSB"
+        ]
+      },
+      "tierBased": false,
+      "percentage": true,
+      "feeSide": "get",
+      "stock": false
+    },
+    "BNB/USDT:USDT": {
+      "id": "BNBUSDT",
+      "lowercaseId": "bnbusdt",
+      "symbol": "BNB/USDT:USDT",
+      "base": "BNB",
+      "quote": "USDT",
+      "settle": "USDT",
+      "baseId": "BNB",
+      "quoteId": "USDT",
+      "settleId": "USDT",
+      "type": "swap",
+      "spot": false,
+      "margin": false,
+      "swap": true,
+      "future": false,
+      "option": false,
+      "index": null,
+      "active": true,
+      "contract": true,
+      "linear": true,
+      "inverse": false,
+      "subType": "linear",
+      "taker": 0.0005,
+      "maker": 0.0002,
+      "contractSize": 1.0,
+      "expiry": null,
+      "expiryDatetime": null,
+      "strike": null,
+      "optionType": null,
+      "precision": {
+        "amount": 0.01,
+        "price": 0.01,
+        "base": 1e-08,
+        "quote": 1e-08
+      },
+      "limits": {
+        "leverage": {
+          "min": null,
+          "max": null
+        },
+        "amount": {
+          "min": 0.01,
+          "max": 100000.0
+        },
+        "price": {
+          "min": 6.6,
+          "max": 100000.0
+        },
+        "cost": {
+          "min": 5.0,
+          "max": null
+        },
+        "market": {
+          "min": 0.01,
+          "max": 2000.0
+        }
+      },
+      "marginModes": {
+        "cross": true,
+        "isolated": true
+      },
+      "created": 1581321600000,
+      "info": {
+        "symbol": "BNBUSDT",
+        "pair": "BNBUSDT",
+        "contractType": "PERPETUAL",
+        "deliveryDate": 4133404800000,
+        "onboardDate": 1581321600000,
+        "status": "TRADING",
+        "maintMarginPercent": "2.5000",
+        "requiredMarginPercent": "5.0000",
+        "baseAsset": "BNB",
+        "quoteAsset": "USDT",
+        "marginAsset": "USDT",
+        "pricePrecision": 3,
+        "quantityPrecision": 2,
+        "baseAssetPrecision": 8,
+        "quotePrecision": 8,
+        "underlyingType": "COIN",
+        "underlyingSubType": [
+          "Layer-1",
+          "Crypto"
+        ],
+        "triggerProtect": "0.0500",
+        "liquidationFee": "0.012500",
+        "marketTakeBound": "0.05",
+        "maxMoveOrderLimit": 10000,
+        "filters": [
+          {
+            "tickSize": "0.010",
+            "filterType": "PRICE_FILTER",
+            "maxPrice": "100000",
+            "minPrice": "6.600"
+          },
+          {
+            "maxQty": "100000",
+            "filterType": "LOT_SIZE",
+            "minQty": "0.01",
+            "stepSize": "0.01"
+          },
+          {
+            "stepSize": "0.01",
+            "maxQty": "2000",
+            "minQty": "0.01",
+            "filterType": "MARKET_LOT_SIZE"
+          },
+          {
+            "limit": 200,
+            "filterType": "MAX_NUM_ORDERS"
+          },
+          {
+            "filterType": "MIN_NOTIONAL",
+            "notional": "5"
+          },
+          {
+            "multiplierDecimal": "4",
+            "multiplierUp": "1.0500",
+            "filterType": "PERCENT_PRICE",
+            "multiplierDown": "0.9500"
+          },
+          {
+            "positionControlSide": "NONE",
+            "filterType": "POSITION_RISK_CONTROL"
+          }
+        ],
+        "orderTypes": [
+          "LIMIT",
+          "MARKET",
+          "STOP",
+          "STOP_MARKET",
+          "TAKE_PROFIT",
+          "TAKE_PROFIT_MARKET",
+          "TRAILING_STOP_MARKET"
+        ],
+        "timeInForce": [
+          "GTC",
+          "IOC",
+          "FOK",
+          "GTX",
+          "GTD"
+        ],
+        "permissionSets": [
+          "GRID",
+          "COPY",
+          "RPI",
+          "DCA",
+          "PSB"
+        ]
+      },
+      "tierBased": false,
+      "percentage": true,
+      "feeSide": "get",
+      "stock": false
+    },
+    "SOL/USDT:USDT": {
+      "id": "SOLUSDT",
+      "lowercaseId": "solusdt",
+      "symbol": "SOL/USDT:USDT",
+      "base": "SOL",
+      "quote": "USDT",
+      "settle": "USDT",
+      "baseId": "SOL",
+      "quoteId": "USDT",
+      "settleId": "USDT",
+      "type": "swap",
+      "spot": false,
+      "margin": false,
+      "swap": true,
+      "future": false,
+      "option": false,
+      "index": null,
+      "active": true,
+      "contract": true,
+      "linear": true,
+      "inverse": false,
+      "subType": "linear",
+      "taker": 0.0005,
+      "maker": 0.0002,
+      "contractSize": 1.0,
+      "expiry": null,
+      "expiryDatetime": null,
+      "strike": null,
+      "optionType": null,
+      "precision": {
+        "amount": 0.01,
+        "price": 0.01,
+        "base": 1e-08,
+        "quote": 1e-08
+      },
+      "limits": {
+        "leverage": {
+          "min": null,
+          "max": null
+        },
+        "amount": {
+          "min": 0.01,
+          "max": 1000000.0
+        },
+        "price": {
+          "min": 0.42,
+          "max": 6857.0
+        },
+        "cost": {
+          "min": 5.0,
+          "max": null
+        },
+        "market": {
+          "min": 0.01,
+          "max": 80000.0
+        }
+      },
+      "marginModes": {
+        "cross": true,
+        "isolated": true
+      },
+      "created": 1600066800000,
+      "info": {
+        "symbol": "SOLUSDT",
+        "pair": "SOLUSDT",
+        "contractType": "PERPETUAL",
+        "deliveryDate": 4133404800000,
+        "onboardDate": 1600066800000,
+        "status": "TRADING",
+        "maintMarginPercent": "2.5000",
+        "requiredMarginPercent": "5.0000",
+        "baseAsset": "SOL",
+        "quoteAsset": "USDT",
+        "marginAsset": "USDT",
+        "pricePrecision": 4,
+        "quantityPrecision": 2,
+        "baseAssetPrecision": 8,
+        "quotePrecision": 8,
+        "underlyingType": "COIN",
+        "underlyingSubType": [
+          "Layer-1",
+          "Crypto"
+        ],
+        "triggerProtect": "0.0300",
+        "liquidationFee": "0.015000",
+        "marketTakeBound": "0.03",
+        "maxMoveOrderLimit": 10000,
+        "filters": [
+          {
+            "maxPrice": "6857",
+            "filterType": "PRICE_FILTER",
+            "minPrice": "0.4200",
+            "tickSize": "0.0100"
+          },
+          {
+            "minQty": "0.01",
+            "filterType": "LOT_SIZE",
+            "maxQty": "1000000",
+            "stepSize": "0.01"
+          },
+          {
+            "minQty": "0.01",
+            "filterType": "MARKET_LOT_SIZE",
+            "maxQty": "80000",
+            "stepSize": "0.01"
+          },
+          {
+            "filterType": "MAX_NUM_ORDERS",
+            "limit": 200
+          },
+          {
+            "notional": "5",
+            "filterType": "MIN_NOTIONAL"
+          },
+          {
+            "filterType": "PERCENT_PRICE",
+            "multiplierDown": "0.9700",
+            "multiplierDecimal": "4",
+            "multiplierUp": "1.0300"
+          },
+          {
+            "filterType": "POSITION_RISK_CONTROL",
+            "positionControlSide": "NONE"
+          }
+        ],
+        "orderTypes": [
+          "LIMIT",
+          "MARKET",
+          "STOP",
+          "STOP_MARKET",
+          "TAKE_PROFIT",
+          "TAKE_PROFIT_MARKET",
+          "TRAILING_STOP_MARKET"
+        ],
+        "timeInForce": [
+          "GTC",
+          "IOC",
+          "FOK",
+          "GTX",
+          "GTD"
+        ],
+        "permissionSets": [
+          "GRID",
+          "COPY",
+          "DCA",
+          "PSB"
+        ]
+      },
+      "tierBased": false,
+      "percentage": true,
+      "feeSide": "get",
+      "stock": false
+    },
+    "XRP/USDT:USDT": {
+      "id": "XRPUSDT",
+      "lowercaseId": "xrpusdt",
+      "symbol": "XRP/USDT:USDT",
+      "base": "XRP",
+      "quote": "USDT",
+      "settle": "USDT",
+      "baseId": "XRP",
+      "quoteId": "USDT",
+      "settleId": "USDT",
+      "type": "swap",
+      "spot": false,
+      "margin": false,
+      "swap": true,
+      "future": false,
+      "option": false,
+      "index": null,
+      "active": true,
+      "contract": true,
+      "linear": true,
+      "inverse": false,
+      "subType": "linear",
+      "taker": 0.0005,
+      "maker": 0.0002,
+      "contractSize": 1.0,
+      "expiry": null,
+      "expiryDatetime": null,
+      "strike": null,
+      "optionType": null,
+      "precision": {
+        "amount": 0.1,
+        "price": 0.0001,
+        "base": 1e-08,
+        "quote": 1e-08
+      },
+      "limits": {
+        "leverage": {
+          "min": null,
+          "max": null
+        },
+        "amount": {
+          "min": 0.1,
+          "max": 10000000.0
+        },
+        "price": {
+          "min": 0.0143,
+          "max": 100000.0
+        },
+        "cost": {
+          "min": 5.0,
+          "max": null
+        },
+        "market": {
+          "min": 0.1,
+          "max": 2000000.0
+        }
+      },
+      "marginModes": {
+        "cross": true,
+        "isolated": true
+      },
+      "created": 1578298800000,
+      "info": {
+        "symbol": "XRPUSDT",
+        "pair": "XRPUSDT",
+        "contractType": "PERPETUAL",
+        "deliveryDate": 4133404800000,
+        "onboardDate": 1578298800000,
+        "status": "TRADING",
+        "maintMarginPercent": "2.5000",
+        "requiredMarginPercent": "5.0000",
+        "baseAsset": "XRP",
+        "quoteAsset": "USDT",
+        "marginAsset": "USDT",
+        "pricePrecision": 4,
+        "quantityPrecision": 1,
+        "baseAssetPrecision": 8,
+        "quotePrecision": 8,
+        "underlyingType": "COIN",
+        "underlyingSubType": [
+          "Payment",
+          "Crypto"
+        ],
+        "triggerProtect": "0.0500",
+        "liquidationFee": "0.012500",
+        "marketTakeBound": "0.05",
+        "maxMoveOrderLimit": 10000,
+        "filters": [
+          {
+            "filterType": "PRICE_FILTER",
+            "tickSize": "0.0001",
+            "minPrice": "0.0143",
+            "maxPrice": "100000"
+          },
+          {
+            "minQty": "0.1",
+            "maxQty": "10000000",
+            "stepSize": "0.1",
+            "filterType": "LOT_SIZE"
+          },
+          {
+            "filterType": "MARKET_LOT_SIZE",
+            "minQty": "0.1",
+            "maxQty": "2000000",
+            "stepSize": "0.1"
+          },
+          {
+            "limit": 200,
+            "filterType": "MAX_NUM_ORDERS"
+          },
+          {
+            "filterType": "MIN_NOTIONAL",
+            "notional": "5"
+          },
+          {
+            "multiplierUp": "1.0500",
+            "multiplierDown": "0.9500",
+            "multiplierDecimal": "4",
+            "filterType": "PERCENT_PRICE"
+          },
+          {
+            "filterType": "POSITION_RISK_CONTROL",
+            "positionControlSide": "NONE"
+          }
+        ],
+        "orderTypes": [
+          "LIMIT",
+          "MARKET",
+          "STOP",
+          "STOP_MARKET",
+          "TAKE_PROFIT",
+          "TAKE_PROFIT_MARKET",
+          "TRAILING_STOP_MARKET"
+        ],
+        "timeInForce": [
+          "GTC",
+          "IOC",
+          "FOK",
+          "GTX",
+          "GTD"
+        ],
+        "permissionSets": [
+          "GRID",
+          "COPY",
+          "DCA",
+          "PSB"
+        ]
+      },
+      "tierBased": false,
+      "percentage": true,
+      "feeSide": "get",
+      "stock": false
+    },
+    "DOGE/USDT:USDT": {
+      "id": "DOGEUSDT",
+      "lowercaseId": "dogeusdt",
+      "symbol": "DOGE/USDT:USDT",
+      "base": "DOGE",
+      "quote": "USDT",
+      "settle": "USDT",
+      "baseId": "DOGE",
+      "quoteId": "USDT",
+      "settleId": "USDT",
+      "type": "swap",
+      "spot": false,
+      "margin": false,
+      "swap": true,
+      "future": false,
+      "option": false,
+      "index": null,
+      "active": true,
+      "contract": true,
+      "linear": true,
+      "inverse": false,
+      "subType": "linear",
+      "taker": 0.0005,
+      "maker": 0.0002,
+      "contractSize": 1.0,
+      "expiry": null,
+      "expiryDatetime": null,
+      "strike": null,
+      "optionType": null,
+      "precision": {
+        "amount": 1.0,
+        "price": 1e-05,
+        "base": 1e-08,
+        "quote": 1e-08
+      },
+      "limits": {
+        "leverage": {
+          "min": null,
+          "max": null
+        },
+        "amount": {
+          "min": 1.0,
+          "max": 300000000.0
+        },
+        "price": {
+          "min": 0.00244,
+          "max": 30.0
+        },
+        "cost": {
+          "min": 5.0,
+          "max": null
+        },
+        "market": {
+          "min": 1.0,
+          "max": 30000000.0
+        }
+      },
+      "marginModes": {
+        "cross": true,
+        "isolated": true
+      },
+      "created": 1594371600000,
+      "info": {
+        "symbol": "DOGEUSDT",
+        "pair": "DOGEUSDT",
+        "contractType": "PERPETUAL",
+        "deliveryDate": 4133404800000,
+        "onboardDate": 1594371600000,
+        "status": "TRADING",
+        "maintMarginPercent": "2.5000",
+        "requiredMarginPercent": "5.0000",
+        "baseAsset": "DOGE",
+        "quoteAsset": "USDT",
+        "marginAsset": "USDT",
+        "pricePrecision": 6,
+        "quantityPrecision": 0,
+        "baseAssetPrecision": 8,
+        "quotePrecision": 8,
+        "underlyingType": "COIN",
+        "underlyingSubType": [
+          "Meme",
+          "Crypto"
+        ],
+        "triggerProtect": "0.1000",
+        "liquidationFee": "0.015000",
+        "marketTakeBound": "0.10",
+        "maxMoveOrderLimit": 10000,
+        "filters": [
+          {
+            "tickSize": "0.000010",
+            "filterType": "PRICE_FILTER",
+            "minPrice": "0.002440",
+            "maxPrice": "30"
+          },
+          {
+            "filterType": "LOT_SIZE",
+            "minQty": "1",
+            "maxQty": "300000000",
+            "stepSize": "1"
+          },
+          {
+            "minQty": "1",
+            "maxQty": "30000000",
+            "filterType": "MARKET_LOT_SIZE",
+            "stepSize": "1"
+          },
+          {
+            "limit": 200,
+            "filterType": "MAX_NUM_ORDERS"
+          },
+          {
+            "notional": "5",
+            "filterType": "MIN_NOTIONAL"
+          },
+          {
+            "multiplierUp": "1.1000",
+            "multiplierDown": "0.9000",
+            "multiplierDecimal": "4",
+            "filterType": "PERCENT_PRICE"
+          },
+          {
+            "filterType": "POSITION_RISK_CONTROL",
+            "positionControlSide": "NONE"
+          }
+        ],
+        "orderTypes": [
+          "LIMIT",
+          "MARKET",
+          "STOP",
+          "STOP_MARKET",
+          "TAKE_PROFIT",
+          "TAKE_PROFIT_MARKET",
+          "TRAILING_STOP_MARKET"
+        ],
+        "timeInForce": [
+          "GTC",
+          "IOC",
+          "FOK",
+          "GTX",
+          "GTD"
+        ],
+        "permissionSets": [
+          "GRID",
+          "COPY",
+          "RPI",
+          "DCA",
+          "PSB"
+        ]
+      },
+      "tierBased": false,
+      "percentage": true,
+      "feeSide": "get",
+      "stock": false
+    }
+  },
+  "leverage_tiers": {
+    "BTC/USDT:USDT": [
+      {
+        "minNotional": 0.0,
+        "maxNotional": 300000.0,
+        "maintenanceMarginRate": 0.004,
+        "maxLeverage": 150.0,
+        "maintAmt": 0.0
+      },
+      {
+        "minNotional": 300000.0,
+        "maxNotional": 800000.0,
+        "maintenanceMarginRate": 0.005,
+        "maxLeverage": 100.0,
+        "maintAmt": 300.0
+      },
+      {
+        "minNotional": 800000.0,
+        "maxNotional": 3000000.0,
+        "maintenanceMarginRate": 0.0065,
+        "maxLeverage": 75.0,
+        "maintAmt": 1500.0
+      },
+      {
+        "minNotional": 3000000.0,
+        "maxNotional": 12000000.0,
+        "maintenanceMarginRate": 0.01,
+        "maxLeverage": 50.0,
+        "maintAmt": 12000.0
+      },
+      {
+        "minNotional": 12000000.0,
+        "maxNotional": 70000000.0,
+        "maintenanceMarginRate": 0.02,
+        "maxLeverage": 25.0,
+        "maintAmt": 132000.0
+      },
+      {
+        "minNotional": 70000000.0,
+        "maxNotional": 100000000.0,
+        "maintenanceMarginRate": 0.025,
+        "maxLeverage": 20.0,
+        "maintAmt": 482000.0
+      },
+      {
+        "minNotional": 100000000.0,
+        "maxNotional": 230000000.0,
+        "maintenanceMarginRate": 0.05,
+        "maxLeverage": 10.0,
+        "maintAmt": 2982000.0
+      },
+      {
+        "minNotional": 230000000.0,
+        "maxNotional": 480000000.0,
+        "maintenanceMarginRate": 0.1,
+        "maxLeverage": 5.0,
+        "maintAmt": 14482000.0
+      },
+      {
+        "minNotional": 480000000.0,
+        "maxNotional": 600000000.0,
+        "maintenanceMarginRate": 0.125,
+        "maxLeverage": 4.0,
+        "maintAmt": 26482000.0
+      },
+      {
+        "minNotional": 600000000.0,
+        "maxNotional": 800000000.0,
+        "maintenanceMarginRate": 0.15,
+        "maxLeverage": 3.0,
+        "maintAmt": 41482000.0
+      },
+      {
+        "minNotional": 800000000.0,
+        "maxNotional": 1200000000.0,
+        "maintenanceMarginRate": 0.25,
+        "maxLeverage": 2.0,
+        "maintAmt": 121482000.0
+      },
+      {
+        "minNotional": 1200000000.0,
+        "maxNotional": 1800000000.0,
+        "maintenanceMarginRate": 0.5,
+        "maxLeverage": 1.0,
+        "maintAmt": 421482000.0
+      }
+    ],
+    "ETH/USDT:USDT": [
+      {
+        "minNotional": 0.0,
+        "maxNotional": 300000.0,
+        "maintenanceMarginRate": 0.004,
+        "maxLeverage": 150.0,
+        "maintAmt": 0.0
+      },
+      {
+        "minNotional": 300000.0,
+        "maxNotional": 800000.0,
+        "maintenanceMarginRate": 0.005,
+        "maxLeverage": 100.0,
+        "maintAmt": 300.0
+      },
+      {
+        "minNotional": 800000.0,
+        "maxNotional": 3000000.0,
+        "maintenanceMarginRate": 0.0065,
+        "maxLeverage": 75.0,
+        "maintAmt": 1500.0
+      },
+      {
+        "minNotional": 3000000.0,
+        "maxNotional": 12000000.0,
+        "maintenanceMarginRate": 0.01,
+        "maxLeverage": 50.0,
+        "maintAmt": 12000.0
+      },
+      {
+        "minNotional": 12000000.0,
+        "maxNotional": 50000000.0,
+        "maintenanceMarginRate": 0.02,
+        "maxLeverage": 25.0,
+        "maintAmt": 132000.0
+      },
+      {
+        "minNotional": 50000000.0,
+        "maxNotional": 65000000.0,
+        "maintenanceMarginRate": 0.025,
+        "maxLeverage": 20.0,
+        "maintAmt": 382000.0
+      },
+      {
+        "minNotional": 65000000.0,
+        "maxNotional": 150000000.0,
+        "maintenanceMarginRate": 0.05,
+        "maxLeverage": 10.0,
+        "maintAmt": 2007000.0
+      },
+      {
+        "minNotional": 150000000.0,
+        "maxNotional": 320000000.0,
+        "maintenanceMarginRate": 0.1,
+        "maxLeverage": 5.0,
+        "maintAmt": 9507000.0
+      },
+      {
+        "minNotional": 320000000.0,
+        "maxNotional": 400000000.0,
+        "maintenanceMarginRate": 0.125,
+        "maxLeverage": 4.0,
+        "maintAmt": 17507000.0
+      },
+      {
+        "minNotional": 400000000.0,
+        "maxNotional": 530000000.0,
+        "maintenanceMarginRate": 0.15,
+        "maxLeverage": 3.0,
+        "maintAmt": 27507000.0
+      },
+      {
+        "minNotional": 530000000.0,
+        "maxNotional": 800000000.0,
+        "maintenanceMarginRate": 0.25,
+        "maxLeverage": 2.0,
+        "maintAmt": 80507000.0
+      },
+      {
+        "minNotional": 800000000.0,
+        "maxNotional": 1200000000.0,
+        "maintenanceMarginRate": 0.5,
+        "maxLeverage": 1.0,
+        "maintAmt": 280507000.0
+      }
+    ],
+    "BNB/USDT:USDT": [
+      {
+        "minNotional": 0.0,
+        "maxNotional": 10000.0,
+        "maintenanceMarginRate": 0.005,
+        "maxLeverage": 75.0,
+        "maintAmt": 0.0
+      },
+      {
+        "minNotional": 10000.0,
+        "maxNotional": 200000.0,
+        "maintenanceMarginRate": 0.006,
+        "maxLeverage": 50.0,
+        "maintAmt": 10.0
+      },
+      {
+        "minNotional": 200000.0,
+        "maxNotional": 400000.0,
+        "maintenanceMarginRate": 0.01,
+        "maxLeverage": 40.0,
+        "maintAmt": 810.0
+      },
+      {
+        "minNotional": 400000.0,
+        "maxNotional": 1500000.0,
+        "maintenanceMarginRate": 0.02,
+        "maxLeverage": 25.0,
+        "maintAmt": 4810.0
+      },
+      {
+        "minNotional": 1500000.0,
+        "maxNotional": 3000000.0,
+        "maintenanceMarginRate": 0.025,
+        "maxLeverage": 20.0,
+        "maintAmt": 12310.0
+      },
+      {
+        "minNotional": 3000000.0,
+        "maxNotional": 15000000.0,
+        "maintenanceMarginRate": 0.05,
+        "maxLeverage": 10.0,
+        "maintAmt": 87310.0
+      },
+      {
+        "minNotional": 15000000.0,
+        "maxNotional": 30000000.0,
+        "maintenanceMarginRate": 0.1,
+        "maxLeverage": 5.0,
+        "maintAmt": 837310.0
+      },
+      {
+        "minNotional": 30000000.0,
+        "maxNotional": 37500000.0,
+        "maintenanceMarginRate": 0.125,
+        "maxLeverage": 4.0,
+        "maintAmt": 1587310.0
+      },
+      {
+        "minNotional": 37500000.0,
+        "maxNotional": 75000000.0,
+        "maintenanceMarginRate": 0.25,
+        "maxLeverage": 2.0,
+        "maintAmt": 6274810.0
+      },
+      {
+        "minNotional": 75000000.0,
+        "maxNotional": 150000000.0,
+        "maintenanceMarginRate": 0.5,
+        "maxLeverage": 1.0,
+        "maintAmt": 25024810.0
+      }
+    ],
+    "SOL/USDT:USDT": [
+      {
+        "minNotional": 0.0,
+        "maxNotional": 50000.0,
+        "maintenanceMarginRate": 0.005,
+        "maxLeverage": 100.0,
+        "maintAmt": 0.0
+      },
+      {
+        "minNotional": 50000.0,
+        "maxNotional": 400000.0,
+        "maintenanceMarginRate": 0.0065,
+        "maxLeverage": 75.0,
+        "maintAmt": 75.0
+      },
+      {
+        "minNotional": 400000.0,
+        "maxNotional": 1000000.0,
+        "maintenanceMarginRate": 0.01,
+        "maxLeverage": 50.0,
+        "maintAmt": 1475.0
+      },
+      {
+        "minNotional": 1000000.0,
+        "maxNotional": 4000000.0,
+        "maintenanceMarginRate": 0.02,
+        "maxLeverage": 25.0,
+        "maintAmt": 11475.0
+      },
+      {
+        "minNotional": 4000000.0,
+        "maxNotional": 8000000.0,
+        "maintenanceMarginRate": 0.025,
+        "maxLeverage": 20.0,
+        "maintAmt": 31475.0
+      },
+      {
+        "minNotional": 8000000.0,
+        "maxNotional": 40000000.0,
+        "maintenanceMarginRate": 0.05,
+        "maxLeverage": 10.0,
+        "maintAmt": 231475.0
+      },
+      {
+        "minNotional": 40000000.0,
+        "maxNotional": 80000000.0,
+        "maintenanceMarginRate": 0.1,
+        "maxLeverage": 5.0,
+        "maintAmt": 2231475.0
+      },
+      {
+        "minNotional": 80000000.0,
+        "maxNotional": 100000000.0,
+        "maintenanceMarginRate": 0.125,
+        "maxLeverage": 4.0,
+        "maintAmt": 4231475.0
+      },
+      {
+        "minNotional": 100000000.0,
+        "maxNotional": 200000000.0,
+        "maintenanceMarginRate": 0.25,
+        "maxLeverage": 2.0,
+        "maintAmt": 16731475.0
+      },
+      {
+        "minNotional": 200000000.0,
+        "maxNotional": 400000000.0,
+        "maintenanceMarginRate": 0.5,
+        "maxLeverage": 1.0,
+        "maintAmt": 66731475.0
+      }
+    ],
+    "XRP/USDT:USDT": [
+      {
+        "minNotional": 0.0,
+        "maxNotional": 40000.0,
+        "maintenanceMarginRate": 0.005,
+        "maxLeverage": 100.0,
+        "maintAmt": 0.0
+      },
+      {
+        "minNotional": 40000.0,
+        "maxNotional": 80000.0,
+        "maintenanceMarginRate": 0.006,
+        "maxLeverage": 75.0,
+        "maintAmt": 40.0
+      },
+      {
+        "minNotional": 80000.0,
+        "maxNotional": 150000.0,
+        "maintenanceMarginRate": 0.01,
+        "maxLeverage": 50.0,
+        "maintAmt": 360.0
+      },
+      {
+        "minNotional": 150000.0,
+        "maxNotional": 400000.0,
+        "maintenanceMarginRate": 0.0125,
+        "maxLeverage": 40.0,
+        "maintAmt": 735.0
+      },
+      {
+        "minNotional": 400000.0,
+        "maxNotional": 1000000.0,
+        "maintenanceMarginRate": 0.02,
+        "maxLeverage": 25.0,
+        "maintAmt": 3735.0
+      },
+      {
+        "minNotional": 1000000.0,
+        "maxNotional": 2000000.0,
+        "maintenanceMarginRate": 0.025,
+        "maxLeverage": 20.0,
+        "maintAmt": 8735.0
+      },
+      {
+        "minNotional": 2000000.0,
+        "maxNotional": 10000000.0,
+        "maintenanceMarginRate": 0.05,
+        "maxLeverage": 10.0,
+        "maintAmt": 58735.0
+      },
+      {
+        "minNotional": 10000000.0,
+        "maxNotional": 20000000.0,
+        "maintenanceMarginRate": 0.1,
+        "maxLeverage": 5.0,
+        "maintAmt": 558735.0
+      },
+      {
+        "minNotional": 20000000.0,
+        "maxNotional": 25000000.0,
+        "maintenanceMarginRate": 0.125,
+        "maxLeverage": 4.0,
+        "maintAmt": 1058735.0
+      },
+      {
+        "minNotional": 25000000.0,
+        "maxNotional": 50000000.0,
+        "maintenanceMarginRate": 0.25,
+        "maxLeverage": 2.0,
+        "maintAmt": 4183735.0
+      },
+      {
+        "minNotional": 50000000.0,
+        "maxNotional": 100000000.0,
+        "maintenanceMarginRate": 0.5,
+        "maxLeverage": 1.0,
+        "maintAmt": 16683735.0
+      }
+    ],
+    "DOGE/USDT:USDT": [
+      {
+        "minNotional": 0.0,
+        "maxNotional": 80000.0,
+        "maintenanceMarginRate": 0.0065,
+        "maxLeverage": 75.0,
+        "maintAmt": 0.0
+      },
+      {
+        "minNotional": 80000.0,
+        "maxNotional": 150000.0,
+        "maintenanceMarginRate": 0.01,
+        "maxLeverage": 50.0,
+        "maintAmt": 280.0
+      },
+      {
+        "minNotional": 150000.0,
+        "maxNotional": 750000.0,
+        "maintenanceMarginRate": 0.0125,
+        "maxLeverage": 40.0,
+        "maintAmt": 655.0
+      },
+      {
+        "minNotional": 750000.0,
+        "maxNotional": 2000000.0,
+        "maintenanceMarginRate": 0.02,
+        "maxLeverage": 25.0,
+        "maintAmt": 6280.0
+      },
+      {
+        "minNotional": 2000000.0,
+        "maxNotional": 4000000.0,
+        "maintenanceMarginRate": 0.025,
+        "maxLeverage": 20.0,
+        "maintAmt": 16280.0
+      },
+      {
+        "minNotional": 4000000.0,
+        "maxNotional": 20000000.0,
+        "maintenanceMarginRate": 0.05,
+        "maxLeverage": 10.0,
+        "maintAmt": 116280.0
+      },
+      {
+        "minNotional": 20000000.0,
+        "maxNotional": 40000000.0,
+        "maintenanceMarginRate": 0.1,
+        "maxLeverage": 5.0,
+        "maintAmt": 1116280.0
+      },
+      {
+        "minNotional": 40000000.0,
+        "maxNotional": 50000000.0,
+        "maintenanceMarginRate": 0.125,
+        "maxLeverage": 4.0,
+        "maintAmt": 2116280.0
+      },
+      {
+        "minNotional": 50000000.0,
+        "maxNotional": 100000000.0,
+        "maintenanceMarginRate": 0.25,
+        "maxLeverage": 2.0,
+        "maintAmt": 8366280.0
+      },
+      {
+        "minNotional": 100000000.0,
+        "maxNotional": 200000000.0,
+        "maintenanceMarginRate": 0.5,
+        "maxLeverage": 1.0,
+        "maintAmt": 33366280.0
+      }
+    ]
+  },
+  "currencies": {
+    "BNB": {
+      "info": null,
+      "id": "BNB",
+      "numericId": null,
+      "code": "BNB",
+      "precision": 1e-08,
+      "type": null,
+      "name": null,
+      "active": null,
+      "deposit": null,
+      "withdraw": null,
+      "fee": null,
+      "fees": {},
+      "networks": {},
+      "limits": {
+        "deposit": {
+          "min": null,
+          "max": null
+        },
+        "withdraw": {
+          "min": null,
+          "max": null
+        }
+      }
+    },
+    "BTC": {
+      "info": null,
+      "id": "BTC",
+      "numericId": null,
+      "code": "BTC",
+      "precision": 1e-08,
+      "type": null,
+      "name": null,
+      "active": null,
+      "deposit": null,
+      "withdraw": null,
+      "fee": null,
+      "fees": {},
+      "networks": {},
+      "limits": {
+        "deposit": {
+          "min": null,
+          "max": null
+        },
+        "withdraw": {
+          "min": null,
+          "max": null
+        }
+      }
+    },
+    "DOGE": {
+      "info": null,
+      "id": "DOGE",
+      "numericId": null,
+      "code": "DOGE",
+      "precision": 1e-08,
+      "type": null,
+      "name": null,
+      "active": null,
+      "deposit": null,
+      "withdraw": null,
+      "fee": null,
+      "fees": {},
+      "networks": {},
+      "limits": {
+        "deposit": {
+          "min": null,
+          "max": null
+        },
+        "withdraw": {
+          "min": null,
+          "max": null
+        }
+      }
+    },
+    "ETH": {
+      "info": null,
+      "id": "ETH",
+      "numericId": null,
+      "code": "ETH",
+      "precision": 1e-08,
+      "type": null,
+      "name": null,
+      "active": null,
+      "deposit": null,
+      "withdraw": null,
+      "fee": null,
+      "fees": {},
+      "networks": {},
+      "limits": {
+        "deposit": {
+          "min": null,
+          "max": null
+        },
+        "withdraw": {
+          "min": null,
+          "max": null
+        }
+      }
+    },
+    "SOL": {
+      "info": null,
+      "id": "SOL",
+      "numericId": null,
+      "code": "SOL",
+      "precision": 1e-08,
+      "type": null,
+      "name": null,
+      "active": null,
+      "deposit": null,
+      "withdraw": null,
+      "fee": null,
+      "fees": {},
+      "networks": {},
+      "limits": {
+        "deposit": {
+          "min": null,
+          "max": null
+        },
+        "withdraw": {
+          "min": null,
+          "max": null
+        }
+      }
+    },
+    "USDT": {
+      "info": null,
+      "id": "USDT",
+      "numericId": null,
+      "code": "USDT",
+      "precision": 1e-08,
+      "type": null,
+      "name": null,
+      "active": null,
+      "deposit": null,
+      "withdraw": null,
+      "fee": null,
+      "fees": {},
+      "networks": {},
+      "limits": {
+        "deposit": {
+          "min": null,
+          "max": null
+        },
+        "withdraw": {
+          "min": null,
+          "max": null
+        }
+      }
+    },
+    "XRP": {
+      "info": null,
+      "id": "XRP",
+      "numericId": null,
+      "code": "XRP",
+      "precision": 1e-08,
+      "type": null,
+      "name": null,
+      "active": null,
+      "deposit": null,
+      "withdraw": null,
+      "fee": null,
+      "fees": {},
+      "networks": {},
+      "limits": {
+        "deposit": {
+          "min": null,
+          "max": null
+        },
+        "withdraw": {
+          "min": null,
+          "max": null
+        }
+      }
+    }
+  },
+  "historical_market_rules_verified": false,
+  "credentials_used": false
+}
