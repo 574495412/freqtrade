@@ -1,0 +1,453 @@
+{
+  "registration_sha256": "43197b4d652f3249e7a4c371887ad154185016d04d1478d810af2933fce09c67",
+  "funding_admission_sha256": "7eef235447bcd9b5bd9532621562e79d815c6a12df77d0513782f55be918f5cb",
+  "accounts": {
+    "2024_Expand_8bps": {
+      "window": "2024",
+      "case": "Expand",
+      "cost_bps": 8,
+      "net_return": 0.5368483173334966,
+      "first_slice_return": -0.1313458208424032,
+      "second_slice_return": 0.7692291756702316,
+      "annualized_net_return": 0.5354955613507468,
+      "max_drawdown": 0.3228634019030965,
+      "risk_halted": false,
+      "completed": 199,
+      "open_positions": 0,
+      "entry_weeks": 50,
+      "capacity": {
+        "entry_requests": 273,
+        "partially_filled_entries": 88,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 99786.90988367116,
+        "filled_entry_notional": 99669.11474851095,
+        "filled_request_ratio": 0.9988195331902999,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "signal_trace": {
+        "BNBUSDT": {
+          "price_edges": 238,
+          "known_oi_price_edges": 238,
+          "qualifying_edges": 76,
+          "pulses": 34
+        },
+        "BTCUSDT": {
+          "price_edges": 253,
+          "known_oi_price_edges": 249,
+          "qualifying_edges": 77,
+          "pulses": 39
+        },
+        "DOGEUSDT": {
+          "price_edges": 240,
+          "known_oi_price_edges": 240,
+          "qualifying_edges": 108,
+          "pulses": 38
+        },
+        "ETHUSDT": {
+          "price_edges": 278,
+          "known_oi_price_edges": 278,
+          "qualifying_edges": 63,
+          "pulses": 36
+        },
+        "SOLUSDT": {
+          "price_edges": 270,
+          "known_oi_price_edges": 270,
+          "qualifying_edges": 107,
+          "pulses": 49
+        },
+        "XRPUSDT": {
+          "price_edges": 228,
+          "known_oi_price_edges": 227,
+          "qualifying_edges": 90,
+          "pulses": 37
+        }
+      },
+      "hashes": {
+        "trades.json": "77cec7a09cf18d2a884b1f4efca46951ff5822ac4051d5415150d7a3a0166fc5",
+        "targets.parquet": "8a79d5112508f107a8fcdd60ef18bfbfaed87e4fe61883bcc0092cabc2fd3aa3",
+        "events.json": "63a564f81642b86333d0580040cb78452b4ca5153713ef52980e88b37f45af7e",
+        "resume_state.json": "a6c3bab5f5a12cb1df9fd2609c117181f02c73240740a4d3070671de401c9229",
+        "nav.parquet": "f50b19fd1703adef73b3916cc1e9e2459d72dbfea7bb18a858736696040cba53",
+        "requests.json": "22fc1b32edf8fcc46aa63806409f5e241a0661feea33ca2db8b7c562302d0c41"
+      }
+    },
+    "2024_Expand_15bps": {
+      "window": "2024",
+      "case": "Expand",
+      "cost_bps": 15,
+      "net_return": -0.22261765257170596,
+      "first_slice_return": -0.18809378208306182,
+      "second_slice_return": -0.04252199296763626,
+      "annualized_net_return": -0.22221639591496933,
+      "max_drawdown": 0.3506031404661205,
+      "risk_halted": true,
+      "completed": 105,
+      "open_positions": 0,
+      "entry_weeks": 26,
+      "capacity": {
+        "entry_requests": 147,
+        "partially_filled_entries": 50,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 46677.33497425753,
+        "filled_entry_notional": 46596.66108717636,
+        "filled_request_ratio": 0.9982716689561292,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "signal_trace": {
+        "BNBUSDT": {
+          "price_edges": 238,
+          "known_oi_price_edges": 238,
+          "qualifying_edges": 76,
+          "pulses": 34
+        },
+        "BTCUSDT": {
+          "price_edges": 253,
+          "known_oi_price_edges": 249,
+          "qualifying_edges": 77,
+          "pulses": 39
+        },
+        "DOGEUSDT": {
+          "price_edges": 240,
+          "known_oi_price_edges": 240,
+          "qualifying_edges": 108,
+          "pulses": 38
+        },
+        "ETHUSDT": {
+          "price_edges": 278,
+          "known_oi_price_edges": 278,
+          "qualifying_edges": 63,
+          "pulses": 36
+        },
+        "SOLUSDT": {
+          "price_edges": 270,
+          "known_oi_price_edges": 270,
+          "qualifying_edges": 107,
+          "pulses": 49
+        },
+        "XRPUSDT": {
+          "price_edges": 228,
+          "known_oi_price_edges": 227,
+          "qualifying_edges": 90,
+          "pulses": 37
+        }
+      },
+      "hashes": {
+        "trades.json": "78c88f5948d257386bacb2dafdeff750d54cd308a568d33f5578969cc7232492",
+        "targets.parquet": "8a79d5112508f107a8fcdd60ef18bfbfaed87e4fe61883bcc0092cabc2fd3aa3",
+        "events.json": "d26168e0da5784a2cde44cb64fcf621dab95aa382defe260396533d2d133de95",
+        "resume_state.json": "25a33064a97d8bae2463ae893a9c86a7bcf90e9b2ca78e41ebebfffce2ace32a",
+        "nav.parquet": "496a6011a2aff1f7270a4b01599fc44d3b26a929973f325d0d5fd74af9f384e1",
+        "requests.json": "e8b6181287229803d585a62a90e718b07fc79fe4b84393a255899e5243ca91a9"
+      }
+    },
+    "2024_Price_8bps": {
+      "window": "2024",
+      "case": "Price",
+      "cost_bps": 8,
+      "net_return": -0.14100615115142812,
+      "first_slice_return": -0.06893606560423804,
+      "second_slice_return": -0.07740616179485227,
+      "annualized_net_return": -0.14073856543115904,
+      "max_drawdown": 0.3503069953016219,
+      "risk_halted": true,
+      "completed": 224,
+      "open_positions": 0,
+      "entry_weeks": 37,
+      "capacity": {
+        "entry_requests": 306,
+        "partially_filled_entries": 111,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 108050.38476528024,
+        "filled_entry_notional": 107843.0950163515,
+        "filled_request_ratio": 0.9980815454810361,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "signal_trace": {
+        "BNBUSDT": {
+          "price_edges": 238,
+          "known_oi_price_edges": 238,
+          "qualifying_edges": 238,
+          "pulses": 72
+        },
+        "BTCUSDT": {
+          "price_edges": 253,
+          "known_oi_price_edges": 249,
+          "qualifying_edges": 249,
+          "pulses": 80
+        },
+        "DOGEUSDT": {
+          "price_edges": 240,
+          "known_oi_price_edges": 240,
+          "qualifying_edges": 240,
+          "pulses": 71
+        },
+        "ETHUSDT": {
+          "price_edges": 278,
+          "known_oi_price_edges": 278,
+          "qualifying_edges": 278,
+          "pulses": 77
+        },
+        "SOLUSDT": {
+          "price_edges": 270,
+          "known_oi_price_edges": 270,
+          "qualifying_edges": 270,
+          "pulses": 81
+        },
+        "XRPUSDT": {
+          "price_edges": 228,
+          "known_oi_price_edges": 227,
+          "qualifying_edges": 227,
+          "pulses": 74
+        }
+      },
+      "hashes": {
+        "trades.json": "e94ed7e6c46df9fa3ee82b408792598c83e0964ec249d355b193b8eabcd7d9ee",
+        "targets.parquet": "5cf6b8fc5ef814e22ad864e44fba058a47e9eb2ad5a35f6743c44c5080778322",
+        "events.json": "e719249712200ae8435a7e612d6bf7bf91eb215713bbe9b68d65e9200a7485b0",
+        "resume_state.json": "8988579f7f12b4bfc0cd81489c6f293583bf03acbf3717d12f200f1174be18c3",
+        "nav.parquet": "78f7e0dfe417b2094052351bdf5da6a9630045546fa86bab66f03fef863464db",
+        "requests.json": "2f74b1c58422a7b2cfe03c8c10acc336b2b28c64253478ab46eb67c83d241cdc"
+      }
+    },
+    "2024_Price_15bps": {
+      "window": "2024",
+      "case": "Price",
+      "cost_bps": 15,
+      "net_return": -0.17247046596616533,
+      "first_slice_return": -0.17247046596616533,
+      "second_slice_return": 0.0,
+      "annualized_net_return": -0.17214937907006866,
+      "max_drawdown": 0.3501432991900747,
+      "risk_halted": true,
+      "completed": 118,
+      "open_positions": 0,
+      "entry_weeks": 20,
+      "capacity": {
+        "entry_requests": 165,
+        "partially_filled_entries": 60,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 55319.70784906418,
+        "filled_entry_notional": 55193.92523793447,
+        "filled_request_ratio": 0.9977262603867523,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "signal_trace": {
+        "BNBUSDT": {
+          "price_edges": 238,
+          "known_oi_price_edges": 238,
+          "qualifying_edges": 238,
+          "pulses": 72
+        },
+        "BTCUSDT": {
+          "price_edges": 253,
+          "known_oi_price_edges": 249,
+          "qualifying_edges": 249,
+          "pulses": 80
+        },
+        "DOGEUSDT": {
+          "price_edges": 240,
+          "known_oi_price_edges": 240,
+          "qualifying_edges": 240,
+          "pulses": 71
+        },
+        "ETHUSDT": {
+          "price_edges": 278,
+          "known_oi_price_edges": 278,
+          "qualifying_edges": 278,
+          "pulses": 77
+        },
+        "SOLUSDT": {
+          "price_edges": 270,
+          "known_oi_price_edges": 270,
+          "qualifying_edges": 270,
+          "pulses": 81
+        },
+        "XRPUSDT": {
+          "price_edges": 228,
+          "known_oi_price_edges": 227,
+          "qualifying_edges": 227,
+          "pulses": 74
+        }
+      },
+      "hashes": {
+        "trades.json": "a7bbd501dd78fc89eb9d0549286dab3cf897b78fff6768d652306afc6ec6a0c4",
+        "targets.parquet": "5cf6b8fc5ef814e22ad864e44fba058a47e9eb2ad5a35f6743c44c5080778322",
+        "events.json": "3488021ff30f98876878bebb24ad520147ea5648bbc2fb91fa1ea349e956d201",
+        "resume_state.json": "0a8d186a6a1d032edfd57786e10c13b257f533c3d28a7f05ae11c18d6e1b0830",
+        "nav.parquet": "b58e990b2c10d4405010cb9f742982ff09edb780be68c928f1864185e4dc0cf5",
+        "requests.json": "b591e8fa63bcf9bd108c9524a080e8b6f0a7ad65e1422dc4e03a248168b2b230"
+      }
+    },
+    "2024_Contract_8bps": {
+      "window": "2024",
+      "case": "Contract",
+      "cost_bps": 8,
+      "net_return": 0.15552942360062194,
+      "first_slice_return": -0.15175346727752315,
+      "second_slice_return": 0.3622565834627225,
+      "annualized_net_return": 0.15518717566277984,
+      "max_drawdown": 0.26192666279093324,
+      "risk_halted": false,
+      "completed": 85,
+      "open_positions": 0,
+      "entry_weeks": 39,
+      "capacity": {
+        "entry_requests": 108,
+        "partially_filled_entries": 13,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 40314.27841908408,
+        "filled_entry_notional": 40192.078928122304,
+        "filled_request_ratio": 0.9969688285204695,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "signal_trace": {
+        "BNBUSDT": {
+          "price_edges": 238,
+          "known_oi_price_edges": 238,
+          "qualifying_edges": 34,
+          "pulses": 12
+        },
+        "BTCUSDT": {
+          "price_edges": 253,
+          "known_oi_price_edges": 249,
+          "qualifying_edges": 24,
+          "pulses": 15
+        },
+        "DOGEUSDT": {
+          "price_edges": 240,
+          "known_oi_price_edges": 240,
+          "qualifying_edges": 56,
+          "pulses": 30
+        },
+        "ETHUSDT": {
+          "price_edges": 278,
+          "known_oi_price_edges": 278,
+          "qualifying_edges": 38,
+          "pulses": 19
+        },
+        "SOLUSDT": {
+          "price_edges": 270,
+          "known_oi_price_edges": 270,
+          "qualifying_edges": 30,
+          "pulses": 16
+        },
+        "XRPUSDT": {
+          "price_edges": 228,
+          "known_oi_price_edges": 227,
+          "qualifying_edges": 42,
+          "pulses": 16
+        }
+      },
+      "hashes": {
+        "trades.json": "e81d788ecff9a556383a6fe12ae419693f0a73cfc979486d02f52af5229d0b08",
+        "targets.parquet": "785111df8295b8d0bcdeab168ee85ef7b9c9300892130b33152067887ca3e2d8",
+        "events.json": "45fd2a1f756fcc967a98b1d814410bfadb22c3c5a4b2f72324bb41cb124c4703",
+        "resume_state.json": "cba5b7216a18e72a0f736320eae4ad7a74de5eaf8c6c7f195956d64e9804c2ab",
+        "nav.parquet": "c4bc246da7bdc05543f71e46af60f2d50a6250790f7d00f5d2387d49eb77a23b",
+        "requests.json": "464a44a5c32cfcfd43060b71c649ccb1d11f7c03818d18d4381646fd03054667"
+      }
+    },
+    "2024_Contract_15bps": {
+      "window": "2024",
+      "case": "Contract",
+      "cost_bps": 15,
+      "net_return": 0.08233007716017826,
+      "first_slice_return": -0.17854479259797262,
+      "second_slice_return": 0.31757650010303795,
+      "annualized_net_return": 0.08215462040286559,
+      "max_drawdown": 0.268435225125669,
+      "risk_halted": false,
+      "completed": 86,
+      "open_positions": 0,
+      "entry_weeks": 39,
+      "capacity": {
+        "entry_requests": 109,
+        "partially_filled_entries": 14,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 39498.40466092274,
+        "filled_entry_notional": 39357.09126707444,
+        "filled_request_ratio": 0.996422301228077,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "signal_trace": {
+        "BNBUSDT": {
+          "price_edges": 238,
+          "known_oi_price_edges": 238,
+          "qualifying_edges": 34,
+          "pulses": 12
+        },
+        "BTCUSDT": {
+          "price_edges": 253,
+          "known_oi_price_edges": 249,
+          "qualifying_edges": 24,
+          "pulses": 15
+        },
+        "DOGEUSDT": {
+          "price_edges": 240,
+          "known_oi_price_edges": 240,
+          "qualifying_edges": 56,
+          "pulses": 30
+        },
+        "ETHUSDT": {
+          "price_edges": 278,
+          "known_oi_price_edges": 278,
+          "qualifying_edges": 38,
+          "pulses": 19
+        },
+        "SOLUSDT": {
+          "price_edges": 270,
+          "known_oi_price_edges": 270,
+          "qualifying_edges": 30,
+          "pulses": 16
+        },
+        "XRPUSDT": {
+          "price_edges": 228,
+          "known_oi_price_edges": 227,
+          "qualifying_edges": 42,
+          "pulses": 16
+        }
+      },
+      "hashes": {
+        "trades.json": "dad2d328f6a11dbec660a6b2e4afdfadf67b7bc508853c03b34a7be29f426019",
+        "targets.parquet": "785111df8295b8d0bcdeab168ee85ef7b9c9300892130b33152067887ca3e2d8",
+        "events.json": "d2ee02894d35d8db720adb442f51c85efec21e5f48b658eeccb3bc52cb108c0c",
+        "resume_state.json": "3a3f05c1ab4be1e125bf1d84db8e8154265578fbcef5d79ae92619ff36a0da0b",
+        "nav.parquet": "4bb88b0c6dd9c940334d7a6a29eb9767269870196ee79e5998e9997c5e01ccfa",
+        "requests.json": "e07208a1bdf1aa1333965a5a42c715b98a6c9cdb3e9605ec129e800d40e2deae"
+      }
+    }
+  },
+  "gates": {
+    "2024": {
+      "8": {
+        "beats_controls": true,
+        "positive_both_slices": false,
+        "risk": true,
+        "sample": true,
+        "upside": true
+      },
+      "15": {
+        "beats_controls": false,
+        "positive_both_slices": false,
+        "risk": false,
+        "sample": true,
+        "upside": false
+      }
+    }
+  },
+  "extension_admitted": false,
+  "both_windows_passed": false,
+  "paper_eligible": false
+}
