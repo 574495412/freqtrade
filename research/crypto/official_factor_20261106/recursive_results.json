@@ -1,0 +1,83 @@
+{
+  "status": "ORIGINAL_STRATEGIES_NOT_VALIDATED_FOR_FORWARD_USE",
+  "diagnostic_commands_used": 2,
+  "diagnostic_commands_remaining": 6,
+  "old_v1_diagnostics_rerun": 0,
+  "financial_backtests_added": 0,
+  "full_lookahead_commands_added": 0,
+  "production_eligible": false,
+  "rows": [
+    {
+      "id": "RECURSIVE_ADXMomentum_spot_L_BTC",
+      "status": "native_diagnostic_completed",
+      "native_returncode": 0,
+      "source_startup": 20,
+      "log": "research/crypto/official_factor_20261106/diagnostic_evidence/RECURSIVE_ADXMomentum_spot_L_BTC.log",
+      "log_sha256": "4534852bc00c9b5c0f41a7451c27cb92f000ecd0cf6c034c8929ca22cd7a7203",
+      "receipt_sha256": "596133d85dc968d041a0ff267ba9f38eb29eb2e3d11b487ace00367c4c92f610",
+      "elapsed_seconds": 4.572958542004926,
+      "peak_rss_bytes": 586186752
+    },
+    {
+      "id": "RECURSIVE_MACDStrategy_crossed_spot_L_BTC",
+      "status": "native_startup_rejected",
+      "native_returncode": 0,
+      "source_startup": 0,
+      "log": "research/crypto/official_factor_20261106/diagnostic_evidence/RECURSIVE_MACDStrategy_crossed_spot_L_BTC.log",
+      "log_sha256": "41c331536d4ba1d936913bfdefe1d34985d6277c2fbbac170373d406f5875a99",
+      "receipt_sha256": "cd829d5c73754dc01ebc3de06115f612dfe676ead47796d22227e139431b0aaa",
+      "elapsed_seconds": 3.042034208017867,
+      "peak_rss_bytes": 550748160
+    }
+  ],
+  "adx_native_display": {
+    "columns": [
+      "20 (from strategy)",
+      "199",
+      "399",
+      "499",
+      "999",
+      "1999"
+    ],
+    "adx": [
+      "nan%",
+      "0.001%",
+      "0.000%",
+      "-0.000%",
+      "-",
+      "-"
+    ],
+    "plus_di": [
+      "nan%",
+      "-0.007%",
+      "0.000%",
+      "0.000%",
+      "-",
+      "-"
+    ],
+    "minus_di": [
+      "nan%",
+      "-0.013%",
+      "-0.000%",
+      "0.000%",
+      "-",
+      "-"
+    ],
+    "sar": [
+      "0.202%",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+    ]
+  },
+  "interpretation": [
+    "ADX original startup 20 produces unavailable ADX/DI values in this native last-row diagnostic. No strategy modification or revised startup is adopted.",
+    "SAR is calculated by the original source but is not used in entry/exit conditions.",
+    "The tool reports no indicator-only lookahead differences at one checked point (2025-01-01T10:00:00); this is not full strategy causality.",
+    "Native analyze_indicators breaks after the first exact-match comparison; a dash is not independent proof that every later startup was compared, and 0.000% is rounded display.",
+    "MACD original startup 0 is rejected by native diagnostic. Exit code 0 is not successful completion. No override or retry was used.",
+    "These are post-result reliability checks on frozen failed candidates, not pre-registered economic selection or evidence of positive returns."
+  ]
+}

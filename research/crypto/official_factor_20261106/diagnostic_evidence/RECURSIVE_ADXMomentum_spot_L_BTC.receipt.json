@@ -1,0 +1,43 @@
+{
+  "id": "RECURSIVE_ADXMomentum_spot_L_BTC",
+  "started_at_utc": "2026-11-06T03:01:07.751668+00:00",
+  "command": [
+    ".venv-paper/bin/python",
+    "-B",
+    "-m",
+    "freqtrade",
+    "recursive-analysis",
+    "--config",
+    "research/crypto/official_factor_20261106/configs/spot_base.json",
+    "--strategy",
+    "ADXMomentum",
+    "--strategy-path",
+    "research/crypto/official_factor_20261106/sources",
+    "--userdir",
+    "user_data/crypto_quant/official_factor_20261106/native_userdir",
+    "--datadir",
+    "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+    "--timerange",
+    "20250101-20260901",
+    "--pairs",
+    "BTC/USDT",
+    "--no-color"
+  ],
+  "registration_sha256": "2cc05537f9c0937d70ca202cc3bae5db09a281459fc22a95bbba9a2d20e3fbe3",
+  "runner_sha256": "d103a0867a809eecc9330ff5eec53d89fee859c405951750dcbd670cdb2400c0",
+  "financial_backtests_added": 0,
+  "orders_enabled": false,
+  "finished_at_utc": "2026-11-06T03:01:12.325185+00:00",
+  "returncode": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 4.572958542004926,
+  "peak_rss_bytes": 586186752,
+  "status": "native_diagnostic_completed",
+  "diagnostic_completed": true,
+  "economic_qualified": false,
+  "artifacts": {
+    "start.json": "55f4e7f1332bf4fb141f9bec45bb225b5957b1d2b4c6d875ace2dd9850d77d72",
+    "native.log": "4534852bc00c9b5c0f41a7451c27cb92f000ecd0cf6c034c8929ca22cd7a7203",
+    "process.json": "8a3d0a858cdb899e47f7b664d12acc088fbb87e0ce1e3410644774507c5d95a5"
+  }
+}

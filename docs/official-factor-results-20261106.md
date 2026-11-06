@@ -25,7 +25,7 @@
 - 首次 6 个合约短窗尝试因 Binance ticker 配置校验失败，未形成金融结果。保留日志与收据，预登记 use_order_book 配置修复后重试成功。原生历史撮合仍使用 K 线，不代表拥有历史盘口。
 - 原 CLI 对该配置错误返回 0；执行器现要求存在原生结果 ZIP，不能仅凭退出码判断成功。
 - 原生 max_drawdown_account 为已平仓交易利润序列口径；native_wallet_stats 单独保留。二者不可混用，也未认证为可执行的 5 分钟全账户净值回撤。
-- 本轮新增 lookahead/recursive 诊断 0 次，不能称通过因果性认证；全部候选已因亏损不予采用。未使用 hyperopt、机器学习或事后调参。
+- 首轮收益回测阶段新增 lookahead/recursive 诊断 0 次，后续两次官方递归诊断见文末；不能称通过因果性认证。全部候选已因亏损不予采用。未使用 hyperopt、机器学习或事后调参。
 - 未改现有 paper 服务、配置、数据库或信号，未启用真实订单。
 
 机器结果：[results.json](../research/crypto/official_factor_20261106/results.json)；核验：[verification.json](../research/crypto/official_factor_20261106/verification.json)；登记和方法：[研究说明](official-factor-research-20261106.md)。完整原生 ZIP、日志和逐币结果保存在 results.json 所列的本地 user_data 路径，不纳入 Git。
@@ -64,3 +64,26 @@ ADX 长窗的正价差不足以覆盖费用；MACD 与 EMA 长窗在费用前的
 结论仍为三种原版策略不予采用。账务复核与文件覆盖没有推翻亏损结果，也没有使其获得因果性、可执行流动性或前瞻盈利认证。
 
 可复核记录：[逐账户与逐文件审计](../research/crypto/official_factor_20261106/native_audit.json)、[资金费匹配](../research/crypto/official_factor_20261106/funding_join_audit.json)。检查代码：[audit_native.py](../research/crypto/official_factor_20261106/audit_native.py)、[audit_funding_join.py](../research/crypto/official_factor_20261106/audit_funding_join.py)。原生计算依据为固定核心的 `freqtrade/persistence/trade_model.py`（`calculate_profit`、`calc_close_trade_value`）、`freqtrade/optimize/backtesting.py`（`load_bt_data_detail`）与 `freqtrade/data/converter/converter.py`（`ohlcv_fill_up_missing_data`）；未修改这些算法。
+
+## 官方递归诊断：原版启动设置存在局限
+
+随后预登记并执行两次官方 `recursive-analysis`，使用固定现货 L 数据中的 BTC/USDT、原版源码和原版启动设置。官方工具只计算指标，不执行金融回测；没有新增账户或收益结果。新官方项目诊断预算已用 2/8，旧 v1 已耗尽的 8 次诊断未重跑。BTC 单币检查是官方文档建议的指标诊断范围，不能扩展成全币池稳定性结论。
+
+ADXMomentum 命令完成，但原生输出如下。列标题为工具实际比较的启动数量，百分数保留原生显示精度；本次未据此选择新参数。
+
+| 指标 | 原版 20 | 199 | 399 | 499 |
+|---|---:|---:|---:|---:|
+| ADX | nan% | 0.001% | 0.000% | −0.000% |
+| 正 DI | nan% | −0.007% | 0.000% | 0.000% |
+| 负 DI | nan% | −0.013% | −0.000% | 0.000% |
+| SAR | 0.202% | — | — | — |
+
+按官方文档，`nan%` 表示启动数据不足，无法计算该指标。ADX/DI 是原版入场和出场条件使用的指标，因此原版 20 根启动设置未获得稳定性支持。SAR 虽被计算，但未用于该策略的交易条件。表中 0.000% 是舍入显示，不代表严格相等；完整输出的 999/1999 列为横线，且官方比较循环遇到首个完全一致的比较即退出，不能将后续横线解释为逐项独立验证。
+
+工具另外在 `2025-01-01T10:00:00` 检查一个指标时点，报告未发现前视差异。这只覆盖一次指标比较，未执行完整 `lookahead-analysis`，不证明整个信号或执行过程无前视。
+
+MACDStrategy_crossed 继承 `startup_candle_count=0`，被官方工具明确拒绝，未产生递归比较表。原生 CLI 对该配置错误仍返回退出码 0；收据将其记录为 `native_startup_rejected`，没有误报成功，也没有改启动设置后重试。
+
+两项诊断保留了原版局限，三种策略仍不予采用。此前 24 个亏损账户的源码、参数及结果不变；本次不能解释为已修复策略，也不能解释为收益改善。
+
+登记：[recursive_registration.json](../research/crypto/official_factor_20261106/recursive_registration.json)；结果与日志索引：[recursive_results.json](../research/crypto/official_factor_20261106/recursive_results.json)。原始日志和收据已提交至 `research/crypto/official_factor_20261106/diagnostic_evidence/`。方法和限度以当前固定核心的 [官方递归说明](recursive-analysis.md) 及 `freqtrade/optimize/analysis/recursive.py` 为准。

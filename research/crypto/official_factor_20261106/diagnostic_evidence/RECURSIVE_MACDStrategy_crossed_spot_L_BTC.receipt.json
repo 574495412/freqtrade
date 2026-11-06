@@ -1,0 +1,43 @@
+{
+  "id": "RECURSIVE_MACDStrategy_crossed_spot_L_BTC",
+  "started_at_utc": "2026-11-06T03:01:32.321829+00:00",
+  "command": [
+    ".venv-paper/bin/python",
+    "-B",
+    "-m",
+    "freqtrade",
+    "recursive-analysis",
+    "--config",
+    "research/crypto/official_factor_20261106/configs/spot_base.json",
+    "--strategy",
+    "MACDStrategy_crossed",
+    "--strategy-path",
+    "research/crypto/official_factor_20261106/sources",
+    "--userdir",
+    "user_data/crypto_quant/official_factor_20261106/native_userdir",
+    "--datadir",
+    "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+    "--timerange",
+    "20250101-20260901",
+    "--pairs",
+    "BTC/USDT",
+    "--no-color"
+  ],
+  "registration_sha256": "2cc05537f9c0937d70ca202cc3bae5db09a281459fc22a95bbba9a2d20e3fbe3",
+  "runner_sha256": "d103a0867a809eecc9330ff5eec53d89fee859c405951750dcbd670cdb2400c0",
+  "financial_backtests_added": 0,
+  "orders_enabled": false,
+  "finished_at_utc": "2026-11-06T03:01:35.364439+00:00",
+  "returncode": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 3.042034208017867,
+  "peak_rss_bytes": 550748160,
+  "status": "native_startup_rejected",
+  "diagnostic_completed": false,
+  "economic_qualified": false,
+  "artifacts": {
+    "start.json": "5bc333a113742330cac806079144e92618f3222f024aaca18c5b4d340d391627",
+    "native.log": "41c331536d4ba1d936913bfdefe1d34985d6277c2fbbac170373d406f5875a99",
+    "process.json": "c3b3fd3220f7ee1e7ccc589bb9ce6c96476963e48d7544e96417b7cc9f0fee5b"
+  }
+}
