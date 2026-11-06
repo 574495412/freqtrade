@@ -1,0 +1,35 @@
+{
+  "registered_at_utc": "2026-11-06T21:59:18.605003+00:00",
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/cross_venue_funding_20261107/study.py",
+      "sha256": "167fe1fc0172a6abf7b6d8c453e0b87f76d6385a378538906ec158e01125f056"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/external_sources_20261022/hummingbot_hummingbot/scripts/v2_funding_rate_arb.py",
+      "sha256": "845c125057a1bf66c2a19bf6551477bfc124ee24aef101901601ea165bc83597"
+    }
+  ],
+  "upstream_commit": "9af100d6822da7d2d0291a906c730ef172284ee2",
+  "universe": [
+    "WIF",
+    "FET",
+    "BTC",
+    "ETH",
+    "SOL"
+  ],
+  "windows": [
+    [
+      "2026-05-01T00:00:00+00:00",
+      "2026-08-01T00:00:00+00:00"
+    ],
+    [
+      "2026-08-01T00:00:00+00:00",
+      "2026-11-01T00:00:00+00:00"
+    ]
+  ],
+  "signal": "Hummingbot normalization and direction, official 0.001/day entry and -0.001/day reversal exits, and 0.01 net paired profit exit. Replace unavailable forward quoted funding with last settlement known at least 5m. Normalize each rate by its elapsed previous settlement interval. Long the cheaper venue and short the dearer. Max one episode per coin; independent coins and windows. Maximum 7 days. Close at calendar endpoint.",
+  "cash_proxy": "Equal underlying amount, 1 hour decision cycle, execute at next hour's trade OPEN proxy plus 5 seconds, fees 5bps per leg per side, slippage 3 or 10bps each fill. Binance funding uses reported settlement mark; Hyperliquid uses preceding completed hourly trade close as oracle proxy. Use actual source funding event times and exclude pre-entry/post-exit events. Convert Binance USDT net leg PnL at the exit USDCUSDT rate. Report net PnL relative to one-leg average entry notional in USDC. No compounded wallet, capacity, mark-margin/liquidation, or proof of execution. Forced endpoints are kept separate in the gate and fully reported.",
+  "gate": "All five coins need exact hourly OHLC/FX data, unique full hourly HL settlements and plausible Binance interval history. At each cost and window require >=20 distinct natural entry dates, positive mean natural after-cost pair net, and >=3 positive coin means. Passing only qualifies a later funded separate-wallet study with verified settlement and margin inputs.",
+  "orders_enabled": false
+}
