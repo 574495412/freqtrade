@@ -1,0 +1,37 @@
+test_bootstrap_requires_account_match_and_uses_actual_native_wallet (test_native_wallets.NativeWalletTests.test_bootstrap_requires_account_match_and_uses_actual_native_wallet) ... ok
+test_clock_restores_all_bindings_on_exception_and_rejects_nesting (test_native_wallets.NativeWalletTests.test_clock_restores_all_bindings_on_exception_and_rejects_nesting) ... ERROR
+test_futures_native_wallet_uses_wallet_cash_and_separate_collateral (test_native_wallets.NativeWalletTests.test_futures_native_wallet_uses_wallet_cash_and_separate_collateral) ... /Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/AverageStrategy.py:9: FutureWarning: 'freqtrade.vendor.qtpylib.indicators' is deprecated and will be removed in a future release. Import from technical instead - either the module (`from technical import qtpylib`) or a single function (`from technical.qtpylib import crossed_above`).
+  import freqtrade.vendor.qtpylib.indicators as qtpylib
+ok
+test_missing_wallet_fields_and_hidden_cash_cannot_be_defaulted_to_zero (test_native_wallets.NativeWalletTests.test_missing_wallet_fields_and_hidden_cash_cannot_be_defaulted_to_zero) ... ok
+test_native_wallet_mutation_and_source_mutation_block_entry (test_native_wallets.NativeWalletTests.test_native_wallet_mutation_and_source_mutation_block_entry) ... ok
+test_restart_needs_explicit_wallet_and_account_bootstrap (test_native_wallets.NativeWalletTests.test_restart_needs_explicit_wallet_and_account_bootstrap) ... ok
+test_spot_entry_fill_wallet_account_and_protection_share_event_time (test_native_wallets.NativeWalletTests.test_spot_entry_fill_wallet_account_and_protection_share_event_time) ... ok
+test_unverified_wallet_cannot_submit_even_when_guard_has_no_pending_fills (test_native_wallets.NativeWalletTests.test_unverified_wallet_cannot_submit_even_when_guard_has_no_pending_fills) ... ok
+test_wallet_commit_ack_loss_never_returns_entry_permission (test_native_wallets.NativeWalletTests.test_wallet_commit_ack_loss_never_returns_entry_permission) ... ok
+
+======================================================================
+ERROR: test_clock_restores_all_bindings_on_exception_and_rejects_nesting (test_native_wallets.NativeWalletTests.test_clock_restores_all_bindings_on_exception_and_rejects_nesting)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 146, in test_clock_restores_all_bindings_on_exception_and_rejects_nesting
+    lock=PairLocks.lock_pair("BTC/USDT",T+timedelta(minutes=5),reason="synthetic replay")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/freqtrade/persistence/pairlock_middleware.py", line 54, in lock_pair
+    lock_end_time = timeframe_to_next_date(PairLocks.timeframe, until)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/freqtrade/exchange/exchange_utils_timeframe.py", line 92, in timeframe_to_next_date
+    new_timestamp = ccxt.Exchange.round_timeframe(timeframe, dt_ts(date), ROUND_UP) // 1000
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/.venv-paper/lib/python3.12/site-packages/ccxt/base/exchange.py", line 2002, in round_timeframe
+    ms = Exchange.parse_timeframe(timeframe) * 1000
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/.venv-paper/lib/python3.12/site-packages/ccxt/base/exchange.py", line 1947, in parse_timeframe
+    amount = int(timeframe[0:-1])
+             ^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: ''
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.414s
+
+FAILED (errors=1)

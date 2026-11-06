@@ -129,6 +129,7 @@ class NativeEntryGate:
         if after_fill_guard is not None and after_fill_guard.identity != lifecycle.risk.s["identity"]:
             raise RiskError("Protection guard account identity differs")
         self.after_fill_guard = after_fill_guard
+        self.runtime_barrier = None
         self._mutex = threading.RLock()
         self._poisoned = False
         self.store = Store(Path(directory), dict(lifecycle.s["identity"], layer="native_entry_receipts_v1"), create=create)
@@ -140,6 +141,20 @@ class NativeEntryGate:
 
     def close(self):
         self.store.close()
+
+    def bind_runtime_barrier(self, barrier):
+        """Register the required wallet/account bootstrap durably before use."""
+        from native_wallets import NativeWalletBridge
+        with self._mutex:
+            if (type(barrier) is not NativeWalletBridge or barrier.provider.bridge.reservations is not self.lifecycle
+                    or self.after_fill_guard is None):
+                raise RiskError("Matching native wallet provider and protection guard required")
+            required = copy.deepcopy(barrier.store.identity)
+            if self.s.get("required_runtime_barrier") not in (None, required):
+                raise StateError("Registered runtime barrier identity changed")
+            self.s["required_runtime_barrier"] = required
+            self._persist()
+            self.runtime_barrier = barrier
 
     def _persist(self):
         if self._poisoned or self.store.lock.closed:
@@ -196,6 +211,11 @@ class NativeEntryGate:
         with self._mutex:
             if self._poisoned or self.store.lock.closed:
                 raise StateError("Entry receipt writer unavailable")
+            required = self.s.get("required_runtime_barrier")
+            if required is not None and (self.runtime_barrier is None or self.runtime_barrier.store.identity != required):
+                raise StateError("Registered runtime barrier must be reattached before entry")
+            if self.runtime_barrier is not None:
+                self.runtime_barrier.require_entry_clear(now)
             if self.after_fill_guard is not None:
                 self.after_fill_guard.require_entry_clear()
             if evidence.evidence_class != "synthetic":
