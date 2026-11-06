@@ -79,7 +79,7 @@ class Lifecycle(Reservations):
             return {'request_id':request_id,'client_order_id':client_id,'proposal':copy.deepcopy(item['proposal']),
                     'replay_only':True,'orders_enabled':False}
 
-    def reconcile(self,request_id,event_id,report,snapshot,now):
+    def reconcile(self,request_id,event_id,report,snapshot,now,*,campaign_fills=None):
         """Consume normalized CCXT report paired with a complete account snapshot.
 
         Required extra adapter field: observed_at is receipt time, never invented
@@ -93,7 +93,7 @@ class Lifecycle(Reservations):
             life=item.get('lifecycle')
             if life is None:raise StateError('no claimed attempt')
             if not isinstance(event_id,str) or not event_id:raise RiskError('event ID required')
-            signature=digest({'report':report,'snapshot':asdict(snapshot)})
+            signature=digest({'report':report,'snapshot':asdict(snapshot),'campaign_fills':campaign_fills})
             prior=life['events'].get(event_id)
             if prior:
                 if prior!=signature:raise StateError('conflicting duplicate evidence')
@@ -118,6 +118,14 @@ class Lifecycle(Reservations):
             self.risk.evaluate(snapshot,now)
             if not self.risk.s['last_usable'] or not self.risk.actions_safe(snapshot,now) or self.risk.quality(snapshot,now):raise RiskError('unusable reconciliation snapshot')
             expected=(1 if qty>0 else -1)*filled
+            campaign=None
+            if campaign_fills is not None:
+                from native_evidence import replay_campaign
+                campaign=replay_campaign(campaign_fills,order_id,p['pair'],1 if qty>0 else -1)
+                if dec(campaign['entry_filled'])!=filled:raise RiskError('campaign entry fills do not match order report')
+                if any(parse(f['received_at'])>aware(snapshot.at) for f in campaign_fills):raise RiskError('future received fill in snapshot')
+                if any(parse(f['at'])<parse(life['claimed_at']) for f in campaign_fills):raise RiskError('fill predates claimed order attempt')
+                expected=dec(campaign['signed_remaining_quantity'])
             actual=sum(dec(pos.quantity) for pos in snapshot.positions if pos.pair==p['pair'])
             if actual!=expected:raise RiskError('filled quantity not represented in account; exits require fuller event ledger')
             matches=[o for o in snapshot.orders if o.order_id==order_id]
@@ -132,6 +140,9 @@ class Lifecycle(Reservations):
             updated.update(state='TERMINAL_RECONCILED' if terminal else 'OBSERVED_OPEN',order_id=order_id,
                            last_report_at=stamp(at),filled=str(filled),snapshot_hash=digest(asdict(snapshot)))
             updated['events'][event_id]=signature
+            if campaign is not None:
+                updated['campaign_fill_reconstruction']=campaign
+                updated['campaign_fills']=copy.deepcopy(campaign_fills)
             item['lifecycle']=updated
             self._persist()
             return copy.deepcopy(updated)
