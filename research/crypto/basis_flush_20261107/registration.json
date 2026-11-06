@@ -1,0 +1,120 @@
+{
+  "registered_at_utc": "2026-11-06T17:59:01.192142+00:00",
+  "technical_revision": {
+    "prior_registration_sha256": "673600ff919b9b7bf330598fc43562af7a3788d0b1da5b24bc2e525cf5cc1e86",
+    "first_attempt_ledger": "basis_flush_20261107_attempt_001",
+    "reason": "First account wrote its ledger, then date-only Pandas indexing returned a daily slice in summary. Use exact UTC boundary timestamps. Signal, portfolio, costs and evaluation thresholds are identical."
+  },
+  "symbols": [
+    "ADAUSDT",
+    "AVAXUSDT",
+    "DOGEUSDT",
+    "DOTUSDT",
+    "ETHUSDT",
+    "LINKUSDT",
+    "LTCUSDT",
+    "SOLUSDT",
+    "XRPUSDT"
+  ],
+  "universe": "Full overlap of the ten liquid A01 perpetuals and sealed spot cohort. Fixed incumbent universe has survivorship bias.",
+  "checksums": {
+    "research/crypto/basis_flush_20261107/run.py": "30c242ce756c6212f761d00f73c2be1a9a1c1344368da45be723cd43b1a2445c",
+    "research/crypto/basis_flush_20261107/verify.py": "ae215802120c3e437cd6ffce81650f446f2b8cdd18f52d8a1b3b61b50f6ab42f",
+    "research/crypto/trend_mainline/account.py": "dc2086887ea30c054a18b6f3b1bf13d0d6eb967085a9cdb7c7c338465459f47a",
+    "research/crypto/breadth_diffusion_20261107/verify.py": "e4466aa67fdf79dff2dad3e691dcf33ac3289d30c99ea4f8e63d569945f591d2",
+    "freqtrade/research/data.py": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+    "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/receipts.json": "d664e25bebe874546a18df36267fd1a2825ffe59a5512f57388a040f0de9e8e3",
+    "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/ADA_USDT-5m.feather": "44b0de41b84cd7c1800fea6b3a934e616e5f374e68a6cbca731ac4177138f1ae",
+    "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/AVAX_USDT-5m.feather": "9be3fca80a1bc75ec6f625ec5a851f0f0e6ec4eb1037add6c6de61f3a24a7dc3",
+    "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/DOGE_USDT-5m.feather": "439d30619e2e47eb49108eecd1a351b73a4feef74e0df6ae89e8b01b69adda2d",
+    "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/DOT_USDT-5m.feather": "d97baddd42028d6d526104fdb11d103c66a77019af7a41eaa0e7982628569d4f",
+    "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/ETH_USDT-5m.feather": "407c6748bed2d85fa9739f5e6ef7eba174f6b1ab7b8db84ffb71a65f6248793c",
+    "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/LINK_USDT-5m.feather": "ab60dc5c94d51115ba3080c790afff81b9abf14ac1efa950ecdce8ed1711ed34",
+    "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/LTC_USDT-5m.feather": "e6f3024b6bf280ae410280f30fe11273a2f7c79444baa490cef6f8096ab39118",
+    "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/SOL_USDT-5m.feather": "9cef69ef57a0e186a13a5b2e1ac66a996de8a10f3e1e9fe32ced4165fc1b3c26",
+    "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles/XRP_USDT-5m.feather": "1620974e06e99344c22d7288f6d0329d3d91f996ced9aecd11a3c843687aa912",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/ADAUSDT_5m.parquet": "f7d50ea1c2e2f9f675b74286a1a089b661e3e5a9a35838a53153f5114ef27143",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/ADAUSDT_features.parquet": "a7bd31d6b7628ab1227545b9e54e52b59c7f3dd4539dd269ed5d794a66228b3d",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/ADAUSDT_funding.parquet": "9f359e8a04fd17a2f2790a87df2ab867b474926a490115fb0bae2093748a99e9",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/AVAXUSDT_5m.parquet": "a3064ebecc2fb6e159f7fa1ac59db51f6ab714b018d12f0beb1ec568def334ce",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/AVAXUSDT_features.parquet": "e267cb8189a9ddee8d43329914bcfcd444787b33e71f620c3d42df6dd7b94427",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/AVAXUSDT_funding.parquet": "2d262ab2013336b07f277e3d517405665fdc953795971ee1f64ecf2466bd23fc",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/DOGEUSDT_5m.parquet": "13d95bc7a8d29d05c3ac52a9b2f83d49e6e2358d5ddfe2fb0a15d24fd6190a7c",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/DOGEUSDT_features.parquet": "7effaa673f323d00e4a0c4782371fd84332e64eec298811f51b4f942661898fd",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/DOGEUSDT_funding.parquet": "144d7d31d447b215fdc8974109805cd7001ebfb81c715368cef6d87788307232",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/DOTUSDT_5m.parquet": "2a02e0cd72213f8a87d12d3aa9344732471b8e3c70a7edc1dfed759dcff4fdc8",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/DOTUSDT_features.parquet": "0e347bf191dc66b5d6fc117fcc8934aac3148575f73141b5b70017fda7854b70",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/DOTUSDT_funding.parquet": "38b8a8fcaabc4c6e269b85ba77e86d95e7f1639413fc25384ba0939fc9802f44",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/ETHUSDT_5m.parquet": "155cb2fff1a26f2384999e94a4851fe958ef5b880a50ce835d343e396ed251b7",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/ETHUSDT_features.parquet": "107456efbd1f4164b049653748e979318ecad633a421e0e320018910f02cb17f",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/ETHUSDT_funding.parquet": "164743ec2609db0eb27a701b01c61d5cd2167d232a3877ec175d8d0d68f34493",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/LINKUSDT_5m.parquet": "d386a2570c19145d3454eafa08790957eae9f7c082a060048458513b69625ca3",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/LINKUSDT_features.parquet": "931fa083982ed264bab9fe2e5486733f6cfb61d315b24649bad8da6adccd9e0e",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/LINKUSDT_funding.parquet": "85ab85570a535391fed5e11c4f1c7613ea02bea36851d0095b4e20b9041c1fda",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/LTCUSDT_5m.parquet": "cae0b0d3a22247f5ff3456bc2d811791efeb6c45caf74c5a72751fc9f5a83443",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/LTCUSDT_features.parquet": "89bdc373a41f7ef9fe9871ec01af890596f9ff10105c3609a1569aaece03864f",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/LTCUSDT_funding.parquet": "4b10fc4ce97232657e61c29e19f8b2dd070857bd403ec4752ec036367a6415da",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/SOLUSDT_5m.parquet": "3a8d91bec6f1b9bf5a5e64dcf7141dbbb44a113ab6c018d3f0998d6ec2a0811c",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/SOLUSDT_features.parquet": "2de48984082b670c52adcec2d2dbfd362be678213bd3dbf60cbcdfef3d94d85a",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/SOLUSDT_funding.parquet": "26a2a9035ef86ffe39642f4391792fea2865a68c3228123e401c9ac05cb2f4e0",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/XRPUSDT_5m.parquet": "641ac8f9dc757ec49474c950cacd76f91e4eee8719dfa89c6c5c59e54cc50156",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/XRPUSDT_features.parquet": "ab5b409584b01e9f4357151313a991423bda00eff1996d956f88d22bdbdf9e7a",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/XRPUSDT_funding.parquet": "6b84a48856fe032d0b22e3130723875291451f0afe298035940f1b4bd6e57196"
+  },
+  "warmup_start": "2024-10-01",
+  "start": "2025-01-01",
+  "split": "2026-01-01",
+  "end": "2026-09-01",
+  "history": "Retrospective screen. Both chronological slices use a continuous account. Both were available before registration.",
+  "cases": [
+    "BasisFlush",
+    "PriceFlush"
+  ],
+  "hypothesis": "After a downside flush and partial stabilization, a large perpetual discount relative to its recent norm selects stronger long-perpetual rebounds.",
+  "signal": {
+    "flush_bars": 6,
+    "flush_return_at_most": -0.025,
+    "basis_reference_bars": 2016,
+    "basis_reference_lag_bars": 12,
+    "relative_log_basis_at_most": -0.0025,
+    "scan_bars": 12,
+    "rebound_minimum": 0.005,
+    "pulse_hours": 12,
+    "information_buffer_minutes": 5,
+    "liquidity": "Reuse 28-day mean quote turnover >= 50m USDT, with previous UTC day's daily features used at midnight.",
+    "definition": "At each UTC hour evaluate the most recent 12 five-minute bars with closes known at t-5m. Find the lowest close among qualifying 30m flushes, require a 0.5% bounce from it. BasisFlush also requires the flush bar log(perp/spot) <= a 7-day trailing median excluding the most recent hour minus 25 bps. PriceFlush omits only that condition. Pulse begins at an eligible false-to-true edge. Ignore overlapping new edges for each symbol during the 12-hour pulse."
+  },
+  "capital_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    3,
+    10
+  ],
+  "risk": {
+    "risk_per_position": 0.04,
+    "maximum_position_fraction": 0.6,
+    "maximum_gross_fraction": 0.95,
+    "maximum_positions": 2,
+    "leverage": 1,
+    "account_drawdown_halt": 0.35
+  },
+  "execution": {
+    "prior_hour_participation": 0.01,
+    "realized_interval_participation": 0.01,
+    "policy": "Existing capacity model, adverse next 5m close, measured 8h funding rate with hourly mark-open proxy, 2x daily ATR delayed stop, 24h reentry cooldown, alphabetical admission, cash control and no position additions. A 12h signal is not a minimum holding period. Gross admission bounds use decision information; realized fills/marks can differ."
+  },
+  "decision": {
+    "historical_screen": "At both costs require 30 completed positions across at least 12 distinct UTC entry weeks, positive net return greater than cash and PriceFlush over each chronological slice and the full window, drawdown <=35%, and no drawdown halt.",
+    "upside_screen": "Report separately whether 15 bps account annualized return is at least 20%. This is a research hurdle; it does not establish the user's return objective.",
+    "orders_enabled": false,
+    "paper_eligible": false,
+    "production_eligible": false
+  },
+  "ledger_registration_sha256": "f20725f4d4d3c89e3b5f4bcc393cd754dc982f376f1bd95e6104eaf6f415231e",
+  "technical_revision_002": {
+    "at_utc": "2026-11-06T17:59:56.091169+00:00",
+    "prior_registration_sha256": "f20725f4d4d3c89e3b5f4bcc393cd754dc982f376f1bd95e6104eaf6f415231e",
+    "reason": "Four account ledgers completed. JSON rejected a NumPy boolean from the annualized metric. Cast annualized return to built-in float and build the report directly from the unchanged four ledgers."
+  }
+}
