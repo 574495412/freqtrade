@@ -1,0 +1,62 @@
+{
+  "registered_at_utc": "2026-11-06T19:00:42.385280+00:00",
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/run.py",
+      "sha256": "67f6bba54ae9b3595f8659569b767721aa8bf7907e262107817399f899603cb5"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/SoloTopBoost.py",
+      "sha256": "bd7c03260fe3ee863e18af59f01c1b022d0e1f443de5cb10d1bee9a4d4a48b8c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/temporal_native.json",
+      "sha256": "8f3e9394e71d380ae0e3991de47bd54c3b95789cca6dfe395a9bd18bd61a8675"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/long_native.json",
+      "sha256": "f5cdea77605c35b9447cf206767beead6d289f1e2dc4ea2823b73d06172151bf"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/registration.json",
+      "sha256": "eab310edfa3bb1d05037ac2a78cb069c163718019381739f16a7a8ecf598450e"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/result.json",
+      "sha256": "0db5c6ffd60d9b3c70b742c9be40ff104707cbced6ae00011b29b3f399b70428"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal_registration.json",
+      "sha256": "bdd93e55ceb6f2a0b0313518d9722ec7206062dacc7c7752d1c6f2920f24d661"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal_result.json",
+      "sha256": "646afef0224d9d4232aac88db16b501a70a7982fd0364ee58c15d740794f2467"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/mark_result.json",
+      "sha256": "52fe467489fa3b44007c581ac6ba5dd92545b8d0c25a75c355a4b9153725e09c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal.py",
+      "sha256": "529d3b191816817c1bd34817a62a21a76cb6d0dd7259452b1803968f4c85177c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/mark_valuation.py",
+      "sha256": "482c0b08081126a58e7c1386bbeb233c4c31084383d7abda413a49119fd5a654"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/docs/research-20261105/crypto-wide-comparison-20261105/reconstruct-five-minute-reference-v002.py",
+      "sha256": "861494c519d5e849fbd4fc41a989d93e77069711f34add7205ca7a6e614e7c12"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/audit.py",
+      "sha256": "2514cb9d6f537c156ca04a7cfcaa5320e31f71dd51d4db827659c0b8242d1617"
+    }
+  ],
+  "hypothesis": "A larger first stake on a Top Coins long when no other long is occupying the wallet can preserve earnings while reducing correlated exposure versus boosting every Top Coins long.",
+  "rule": "Use 1.5x first stake for pure native Top Coins long tags only when the native open trade list contains no long. Pending long orders consume a slot. Otherwise use 1x. Existing parent entry, adjustment, wallet, exit and leverage rules stay. Order of simultaneous entries is the original native order.",
+  "gate": "First run the previously observed temporal window at both costs. Require at each cost positive full net return greater than original, max 5m mark drawdown within 1pp of original and smaller than fixed boost, return divided by 5m drawdown above the fixed boost, at least 20 complete campaigns and 10 filled Top Coins. Only after passing both costs run the long window. Long window requires full and both slice net returns greater than original, full return/drawdown above flat boost on native hourly NAV, with drawdown within 1pp of original. Preserve all.",
+  "known_history": "Original and fixed-boost results were known in both windows before this hypothesis. The independent fee contracts are paired historical comparisons.",
+  "orders_enabled": false
+}

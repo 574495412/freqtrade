@@ -1,0 +1,31 @@
+{
+  "registered_at": "2026-11-06T19:06:38.429902+00:00",
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/long_mark.py",
+      "sha256": "7b5b34c001c1a80ae9711041e6d69c3778e0b5d0a07e547eb2c717a5885fe976"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/long_native.json",
+      "sha256": "f5cdea77605c35b9447cf206767beead6d289f1e2dc4ea2823b73d06172151bf"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/protocol.json",
+      "sha256": "81643847134bb7bbd232ed7777aed6aed3b8d2af4400d6c52d8854984f3ca8ba"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/result.json",
+      "sha256": "0db5c6ffd60d9b3c70b742c9be40ff104707cbced6ae00011b29b3f399b70428"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/mark_valuation.py",
+      "sha256": "482c0b08081126a58e7c1386bbeb233c4c31084383d7abda413a49119fd5a654"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/docs/research-20261105/crypto-wide-comparison-20261105/reconstruct-five-minute-reference-v002.py",
+      "sha256": "861494c519d5e849fbd4fc41a989d93e77069711f34add7205ca7a6e614e7c12"
+    }
+  ],
+  "criteria": "Valuation-only, exactly the frozen six long-window native ledgers. Require independent hourly NAV parity <=1e-5 USDT before using the 5m marks. All required symbols must match official hourly mark openings. Require 5m drawdown at most 1pp higher than original and return/5m drawdown greater than fixed boost. Preserve unknown data and original results.",
+  "orders_enabled": false
+}
