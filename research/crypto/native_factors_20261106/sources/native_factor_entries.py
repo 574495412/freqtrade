@@ -234,7 +234,13 @@ def execute_fixed_entry(gate, exchange, strategy, evidence, inputs, liquidity, r
     p = None; sizing = None
     if signal is not None:
         tag,scale = signal
-        p,sizing = size_entry(wallet.provider,evidence,exchange,wallet.wallets,liquidity,scale,now)
+        protection_binding=gate.s.get('required_native_protections')
+        protections=getattr(gate,'native_protections',None)
+        if protection_binding is not None and (protections is None or protections.binding!=protection_binding):
+            raise StateError('Registered native protections must be reattached before factor entry')
+        if protection_binding is not None and not protections.entry_allowed(liquidity.pair,now):
+            sizing=dict(approved=False,reasons=['native_protection_lock'])
+        else:p,sizing = size_entry(wallet.provider,evidence,exchange,wallet.wallets,liquidity,scale,now)
         if p is not None: sizing['native_stake_float'] = _native_stake(p)
     record = primitive(dict(signal=signal_proof,sizing=sizing,account_cursor=evidence.snapshot.cursor,
                             state='PREPARED' if p else 'SKIPPED',proposal=None if p is None else asdict(p)))

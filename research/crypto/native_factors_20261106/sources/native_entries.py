@@ -221,6 +221,12 @@ class NativeEntryGate:
             required = self.s.get("required_runtime_barrier")
             if required is not None and (self.runtime_barrier is None or self.runtime_barrier.store.identity != required):
                 raise StateError("Registered runtime barrier must be reattached before entry")
+            protection_binding=self.s.get('required_native_protections')
+            if protection_binding is not None:
+                protections=getattr(self,'native_protections',None)
+                if protections is None or protections.binding!=protection_binding:
+                    raise StateError('Registered native protections must be reattached before entry')
+                protections.require_entry(proposal.pair,now)
             if self.runtime_barrier is not None:
                 self.runtime_barrier.require_entry_clear(now)
             if self.after_fill_guard is not None:

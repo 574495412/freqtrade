@@ -1,0 +1,8 @@
+/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/AverageStrategy.py:9: FutureWarning: 'freqtrade.vendor.qtpylib.indicators' is deprecated and will be removed in a future release. Import from technical instead - either the module (`from technical import qtpylib`) or a single function (`from technical.qtpylib import crossed_above`).
+  import freqtrade.vendor.qtpylib.indicators as qtpylib
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_protections.py", line 15, in <module>
+    from native_protections import NativeProtections,locks
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_protections.py", line 12, in <module>
+    from freqtrade.persistence import Trade,PairLocks,PairLock
+ImportError: cannot import name 'PairLock' from 'freqtrade.persistence' (/Users/chrise/GitHub/freqtrade/freqtrade/persistence/__init__.py). Did you mean: 'PairLocks'?

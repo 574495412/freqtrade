@@ -7,6 +7,7 @@ import copy
 from dataclasses import asdict
 import json
 from pathlib import Path
+from types import SimpleNamespace
 import threading
 
 from freqtrade.enums import MarginMode, RunMode, TradingMode
@@ -100,6 +101,18 @@ class _BotObserver(_Observer):
         self.wallets = _WalletObserver(bot.wallets, guard, event)
         self.before_quantity = before_quantity
 
+    def order_close_notify(self, trade, order, stoploss_order, send_msg):
+        required=self.guard.s.get('required_native_protections')
+        if required is not None and order.ft_order_side==trade.exit_side and not trade.is_open:
+            runtime=getattr(self.guard,'native_protections',None)
+            if runtime is None or runtime.binding!=required:
+                raise RiskError('Registered native protections must be reattached after restart')
+            if send_msg:raise RiskError('Local protection observer cannot send external notifications')
+            proxy=SimpleNamespace(handle_protections=lambda pair,side:self.run('native_protections',runtime.apply_closed,
+                self.event,self.delegate,trade,order,self.delegate.wallets._last_wallet_refresh))
+            return FreqtradeBot.order_close_notify(proxy,trade,order,stoploss_order,False)
+        return self.delegate.order_close_notify(trade,order,stoploss_order,send_msg)
+
     def _update_trade_after_fill(self, trade, order, send_msg):
         result = FreqtradeBot._update_trade_after_fill(self, trade, order, send_msg)
         if order.status != "open" and order.safe_filled > 0 and trade.is_open and trade.amount > 0:
@@ -189,6 +202,14 @@ class AfterFillGuard:
             for name in ("order_filled", "wallet_update"):
                 if stages.get(name, {}).get("state") != "RETURNED":
                     raise RiskError("Native after-fill stage failed or missing: " + name)
+            required=self.s.get('required_native_protections')
+            if required is not None and not trade.is_open and order.ft_order_side==trade.exit_side:
+                runtime=getattr(self,'native_protections',None)
+                if runtime is None or runtime.binding!=required:
+                    raise RiskError('Registered native protections must be reattached after restart')
+                runtime.verify_closed(event,trade,order)
+                if stages.get('native_protections',{}).get('state')!='RETURNED':
+                    self.stage(event,'native_protections','RETURNED',recovery='committed_native_locks_verified')
             if trade.is_open and trade.amount > 0:
                 stop = dec(decimal_text(trade.stop_loss))
                 floor = dec(decimal_text(trade.open_rate)) * (1-self.stop_distance)
