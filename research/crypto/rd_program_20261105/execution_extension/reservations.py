@@ -69,6 +69,9 @@ class Reservations:
                 self.store.close()
             self.risk.close()
 
+    def active_requests(self):
+        return self.s['requests'].values()
+
     def reserve(self, request_id, snapshot, proposal, now):
         """Return bookkeeping receipt, NOT an order-submission authorization.
 
@@ -93,7 +96,7 @@ class Reservations:
             if not allowed:
                 return {'reserved':False,'reasons':list(reasons),'submission_authorized':False}
             virtual = []
-            for request in self.s['requests'].values():
+            for request in self.active_requests():
                 p = request['proposal']
                 if p['pair'] == proposal.pair:
                     return {'reserved':False,'reasons':['outstanding_reservation_same_pair'],
