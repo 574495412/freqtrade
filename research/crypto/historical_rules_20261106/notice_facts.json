@@ -1,0 +1,35 @@
+{
+  "evidence_scope": "Publisher notices about particular fields and scheduled transitions, not a complete rule timeline",
+  "rules": [
+    {
+      "pair": "SOL/USDT:USDT",
+      "field": "minimum_quantity",
+      "old": "1",
+      "new": "0.01",
+      "unit": "SOL",
+      "announced_old_rule_screen_start": "2025-04-02T00:00:00+00:00",
+      "original_scheduled_at": "2025-04-02T09:30:00+00:00",
+      "scheduled_at": "2025-04-09T09:30:00+00:00",
+      "sources": ["sol_original", "sol_postponement"]
+    },
+    {
+      "pair": "BTC/USDT:USDT",
+      "field": "minimum_notional",
+      "old": "100",
+      "new": "50",
+      "unit": "USDT",
+      "announced_old_rule_screen_start": "2026-04-10T00:00:00+00:00",
+      "scheduled_at": "2026-04-14T06:30:00+00:00",
+      "approximate_rollout_hours": 4,
+      "sources": ["btc_notional"]
+    }
+  ],
+  "sources": {
+    "sol_original": "https://www.binance.com/en-IN/support/announcement/detail/62e7f20e3f2d4313ab7b2147f51065c6",
+    "sol_postponement": "https://www.binance.com/en/support/announcement/detail/b2cecfd1006947e18bf029c11d19c351",
+    "btc_notional": "https://www.binance.com/en-NG/support/announcement/detail/10999fd17dc045de801c0c78ab29e6fc",
+    "sol_tick_before_L": "https://www.binance.com/en-IN/support/announcement/detail/8bfe2e9b86734cd08f3cbcdb82b79f51",
+    "binance_contract_specifications": "https://www.binance.com/en-AE/support/faq/detail/360033161972",
+    "vendor_metadata_schema": "https://docs.tardis.dev/api/instruments-metadata-api"
+  }
+}

@@ -1,0 +1,632 @@
+{
+  "registration_sha256": "c31455a31c383f6847f022930f51eafad1661a680d28ffe1a1cb821fdd4abf53",
+  "receipts": [
+    {
+      "id": "sol_original",
+      "url": "https://www.binance.com/en-IN/support/announcement/detail/62e7f20e3f2d4313ab7b2147f51065c6",
+      "kind": "notice",
+      "started_at_utc": "2026-11-06T14:23:20.214344+00:00",
+      "http_status": 202,
+      "headers": {
+        "Content-Length": "0",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "response_state": "body_complete",
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/historical_rule_probe_v001/sol_original.raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "finished_at_utc": "2026-11-06T14:23:20.326617+00:00"
+    },
+    {
+      "id": "sol_postponement",
+      "url": "https://www.binance.com/en/support/announcement/detail/b2cecfd1006947e18bf029c11d19c351",
+      "kind": "notice",
+      "started_at_utc": "2026-11-06T14:23:20.214801+00:00",
+      "http_status": 202,
+      "headers": {
+        "Content-Length": "0",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "response_state": "body_complete",
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/historical_rule_probe_v001/sol_postponement.raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "finished_at_utc": "2026-11-06T14:23:20.326423+00:00"
+    },
+    {
+      "id": "btc_notional",
+      "url": "https://www.binance.com/en-NG/support/announcement/detail/10999fd17dc045de801c0c78ab29e6fc",
+      "kind": "notice",
+      "started_at_utc": "2026-11-06T14:23:20.326448+00:00",
+      "http_status": 202,
+      "headers": {
+        "Content-Length": "0",
+        "Content-Type": "text/html; charset=UTF-8"
+      },
+      "response_state": "body_complete",
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/historical_rule_probe_v001/btc_notional.raw",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "finished_at_utc": "2026-11-06T14:23:20.435678+00:00"
+    },
+    {
+      "id": "binance_BTCUSDT",
+      "kind": "vendor_metadata",
+      "url": "https://api.tardis.dev/v1/instruments/binance/BTCUSDT",
+      "started_at_utc": "2026-11-06T14:23:20.326636+00:00",
+      "http_status": 401,
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "126"
+      },
+      "response_state": "body_complete",
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/historical_rule_probe_v001/binance_BTCUSDT.raw",
+      "sha256": "a01b54ffabc2509de51150491a5dc03d98e7d698b9b960959ae121a5bd68738e",
+      "bytes": 126,
+      "finished_at_utc": "2026-11-06T14:23:32.242520+00:00"
+    },
+    {
+      "id": "binance-futures_BTCUSDT",
+      "kind": "vendor_metadata",
+      "url": "https://api.tardis.dev/v1/instruments/binance-futures/BTCUSDT",
+      "started_at_utc": "2026-11-06T14:23:20.435701+00:00",
+      "http_status": 401,
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "126"
+      },
+      "response_state": "body_complete",
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/historical_rule_probe_v001/binance-futures_BTCUSDT.raw",
+      "sha256": "a01b54ffabc2509de51150491a5dc03d98e7d698b9b960959ae121a5bd68738e",
+      "bytes": 126,
+      "finished_at_utc": "2026-11-06T14:23:33.620752+00:00"
+    },
+    {
+      "id": "binance-futures_SOLUSDT",
+      "kind": "vendor_metadata",
+      "url": "https://api.tardis.dev/v1/instruments/binance-futures/SOLUSDT",
+      "started_at_utc": "2026-11-06T14:23:32.242644+00:00",
+      "http_status": 401,
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "126"
+      },
+      "response_state": "body_complete",
+      "path": "user_data/crypto_quant/rd_program_20261105_v1/historical_rule_probe_v001/binance-futures_SOLUSDT.raw",
+      "sha256": "a01b54ffabc2509de51150491a5dc03d98e7d698b9b960959ae121a5bd68738e",
+      "bytes": 126,
+      "finished_at_utc": "2026-11-06T14:23:40.424526+00:00"
+    }
+  ],
+  "rule_facts": [
+    {
+      "pair": "SOL/USDT:USDT",
+      "field": "minimum_quantity",
+      "old": "1",
+      "new": "0.01",
+      "unit": "SOL",
+      "announced_old_rule_screen_start": "2025-04-02T00:00:00+00:00",
+      "original_scheduled_at": "2025-04-02T09:30:00+00:00",
+      "scheduled_at": "2025-04-09T09:30:00+00:00",
+      "sources": [
+        "sol_original",
+        "sol_postponement"
+      ]
+    },
+    {
+      "pair": "BTC/USDT:USDT",
+      "field": "minimum_notional",
+      "old": "100",
+      "new": "50",
+      "unit": "USDT",
+      "announced_old_rule_screen_start": "2026-04-10T00:00:00+00:00",
+      "scheduled_at": "2026-04-14T06:30:00+00:00",
+      "approximate_rollout_hours": 4,
+      "sources": [
+        "btc_notional"
+      ]
+    }
+  ],
+  "simulated_entry_screen": [
+    {
+      "id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_L_base",
+      "strategy": "F1FuturesCandleCost",
+      "cost": "base",
+      "rules": [
+        {
+          "pair": "SOL/USDT:USDT",
+          "field": "minimum_quantity",
+          "announced_old": "1",
+          "eligible_in_notice_window": 0,
+          "below_old_in_notice_window": [],
+          "pre_transition_fills": 7,
+          "below_old_pre_transition_sensitivity": [
+            {
+              "opened_at": "2025-01-19T00:05:00+00:00",
+              "simulated_filled_at": "2025-01-19T00:05:00+00:00",
+              "amount": "0.36",
+              "price": "259.02",
+              "notional_without_fee": "93.2472",
+              "compared_value": "0.36"
+            },
+            {
+              "opened_at": "2025-01-20T00:05:00+00:00",
+              "simulated_filled_at": "2025-01-20T00:05:00+00:00",
+              "amount": "0.38",
+              "price": "249.03",
+              "notional_without_fee": "94.6314",
+              "compared_value": "0.38"
+            },
+            {
+              "opened_at": "2025-01-21T00:05:00+00:00",
+              "simulated_filled_at": "2025-01-21T00:05:00+00:00",
+              "amount": "0.39",
+              "price": "240.57",
+              "notional_without_fee": "93.8223",
+              "compared_value": "0.39"
+            },
+            {
+              "opened_at": "2025-01-22T00:05:00+00:00",
+              "simulated_filled_at": "2025-01-22T00:05:00+00:00",
+              "amount": "0.38",
+              "price": "249.17",
+              "notional_without_fee": "94.6846",
+              "compared_value": "0.38"
+            },
+            {
+              "opened_at": "2025-01-23T00:05:00+00:00",
+              "simulated_filled_at": "2025-01-23T00:05:00+00:00",
+              "amount": "0.37",
+              "price": "257.89",
+              "notional_without_fee": "95.4193",
+              "compared_value": "0.37"
+            },
+            {
+              "opened_at": "2025-01-24T00:05:00+00:00",
+              "simulated_filled_at": "2025-01-24T00:05:00+00:00",
+              "amount": "0.37",
+              "price": "254.62",
+              "notional_without_fee": "94.2094",
+              "compared_value": "0.37"
+            },
+            {
+              "opened_at": "2025-01-25T00:05:00+00:00",
+              "simulated_filled_at": "2025-01-25T00:05:00+00:00",
+              "amount": "0.37",
+              "price": "252.95",
+              "notional_without_fee": "93.5915",
+              "compared_value": "0.37"
+            }
+          ]
+        },
+        {
+          "pair": "BTC/USDT:USDT",
+          "field": "minimum_notional",
+          "announced_old": "100",
+          "eligible_in_notice_window": 0,
+          "below_old_in_notice_window": [],
+          "pre_transition_fills": 0,
+          "below_old_pre_transition_sensitivity": []
+        }
+      ]
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_L_stress",
+      "strategy": "F1FuturesCandleCost",
+      "cost": "stress",
+      "rules": [
+        {
+          "pair": "SOL/USDT:USDT",
+          "field": "minimum_quantity",
+          "announced_old": "1",
+          "eligible_in_notice_window": 0,
+          "below_old_in_notice_window": [],
+          "pre_transition_fills": 5,
+          "below_old_pre_transition_sensitivity": [
+            {
+              "opened_at": "2025-01-19T00:05:00+00:00",
+              "simulated_filled_at": "2025-01-19T00:05:00+00:00",
+              "amount": "0.35",
+              "price": "259.02",
+              "notional_without_fee": "90.6570",
+              "compared_value": "0.35"
+            },
+            {
+              "opened_at": "2025-01-20T00:05:00+00:00",
+              "simulated_filled_at": "2025-01-20T00:05:00+00:00",
+              "amount": "0.37",
+              "price": "249.03",
+              "notional_without_fee": "92.1411",
+              "compared_value": "0.37"
+            },
+            {
+              "opened_at": "2025-01-21T00:05:00+00:00",
+              "simulated_filled_at": "2025-01-21T00:05:00+00:00",
+              "amount": "0.38",
+              "price": "240.57",
+              "notional_without_fee": "91.4166",
+              "compared_value": "0.38"
+            },
+            {
+              "opened_at": "2025-01-23T00:05:00+00:00",
+              "simulated_filled_at": "2025-01-23T00:05:00+00:00",
+              "amount": "0.36",
+              "price": "257.89",
+              "notional_without_fee": "92.8404",
+              "compared_value": "0.36"
+            },
+            {
+              "opened_at": "2025-01-24T00:05:00+00:00",
+              "simulated_filled_at": "2025-01-24T00:05:00+00:00",
+              "amount": "0.36",
+              "price": "254.62",
+              "notional_without_fee": "91.6632",
+              "compared_value": "0.36"
+            }
+          ]
+        },
+        {
+          "pair": "BTC/USDT:USDT",
+          "field": "minimum_notional",
+          "announced_old": "100",
+          "eligible_in_notice_window": 0,
+          "below_old_in_notice_window": [],
+          "pre_transition_fills": 0,
+          "below_old_pre_transition_sensitivity": []
+        }
+      ]
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_L_base",
+      "strategy": "F2FuturesCandleCost",
+      "cost": "base",
+      "rules": [
+        {
+          "pair": "SOL/USDT:USDT",
+          "field": "minimum_quantity",
+          "announced_old": "1",
+          "eligible_in_notice_window": 0,
+          "below_old_in_notice_window": [],
+          "pre_transition_fills": 4,
+          "below_old_pre_transition_sensitivity": [
+            {
+              "opened_at": "2025-01-21T20:05:00+00:00",
+              "simulated_filled_at": "2025-01-21T20:05:00+00:00",
+              "amount": "0.02",
+              "price": "252.73",
+              "notional_without_fee": "5.0546",
+              "compared_value": "0.02"
+            },
+            {
+              "opened_at": "2025-02-09T08:05:00+00:00",
+              "simulated_filled_at": "2025-02-09T08:05:00+00:00",
+              "amount": "0.18",
+              "price": "204.35",
+              "notional_without_fee": "36.7830",
+              "compared_value": "0.18"
+            },
+            {
+              "opened_at": "2025-03-01T08:05:00+00:00",
+              "simulated_filled_at": "2025-03-01T08:05:00+00:00",
+              "amount": "0.08",
+              "price": "142.83",
+              "notional_without_fee": "11.4264",
+              "compared_value": "0.08"
+            },
+            {
+              "opened_at": "2025-03-02T04:05:00+00:00",
+              "simulated_filled_at": "2025-03-02T04:05:00+00:00",
+              "amount": "0.12",
+              "price": "144.2",
+              "notional_without_fee": "17.304",
+              "compared_value": "0.12"
+            }
+          ]
+        },
+        {
+          "pair": "BTC/USDT:USDT",
+          "field": "minimum_notional",
+          "announced_old": "100",
+          "eligible_in_notice_window": 0,
+          "below_old_in_notice_window": [],
+          "pre_transition_fills": 0,
+          "below_old_pre_transition_sensitivity": []
+        }
+      ]
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_L_stress",
+      "strategy": "F2FuturesCandleCost",
+      "cost": "stress",
+      "rules": [
+        {
+          "pair": "SOL/USDT:USDT",
+          "field": "minimum_quantity",
+          "announced_old": "1",
+          "eligible_in_notice_window": 0,
+          "below_old_in_notice_window": [],
+          "pre_transition_fills": 4,
+          "below_old_pre_transition_sensitivity": [
+            {
+              "opened_at": "2025-01-21T20:05:00+00:00",
+              "simulated_filled_at": "2025-01-21T20:05:00+00:00",
+              "amount": "0.02",
+              "price": "252.73",
+              "notional_without_fee": "5.0546",
+              "compared_value": "0.02"
+            },
+            {
+              "opened_at": "2025-02-09T08:05:00+00:00",
+              "simulated_filled_at": "2025-02-09T08:05:00+00:00",
+              "amount": "0.17",
+              "price": "204.35",
+              "notional_without_fee": "34.7395",
+              "compared_value": "0.17"
+            },
+            {
+              "opened_at": "2025-03-01T08:05:00+00:00",
+              "simulated_filled_at": "2025-03-01T08:05:00+00:00",
+              "amount": "0.08",
+              "price": "142.83",
+              "notional_without_fee": "11.4264",
+              "compared_value": "0.08"
+            },
+            {
+              "opened_at": "2025-03-02T04:05:00+00:00",
+              "simulated_filled_at": "2025-03-02T04:05:00+00:00",
+              "amount": "0.12",
+              "price": "144.2",
+              "notional_without_fee": "17.304",
+              "compared_value": "0.12"
+            }
+          ]
+        },
+        {
+          "pair": "BTC/USDT:USDT",
+          "field": "minimum_notional",
+          "announced_old": "100",
+          "eligible_in_notice_window": 0,
+          "below_old_in_notice_window": [],
+          "pre_transition_fills": 1,
+          "below_old_pre_transition_sensitivity": [
+            {
+              "opened_at": "2025-03-23T12:05:00+00:00",
+              "simulated_filled_at": "2025-03-23T12:05:00+00:00",
+              "amount": "0.001",
+              "price": "84694.9",
+              "notional_without_fee": "84.6949",
+              "compared_value": "84.6949"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_L_base",
+      "strategy": "AverageFuturesCandleControl",
+      "cost": "base",
+      "rules": [
+        {
+          "pair": "SOL/USDT:USDT",
+          "field": "minimum_quantity",
+          "announced_old": "1",
+          "eligible_in_notice_window": 0,
+          "below_old_in_notice_window": [],
+          "pre_transition_fills": 10,
+          "below_old_pre_transition_sensitivity": [
+            {
+              "opened_at": "2025-01-21T20:05:00+00:00",
+              "simulated_filled_at": "2025-01-21T20:05:00+00:00",
+              "amount": "0.39",
+              "price": "252.73",
+              "notional_without_fee": "98.5647",
+              "compared_value": "0.39"
+            },
+            {
+              "opened_at": "2025-01-30T20:05:00+00:00",
+              "simulated_filled_at": "2025-01-30T20:05:00+00:00",
+              "amount": "0.4",
+              "price": "240.5",
+              "notional_without_fee": "96.20",
+              "compared_value": "0.4"
+            },
+            {
+              "opened_at": "2025-01-31T12:05:00+00:00",
+              "simulated_filled_at": "2025-01-31T12:05:00+00:00",
+              "amount": "0.41",
+              "price": "237.85",
+              "notional_without_fee": "97.5185",
+              "compared_value": "0.41"
+            },
+            {
+              "opened_at": "2025-02-09T08:05:00+00:00",
+              "simulated_filled_at": "2025-02-09T08:05:00+00:00",
+              "amount": "0.47",
+              "price": "204.35",
+              "notional_without_fee": "96.0445",
+              "compared_value": "0.47"
+            },
+            {
+              "opened_at": "2025-02-14T16:05:00+00:00",
+              "simulated_filled_at": "2025-02-14T16:05:00+00:00",
+              "amount": "0.48",
+              "price": "200.95",
+              "notional_without_fee": "96.4560",
+              "compared_value": "0.48"
+            },
+            {
+              "opened_at": "2025-03-01T08:05:00+00:00",
+              "simulated_filled_at": "2025-03-01T08:05:00+00:00",
+              "amount": "0.64",
+              "price": "142.83",
+              "notional_without_fee": "91.4112",
+              "compared_value": "0.64"
+            },
+            {
+              "opened_at": "2025-03-02T04:05:00+00:00",
+              "simulated_filled_at": "2025-03-02T04:05:00+00:00",
+              "amount": "0.07",
+              "price": "144.2",
+              "notional_without_fee": "10.094",
+              "compared_value": "0.07"
+            },
+            {
+              "opened_at": "2025-03-06T08:05:00+00:00",
+              "simulated_filled_at": "2025-03-06T08:05:00+00:00",
+              "amount": "0.64",
+              "price": "148.44",
+              "notional_without_fee": "95.0016",
+              "compared_value": "0.64"
+            },
+            {
+              "opened_at": "2025-03-14T16:05:00+00:00",
+              "simulated_filled_at": "2025-03-14T16:05:00+00:00",
+              "amount": "0.69",
+              "price": "131.81",
+              "notional_without_fee": "90.9489",
+              "compared_value": "0.69"
+            },
+            {
+              "opened_at": "2025-03-19T20:05:00+00:00",
+              "simulated_filled_at": "2025-03-19T20:05:00+00:00",
+              "amount": "0.68",
+              "price": "133.47",
+              "notional_without_fee": "90.7596",
+              "compared_value": "0.68"
+            }
+          ]
+        },
+        {
+          "pair": "BTC/USDT:USDT",
+          "field": "minimum_notional",
+          "announced_old": "100",
+          "eligible_in_notice_window": 0,
+          "below_old_in_notice_window": [],
+          "pre_transition_fills": 5,
+          "below_old_pre_transition_sensitivity": [
+            {
+              "opened_at": "2025-03-02T16:05:00+00:00",
+              "simulated_filled_at": "2025-03-02T16:05:00+00:00",
+              "amount": "0.001",
+              "price": "87737.5",
+              "notional_without_fee": "87.7375",
+              "compared_value": "87.7375"
+            },
+            {
+              "opened_at": "2025-03-05T12:05:00+00:00",
+              "simulated_filled_at": "2025-03-05T12:05:00+00:00",
+              "amount": "0.001",
+              "price": "89931.1",
+              "notional_without_fee": "89.9311",
+              "compared_value": "89.9311"
+            },
+            {
+              "opened_at": "2025-03-13T04:05:00+00:00",
+              "simulated_filled_at": "2025-03-13T04:05:00+00:00",
+              "amount": "0.001",
+              "price": "83579.9",
+              "notional_without_fee": "83.5799",
+              "compared_value": "83.5799"
+            },
+            {
+              "opened_at": "2025-03-14T16:05:00+00:00",
+              "simulated_filled_at": "2025-03-14T16:05:00+00:00",
+              "amount": "0.001",
+              "price": "84698.5",
+              "notional_without_fee": "84.6985",
+              "compared_value": "84.6985"
+            },
+            {
+              "opened_at": "2025-03-17T04:05:00+00:00",
+              "simulated_filled_at": "2025-03-17T04:05:00+00:00",
+              "amount": "0.001",
+              "price": "83802.1",
+              "notional_without_fee": "83.8021",
+              "compared_value": "83.8021"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_L_stress",
+      "strategy": "AverageFuturesCandleControl",
+      "cost": "stress",
+      "rules": [
+        {
+          "pair": "SOL/USDT:USDT",
+          "field": "minimum_quantity",
+          "announced_old": "1",
+          "eligible_in_notice_window": 0,
+          "below_old_in_notice_window": [],
+          "pre_transition_fills": 4,
+          "below_old_pre_transition_sensitivity": [
+            {
+              "opened_at": "2025-01-21T20:05:00+00:00",
+              "simulated_filled_at": "2025-01-21T20:05:00+00:00",
+              "amount": "0.38",
+              "price": "252.73",
+              "notional_without_fee": "96.0374",
+              "compared_value": "0.38"
+            },
+            {
+              "opened_at": "2025-01-30T20:05:00+00:00",
+              "simulated_filled_at": "2025-01-30T20:05:00+00:00",
+              "amount": "0.39",
+              "price": "240.5",
+              "notional_without_fee": "93.795",
+              "compared_value": "0.39"
+            },
+            {
+              "opened_at": "2025-01-31T12:05:00+00:00",
+              "simulated_filled_at": "2025-01-31T12:05:00+00:00",
+              "amount": "0.4",
+              "price": "237.85",
+              "notional_without_fee": "95.140",
+              "compared_value": "0.4"
+            },
+            {
+              "opened_at": "2025-02-14T16:05:00+00:00",
+              "simulated_filled_at": "2025-02-14T16:05:00+00:00",
+              "amount": "0.45",
+              "price": "200.95",
+              "notional_without_fee": "90.4275",
+              "compared_value": "0.45"
+            }
+          ]
+        },
+        {
+          "pair": "BTC/USDT:USDT",
+          "field": "minimum_notional",
+          "announced_old": "100",
+          "eligible_in_notice_window": 0,
+          "below_old_in_notice_window": [],
+          "pre_transition_fills": 0,
+          "below_old_pre_transition_sensitivity": []
+        }
+      ]
+    }
+  ],
+  "quote_grid": {
+    "snapshot_observed_at": "2026-11-05T11:47:13.408669+00:00",
+    "samples": {
+      "SOLUSDT": {
+        "rows": 2322,
+        "tick_size": "0.0100",
+        "quantity_step": "0.01",
+        "off_snapshot_tick": 0,
+        "off_snapshot_step": 0
+      },
+      "BTCUSDT": {
+        "rows": 8994,
+        "tick_size": "0.10",
+        "quantity_step": "0.001",
+        "off_snapshot_tick": 0,
+        "off_snapshot_step": 0
+      }
+    },
+    "scope": "arithmetic consistency with later snapshot only"
+  },
+  "historical_rule_admission": false,
+  "financial_accounts": 0
+}
