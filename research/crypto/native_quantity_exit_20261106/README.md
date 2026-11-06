@@ -20,6 +20,6 @@
 .venv-paper/bin/python -B -m unittest discover -s research/crypto/native_quantity_exit_20261106 -p 'test_quantity*.py' -v
 ```
 
-登记与证据见 `registration.json`、`verification.json`、`test_run_005_sources.json` 和 `test_run_005.log`。初期测试中的模块命名冲突及不正确的本地传输夹具配置均已修正；失败日志 002/004 保留。核验 4 个测试源码、46 个冻结原生源码/测试及 145 个金融输入哈希一致。旧 287 项检查只保留原证据，本轮未声称重新执行。
+登记与证据见 `registration.json`、`verification.json`、`test_run_005_sources.json` 和 `test_run_005.log`。初期测试中的模块命名冲突及不正确的本地传输夹具配置均已修正；失败日志 002/004 保留。全部 5 次原始日志以 `.log.gz` 归档提交，`log_archives.json` 记录原文及压缩哈希并逐字往返核对。核验 4 个测试源码、46 个冻结原生源码/测试及 145 个金融输入哈希一致。旧 287 项检查只保留原证据，本轮未声称重新执行。
 
 边界：仅合成隔离验证。先取消并对账既有挂单，再执行数量退出；未知提交后若原生 Order 完全缺失，仍未实现由查询回执恢复绑定。平仓后的新增资金费修正、跨存储完整原子性认证、全窗口历史盘口和真实事件时序仍未完成。本轮金融账户为 0，不改变已封存的 24 个亏损账户，也不构成收益提升、完整 RD1 经济验证或上线资格。
