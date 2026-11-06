@@ -1,0 +1,46 @@
+{
+  "observed_at_utc": "2026-11-06T03:18:53.186903+00:00",
+  "user_authorization": "\u5141\u8bb8\u81ea\u7814\u56e0\u5b50",
+  "scope_question_pending": false,
+  "direction": "Self-developed fixed F1/F2 using official Freqtrade framework; no parameter search",
+  "overall_goal_complete": false,
+  "phase": "native_signal_adapters_implemented_shared_RD1_integration_pending",
+  "F1_native_daily_cross_section_implemented": true,
+  "F2_upstream_signal_parity_verified": true,
+  "F2_position_reduction_and_shared_RD1_complete": false,
+  "historical_receipt_or_depth_certified": false,
+  "native_signal_timing_helper_checked": true,
+  "engineering_tests_passed": 9,
+  "engineering_test_scope": "Synthetic plus real native resolver and signal conversion helper, no financial backtest or exchange/database integration",
+  "actual_hourly_files_checked": 152,
+  "F1_F2_financial_runs": 0,
+  "new_diagnostic_commands": 0,
+  "new_parameter_variants_searched": 0,
+  "old_P1_accounts_preserved": 32,
+  "old_determinism_checks_preserved": 2,
+  "official_example_accounts_preserved": 24,
+  "profit_improvement_established": false,
+  "production_eligible": false,
+  "runtime_modified": false,
+  "orders_enabled": false,
+  "input_source_hashes": {
+    "research/crypto/native_factors_20261106/input_coverage.json": "00426e26d9cad1198d0473330da8c786383e429e3394d28529d102f9849931fd",
+    "research/crypto/native_factors_20261106/engineering_checks.txt": "a85c6eb4c0d8e564ab958ec2f70ab3f7840c02e4410ab150f514068b321563da",
+    "research/crypto/native_factors_20261106/README.md": "1449507aa8b580ec2f981d7f4071f624061c71ec087573147b33a450d273a1d4",
+    "research/crypto/native_factors_20261106/test_native_factors.py": "24e0776d9dc58d176768bbe25dd03acfc6cf1f6c5675cab2c3ba1aed4737cbc1",
+    "research/crypto/native_factors_20261106/inspect_fixed_inputs.py": "1988039c376f536e2a7434e9549573e51dcde83478927c285f4a302c7b75adca",
+    "research/crypto/native_factors_20261106/sources/factor_inputs.py": "fad50a2085a1993fe764eca59eb8b368b446d4ab208e36c0e1268df888dfee5b",
+    "research/crypto/native_factors_20261106/sources/LICENSE": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "research/crypto/native_factors_20261106/sources/FixedFactorSignals.py": "a1ee146f63ac07f48daeac816d9229feaa7d0110329458d2d29d47fb67878b81",
+    "research/crypto/native_factors_20261106/sources/AverageStrategy.py": "63606866fdf1cb3d71dc39a951ed0784a31686690b1c4014c12d2481c8dbf094"
+  },
+  "supersedes_scope_question_in": {
+    "path": "research/crypto/official_factor_20261106/current_status.json",
+    "sha256": "222c0e398f691042b89e8f64ea3269ea0dcf6da913a4115d9ba7938483b0a4a6"
+  },
+  "next_required_work": [
+    "Shared native RD1 lifecycle/after-fill/database boundaries",
+    "F2 position reductions and matched control risk contract",
+    "Candidate admission and frozen paired economic registration before financial runs"
+  ]
+}
