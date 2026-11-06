@@ -1,0 +1,35 @@
+{
+  "observed_at_utc": "2026-11-06T13:58:51.749032+00:00",
+  "tests_passed": 12,
+  "source_manifest": "research/crypto/native_submit_recovery_20261106/entry_test_005_sources.json",
+  "source_manifest_sha256": "f0abd8268384b71133ae6cafb8169535c8fbbf911d9c4d6a00068b18f724f502",
+  "checks": {
+    "current_entry_sources": {
+      "files": 3,
+      "mismatches": []
+    },
+    "frozen_native": {
+      "files": 22,
+      "mismatches": []
+    },
+    "frozen_financial_inputs": {
+      "files": 145,
+      "mismatches": []
+    }
+  },
+  "archive_sha256": "96dd6882937d2ab1c7ad1ae0a0f634eadffe930e85b7f4f217619e2f800cca04",
+  "raw_sha256": "99d5acde98575a97e69493b5a354b73a7890e17640e38220fdb25a0af0a8cc80",
+  "supersedes": "research/crypto/native_submit_recovery_20261106/entry_verification.json",
+  "scope": "synthetic fixed-entry replay and native commit fault validation",
+  "verified_additions": [
+    "reuse original native initial row when only the unsourced parser fill time differs and apply the source fill time at reconciliation",
+    "zero terminal full account proof followed by native empty Trade cleanup, including native delete commit acknowledgment loss"
+  ],
+  "development_failure": "An initial fixture put the fill at the previously accepted complete checkpoint. The ledger rejected it. The fixture now represents a source fill after that checkpoint and before receipt, with the chronology guard intact.",
+  "new_financial_accounts": 0,
+  "goal_complete": false,
+  "remaining": [
+    "new post-close funding adjustment",
+    "historical execution qualification and full RD1 economic comparison"
+  ]
+}

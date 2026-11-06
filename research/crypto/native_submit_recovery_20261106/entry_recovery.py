@@ -9,10 +9,12 @@ from dataclasses import asdict
 from datetime import datetime, timezone
 from decimal import Decimal as D
 import json
+from types import SimpleNamespace
 
 from exit_recovery import columns
 from freqtrade.persistence import Trade, Order
 from freqtrade.exchange import timeframe_to_minutes
+from freqtrade.freqtradebot import FreqtradeBot
 from native_cancellations import LocalCancelExchange
 from native_evidence import CapturedOrder, decimal_text
 from native_snapshot import EPS
@@ -137,13 +139,20 @@ def _match_original_commit(trade, order, context, receipt):
     # The parser records its local application time. The original execution
     # clock, saved before POST, is the application time of the original row.
     expected_order.order_update_date = parse(context['claimed_at'])
+    observed_order = expected_columns(order, ('id', 'ft_trade_id'))
+    expected_fields = expected_columns(expected_order, ('id', 'ft_trade_id'))
+    fill_time_unknown = bool(original['filled'] and original.get('lastTradeTimestamp') is None
+                             and original['status'] != 'open')
+    if fill_time_unknown:
+        # Only this field is exempted from equality. Preserve its original
+        # value in the journal and require a source fill before using a date.
+        expected_fields['order_filled_date'] = observed_order['order_filled_date']
     if (expected_columns(trade, ('id',)) != expected_columns(expected_trade, ('id',))
-            or expected_columns(order, ('id', 'ft_trade_id'))
-            != expected_columns(expected_order, ('id', 'ft_trade_id'))):
+            or observed_order != expected_fields):
         raise RiskError('Existing initial native state differs from the original submission receipt')
     return dict(response_hash=digest(original), raw=copy.deepcopy(original),
         received_at=receipt['received_at'], trade_after=expected_columns(trade, ('id',)),
-        order_after=expected_columns(order, ('id', 'ft_trade_id')), native_binding=None)
+        order_after=observed_order, native_binding=None, original_fill_time_unknown=fill_time_unknown)
 
 
 def recover_initial_entry(driver,exchange,request_id,bot,now):
@@ -167,7 +176,8 @@ def recover_initial_entry(driver,exchange,request_id,bot,now):
         if not 0<=(now-received).total_seconds()<=15:raise RiskError('Initial recovery reply is stale')
         wallet._checked_evidence=None;wallet.s['state']='INITIAL_ENTRY_RECOVERY_PENDING';wallet._persist()
         rows=Trade.session.query(Order).filter(Order.ft_pair==raw['symbol'],Order.order_id==raw['id']).all()
-        if raw['status'] in ('canceled','expired','rejected') and dec(report['filled'])==0 and not rows:
+        zero_terminal = raw['status'] in ('canceled','expired','rejected') and dec(report['filled']) == 0
+        if zero_terminal and not rows:
             item['zero_query_pending']=True;gate._persist()
             return dict(state='ZERO_TERMINAL_ACCOUNT_PENDING',native_binding=None)
         context=_context(driver,exchange,request_id);context_hash=digest(primitive(context))
@@ -184,6 +194,7 @@ def recover_initial_entry(driver,exchange,request_id,bot,now):
                 steps.append(_match_original_commit(trade, order, context, item.get('original_submission_receipt')))
                 after_matches = True
             rec=dict(context_hash=context_hash,context=primitive(context),steps=steps,
+                original_fill_time_unknown=bool(steps and steps[0]['original_fill_time_unknown']),
                 other_trades={str(t.id):columns(t) for t in Trade.get_trades_proxy() if t is not trade},
                 other_orders={str(o.id):columns(o) for o in Trade.session.query(Order).all() if o is not order})
             item['initial_recovery']=rec
@@ -201,7 +212,10 @@ def recover_initial_entry(driver,exchange,request_id,bot,now):
         if (rec['other_trades']!={str(t.id):columns(t) for t in Trade.get_trades_proxy() if t is not trade}
                 or rec['other_orders']!={str(o.id):columns(o) for o in Trade.session.query(Order).all() if o is not order}):
             raise RiskError('Other native account state changed during recovery')
-        if rec['steps'] and rec['steps'][-1]['response_hash']==digest(raw) and rows and after_matches:
+        needs_fill_time_clear = rec.get('original_fill_time_unknown', False) and order is not None and order.order_filled_date is not None
+        if zero_terminal:
+            item['zero_query_pending'] = True
+        if rec['steps'] and rec['steps'][-1]['response_hash']==digest(raw) and rows and after_matches and not needs_fill_time_clear:
             binding=gate.bind_native(request_id)
             rec['steps'][-1]['native_binding']=binding;gate._persist()
             return dict(state='NATIVE_BOUND_ACCOUNT_PENDING',native_binding=binding)
@@ -212,6 +226,8 @@ def recover_initial_entry(driver,exchange,request_id,bot,now):
             draft_order=Order(**{a.key:getattr(order,a.key) for a in order.__mapper__.column_attrs if a.key not in ('id','ft_trade_id')})
             draft_order.update_from_ccxt_object(raw)
             _keep_observed_fill_time(draft_order, raw)
+            if rec.get('original_fill_time_unknown'):
+                draft_order.order_filled_date = None
             draft.orders.append(draft_order)
             draft.recalc_trade_from_orders()
         else:draft,draft_order=_new_trade(context,raw)
@@ -226,6 +242,8 @@ def recover_initial_entry(driver,exchange,request_id,bot,now):
             else:
                 order.update_from_ccxt_object(raw)
                 _keep_observed_fill_time(order, raw)
+                if rec.get('original_fill_time_unknown'):
+                    order.order_filled_date = None
                 trade.recalc_trade_from_orders()
             Trade.commit()
         except Exception:
@@ -242,29 +260,28 @@ def recover_initial_entry(driver,exchange,request_id,bot,now):
 
 def reconcile_zero_initial(driver,request_id,batch_id,evidence,receipt,quotes,bot,now,*,
                            complete_sequence,complete_from_inception,funding_complete):
-    """Release a source-proven zero terminal only after complete account proof.
-
-The native lifecycle explicitly supports this no-Trade case. No empty phantom
-Trade is inserted to satisfy the ordinary open/filled batch adapter.
-"""
+    """Reconcile a zero terminal and remove any proven empty native campaign."""
     driver._attached(now,bot)
     gate,wallet,provider=driver.gate,driver.wallet,driver.wallet.provider
     with driver._scope(now,'observe'),gate._mutex:
-        gate.require_account_batch_clear()
+        if not isinstance(batch_id, str) or not batch_id:
+            raise RiskError('Explicit zero recovery batch identity required')
+        key = 'initial-zero-' + digest([request_id, batch_id])[:28]
+        if gate.s.get('pending_account_batch') not in (None, key):
+            raise StateError('Another whole-account batch needs reconciliation first')
         item=gate.s['requests'][request_id];raw=item.get('ccxt_payload')
         if (not item.get('zero_query_pending') or raw is None or raw['status'] not in ('canceled','expired','rejected')
-                or dec(decimal_text(raw['filled']))!=0 or item['native_binding'] is not None
+                or dec(decimal_text(raw['filled']))!=0
                 or not item['recovery_queries'] or item['recovery_queries'][-1]['state']!='VALIDATED'):
-            raise RiskError('A validated zero-terminal initial query without native binding is required')
+            raise RiskError('A validated zero-terminal initial query is required')
         envelope=CapturedOrder(json.dumps(raw,sort_keys=True),parse(item['received_at']),
             'synthetic-initial-entry-query','synthetic')
         gate._validate_response(item)
         if (not 0<=(now-envelope.received_at).total_seconds()<=15
-                or any(t.pair==raw['symbol'] and t.is_open for t in Trade.get_trades_proxy())
-                or Trade.session.query(Order).filter(Order.ft_pair==raw['symbol'],Order.order_id==raw['id']).count()
                 or any(p.pair==raw['symbol'] for p in evidence.snapshot.positions)
                 or complete_sequence!=provider.ledger.last_sequence):
             raise RiskError('Zero initial query conflicts with native/source inventory or financial watermark')
+        quotes = tuple(quotes)
         payload=primitive(dict(envelope=asdict(envelope),evidence=asdict(evidence),receipt=asdict(receipt),
             quotes=[asdict(q) for q in quotes],complete_sequence=complete_sequence,
             complete_from_inception=complete_from_inception,funding_complete=funding_complete))
@@ -275,14 +292,62 @@ Trade is inserted to satisfy the ordinary open/filled batch adapter.
         if record is None:
             record=dict(batch_id=batch_id,signature=signature,input=payload,state='PREPARED')
             records[batch_id]=record;gate._persist()
-        bot.wallets=wallet.stage('initial-zero-'+batch_id,receipt,evidence,now)
+        cleanup = record.get('native_cleanup')
+        binding = item.get('native_binding') or (cleanup['binding'] if cleanup else None)
+        rows = Trade.session.query(Order).filter(Order.ft_pair==raw['symbol'], Order.order_id==raw['id']).all()
+        trade = Trade.session.get(Trade, binding['trade_id']) if binding else None
+        if any(t is not trade and t.pair == raw['symbol'] and t.is_open for t in Trade.get_trades_proxy()):
+            raise RiskError('Unexpected native inventory for the zero-terminal pair')
+        if trade is None and (rows or (binding is not None and cleanup is None)):
+            raise RiskError('Unknown native order ownership or missing cleanup intent')
+        if trade is not None:
+            _validate_empty_trade(item, binding, trade, rows, envelope)
+        bot.wallets=wallet.stage(key,receipt,evidence,now)
         checked,audit=provider.checkpoint(evidence,quotes,now,complete_sequence=complete_sequence,
             complete_from_inception=complete_from_inception,funding_complete=funding_complete)
+        if trade is not None:
+            record['native_cleanup'] = dict(binding=copy.deepcopy(binding), state='PREPARED')
+            gate.s['pending_account_batch'] = key
+            gate._persist()
+            _delete_empty_trade(trade, rows[0], raw, bot)
+        if binding is not None:
+            if Trade.session.get(Trade, binding['trade_id']) is not None or Trade.session.get(Order, binding['order_pk']) is not None:
+                raise RiskError('Native empty-campaign cleanup did not finish')
+            record['native_cleanup']['state'] = 'NATIVE_DELETED'
+            item['native_binding'] = None
+            gate._persist()
         wallet.confirm(checked,now)
-        result=gate.reconcile_native(request_id,'initial-zero-'+batch_id,envelope,checked,now,
+        result=gate.reconcile_native(request_id,key,envelope,checked,now,
             fills=(),fills_complete=True,sequence_basis='source_ordered')
-        record.update(state='TERMINAL_RECONCILED',audit=audit);gate._persist()
+        record.update(state='TERMINAL_RECONCILED',audit=audit)
+        gate.s['pending_account_batch'] = None
+        gate._persist()
         return dict(evidence=checked,audit=audit,lifecycle=result)
+
+
+def _validate_empty_trade(item, binding, trade, rows, envelope):
+    recovery = item.get('initial_recovery')
+    if (not recovery or len(rows) != 1 or len(trade.orders) != 1 or rows[0] is not trade.orders[0]
+            or rows[0].id != binding['order_pk'] or trade.amount != 0 or rows[0].safe_filled != 0
+            or rows[0].ft_is_open or trade.nr_of_successful_entries):
+        raise RiskError('Zero terminal cleanup requires the one bound empty native campaign')
+    envelope.normalize(rows[0])
+    prior = recovery['steps'][-1]
+    if (expected_columns(trade, ('id',)) != prior['trade_after']
+            or expected_columns(rows[0], ('id', 'ft_trade_id')) != prior['order_after']):
+        raise RiskError('Native empty campaign differs from its recovered state')
+
+
+def _delete_empty_trade(trade, order, raw, bot):
+    # Terminal reports take the native cleanup branch without cancel transport.
+    proxy = SimpleNamespace(strategy=bot.strategy, wallets=SimpleNamespace(update=lambda: None),
+                            _notify_enter_cancel=lambda *args, **kwargs: None)
+    try:
+        if not FreqtradeBot.handle_cancel_enter(proxy, trade, raw, order, 'source-proven zero terminal'):
+            raise RiskError('Native terminal cancellation did not confirm an empty campaign')
+    except Exception:
+        Trade.rollback()
+        raise
 
 
 def reconcile_recovered_terminal_fill(driver, request_id, batch_id, evidence, receipt, quotes, events, bot, now,
@@ -300,7 +365,7 @@ def reconcile_recovered_terminal_fill(driver, request_id, batch_id, evidence, re
         item = gate.s['requests'][request_id]
         raw, binding = copy.deepcopy(item.get('ccxt_payload')), item.get('native_binding')
         if (not item.get('initial_recovery') or not binding or raw is None
-                or raw['status'] not in ('canceled', 'expired', 'rejected')
+                or raw['status'] not in ('closed', 'canceled', 'expired', 'rejected')
                 or not item['recovery_queries'] or item['recovery_queries'][-1]['state'] != 'VALIDATED'):
             raise RiskError('Validated terminal entry query and recovered native binding required')
         received = parse(item['received_at'])

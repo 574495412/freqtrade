@@ -27,7 +27,7 @@ class EntryRecoveryTests(unittest.TestCase):
     del _name
     def fixture(self,market,name):return df.ResearchDriverTests.fixture(self,self.market,name)
 
-    def unknown(self,market='spot',filled=False,status=None,original_commit=False):
+    def unknown(self,market='spot',filled=False,status=None,original_commit=False,original_partial=False):
         self.market=market
         name = 'F2Volatility24Native' if original_commit else 'F1Momentum168Native'
         c=df.ResearchDriverTests.ready(self,name)
@@ -36,7 +36,13 @@ class EntryRecoveryTests(unittest.TestCase):
             rid=self.prepare_response(c,0)
             raw=copy.deepcopy(c.ex._api.responses[0][0]);raw['time']=int(c.now.timestamp()*1000)
             if original_commit:
-                c.ex._api.responses = [(copy.deepcopy(raw), c.now)]
+                original_received = c.now
+                if original_partial:
+                    original_received += timedelta(milliseconds=500)
+                    raw.update(status='CANCELED',executedQty='2',avgPrice='10',
+                        cummulativeQuoteQty='20',cumQuote='20',
+                        updateTime=int((c.now+timedelta(milliseconds=250)).timestamp()*1000))
+                c.ex._api.responses = [(copy.deepcopy(raw), original_received)]
                 commit = Trade.commit
                 def lose_ack():
                     creates_trade = any(isinstance(row, Trade) for row in Trade.session.new)
@@ -144,6 +150,53 @@ class EntryRecoveryTests(unittest.TestCase):
         self.assertEqual(trade.orders[0].status,'canceled')
         self.assertEqual([r['method'] for r in c.ex._api.requests],['POST'])
         self.assertEqual([r['method'] for r in ex._api.requests],['GET','GET'])
+
+    def test_original_missing_fill_time_is_replaced_only_by_source_fill(self):
+        c,ex,rid,raw,report,now=self.unknown('futures',original_commit=True,original_partial=True)
+        trade = Trade.get_trades_proxy()[0]
+        fallback_time = trade.orders[0].order_filled_utc
+        self.assertIsNotNone(fallback_time)
+        with c.wallet.clock.at(now):
+            recover_initial_entry(c.driver,ex,rid,c.bot,now)
+        self.assertIsNone(trade.orders[0].order_filled_utc)
+        recovery = c.gate.s['requests'][rid]['initial_recovery']
+        self.assertTrue(recovery['original_fill_time_unknown'])
+        self.assertEqual(recovery['steps'][0]['order_after']['order_filled_date'],fallback_time.isoformat())
+        e,receipt,quotes=self.account(c,{rid:report},now,2)
+        fill_at = c.now+timedelta(milliseconds=250)
+        events=self.fill_events(c,{rid:report},fill_at)
+        events[0]['received_at']=now.isoformat()
+        with c.wallet.clock.at(now):
+            result=reconcile_recovered_terminal_fill(c.driver,rid,'legacy-fill-time',e,receipt,quotes,events,c.bot,now,
+                complete_sequence=1,complete_from_inception=True,funding_complete=True)
+        self.assertEqual(result['lifecycle']['state'],'TERMINAL_RECONCILED')
+        self.assertEqual(trade.orders[0].order_filled_utc,fill_at)
+        self.assertEqual(D(result['audit']['fees_paid']),D('.02'))
+
+    def test_empty_native_trade_cleanup_resumes_after_delete_commit_ack_loss(self):
+        c,ex,rid,raw,report,now=self.unknown('futures',original_commit=True,status='CANCELED')
+        with c.wallet.clock.at(now):
+            recover_initial_entry(c.driver,ex,rid,c.bot,now)
+        self.assertEqual(len(Trade.get_trades_proxy()),1)
+        e,receipt,quotes=self.account(c,{},now,2)
+        commit = Trade.commit
+        def lose_ack():
+            deleting = any(isinstance(row,Trade) for row in Trade.session.deleted)
+            commit()
+            if deleting:
+                raise OSError('synthetic empty Trade cleanup acknowledgment lost')
+        kwargs=dict(complete_sequence=0,complete_from_inception=True,funding_complete=True)
+        with c.wallet.clock.at(now):
+            with patch.object(Trade,'commit',side_effect=lose_ack), self.assertRaisesRegex(OSError,'cleanup acknowledgment'):
+                reconcile_zero_initial(c.driver,rid,'existing-empty',e,receipt,quotes,c.bot,now,**kwargs)
+            self.assertEqual(c.life.s['requests'][rid]['lifecycle']['state'],'SUBMISSION_UNKNOWN')
+            self.assertEqual(Trade.get_trades_proxy(),[])
+            result=reconcile_zero_initial(c.driver,rid,'existing-empty',e,receipt,quotes,c.bot,now,**kwargs)
+        self.assertEqual(result['lifecycle']['state'],'TERMINAL_RECONCILED')
+        self.assertEqual(D(result['audit']['observed_equity']),D(1000))
+        self.assertIsNone(c.gate.s['pending_account_batch'])
+        self.assertEqual([r['method'] for r in c.ex._api.requests],['POST'])
+        self.assertEqual([r['method'] for r in ex._api.requests],['GET'])
 
     def test_changed_original_rules_cannot_construct_campaign(self):
         c,ex,rid,raw,report,now=self.unknown()
