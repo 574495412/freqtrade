@@ -1,8 +1,8 @@
-"""Whole-account entry/terminal-exit/funding batches and fixed entry scheduling.
+"""Whole-account entry/cancellation/exit/funding batches and fixed entry scheduling.
 
 All inputs are explicit local evidence. Existing native account/guard/lifecycle
 journals remain authoritative; no generated receipts, polling or live transport.
-Cancellation dispatch and the full main loop remain separate; bot_start stays disabled.
+Cancellation transport and the full main loop remain explicit; bot_start stays disabled.
 """
 from dataclasses import asdict
 from decimal import Decimal as D
@@ -13,6 +13,7 @@ from native_after_fill import OfflineProtectionExchange
 from native_evidence import CapturedOrder, decimal_text
 from native_factor_entries import execute_fixed_entry, fixed_entry_signal
 from native_exits import NativeRiskExit
+from native_cancellations import NativeCancellation
 from native_snapshot import EPS
 from rd1 import RiskError, StateError, aware, dec, digest, primitive, stamp
 
@@ -43,13 +44,13 @@ class NativeFactorRuntime:
 
     def observe_account(self, batch_id, evidence, receipt, quote_receipts, reports, events, bot, now,
                         *, complete_sequence, complete_from_inception, funding_complete,
-                        exit_controller=None, exit_actions=(), entry_only=False):
+                        exit_controller=None, exit_actions=(), cancel_controller=None, cancel_requests=(), entry_only=False):
         """Apply all supported reports before one complete account checkpoint.
 
 Reports cover ALL unresolved bound initial requests, even unchanged open orders.
-        Initial partials remain pending; positive terminal exits use their existing
-        controller. Funding is source-ordered and distinct from wallet settlement.
-        Cancellation receipts still use NativeRiskRuntime instead.
+        Initial partials remain pending. Claimed cancellation reports are supplied
+        in reports too, with exact captured identity provenance. Funding remains
+        source-ordered and distinct from wallet settlement.
 """
         now=aware(now);self._ready(now)
         if not isinstance(batch_id,str) or not batch_id:
@@ -58,7 +59,13 @@ Reports cover ALL unresolved bound initial requests, even unchanged open orders.
                 or bot.exchange.trading_mode.value!=self.risk.market):
             raise RiskError('Batch requires explicit matching offline protection rules')
         events=tuple(events);quote_receipts=tuple(quote_receipts)
-        exit_actions=tuple(exit_actions)
+        exit_actions=tuple(exit_actions);cancel_requests=tuple(cancel_requests)
+        if cancel_controller is not None and (type(cancel_controller) is not NativeCancellation or cancel_controller.gate is not self.gate):
+            raise RiskError('Account batch cancellation controller differs from the registered account')
+        if (cancel_requests and cancel_controller is None) or len(set(cancel_requests))!=len(cancel_requests):
+            raise RiskError('Unique registered cancellation requests required')
+        cancel_identity=None if cancel_controller is None else dict(identity=cancel_controller.store.identity,
+            directory=str(cancel_controller.store.directory.resolve()))
         if exit_controller is not None and (type(exit_controller) is not NativeRiskExit
                 or exit_controller.gate is not self.gate or exit_controller.wallet is not self.wallet):
             raise RiskError('Account batch exit controller differs from the registered account')
@@ -72,7 +79,7 @@ Reports cover ALL unresolved bound initial requests, even unchanged open orders.
             complete_sequence=complete_sequence,complete_from_inception=complete_from_inception,
             funding_complete=funding_complete,rules_hash=bot.exchange.rules_hash,
             exit_reports=exit_reports,exit_controller=None if exit_controller is None else exit_controller.store.identity,
-            entry_only=entry_only))
+            cancel_requests=cancel_requests,cancel_controller=cancel_identity,entry_only=entry_only))
         signature=digest(payload)
         active=self.gate.s.get('pending_account_batch')
         if active not in (None,batch_id):raise StateError('Resume the pending account batch before another observation')
@@ -84,7 +91,10 @@ Reports cover ALL unresolved bound initial requests, even unchanged open orders.
         # A newly observed but invalid/incomplete account must revoke the old
         # wallet permission too. Corrected observations use a fresh batch ID.
         bot.wallets=self.wallet.stage('batch-'+batch_id,receipt,evidence,now)
-        if entry_only and (exit_actions or any(e.get('kind')!='fill' or dec(e.get('signed_quantity','0'))<=0 for e in events)):
+        required_cancel=self.gate.s.get('required_cancel_controller')
+        if required_cancel is not None and required_cancel!=cancel_identity:
+            raise RiskError('Registered cancellation controller must accompany account observations')
+        if entry_only and (cancel_requests or exit_actions or any(e.get('kind')!='fill' or dec(e.get('signed_quantity','0'))<=0 for e in events)):
             raise RiskError('Initial-order batch accepts positive entry fills only')
         expected={rid for rid in self.gate.s['requests']
             if self.gate.lifecycle.s['requests'][rid]['lifecycle']['state']!='TERMINAL_RECONCILED'}
@@ -92,6 +102,17 @@ Reports cover ALL unresolved bound initial requests, even unchanged open orders.
             raise RiskError('Batch must cover every unresolved initial entry request')
         if previous is not None and set(reports)!=set(previous['input']['reports']):
             raise StateError('Stored batch report inventory changed')
+        cancellations={}
+        if cancel_controller is not None:
+            cancel_controller._ready()
+            expected_cancel={rid for rid,item in cancel_controller.s['requests'].items() if item['state']!='TERMINAL_RECONCILED'}
+            if previous is None and set(cancel_requests)!=expected_cancel:
+                raise RiskError('Batch must cover every unresolved cancellation request')
+            for rid in cancel_requests:
+                captured=cancel_controller._envelope(rid,now)
+                if rid not in reports or asdict(captured)!=asdict(reports[rid]):
+                    raise RiskError('Cancellation batch needs the exact controller-derived receipt')
+                cancellations[rid]=captured
         bindings={}
         for rid,envelope in reports.items():
             item=self.gate.s['requests'].get(rid)
@@ -101,7 +122,7 @@ Reports cover ALL unresolved bound initial requests, even unchanged open orders.
             if (envelope.evidence_class!='synthetic' or not envelope.source_id
                     or not 0 <= (now-aware(envelope.received_at)).total_seconds() <=15
                     or any(raw.get(k)!=initial.get(k) for k in ('id','symbol','side','amount','price','clientOrderId'))
-                    or raw.get('status') not in ('open','closed')
+                    or raw.get('status') not in (('open','closed','canceled','expired','rejected') if rid in cancellations else ('open','closed'))
                     or (raw['status']=='closed' and dec(decimal_text(raw.get('filled')))!=dec(decimal_text(raw.get('amount'))))):
                 raise RiskError('Batch needs matching initial open or fully filled native reports')
             envelope.normalize()
@@ -142,7 +163,17 @@ Reports cover ALL unresolved bound initial requests, even unchanged open orders.
         for event in events:self.provider.append(event)
         ordered=sorted(reports,key=lambda rid:(self.universe.index(bindings[rid]['pair']),rid))
         for rid in ordered:
-            binding=bindings[rid];trade=Trade.session.get(Trade,binding['trade_id'])
+            binding=bindings[rid]
+            if rid in cancellations and cancellations[rid].normalize()['status']!='open':
+                item=cancel_controller.s['requests'][rid]
+                if item['state']=='RECEIPT_PENDING':
+                    cancel_controller.apply_terminal(rid,bot,now,fills=self._fills(binding['trade_id']),fills_complete=True)
+                elif item['state']=='APPLICATION_PENDING':cancel_controller.recover_applied(rid)
+                elif item['state'] not in ('NATIVE_APPLIED_ACCOUNT_PENDING','TERMINAL_RECONCILED'):
+                    raise RiskError('Cancellation terminal effects are not recoverable yet')
+                batch['applied'][rid]=cancel_controller.s['requests'][rid]['state'];self.gate._persist()
+                continue
+            trade=Trade.session.get(Trade,binding['trade_id'])
             if trade is None:raise RiskError('Bound native entry disappeared')
             envelope=reports[rid];raw=json.loads(envelope.payload_json)
             fills=self._fills(trade.id);filled=dec(decimal_text(raw['filled']))
@@ -176,6 +207,9 @@ Reports cover ALL unresolved bound initial requests, even unchanged open orders.
             complete_from_inception=complete_from_inception,funding_complete=funding_complete)
         self.wallet.confirm(checked,now)
         for rid in ordered:
+            if rid in cancellations and cancellations[rid].normalize()['status']!='open':
+                cancel_controller.reconcile(rid,checked,now,fills=self._fills(bindings[rid]['trade_id']))
+                continue
             self.gate.reconcile_native(rid,'batch-life-'+digest([batch_id,rid])[:28],reports[rid],checked,now,
                 fills=self._fills(bindings[rid]['trade_id']),fills_complete=True,sequence_basis='source_ordered')
         for aid in exits:exit_controller.reconcile(aid,checked,now)

@@ -142,7 +142,7 @@ class NativeCancellation:
             if not linked or not alias:
                 raise RiskError("Cancellation client identity has no captured original link")
         result["clientOrderId"] = original
-        envelope = CapturedOrder(json.dumps(result), received, "synthetic-cancel-derived-original-identity", "synthetic")
+        envelope = CapturedOrder(json.dumps(result,sort_keys=True), received, "synthetic-cancel-derived-original-identity", "synthetic")
         report = envelope.normalize()
         if (report["id"] != expected["id"] or report["symbol"] != expected["symbol"]
                 or report["side"] != "buy" or dec(report["amount"]) != dec(decimal_text(expected["amount"]))
@@ -159,7 +159,7 @@ class NativeCancellation:
     def dispatch(self, request_id, evidence, exchange, now):
         """Claim once, call official cancel/query, retain risk pending finalization."""
         with self._mutex:
-            self._ready()
+            self._ready(); self.gate.require_account_batch_clear()
             if request_id in self.s["requests"]:
                 raise StateError("Cancellation already attempted; query and reconcile, never redispatch")
             if type(exchange) is not LocalCancelExchange or exchange.trading_mode.value != self.risk.market:
@@ -186,6 +186,11 @@ class NativeCancellation:
             action = next((a for a in decision.actions if a["kind"] == "CANCEL_ENTRY" and a["target"] == source_id), None)
             if action is None:
                 raise RiskError("Frozen RD1 has no cancellation action yet")
+            controller=dict(identity=self.store.identity,directory=str(self.store.directory.resolve()))
+            required=self.gate.s.get('required_cancel_controller')
+            if required is not None and required!=controller:
+                raise RiskError('Another cancellation journal is registered for this account')
+            self.gate.s['required_cancel_controller']=controller;self.gate._persist()
             claimed = self.risk.claim_action(action["id"], now)
             self.s["requests"][request_id] = {"state": "DISPATCH_UNKNOWN", "action": claimed,
                 "claimed_at": stamp(now), "trade_id": trade.id, "prior_filled": decimal_text(order.safe_filled),
@@ -206,7 +211,7 @@ class NativeCancellation:
     def query(self, request_id, exchange, now):
         """Recover a lost or open result by GET only; never resend cancellation."""
         with self._mutex:
-            self._ready()
+            self._ready(); self.gate.require_account_batch_clear()
             item = self.s["requests"][request_id]
             if item["state"] not in ("DISPATCH_UNKNOWN", "RECEIPT_PENDING"):
                 raise StateError("Cancellation has already entered native application")
@@ -316,7 +321,6 @@ subsequently pass reconcile(); native updates alone never release capacity.
             raw = json.loads(item["derived_envelope"]["payload_json"])
             if dec(decimal_text(raw["filled"])):
                 self.gate.after_fill_guard.verify_committed(item["protection_event"])
-                self.gate.after_fill_guard.require_entry_clear()
             else:
                 if (Trade.session.get(Trade, item["trade_id"]) is not None
                         or Trade.session.query(Order).filter(Order.ft_pair == raw["symbol"], Order.order_id == raw["id"]).count()):
@@ -336,7 +340,7 @@ subsequently pass reconcile(); native updates alone never release capacity.
             data = item["derived_envelope"]
             envelope = CapturedOrder(data["payload_json"], parse(data["received_at"]), data["source_id"], data["evidence_class"])
             if dec(decimal_text(json.loads(envelope.payload_json)["filled"])):
-                self.gate.after_fill_guard.require_entry_clear()
+                self.gate.after_fill_guard.verify_committed(item["protection_event"])
             result = self.gate.reconcile_native(request_id, "cancel-reconcile-"+item["action"]["id"], envelope, evidence, now,
                 fills=fills, fills_complete=True, sequence_basis="source_ordered")
             item["state"] = result["state"]
