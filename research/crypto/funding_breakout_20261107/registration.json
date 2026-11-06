@@ -1,0 +1,113 @@
+{
+  "registered_at_utc": "2026-11-06T18:06:36.896656+00:00",
+  "symbols": [
+    "AAVEUSDT",
+    "ADAUSDT",
+    "ALGOUSDT",
+    "ATOMUSDT",
+    "AVAXUSDT",
+    "BCHUSDT",
+    "BNBUSDT",
+    "BTCUSDT",
+    "CELOUSDT",
+    "CRVUSDT",
+    "DOGEUSDT",
+    "DOTUSDT",
+    "EGLDUSDT",
+    "ETCUSDT",
+    "ETHUSDT",
+    "FILUSDT",
+    "GALAUSDT",
+    "GRTUSDT",
+    "IOTAUSDT",
+    "IOTXUSDT",
+    "KSMUSDT",
+    "LINKUSDT",
+    "LTCUSDT",
+    "MANAUSDT",
+    "NEARUSDT",
+    "NEOUSDT",
+    "RUNEUSDT",
+    "SANDUSDT",
+    "SNXUSDT",
+    "SOLUSDT",
+    "SUSHIUSDT",
+    "THETAUSDT",
+    "TRXUSDT",
+    "UNIUSDT",
+    "XRPUSDT"
+  ],
+  "excluded_contracts": {
+    "AXSUSDT": "variable funding cadence",
+    "MASKUSDT": "variable funding cadence",
+    "SKLUSDT": "variable funding cadence",
+    "TRBUSDT": "variable funding cadence",
+    "DYDXUSDT": "prior source lineage conflict in trade archives"
+  },
+  "universe_policy": "All members of the pre-existing fixed X8-wide market universe with an exact 8h cadence, except the previously flagged archive conflict. Fixed incumbent universe has survivorship bias.",
+  "checksums": {
+    "research/crypto/funding_breakout_20261107/run.py": "435295a55eeadc463a926273ec4d3c9c77245cee3162a4b8f61c8fbbbdb904f6",
+    "research/crypto/funding_breakout_20261107/verify.py": "7fb9db650d6b2b798aae1751e9e6c6a8718a3c4fcc399c4905aef36d3e64f767",
+    "research/crypto/trend_mainline/account.py": "dc2086887ea30c054a18b6f3b1bf13d0d6eb967085a9cdb7c7c338465459f47a",
+    "research/crypto/trend_mainline/data.py": "a73440d8cd712e883e31974a02f0b2e51d0428005faf16eae9a3d2e634b9b621",
+    "research/crypto/basis_flush_20261107/run.py": "30c242ce756c6212f761d00f73c2be1a9a1c1344368da45be723cd43b1a2445c",
+    "research/crypto/breadth_diffusion_20261107/verify.py": "e4466aa67fdf79dff2dad3e691dcf33ac3289d30c99ea4f8e63d569945f591d2",
+    "freqtrade/research/data.py": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+  },
+  "market_dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002_klines",
+  "market_receipts_sha256": "bcbd3a20bac350b6bc2bc26ce9dc39edc5d51ca640b27a09a281f8070c41d0c4",
+  "funding_dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "funding_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "data_start": "2023-10-01",
+  "funding_start": "2024-01-01",
+  "start": "2024-01-02",
+  "split": "2025-01-01",
+  "late_split": "2026-01-01",
+  "end": "2026-09-01",
+  "cases": [
+    "RecentFunding",
+    "PriceBreakout",
+    "StaleFunding"
+  ],
+  "hypothesis": "A long breakout after persistent negative settled funding can capture a larger upward move than generic breakouts and breakouts filtered by stale funding.",
+  "signal": {
+    "lookback_hours": 48,
+    "breakout_buffer": 0.002,
+    "funding_visibility_minutes": 15,
+    "min_funding_sum": -0.0002,
+    "stale_funding_days": 7,
+    "pulse_hours": 36,
+    "invalidation_below_level": 0.005,
+    "definition": "Use buffered hourly perpetual closes known at decision minus five minutes. Require close >= 1.002 times maximum of the prior 48 buffered hourly closes. RecentFunding further needs 3 completed scheduled settlements with sum <= -2bps, both of the two newest rates strictly negative. Use rates settled by t-15m, a historical availability proxy. StaleFunding evaluates the identical funding condition as of t-7d. PriceBreakout has no funding gate. Signal starts at false-to-true edge, expires after 36 hours or when close falls below 99.5% of initial breakout level. While active, enter when capacity permits. Overlapping edges do not extend active signals."
+  },
+  "capital_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    3,
+    10
+  ],
+  "liquidity": {
+    "top_n": 35,
+    "minimum_daily_quote_usdt": 25000000
+  },
+  "risk": {
+    "risk_per_position": 0.05,
+    "maximum_position_fraction": 0.9,
+    "maximum_gross_fraction": 0.9,
+    "maximum_positions": 1,
+    "leverage": 1,
+    "account_drawdown_halt": 0.35
+  },
+  "execution": {
+    "prior_hour_participation": 0.01,
+    "realized_interval_participation": 0.01,
+    "policy": "Adverse next-five-minute close proxy, fee and funding charged, 2x daily ATR delayed stop, 24h reentry cooldown, alphabetical competition for the single slot and no averaging. At UTC midnight use the daily fields known before the five-minute buffer. Funding cash uses hourly mark-open."
+  },
+  "decision": {
+    "policy": "At both costs require positive full and each yearly slice return, full net return greater than both controls, drawdown <=35% with no halt, at least 30 closes in at least 12 UTC entry weeks. Separately record the 20% stress CAGR hurdle. All slices are retrospective and part of one continuous NAV.",
+    "cash_control": "constant 1000 USDT",
+    "paper_eligible": false,
+    "production_eligible": false,
+    "orders_enabled": false
+  }
+}
