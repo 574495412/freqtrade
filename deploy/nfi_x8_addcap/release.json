@@ -1,0 +1,35 @@
+{
+  "schema": "freqtrade.x8-addcap.paper.v1",
+  "registered_at_utc": "2026-11-06T16:58:16.372638+00:00",
+  "upstream_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "strategy_commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+  "mode": "dry_run",
+  "real_orders_enabled": false,
+  "production_eligible": false,
+  "initial_usdt_per_market": 1000,
+  "first_fill_amount_reference": "sum of native filled entry order price times quantity at 1x",
+  "maximum_additions": 2,
+  "cumulative_add_stake_multiple": 1,
+  "exemption": "long with only original Top Coins tags",
+  "funds_are_separate": true,
+  "secrets_loaded": false,
+  "external_notifications_enabled": false,
+  "files": {
+    "launch.py": "7335851cc0dc5435e01f495e241cebe8f4556ffc81f50c5886a38804b0ee4919",
+    "strategy/NFIX8AddCapPaper.py": "a0165a72bb8ef63eb6077667547cd29d6e3c3a0c995d1d13ba3e23086c5c1005",
+    "test_addcap.py": "bc585ffa8f724a2a6ce7d0508bc76c113869ac4ca91ffa0e5c17b74a13eb9c8c",
+    "launchagents/io.freqtrade.paper.x8-addcap.futures.plist": "0db5ceea080b1aacc14f060dd42ecb923b50e1e8a0e074a50114f52cfaa1118d",
+    "launchagents/io.freqtrade.paper.x8-addcap.spot.plist": "dd978cbb80d08a722f21414597ac745896b65cb013ed87b3652c8c5599f6b3a2"
+  },
+  "revision": {
+    "at_utc": "2026-11-06T16:59:15.429874+00:00",
+    "prior_sha256": "15c6df789d2d654992a0d74c4edf24c7957097b5b121a3d22aca964cd2428b1b",
+    "reason": "Omit all optional RPC integrations to satisfy the pinned engine schema without any credentials. Add configuration schema validation to --verify.",
+    "first_attempt_database_created": false
+  },
+  "verification_revision": {
+    "at_utc": "2026-11-06T16:59:42.516834+00:00",
+    "prior_sha256": "efcf751162dda4ac88333867bc764a0cf08c720cdbe12f38b35c9c1513dc16e3",
+    "reason": "Validate effective strategy config after strategy defaults are resolved, matching the trade CLI."
+  }
+}
