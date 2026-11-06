@@ -1,0 +1,81 @@
+{
+  "registered_at_utc": "2026-11-06T03:01:02.807510+00:00",
+  "parent_freeze_sha256": "9c8dba145f5a70afc35d9ca58966e2ef6cab929dc357bf41bcbf4606d570fa95",
+  "runner_sha256": "d103a0867a809eecc9330ff5eec53d89fee859c405951750dcbd670cdb2400c0",
+  "scope": "Two already frozen official candidates; one BTC pair per official recursive docs; original startup, no changes to economic strategy parameters",
+  "diagnostic_commands_registered": 2,
+  "official_program_diagnostic_limit": 8,
+  "prior_official_program_commands": 0,
+  "old_v1_exhausted_diagnostics_rerun": false,
+  "financial_backtests_added": 0,
+  "startup_variants": "Native diagnostic defaults [199,399,499,999,1999] plus original positive strategy startup, not economic variants",
+  "expected_source_limitation": "MACD inherits startup_candle_count=0, which native RecursiveAnalysis.prepare_data rejects; retain this original incompatibility without overriding startup",
+  "interpretation": "Last-row indicator variance and one indicator-only lookahead probe; not whole-strategy causality, all pairs stability or profit qualification",
+  "retries": 0,
+  "runs": [
+    {
+      "id": "RECURSIVE_ADXMomentum_spot_L_BTC",
+      "strategy": "ADXMomentum",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+        "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+      },
+      "command": [
+        ".venv-paper/bin/python",
+        "-B",
+        "-m",
+        "freqtrade",
+        "recursive-analysis",
+        "--config",
+        "research/crypto/official_factor_20261106/configs/spot_base.json",
+        "--strategy",
+        "ADXMomentum",
+        "--strategy-path",
+        "research/crypto/official_factor_20261106/sources",
+        "--userdir",
+        "user_data/crypto_quant/official_factor_20261106/native_userdir",
+        "--datadir",
+        "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+        "--timerange",
+        "20250101-20260901",
+        "--pairs",
+        "BTC/USDT",
+        "--no-color"
+      ],
+      "source_startup": 20
+    },
+    {
+      "id": "RECURSIVE_MACDStrategy_crossed_spot_L_BTC",
+      "strategy": "MACDStrategy_crossed",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+        "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+      },
+      "command": [
+        ".venv-paper/bin/python",
+        "-B",
+        "-m",
+        "freqtrade",
+        "recursive-analysis",
+        "--config",
+        "research/crypto/official_factor_20261106/configs/spot_base.json",
+        "--strategy",
+        "MACDStrategy_crossed",
+        "--strategy-path",
+        "research/crypto/official_factor_20261106/sources",
+        "--userdir",
+        "user_data/crypto_quant/official_factor_20261106/native_userdir",
+        "--datadir",
+        "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+        "--timerange",
+        "20250101-20260901",
+        "--pairs",
+        "BTC/USDT",
+        "--no-color"
+      ],
+      "source_startup": 0
+    }
+  ]
+}
