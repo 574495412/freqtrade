@@ -1,0 +1,67 @@
+{
+  "registered_at_utc": "2026-11-06T19:56:34.896241+00:00",
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_ramp_20261107/study.py",
+      "sha256": "74bba5603558b59e0475f670afbe20369fdc7a72170ff6e794fecd1aab9783d3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_ramp_20261107/marks.py",
+      "sha256": "1e7d64b4a3a423a8d0c8b71ab1f822b5242718849381ff4b1f2179a207c39437"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_ramp_20261107/ProfitRamp.py",
+      "sha256": "9f6782b5657bd06798cbc8ee4dd111dc6b74738d11d188ca1b167746c1bb477d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_ramp_20261107/ProfitRamp.json",
+      "sha256": "117bdd98dab2ca78cba801ae9acf9f4a1d8ed2c53afb48a3d9912e8eaefe336c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_ramp_20261107/native_2024.json",
+      "sha256": "a316d55b692ee9ae3a6f11ebee7599dda3a1ea87c4ea27cc0cccbdb19cc850c3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/registration.json",
+      "sha256": "eab310edfa3bb1d05037ac2a78cb069c163718019381739f16a7a8ecf598450e"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal_registration.json",
+      "sha256": "bdd93e55ceb6f2a0b0313518d9722ec7206062dacc7c7752d1c6f2920f24d661"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/mark_result.json",
+      "sha256": "52fe467489fa3b44007c581ac6ba5dd92545b8d0c25a75c355a4b9153725e09c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal_result.json",
+      "sha256": "646afef0224d9d4232aac88db16b501a70a7982fd0364ee58c15d740794f2467"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/result.json",
+      "sha256": "0db5c6ffd60d9b3c70b742c9be40ff104707cbced6ae00011b29b3f399b70428"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal.py",
+      "sha256": "529d3b191816817c1bd34817a62a21a76cb6d0dd7259452b1803968f4c85177c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/mark_valuation.py",
+      "sha256": "482c0b08081126a58e7c1386bbeb233c4c31084383d7abda413a49119fd5a654"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/docs/research-20261105/crypto-wide-comparison-20261105/reconstruct-five-minute-reference-v002.py",
+      "sha256": "861494c519d5e849fbd4fc41a989d93e77069711f34add7205ca7a6e614e7c12"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/audit.py",
+      "sha256": "2514cb9d6f537c156ca04a7cfcaa5320e31f71dd51d4db827659c0b8242d1617"
+    }
+  ],
+  "hypothesis": "Confirm the strongest fixed sizing rule on a different calendar window before taking more risk, and test whether increases based on strictly prior realized campaign profit improve its account economics.",
+  "rule": "Native first stakes of pure Top Coins longs only. Flat is unchanged 1.25x. ProfitRamp uses 1.25 + min(0.50, max(0, closed_net_pnl_usdt)/500), so +250 USDT in strictly earlier closed campaigns reaches 1.75x. Net PnL includes native fees/funding. No currently open campaign or same-clock close is admitted. The original wallet/price constraints, 1x leverage, entries, adjustments and exits remain. The profit state can decrease after losses.",
+  "baseline_gate": "At both costs fixed 1.25x must have full positive return, higher net return than original in full and both slices, higher full net return/5m mark drawdown, at most +1pp 5m drawdown versus original, at least 60 natural closes and 20 scoped filled campaigns. Stop after the four controls if any gate fails. Do not change thresholds after observing economics.",
+  "profit_ramp_gate": "Run both costs only after fixed sizing passes. Require full positive return, higher net return than fixed in full and both slices, higher full return/5m drawdown than fixed, within +1pp 5m drawdown versus original, at least 60 natural closes, 20 scoped fills and at least 10 ramped fills. Both comparison stages use frozen 2024 exact calendars.",
+  "known_history": "The 2025-August 2026 and September-November 2026 fixed X8 results were known before registration. This exact 2024 X8 sizing matchup was not used to choose the original 1.25x overlay. The current X8 source and frozen market rules postdate the test window; retrospective, not live OOS.",
+  "orders_enabled": false
+}
