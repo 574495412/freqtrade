@@ -1,0 +1,56 @@
+{
+  "registered_at_utc": "2026-11-06T22:24:07.520549+00:00",
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/low_vol_beta_20261107/study.py",
+      "sha256": "9d6b23e79f04e95f5a62eb20ce476a7b0a390499f78341789d9896d3bfcccf83"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/low_vol_portfolio_20261107/registration.json",
+      "sha256": "397c3976372777ff6e8de7506d2e0acb67d7b6f87b425707808f567e74037f27"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/low_vol_portfolio_20261107/result.json",
+      "sha256": "11dc1a06cecba7ec4586e6c2a2b6caa0b11d8d179d861dd03c8ced4ad166fa38"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/low_vol_portfolio_20261107/account.py",
+      "sha256": "c8326f216ef3bd551c66bf02301e710b1a33c4f593fdc2218624320bd93af5a5"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/low_vol_portfolio_20261107/study.py",
+      "sha256": "3b85f858e7c376b8e9b3e62b365b1f0bdbc884342991aa5ac1d8a42f44e7af20"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/low_vol_portfolio_20261107/attribution.py",
+      "sha256": "c618d27f792c2ad2af7b6d7212f8aa5110a4f1dc3ac998eea93854e8d93eabbe"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/low_vol_portfolio_20261107_v001/funding_receipts.json",
+      "sha256": "ce133be18ea107d00c88e2161cf9f51bdfa9e97c9a5175b9ae73850f9d1f8c6e"
+    }
+  ],
+  "portfolio": "Reuse 25-asset weekly 63-day low-volatility ranks and the exact earlier execution, funding admission, costs, model maintenance, 30% risk halt and order limits. No BTC position. Estimate each asset's beta to BTC using 63 completed daily simple returns with intercept, through the Sunday close. For each leg use the mean across its five selected coins. Set the fraction of absolute gross in longs to short-leg beta / sum of the two betas, clipped to [0.25,0.75]; equally weight within each leg. Invalid or nonpositive leg betas are data failures. Reuse earlier frozen 1x and 2x dollar-balanced accounts. New dollar and beta 1.6x targets leave nominal initial margin room, since model leverage is 2x; also run beta at the same aggressive 2x gross target.",
+  "windows": {
+    "2024": [
+      "2024-01-01",
+      "2024-12-30"
+    ],
+    "earlier_2025": [
+      "2025-01-06",
+      "2025-09-15"
+    ],
+    "original": [
+      "2025-09-15",
+      "2026-08-31"
+    ]
+  },
+  "cases": {
+    "DollarReserve": 1.6,
+    "BetaReserve": 1.6,
+    "BetaFull": 2.0
+  },
+  "gate": "A beta case must meet the gate at both costs and in all three windows: zero held funding gaps, no halt, modeled maintenance breach or rejected orders; 5m DD <=25%; positive net with >=25% annualized and full net > both 1x and its same-gross dollar control by 1pp. Return/DD must exceed the same-gross control. Original known history remains separate from new candidate evidence. Passing would warrant independent follow-up.",
+  "mechanism_check": "Audit formula, clocks and preserved ranks. Report target estimated signed beta, model exposure after lot/cash and at every active weekly checkpoint, plus realized daily BTC beta on common pre-halt intervals for same-gross accounts. Neither is proof of independent alpha.",
+  "orders_enabled": false
+}
