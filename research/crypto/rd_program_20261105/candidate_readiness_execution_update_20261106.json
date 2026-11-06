@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "observed_at_utc": "2026-11-06T02:12:53.998536+00:00",
+  "scope": "Additive execution/sample-data update; no financial candidate runs or promotion",
+  "P0_source_environment": "passed_for_pinned_environment_and_datasets",
+  "P0_causality": "bounded_diagnostics_completed_not_strategy_acceptance",
+  "P0_event_NAV": "Official5m mark available; explicit synthetic event ledger implemented. Actual historical cash/funding/fill order and completeness remain unverified.",
+  "P0_risk": "44_synthetic_tests_passed_offline_only",
+  "P0_ready_manifest": "explicit_gates_recorded",
+  "diagnostics_used": 8,
+  "diagnostics_remaining": 0,
+  "feature_unit_tests_passed": 9,
+  "feature_financial_runs": 0,
+  "runtime_modified": false,
+  "runtime_500_floor_implemented_by_this_task": false,
+  "candidates": [
+    {
+      "id": "B0_CASH",
+      "market": "spot",
+      "engineering_reference_allowed": true,
+      "pure_feature_unit_research_allowed": false,
+      "P2_economic_execution_ready": false,
+      "economic_qualified": false,
+      "orders_enabled": false,
+      "blocks": [
+        "P1 provides engineering references only, not economic acceptance"
+      ],
+      "official5m_mark_coverage_verified": false
+    },
+    {
+      "id": "B1_BTC_HOLD",
+      "market": "spot",
+      "engineering_reference_allowed": true,
+      "pure_feature_unit_research_allowed": false,
+      "P2_economic_execution_ready": false,
+      "economic_qualified": false,
+      "orders_enabled": false,
+      "blocks": [
+        "P1 provides engineering references only, not economic acceptance"
+      ],
+      "official5m_mark_coverage_verified": false
+    },
+    {
+      "id": "B2_AVERAGE_NATIVE",
+      "market": "spot",
+      "engineering_reference_allowed": true,
+      "pure_feature_unit_research_allowed": false,
+      "P2_economic_execution_ready": false,
+      "economic_qualified": false,
+      "orders_enabled": false,
+      "blocks": [
+        "P1 provides engineering references only, not economic acceptance",
+        "full strategy causality not yet separately diagnosed"
+      ],
+      "official5m_mark_coverage_verified": false
+    },
+    {
+      "id": "B3_NFI_X8_NATIVE",
+      "market": "spot",
+      "engineering_reference_allowed": true,
+      "pure_feature_unit_research_allowed": false,
+      "P2_economic_execution_ready": false,
+      "economic_qualified": false,
+      "orders_enabled": false,
+      "blocks": [
+        "P1 provides engineering references only, not economic acceptance",
+        "clean finite lookahead no longer reproduces old alerts; old spot complete baseline unavailable",
+        "recursive fixed points inactive; activated callback causality not established"
+      ],
+      "official5m_mark_coverage_verified": false
+    },
+    {
+      "id": "F1_MOM168",
+      "market": "spot",
+      "engineering_reference_allowed": false,
+      "pure_feature_unit_research_allowed": true,
+      "P2_economic_execution_ready": false,
+      "economic_qualified": false,
+      "orders_enabled": false,
+      "blocks": [
+        "historical feature receipt/publication times unverified",
+        "verified full account event ordering incomplete",
+        "Atomic reservation and native-method synthetic seam implemented; real client-order identity/after-fill/transaction boundaries remain unverified",
+        "One-minute BTC spot/futures raw book samples audited; fixed-universe L/S and warmup coverage not obtained",
+        "Historical full trading-rule versions unverified"
+      ],
+      "official5m_mark_coverage_verified": false,
+      "disposition": "BLOCKED_NOT_RUN",
+      "financial_runs": 0
+    },
+    {
+      "id": "F2_RV24",
+      "market": "spot",
+      "engineering_reference_allowed": false,
+      "pure_feature_unit_research_allowed": true,
+      "P2_economic_execution_ready": false,
+      "economic_qualified": false,
+      "orders_enabled": false,
+      "blocks": [
+        "historical feature receipt/publication times unverified",
+        "verified full account event ordering incomplete",
+        "matched Average+RD1 economic control not run",
+        "Atomic reservation and native-method synthetic seam implemented; real client-order identity/after-fill/transaction boundaries remain unverified",
+        "One-minute BTC spot/futures raw book samples audited; fixed-universe L/S and warmup coverage not obtained",
+        "Historical full trading-rule versions unverified"
+      ],
+      "official5m_mark_coverage_verified": false,
+      "disposition": "BLOCKED_NOT_RUN",
+      "financial_runs": 0
+    },
+    {
+      "id": "B0_CASH",
+      "market": "futures",
+      "engineering_reference_allowed": true,
+      "pure_feature_unit_research_allowed": false,
+      "P2_economic_execution_ready": false,
+      "economic_qualified": false,
+      "orders_enabled": false,
+      "blocks": [
+        "P1 provides engineering references only, not economic acceptance"
+      ],
+      "official5m_mark_coverage_verified": true
+    },
+    {
+      "id": "B1_BTC_HOLD",
+      "market": "futures",
+      "engineering_reference_allowed": true,
+      "pure_feature_unit_research_allowed": false,
+      "P2_economic_execution_ready": false,
+      "economic_qualified": false,
+      "orders_enabled": false,
+      "blocks": [
+        "P1 provides engineering references only, not economic acceptance"
+      ],
+      "official5m_mark_coverage_verified": true,
+      "remaining_valuation_limit": "Original modeled cash/funding chronology retained; official mark OPEN is not executable bid/ask or event-order proof."
+    },
+    {
+      "id": "B2_AVERAGE_NATIVE",
+      "market": "futures",
+      "engineering_reference_allowed": true,
+      "pure_feature_unit_research_allowed": false,
+      "P2_economic_execution_ready": false,
+      "economic_qualified": false,
+      "orders_enabled": false,
+      "blocks": [
+        "P1 provides engineering references only, not economic acceptance",
+        "full strategy causality not yet separately diagnosed"
+      ],
+      "official5m_mark_coverage_verified": true,
+      "remaining_valuation_limit": "Original modeled cash/funding chronology retained; official mark OPEN is not executable bid/ask or event-order proof."
+    },
+    {
+      "id": "B3_NFI_X8_NATIVE",
+      "market": "futures",
+      "engineering_reference_allowed": true,
+      "pure_feature_unit_research_allowed": false,
+      "P2_economic_execution_ready": false,
+      "economic_qualified": false,
+      "orders_enabled": false,
+      "blocks": [
+        "P1 provides engineering references only, not economic acceptance",
+        "clean finite futures lookahead no longer reproduces old alerts; finite sample does not establish global causality",
+        "recursive fixed points inactive; activated callback causality not established"
+      ],
+      "official5m_mark_coverage_verified": true,
+      "remaining_valuation_limit": "Original modeled cash/funding chronology retained; official mark OPEN is not executable bid/ask or event-order proof."
+    },
+    {
+      "id": "F1_MOM168",
+      "market": "futures",
+      "engineering_reference_allowed": false,
+      "pure_feature_unit_research_allowed": true,
+      "P2_economic_execution_ready": false,
+      "economic_qualified": false,
+      "orders_enabled": false,
+      "blocks": [
+        "historical feature receipt/publication times unverified",
+        "verified full account event ordering incomplete",
+        "Atomic reservation and native-method synthetic seam implemented; real client-order identity/after-fill/transaction boundaries remain unverified",
+        "One-minute BTC spot/futures raw book samples audited; fixed-universe L/S and warmup coverage not obtained",
+        "Historical full trading-rule versions unverified"
+      ],
+      "official5m_mark_coverage_verified": true,
+      "remaining_valuation_limit": "Original modeled cash/funding chronology retained; official mark OPEN is not executable bid/ask or event-order proof.",
+      "disposition": "BLOCKED_NOT_RUN",
+      "financial_runs": 0
+    },
+    {
+      "id": "F2_RV24",
+      "market": "futures",
+      "engineering_reference_allowed": false,
+      "pure_feature_unit_research_allowed": true,
+      "P2_economic_execution_ready": false,
+      "economic_qualified": false,
+      "orders_enabled": false,
+      "blocks": [
+        "historical feature receipt/publication times unverified",
+        "verified full account event ordering incomplete",
+        "matched Average+RD1 economic control not run",
+        "Atomic reservation and native-method synthetic seam implemented; real client-order identity/after-fill/transaction boundaries remain unverified",
+        "One-minute BTC spot/futures raw book samples audited; fixed-universe L/S and warmup coverage not obtained",
+        "Historical full trading-rule versions unverified"
+      ],
+      "official5m_mark_coverage_verified": true,
+      "remaining_valuation_limit": "Original modeled cash/funding chronology retained; official mark OPEN is not executable bid/ask or event-order proof.",
+      "disposition": "BLOCKED_NOT_RUN",
+      "financial_runs": 0
+    }
+  ],
+  "input_receipts": [
+    {
+      "path": "research/crypto/rd_program_20261105/plan.json",
+      "sha256": "91845eed78faa0788f4ac6fde6c0e92ff370cff26b6d1b3cc0dadc47be920034"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/freeze.json",
+      "sha256": "22d71d0cc57eb7a5f2456f755ab4bb524eddc5014c90c7290e472e40d3ae603d"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p0/environment/data_manifest.json",
+      "sha256": "e98a03698e93d21cdaaf9dc7c824c461cd6f9b9f10f19e8ae992675903b8000a"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p0/environment/verification.json",
+      "sha256": "2a2de35f5e10adc5cf3b69778aede745eb458b11f25d22771d179118b1491801"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p0/causality/isolated_evidence.json",
+      "sha256": "245d5914ccfb66d05e56009bb252f2504a80c6dfe7ece6c6c3067a729b8d3a79"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p0/causality/recursive_evidence.json",
+      "sha256": "913feb2ba3860e62f4ff730168d048054d52835c49c789f703aae958ed20d110"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p0/risk/summary.json",
+      "sha256": "76bb51a6378002b0c7095c6e73897d899ddc0f2a7553a603590313f874e7c1e8"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/p0/event_nav_contract.md",
+      "sha256": "314410a36108fa0df7b378f30aa691533be87eb165559588373be8816ed8f5f4"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/factors/features.py",
+      "sha256": "3a6bab75f1663bc5af97111d5116f7a1be7f34d961e0c8ed4fecd9dcde8a88d4"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/factors/test_features.py",
+      "sha256": "6123a9675d3b44a1ef71c9f07995b953580cf494a6cdfdffe32af95380d93bd3"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/factors/README.md",
+      "sha256": "5462917d85843278f92ec30bd3cf2aba6dc89b6529634c4add860b5375e2c8bb"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/data_extension/mark_data_audit.json",
+      "sha256": "2b49bf4fc1c8180128c2b8862635b67d1c4e6de802446f5509b22293a7f8bf8b"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/data_extension/mark_valuation_result.json",
+      "sha256": "20588c51698cb741ce8834761c85fdfb018caa58fe5fa0d3b932c76396728c4a"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/data_extension/mark_valuation_registration.json",
+      "sha256": "fb35f48ed96611e81872ebab9ca1f1c4d511d2826ffd3dae2d069b80a83e15ff"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/execution_extension/native_seam_registration.json",
+      "sha256": "6e925a53445e68bf7639ddc9e1c4dc06d14c1c167882b8a671a45bd8fe8a1a6f"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/execution_extension/native_seam_verification.json",
+      "sha256": "0fc5388dfff9cf69aed7e1fdcdb31f23755361c869326bc0516c5b9df22fa347"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/data_extension/event_source_audit.json",
+      "sha256": "6367a205ae2ecd7f68ac3882746a721fafe428679b599366f2b76a5c9315a35e"
+    },
+    {
+      "path": "research/crypto/rd_program_20261105/data_extension/event_book_replay_result.json",
+      "sha256": "cbfcc7062e5f7f8598d744a034d0e56a1504603d9089b7083578f9cc5e6a993d"
+    }
+  ],
+  "missing_data_are_zero_return_trials": false,
+  "profit_improvement_established": false,
+  "previous_snapshot": {
+    "path": "research/crypto/rd_program_20261105/candidate_readiness_mark_update_20261106.json",
+    "sha256": "36ba782cc243a1a79e5e7936dea65bbf2404542d3460da9a00c7cdc3085fbf0e"
+  },
+  "P1_account_runs_completed": 32,
+  "P1_determinism_passes": 2,
+  "mark_revaluation_existing_futures_accounts": 16,
+  "execution_extension": {
+    "synthetic_tests_passed": 48,
+    "native_method_seam_passed": true,
+    "whole_native_bot_integrated": false,
+    "client_order_identity_live_bound": false,
+    "after_fill_protection_verified": false,
+    "real_database_transactions_verified": false
+  },
+  "historical_data_question_pending": true
+}

@@ -1,0 +1,50 @@
+{
+  "started_at_utc": "2026-11-06T02:10:47.512359+00:00",
+  "registration_sha256": "6e925a53445e68bf7639ddc9e1c4dc06d14c1c167882b8a671a45bd8fe8a1a6f",
+  "command": [
+    "/Users/chrise/GitHub/freqtrade/.venv-paper/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/execution_extension",
+    "-p",
+    "test_*.py",
+    "-v"
+  ],
+  "evidence_class": "synthetic",
+  "orders_enabled": false,
+  "finished_at_utc": "2026-11-06T02:10:50.177676+00:00",
+  "returncode": 0,
+  "timeout": false,
+  "tests_run": 48,
+  "passed": true,
+  "log_sha256": "6e793b68b4e477b153448d6c1a06797b11190299c21dba37120c2f389b89c1aa",
+  "financial_runs": 0,
+  "production_eligible": false,
+  "economic_qualified": false,
+  "source_order_certified": false,
+  "real_exchange_submission": false,
+  "actual_native_methods": [
+    "execute_entry",
+    "update_trade_state",
+    "handle_cancel_enter",
+    "Order.parse_from_ccxt_object",
+    "Trade.update_trade"
+  ],
+  "mocked_boundaries": [
+    "exchange methods including create/cancel",
+    "native valid-price/stake calculation",
+    "strategy confirmations",
+    "wallet refresh",
+    "Trade.session and Trade.commit",
+    "fee handling",
+    "_update_trade_after_fill (stoploss/liquidation/strategy callbacks)",
+    "all notifications",
+    "source client-order binding and source event sequence"
+  ],
+  "frozen_plan_validation_passed": true,
+  "runtime_result_path": "user_data/crypto_quant/rd_program_20261105_v1/native_seam_v001/result.json",
+  "runtime_log_path": "user_data/crypto_quant/rd_program_20261105_v1/native_seam_v001/checks.log"
+}

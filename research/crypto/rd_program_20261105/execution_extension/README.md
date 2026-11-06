@@ -55,3 +55,13 @@ python3 -B -m unittest discover -s research/crypto/rd_program_20261105/execution
 新增 10 项账本测试，当前合计 **42 项合成检查通过**：浮亏、部分退出、多次成交成本、空头资金费收入、结算去重、现货现金、事件间隙／冲突、未知同刻顺序、缺行情和未来事件，以及与冻结 RD1 权益核算的一致性。`account_replay_verification.json` 是该版本的源码收据；前面各阶段的数量和收据保持历史含义。测试的费用数值只是算术夹具，未注册任何金融收益候选。
 
 还需把这些部件组成有输入证据清单的隔离重放入口，验证原生执行生命周期接缝及故障场景；完整历史数据访问、时点规则和实际账户事件证据仍是经济准入依赖。旧 paper 与真实账户均未修改。
+
+## 已登记的原生方法接缝检查
+
+`test_native_seam.py` 直接调用本仓库的 `FreqtradeBot.execute_entry`、`update_trade_state`、`handle_cancel_enter`，并使用真实内存 Order/Trade 对象；没有构造 bot 或 exchange，没有初始化数据库。交易所响应、钱包、数据库 session/commit、费用查询和 after-fill 回调均为合成替身，网络连接入口会抛错。新测试把这些原生方法与持久预留、原始回报信封、完整合成成交账本和 RD1 权益对账串联。
+
+新增 6 个测试方法（终态方法包含现货部分到期与合约空头全成两个子案例）：原生请求数量改变在领取前拒绝，零成交拒单不创建 Trade，撤单期间累计成交增加至最终值，非终态撤单保留风险占用，丢失提交回报后重启不再领取，并接受随后部分到期证据。初次开发运行有 5 个 UTC 格式错误，修复为同一时刻的 Z 表示后通过；没有改变时间或经济参数。开发失败与修复保存在登记中。
+
+`native_seam_registration.json` 在正式运行前提交，固定 356 个源文件 hash 和 48 项测试。`run_registered_seam.py` 是此**合成检查**的一次性入口，校验源码后运行，结果与日志保存于独立 `user_data/crypto_quant/rd_program_20261105_v1/native_seam_v001`。`native_seam_verification.json` 保存结果副本。正式运行 48 项通过，冻结计划校验仍通过。
+
+明确未关闭的接缝：原生 `Exchange.create_order` 的当前签名不接收研究层 clientOrderId；测试替身中的 clientOrderId 绑定是合成的，并未接入真实 CCXT 请求参数。after-fill 止损／清算／策略回调、真实数据库事务与实际费用获取也未在这组测试中执行。当前只能称“原生方法的隔离合成接缝通过”，不能称原生 bot 已集成 RD1、保护止损已验证、历史账户已验证或收益改善。下一步由完整输入证据驱动历史适配，仍须完成这些边界的验证。
