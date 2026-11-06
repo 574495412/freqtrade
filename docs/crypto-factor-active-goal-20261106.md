@@ -1,6 +1,6 @@
 # 因子研究目标与当前状态
 
-当前机器可读入口：[current_status_v16.json](../research/crypto/native_factors_20261106/current_status_v16.json)。用户已明确“允许自研因子”，当前接续为官方 Freqtrade 框架下的固定 F1/F2 原生接入。工程说明与真实数据覆盖见 [自研因子接入](../research/crypto/native_factors_20261106/README.md)。199 项工程检查通过、152 份真实小时文件已检查；F1/F2 的配对收益实验仍为 0，整个持续目标未完成。
+当前机器可读入口：[current_status_v17.json](../research/crypto/native_factors_20261106/current_status_v17.json)。用户已明确“允许自研因子”，当前接续为官方 Freqtrade 框架下的固定 F1/F2 原生接入。工程说明与真实数据覆盖见 [自研因子接入](../research/crypto/native_factors_20261106/README.md)。211 项工程检查通过、152 份真实小时文件已检查；F1/F2 的配对收益实验仍为 0，整个持续目标未完成。
 
 范围问题已经解决，无需再次询问是否允许自研。F1 的原生 5m 信号、完整币池每日横截面和 F2 与官方 EMA8/21 的信号一致性已实现；负向持仓调整、隔离 SQLite、共享 RD1 快照与预留、初始入场和成交后保护已有分阶段工程证据。账户事件核对层和原生钱包局部执行链现已接通，实际完整事件流和完整策略启动协调仍未完成。此前核对的旧 P1 16 个原生账户、16 个账本控制、2 次复核和 24 个失败官方样例账户分别保留，不替代 F1/F2 结果，也不据其结果调参。
 
@@ -56,3 +56,6 @@ RD1／F2 减仓增量已将完整账户目标接到原生部分退出：单币�
 现货／合约初始各不超过 1000 USDT、1x。仅修改隔离研究代码与证据，现有 paper 服务、配置、数据库和信号保持不变；真实订单关闭。已完成工作提交推送，失败记录保留。目前没有证据证明收益已提升。
 
 上述旧 F1/F2 阶段的历史机器状态：`research/crypto/rd_program_20261105/candidate_readiness_execution_update_20261106.json`。合成接缝登记与结果位于 `execution_extension/native_seam_registration.json`、`native_seam_verification.json`，历史阶段收据不覆盖；当前跨阶段状态请使用文首入口。
+
+
+开放部分退出与零成交终止现已接入同一整账户批次。实际原生订单更新、完整费用／资金费和剩余库存对账支持连续部分成交；零成交终止保留仓位和未分摊资金费，终态后重试仍要求新游标。原生内部提交和最终清理的中断恢复分别验证，不能重扣费用或用不明字段变化冒充恢复。新增 12 项检查，211 项联合回归通过；失败日志保留，F1/F2 金融运行仍为 0。完整策略循环、启动准入、未知提交绑定和历史数据缺口仍未解决。详见 [退出观察证据](../research/crypto/native_factors_20261106/exit_observation_verification.json)。

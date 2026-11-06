@@ -1,0 +1,114 @@
+/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/AverageStrategy.py:9: FutureWarning: 'freqtrade.vendor.qtpylib.indicators' is deprecated and will be removed in a future release. Import from technical instead - either the module (`from technical import qtpylib`) or a single function (`from technical.qtpylib import crossed_above`).
+  import freqtrade.vendor.qtpylib.indicators as qtpylib
+test_funding_credit_during_open_partial_is_allocated_once_on_terminal (__main__.ExitObservationTests.test_funding_credit_during_open_partial_is_allocated_once_on_terminal) ... ERROR
+test_futures_zero_expired_preserves_position_and_retries_fresh (__main__.ExitObservationTests.test_futures_zero_expired_preserves_position_and_retries_fresh) ... ERROR
+test_futures_zero_rejected_preserves_position_and_retries_fresh (__main__.ExitObservationTests.test_futures_zero_rejected_preserves_position_and_retries_fresh) ... ERROR
+test_partial_account_failure_resumes_without_reapplying_native_or_fees (__main__.ExitObservationTests.test_partial_account_failure_resumes_without_reapplying_native_or_fees) ... ERROR
+test_spot_incremental_open_partials_then_terminal_and_fresh_remaining_retry (__main__.ExitObservationTests.test_spot_incremental_open_partials_then_terminal_and_fresh_remaining_retry) ... ERROR
+test_spot_zero_canceled_preserves_position_and_retries_fresh (__main__.ExitObservationTests.test_spot_zero_canceled_preserves_position_and_retries_fresh) ... ERROR
+test_unproven_partial_fill_blocks_account_and_does_not_change_native_amount (__main__.ExitObservationTests.test_unproven_partial_fill_blocks_account_and_does_not_change_native_amount) ... ERROR
+test_zero_commit_ack_loss_reopens_journals_without_repeating_native_handler (__main__.ExitObservationTests.test_zero_commit_ack_loss_reopens_journals_without_repeating_native_handler) ... ERROR
+
+======================================================================
+ERROR: test_funding_credit_during_open_partial_is_allocated_once_on_terminal (__main__.ExitObservationTests.test_funding_credit_during_open_partial_is_allocated_once_on_terminal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_exit_observations.py", line 91, in test_funding_credit_during_open_partial_is_allocated_once_on_terminal
+    event=self.terminal(c,aid,ex,raw,now,'2','PARTIALLY_FILLED')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account_runtime.py", line 123, in terminal
+    ex._api.responses=[(raw,now)];ex.query(aid,now)
+                                  ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_exits.py", line 79, in query
+    raise StateError("Exit query cannot rewrite a committed fill application")
+rd1.StateError: Exit query cannot rewrite a committed fill application
+
+======================================================================
+ERROR: test_futures_zero_expired_preserves_position_and_retries_fresh (__main__.ExitObservationTests.test_futures_zero_expired_preserves_position_and_retries_fresh)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_exit_observations.py", line 139, in test_futures_zero_expired_preserves_position_and_retries_fresh
+    def test_futures_zero_expired_preserves_position_and_retries_fresh(self):self.zero_cycle('futures','EXPIRED')
+                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_exit_observations.py", line 116, in zero_cycle
+    c.bot.strategy.order_filled.reset_mock()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'reset_mock'
+
+======================================================================
+ERROR: test_futures_zero_rejected_preserves_position_and_retries_fresh (__main__.ExitObservationTests.test_futures_zero_rejected_preserves_position_and_retries_fresh)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_exit_observations.py", line 140, in test_futures_zero_rejected_preserves_position_and_retries_fresh
+    def test_futures_zero_rejected_preserves_position_and_retries_fresh(self):self.zero_cycle('futures','REJECTED')
+                                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_exit_observations.py", line 116, in zero_cycle
+    c.bot.strategy.order_filled.reset_mock()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'reset_mock'
+
+======================================================================
+ERROR: test_partial_account_failure_resumes_without_reapplying_native_or_fees (__main__.ExitObservationTests.test_partial_account_failure_resumes_without_reapplying_native_or_fees)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_exit_observations.py", line 163, in test_partial_account_failure_resumes_without_reapplying_native_or_fees
+    event=self.terminal(c,aid,ex,raw,now,'2','PARTIALLY_FILLED')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account_runtime.py", line 123, in terminal
+    ex._api.responses=[(raw,now)];ex.query(aid,now)
+                                  ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_exits.py", line 79, in query
+    raise StateError("Exit query cannot rewrite a committed fill application")
+rd1.StateError: Exit query cannot rewrite a committed fill application
+
+======================================================================
+ERROR: test_spot_incremental_open_partials_then_terminal_and_fresh_remaining_retry (__main__.ExitObservationTests.test_spot_incremental_open_partials_then_terminal_and_fresh_remaining_retry)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_exit_observations.py", line 50, in test_spot_incremental_open_partials_then_terminal_and_fresh_remaining_retry
+    c.bot.strategy.order_filled.reset_mock()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'reset_mock'
+
+======================================================================
+ERROR: test_spot_zero_canceled_preserves_position_and_retries_fresh (__main__.ExitObservationTests.test_spot_zero_canceled_preserves_position_and_retries_fresh)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_exit_observations.py", line 138, in test_spot_zero_canceled_preserves_position_and_retries_fresh
+    def test_spot_zero_canceled_preserves_position_and_retries_fresh(self):self.zero_cycle('spot','CANCELED')
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_exit_observations.py", line 116, in zero_cycle
+    c.bot.strategy.order_filled.reset_mock()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'function' object has no attribute 'reset_mock'
+
+======================================================================
+ERROR: test_unproven_partial_fill_blocks_account_and_does_not_change_native_amount (__main__.ExitObservationTests.test_unproven_partial_fill_blocks_account_and_does_not_change_native_amount)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_exit_observations.py", line 177, in test_unproven_partial_fill_blocks_account_and_does_not_change_native_amount
+    self.terminal(c,aid,ex,raw,now,'2','PARTIALLY_FILLED')
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account_runtime.py", line 123, in terminal
+    ex._api.responses=[(raw,now)];ex.query(aid,now)
+                                  ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_exits.py", line 79, in query
+    raise StateError("Exit query cannot rewrite a committed fill application")
+rd1.StateError: Exit query cannot rewrite a committed fill application
+
+======================================================================
+ERROR: test_zero_commit_ack_loss_reopens_journals_without_repeating_native_handler (__main__.ExitObservationTests.test_zero_commit_ack_loss_reopens_journals_without_repeating_native_handler)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_exit_observations.py", line 145, in test_zero_commit_ack_loss_reopens_journals_without_repeating_native_handler
+    self.terminal(c,aid,ex,raw,now,'0','CANCELED')
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account_runtime.py", line 123, in terminal
+    ex._api.responses=[(raw,now)];ex.query(aid,now)
+                                  ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_exits.py", line 79, in query
+    raise StateError("Exit query cannot rewrite a committed fill application")
+rd1.StateError: Exit query cannot rewrite a committed fill application
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.954s
+
+FAILED (errors=8)

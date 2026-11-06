@@ -1,0 +1,35 @@
+/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/AverageStrategy.py:9: FutureWarning: 'freqtrade.vendor.qtpylib.indicators' is deprecated and will be removed in a future release. Import from technical instead - either the module (`from technical import qtpylib`) or a single function (`from technical.qtpylib import crossed_above`).
+  import freqtrade.vendor.qtpylib.indicators as qtpylib
+test_funding_credit_during_open_partial_is_allocated_once_on_terminal (__main__.ExitObservationTests.test_funding_credit_during_open_partial_is_allocated_once_on_terminal) ... ok
+test_futures_zero_expired_preserves_position_and_retries_fresh (__main__.ExitObservationTests.test_futures_zero_expired_preserves_position_and_retries_fresh) ... ok
+test_futures_zero_rejected_preserves_position_and_retries_fresh (__main__.ExitObservationTests.test_futures_zero_rejected_preserves_position_and_retries_fresh) ... ok
+test_partial_account_failure_resumes_without_reapplying_native_or_fees (__main__.ExitObservationTests.test_partial_account_failure_resumes_without_reapplying_native_or_fees) ... ok
+test_spot_incremental_open_partials_then_terminal_and_fresh_remaining_retry (__main__.ExitObservationTests.test_spot_incremental_open_partials_then_terminal_and_fresh_remaining_retry) ... ok
+test_spot_zero_canceled_preserves_position_and_retries_fresh (__main__.ExitObservationTests.test_spot_zero_canceled_preserves_position_and_retries_fresh) ... ok
+test_unproven_partial_fill_blocks_account_and_does_not_change_native_amount (__main__.ExitObservationTests.test_unproven_partial_fill_blocks_account_and_does_not_change_native_amount) ... ok
+test_zero_commit_ack_loss_reopens_journals_without_repeating_native_handler (__main__.ExitObservationTests.test_zero_commit_ack_loss_reopens_journals_without_repeating_native_handler) ... ERROR
+
+======================================================================
+ERROR: test_zero_commit_ack_loss_reopens_journals_without_repeating_native_handler (__main__.ExitObservationTests.test_zero_commit_ack_loss_reopens_journals_without_repeating_native_handler)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_exit_observations.py", line 156, in test_zero_commit_ack_loss_reopens_journals_without_repeating_native_handler
+    result=self.observe(c,'recover-zero',e,actions=[aid])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account_runtime.py", line 85, in observe
+    return c.runtime.observe_account(label,e,self.wallet_receipt(e),self.receipts(e),{},events,c.bot,now,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_runtime.py", line 172, in observe_account
+    result=exit_controller.apply_observed(aid,bot,now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_exits.py", line 415, in apply_observed
+    if report['status']!='open':return self.apply_zero_terminal(action_id,bot,now)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_exits.py", line 398, in apply_zero_terminal
+    raise RiskError('Uncertain zero-exit native effects require explicit reconciliation')
+rd1.RiskError: Uncertain zero-exit native effects require explicit reconciliation
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.301s
+
+FAILED (errors=1)

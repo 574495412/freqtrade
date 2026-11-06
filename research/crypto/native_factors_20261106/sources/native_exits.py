@@ -12,14 +12,14 @@ from decimal import Decimal as D
 import json
 from pathlib import Path
 import threading
-from types import MethodType
+from types import MethodType, SimpleNamespace
 
 from freqtrade.enums import TradingMode, MarginMode, ExitType, ExitCheckTuple
 from freqtrade.exchange.binance import Binance
 from freqtrade.freqtradebot import FreqtradeBot
 from freqtrade.persistence import Trade, Order
 from native_entries import LocalBinanceTape
-from native_after_fill import OfflineProtectionExchange
+from native_after_fill import OfflineProtectionExchange, trade_state, order_state
 from native_evidence import CapturedOrder, decimal_text
 from native_snapshot import EPS
 from rd1 import RiskError, StateError, Store, dec, digest, parse, primitive, stamp, aware
@@ -74,8 +74,9 @@ class LocalExitExchange(Binance):
 
     def query(self, action_id, now):
         self.controller._ready(now)
+        self.controller.gate.require_account_batch_clear()
         item = self.controller.s["actions"][action_id]
-        if item["state"] not in ("SUBMISSION_UNKNOWN","RESPONSE_CAPTURED","NATIVE_BOUND_ACCOUNT_PENDING"):
+        if item["state"] not in ("SUBMISSION_UNKNOWN","RESPONSE_CAPTURED","NATIVE_BOUND_ACCOUNT_PENDING","OBSERVED_OPEN"):
             raise StateError("Exit query cannot rewrite a committed fill application")
         if "response" not in item:
             # Query by the stable client ID when the venue ID was lost.
@@ -170,7 +171,7 @@ class NativeRiskExit:
 
     def envelope(self,action_id,now):
         item = self.s["actions"][action_id]; raw = item["response"]
-        envelope = CapturedOrder(json.dumps(raw),parse(item["received_at"]),"synthetic-native-exit-receipt","synthetic")
+        envelope = CapturedOrder(json.dumps(raw,sort_keys=True),parse(item["received_at"]),"synthetic-native-exit-receipt","synthetic")
         report = envelope.normalize(); wanted = item["request"]
         if (report["clientOrderId"] != item["client_order_id"] or report["symbol"] != wanted["pair"]
                 or report["side"] != "sell" or dec(report["amount"]) != dec(decimal_text(wanted["amount"]))
@@ -325,13 +326,13 @@ class NativeRiskExit:
         item.update(native_binding=binding,state="NATIVE_BOUND_ACCOUNT_PENDING"); self._persist()
         return envelope
 
-    def apply_filled(self,action_id,bot,now):
-        """Apply a positive terminal report using the provider's durable fill fees."""
+    def apply_filled(self,action_id,bot,now,*,return_pending_partial=False):
+        """Apply source-proven fills; optional open observations remain pending."""
         with self._mutex:
             self._ready(now)
             item = self.s["actions"][action_id]; envelope = self.envelope(action_id,now)
             raw = json.loads(envelope.payload_json)
-            if raw["status"]=="open" or dec(decimal_text(raw["filled"])) <= 0 or item["native_binding"] is None:
+            if (raw["status"]=="open" and not return_pending_partial) or dec(decimal_text(raw["filled"])) <= 0 or item["native_binding"] is None:
                 raise RiskError("Positive terminal native exit binding required")
             fills = [f for f in self.provider.campaign_fills(item["source_position_id"]) if f.order_id==raw["id"]]
             quantity = sum((dec(f.quantity) for f in fills),D(0));cost = sum((dec(f.quantity)*dec(f.price) for f in fills),D(0))
@@ -348,31 +349,120 @@ class NativeRiskExit:
             self.wallet._check_native()
             self.s["actions"][action_id]["derived_fill_report"] = primitive(asdict(derived));self._persist()
             trade = Trade.session.get(Trade,item["trade_id"])
-            result = self.gate.after_fill_guard.apply("exit-"+action_id+"-"+str(item["attempt"]),bot,trade,derived,now)
-            item["state"]="NATIVE_FILLED_ACCOUNT_PENDING";self._persist()
+            event="exit-"+action_id+"-"+str(item["attempt"])
+            if raw['status']=='open':event+='-partial-'+digest(asdict(derived))[:24]
+            item['protection_event']=event;self._persist()
+            result = self.gate.after_fill_guard.apply(event,bot,trade,derived,now,return_pending_partial=return_pending_partial)
+            item["state"]="NATIVE_PARTIAL_ACCOUNT_PENDING" if raw['status']=='open' else "NATIVE_FILLED_ACCOUNT_PENDING";self._persist()
             return result
+
+    def _zero_post_matches(self,item,trade,order,raw,*,allow_cleanup_pending=False):
+        from freqtrade.constants import CANCEL_REASON
+        before=item['zero_application']
+        return (trade_state(trade)==before['trade_before'] and not order.ft_is_open
+            and order.status==raw['status'] and order.safe_filled==0 and order.safe_fee_base==0
+            and order.ft_cancel_reason==(before['cancel_reason_before'] or CANCEL_REASON['CANCELLED_ON_EXCHANGE'])
+            and trade.exit_reason is None
+            and (trade.close_rate is None and trade.close_rate_requested is None
+                 or allow_cleanup_pending and primitive(dict(close_rate=trade.close_rate,close_rate_requested=trade.close_rate_requested))
+                    == {k:before['exit_fields_before'][k] for k in ('close_rate','close_rate_requested')}))
+
+    def apply_zero_terminal(self,action_id,bot,now):
+        """Run actual native empty-exit cancel handling without a second request."""
+        with self._mutex:
+            self._ready(now)
+            item=self.s['actions'][action_id];envelope=self.envelope(action_id,now);raw=json.loads(envelope.payload_json)
+            if (raw['status'] not in ('canceled','expired','rejected') or dec(decimal_text(raw['filled']))!=0
+                    or item['native_binding'] is None):raise RiskError('Bound explicit zero-fill terminal exit required')
+            if type(bot.exchange) is not OfflineProtectionExchange or bot.wallets is not self.wallet.wallets:
+                raise RiskError('Zero exit needs staged native wallet and offline exchange')
+            self.wallet._check_native()
+            fills=[f for f in self.provider.campaign_fills(item['source_position_id']) if f.order_id==raw['id']]
+            if fills:raise RiskError('Zero-fill exit conflicts with financial fill ledger')
+            trade=Trade.session.get(Trade,item['trade_id']);order=trade.select_order_by_order_id(raw['id'])
+            if order is None or order.safe_filled!=0 or order.safe_fee_base!=0:
+                raise RiskError('Zero-fill exit regressed native fills')
+            signature=digest(asdict(envelope));prior=item.get('zero_application')
+            if prior is not None and prior['signature']!=signature:raise StateError('Conflicting zero-exit application receipt')
+            if prior is None:
+                if not order.ft_is_open:raise RiskError('Zero-exit native order changed before application intent')
+                item['zero_application']=dict(signature=signature,source=primitive(asdict(envelope)),state='PREPARED',
+                    trade_before=trade_state(trade),order_before=order_state(order),cancel_reason_before=order.ft_cancel_reason,
+                    exit_fields_before=primitive(dict(exit_reason=trade.exit_reason,close_rate=trade.close_rate,close_rate_requested=trade.close_rate_requested)))
+                self._persist()
+            elif self._zero_post_matches(item,trade,order,raw):
+                envelope.normalize(order)
+                item['zero_application']['state']='NATIVE_APPLIED';item['state']='NATIVE_ZERO_ACCOUNT_PENDING';self._persist()
+                return copy.deepcopy(item['zero_application'])
+            before=item['zero_application']
+            # update_order commits inside the native handler, before its final
+            # close-field cleanup. Resume that exact prefix without applying the
+            # native order update twice; unknown mutations still fail closed.
+            resume_cleanup=self._zero_post_matches(item,trade,order,raw,allow_cleanup_pending=True)
+            if resume_cleanup:envelope.normalize(order)
+            if not resume_cleanup and (trade_state(trade)!=before['trade_before'] or order_state(order)!=before['order_before']
+                    or order.ft_cancel_reason!=before['cancel_reason_before']
+                    or primitive(dict(exit_reason=trade.exit_reason,close_rate=trade.close_rate,close_rate_requested=trade.close_rate_requested))!=before['exit_fields_before']):
+                raise RiskError('Uncertain zero-exit native effects require explicit reconciliation')
+            def update(trade_arg,order_id,report):
+                if trade_arg is not trade or order_id!=raw['id'] or report!=raw:
+                    raise RiskError('Native zero-exit update changed the captured report')
+                if resume_cleanup:return True  # Native zero-order update already committed.
+                return FreqtradeBot.update_trade_state(bot,trade,order_id,report,send_msg=False)
+            proxy=SimpleNamespace(exchange=bot.exchange,strategy=bot.strategy,update_trade_state=update,
+                                  _notify_exit_cancel=lambda *a,**kw:None)
+            try:
+                FreqtradeBot.handle_cancel_exit(proxy,trade,raw,order,'source-proven empty exit')
+                Trade.commit()
+            except Exception:
+                Trade.session.rollback()  # Retain prior native commits, discard only uncommitted cleanup.
+                raise
+            if not self._zero_post_matches(item,trade,order,raw):raise RiskError('Native zero-exit application is incomplete')
+            item['zero_application']['state']='NATIVE_APPLIED';item['state']='NATIVE_ZERO_ACCOUNT_PENDING';self._persist()
+            return copy.deepcopy(item['zero_application'])
+
+    def apply_observed(self,action_id,bot,now):
+        report=self.envelope(action_id,now).normalize()
+        if dec(report['filled'])>0:
+            return self.apply_filled(action_id,bot,now,return_pending_partial=True)
+        if report['status']!='open':return self.apply_zero_terminal(action_id,bot,now)
+        item=self.s['actions'][action_id];trade=Trade.session.get(Trade,item['trade_id'])
+        self.envelope(action_id,now).normalize(trade.select_order_by_order_id(item['native_binding']['order_id']))
+        return dict(state='UNFILLED_OPEN')
 
     def reconcile(self,action_id,evidence,now):
         with self._mutex:
             self._ready(now); self.wallet.require_entry_clear(now)
             item=self.s["actions"][action_id]
-            if item["state"] not in ("NATIVE_FILLED_ACCOUNT_PENDING","TERMINAL_RECONCILED"):
+            envelope=self.envelope(action_id,now);report=envelope.normalize();open_order=report['status']=='open'
+            if item["state"] not in ("NATIVE_FILLED_ACCOUNT_PENDING","NATIVE_PARTIAL_ACCOUNT_PENDING","NATIVE_ZERO_ACCOUNT_PENDING",
+                                      "TERMINAL_RECONCILED","OBSERVED_OPEN","RESPONSE_CAPTURED","NATIVE_BOUND_ACCOUNT_PENDING"):
                 raise StateError("Exit native fill application remains unconfirmed")
-            # Other campaigns may still have open partial entries. Verify this
-            # exit's committed protection without granting global entry permission.
-            self.gate.after_fill_guard.verify_committed("exit-"+action_id+"-"+str(item["attempt"]))
             checkpoint=self.provider.s["checkpoints"].get(str(evidence.snapshot.cursor))
             if (checkpoint is None or checkpoint["output"] != primitive(asdict(evidence))
                     or self.provider.s["last_cursor"] != evidence.snapshot.cursor):
                 raise RiskError("Exit reconciliation needs checked account evidence")
             trade=Trade.session.get(Trade,item["trade_id"]);order=trade.select_order_by_order_id(item["native_binding"]["order_id"])
-            self.envelope(action_id,now).normalize(order)
+            envelope.normalize(order)
+            if dec(report['filled'])>0:
+                event=item.get('protection_event',"exit-"+action_id+"-"+str(item["attempt"]))
+                if open_order:
+                    protection=self.gate.after_fill_guard.s['events'][event];post=protection['stages'].get('after_fill_hook',{})
+                    if (protection['state']!='OPEN_PARTIAL_PENDING' or post.get('post_trade')!=trade_state(trade)
+                            or post.get('post_order')!=order_state(order)):
+                        raise RiskError('Open partial exit has no matching pending native evidence')
+                else:
+                    self.gate.after_fill_guard.verify_committed(event)
+            elif not open_order:
+                if 'zero_application' not in item or not self._zero_post_matches(item,trade,order,json.loads(envelope.payload_json)):
+                    raise RiskError('Zero-exit native application remains unverified')
             remaining=sum((dec(p.quantity) for p in evidence.snapshot.positions if p.position_id==item["source_position_id"]),D(0))
-            if abs(remaining-(dec(item["quantity_before"])-dec(decimal_text(order.filled))))>EPS or order.ft_is_open:
+            if abs(remaining-(dec(item["quantity_before"])-dec(decimal_text(order.filled))))>EPS or order.ft_is_open!=open_order:
                 raise RiskError("Exit remaining inventory is not reconciled")
             decision=self.risk.evaluate(evidence.snapshot,now)
-            item.update(state="TERMINAL_RECONCILED",remaining_quantity=str(remaining),risk_state=decision.state,
+            item.update(state="OBSERVED_OPEN" if open_order else "TERMINAL_RECONCILED",remaining_quantity=str(remaining),risk_state=decision.state,
                         account_checkpoint_hash=digest(checkpoint),
-                        requires_further_exit=remaining>dec(item.get("target_remaining_quantity","0"))+EPS,reconciled_cursor=evidence.snapshot.cursor)
+                        requires_further_exit=(not open_order and remaining>dec(item.get("target_remaining_quantity","0"))+EPS),
+                        open_order_remaining_quantity=str(dec(report['remaining'])) if open_order else '0',reconciled_cursor=evidence.snapshot.cursor)
             self._persist()
             return copy.deepcopy(item)

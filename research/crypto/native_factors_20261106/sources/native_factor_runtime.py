@@ -116,8 +116,6 @@ Reports cover ALL unresolved bound initial requests, even unchanged open orders.
                 item=exit_controller.s['actions'][aid];envelope=exit_controller.envelope(aid,now);raw=json.loads(envelope.payload_json)
                 if item['native_binding'] is None:
                     raise RiskError('Recover native exit binding before batching')
-                if (raw['status']=='open' and dec(decimal_text(raw['filled']))>0) or (raw['status']!='open' and dec(decimal_text(raw['filled']))<=0):
-                    raise RiskError('Open partial and zero-fill terminal exit batch application is not implemented')
                 exits[aid]=(item,envelope)
         entry_orders={(b['trade_id'],b['venue_order_id']) for b in bindings.values()}
         exit_orders={(item['trade_id'],item['native_binding']['order_id']) for item,_ in exits.values()}
@@ -171,14 +169,8 @@ Reports cover ALL unresolved bound initial requests, even unchanged open orders.
             self.gate._persist()
         self._apply_funding(batch)
         for aid,(item,envelope) in exits.items():
-            raw=json.loads(envelope.payload_json)
-            if raw['status']=='open':
-                trade=Trade.session.get(Trade,item['trade_id'])
-                envelope.normalize(trade.select_order_by_order_id(item['native_binding']['order_id']))
-                batch['applied']['exit:'+aid]='UNFILLED_OPEN'
-            else:
-                result=exit_controller.apply_filled(aid,bot,now)
-                batch['applied']['exit:'+aid]=result['state']
+            result=exit_controller.apply_observed(aid,bot,now)
+            batch['applied']['exit:'+aid]=result['state']
             self.gate._persist()
         checked,audit=self.provider.checkpoint(evidence,quote_receipts,now,complete_sequence=complete_sequence,
             complete_from_inception=complete_from_inception,funding_complete=funding_complete)
@@ -186,8 +178,7 @@ Reports cover ALL unresolved bound initial requests, even unchanged open orders.
         for rid in ordered:
             self.gate.reconcile_native(rid,'batch-life-'+digest([batch_id,rid])[:28],reports[rid],checked,now,
                 fills=self._fills(bindings[rid]['trade_id']),fills_complete=True,sequence_basis='source_ordered')
-        for aid,(_,envelope) in exits.items():
-            if envelope.normalize()['status']!='open':exit_controller.reconcile(aid,checked,now)
+        for aid in exits:exit_controller.reconcile(aid,checked,now)
         decision=self.risk.evaluate(checked.snapshot,now)
         batch.update(state='COMPLETE',checkpoint_cursor=checked.snapshot.cursor,audit=audit,decision=primitive(asdict(decision)))
         self.gate.s['pending_account_batch']=None
