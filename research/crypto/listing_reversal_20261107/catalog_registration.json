@@ -1,0 +1,14 @@
+{
+  "registered_utc": "2026-11-06T18:25:56.523247+00:00",
+  "code_sha256": "b9b0bce5736a1b1f81b0eea9851febcd3b45e220e5908f6b57bd3ede1064f603",
+  "origin": "https://s3-ap-northeast-1.amazonaws.com/data.binance.vision",
+  "prefix": "data/futures/um/daily/klines/",
+  "metadata_sources": {
+    "exchange": "https://fapi.binance.com/fapi/v1/exchangeInfo",
+    "collector": "https://api.tardis.dev/v1/exchanges/binance-futures"
+  },
+  "first_archive_day_start": "2025-01-01",
+  "first_archive_day_end_exclusive": "2026-09-01",
+  "workers": 12,
+  "policy": "Enumerate all Binance USD-M daily archive prefixes, retain all USDT-suffix symbols without a current trading-status filter, and record first 5m day. Binance perpetual onboard dates and collector starts supply separate lifecycle checks. Do not treat a first archive key alone as a verified launch or exclude delisted contracts. No economic results are read in this stage."
+}

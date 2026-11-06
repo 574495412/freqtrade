@@ -1,0 +1,32 @@
+{
+  "registered_utc": "2026-11-06T18:36:11.642284+00:00",
+  "hashes": {
+    "intake": "1b0164fd505ec9bb7c39ca0350d96c96702eceee2869c1d06f4fd3de5f5546a0",
+    "intake_plan": "59da06024ebbd966d5308addb30d44219f636346dfea20e2d3a85919f459cb95",
+    "replay": "e9b3bbc0b78170a035a15c25af62d5d99f4475a15dca294a015c4ec382bafe66",
+    "parent_plan": "9e072bf515831847f54ca308ccf34ec5eff4dd3decf81c4a12be0b32d9bb38ea",
+    "audit": "25b4d7eb06f5a409d23ec9dd7425ffeaedcd2009ae9d8e9fa5a651406f5b7dd5",
+    "source": "02e59292067e8a6472fb3b9dab19fa1e7f3a758694b776ed34d6af18071501a7",
+    "original": "1682e5df034a9829f4a7c9742b30fd2a12dfa36b200a3368459ab2a21cdafe4c",
+    "reset": "e7445aa8ce39e96a6a24a0b1cccbb95838f00162b7cf8e0078c85625c0f3e567",
+    "reset_plan": "3cdc4a863fc63f9de61340c230879ad5c89591dd8e389d64a9ab153854506535"
+  },
+  "symbols": [
+    "A2ZUSDT",
+    "AUSDT",
+    "AWEUSDT",
+    "EPICUSDT",
+    "FORMUSDT",
+    "MANTRAUSDT",
+    "MIRAUSDT",
+    "MMTUSDT",
+    "SAHARAUSDT",
+    "TRUTHUSDT",
+    "币安人生USDT",
+    "我踏马来了USDT",
+    "牛来USDT",
+    "龙虾USDT"
+  ],
+  "mark_endpoint": "https://fapi.binance.com/fapi/v1/markPriceKlines",
+  "policy": "Recover all excluded inputs in the initial registered cohort. Only discard a nonpositive settlement mark at or within the first five minutes of launch, before any position can exist. Keep raw responses. Missing mark archives may be replaced with an exact continuous Binance mark API response. No economics are used to decide which names to recover. Preserve both original runs."
+}

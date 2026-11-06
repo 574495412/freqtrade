@@ -1,0 +1,37 @@
+{
+  "registered_utc": "2026-11-06T18:30:35.918725+00:00",
+  "admission_registration_sha256": "59da06024ebbd966d5308addb30d44219f636346dfea20e2d3a85919f459cb95",
+  "replay_sha256": "e9b3bbc0b78170a035a15c25af62d5d99f4475a15dca294a015c4ec382bafe66",
+  "hypothesis": "After a 24h listing pump fails, the next 72h of downside can be captured with better net economics than shorting all liquid launches.",
+  "cases": [
+    "FailedLaunch",
+    "AllLaunches"
+  ],
+  "first_launch_day": "2025-01-01",
+  "last_launch_day_exclusive": "2026-09-01",
+  "common_start": "2025-01-01",
+  "split": "2026-01-01",
+  "common_end": "2026-09-06",
+  "day_quote_minimum": 5000000,
+  "minimum_pump": 0.2,
+  "minimum_pullback": 0.15,
+  "signal": "At launch plus 24h require 5m quote turnover >= 5m USDT. FailedLaunch also requires a 24h high at least 20% above the first completed 5m close and latest close at least 15% below that high. No economic parameter sweep.",
+  "capital": 1000,
+  "maximum_slots": 3,
+  "stake_fraction": 0.25,
+  "margin_fraction": 0.75,
+  "leverage": 1,
+  "fees_bps": 5,
+  "cost_bps": [
+    15,
+    40
+  ],
+  "volume_participation": 0.01,
+  "hold_hours": 72,
+  "stop_mark_increase": 0.25,
+  "margin_loss_mark_increase": 0.9,
+  "maximum_observed_drawdown": 0.4,
+  "execution": "Short the next completed 5m close with adverse price adjustment and fees. Cap order against available wallet, outstanding entry collateral, prior hour quote and actual next interval quote. Entries expire after one bar. Earlier exit requests fill ahead of new entries subject to volume, persisting if partial. A 25% adverse completed mark high requests exit on the next 5m close. At a 90% adverse mark high while held, book a full loss of remaining committed collateral as a catastrophe convention. This is not an exchange liquidation calculation. Settle exact public funding before boundary fills while the position is open. Deduct estimated exit friction from NAV. A 40% observed account drawdown stops new entries and requests outstanding exits.",
+  "decision": "Both costs positive over full and both continuous time slices, beat AllLaunches full-window net return, at least 30 closes across at least 12 UTC entry weeks, no catastrophic loss, no account halt and max drawdown <=40%. Separately report 25% stress CAGR hurdle. Keep unknown inputs visible and qualify scope.",
+  "orders_enabled": false
+}

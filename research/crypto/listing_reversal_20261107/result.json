@@ -1,0 +1,73 @@
+{
+  "registration_sha256": "9e072bf515831847f54ca308ccf34ec5eff4dd3decf81c4a12be0b32d9bb38ea",
+  "admission_sha256": "1b0164fd505ec9bb7c39ca0350d96c96702eceee2869c1d06f4fd3de5f5546a0",
+  "data_scope": {
+    "admitted": 273,
+    "unknown": 14
+  },
+  "accounts": {
+    "FailedLaunch_15bps": {
+      "net_return": -0.01833460711122681,
+      "annualized_net_return": -0.01095785770222435,
+      "max_drawdown": 0.4019216260005992,
+      "first_slice_return": -0.01833460711122681,
+      "second_slice_return": 0.0,
+      "opportunities": 118,
+      "completed": 45,
+      "entry_weeks": 25,
+      "catastrophic_losses": 0,
+      "halted": true
+    },
+    "FailedLaunch_40bps": {
+      "net_return": -0.013818382139814345,
+      "annualized_net_return": -0.008251060053620973,
+      "max_drawdown": 0.4006675468484263,
+      "first_slice_return": -0.013818382139814345,
+      "second_slice_return": 0.0,
+      "opportunities": 118,
+      "completed": 45,
+      "entry_weeks": 25,
+      "catastrophic_losses": 0,
+      "halted": true
+    },
+    "AllLaunches_15bps": {
+      "net_return": 1.6796156799372506,
+      "annualized_net_return": 0.7984078911784751,
+      "max_drawdown": 0.411027173693034,
+      "first_slice_return": 1.6796156799372506,
+      "second_slice_return": 0.0,
+      "opportunities": 273,
+      "completed": 112,
+      "entry_weeks": 33,
+      "catastrophic_losses": 0,
+      "halted": true
+    },
+    "AllLaunches_40bps": {
+      "net_return": 1.4443460475461234,
+      "annualized_net_return": 0.7026469426834803,
+      "max_drawdown": 0.40430657214998666,
+      "first_slice_return": 1.4443460475461234,
+      "second_slice_return": 0.0,
+      "opportunities": 273,
+      "completed": 109,
+      "entry_weeks": 32,
+      "catastrophic_losses": 0,
+      "halted": true
+    }
+  },
+  "failed_gates": {
+    "15": [
+      "full_net_excess",
+      "positive_slices",
+      "risk"
+    ],
+    "40": [
+      "full_net_excess",
+      "positive_slices",
+      "risk"
+    ]
+  },
+  "historical_screen_passed": false,
+  "upside_screen_passed": false,
+  "paper_eligible": false
+}
