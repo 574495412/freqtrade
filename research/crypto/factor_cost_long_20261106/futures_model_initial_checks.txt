@@ -1,0 +1,42 @@
+2026-11-06 18:43:10,143 - freqtrade.loggers - INFO - Enabling colorized output.
+2026-11-06 18:43:10,143 - freqtrade.loggers - INFO - Logfile configured
+2026-11-06 18:43:10,143 - freqtrade.loggers - INFO - Verbosity set to 0
+2026-11-06 18:43:10,144 - freqtrade.configuration.configuration - INFO - Using max_open_trades: 6 ...
+2026-11-06 18:43:10,144 - freqtrade.configuration.configuration - INFO - Using user-data directory: /var/folders/td/0bj9m2sn36185yz2jpyly9c40000gn/T/fixed-factor-cost-test-s7awrd7t ...
+2026-11-06 18:43:10,145 - freqtrade.configuration.configuration - INFO - Using data directory: /var/folders/td/0bj9m2sn36185yz2jpyly9c40000gn/T/fixed-factor-cost-test-s7awrd7t ...
+2026-11-06 18:43:10,145 - freqtrade.configuration.configuration - INFO - Using /var/folders/td/0bj9m2sn36185yz2jpyly9c40000gn/T/fixed-factor-cost-test-s7awrd7t/native_results as backtest directory ...
+2026-11-06 18:43:10,145 - freqtrade.exchange.check_exchange - INFO - Checking exchange...
+2026-11-06 18:43:10,149 - freqtrade.exchange.check_exchange - INFO - Exchange "binance" is officially supported by the Freqtrade development team.
+2026-11-06 18:43:10,150 - freqtrade.configuration.configuration - INFO - Using pairlist from configuration.
+2026-11-06 18:43:10,150 - freqtrade.configuration.config_validation - INFO - Validating configuration ...
+2026-11-06 18:43:10,151 - freqtrade.exchange.exchange - INFO - Instance is running with dry_run enabled
+2026-11-06 18:43:10,152 - freqtrade.exchange.exchange - INFO - Using CCXT 4.5.89
+2026-11-06 18:43:10,152 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}, 'enableRateLimit': True, 'timeout': 20000}
+2026-11-06 18:43:10,154 - freqtrade.exchange.exchange - INFO - Applying additional ccxt config: {'options': {'defaultType': 'swap'}, 'enableRateLimit': True, 'timeout': 20000}
+2026-11-06 18:43:10,156 - freqtrade.exchange.exchange - INFO - Using Exchange "Binance"
+2026-11-06 18:43:10,156 - freqtrade.resolvers.exchange_resolver - INFO - Using resolved exchange class 'Binance' ...
+E
+======================================================================
+ERROR: test_native_futures_f2_reduction_and_funding_from_synthetic_inventory (__main__.FuturesCostModelTests.test_native_futures_f2_reduction_and_funding_from_synthetic_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/factor_cost_long_20261106/test_futures_model.py", line 42, in test_native_futures_f2_reduction_and_funding_from_synthetic_inventory
+    SpotFixture.test_actual_f2_four_hour_signals_five_minute_entries_and_daily_native_reduction(self)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/factor_cost_scenario_20261106/test_cost_model.py", line 141, in test_actual_f2_four_hour_signals_five_minute_entries_and_daily_native_reduction
+    m,data=self.setup_model('F2CandleCost')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/factor_cost_long_20261106/test_futures_model.py", line 22, in setup_model
+    account,exchange=build(self.root,strategy,'futures','base',self.start,self.end,self.root,metadata)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/factor_cost_scenario_20261106/native_factory.py", line 37, in build
+    exchange.validate_config(config)
+  File "/Users/chrise/GitHub/freqtrade/freqtrade/exchange/exchange.py", line 403, in validate_config
+    self.validate_pricing(config["exit_pricing"])
+  File "/Users/chrise/GitHub/freqtrade/freqtrade/exchange/exchange.py", line 914, in validate_pricing
+    raise ConfigurationError(f"Ticker pricing not available for {self.name}.")
+freqtrade.exceptions.ConfigurationError: Ticker pricing not available for Binance.
+
+----------------------------------------------------------------------
+Ran 1 test in 0.605s
+
+FAILED (errors=1)

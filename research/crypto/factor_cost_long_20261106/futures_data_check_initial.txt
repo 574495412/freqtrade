@@ -1,0 +1,6 @@
+Initial read-only inline preflight failed at raw DatetimeIndex.equals on the first BTC L mark grid.
+Observed: both grids have 175104 rows, 2025-01-01 00:00 UTC through 2026-08-31 23:55 UTC.
+Feather uses datetime64[ns, UTC]; pandas date_range uses datetime64[us, UTC].
+Normalizing both representations to nanoseconds compares equal, with no timestamp/value edits.
+The retained admit_futures_data.py makes this representation normalization explicit.
+No futures account was started by this check.

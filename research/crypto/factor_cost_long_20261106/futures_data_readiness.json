@@ -1,0 +1,833 @@
+{
+  "observed_at_utc": "2026-11-06T10:39:07.969168+00:00",
+  "scope": "read-only preflight for subsequent frozen futures cost runs",
+  "datasets": [
+    {
+      "window": "L",
+      "receipt": "research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+      "receipt_sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47",
+      "verified_files": 280
+    },
+    {
+      "window": "S",
+      "receipt": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+      "receipt_sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e",
+      "verified_files": 280
+    }
+  ],
+  "mark_files_verified": 80,
+  "records": [
+    {
+      "pair": "BTC/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/BTCUSDT-5m-mark.feather",
+      "mark_sha256": "4703b0c5a42d3f21547c19ffb788456f3e4d9534ae0cd580737d9995cf16a42c",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "7fddcb56cfb30c9274ac9fbf7219be4254c7f4e393966104bb2de47ef9729a20",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "ETH/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/ETHUSDT-5m-mark.feather",
+      "mark_sha256": "8393705d90c807e824b6b3c6e32de911635b694e8aa5d757bb257723e8e00fa7",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/ETH_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "52e2e1aa2dd8697e1cf7f203177997bd1b0bbf303521779c9ea9d399e66447d4",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "SOL/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/SOLUSDT-5m-mark.feather",
+      "mark_sha256": "8834c6edb33841a28e096421e90493ef4608dd04d69a791e41e84c5fc9bfa37a",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/SOL_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "9acc5e0a2aa20e718d7e4c4a342aedb97475b9e5557b617f04213d45e889cefa",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "AVAX/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/AVAXUSDT-5m-mark.feather",
+      "mark_sha256": "d724fb2304790662da7a2f550573f981f39e2215c7d62678c8569a57677989f0",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/AVAX_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "ec3836d80b339ccd72558f1f79a6271f9c2bda0aeeba6b9b878fe1847838f473",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "TRB/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/TRBUSDT-5m-mark.feather",
+      "mark_sha256": "6aea3b606cea84eacc3d45657d093dbc95a75f995172a5dcb18a378774b65819",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/TRB_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "35cf2250db9140ea66e6acfc33c9a8987a075ea1ff72ca70054868fe0f17e6b6",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "DOGE/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/DOGEUSDT-5m-mark.feather",
+      "mark_sha256": "0abc4a71b5dd627e0a633e37d2f8c430ec522400c3310bea789405a6f2cdc0c0",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/DOGE_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "0bc39e227f545e650653c0bf6082641213693060a8a14307c41578d2f006b433",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "XRP/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/XRPUSDT-5m-mark.feather",
+      "mark_sha256": "fd3392c8bf80b3119867040447ee03f048cf10bd62fb9e3cc6522ebc2c34cbb8",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/XRP_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "aab39f3d5d22c96eed95d0120a3209e3f3f1441f6cf9ff343314d214e7a4f52b",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "ADA/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/ADAUSDT-5m-mark.feather",
+      "mark_sha256": "2e986380aa224ec73cb5ebcf9011af86c9ec2e431de344d998642220bcedf4df",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/ADA_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "dd5d172ec001c8dc88a7229861af80dcc929f6197cca7435dec528e3d2b73034",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "BNB/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/BNBUSDT-5m-mark.feather",
+      "mark_sha256": "eceaf0d4443e0489b628d871b8faef8984ea1f60fcc705e90dd0b58f45cf2348",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/BNB_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "655c6bb14c6e8606f51d9a18848c81a6041156aac703a516e09388902cab7fed",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "LINK/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/LINKUSDT-5m-mark.feather",
+      "mark_sha256": "693f119da6a4229624e18e8eb447b1b15e1f29c7459fda8e5f8b97a2fff2f558",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/LINK_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "1a43cb1f843cb08f035c09d2832aa13a8de51b8ae6f747946608e332027ab52c",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "DOT/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/DOTUSDT-5m-mark.feather",
+      "mark_sha256": "c70d949d91e1adb5b0696a6c819d6180eef66f8ace5c39cd668a1a5c6645ef1c",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/DOT_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "d08c6a358f119a83615bef7d7dcb27b82809fd756fcf83c3637b47bf52a0e8fd",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "FIL/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/FILUSDT-5m-mark.feather",
+      "mark_sha256": "6e50511e7a1e76c4a0d1962f29a0ffa3026a2eee8eead6a93569ff18f5132f5a",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/FIL_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "4a33873e12c7aaad8ca52e3dabf40bf4e4691f018bb117eed5915679e1b47b43",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "NEAR/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/NEARUSDT-5m-mark.feather",
+      "mark_sha256": "e69722454116b02151962b2a887fb2580f083b59d16afa3360e1705db83a1d15",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/NEAR_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "91286a452fb63d6070ff4d435dc767b568d0e979613f6a41f3b3e87aa04814ec",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "ATOM/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/ATOMUSDT-5m-mark.feather",
+      "mark_sha256": "100ba40fe45b15d084ef6ee1970727f4df12c541a1b90c78cccc91e2c99cd622",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/ATOM_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "8d92e119fd25b0a411d89198d52db53061271c54ea20fcca2bba61ddb1a1acb9",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "DYDX/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/DYDXUSDT-5m-mark.feather",
+      "mark_sha256": "d4bb24e1734bd75f4038a26a1f7795b5404950c8a1bec1535747a495c6b7d51d",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/DYDX_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "529741bac89e5ed8cb481b218e073f2750d2ee312687cdcc4309ec4a368896f0",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "LTC/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/LTCUSDT-5m-mark.feather",
+      "mark_sha256": "e42d558a51a7b0c2566fdcacf9ca1b6e33314402fc76b48794ddafd8fb19c0c9",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/LTC_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "9df00cbe2f9e3355b6cda22c7513ec499852b123ec0b95711de3b012e12d290e",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "BCH/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/BCHUSDT-5m-mark.feather",
+      "mark_sha256": "73d7f1e439cb8185aa1ba0e245d3865c4fca142233749f9f2250812df276a84d",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/BCH_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "3e7e9bbe4c35f313ef7bcef27d1838c11d01268051c6113790cad35b41bd3361",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "ETC/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/ETCUSDT-5m-mark.feather",
+      "mark_sha256": "976692a1cc476815b3ef2299e8ee0d91d59dd94763df867a11a26e7a1ace7550",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/ETC_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "aa4d56e832f9b75bc06bbdeadbdacdbec37d11f1f1ae109e1ad1d6200b40e5b4",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "GALA/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/GALAUSDT-5m-mark.feather",
+      "mark_sha256": "261b302e6ca8d386732b2ee4326e37a4c3614c7ab140ea78c138da9aa34f3b14",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/GALA_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "0156568e032cc5149c1b09e9dc2fa05aaf89cf6ac832dc76fa6022a2cdfd55ed",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "SAND/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/SANDUSDT-5m-mark.feather",
+      "mark_sha256": "4bb6231a152158693eb57b9ac612ab0c6a101f8e5c9720daf9959c4624bf2536",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/SAND_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "f041d117dd2435e1c5cf37365c1b00cb90cb141ae837e86b71d9cf47fd42b066",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "UNI/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/UNIUSDT-5m-mark.feather",
+      "mark_sha256": "1c4079fa0e1a3dcc95a6fed14fd0feabadd3125d03682fd1c84b89b754bc73bc",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/UNI_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "b13df5e27d4e5d10416aa69b4609d2633b8db737558b9563369a463ab5aa0509",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "IOTA/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/IOTAUSDT-5m-mark.feather",
+      "mark_sha256": "cd57a2caef074e60f373d8cdaaa2a573762e177a8db9abc43750df4f9886ffc6",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/IOTA_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "885eb561e1ad06b32758c8120b8d1b31ab45d8278b05e082edbef7af76a082d4",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "RUNE/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/RUNEUSDT-5m-mark.feather",
+      "mark_sha256": "5d116e25c9da9fe4efb4e2258f7f2ea45bf91a5b9b1e711663fb953d5c7b905a",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/RUNE_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "7416176eabb8e8b2e5ac58571138f41838ae960921f7f156923404a89d62b1ea",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "AXS/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/AXSUSDT-5m-mark.feather",
+      "mark_sha256": "ddf23bad6b274ded56b12a302a1e27c26ba930e097c145e1fab57ffa21086613",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/AXS_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "49fc5975f16bd8a232d8893461bd24da80798dae8b88306973571216091fff24",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "AAVE/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/AAVEUSDT-5m-mark.feather",
+      "mark_sha256": "dd521497e1599957a3e2310ce5db239279ca9a67db23f6175663e3270e4b7061",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/AAVE_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "cd90eadfa0c86e517c5fae0037b2a71dde4357f2472370c0c46147f929968591",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "EGLD/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/EGLDUSDT-5m-mark.feather",
+      "mark_sha256": "ba5ed7512ea0e2bdc1b62dad41d9f41b114eff48ca065359d5e4496a248654c3",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/EGLD_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "36bad175f628a13922cb51673448316990be9a0267494f9ccd9d68cce6e5d097",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "ALGO/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/ALGOUSDT-5m-mark.feather",
+      "mark_sha256": "2abd80acee694b17c414f2e18173d8ecb146f297b67b49092515604dbf74f5f7",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/ALGO_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "e5d427f0b8ee7b42328eee3ba9b5191d45b39ddd2580b1f761ecd862099283b6",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "SNX/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/SNXUSDT-5m-mark.feather",
+      "mark_sha256": "6d1e6023380c1d429b83aa8a7be34866166afcd6908b3d748613fd0e7eda270a",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/SNX_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "34a89128354150816a74e4091d2f3abe271f179056eba7ce57b514232239e108",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "CRV/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/CRVUSDT-5m-mark.feather",
+      "mark_sha256": "47c43cfa56c70ac05678749509af3a1eac8773f010605ec4993a7b364d244a51",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/CRV_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "fc60591727dc486e3a6793d8702e88e09db281778b815658b0dcac6d523ec712",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "MASK/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/MASKUSDT-5m-mark.feather",
+      "mark_sha256": "ed403654145b9d34ce86eabe564826095f6f00be2d3b7e500f8e28f748275a50",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/MASK_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "1b5b80d031abfe61cade758ea260b891664b349c90720eb51141ee913f8aae4b",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "SUSHI/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/SUSHIUSDT-5m-mark.feather",
+      "mark_sha256": "20cd2d084f4c7e0ca40affa9feaad5655b52891150632c2590c2a380d2a07c69",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/SUSHI_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "1ad21ec4c8fe67dc690d0cce7d3fc3bb330622a024dc67702c90ec38523b8566",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "KSM/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/KSMUSDT-5m-mark.feather",
+      "mark_sha256": "03fe43b1afcb45a4106cce74e74215cda168445ee9841f441a78f29997d6b403",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/KSM_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "1f51f00c793a9d71c5796587e2a74b160ba54d64ca43893debefcdf0227fe3fe",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "IOTX/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/IOTXUSDT-5m-mark.feather",
+      "mark_sha256": "8cef1369d8bb290ae289c5aefc54fa76ef84d23f10154b30d810754d6cf8a2dd",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/IOTX_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "6afc737cc11b7c82f4f0041f10f71e42d35f603fee436a148adf41a350845581",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "MANA/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/MANAUSDT-5m-mark.feather",
+      "mark_sha256": "509695b54b3bf3d4cc265da32144dabcf291704621b91b121bb22def90af3076",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/MANA_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "7719fbbcb827ba968861d2942073882a3af99246cb9067e99d52cc57f02c5544",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "NEO/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/NEOUSDT-5m-mark.feather",
+      "mark_sha256": "069fe286568ec8c48b7f1fed78c8cdce3969ecef22fdfb21158dcdd7af2e9658",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/NEO_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "e5aade60ab3ed040dd35926c3ac52998c7c3d7f43f38f7c8978aa68eb67d846e",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "GRT/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/GRTUSDT-5m-mark.feather",
+      "mark_sha256": "5a4f55e939098f2bfc24bbf189f548289e6bf0b42caa139fe6cf7453c1de1c8c",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/GRT_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "d013a247ac5a1104344fd719b7ed86c36a0148fa1d9570782e8a5bcf287147d5",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "TRX/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/TRXUSDT-5m-mark.feather",
+      "mark_sha256": "571cb7be9b74b88f5942ef310952083cae28dfaa12f944b17fb43359581424dc",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/TRX_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "73aaf9f4ce76bc096acb44f26f288e9c89307f17ce0f6d975976902765d6959f",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "CELO/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/CELOUSDT-5m-mark.feather",
+      "mark_sha256": "0b9de5a467ba3592a7ff641ba7686620be84971324d784e139316a0308af6e35",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/CELO_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "3e024d6f7c00fec0d3a32e80b729ae3ed15f1306b008481d4fab3c83380fb97a",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "SKL/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/SKLUSDT-5m-mark.feather",
+      "mark_sha256": "8d53ceb01b48e1272060fb87cbd925a26611d49cf86ca6a6248d680822d075d9",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/SKL_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "78c05766f30f9aed6e4d8460bc147f1a48208c1534da99d82cb1ac2929caedec",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "THETA/USDT:USDT",
+      "window": "L",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/L/THETAUSDT-5m-mark.feather",
+      "mark_sha256": "14550cd847a1b73f026b59c91c870e2abaf040443d6a0a764dc21579d4477d82",
+      "mark_rows": 175104,
+      "hourly_path": "user_data/crypto_quant/nfi40_data_v002/candles/futures/THETA_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "600d3691a19c073b878ebba2ad80ed4eb32016c83518137f633eceab3ec40a33",
+      "required_closed_hours": 15313
+    },
+    {
+      "pair": "BTC/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/BTCUSDT-5m-mark.feather",
+      "mark_sha256": "5c3d0db73b7a87bb4ce12c3fe740c8f1ecfd095d78fc9b3bc2ee76b4653d44df",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "311819b1147e85588f6fd7baaddec12fa325bde29dbd7487617d87c886c63740",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "ETH/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/ETHUSDT-5m-mark.feather",
+      "mark_sha256": "cd130913942b352310fd59214d02b69253b9cbc9ede787c512a554e261590e63",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ETH_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "580953ba9772e6e610234ddd7e3a305d7f1fa68e544314ce6871e23780cb59d4",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "SOL/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/SOLUSDT-5m-mark.feather",
+      "mark_sha256": "72c376dbcf34d60c3e50acd377325835adb48107305a24245c7dce9fa82f3bd1",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SOL_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "9be98afd7982d3e51b8a9d0eb16011886e737e6e5988c80c54e7f730624e1e44",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "AVAX/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/AVAXUSDT-5m-mark.feather",
+      "mark_sha256": "226535fb2e6af706615892bfbf6a79ddc1baeb75f2e5b72dc258e0317e963667",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/AVAX_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "b87623590e54384320828a37bd29c45744828f928eef638fe2179945d26e6482",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "TRB/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/TRBUSDT-5m-mark.feather",
+      "mark_sha256": "ed662b37077766d749e80f2fe01578fc89472ef61fb83edf6d45b8cc6823f56d",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/TRB_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "f96817eb2bb029cdb31d79e7792551b0c54536ace6b505343185a0bcba406b21",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "DOGE/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/DOGEUSDT-5m-mark.feather",
+      "mark_sha256": "d5a995b16552f1dc7be5cc1f71971f984134373749d29846084cfc943c409adf",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/DOGE_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "50a7fcd3cbf153cb00d19325b006f7d9342c067bc5399aa188203bc181d50f2c",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "XRP/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/XRPUSDT-5m-mark.feather",
+      "mark_sha256": "0c6c34be90a94490be84c192760022b372bf925552722fa50d8e25c0f548f51f",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/XRP_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "5382b8269ab97307878e8e9c7e8567013bcd288b4f524b3536a977a3bb21f3f1",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "ADA/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/ADAUSDT-5m-mark.feather",
+      "mark_sha256": "566a42195c4ca2b682031980b304edb487f2842d9aa8dd29a8d90250d1128e29",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ADA_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "454065eb92f12f8aa8dad697f454806291deaa5cef80606bd278518e32c5a549",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "BNB/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/BNBUSDT-5m-mark.feather",
+      "mark_sha256": "23f53ee3b13e594b04a4eb18267b82f6930712ca56e7be80f16a7ab02d884674",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/BNB_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "20166656b3b10439d6518e8205c8c60e576a4fc3823b636f35e0d95bd79b3d09",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "LINK/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/LINKUSDT-5m-mark.feather",
+      "mark_sha256": "13afd29252e8a86d122c58f4052edfcfc1e5003cab0436082f06c5430e2bdeb6",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/LINK_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "8096205ed663f8e2aa5f4f54b7aba9ad9775257b76e763659b98b7635d695ddd",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "DOT/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/DOTUSDT-5m-mark.feather",
+      "mark_sha256": "c8573468e27d9cc78a42c172bffe5ecafb2b3092c61a4a6d9c5b108139670df0",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/DOT_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "df5c0a140fca46ad494856c848ed536ab61cfe71f276412974c1eaf0fe1c143a",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "FIL/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/FILUSDT-5m-mark.feather",
+      "mark_sha256": "edf1d66a68a21a11685fff740cae65a53f26d227645ace51f11067c8feae1ac0",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/FIL_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "9b22c92aa2af3259dcd5338a6764de1cc17307539613b30696f635203f357007",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "NEAR/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/NEARUSDT-5m-mark.feather",
+      "mark_sha256": "c483b2c7338386de9f6b1643f1ebe1a55f5b5f506f760a70cdd99715750bd44b",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/NEAR_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "50ae4812a8ec6e6cb39cf9744aa9b2182325b6da9cf15089e2210cd779074c06",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "ATOM/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/ATOMUSDT-5m-mark.feather",
+      "mark_sha256": "b271efdad4a3edeb516537aaaf27fce5f4b6067f306e2b636be75851bd0b186b",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ATOM_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "782602cfc28a941ad9610a2f95c7eb4269db89f3a19ad32481f4dc49d15da0cf",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "DYDX/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/DYDXUSDT-5m-mark.feather",
+      "mark_sha256": "fb213a5ebc8593e5d6fd136b1f07918e73d0e329e8c8596546720a85676747e5",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/DYDX_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "62c79624df1aa8fe10172fcb43fc87f44cea18abe0ff901f9d0620c2f0d50ad5",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "LTC/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/LTCUSDT-5m-mark.feather",
+      "mark_sha256": "b958efbbd95cc504d8d17c6f92fa3924b9fbfd58de6b43797307707057ead039",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/LTC_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "cc7a5f93ba26fcb0716162add56ccb322f425a6726e8279c190f8e5e554508f6",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "BCH/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/BCHUSDT-5m-mark.feather",
+      "mark_sha256": "7fc1c94573d8cc0c9ba182792f63d3d2f12a8fa01a2aac94281a035436b0d995",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/BCH_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "046c51056b3f344586e853d646e2be73f1c3d0ea47dc9eab1deb2888c4886adb",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "ETC/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/ETCUSDT-5m-mark.feather",
+      "mark_sha256": "6febd64f56e0eacfe26514287bb03032902587bcf0ece58ccfee01817766b024",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ETC_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "9b6093880e18fa81f6dd9452e6e24681f353b1c45528e2c3afeb2a1d5e66737d",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "GALA/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/GALAUSDT-5m-mark.feather",
+      "mark_sha256": "fb7302145e91a90771ba9ea281098c70bae859a4720d61e5a354951cbf7ff2aa",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/GALA_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "5367aa89dce4507a7f8d76b7c48b3894f0a32c9db986d4e2b775cd4be84a9c4f",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "SAND/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/SANDUSDT-5m-mark.feather",
+      "mark_sha256": "677552834ccb535f2af5cf5c72cd6b634ad9281aaf25f3800fe0f14f6fa35944",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SAND_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "772f052d5e798cc843ccfe7581946e4cb15774a7fcbb7372f345868fcf42fb24",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "UNI/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/UNIUSDT-5m-mark.feather",
+      "mark_sha256": "23f28b2aea328dff5d97aab576eca04e595bd2cda89a1080208efce6d58ced51",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/UNI_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "dc6f403600087b2ace929d7fb47cc692944cbcdefa983749fbdc4637b601e1aa",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "IOTA/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/IOTAUSDT-5m-mark.feather",
+      "mark_sha256": "4fc49e6ecf6c58b3e7fcdea57adbe845bfdeec9277f7f247f7a224e60ec5d098",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/IOTA_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "8286950ab29b73f623d7a4cea7964fa85307155dc4d4aaa08200c7fac6e954a8",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "RUNE/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/RUNEUSDT-5m-mark.feather",
+      "mark_sha256": "a9789240becc6977cef296059f68fed62a62f660ecf04816a5d04c2b21a063be",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/RUNE_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "90168fb3c56bea84d18c05b6da477e9ec74cfa41adeaa28b83d524c3bacd0043",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "AXS/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/AXSUSDT-5m-mark.feather",
+      "mark_sha256": "8d8112ca4225cc0586b6290c433929ead6780aeec36de2f5de0fe2147ca1e452",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/AXS_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "8c3622bd95f8e67e0f44f503549d16cad557a5ffd11a7aff55747863ae6a007a",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "AAVE/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/AAVEUSDT-5m-mark.feather",
+      "mark_sha256": "dd0528f296d30cda7c0ad5c9e8466dcd8e03c353e5381ed7f554a67677df4e7f",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/AAVE_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "1d5bee118e1cecdafc78c7302219abed7af6bf403e18cbd41e090985056a3218",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "EGLD/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/EGLDUSDT-5m-mark.feather",
+      "mark_sha256": "87831fd3e46943ca4927c110362d62e0ed16cd860177e63d973f7554824807b3",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/EGLD_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "a26796cf144fb2ce0503191ecff5627dcb9a17e94319a66c305cc287212d915e",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "ALGO/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/ALGOUSDT-5m-mark.feather",
+      "mark_sha256": "e499c195e327c5a61203ca939e59775fd4c756402817d0cecb6b0af45475257f",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ALGO_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "3cb08e0c3bab343d55bc66fcb85de38592ba1c92814864776f48956c1cc0598c",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "SNX/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/SNXUSDT-5m-mark.feather",
+      "mark_sha256": "ff8bdd8f3716652f2fdca7c1dc4f4c0e08bf103c1cc1c659208e219ab1f9c9e1",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SNX_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "c02a4fa440a2d26b67fc2d6095111210317348173b5814dda9ee3975a8c4f9bb",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "CRV/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/CRVUSDT-5m-mark.feather",
+      "mark_sha256": "b65b02c106043c6bfec83f78312e1172c4331e215fe98168fb6b1ed3e59cd553",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/CRV_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "6901e11a788b343b94b85dca40d343e92f8aca9bed745d3e669657b51a2e4183",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "MASK/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/MASKUSDT-5m-mark.feather",
+      "mark_sha256": "d75397986ed5f70776dd9eb376d6f66bee5925addcbfe6e2c74664dcf8c041ce",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/MASK_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "7607e163c29672a4f1d1bbf3ad84cf218957028eb60e13a2f6cb94a98bc7bce6",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "SUSHI/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/SUSHIUSDT-5m-mark.feather",
+      "mark_sha256": "268d99593ad0736be845f5beb1c8b4281b499c37ad557cea427179b72236737b",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SUSHI_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "76bf9747fd84a0ca8966cc3b7d670bea138ba4406c1a61a0f4d40b16c61b01fe",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "KSM/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/KSMUSDT-5m-mark.feather",
+      "mark_sha256": "7dac42ada38abe265c8def2e8e46abd39b121d7e27745cd666be55c477202e9c",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/KSM_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "f4260175206b74717c32673a76d29d6fc30fac6ba8a26ebc23643424c3861da7",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "IOTX/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/IOTXUSDT-5m-mark.feather",
+      "mark_sha256": "77777db08aeb913154c2fe7da71fb9554733cf9d29deff5459da0dc30423abeb",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/IOTX_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "57490a45d21524ddc775e0fbaf1e3e00f8228487c6feb69727bde0c8f434196e",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "MANA/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/MANAUSDT-5m-mark.feather",
+      "mark_sha256": "9579dabd0bad78bea663458c4bdd41c6d23845153f962b4a8b5d116cdf2bfc95",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/MANA_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "2a9b00bc499a2bb9bfaa4d060394304d0d60dfd376c63d2e63726b8225b046e1",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "NEO/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/NEOUSDT-5m-mark.feather",
+      "mark_sha256": "c1732504bd1be0d13debddc11711282c4caa73dce4858811d3b69fba7bf8006f",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/NEO_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "d53e668b3da0efc37694a3c50f363ea8515f73e98cacaa77e5031431107eb3da",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "GRT/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/GRTUSDT-5m-mark.feather",
+      "mark_sha256": "f7aa760c9b58ff26b5ad65a9a8887470531fd14e1ae20fe8bcb02751fe0785db",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/GRT_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "3c07f7e77cb876a26aa309a4d735c1c8cc22490357f15724cb5bca42224c1867",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "TRX/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/TRXUSDT-5m-mark.feather",
+      "mark_sha256": "66be138453bff73a12b13b7924fe9bb9d7b1662cce3c87eed832d6a0994044af",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/TRX_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "ec6b1a0e8a77d2c8405e4100e4b3a0e9c0a202e2399d61029aada137904a3da4",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "CELO/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/CELOUSDT-5m-mark.feather",
+      "mark_sha256": "d9fd4358e9f4cd7c1aeb3be51a46c16f5758295bd337691070ba737ec262be3c",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/CELO_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "d713bd8d965e626b9c412e39f74936c51582c0054bff7bd46803ff3ef04db2af",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "SKL/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/SKLUSDT-5m-mark.feather",
+      "mark_sha256": "6c4810a1ef3ae2cbb4120e220df9f089ebd87fccea7b4734c0a5ba839828e9ca",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SKL_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "60753f1fcc6e986f79ac46f8c501f19710147eb5ec1a74eaa015f39212148e9e",
+      "required_closed_hours": 1033
+    },
+    {
+      "pair": "THETA/USDT:USDT",
+      "window": "S",
+      "mark_path": "user_data/crypto_quant/rd_program_20261105_v1/mark5m_recovery_v001/assembled/S/THETAUSDT-5m-mark.feather",
+      "mark_sha256": "42b2f3c2074304c48e56a935a0de31dde8cc871447865bb0cab1907c6bec279c",
+      "mark_rows": 3744,
+      "hourly_path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/THETA_USDT_USDT-1h-futures.feather",
+      "hourly_sha256": "536678a1bab04b057795834bed4e3f16ab536c539693b9f97d63b52d1a86e0d7",
+      "required_closed_hours": 1033
+    }
+  ],
+  "market_metadata_path": "research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+  "market_metadata_sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d",
+  "mark_audit_sha256": "2b49bf4fc1c8180128c2b8862635b67d1c4e6de802446f5509b22293a7f8bf8b",
+  "source_sha256": "c89899e87b1238351af841b552f455d95b426153a1606660cf9abae20ee5552b",
+  "complete_model_price_grids": true,
+  "futures_new_financial_runs": 0,
+  "futures_new_model_integration_verified": false,
+  "first_receipt_verified": false,
+  "historical_rules_verified": false,
+  "funding_fill_event_order_verified": false,
+  "execution_capacity_verified": false,
+  "orders_enabled": false
+}

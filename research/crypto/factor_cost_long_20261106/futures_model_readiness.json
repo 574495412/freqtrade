@@ -1,0 +1,13 @@
+{
+  "observed_at_utc": "2026-11-06T10:50:35.325426+00:00",
+  "real_financial_runs": 0,
+  "ohlcv_receipt_files_verified": 560,
+  "mark_grids_verified": 80,
+  "native_config_fix": "reuse official_factor_20261106/technical_fix1.json in separate future_factory.py; frozen spot source unchanged",
+  "integration_passed": false,
+  "failure": "Native partial exit refuses remaining value below minimum stake. Synthetic BTC daily target 2.307882455 units at approximately 10 USDT is below pinned 50 USDT minimum, so no reduction fills.",
+  "test_limit": "Inherited synthetic BTC price is below pinned current price lower bound; validate a rule-consistent fixture before treating this as market-realistic execution. Native minimum-remaining check is confirmed in source.",
+  "funding_independently_verified": false,
+  "next_requirement": "Resolve and register minimum-notional remainder treatment against frozen reduction policy; verify actual native reduction and independent funding arithmetic before any futures financial run.",
+  "production_eligible": false
+}
