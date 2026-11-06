@@ -1,0 +1,66 @@
+{
+  "observed_utc": "2026-11-06T18:22:43.823271+00:00",
+  "status": "ONE_OF_FOUR_NEW_ACCOUNTS_AUDITED",
+  "strategy": "StrengthAllocation",
+  "cost_bps_per_side": 15,
+  "registration_sha256": "eab310edfa3bb1d05037ac2a78cb069c163718019381739f16a7a8ecf598450e",
+  "audit_sha256": "d22f06a5e5eeb7e95fbf7820a99aaa1ba573d147292388c45a225131f4710541",
+  "stress_audit": {
+    "plan_sha256": "eab310edfa3bb1d05037ac2a78cb069c163718019381739f16a7a8ecf598450e",
+    "audit_source_sha256": "2514cb9d6f537c156ca04a7cfcaa5320e31f71dd51d4db827659c0b8242d1617",
+    "curve_sha256": "06cc45a40ed322067f7cddc46cdb98aaeb1e6154af5e1ac8abf20339839d5a77",
+    "result_sha256": "9280aa127846e7b740780db38ced9a4be273b644fd0230468492a992c5434630",
+    "archive_sha256": "b2fed28c8a28351a5dc2568029cd1628b4039fb1dcc9c4a4762b55663c71a53b",
+    "trades": 283,
+    "filled_orders": 698,
+    "maximum_cash_error_usdt": 1.535560556e-08,
+    "aggregate_cash_error_usdt": 3.136402739609e-08,
+    "stake_trace_sha256": "f83fd73ad6434b469d8c9c605e9ca0b9a8b505da9da3504d0b06c3668e09cf97",
+    "attempted_stakes_by_multiplier": {
+      "1.75": 32,
+      "0.65": 72,
+      "1.0": 5
+    },
+    "matched_filled_top_coin_campaigns": 109,
+    "top_coin_native_pnl_usdt": 771.92725091,
+    "periods": {
+      "continuous": {
+        "net_return": 1.2766008453869868,
+        "return_change": -0.07996319540179408,
+        "max_drawdown": 0.03991253876252887,
+        "drawdown_change": -0.005241288737834915,
+        "baseline_return": 1.356564040788781,
+        "baseline_drawdown": 0.045153827500363786,
+        "hours": 14592
+      },
+      "calendar-2025": {
+        "net_return": 0.9151977864026186,
+        "return_change": -0.08485051449000158,
+        "max_drawdown": 0.03991253876252887,
+        "drawdown_change": -0.005241288737834915,
+        "baseline_return": 1.0000483008926202,
+        "baseline_drawdown": 0.045153827500363786,
+        "hours": 8761
+      },
+      "calendar-2026-through-august": {
+        "net_return": 0.18870273428166584,
+        "return_change": 0.010449169236737665,
+        "max_drawdown": 0.02678965427126856,
+        "drawdown_change": -1.7996146418286507e-05,
+        "baseline_return": 0.17825356504492817,
+        "baseline_drawdown": 0.026807650417686846,
+        "hours": 5832
+      }
+    }
+  },
+  "known_failed_gates": [
+    "beats_x8_continuous",
+    "beats_x8_calendar-2025"
+  ],
+  "remaining": [
+    "FlatTopBoost_15bps",
+    "StrengthAllocation_8bps",
+    "FlatTopBoost_8bps"
+  ],
+  "paper_eligible": false
+}
