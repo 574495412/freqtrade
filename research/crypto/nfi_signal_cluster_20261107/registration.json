@@ -1,0 +1,51 @@
+{
+  "registered_at": "2026-11-06T21:27:17.344746+00:00",
+  "plans": {
+    "SignalCluster": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_signal_cluster_20261107/native_SignalCluster.json",
+      "sha256": "3d2501f5c84d5d724cb7fed02260c00ddd1f0eb81064bfcb416e5c803f026025"
+    },
+    "Flat75": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_signal_cluster_20261107/native_Flat75.json",
+      "sha256": "47dffe5b775b600be1ad64a50876e580453fe40324dd40f3ca79b48e7b101f26"
+    }
+  },
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_signal_cluster_20261107/study.py",
+      "sha256": "f9f7360e3b061faacce93289d49be8f0140a1fb2a5dfa387f524e54bc488d242"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_signal_cluster_20261107/SignalCluster.py",
+      "sha256": "b6dc072abcdfe783e5200fadae18f6b3af8e0c46e9331ed61a448cb38265a86f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_leverage_20261107/native_2024_Native2x.json",
+      "sha256": "d9278ceb3d262bb96bbb7f0825ebdf0e2f2a948785c139579cc1f5a9fb2cddda"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_leverage_20261107/registration.json",
+      "sha256": "00361a3479aa8b68d93b637796eb647999c2b12c854ffe8d42ee07bde5513e41"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_leverage_20261107/result.json",
+      "sha256": "31f1ff6991350602548ae23bcd631325e74b6af5b6f1dec00174350ea8aca607"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_leverage_20261107/evaluate.py",
+      "sha256": "0a3faeba7c9861270e4e02f33689fae88476326616b11757c601f0ec3b872ecc"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal.py",
+      "sha256": "529d3b191816817c1bd34817a62a21a76cb6d0dd7259452b1803968f4c85177c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/admission.json",
+      "sha256": "05d95da57e76267edb7b40a9be61a6611daf29f4881e967901bdc1218e29abca"
+    }
+  ],
+  "known_history": "The prior original 1x and uniform 2x accounts and Apr 2024 drawdown attribution were known. Both new 2024 variants were unknown. This is in-sample adaptation to a known failure mechanism, not an untouched confirmation.",
+  "sizing": "For each accepted signal row before engine execution, count the exact prior 5m bar's unconflicted original entry signals of the same side across 40 pairs. Use full signal breadth before trading, even for occupied pairs or blocked slots. First stake = original 2x margin stake times max(0.5, 1/sqrt(N)), bounded by available stake, with zero when below minimum. Flat75 is identical except its multiplier is always 0.75. No changes to leverage, exits or adjustment callbacks. Signal multiplier is independent of processing order; the native sequential wallet, fill, protection and slot rules still determine the actual path.",
+  "gate": "Run adaptive at both costs. Both costs must have 5m drawdown <=25%, no native liquidation, >=60 natural closes and >=20 reduced filled first stakes. Require lower 5m drawdown than uniform 2x, return/drawdown >= both 1x and 2x, positive excess over 1x in both calendar halves, and retain >=60% of uniform 2x's incremental full net return above 1x. If adaptive passes, run Flat75 at both costs and require adaptive to beat its full return and return/drawdown at each cost. Passing only qualifies for separate later temporal research.",
+  "orders_enabled": false
+}

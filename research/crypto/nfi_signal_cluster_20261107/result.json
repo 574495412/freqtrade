@@ -1,0 +1,953 @@
+{
+  "registration_sha256": "bfa4e2f04ec73d2af57ec6edfab776a3081bc2d95c914fc418c974605e30d9d0",
+  "accounts": {
+    "2024_SignalCluster_15bps": {
+      "archive_sha256": "bdb2fccd2318cbb7f2c33ab8d98dbe835d4f2dcc6b30e98ff669d38a7d251b3b",
+      "trades": 207,
+      "filled_orders": 693,
+      "maximum_cash_error_usdt": 3.27037993e-08,
+      "aggregate_cash_error_usdt": 1.074966670507e-07,
+      "periods": {
+        "continuous": {
+          "name": "continuous",
+          "start": "2024-01-01 00:00:00+00:00",
+          "end": "2024-12-31 23:00:00+00:00",
+          "net_return": 1.6938122676464613,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 2693.8122676464614,
+          "hourly_mark_drawdown": 0.18621026136319874,
+          "daily_nav_sharpe": 3.3509359408229518,
+          "completed_campaigns": 206,
+          "campaign_profit_factor": 12.744556121984596,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 1839.42483677,
+          "campaign_gross_loss": 144.33023945,
+          "open_campaigns_at_end": 1,
+          "calendar_hours": 8784,
+          "equity_insolvent": false
+        },
+        "H1": {
+          "name": "H1",
+          "start": "2024-01-01 00:00:00+00:00",
+          "end": "2024-07-01 00:00:00+00:00",
+          "net_return": 0.55319744618966,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1553.19744618966,
+          "hourly_mark_drawdown": 0.18621026136319874,
+          "daily_nav_sharpe": 2.560768751677641,
+          "completed_campaigns": 114,
+          "campaign_profit_factor": 5.3289980740118414,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 685.12231205,
+          "campaign_gross_loss": 128.56493895,
+          "open_campaigns_at_end": 1,
+          "calendar_hours": 4369,
+          "equity_insolvent": false
+        },
+        "H2": {
+          "name": "H2",
+          "start": "2024-07-01 00:00:00+00:00",
+          "end": "2024-12-31 23:00:00+00:00",
+          "net_return": 0.7343656302390813,
+          "initial_marked_equity": 1553.19744618966,
+          "ending_marked_equity": 2693.8122676464614,
+          "hourly_mark_drawdown": 0.08507314275970868,
+          "daily_nav_sharpe": 4.737996513704682,
+          "completed_campaigns": 92,
+          "campaign_profit_factor": 73.21792088390576,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 1154.30252472,
+          "campaign_gross_loss": 15.7653005,
+          "open_campaigns_at_end": 1,
+          "calendar_hours": 4416,
+          "equity_insolvent": false
+        }
+      },
+      "native_result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/result.json",
+        "sha256": "419819cc2087bc2ee965a13c92f26bfe96918db478e55877c39381bcecb85331"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/hourly_equity.parquet",
+        "sha256": "cc4f729719e1c1d72c0480e8c284f87d4e1be656da6835e96c38490a9c451992"
+      },
+      "first_fills_by_same_side_count": {
+        "1": 103,
+        "2": 33,
+        "3": 14,
+        "4": 14,
+        "5": 14,
+        "6": 6,
+        "7": 8,
+        "8": 1,
+        "9": 5,
+        "12": 4,
+        "13": 5
+      },
+      "reduced_first_fills": 104,
+      "stake_decisions": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/stake_decisions.jsonl",
+        "sha256": "8bc976cc7992582999c6c0ec54f1ed2a958b99b17473741ee869b9b3001a304e"
+      },
+      "signal_feeds": {
+        "BTC/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/BTC_USDT_USDT.parquet",
+          "sha256": "9f2571b6c5103f7d66825b27e545a9c19f7fcd997e345a0fc024933bdc21c482"
+        },
+        "ETH/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/ETH_USDT_USDT.parquet",
+          "sha256": "96bb7aa2e71e86ba096230504128e835aeed205ee111a832dbdd2883329d8b55"
+        },
+        "SOL/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/SOL_USDT_USDT.parquet",
+          "sha256": "03c12066771d00045d73272ca4523904d47b4a5e5773e65718757f87f8233cfd"
+        },
+        "AVAX/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/AVAX_USDT_USDT.parquet",
+          "sha256": "4e617a6cf8fdef7e4d2498cce116c91582d426ffde233c75c94964af0e5b8a98"
+        },
+        "TRB/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/TRB_USDT_USDT.parquet",
+          "sha256": "051490614af5cd4ca20ecbf4bb58370e14acb33dd0582a356b5c6fff3a52c4bd"
+        },
+        "DOGE/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/DOGE_USDT_USDT.parquet",
+          "sha256": "fd78420675cea3a5a20d498582e5db89c6f91bc683b9edccad151ff4ded8e23a"
+        },
+        "XRP/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/XRP_USDT_USDT.parquet",
+          "sha256": "bf64abb8529922e07089b4e66b58bc9acb96082949ebd213db3d9a77d2260854"
+        },
+        "ADA/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/ADA_USDT_USDT.parquet",
+          "sha256": "265b5ee35d26d5efac1b370744b4a5c0c7e62eec44a9abd03a79d9a2741eb65e"
+        },
+        "BNB/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/BNB_USDT_USDT.parquet",
+          "sha256": "8640039240688ee1ed7ae6275e4b85893359984d9820eeacd64ba35e983a3e18"
+        },
+        "LINK/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/LINK_USDT_USDT.parquet",
+          "sha256": "3cd07455910916c64f39105df14da32c1fd7b2c70ee6c022be64fda0396c21e8"
+        },
+        "DOT/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/DOT_USDT_USDT.parquet",
+          "sha256": "4b606a3049c41c9554b03d528f9f315dc00874d49c0774f4f63687d0ac519241"
+        },
+        "FIL/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/FIL_USDT_USDT.parquet",
+          "sha256": "398d7103389166460eb95adc8c4b70c1bca7e833d99b7ca60d57236958508c80"
+        },
+        "NEAR/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/NEAR_USDT_USDT.parquet",
+          "sha256": "cf1330cad0e75ae591dc8cf678e444e6a85e25d35d0dc915be3c0a4cc0bf3b1f"
+        },
+        "ATOM/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/ATOM_USDT_USDT.parquet",
+          "sha256": "cb3e4c1ce618f04014fc3bf232a548eb43735e08f0edea7ac80c7d0477897317"
+        },
+        "DYDX/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/DYDX_USDT_USDT.parquet",
+          "sha256": "6e5427adcacc3ee150a667dbcf4cf82248a20b00b3bf5125a67f5b53a53c9d38"
+        },
+        "LTC/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/LTC_USDT_USDT.parquet",
+          "sha256": "84c8a192395d0f6ecd5691c58823cf3f616172ce4543d7aa11718fdbbe614512"
+        },
+        "BCH/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/BCH_USDT_USDT.parquet",
+          "sha256": "b3fd0a711b6ca724311e13ab9de3573143f6f79e9b99a8902d44c7782c589745"
+        },
+        "ETC/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/ETC_USDT_USDT.parquet",
+          "sha256": "6065170c548076b5a6fd6d1aba59a885eee515c15ddec8d0ed03f72f26462987"
+        },
+        "GALA/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/GALA_USDT_USDT.parquet",
+          "sha256": "ec6ed3f16a7a2a2dbcd1c232054b8555480032d11ff36ebaf164dd7f6229db6f"
+        },
+        "SAND/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/SAND_USDT_USDT.parquet",
+          "sha256": "e9bc7169ca7f005da8418181c0e0f4024684a4c7276863a06c5cb1c18aa60cb0"
+        },
+        "UNI/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/UNI_USDT_USDT.parquet",
+          "sha256": "af15a134b12836a826ca1ef30e2a215bbdf05927a082297316120e53c27e977b"
+        },
+        "IOTA/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/IOTA_USDT_USDT.parquet",
+          "sha256": "26306ec4121c8a46a3a72998a45a02e3c5566b6dc24c1aa3ff5662be11f83138"
+        },
+        "RUNE/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/RUNE_USDT_USDT.parquet",
+          "sha256": "597e9a6c6352b8b5f59ba46273bb1e1bcf369ac2ae8ad00114d97898102e5acc"
+        },
+        "AXS/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/AXS_USDT_USDT.parquet",
+          "sha256": "f998a35eca6e7ab92d2c425c1716784dad0de68f0797e1d431451d8dcfede258"
+        },
+        "AAVE/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/AAVE_USDT_USDT.parquet",
+          "sha256": "031c28e522daf84090c4f4bbf132dd554f694678f15e913c76104a58ab11b651"
+        },
+        "EGLD/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/EGLD_USDT_USDT.parquet",
+          "sha256": "d5e53ccc321b6471b44d2d4926a7e0459fabc61bf6ccb301664570e20f27d72e"
+        },
+        "ALGO/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/ALGO_USDT_USDT.parquet",
+          "sha256": "8ab26ada6e7848862b3febaef4f2ec4dfeed0f5a223fc423e51be5f5a5bb6886"
+        },
+        "SNX/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/SNX_USDT_USDT.parquet",
+          "sha256": "ac78d2d36286e84a1bfa0549fc06ba8acc98c08471e62262c0a886574bc49fce"
+        },
+        "CRV/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/CRV_USDT_USDT.parquet",
+          "sha256": "4256b502fd8ec1f6aeb67f530d179038013741f9be8dbf5c166c00ee09303acc"
+        },
+        "MASK/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/MASK_USDT_USDT.parquet",
+          "sha256": "3bdb7779b13c5b8d8d20b1f2337d37cb54dfce7a4d9946c0a115ab7c7af0f85a"
+        },
+        "SUSHI/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/SUSHI_USDT_USDT.parquet",
+          "sha256": "91105c537a6c36a0452959c3ff694fd27dfaffb1f5818e34e466deb5605bf6b5"
+        },
+        "KSM/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/KSM_USDT_USDT.parquet",
+          "sha256": "e5c378f539ca82dc894d07335c4eb6be36849d55ad7b6d871256c70627c9796a"
+        },
+        "IOTX/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/IOTX_USDT_USDT.parquet",
+          "sha256": "4b41d2bae355ee799a9102d25716595f1db6f4b00a2aab78036070c320e62f0c"
+        },
+        "MANA/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/MANA_USDT_USDT.parquet",
+          "sha256": "f22d0baded7955fdcf8a58bd184572cd6df3b26d4f2c22351d5de13634989ffa"
+        },
+        "NEO/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/NEO_USDT_USDT.parquet",
+          "sha256": "051f3fd0f5ed55ba5786756ce721b09b7950105df4a80ea1bdd111a2f23a33b3"
+        },
+        "GRT/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/GRT_USDT_USDT.parquet",
+          "sha256": "80372eba8875c5b589722d1ebaca445f85999ee0586ead4e0ed61652fc87f4fe"
+        },
+        "TRX/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/TRX_USDT_USDT.parquet",
+          "sha256": "d8f9c10556ab31b98b0bc096cca2bf8b05ba49784f3e93abfd3fac3f2e1c79f7"
+        },
+        "CELO/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/CELO_USDT_USDT.parquet",
+          "sha256": "a3f561a45a1118cd6b18c3b922e240d798ad83467c31a17f1647942588ee92eb"
+        },
+        "SKL/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/SKL_USDT_USDT.parquet",
+          "sha256": "1d100a609b6938a9ac9f7be13bb37510e91fc4725df6b27c115cd98ee68e4f49"
+        },
+        "THETA/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_15bps/signals/THETA_USDT_USDT.parquet",
+          "sha256": "36b760aff9d493a792dec505bf39ed34f62143adc3a6689113d98788ac5fc5cf"
+        }
+      },
+      "native_liquidations": 0
+    },
+    "2024_SignalCluster_8bps": {
+      "archive_sha256": "fc0f3f52f447edb085b8711c2ff769dd8dc247ca5641e86c9350d7052df0a969",
+      "trades": 218,
+      "filled_orders": 662,
+      "maximum_cash_error_usdt": 1.21250732e-08,
+      "aggregate_cash_error_usdt": 4.94976740168e-08,
+      "periods": {
+        "continuous": {
+          "name": "continuous",
+          "start": "2024-01-01 00:00:00+00:00",
+          "end": "2024-12-31 23:00:00+00:00",
+          "net_return": 1.9223752660899054,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 2922.3752660899054,
+          "hourly_mark_drawdown": 0.11938473716183062,
+          "daily_nav_sharpe": 3.8843853077554096,
+          "completed_campaigns": 217,
+          "campaign_profit_factor": 16.32591425749363,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 2047.83604218,
+          "campaign_gross_loss": 125.43469296,
+          "open_campaigns_at_end": 1,
+          "calendar_hours": 8784,
+          "equity_insolvent": false
+        },
+        "H1": {
+          "name": "H1",
+          "start": "2024-01-01 00:00:00+00:00",
+          "end": "2024-07-01 00:00:00+00:00",
+          "net_return": 0.6638973251225995,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1663.8973251225996,
+          "hourly_mark_drawdown": 0.11938473716183062,
+          "daily_nav_sharpe": 3.3142687891257823,
+          "completed_campaigns": 120,
+          "campaign_profit_factor": 7.11707909903706,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 776.39794055,
+          "campaign_gross_loss": 109.08940729,
+          "open_campaigns_at_end": 1,
+          "calendar_hours": 4369,
+          "equity_insolvent": false
+        },
+        "H2": {
+          "name": "H2",
+          "start": "2024-07-01 00:00:00+00:00",
+          "end": "2024-12-31 23:00:00+00:00",
+          "net_return": 0.7563435086804882,
+          "initial_marked_equity": 1663.8973251225996,
+          "ending_marked_equity": 2922.3752660899054,
+          "hourly_mark_drawdown": 0.08267308342082658,
+          "daily_nav_sharpe": 4.676970175421621,
+          "completed_campaigns": 97,
+          "campaign_profit_factor": 77.78622700755771,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 1271.43810163,
+          "campaign_gross_loss": 16.34528567,
+          "open_campaigns_at_end": 1,
+          "calendar_hours": 4416,
+          "equity_insolvent": false
+        }
+      },
+      "native_result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/result.json",
+        "sha256": "92294c5bc8b3ecc76200580e3c6c874345022b667f59c2048d3d8fe5d0c56ffa"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/hourly_equity.parquet",
+        "sha256": "a6c89a55113d9dc38b236e624751f90e96570902fa007b046cf39994c3001207"
+      },
+      "first_fills_by_same_side_count": {
+        "1": 107,
+        "2": 34,
+        "3": 18,
+        "4": 14,
+        "5": 14,
+        "6": 6,
+        "7": 8,
+        "8": 1,
+        "9": 5,
+        "11": 1,
+        "12": 4,
+        "13": 5,
+        "15": 1
+      },
+      "reduced_first_fills": 111,
+      "stake_decisions": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/stake_decisions.jsonl",
+        "sha256": "946bb9e322199fe6aaf4e2a081bef9a1c469f9774437f192555ac55201f32009"
+      },
+      "signal_feeds": {
+        "BTC/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/BTC_USDT_USDT.parquet",
+          "sha256": "9f2571b6c5103f7d66825b27e545a9c19f7fcd997e345a0fc024933bdc21c482"
+        },
+        "ETH/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/ETH_USDT_USDT.parquet",
+          "sha256": "96bb7aa2e71e86ba096230504128e835aeed205ee111a832dbdd2883329d8b55"
+        },
+        "SOL/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/SOL_USDT_USDT.parquet",
+          "sha256": "03c12066771d00045d73272ca4523904d47b4a5e5773e65718757f87f8233cfd"
+        },
+        "AVAX/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/AVAX_USDT_USDT.parquet",
+          "sha256": "4e617a6cf8fdef7e4d2498cce116c91582d426ffde233c75c94964af0e5b8a98"
+        },
+        "TRB/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/TRB_USDT_USDT.parquet",
+          "sha256": "051490614af5cd4ca20ecbf4bb58370e14acb33dd0582a356b5c6fff3a52c4bd"
+        },
+        "DOGE/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/DOGE_USDT_USDT.parquet",
+          "sha256": "fd78420675cea3a5a20d498582e5db89c6f91bc683b9edccad151ff4ded8e23a"
+        },
+        "XRP/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/XRP_USDT_USDT.parquet",
+          "sha256": "bf64abb8529922e07089b4e66b58bc9acb96082949ebd213db3d9a77d2260854"
+        },
+        "ADA/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/ADA_USDT_USDT.parquet",
+          "sha256": "265b5ee35d26d5efac1b370744b4a5c0c7e62eec44a9abd03a79d9a2741eb65e"
+        },
+        "BNB/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/BNB_USDT_USDT.parquet",
+          "sha256": "8640039240688ee1ed7ae6275e4b85893359984d9820eeacd64ba35e983a3e18"
+        },
+        "LINK/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/LINK_USDT_USDT.parquet",
+          "sha256": "3cd07455910916c64f39105df14da32c1fd7b2c70ee6c022be64fda0396c21e8"
+        },
+        "DOT/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/DOT_USDT_USDT.parquet",
+          "sha256": "4b606a3049c41c9554b03d528f9f315dc00874d49c0774f4f63687d0ac519241"
+        },
+        "FIL/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/FIL_USDT_USDT.parquet",
+          "sha256": "398d7103389166460eb95adc8c4b70c1bca7e833d99b7ca60d57236958508c80"
+        },
+        "NEAR/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/NEAR_USDT_USDT.parquet",
+          "sha256": "cf1330cad0e75ae591dc8cf678e444e6a85e25d35d0dc915be3c0a4cc0bf3b1f"
+        },
+        "ATOM/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/ATOM_USDT_USDT.parquet",
+          "sha256": "cb3e4c1ce618f04014fc3bf232a548eb43735e08f0edea7ac80c7d0477897317"
+        },
+        "DYDX/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/DYDX_USDT_USDT.parquet",
+          "sha256": "6e5427adcacc3ee150a667dbcf4cf82248a20b00b3bf5125a67f5b53a53c9d38"
+        },
+        "LTC/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/LTC_USDT_USDT.parquet",
+          "sha256": "84c8a192395d0f6ecd5691c58823cf3f616172ce4543d7aa11718fdbbe614512"
+        },
+        "BCH/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/BCH_USDT_USDT.parquet",
+          "sha256": "b3fd0a711b6ca724311e13ab9de3573143f6f79e9b99a8902d44c7782c589745"
+        },
+        "ETC/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/ETC_USDT_USDT.parquet",
+          "sha256": "6065170c548076b5a6fd6d1aba59a885eee515c15ddec8d0ed03f72f26462987"
+        },
+        "GALA/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/GALA_USDT_USDT.parquet",
+          "sha256": "ec6ed3f16a7a2a2dbcd1c232054b8555480032d11ff36ebaf164dd7f6229db6f"
+        },
+        "SAND/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/SAND_USDT_USDT.parquet",
+          "sha256": "e9bc7169ca7f005da8418181c0e0f4024684a4c7276863a06c5cb1c18aa60cb0"
+        },
+        "UNI/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/UNI_USDT_USDT.parquet",
+          "sha256": "af15a134b12836a826ca1ef30e2a215bbdf05927a082297316120e53c27e977b"
+        },
+        "IOTA/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/IOTA_USDT_USDT.parquet",
+          "sha256": "26306ec4121c8a46a3a72998a45a02e3c5566b6dc24c1aa3ff5662be11f83138"
+        },
+        "RUNE/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/RUNE_USDT_USDT.parquet",
+          "sha256": "597e9a6c6352b8b5f59ba46273bb1e1bcf369ac2ae8ad00114d97898102e5acc"
+        },
+        "AXS/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/AXS_USDT_USDT.parquet",
+          "sha256": "f998a35eca6e7ab92d2c425c1716784dad0de68f0797e1d431451d8dcfede258"
+        },
+        "AAVE/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/AAVE_USDT_USDT.parquet",
+          "sha256": "031c28e522daf84090c4f4bbf132dd554f694678f15e913c76104a58ab11b651"
+        },
+        "EGLD/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/EGLD_USDT_USDT.parquet",
+          "sha256": "d5e53ccc321b6471b44d2d4926a7e0459fabc61bf6ccb301664570e20f27d72e"
+        },
+        "ALGO/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/ALGO_USDT_USDT.parquet",
+          "sha256": "8ab26ada6e7848862b3febaef4f2ec4dfeed0f5a223fc423e51be5f5a5bb6886"
+        },
+        "SNX/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/SNX_USDT_USDT.parquet",
+          "sha256": "ac78d2d36286e84a1bfa0549fc06ba8acc98c08471e62262c0a886574bc49fce"
+        },
+        "CRV/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/CRV_USDT_USDT.parquet",
+          "sha256": "4256b502fd8ec1f6aeb67f530d179038013741f9be8dbf5c166c00ee09303acc"
+        },
+        "MASK/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/MASK_USDT_USDT.parquet",
+          "sha256": "3bdb7779b13c5b8d8d20b1f2337d37cb54dfce7a4d9946c0a115ab7c7af0f85a"
+        },
+        "SUSHI/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/SUSHI_USDT_USDT.parquet",
+          "sha256": "91105c537a6c36a0452959c3ff694fd27dfaffb1f5818e34e466deb5605bf6b5"
+        },
+        "KSM/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/KSM_USDT_USDT.parquet",
+          "sha256": "e5c378f539ca82dc894d07335c4eb6be36849d55ad7b6d871256c70627c9796a"
+        },
+        "IOTX/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/IOTX_USDT_USDT.parquet",
+          "sha256": "4b41d2bae355ee799a9102d25716595f1db6f4b00a2aab78036070c320e62f0c"
+        },
+        "MANA/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/MANA_USDT_USDT.parquet",
+          "sha256": "f22d0baded7955fdcf8a58bd184572cd6df3b26d4f2c22351d5de13634989ffa"
+        },
+        "NEO/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/NEO_USDT_USDT.parquet",
+          "sha256": "051f3fd0f5ed55ba5786756ce721b09b7950105df4a80ea1bdd111a2f23a33b3"
+        },
+        "GRT/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/GRT_USDT_USDT.parquet",
+          "sha256": "80372eba8875c5b589722d1ebaca445f85999ee0586ead4e0ed61652fc87f4fe"
+        },
+        "TRX/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/TRX_USDT_USDT.parquet",
+          "sha256": "d8f9c10556ab31b98b0bc096cca2bf8b05ba49784f3e93abfd3fac3f2e1c79f7"
+        },
+        "CELO/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/CELO_USDT_USDT.parquet",
+          "sha256": "a3f561a45a1118cd6b18c3b922e240d798ad83467c31a17f1647942588ee92eb"
+        },
+        "SKL/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/SKL_USDT_USDT.parquet",
+          "sha256": "1d100a609b6938a9ac9f7be13bb37510e91fc4725df6b27c115cd98ee68e4f49"
+        },
+        "THETA/USDT:USDT": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024_SignalCluster_8bps/signals/THETA_USDT_USDT.parquet",
+          "sha256": "36b760aff9d493a792dec505bf39ed34f62143adc3a6689113d98788ac5fc5cf"
+        }
+      },
+      "native_liquidations": 0
+    }
+  },
+  "mark_risk": {
+    "2024_SignalCluster_15bps": {
+      "drawdown": 0.23064505963258475,
+      "points": 105397,
+      "hourly_error_usdt": 1.8189894035458565e-12,
+      "curve": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024-mark/2024_SignalCluster_15bps.parquet",
+        "sha256": "1af745a104469cb293f3a8063d802aa3b274b40d2a2d46b73b10cad89307ba8e"
+      }
+    },
+    "2024_SignalCluster_8bps": {
+      "drawdown": 0.16115727609098496,
+      "points": 105397,
+      "hourly_error_usdt": 2.7284841053187847e-12,
+      "curve": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_signal_cluster_20261107_v001/2024-mark/2024_SignalCluster_8bps.parquet",
+        "sha256": "4cc0888d31629f32822f0b8523c93349d1fb5274455b963f1f89ea316bcb489e"
+      }
+    }
+  },
+  "mark_sources": {
+    "AAVE/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "30d133c5e8e8f9a352060aa12769f49b51d09e17040a05adecb08b6107156717",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/AAVEUSDT.parquet",
+        "sha256": "3f89fd68dc41c4d7df6d6a7870a4f4199aae6773352c88edd773c51be8db4ec3"
+      }
+    },
+    "ADA/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "7514b30ed82fcc92cd9404735c663af92990f97652f5160b5b3f04bffc0b10c3",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/ADAUSDT.parquet",
+        "sha256": "b3db6825391f7558f68619037da18c02eb89b47f5fad15a8ac3984d87de349d4"
+      }
+    },
+    "ALGO/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "c625377238a0c1b5e18cdfce247df2f6c9012b2d522bb0f67252b7c720e7a477",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/ALGOUSDT.parquet",
+        "sha256": "c6c6056871ae156ca974bf4e665ce1590d1e5a3dcaf6db1c83296add02ab3561"
+      }
+    },
+    "ATOM/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "cbafa4f8ada5df7b42bde3e27c4de51dcc801869185c3b32cc5e986d01dff515",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/ATOMUSDT.parquet",
+        "sha256": "43ba0228dc9df0215e609abbc1abee0618d483e5411272f595ab81dcf9481b1e"
+      }
+    },
+    "AVAX/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "a3ba56d86d440828fcf0c997eaedb602e68c78682abfb656b6f0ab8f2ca30da4",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/AVAXUSDT.parquet",
+        "sha256": "42ef17fa995685d4f2fd77292e2477566078703ada06bc0424387beb579bf6fa"
+      }
+    },
+    "AXS/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "f0d2ddfe5494b3f5ed7db9533e1c4c3ac749454aa67a9df7739b06f545a38ea2",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/AXSUSDT.parquet",
+        "sha256": "5dc4bd301e82443196a83d390a2a636a3918dfd3ce776717471470624e378ac2"
+      }
+    },
+    "BCH/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "34c5358d8ffa36e6c6f81c9d500200e2858d08b496b1c1849557aafd1869f83a",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/BCHUSDT.parquet",
+        "sha256": "5d2637c86e7505cda176cb6548955f1ddd700af5e7707ad1502d0110017e99f4"
+      }
+    },
+    "BNB/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "83d79fc34ebee5ae68a6804939edeeb98c44e65a3c0b49afa224e05ea1342339",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/BNBUSDT.parquet",
+        "sha256": "6f49ac5c0ca6eaa0cbb6b329d9aadfc1133ff0f6abc5098fb5f30f8b83aa4574"
+      }
+    },
+    "CELO/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "64d4ca6ec9347a24ec5ee32b47bc608de300c931497bc5c7582f67326adcf790",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/CELOUSDT.parquet",
+        "sha256": "587a26cb54c2991af6c8bed74c24560e6a0f4d0733b0c74f64c90c8743fb678c"
+      }
+    },
+    "CRV/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "517e71a982d19bd895597421b7b18940f75e98795dbef84b6c9238678ad967e0",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/CRVUSDT.parquet",
+        "sha256": "dbeaebd06d08f11a391d4cb87f8d285cc89199d94f09684bc3ebfd18cf12059f"
+      }
+    },
+    "DOGE/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "9071925134191201166b4151597fa569a9ecc25b5499639987124a7c6aa7800c",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/DOGEUSDT.parquet",
+        "sha256": "f4443a99120ea7a48167e9cc855a9823d6d52d7ff069e132ff55b2d0fae1c94a"
+      }
+    },
+    "DOT/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "378be85ac6d16e43a971d397d52301755077a30febc05e3de2683849653714c6",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/DOTUSDT.parquet",
+        "sha256": "fd3cc1e3c056029880b369f3fc10ddcb218fb265f80e73fde5666e6d8aecf3fd"
+      }
+    },
+    "DYDX/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "8d1096631a1de73b1e3798432a1d4f2c6b6949e5e4f6bf5d00cc78314ca6067a",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/DYDXUSDT.parquet",
+        "sha256": "94439f967da291960ef8ae667bebd441005674a2bebd48363552f401740752e0"
+      }
+    },
+    "EGLD/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "f7a0e29885d4516c97da0f60a3ae0ae904b55e103621e0f85be08267987c939b",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/EGLDUSDT.parquet",
+        "sha256": "61fb803bc4a7ec184cf5a5c9dc4f5c89b0ccd54dd590ace5987f99b5d29299d7"
+      }
+    },
+    "ETC/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "1b4e4b3a9edf1a4408e12f19ccdbb9f486d34a466b32f4acffe029ff56e4b3ee",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/ETCUSDT.parquet",
+        "sha256": "6cf53182d94a3c25ed76458e319f67a31c34538664c4da3a570d65993710342a"
+      }
+    },
+    "ETH/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "55dc9526d58ec9e376eb434a8e7ab1e325af60a543d3740803d10b70ae7c7c2a",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/ETHUSDT.parquet",
+        "sha256": "c3eb12063ab46b5ac66ebd85096ee384c47f7984e8bcbe9c33f26fff603cde79"
+      }
+    },
+    "FIL/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "b29429b9df34ac17ac0c9062dd1449ce654c7ec3213047e60eb614f49bb408b6",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/FILUSDT.parquet",
+        "sha256": "664b3b500cb4999394c4494271d730a08e3f4adff9ce37cc20c6996a942e185f"
+      }
+    },
+    "GALA/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "12d29db8948ab7ea3e3f173c189a029c84ae82e6603316d5322bbc50fc61b2fd",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/GALAUSDT.parquet",
+        "sha256": "21ed0e83f83f836216e8d6f275d66e24d1ebe8f099e327f6a963d41419ee7d74"
+      }
+    },
+    "GRT/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "84d0e9bed9eb14fbeb42660fda928771285dc1c36ce8fff0b6aa703267f32ffd",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/GRTUSDT.parquet",
+        "sha256": "5c49b43b3649bac6c8fb6ac2cf029b305ce9bbfee4be799b670937bab186185f"
+      }
+    },
+    "IOTA/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "dc90c08498c18f876d9bd1e005d3cc778c62108ec079f106a571d33e21c4d3be",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/IOTAUSDT.parquet",
+        "sha256": "0f20906aee5857208402807604508cde731e62851c25054887c72e2836ca2041"
+      }
+    },
+    "IOTX/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "0cbb33ca67fdc69d0a526599e20d8cc91073a7b25f0d487bcfedf8c9fa482aaa",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/IOTXUSDT.parquet",
+        "sha256": "cd9e7b96cff00d3fefd6f6aa269ea60b0565fc335948cdc4fdec2455401d3c7a"
+      }
+    },
+    "KSM/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "c3c6d8f85f22ab91d2685f08403535dac3a49acb0e30ccd0d706fddf61833669",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/KSMUSDT.parquet",
+        "sha256": "d631bb464d1a3ea8dee1ccddb14394d7834c1de4d95831525868dd1ca2abecda"
+      }
+    },
+    "LINK/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "d592bd187a7333d4e73ca57b0793c1fdd95fee0760a8c69e89c7eddfb6b41833",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/LINKUSDT.parquet",
+        "sha256": "61cbadac44f66d42ddfb4ab3351a2e7f2d25ccf110a16bca2e41151b7a04f52d"
+      }
+    },
+    "LTC/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "1cea35b5dcfed0128ab0e58d3facaa1e15ccc125cc461ddcc81da6b4dbd76c2b",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/LTCUSDT.parquet",
+        "sha256": "49f6a7015a95b46b852ce285e7cbe2dc26758c529b4b2a4d7ffcf959390d202f"
+      }
+    },
+    "MANA/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "65f3bae771bc218c78ef2a49ab79147d8e7aa3929d1527e9da6489e86a524ec1",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/MANAUSDT.parquet",
+        "sha256": "8b86f3ff5a5e8f579a3cdce13c6722638bf5aec9e4188938f57cd8d5718dd5bc"
+      }
+    },
+    "NEAR/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "20336db20eadac7855740c07887308500dd6b87403094349fb7f5cf55b45bce9",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/NEARUSDT.parquet",
+        "sha256": "c9a1c5f8bc3b1652fba65ef9a1a56134edabfb640b7a98bfe36d837631235bc1"
+      }
+    },
+    "NEO/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "dcbfac82de32cf25c5474a83e64a81bedf19bca5e95bac574bc0a9fa1cb1a0ab",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/NEOUSDT.parquet",
+        "sha256": "fc4d81432b53e21396bdb5cb1a1112fd90cdd9c861ba03646e32c296e1fbd315"
+      }
+    },
+    "RUNE/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "ada79e38f9f0d3c723716ec3d11f88c4c7acca1856cc01a32fd7d65dc2e874d0",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/RUNEUSDT.parquet",
+        "sha256": "d28f16b09d9ad3bd58ed26d637a1bafd2701d7cc9f89e4ee0e9b36ab8bb4ac06"
+      }
+    },
+    "SAND/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "6319ce3311a50c925ca420bb22a1ceef9c564f72b585d7ec8937b46a70a78631",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/SANDUSDT.parquet",
+        "sha256": "19cbf1d8a9e2a9c8f5bd780f1e11ff6e35c0613b5ce67dfc43aad27cfb4cb8d9"
+      }
+    },
+    "SKL/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "bad1eeaed3e26ae100d360e7d1534b706b19749deeeb0ac2b7ce103b85003f2c",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/SKLUSDT.parquet",
+        "sha256": "bb9fdc9c5ae98adb72d1a1e039fae4a8b5028f66903bd871eda32a003ec123c6"
+      }
+    },
+    "SOL/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "e68f6f68df68089130cbcc01747cca715eb3ce4e45d703f80569c61e86186290",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/SOLUSDT.parquet",
+        "sha256": "2c4fa5cdb954f8d2d254a6f0a3f3c555447f23f2513d56f284c76bc4ec5ed935"
+      }
+    },
+    "SUSHI/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "bdbe7d76e89d120f1e590ec052e55708fef9d609f1947e033c31e93e307b6d99",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/SUSHIUSDT.parquet",
+        "sha256": "7fb808f8320a0d7c1e730cb56c6dabb8022673abce4704eb00686a5025fd4ec1"
+      }
+    },
+    "THETA/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "9cba1f7ee8aed775a56e3a0c6640866081766f53eff0ea96e7d24afba199241a",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/THETAUSDT.parquet",
+        "sha256": "c2ecb05275e9d6fb934329fe771f6ada9f823fc91c91c692f28bbb096f6a8c21"
+      }
+    },
+    "TRB/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "06973c99e013b496c59367728108ef7dcc1e250d245d614b50a782bdcb312877",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/TRBUSDT.parquet",
+        "sha256": "cddedbf67ba0a167d6056ea9892aeea0faf4813191b6977efd814c82750cf693"
+      }
+    },
+    "TRX/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "0a68d7c8547c3d8eb6dd690bf9b5e42cd8a1c06ec16eb059acef6b1b43c9d0ac",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/TRXUSDT.parquet",
+        "sha256": "ef64c30004a0e1141505effce6be66995f508f801bcdfd76358ba95476f7e635"
+      }
+    },
+    "UNI/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "a30061a743c0ec9bc16e126a0544b4fc540bd91b260cf867e3a0aa23400422fa",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/UNIUSDT.parquet",
+        "sha256": "22a67796ec7b5d290dcb29fa4dad352cafee14932f266641d8ddb66dd14d75ba"
+      }
+    },
+    "XRP/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "d203c87eef759b7ea439ac4f5a44a856a17aa0373c45192d045244085190ebc8",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/XRPUSDT.parquet",
+        "sha256": "9dcf69f97fc003dabbcf96e61066f2cd196837ba8605abfa19b3b27fe26a93c6"
+      }
+    }
+  },
+  "comparison": {
+    "15": {
+      "original_1x": {
+        "return": 1.10262155292,
+        "drawdown": 0.18749805917811668,
+        "period_returns": {
+          "continuous": 1.10262155292,
+          "H1": 0.4218015549413854,
+          "H2": 0.47884319412400833
+        },
+        "natural_closes": 213
+      },
+      "uniform_2x": {
+        "return": 2.3860827273416256,
+        "drawdown": 0.3233087911074095,
+        "period_returns": {
+          "continuous": 2.3860827273416256,
+          "H1": 0.6511929644917849,
+          "H2": 1.0506886839745087
+        },
+        "native_liquidations": 0,
+        "natural_closes": 202,
+        "checks": {
+          "no_liquidation": true,
+          "sample": true,
+          "absolute_return": true,
+          "risk_adjusted_return": true,
+          "drawdown": false,
+          "halves": true
+        }
+      },
+      "return": 1.6938122676464613,
+      "drawdown": 0.23064505963258475,
+      "checks": {
+        "budget": true,
+        "retention": false,
+        "risk_adjusted": false,
+        "sample": true,
+        "no_liquidation": true,
+        "halves": true
+      }
+    },
+    "8": {
+      "original_1x": {
+        "return": 1.1347254775599995,
+        "drawdown": 0.11710449995211647,
+        "period_returns": {
+          "continuous": 1.1347254775599995,
+          "H1": 0.46468999862163196,
+          "H2": 0.4574589022720945
+        },
+        "natural_closes": 223
+      },
+      "uniform_2x": {
+        "return": 2.9935518382200517,
+        "drawdown": 0.22310398398173048,
+        "period_returns": {
+          "continuous": 2.9935518382200517,
+          "H1": 0.9444408829043514,
+          "H2": 1.0538304215528562
+        },
+        "native_liquidations": 0,
+        "natural_closes": 216,
+        "checks": {
+          "no_liquidation": true,
+          "sample": true,
+          "absolute_return": true,
+          "risk_adjusted_return": true,
+          "drawdown": true,
+          "halves": true
+        }
+      },
+      "return": 1.9223752660899054,
+      "drawdown": 0.16115727609098496,
+      "checks": {
+        "budget": true,
+        "retention": false,
+        "risk_adjusted": false,
+        "sample": true,
+        "no_liquidation": true,
+        "halves": true
+      }
+    }
+  },
+  "passed_screen": false,
+  "flat_control_ran": false,
+  "paper_eligible": false
+}
