@@ -1,0 +1,16 @@
+test_exit_intent_persist_failure_never_reaches_transport (test_native_exits.NativeExitTests.test_exit_intent_persist_failure_never_reaches_transport) ... /Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/AverageStrategy.py:9: FutureWarning: 'freqtrade.vendor.qtpylib.indicators' is deprecated and will be removed in a future release. Import from technical instead - either the module (`from technical import qtpylib`) or a single function (`from technical.qtpylib import crossed_above`).
+  import freqtrade.vendor.qtpylib.indicators as qtpylib
+ok
+test_futures_exit_is_reduce_only_and_reconciles_wallet_once (test_native_exits.NativeExitTests.test_futures_exit_is_reduce_only_and_reconciles_wallet_once) ... ok
+test_immediate_fill_is_deferred_until_explicit_wallet_and_fee_evidence (test_native_exits.NativeExitTests.test_immediate_fill_is_deferred_until_explicit_wallet_and_fee_evidence) ... ok
+test_lost_exit_reply_restart_does_not_repeat_submission (test_native_exits.NativeExitTests.test_lost_exit_reply_restart_does_not_repeat_submission) ... ok
+test_native_commit_ack_loss_can_bind_existing_order_without_new_request (test_native_exits.NativeExitTests.test_native_commit_ack_loss_can_bind_existing_order_without_new_request) ... ok
+test_native_spot_exit_bypasses_strategy_veto_and_records_real_order (test_native_exits.NativeExitTests.test_native_spot_exit_bypasses_strategy_veto_and_records_real_order) ... ok
+test_open_order_prevents_overlapping_risk_exit (test_native_exits.NativeExitTests.test_open_order_prevents_overlapping_risk_exit) ... ok
+test_spot_exit_full_fee_wallet_and_rd1_action_reconciliation (test_native_exits.NativeExitTests.test_spot_exit_full_fee_wallet_and_rd1_action_reconciliation) ... ok
+test_wrong_exit_response_and_futures_missing_reduce_only_never_bind (test_native_exits.NativeExitTests.test_wrong_exit_response_and_futures_missing_reduce_only_never_bind) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.870s
+
+OK
