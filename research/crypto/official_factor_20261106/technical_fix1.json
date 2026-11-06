@@ -1,0 +1,34 @@
+{
+  "registered_at_utc": "2026-11-06T02:38:23.571076+00:00",
+  "parent_freeze_sha256": "9c8dba145f5a70afc35d9ca58966e2ef6cab929dc357bf41bcbf4606d570fa95",
+  "reason": "Binance futures native validation rejects ticker pricing. Native CLI returned0 despite config error and no result archive; completion now requires archive.",
+  "economic_parameters_changed": false,
+  "matching_model_changed": false,
+  "native_financial_code_modified": false,
+  "config_change": "Set futures entry/exit use_order_book=true as required by native exchange validation; historical backtester continues native OHLCV matching, not historical orderbook replay",
+  "configs": {
+    "base": {
+      "path": "research/crypto/official_factor_20261106/configs/futures_base_native_fix1.json",
+      "sha256": "d70cdde5d3756a0a4154fb952b2e4edd1fec33bf98fe3010aa0edb47f644de96"
+    },
+    "stress": {
+      "path": "research/crypto/official_factor_20261106/configs/futures_stress_native_fix1.json",
+      "sha256": "9b65ba4f87d27e7c26b31b1c2c7a49074c2876cefd48dec8e5db648f250b8002"
+    }
+  },
+  "files": {
+    "research/crypto/official_factor_20261106/run_one_v2.py": "277e0abe687337717e4a9c32fbd1e6335d694724af07f3d68967a2c8d522c332",
+    "research/crypto/official_factor_20261106/configs/futures_base_native_fix1.json": "d70cdde5d3756a0a4154fb952b2e4edd1fec33bf98fe3010aa0edb47f644de96",
+    "research/crypto/official_factor_20261106/configs/futures_stress_native_fix1.json": "9b65ba4f87d27e7c26b31b1c2c7a49074c2876cefd48dec8e5db648f250b8002"
+  },
+  "failed_parent_runs": [
+    "OFFICIAL_ADXMomentum_futures_S_base",
+    "OFFICIAL_ADXMomentum_futures_S_stress",
+    "OFFICIAL_MACDStrategy_crossed_futures_S_base",
+    "OFFICIAL_MACDStrategy_crossed_futures_S_stress",
+    "OFFICIAL_AverageStrategy_futures_S_base",
+    "OFFICIAL_AverageStrategy_futures_S_stress"
+  ],
+  "failure_stage": "exchange configuration validation before native strategy backtest; no economic results",
+  "old_logs_and_receipts_retained": true
+}

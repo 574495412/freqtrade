@@ -1,0 +1,113 @@
+{
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "dry_run_wallet": 1000,
+  "max_open_trades": 6,
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "",
+  "unfilledtimeout": {
+    "entry": 3,
+    "exit": 2,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0
+  },
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "username": "",
+    "password": ""
+  },
+  "telegram": {
+    "enabled": false,
+    "token": "",
+    "chat_id": ""
+  },
+  "dry_run": true,
+  "backtest_cache": "none",
+  "position_adjustment_enable": false,
+  "trading_mode": "futures",
+  "fee": 0.0015,
+  "margin_mode": "isolated",
+  "exchange": {
+    "name": "binance",
+    "enable_ws": false,
+    "pair_whitelist": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "SOL/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "TRB/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "XRP/USDT:USDT",
+      "ADA/USDT:USDT",
+      "BNB/USDT:USDT",
+      "LINK/USDT:USDT",
+      "DOT/USDT:USDT",
+      "FIL/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "ATOM/USDT:USDT",
+      "DYDX/USDT:USDT",
+      "LTC/USDT:USDT",
+      "BCH/USDT:USDT",
+      "ETC/USDT:USDT",
+      "GALA/USDT:USDT",
+      "SAND/USDT:USDT",
+      "UNI/USDT:USDT",
+      "IOTA/USDT:USDT",
+      "RUNE/USDT:USDT",
+      "AXS/USDT:USDT",
+      "AAVE/USDT:USDT",
+      "EGLD/USDT:USDT",
+      "ALGO/USDT:USDT",
+      "SNX/USDT:USDT",
+      "CRV/USDT:USDT",
+      "MASK/USDT:USDT",
+      "SUSHI/USDT:USDT",
+      "KSM/USDT:USDT",
+      "IOTX/USDT:USDT",
+      "MANA/USDT:USDT",
+      "NEO/USDT:USDT",
+      "GRT/USDT:USDT",
+      "TRX/USDT:USDT",
+      "CELO/USDT:USDT",
+      "SKL/USDT:USDT",
+      "THETA/USDT:USDT"
+    ],
+    "pair_blacklist": [],
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "timeout": 20000
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "timeout": 20000
+    }
+  }
+}
