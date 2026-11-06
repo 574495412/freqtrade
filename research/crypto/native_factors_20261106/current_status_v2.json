@@ -1,0 +1,59 @@
+{
+  "observed_at_utc": "2026-11-06T03:32:41.689793+00:00",
+  "user_authorization": "\u5141\u8bb8\u81ea\u7814\u56e0\u5b50",
+  "scope_question_pending": false,
+  "direction": "Self-developed fixed F1/F2 using official Freqtrade framework; no parameter search",
+  "overall_goal_complete": false,
+  "phase": "native_reduction_intents_with_real_sqlite_checked_shared_RD1_pending",
+  "F1_native_daily_cross_section_implemented": true,
+  "F2_upstream_signal_parity_verified": true,
+  "F2_position_reduction_and_shared_RD1_complete": false,
+  "historical_receipt_or_depth_certified": false,
+  "native_signal_timing_helper_checked": true,
+  "engineering_tests_passed": 19,
+  "engineering_test_scope": "Synthetic reduction targets/orders; actual temporary native SQLite and native Trade/Order/position dispatcher; no financial run",
+  "actual_hourly_files_checked": 152,
+  "F1_F2_financial_runs": 0,
+  "new_diagnostic_commands": 0,
+  "new_parameter_variants_searched": 0,
+  "old_P1_accounts_preserved": 32,
+  "old_determinism_checks_preserved": 2,
+  "official_example_accounts_preserved": 24,
+  "profit_improvement_established": false,
+  "production_eligible": false,
+  "runtime_modified": false,
+  "orders_enabled": false,
+  "input_source_hashes": {
+    "research/crypto/native_factors_20261106/sources/FixedFactorSignals.py": "c8d529c72813196265ba660fd57f9a76cbfa6109eb5b43595b383a5343ef85bf",
+    "research/crypto/native_factors_20261106/sources/native_reductions.py": "ce4aef0359be42ad91e88b648378088343f35fc33e287874ae04736e7dbe9456",
+    "research/crypto/native_factors_20261106/sources/factor_inputs.py": "fad50a2085a1993fe764eca59eb8b368b446d4ab208e36c0e1268df888dfee5b",
+    "research/crypto/native_factors_20261106/test_native_factors.py": "24e0776d9dc58d176768bbe25dd03acfc6cf1f6c5675cab2c3ba1aed4737cbc1",
+    "research/crypto/native_factors_20261106/test_native_reductions.py": "5796cbc9d0ff234980ce28286d4436f95b244d0b464de9cbfd3c0d5dd6b183c5",
+    "research/crypto/native_factors_20261106/README.md": "9cdf44bc927b1e6fffd45917f8775c0fc0d0aff9f8003a84eb0dfe352c6c5a8e",
+    "research/crypto/native_factors_20261106/reduction_regression_checks.txt": "f52e47bd0150b9af7aed07483c1558c57a0743b866311df6ed6b5acc96d63d01",
+    "freqtrade/freqtradebot.py": "41b94e988989c773e02a00030a530866e4e5be0a31fd0096decc075ce4e91b74",
+    "freqtrade/persistence/custom_data.py": "a48ece9ccf3b1236662337c939df61e89e8839e260209187ef9c408316de035a",
+    "freqtrade/persistence/models.py": "729d261a8927f96dec2700f2f1f1dd16f2f91d43f880c30f48fb0a8d15c38bdf",
+    "freqtrade/persistence/trade_model.py": "a011ca8686a205fd279ef665a2a3d5a1a4e3fb8cec9cbbac7f429eed0da85c2d"
+  },
+  "supersedes_scope_question_in": {
+    "path": "research/crypto/official_factor_20261106/current_status.json",
+    "sha256": "222c0e398f691042b89e8f64ea3269ea0dcf6da913a4115d9ba7938483b0a4a6"
+  },
+  "next_required_work": [
+    "Shared RD1 account snapshot and native entry reservation/identity integration",
+    "Native precision precheck, authoritative submission outcomes and after-fill protection",
+    "Candidate admission and paired economics only when the required scope is actually ready"
+  ],
+  "native_reduction_callback_implemented": true,
+  "native_metadata_persistence_checked": true,
+  "whole_native_transaction_atomicity_verified": false,
+  "previous_snapshot": {
+    "path": "research/crypto/native_factors_20261106/current_status.json",
+    "sha256": "893e2a2491a43870c9a75a59362ccbdd0314226442462e9889c7ce428b678b66"
+  },
+  "reduction_verification": {
+    "path": "research/crypto/native_factors_20261106/reduction_verification.json",
+    "sha256": "a33e3a835b9b1842409e8cf77646890d1594dfdd6a5e52c49b9d123e5ab2f2b4"
+  }
+}

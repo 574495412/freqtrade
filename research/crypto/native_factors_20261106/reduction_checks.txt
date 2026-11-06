@@ -1,0 +1,15 @@
+test_account_lock_excludes_another_writer (__main__.Reductions.test_account_lock_excludes_another_writer) ... ok
+test_claim_persists_in_real_database_and_second_process_observes_unknown (__main__.Reductions.test_claim_persists_in_real_database_and_second_process_observes_unknown) ... ok
+test_database_commit_then_failure_returns_no_action_and_restart_does_not_resubmit (__main__.Reductions.test_database_commit_then_failure_returns_no_action_and_restart_does_not_resubmit) ... ok
+test_identity_staleness_conflict_and_dirty_native_transaction_rejected (__main__.Reductions.test_identity_staleness_conflict_and_dirty_native_transaction_rejected) ... ok
+test_native_position_dispatch_uses_cost_stake_and_never_submits_entry (__main__.Reductions.test_native_position_dispatch_uses_cost_stake_and_never_submits_entry) ... /Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/AverageStrategy.py:9: FutureWarning: 'freqtrade.vendor.qtpylib.indicators' is deprecated and will be removed in a future release. Import from technical instead - either the module (`from technical import qtpylib`) or a single function (`from technical.qtpylib import crossed_above`).
+  import freqtrade.vendor.qtpylib.indicators as qtpylib
+ok
+test_no_increase_or_dca_and_forced_exit_survives_missing_factor (__main__.Reductions.test_no_increase_or_dca_and_forced_exit_survives_missing_factor) ... ok
+test_open_partial_order_blocks_duplicate_and_missing_fill_is_unknown (__main__.Reductions.test_open_partial_order_blocks_duplicate_and_missing_fill_is_unknown) ... ok
+test_partial_cancellation_reconciles_then_only_remaining_quantity_exits (__main__.Reductions.test_partial_cancellation_reconciles_then_only_remaining_quantity_exits) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.429s
+
+OK

@@ -1,0 +1,35 @@
+{
+  "observed_at_utc": "2026-11-06T03:32:41.687251+00:00",
+  "scope": "Synthetic reduction targets/orders; actual temporary native SQLite and native Trade/Order/position dispatcher; no financial run",
+  "tests_passed": 19,
+  "new_reduction_tests": 10,
+  "financial_runs": 0,
+  "causality_commands": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "metadata_and_trade_sessions_are_separate": true,
+  "metadata_read_by_independent_process": true,
+  "whole_native_transaction_atomicity_verified": false,
+  "after_fill_stoploss_liquidation_verified": false,
+  "mocked_boundaries": [
+    "market rates and minimum/maximum/precision responses",
+    "available wallet stake",
+    "execute_trade_exit captures intent without submitting",
+    "RD1 target provider and factor scale in dispatcher test",
+    "commit acknowledgement fault injection only in the failure test"
+  ],
+  "source_hashes": {
+    "research/crypto/native_factors_20261106/sources/FixedFactorSignals.py": "c8d529c72813196265ba660fd57f9a76cbfa6109eb5b43595b383a5343ef85bf",
+    "research/crypto/native_factors_20261106/sources/native_reductions.py": "ce4aef0359be42ad91e88b648378088343f35fc33e287874ae04736e7dbe9456",
+    "research/crypto/native_factors_20261106/sources/factor_inputs.py": "fad50a2085a1993fe764eca59eb8b368b446d4ab208e36c0e1268df888dfee5b",
+    "research/crypto/native_factors_20261106/test_native_factors.py": "24e0776d9dc58d176768bbe25dd03acfc6cf1f6c5675cab2c3ba1aed4737cbc1",
+    "research/crypto/native_factors_20261106/test_native_reductions.py": "5796cbc9d0ff234980ce28286d4436f95b244d0b464de9cbfd3c0d5dd6b183c5",
+    "research/crypto/native_factors_20261106/README.md": "9cdf44bc927b1e6fffd45917f8775c0fc0d0aff9f8003a84eb0dfe352c6c5a8e",
+    "research/crypto/native_factors_20261106/reduction_regression_checks.txt": "f52e47bd0150b9af7aed07483c1558c57a0743b866311df6ed6b5acc96d63d01",
+    "freqtrade/freqtradebot.py": "41b94e988989c773e02a00030a530866e4e5be0a31fd0096decc075ce4e91b74",
+    "freqtrade/persistence/custom_data.py": "a48ece9ccf3b1236662337c939df61e89e8839e260209187ef9c408316de035a",
+    "freqtrade/persistence/models.py": "729d261a8927f96dec2700f2f1f1dd16f2f91d43f880c30f48fb0a8d15c38bdf",
+    "freqtrade/persistence/trade_model.py": "a011ca8686a205fd279ef665a2a3d5a1a4e3fb8cec9cbbac7f429eed0da85c2d"
+  },
+  "closed_trade_historical_quantity_not_exposure_checked": true
+}

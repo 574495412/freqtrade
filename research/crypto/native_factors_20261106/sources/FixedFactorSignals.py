@@ -10,9 +10,13 @@ from freqtrade.strategy import IStrategy
 
 from AverageStrategy import AverageStrategy
 from factor_inputs import cross_section, effective_daily_scale, scale_risk_approved_stake
+from native_reductions import scale_target
 
 
 class PendingRD1:
+    position_adjustment_enable = True
+    max_entry_position_adjustment = 0
+
     def bot_start(self, **kwargs):
         raise OperationalException("F1/F2 native signals only: shared RD1 lifecycle adapter is not yet integrated; financial run refused")
 
@@ -22,6 +26,20 @@ class PendingRD1:
     def custom_stake_amount(self, **kwargs):
         return 0.0
 
+    def transform_reduction_target(self, target, current_time):
+        return target
+
+    def adjust_trade_position(self, trade, current_time, **kwargs):
+        controller = getattr(self, "rd1_reduction_controller", None)
+        provider = getattr(self, "rd1_reduction_target", None)
+        if controller is None or provider is None:
+            return None
+        target = provider(trade, current_time)
+        if target is None:
+            return None
+        target = self.transform_reduction_target(target, current_time)
+        return None if target is None else controller.issue(trade, target, current_time)
+
 
 class F1Momentum168Native(PendingRD1, IStrategy):
     INTERFACE_VERSION = 3
@@ -30,7 +48,6 @@ class F1Momentum168Native(PendingRD1, IStrategy):
     can_short = False
     minimal_roi = {}
     stoploss = -0.05
-    position_adjustment_enable = False
 
     def informative_pairs(self):
         return [(p, "1h") for p in self.config["exchange"]["pair_whitelist"]]
@@ -79,3 +96,9 @@ class F2Volatility24Native(AverageRD1ControlNative):
 
     def scale_approved_stake(self, pair, current_time, base_stake, min_stake, max_stake):
         return scale_risk_approved_stake(base_stake, self.factor_scale(pair, current_time), min_stake, max_stake)
+
+    def transform_reduction_target(self, target, current_time):
+        # Target is the shared unscaled RD1 cap, never the already-scaled holding.
+        if float(target.max_remaining_quantity) == 0:
+            return target
+        return scale_target(target, self.factor_scale(target.pair, current_time))
