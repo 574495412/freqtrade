@@ -1,0 +1,18 @@
+{
+  "registered_at_utc": "2026-11-06T13:09:55.967117+00:00",
+  "scope": "Fixed initial entry recovery from recorded factor decision and captured query; no strategy expansion",
+  "financial_runs": 0,
+  "real_orders": false,
+  "source_hashes": {
+    "research/crypto/native_submit_recovery_20261106/entry_recovery.py": "29cd0ab187c4194bab2ef5c4fb20bd9354a606f47364a06ce2022ee6a5cd8283",
+    "research/crypto/native_submit_recovery_20261106/test_entry_recovery.py": "350764af7da8aabe1f23a5f7461538ea586caecdc3e018f464c42ed335a5289c"
+  },
+  "required": [
+    "original source/rules/decision binding",
+    "GET only, no duplicate POST",
+    "unknown capacity held until complete account",
+    "native Trade/Order constructor and recalc",
+    "zero terminal without phantom Trade",
+    "native and journal acknowledgement faults"
+  ]
+}

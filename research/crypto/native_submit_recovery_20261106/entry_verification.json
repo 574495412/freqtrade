@@ -1,0 +1,52 @@
+{
+  "observed_at_utc": "2026-11-06T13:53:07.514976+00:00",
+  "tests_passed": 10,
+  "source_manifest": "research/crypto/native_submit_recovery_20261106/entry_test_004_sources.json",
+  "source_manifest_sha256": "9802e21f199f10b27fe81097ed34e96621db6925ca6bcb95497991078bea17fc",
+  "checks": {
+    "current_entry_sources": {
+      "files": 3,
+      "mismatches": []
+    },
+    "frozen_native": {
+      "files": 22,
+      "mismatches": []
+    },
+    "frozen_financial_inputs": {
+      "files": 145,
+      "mismatches": []
+    }
+  },
+  "logs": [
+    {
+      "path": "research/crypto/native_submit_recovery_20261106/entry_test_001.log.gz",
+      "archive_sha256": "98351552fa40d348de01191fa8e6556ba7a5616c3d1cc3bbef66b2ed5cbc340f",
+      "raw_sha256": "3a4cc44c13bbf85ec3cf84e73d12964503f10ed533c4a3fef9b440689c928366"
+    },
+    {
+      "path": "research/crypto/native_submit_recovery_20261106/entry_test_002.log.gz",
+      "archive_sha256": "77ebe16250df6d1f14137d55bdd736c2e4256cb91cd17ec35176d04d7dfb8077",
+      "raw_sha256": "8a38de881fadae1a7ebe6987f9a6c887904a689cf07af80838e45c2ca41715cf"
+    },
+    {
+      "path": "research/crypto/native_submit_recovery_20261106/entry_test_003.log.gz",
+      "archive_sha256": "e7cfdde4c1400b9005c7f7a1bc1518832f723dc1b74ea5b2d7ecea151c4eb7e0",
+      "raw_sha256": "4a2e2175a9a33884455a11b71d7bafa797e3492c2ed6501f6480af7e80c09fcf"
+    },
+    {
+      "path": "research/crypto/native_submit_recovery_20261106/entry_test_004.log.gz",
+      "archive_sha256": "22ac0d616f1b8f7c57adb6e2a2f81a07247c40e362dcc4100a18c7b8335a1954",
+      "raw_sha256": "d2aef50ec273719faf5d9804e951b7435b846ad3bf2607465354eeff209745e2"
+    }
+  ],
+  "scope": "isolated synthetic registered F1/F2 initial entry recovery",
+  "new_financial_accounts": 0,
+  "goal_complete": false,
+  "remaining": [
+    "zero-fill terminal cleanup when an empty native Trade already exists",
+    "original already-committed fill lacking source time when native row used local wall time",
+    "new post-close funding adjustment",
+    "historical execution qualification and full RD1 economic comparison"
+  ],
+  "observed_development_failure": "Terminal partial recovery initially used the native wall-time fallback and produced different order_filled_date values across the prepared and committed paths. Unknown fill time stays unset in the pending row and source fill time is applied in terminal reconciliation."
+}
