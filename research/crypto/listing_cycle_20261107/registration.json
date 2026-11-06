@@ -1,0 +1,75 @@
+{
+  "registered_utc": "2026-11-06T22:08:15.974805+00:00",
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_cycle_20261107/study.py",
+      "sha256": "0251f076d70794e57c843e1d4c9d597d6f4f17bcac0d1377a2c10f5dd98e06c1"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_reversal_20261107/replay.py",
+      "sha256": "e9b3bbc0b78170a035a15c25af62d5d99f4475a15dca294a015c4ec382bafe66"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_reversal_20261107/audit.py",
+      "sha256": "25b4d7eb06f5a409d23ec9dd7425ffeaedcd2009ae9d8e9fa5a651406f5b7dd5"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_funding_20261107/replicate.py",
+      "sha256": "73e4549717be5ff98c8a343ad7c8ef3ff3b687f927d82f4fa1fa45a9194343c9"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_funding_20261107/verify_regimes.py",
+      "sha256": "7634a76e4779b06ea1f5eb72e7260a9e2ebe8a7b364f24099a06d07e07669826"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_funding_20261107/registration.json",
+      "sha256": "a11bd2e5111ffd804fea10d3254cee38c80cccea580aed567f4b67a156f56953"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_funding_20261107/result.json",
+      "sha256": "22c69457a77f3f3f23465b51d1302097b7e2f537198f24c11c1821ad5cecffae"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_funding_20261107/regime_result.json",
+      "sha256": "6a6da05a31fde685d188befface6d8e1ddcc6a1279cca76851b91ff3e05cd216"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/listing_funding_20261107_v001/admission.json",
+      "sha256": "98389fcde93c63e36c4a1275c4ff0ec5d839dd330c6c04e9a9c066d0ee24da7c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_reversal_20261107/registration.json",
+      "sha256": "9e072bf515831847f54ca308ccf34ec5eff4dd3decf81c4a12be0b32d9bb38ea"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_reversal_20261107/coverage_result.json",
+      "sha256": "115549ea1ba980794b5c88c26e900cfb7135ca9a48f352ccc3e58b7cec550fc8"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_reversal_20261107/reset_2026_registration.json",
+      "sha256": "3cdc4a863fc63f9de61340c230879ad5c89591dd8e389d64a9ab153854506535"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_reversal_20261107/reset_2026_result.json",
+      "sha256": "e7445aa8ce39e96a6a24a0b1cccbb95838f00162b7cf8e0078c85625c0f3e567"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/listing_reversal_20261107_v001/admission.json",
+      "sha256": "1b0164fd505ec9bb7c39ca0350d96c96702eceee2869c1d06f4fd3de5f5546a0"
+    }
+  ],
+  "windows": [
+    "2024",
+    "2025_2026",
+    "reset_2026"
+  ],
+  "cases": [
+    "AllLaunches",
+    "HalfRisk",
+    "MatureCycle"
+  ],
+  "factor": "Use the last 12 distinct UTC decision-date cohorts with released 72h short labels in 90 days. Each date gets one vote via its median across eligible symbols. Eligible = original 5m-quote 5m USDT threshold by 24h. Label uses the next 5m close at entry and first 5m close strictly after the 72h expiry, adverse slips and fees at 40bps each side, and actual published funds during the hold. Labels are fixed size and ignore stops, capacity and account cash. Release the whole UTC decision date on D+4 00:10 UTC. Never use a partially observed or still maturing cohort. When an unresolved admitted-universe listing is in a date cohort, omit its known decision date from feature history. If launch hour is unknown, omit the full calendar date following its first archive day. A median >0 enables short entries under the existing A05 account rules. Incomplete history holds cash. No pre-2024 or 2024-to-2025 history bridging. The 2026 account reset retains causal 2025 signal history.",
+  "controls": "AllLaunches reproduces frozen original. HalfRisk uses the same entries but halves per-position and total collateral limits. MatureCycle uses original risk and filters entries only. Use the original model unmodified at both 15 and 40 bps. Report shared-market cohort selection, audited float NAV, exact funding, partial fills and halts.",
+  "gate": "Both costs in both 2024 and continuous 2025-26 need positive full and both original time-slice returns, >=30 closed trades across >=12 weeks, no catastrophic loss or halt, 5m observed max drawdown <=35% and below full risk, net return > half risk, >=80% of positive full-risk net return retained, and return/drawdown >= both controls. Apply the same checks to overlapping 2026 empty-wallet reset with >=18 closes and >=8 weeks. Require >=25% annualized net at stress cost in each window. Original account economics and dates were known. Candidate and half-risk outputs were unobserved; all windows retrospective.",
+  "orders_enabled": false
+}
