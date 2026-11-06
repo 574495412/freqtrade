@@ -1,4 +1,12 @@
-# 当前 Codex 持续目标：验证因子的成本后收益增量
+# 因子研究目标与当前状态
+
+当前机器可读入口：[current_status.json](../research/crypto/official_factor_20261106/current_status.json)。本次核对了 348 项文件身份，保留旧 P1 的 16 个原生账户、16 个账本控制和 2 次确定性复核记录；它们与后续 24 个官方样例账户分开计数。F1/F2 的配对收益实验仍为 0，整个持续目标未完成。
+
+当前待明确的是后续策略范围：“全部采用官方方案”是否允许使用官方框架接口实现已指定的 F1/F2，还是只允许官方仓库逐字原版。已向用户提出范围问题；未把未回复当作同意扩展。官方样例当前已无合格候选，也没有据结果调整原版参数。
+
+官方实现与 RD1 不等价：固定核心的 `MaxDrawdown` 即使使用 equity 模式也读取已平仓交易，返回新增入场锁；它不是含浮亏权益的 500 USDT 清仓线或永久锁。原生 `confirm_trade_entry` 在 `execute_entry` 的 initial 模式调用，不能单凭这个回调宣称所有入场替换／加仓都有原子风险预留。旧隔离接缝的 48 项测试仍模拟交易所、钱包、数据库事务和成交后保护；完整原生集成未完成。
+
+历史缺盘口／接收时刻阻止的是相应执行认证，不能再扩大为“所有 K 线成本研究都禁止”。但官方样例的成本回测也不能替代 F1/F2 的同 RD1 控制或证明这些缺口已经补齐。后续范围明确后，仍须遵守冻结参数、独立登记与预算；本次核对不新增账户、诊断或测试。
 
 **当前结果（2026-11-06）：官方原版首轮 24/24 账户已完成，全部亏损，未采用任何候选。[结果与核验](official-factor-results-20261106.md)。持续研发尚未找到合格盈利策略，下文旧 F1/F2 准入状态不再阻止官方成本情景研究。**
 
@@ -23,4 +31,4 @@
 
 现货／合约初始各不超过 1000 USDT、1x。仅修改隔离研究代码与证据，现有 paper 服务、配置、数据库和信号保持不变；真实订单关闭。已完成工作提交推送，失败记录保留。目前没有证据证明收益已提升。
 
-最新机器可读状态：`research/crypto/rd_program_20261105/candidate_readiness_execution_update_20261106.json`。合成接缝登记与结果位于 `execution_extension/native_seam_registration.json`、`native_seam_verification.json`，历史阶段收据不覆盖。
+上述旧 F1/F2 阶段的历史机器状态：`research/crypto/rd_program_20261105/candidate_readiness_execution_update_20261106.json`。合成接缝登记与结果位于 `execution_extension/native_seam_registration.json`、`native_seam_verification.json`，历史阶段收据不覆盖；当前跨阶段状态请使用文首入口。
