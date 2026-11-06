@@ -1,0 +1,540 @@
+{
+  "registration_sha256": "a1541d5fcb0a43e5e91d5d13619d339062706f1683b29e386db61dfb06868b64",
+  "accounts": {
+    "2024": {
+      "FullShort_15bps": {
+        "economics": {
+          "net_return": -0.3514372430642253,
+          "annualized_net_return": -0.35066950648096074,
+          "max_drawdown": 0.4022204464944681,
+          "first_slice_return": 0.02107480681999152,
+          "second_slice_return": -0.3648234658186882,
+          "opportunities": 127,
+          "completed": 63,
+          "entry_weeks": 26,
+          "catastrophic_losses": 0,
+          "halted": true
+        },
+        "verification": {
+          "nav_points": 105409,
+          "maximum_equity_error_usdt": 1.1368683772161603e-12,
+          "events": 1008,
+          "campaigns": 63,
+          "net_funding_usdt": 15.78517103372512,
+          "hashes": {
+            "closed.json": "784e740cd3ba9ff568fc637fc04e6d128febfc89a72cebcab6b603e50b48b518",
+            "events.json": "463d22289b68c7958a32159a26d893167536c496b31ae937ae502943d88b29e0",
+            "nav.parquet": "bbc62980d534668996df03a2364d888b0d879903ff5906a965a1e4a84d56b7e7"
+          }
+        }
+      },
+      "FullShort_40bps": {
+        "economics": {
+          "net_return": -0.3651006186891208,
+          "annualized_net_return": -0.3643120757366016,
+          "max_drawdown": 0.4136495631789908,
+          "first_slice_return": -0.04069510357699835,
+          "second_slice_return": -0.33816726707196654,
+          "opportunities": 127,
+          "completed": 62,
+          "entry_weeks": 26,
+          "catastrophic_losses": 0,
+          "halted": true
+        },
+        "verification": {
+          "nav_points": 105409,
+          "maximum_equity_error_usdt": 6.821210263296962e-13,
+          "events": 1000,
+          "campaigns": 62,
+          "net_funding_usdt": 16.35694629790924,
+          "hashes": {
+            "closed.json": "c12600d9f3acccb094697420231a4cb09a319baa4e7d91046fb86adb44d53547",
+            "events.json": "8f292aa7d93f83e02593ef16620651b7370f97a5e2460a8b4ee1983ed781dcd0",
+            "nav.parquet": "5b4805afda63b5f76e352ccdd11d39fcb6312fd14937bd0a1fdce838834d0634"
+          }
+        }
+      },
+      "SameShort_15bps": {
+        "economics": {
+          "net_return": 0.013189994799739813,
+          "annualized_net_return": 0.013153720577989025,
+          "max_drawdown": 0.32268687132332674,
+          "first_slice_return": 0.02420161367119733,
+          "second_slice_return": -0.010751417225351556,
+          "opportunities": 127,
+          "completed": 110,
+          "entry_weeks": 38,
+          "catastrophic_losses": 0,
+          "halted": false
+        },
+        "verification": {
+          "nav_points": 105409,
+          "maximum_equity_error_usdt": 9.094947017729282e-13,
+          "events": 1875,
+          "campaigns": 110,
+          "net_funding_usdt": 22.12757696963586,
+          "hashes": {
+            "closed.json": "2b66f1dece07fed623f8016a0f8aa278532f48c62f71b79af91d84a91e620954",
+            "events.json": "d205f64cf79259b708b3f0cb96e5630b1c9f4db0e8174e8f43abf07952ea08b1",
+            "nav.parquet": "666fc475ad4433738dee767e357269d0fcdbdc18fce019f7039d026c8375d836"
+          }
+        }
+      },
+      "SameShort_40bps": {
+        "economics": {
+          "net_return": -0.07075301405955359,
+          "annualized_net_return": -0.07056668716644321,
+          "max_drawdown": 0.3670074989327816,
+          "first_slice_return": -0.01749081971381583,
+          "second_slice_return": -0.05421037829918651,
+          "opportunities": 127,
+          "completed": 110,
+          "entry_weeks": 38,
+          "catastrophic_losses": 0,
+          "halted": false
+        },
+        "verification": {
+          "nav_points": 105409,
+          "maximum_equity_error_usdt": 2.7284841053187847e-12,
+          "events": 1873,
+          "campaigns": 110,
+          "net_funding_usdt": 21.474607600383184,
+          "hashes": {
+            "closed.json": "51b6a0e9f0a65f76e9ec6dfe4387947034d9af99843a28c25389dc75e06353ed",
+            "events.json": "671c3224539c1188f44ba11dfde5c96b9be72109055c24174c0be8048d268da7",
+            "nav.parquet": "8badb4e5ffc79f7d736c210af71e24407e1b5f6fd9ad175ae6d73cfd76cf9ac0"
+          }
+        }
+      },
+      "PairedBTC_15bps": {
+        "economics": {
+          "net_return": 0.06653736481655104,
+          "annualized_net_return": 0.06634966698982936,
+          "max_drawdown": 0.29480257463068615,
+          "first_slice_return": 0.021124713587557187,
+          "second_slice_return": 0.04447316828660797,
+          "opportunities": 127,
+          "completed": 110,
+          "entry_weeks": 38,
+          "catastrophic_losses": 0,
+          "halted": false
+        },
+        "verification": {
+          "nav_points": 105409,
+          "maximum_equity_error_usdt": 0.0,
+          "events": 2932,
+          "attribution_usdt": {
+            "short_entry": -8.312744344232554,
+            "btc_entry": -4.156372172116277,
+            "short_funding": 22.729090293825436,
+            "btc_funding": -6.178506192308782,
+            "short_exit": 10.172198657788194,
+            "btc_exit": 52.283698573597206
+          },
+          "files": {
+            "closed.json": "ea36ef3b48ae4ce3d852d946221af5bf4104b01d97cba6c3e4fda2268ac66736",
+            "events.json": "0dcc4fb54c11a9da5467f18c792ffab3f9fbea899efa6b64ee83af8f80780f0f",
+            "nav.parquet": "a5cb4cce11e79c2df3429d3ed76bb037132e0333be49dc47026ffe79cfc6baac"
+          }
+        }
+      },
+      "PairedBTC_40bps": {
+        "economics": {
+          "net_return": -0.0653393796657028,
+          "annualized_net_return": -0.06516680447397172,
+          "max_drawdown": 0.36378375546667474,
+          "first_slice_return": -0.03555518160684967,
+          "second_slice_return": -0.030882221036218738,
+          "opportunities": 127,
+          "completed": 110,
+          "entry_weeks": 38,
+          "catastrophic_losses": 0,
+          "halted": false
+        },
+        "verification": {
+          "nav_points": 105409,
+          "maximum_equity_error_usdt": 0.0,
+          "events": 2929,
+          "attribution_usdt": {
+            "short_entry": -7.769960745167326,
+            "btc_entry": -3.884980372583663,
+            "short_funding": 21.65960399607396,
+            "btc_funding": -5.7978802570269155,
+            "short_exit": -78.51160247608823,
+            "btc_exit": 8.965440189088424
+          },
+          "files": {
+            "closed.json": "50ebc879021ff299e611602c20ad36cdf4d6437e11c8df5c71e0861e4359da1a",
+            "events.json": "21a724a3fa09c8507199b951f624961c6fa11a21571e7d1f489b1bde3416ae76",
+            "nav.parquet": "feb2e66f888563acdd1974f2ad8c3c6179bcc934796daff872802a26696a91fa"
+          }
+        }
+      }
+    },
+    "2025_2026": {
+      "FullShort_15bps": {
+        "economics": {
+          "net_return": 1.3348193339102483,
+          "annualized_net_return": 0.656799283593912,
+          "max_drawdown": 0.40785886109783887,
+          "first_slice_return": 1.3348193339102483,
+          "second_slice_return": 0.0,
+          "opportunities": 287,
+          "completed": 114,
+          "entry_weeks": 33,
+          "catastrophic_losses": 0,
+          "halted": true
+        },
+        "verification": {
+          "nav_points": 176545,
+          "maximum_equity_error_usdt": 8.640199666842818e-12,
+          "events": 2208,
+          "campaigns": 114,
+          "net_funding_usdt": -564.4263025226735,
+          "hashes": {
+            "closed.json": "c979ffbce6cd8030928f507e47687c7279fc506c91a45fbbbf5d9640c0c27efd",
+            "events.json": "17152e312bfe92564f6eb641460792c328a9d82a2fefb85fab21126ed230229a",
+            "nav.parquet": "166bb2fe7999067a729624a593a2dd282c0dab18dcaefd59632542e3940a159b"
+          }
+        }
+      },
+      "FullShort_40bps": {
+        "economics": {
+          "net_return": 1.1120705366282988,
+          "annualized_net_return": 0.5607806792443333,
+          "max_drawdown": 0.40194408047005226,
+          "first_slice_return": 1.1120705366282988,
+          "second_slice_return": 0.0,
+          "opportunities": 287,
+          "completed": 111,
+          "entry_weeks": 32,
+          "catastrophic_losses": 0,
+          "halted": true
+        },
+        "verification": {
+          "nav_points": 176545,
+          "maximum_equity_error_usdt": 3.637978807091713e-12,
+          "events": 2148,
+          "campaigns": 111,
+          "net_funding_usdt": -524.4954057208696,
+          "hashes": {
+            "closed.json": "f041c28350992734f4cb52bd80f5bfb13a9f9a9c5f133aa97c9a2e04438b1f3d",
+            "events.json": "b5daa8a4a0a2a6c8732f8ba62b9c81320752bcfe1282797a758da85848ef16b9",
+            "nav.parquet": "70067ae8e0ced9684675433d58dfd01ed96557868765a35970cdd39ef0137fda"
+          }
+        }
+      },
+      "SameShort_15bps": {
+        "economics": {
+          "net_return": 0.5341437252679302,
+          "annualized_net_return": 0.29024043611386086,
+          "max_drawdown": 0.4001377873268045,
+          "first_slice_return": 0.5341437252679302,
+          "second_slice_return": 0.0,
+          "opportunities": 287,
+          "completed": 125,
+          "entry_weeks": 36,
+          "catastrophic_losses": 0,
+          "halted": true
+        },
+        "verification": {
+          "nav_points": 176545,
+          "maximum_equity_error_usdt": 2.5011104298755527e-12,
+          "events": 2327,
+          "campaigns": 125,
+          "net_funding_usdt": -295.6798768282309,
+          "hashes": {
+            "closed.json": "fbfd4897e8eac4528c6541943a39bc155d6faab3a59c26932f7f8a353228e131",
+            "events.json": "11b34de59837846a0cc939ffddbb80ba7bd688be21b12a69217434f862b1892e",
+            "nav.parquet": "eb6c325ffd52e4941ece813d14134255f82339498c08df3952eebae06acdb7e8"
+          }
+        }
+      },
+      "SameShort_40bps": {
+        "economics": {
+          "net_return": 0.41251358029354934,
+          "annualized_net_return": 0.22831698666307743,
+          "max_drawdown": 0.4030326948625057,
+          "first_slice_return": 0.41251358029354934,
+          "second_slice_return": 0.0,
+          "opportunities": 287,
+          "completed": 121,
+          "entry_weeks": 34,
+          "catastrophic_losses": 0,
+          "halted": true
+        },
+        "verification": {
+          "nav_points": 176545,
+          "maximum_equity_error_usdt": 2.5011104298755527e-12,
+          "events": 2272,
+          "campaigns": 121,
+          "net_funding_usdt": -281.64291538915705,
+          "hashes": {
+            "closed.json": "8c64c6710f86ccb2828e8692c92b2bf921f28bb7b1ce4c64764ff7a5999828c7",
+            "events.json": "52ca6d167bc74c7877eb8bc4e07d3aba6b2e7b206bb1f729a70e3ac438991cbb",
+            "nav.parquet": "f05d65ad8d617703b96b3603609cc0d46c2ce25c549a57f2e58e97e0e298eabb"
+          }
+        }
+      },
+      "PairedBTC_15bps": {
+        "economics": {
+          "net_return": 0.5364043847046771,
+          "annualized_net_return": 0.29137216590544157,
+          "max_drawdown": 0.4030450691366393,
+          "first_slice_return": 0.5364043847046771,
+          "second_slice_return": 0.0,
+          "opportunities": 287,
+          "completed": 121,
+          "entry_weeks": 34,
+          "catastrophic_losses": 0,
+          "halted": true
+        },
+        "verification": {
+          "nav_points": 176545,
+          "maximum_equity_error_usdt": 0.0,
+          "events": 3456,
+          "attribution_usdt": {
+            "short_entry": -17.198541162980803,
+            "btc_entry": -8.599270581490401,
+            "short_funding": -294.93476268425076,
+            "btc_funding": -5.923007504192402,
+            "short_exit": 895.0786074808929,
+            "btc_exit": -32.01864084330259
+          },
+          "files": {
+            "closed.json": "8d7dcea94fc3dda6c68a29b6158151e44f25a0936bae1e1e89bca9c81ac8b0b7",
+            "events.json": "32641fa1a4ac4937ee638ddff573ce8d05567504c5851df9b4e149f4279df37d",
+            "nav.parquet": "0fc7e6f4fbbe7a9d3e417bbd37cdd4a11953681aa1718be0c2523e6f44d4342c"
+          }
+        }
+      },
+      "PairedBTC_40bps": {
+        "economics": {
+          "net_return": 0.35556481796336636,
+          "annualized_net_return": 0.19858458356720043,
+          "max_drawdown": 0.40704491370237406,
+          "first_slice_return": 0.35556481796336636,
+          "second_slice_return": 0.0,
+          "opportunities": 287,
+          "completed": 121,
+          "entry_weeks": 34,
+          "catastrophic_losses": 0,
+          "halted": true
+        },
+        "verification": {
+          "nav_points": 176545,
+          "maximum_equity_error_usdt": 0.0,
+          "events": 3450,
+          "attribution_usdt": {
+            "short_entry": -15.880754616690924,
+            "btc_entry": -7.940377308345462,
+            "short_funding": -276.1694822422478,
+            "btc_funding": -5.440128726305447,
+            "short_exit": 768.2055034271295,
+            "btc_exit": -107.20994257017657
+          },
+          "files": {
+            "closed.json": "2a38aeb1fe51e1559234b1406abca0bcd612177c0e10419bd4a7279b30f5ba43",
+            "events.json": "174f0597a506d2a01443349ba7bc40a3548373cbe1579c0fdd08cf7a6936ed38",
+            "nav.parquet": "3ccfde750b0a08b88dc876075ea07a36e5028f2522615ae37ed1e74ac533ef2f"
+          }
+        }
+      }
+    },
+    "reset_2026": {
+      "FullShort_15bps": {
+        "economics": {
+          "net_return": 0.36290602075179956,
+          "annualized_net_return": 0.5772606057558813,
+          "max_drawdown": 0.2379588821754498,
+          "first_slice_return": 0.3413116995462375,
+          "second_slice_return": 0.01609940568837742,
+          "opportunities": 48,
+          "completed": 46,
+          "entry_weeks": 26,
+          "catastrophic_losses": 0,
+          "halted": false
+        },
+        "verification": {
+          "nav_points": 71425,
+          "maximum_equity_error_usdt": 2.0463630789890885e-12,
+          "events": 796,
+          "campaigns": 46,
+          "net_funding_usdt": -115.1528056076206,
+          "hashes": {
+            "closed.json": "58e94508183891ce1cc39347778154dfecd7be2466ed2e48ccc5dfff59ab706d",
+            "events.json": "9cd2a9e3f61075b7721eed2535e581a140e29a41f7bf82573f3588b31f6609a4",
+            "nav.parquet": "37c02392b14e9f5c31fd2956fc51f3beaa1bdf6e2cfceaee7315abd88fc158bf"
+          }
+        }
+      },
+      "FullShort_40bps": {
+        "economics": {
+          "net_return": 0.291627239880196,
+          "annualized_net_return": 0.4573667483425621,
+          "max_drawdown": 0.24558176890096595,
+          "first_slice_return": 0.29620747458840935,
+          "second_slice_return": -0.0035335660363073895,
+          "opportunities": 48,
+          "completed": 46,
+          "entry_weeks": 26,
+          "catastrophic_losses": 0,
+          "halted": false
+        },
+        "verification": {
+          "nav_points": 71425,
+          "maximum_equity_error_usdt": 2.7284841053187847e-12,
+          "events": 795,
+          "campaigns": 46,
+          "net_funding_usdt": -113.04952183068039,
+          "hashes": {
+            "closed.json": "c2ba92f607e1ba4b2ea7c78fd85625ed5afb29c876523440410df762fd90f802",
+            "events.json": "b1ad05041a21bdbb157b79425952b8a08c3e3b39157dc5f2c3bb815df9421637",
+            "nav.parquet": "d1dd114d8cc0b85bf34edde86eb0b492281c5ab4a46687fd7f8274dced6211f6"
+          }
+        }
+      },
+      "SameShort_15bps": {
+        "economics": {
+          "net_return": 0.2558321746816188,
+          "annualized_net_return": 0.39831489561344813,
+          "max_drawdown": 0.1632102930876702,
+          "first_slice_return": 0.23434744710740296,
+          "second_slice_return": 0.017405737440105318,
+          "opportunities": 48,
+          "completed": 46,
+          "entry_weeks": 26,
+          "catastrophic_losses": 0,
+          "halted": false
+        },
+        "verification": {
+          "nav_points": 71425,
+          "maximum_equity_error_usdt": 2.2737367544323206e-12,
+          "events": 793,
+          "campaigns": 46,
+          "net_funding_usdt": -75.73669317069432,
+          "hashes": {
+            "closed.json": "ef50479a735f849b5dbd726576aefc9ee804c6feca734e8df27f55f3f65c93bc",
+            "events.json": "36f6254a4e7e34e7766928b305fcd6acaf3739f5376e743a553f557f6f468a5e",
+            "nav.parquet": "a55983fe5924c0e595efd9df3180255eafa00eb3c8eea44ba823854bbfe23c06"
+          }
+        }
+      },
+      "SameShort_40bps": {
+        "economics": {
+          "net_return": 0.21092347839019077,
+          "annualized_net_return": 0.3253452127794978,
+          "max_drawdown": 0.16886401610008384,
+          "first_slice_return": 0.20596457493463838,
+          "second_slice_return": 0.004111981030471723,
+          "opportunities": 48,
+          "completed": 46,
+          "entry_weeks": 26,
+          "catastrophic_losses": 0,
+          "halted": false
+        },
+        "verification": {
+          "nav_points": 71425,
+          "maximum_equity_error_usdt": 2.5011104298755527e-12,
+          "events": 793,
+          "campaigns": 46,
+          "net_funding_usdt": -74.88852415431188,
+          "hashes": {
+            "closed.json": "0a075af1f2617e2797f265e444cfd3adb3bb1a3dc6237fae3609c7548d1d04a6",
+            "events.json": "8f5bb09744f3c5d08276490109ab390650f74c148f8a431037faa6174094efe8",
+            "nav.parquet": "0b872c9be676e45d573a11f3a5263b8fa5751ad006bfd9392d3a64122fdc2d5e"
+          }
+        }
+      },
+      "PairedBTC_15bps": {
+        "economics": {
+          "net_return": 0.19572337865122602,
+          "annualized_net_return": 0.30093288285381936,
+          "max_drawdown": 0.16835589051372934,
+          "first_slice_return": 0.20002434701466165,
+          "second_slice_return": -0.0035840675850745685,
+          "opportunities": 48,
+          "completed": 46,
+          "entry_weeks": 26,
+          "catastrophic_losses": 0,
+          "halted": false
+        },
+        "verification": {
+          "nav_points": 71425,
+          "maximum_equity_error_usdt": 0.0,
+          "events": 1215,
+          "attribution_usdt": {
+            "short_entry": -4.241171168606544,
+            "btc_entry": -2.1205855843032717,
+            "short_funding": -74.2589166243758,
+            "btc_funding": -0.5615299993554472,
+            "short_exit": 330.867043506781,
+            "btc_exit": -53.961461478911545
+          },
+          "files": {
+            "closed.json": "304ea8785a152589a445cceb136c825602081387a39059561b1d5f62f4682343",
+            "events.json": "15ba924399316333e6e82ab937bec5cf6512eb1adb14a62508a78563ea82ccec",
+            "nav.parquet": "1c51d67948aac11f1e20e5af7ead7868aad8724bc43b67ef57061bde3046007a"
+          }
+        }
+      },
+      "PairedBTC_40bps": {
+        "economics": {
+          "net_return": 0.13142407017595126,
+          "annualized_net_return": 0.19929079445283282,
+          "max_drawdown": 0.17639849582444178,
+          "first_slice_return": 0.15807512914352806,
+          "second_slice_return": -0.02301323834429203,
+          "opportunities": 48,
+          "completed": 46,
+          "entry_weeks": 26,
+          "catastrophic_losses": 0,
+          "halted": false
+        },
+        "verification": {
+          "nav_points": 71425,
+          "maximum_equity_error_usdt": 0.0,
+          "events": 1215,
+          "attribution_usdt": {
+            "short_entry": -4.130111247944782,
+            "btc_entry": -2.065055623972391,
+            "short_funding": -72.84773884119939,
+            "btc_funding": -0.543707225268986,
+            "short_exit": 283.966953242904,
+            "btc_exit": -72.95627012856986
+          },
+          "files": {
+            "closed.json": "925c37e0f5e9fb5281d062f50de0c4bf4c8b50cb4edff21cf30af459d40b9be7",
+            "events.json": "9ed8b526e70f88da594f1c07cf87c029522b5d8cb5438e1f50d67c3aeae737dc",
+            "nav.parquet": "8357d0cb85940f1f20cecf93d66fec81ec296d70951a3545857d4bd91d0f0630"
+          }
+        }
+      }
+    }
+  },
+  "failed_gates": {
+    "2024/15bps": [],
+    "2024/40bps": [
+      "positive_increment"
+    ],
+    "2025_2026/15bps": [
+      "drawdown",
+      "no_stop"
+    ],
+    "2025_2026/40bps": [
+      "positive_increment",
+      "drawdown",
+      "no_stop"
+    ],
+    "reset_2026/15bps": [
+      "positive_increment"
+    ],
+    "reset_2026/40bps": [
+      "positive_increment"
+    ]
+  },
+  "historical_screen_passed": false,
+  "high_return_screen_passed": false,
+  "full_short_baseline_exact": true,
+  "paper_eligible": false
+}

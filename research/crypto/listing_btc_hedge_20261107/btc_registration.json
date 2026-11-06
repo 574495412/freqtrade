@@ -1,0 +1,13 @@
+{
+  "registered_utc": "2026-11-06T18:52:45.712893+00:00",
+  "code_sha256": "f8c096e3a85881d4f3e311a7b37b889ac1516d4f8b5b72fe7923f305c72ce02a",
+  "symbol": "BTCUSDT",
+  "start": "2024-01-01T00:00:00+00:00",
+  "end": "2026-09-06T00:00:00+00:00",
+  "price_sources": [
+    "Binance monthly 5m archive",
+    "Binance daily 5m gap archive"
+  ],
+  "funding_source": "https://fapi.binance.com/fapi/v1/fundingRate",
+  "policy": "Require exact continuous mark and trade clocks; no synthetic prices. Funding keeps real millisecond times, rate and settlement mark. Verify all 8h scheduled events, accepting up to 60s publisher jitter without moving cash times."
+}
