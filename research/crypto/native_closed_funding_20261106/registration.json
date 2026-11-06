@@ -1,0 +1,17 @@
+{
+  "registered_at_utc": "2026-11-06T14:03:02.801775+00:00",
+  "scope": "Isolated registered native futures funding observation after a previously reconciled close",
+  "financial_accounts": 0,
+  "requirements": [
+    "reuse complete native batch",
+    "source ledger funding and cash exactly once",
+    "native closed profit delta equals funding credit",
+    "preserve original order fills and timestamps",
+    "reject changes before accepted complete checkpoints",
+    "native SQLite commit fault recovery"
+  ],
+  "source_hashes": {
+    "research/crypto/native_closed_funding_20261106/test_closed_funding.py": "e5bf5ca7ec46b4d06c3c0c5c6b2b13d88c54242d21f1bbca4993a0fb9c8e2640",
+    "research/crypto/native_closed_funding_20261106/closed_funding.py": "efa70d423e67e138652a386bcbac1d08b4c4e99028bdf50c3b5c863396d65869"
+  }
+}

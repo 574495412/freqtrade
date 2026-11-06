@@ -1,0 +1,39 @@
+{
+  "observed_at_utc": "2026-11-06T14:05:12.936627+00:00",
+  "tests_passed": 6,
+  "source_manifest": "research/crypto/native_closed_funding_20261106/test_run_002_sources.json",
+  "source_manifest_sha256": "132fefe6601767a635d37da3e3bc5b137dcf60a3280531baf2bb1ba723b32c94",
+  "checks": {
+    "tested_sources": {
+      "files": 2,
+      "mismatches": []
+    },
+    "frozen_native": {
+      "files": 22,
+      "mismatches": []
+    },
+    "frozen_financial_inputs": {
+      "files": 145,
+      "mismatches": []
+    }
+  },
+  "logs": [
+    {
+      "path": "research/crypto/native_closed_funding_20261106/test_run_001.log.gz",
+      "archive_sha256": "64b1bcda225ab4a11df943609eb6b435694b29b3e2136d9a9de3df3e9b7c2455",
+      "raw_sha256": "b4ed2dc54ab58c221995bf269830b2f49fb1785eb8d31c8741aa25554227006a"
+    },
+    {
+      "path": "research/crypto/native_closed_funding_20261106/test_run_002.log.gz",
+      "archive_sha256": "b129b58544ef0a9ee3b1be365e093b20c23e1ba0246eb5371b72302fe34543bc",
+      "raw_sha256": "ad19bf3d2592fe2a0cbcc4c47389f58c1e820adacfaa6375a5142951e156303b"
+    }
+  ],
+  "scope": "synthetic registered futures close followed by source accrual or settlement",
+  "new_financial_accounts": 0,
+  "goal_complete": false,
+  "remaining": [
+    "historical execution qualification",
+    "full RD1 economic comparison and independent holdout"
+  ]
+}
