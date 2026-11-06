@@ -119,9 +119,12 @@ class ReplayEntryExchange(Binance):
 
 
 class NativeEntryGate:
-    def __init__(self, directory, lifecycle, *, create=False):
+    def __init__(self, directory, lifecycle, *, create=False, after_fill_guard=None):
         self.lifecycle = lifecycle
         self.bridge = NativeSnapshotBridge(lifecycle)
+        if after_fill_guard is not None and after_fill_guard.identity != lifecycle.risk.s["identity"]:
+            raise RiskError("Protection guard account identity differs")
+        self.after_fill_guard = after_fill_guard
         self._mutex = threading.RLock()
         self._poisoned = False
         self.store = Store(Path(directory), dict(lifecycle.s["identity"], layer="native_entry_receipts_v1"), create=create)
@@ -189,6 +192,8 @@ class NativeEntryGate:
         with self._mutex:
             if self._poisoned or self.store.lock.closed:
                 raise StateError("Entry receipt writer unavailable")
+            if self.after_fill_guard is not None:
+                self.after_fill_guard.require_entry_clear()
             if evidence.evidence_class != "synthetic":
                 raise RiskError("Local tape cannot certify captured exchange activity")
             self._check_request(exchange, proposal, kwargs)

@@ -1,0 +1,44 @@
+test_control_uses_same_common_stop_without_changing_official_signals (__main__.AfterFillTests.test_control_uses_same_common_stop_without_changing_official_signals) ... /Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/AverageStrategy.py:9: FutureWarning: 'freqtrade.vendor.qtpylib.indicators' is deprecated and will be removed in a future release. Import from technical instead - either the module (`from technical import qtpylib`) or a single function (`from technical.qtpylib import crossed_above`).
+  import freqtrade.vendor.qtpylib.indicators as qtpylib
+ok
+test_f1_spot_uses_real_native_stop_and_fee_update (__main__.AfterFillTests.test_f1_spot_uses_real_native_stop_and_fee_update) ... ok
+test_f2_futures_uses_native_binance_liquidation_and_common_rd1_stop (__main__.AfterFillTests.test_f2_futures_uses_native_binance_liquidation_and_common_rd1_stop) ... ok
+test_first_fill_price_improvement_reanchors_stop_to_actual_entry (__main__.AfterFillTests.test_first_fill_price_improvement_reanchors_stop_to_actual_entry) ... ok
+test_missing_tiers_cannot_certify_a_stale_liquidation_value (__main__.AfterFillTests.test_missing_tiers_cannot_certify_a_stale_liquidation_value) ... Unable to calculate liquidation price
+ok
+test_native_commit_ack_loss_recovers_without_repeating_callbacks (__main__.AfterFillTests.test_native_commit_ack_loss_recovers_without_repeating_callbacks) ... ERROR
+test_open_partial_remains_pending_until_terminal_receipt (__main__.AfterFillTests.test_open_partial_remains_pending_until_terminal_receipt) ... ok
+test_partial_and_full_exit_refresh_remaining_protection_without_widening_stop (__main__.AfterFillTests.test_partial_and_full_exit_refresh_remaining_protection_without_widening_stop) ... ok
+test_pre_commit_failure_cannot_recover_uncommitted_protection_values (__main__.AfterFillTests.test_pre_commit_failure_cannot_recover_uncommitted_protection_values) ... FAIL
+test_suppressed_strategy_exception_cannot_count_as_protection_success (__main__.AfterFillTests.test_suppressed_strategy_exception_cannot_count_as_protection_success) ... Strategy caused the following exception: ValueError('synthetic callback failure') in _StrategyObserver.order_filled:82, calling order_filled
+ok
+test_unregistered_fill_and_later_stop_mutation_block_entry (__main__.AfterFillTests.test_unregistered_fill_and_later_stop_mutation_block_entry) ... ok
+
+======================================================================
+ERROR: test_native_commit_ack_loss_recovers_without_repeating_callbacks (__main__.AfterFillTests.test_native_commit_ack_loss_recovers_without_repeating_callbacks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_after_fill.py", line 135, in test_native_commit_ack_loss_recovers_without_repeating_callbacks
+    self.assertEqual(reopened.verify_committed("fill")["state"],"VERIFIED")
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_after_fill.py", line 178, in verify_committed
+    raise RiskError("After-fill completion has no durable proof")
+rd1.RiskError: After-fill completion has no durable proof
+
+======================================================================
+FAIL: test_pre_commit_failure_cannot_recover_uncommitted_protection_values (__main__.AfterFillTests.test_pre_commit_failure_cannot_recover_uncommitted_protection_values)
+----------------------------------------------------------------------
+rd1.RiskError: After-fill completion has no durable proof
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_after_fill.py", line 150, in test_pre_commit_failure_cannot_recover_uncommitted_protection_values
+    with self.assertRaisesRegex(RiskError,"Committed native state differs"):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "Committed native state differs" does not match "After-fill completion has no durable proof"
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.601s
+
+FAILED (failures=1, errors=1)

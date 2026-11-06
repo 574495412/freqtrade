@@ -14,6 +14,8 @@ from native_reductions import scale_target
 
 
 class PendingRD1:
+    # Frozen common RD1 stop, shared by F1, F2 and its same-risk control.
+    stoploss = -0.05
     position_adjustment_enable = True
     max_entry_position_adjustment = 0
 
@@ -80,7 +82,7 @@ class F1Momentum168Native(PendingRD1, IStrategy):
 
 
 class AverageRD1ControlNative(PendingRD1, AverageStrategy):
-    """Unchanged EMA8/21 signal/ROI; shared RD1 changes remain unapplied."""
+    """Unchanged EMA8/21 signal/ROI; common RD1 stop, lifecycle still incomplete."""
     pass
 
 
