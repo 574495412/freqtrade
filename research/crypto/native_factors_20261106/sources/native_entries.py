@@ -172,6 +172,14 @@ class NativeEntryGate:
         if self.s.get("pending_account_batch") is not None:
             raise RiskError("Complete the pending whole-account observation batch before entry")
 
+    def require_research_startup(self, now):
+        binding = self.s.get('required_research_startup')
+        if binding is not None:
+            runtime = getattr(self, 'research_startup', None)
+            if runtime is None or runtime.binding != binding:
+                raise StateError('Registered research startup must be reattached before entry')
+            runtime.ready(now)
+
     def _check_request(self, exchange, proposal, kwargs):
         expected = dict(pair=proposal.pair, ordertype="limit", side="buy",
                         amount=float(proposal.quantity), rate=float(proposal.price), leverage=1,
@@ -216,6 +224,7 @@ class NativeEntryGate:
     def submit(self, exchange, request_id, evidence, proposal, now, **kwargs):
         with self._mutex:
             self.require_account_batch_clear()
+            self.require_research_startup(now)
             if self._poisoned or self.store.lock.closed:
                 raise StateError("Entry receipt writer unavailable")
             required = self.s.get("required_runtime_barrier")

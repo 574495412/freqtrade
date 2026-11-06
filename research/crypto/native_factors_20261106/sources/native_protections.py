@@ -24,7 +24,7 @@ def locks():
 
 class NativeProtections:
     _active=None
-    def __init__(self,directory,gate,wallet,strategy,*,create=False):
+    def __init__(self,directory,gate,wallet,strategy,*,create=False,manager=None):
         if gate.runtime_barrier is not wallet or gate.after_fill_guard is None:
             raise RiskError('Native protections need the registered wallet and after-fill guard')
         if NativeProtections._active is not None:raise StateError('Only one native protection runtime may own PairLocks')
@@ -36,7 +36,12 @@ class NativeProtections:
         if strategy.timeframe!=self.timeframe or not PairLocks.use_db:
             raise RiskError('Native protections need matching primary timeframe and persistent PairLocks')
         self.spec=copy.deepcopy(self.risk.r['native_protections'])
-        self.manager=ProtectionManager(dict(strategy.config,timeframe=self.timeframe),copy.deepcopy(self.spec))
+        if manager is not None and (type(manager) is not ProtectionManager
+                or manager._config != strategy.config
+                or manager.name_list!=[x['method'] for x in self.spec]
+                or [x._protection_config for x in manager._protection_handlers]!=self.spec):
+            raise RiskError('Supplied native protection manager differs from frozen specification')
+        self.manager=manager if manager is not None else ProtectionManager(dict(strategy.config,timeframe=self.timeframe),copy.deepcopy(self.spec))
         self.store=Store(Path(directory),dict(self.risk.s['identity'],layer='native_protections_v1'),create=create)
         self.binding=dict(identity=self.store.identity,directory=str(self.store.directory.resolve()),timeframe=self.timeframe,spec_hash=digest(self.spec))
         if create:self.s=dict(schema_version=1,sequence=0,identity=self.store.identity,binding=self.binding,events={});self._persist()

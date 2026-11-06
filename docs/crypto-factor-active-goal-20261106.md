@@ -1,6 +1,8 @@
 # 因子研究目标与当前状态
 
-当前机器可读入口：[current_status_v20.json](../research/crypto/native_factors_20261106/current_status_v20.json)。用户已明确“允许自研因子”，当前接续为官方 Freqtrade 框架下的固定 F1/F2 原生接入。工程说明与真实数据覆盖见 [自研因子接入](../research/crypto/native_factors_20261106/README.md)。241 项工程检查通过、152 份真实小时文件已检查；F1/F2 的配对收益实验仍为 0，整个持续目标未完成。
+当前机器可读入口：[current_status_v21.json](../research/crypto/native_factors_20261106/current_status_v21.json)。用户已明确“允许自研因子”，当前接续为官方 Freqtrade 框架下的固定 F1/F2 原生接入。工程说明与真实数据覆盖见 [自研因子接入](../research/crypto/native_factors_20261106/README.md)。253 项工程检查通过、152 份真实小时文件已检查；F1/F2 的配对收益实验仍为 0，整个持续目标未完成。
+
+隔离研究启动已调用官方回测策略启动、原生 DataProvider 截断和同一个 ProtectionManager，支持合成账户的启动登记、确认丢失重开及未完成启动拒绝。新增 12 项检查，联合回归 253 项通过；完整 F2 合约／保护／资金费持续流和数据驱动仍待接通，金融账户保持 0。详见 [启动证据](../research/crypto/native_factors_20261106/startup_verification.json)。
 
 范围问题已经解决，无需再次询问是否允许自研。F1 的原生 5m 信号、完整币池每日横截面和 F2 与官方 EMA8/21 的信号一致性已实现；负向持仓调整、隔离 SQLite、共享 RD1 快照与预留、初始入场和成交后保护已有分阶段工程证据。账户事件核对层和原生钱包局部执行链现已接通，实际完整事件流和完整策略启动协调仍未完成。此前核对的旧 P1 16 个原生账户、16 个账本控制、2 次复核和 24 个失败官方样例账户分别保留，不替代 F1/F2 结果，也不据其结果调参。
 

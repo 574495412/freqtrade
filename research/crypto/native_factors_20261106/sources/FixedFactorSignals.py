@@ -20,6 +20,9 @@ class PendingRD1:
     max_entry_position_adjustment = 0
 
     def bot_start(self, **kwargs):
+        from native_research_startup import require_scoped_startup
+        if require_scoped_startup(self):
+            return
         raise OperationalException("F1/F2 native signals only: shared RD1 lifecycle adapter is not yet integrated; financial run refused")
 
     def confirm_trade_entry(self, **kwargs):

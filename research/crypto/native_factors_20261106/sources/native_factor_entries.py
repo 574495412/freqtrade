@@ -47,15 +47,14 @@ class EntryLiquidity:
     rules_valid_until: datetime
 
 
-def fixed_entry_signal(strategy, pair, inputs, now, universe):
-    """Run the actual frozen indicator/trend/get_entry_signal methods."""
-    now = aware(now)
+def validate_fixed_strategy(strategy, universe):
+    """Shared source/parameter check for startup and each entry decision."""
     # StrategyResolver reloads the module, so class object identity is not stable.
     expected_class = {c.__name__:c for c in (F1Momentum168Native,F2Volatility24Native,AverageRD1ControlNative)}.get(type(strategy).__name__)
     f1 = type(strategy).__name__ == 'F1Momentum168Native'
     if (expected_class is None
             or tuple(strategy.config['exchange']['pair_whitelist']) != tuple(universe)
-            or pair not in universe or strategy.can_short or strategy.stoploss != -.05
+            or strategy.can_short or strategy.stoploss != -.05
             or strategy.max_entry_position_adjustment != 0 or strategy.use_custom_stoploss
             or strategy.trailing_stop or strategy.order_types.get('stoploss_on_exchange')
             or strategy.order_types['entry'] != 'limit' or strategy.order_time_in_force['entry'] != 'GTC'
@@ -67,6 +66,15 @@ def fixed_entry_signal(strategy, pair, inputs, now, universe):
             raise RiskError('Entry signal or price method differs from fixed source')
     if not f1 and (strategy.buy_range_short.value != 8 or strategy.buy_range_long.value != 21):
         raise RiskError('Official EMA parameters changed')
+    return expected_class
+
+
+def fixed_entry_signal(strategy, pair, inputs, now, universe):
+    """Run the actual frozen indicator/trend/get_entry_signal methods."""
+    now = aware(now)
+    validate_fixed_strategy(strategy, universe)
+    f1 = type(strategy).__name__ == 'F1Momentum168Native'
+    if pair not in universe:raise RiskError('Entry pair outside frozen universe')
     if type(inputs) is not EntryInputs or not inputs.source_id or inputs.timing != TIMING:
         raise RiskError('Entry bars need explicit source and frozen timing assumption')
     proof = dict(strategy=type(strategy).__name__,pair=pair,at=stamp(now),source_id=inputs.source_id,timing=inputs.timing)
@@ -221,6 +229,7 @@ def execute_fixed_entry(gate, exchange, strategy, evidence, inputs, liquidity, r
     if type(exchange) is not ReplayEntryExchange or exchange.gate is not gate or wallet is None or gate.after_fill_guard is None:
         raise RiskError('Fixed entry requires matching local exchange, native wallet and protection guard')
     gate.require_account_batch_clear()
+    gate.require_research_startup(now)
     wallet.require_entry_clear(now); gate.after_fill_guard.require_entry_clear()
     if evidence != wallet._checked_evidence:
         raise RiskError('Entry evidence differs from current wallet checkpoint')
