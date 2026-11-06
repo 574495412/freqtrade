@@ -1,0 +1,725 @@
+{
+  "observed_at_utc": "2026-11-06T14:32:56.238613+00:00",
+  "index_receipts_checked": 12,
+  "snapshot_receipts_checked": 5,
+  "frozen_financial_inputs_checked": 145,
+  "input_hashes": {
+    "research/crypto/historical_rule_archive_20261106/verify_snapshots.py": "896db3e98466d339a50435e07277e857fb54756275c047ea332154024da66fbd",
+    "research/crypto/historical_rule_archive_20261106/index_result.json": "64359cf9fe937b6543219b3f562e6c482cd0789aab9c5ad4e7c7059c74d5eeda",
+    "research/crypto/historical_rule_archive_20261106/snapshot_registration.json": "ddbb6755e1e6b609dbb370af5ee40bdee783395163c3fcdbd781848ffc174939",
+    "research/crypto/historical_rule_archive_20261106/snapshot_result.json": "f6c4c629b92d3f3664709d0beda39bae89111238ed5b1f4d09051f5a02be620e",
+    "research/crypto/factor_cost_futures_long_20261106/plan.json": "4f89a1cd81fc810fb7b71bbf41993a91712280e55037ec769d98c06cf7c406d2"
+  },
+  "verified_points": [
+    {
+      "id": "spot-20250426005818",
+      "market": "spot",
+      "window": "L",
+      "pairs": 36,
+      "cdx_digest_matched_on": [
+        "decoded"
+      ]
+    },
+    {
+      "id": "spot-20251209111642",
+      "market": "spot",
+      "window": "L",
+      "pairs": 36,
+      "cdx_digest_matched_on": [
+        "raw"
+      ]
+    },
+    {
+      "id": "spot-20261027043505",
+      "market": "spot",
+      "window": "S",
+      "pairs": 36,
+      "cdx_digest_matched_on": [
+        "raw"
+      ]
+    },
+    {
+      "id": "futures-20260217041328",
+      "market": "futures",
+      "window": "L",
+      "pairs": 40,
+      "cdx_digest_matched_on": [
+        "raw"
+      ]
+    },
+    {
+      "id": "futures-20260510103016",
+      "market": "futures",
+      "window": "L",
+      "pairs": 40,
+      "cdx_digest_matched_on": [
+        "raw"
+      ]
+    }
+  ],
+  "symbol_point_observations": 188,
+  "consecutive_point_differences": [
+    {
+      "before": "spot-20250426005818",
+      "after": "spot-20251209111642",
+      "common_pairs": 36,
+      "changed_pairs_by_field": {
+        "market_lot_size.maxQty": 36,
+        "tickSize": 3,
+        "minPrice": 3,
+        "maxPrice": 1,
+        "maxQty": 1
+      },
+      "changes": {
+        "ADA/USDT": {
+          "market_lot_size.maxQty": [
+            "2151908.96916666",
+            "2311269.87416666"
+          ]
+        },
+        "ALGO/USDT": {
+          "market_lot_size.maxQty": [
+            "922327.00000000",
+            "844723.75833333"
+          ]
+        },
+        "ATOM/USDT": {
+          "market_lot_size.maxQty": [
+            "42182.75166666",
+            "49227.62216666"
+          ]
+        },
+        "AVAX/USDT": {
+          "market_lot_size.maxQty": [
+            "57771.33050000",
+            "112137.57779166"
+          ]
+        },
+        "AXS/USDT": {
+          "market_lot_size.maxQty": [
+            "13858.56750000",
+            "37636.81162500"
+          ]
+        },
+        "BCH/USDT": {
+          "market_lot_size.maxQty": [
+            "1495.01920416",
+            "1057.58697083"
+          ]
+        },
+        "BTC/USDT": {
+          "market_lot_size.maxQty": [
+            "118.03112404",
+            "103.85345508"
+          ]
+        },
+        "CRV/USDT": {
+          "market_lot_size.maxQty": [
+            "478535.85541666",
+            "302178.53083333"
+          ]
+        },
+        "DOGE/USDT": {
+          "market_lot_size.maxQty": [
+            "28508482.41666666",
+            "23448568.50000000"
+          ]
+        },
+        "DOT/USDT": {
+          "market_lot_size.maxQty": [
+            "116237.63158333",
+            "169471.72791666"
+          ]
+        },
+        "DYDX/USDT": {
+          "market_lot_size.maxQty": [
+            "305994.40891666",
+            "454779.19595833"
+          ]
+        },
+        "EGLD/USDT": {
+          "market_lot_size.maxQty": [
+            "3932.71987500",
+            "6751.22691666"
+          ]
+        },
+        "ETC/USDT": {
+          "market_lot_size.maxQty": [
+            "22683.49412500",
+            "15898.65825000"
+          ]
+        },
+        "ETH/USDT": {
+          "market_lot_size.maxQty": [
+            "4079.11531333",
+            "2554.65952958"
+          ]
+        },
+        "FIL/USDT": {
+          "market_lot_size.maxQty": [
+            "190098.34541666",
+            "292865.76645833"
+          ]
+        },
+        "GALA/USDT": {
+          "market_lot_size.maxQty": [
+            "14483865.59583333",
+            "15384294.57500000"
+          ]
+        },
+        "GRT/USDT": {
+          "tickSize": [
+            "0.00010000",
+            "0.00001000"
+          ],
+          "minPrice": [
+            "0.00010000",
+            "0.00001000"
+          ],
+          "market_lot_size.maxQty": [
+            "1035423.61250000",
+            "1140153.32083333"
+          ]
+        },
+        "IOTA/USDT": {
+          "market_lot_size.maxQty": [
+            "492776.87916666",
+            "972886.47916666"
+          ]
+        },
+        "IOTX/USDT": {
+          "market_lot_size.maxQty": [
+            "2274845.40833333",
+            "3522636.81250000"
+          ]
+        },
+        "KSM/USDT": {
+          "market_lot_size.maxQty": [
+            "3044.49084166",
+            "4087.40870833"
+          ]
+        },
+        "LINK/USDT": {
+          "market_lot_size.maxQty": [
+            "68823.57058333",
+            "106488.68233333"
+          ]
+        },
+        "LTC/USDT": {
+          "market_lot_size.maxQty": [
+            "11704.92026250",
+            "16135.17945833"
+          ]
+        },
+        "MANA/USDT": {
+          "market_lot_size.maxQty": [
+            "173064.85416666",
+            "157412.72083333"
+          ]
+        },
+        "MASK/USDT": {
+          "market_lot_size.maxQty": [
+            "75062.65375000",
+            "61916.97166666"
+          ]
+        },
+        "NEAR/USDT": {
+          "market_lot_size.maxQty": [
+            "247599.26750000",
+            "691077.26541666"
+          ]
+        },
+        "NEO/USDT": {
+          "tickSize": [
+            "0.01000000",
+            "0.00100000"
+          ],
+          "minPrice": [
+            "0.01000000",
+            "0.00100000"
+          ],
+          "market_lot_size.maxQty": [
+            "23232.74695833",
+            "12448.88962500"
+          ]
+        },
+        "RUNE/USDT": {
+          "market_lot_size.maxQty": [
+            "189231.37958333",
+            "134644.47750000"
+          ]
+        },
+        "SAND/USDT": {
+          "market_lot_size.maxQty": [
+            "492714.73333333",
+            "377683.05000000"
+          ]
+        },
+        "SKL/USDT": {
+          "market_lot_size.maxQty": [
+            "2272471.80833333",
+            "4086004.02916666"
+          ]
+        },
+        "SNX/USDT": {
+          "market_lot_size.maxQty": [
+            "93895.82541666",
+            "129856.40125000"
+          ]
+        },
+        "SOL/USDT": {
+          "market_lot_size.maxQty": [
+            "103418.35263333",
+            "75236.50928750"
+          ]
+        },
+        "SUSHI/USDT": {
+          "tickSize": [
+            "0.00100000",
+            "0.00010000"
+          ],
+          "minPrice": [
+            "0.00100000",
+            "0.00010000"
+          ],
+          "maxPrice": [
+            "10000.00000000",
+            "1000.00000000"
+          ],
+          "maxQty": [
+            "90000.00000000",
+            "92141578.00000000"
+          ],
+          "market_lot_size.maxQty": [
+            "111623.88541666",
+            "120128.35375000"
+          ]
+        },
+        "THETA/USDT": {
+          "market_lot_size.maxQty": [
+            "147681.65625000",
+            "278767.53000000"
+          ]
+        },
+        "TRX/USDT": {
+          "market_lot_size.maxQty": [
+            "11052648.51416666",
+            "8662952.20666666"
+          ]
+        },
+        "UNI/USDT": {
+          "market_lot_size.maxQty": [
+            "50189.50391666",
+            "87961.66712500"
+          ]
+        },
+        "XRP/USDT": {
+          "market_lot_size.maxQty": [
+            "4353465.14375000",
+            "2978263.17625000"
+          ]
+        }
+      }
+    },
+    {
+      "before": "spot-20251209111642",
+      "after": "spot-20261027043505",
+      "common_pairs": 36,
+      "changed_pairs_by_field": {
+        "market_lot_size.maxQty": 36,
+        "tickSize": 10,
+        "minPrice": 10
+      },
+      "changes": {
+        "ADA/USDT": {
+          "market_lot_size.maxQty": [
+            "2311269.87416666",
+            "2158136.52000000"
+          ]
+        },
+        "ALGO/USDT": {
+          "market_lot_size.maxQty": [
+            "844723.75833333",
+            "922327.00000000"
+          ]
+        },
+        "ATOM/USDT": {
+          "market_lot_size.maxQty": [
+            "49227.62216666",
+            "76982.79400000"
+          ]
+        },
+        "AVAX/USDT": {
+          "tickSize": [
+            "0.01000000",
+            "0.00100000"
+          ],
+          "minPrice": [
+            "0.01000000",
+            "0.00100000"
+          ],
+          "market_lot_size.maxQty": [
+            "112137.57779166",
+            "45579.18633333"
+          ]
+        },
+        "AXS/USDT": {
+          "market_lot_size.maxQty": [
+            "37636.81162500",
+            "33207.18579166"
+          ]
+        },
+        "BCH/USDT": {
+          "market_lot_size.maxQty": [
+            "1057.58697083",
+            "1311.90530833"
+          ]
+        },
+        "BTC/USDT": {
+          "market_lot_size.maxQty": [
+            "103.85345508",
+            "138.37132320"
+          ]
+        },
+        "CRV/USDT": {
+          "market_lot_size.maxQty": [
+            "302178.53083333",
+            "243887.03083333"
+          ]
+        },
+        "DOGE/USDT": {
+          "market_lot_size.maxQty": [
+            "23448568.50000000",
+            "25144652.48333333"
+          ]
+        },
+        "DOT/USDT": {
+          "market_lot_size.maxQty": [
+            "169471.72791666",
+            "152637.35279166"
+          ]
+        },
+        "DYDX/USDT": {
+          "tickSize": [
+            "0.00010000",
+            "0.00001000"
+          ],
+          "minPrice": [
+            "0.00010000",
+            "0.00001000"
+          ],
+          "market_lot_size.maxQty": [
+            "454779.19595833",
+            "363897.93312500"
+          ]
+        },
+        "EGLD/USDT": {
+          "tickSize": [
+            "0.01000000",
+            "0.00100000"
+          ],
+          "minPrice": [
+            "0.01000000",
+            "0.00100000"
+          ],
+          "market_lot_size.maxQty": [
+            "6751.22691666",
+            "3435.06170833"
+          ]
+        },
+        "ETC/USDT": {
+          "market_lot_size.maxQty": [
+            "15898.65825000",
+            "13831.07154166"
+          ]
+        },
+        "ETH/USDT": {
+          "market_lot_size.maxQty": [
+            "2554.65952958",
+            "3491.82389583"
+          ]
+        },
+        "FIL/USDT": {
+          "tickSize": [
+            "0.00100000",
+            "0.00010000"
+          ],
+          "minPrice": [
+            "0.00100000",
+            "0.00010000"
+          ],
+          "market_lot_size.maxQty": [
+            "292865.76645833",
+            "281733.79070833"
+          ]
+        },
+        "GALA/USDT": {
+          "tickSize": [
+            "0.00001000",
+            "0.00000100"
+          ],
+          "minPrice": [
+            "0.00001000",
+            "0.00000100"
+          ],
+          "market_lot_size.maxQty": [
+            "15384294.57500000",
+            "39564324.73750000"
+          ]
+        },
+        "GRT/USDT": {
+          "market_lot_size.maxQty": [
+            "1140153.32083333",
+            "1186611.23333333"
+          ]
+        },
+        "IOTA/USDT": {
+          "market_lot_size.maxQty": [
+            "972886.47916666",
+            "2394037.87083333"
+          ]
+        },
+        "IOTX/USDT": {
+          "tickSize": [
+            "0.00001000",
+            "0.00000100"
+          ],
+          "minPrice": [
+            "0.00001000",
+            "0.00000100"
+          ],
+          "market_lot_size.maxQty": [
+            "3522636.81250000",
+            "528845.94166666"
+          ]
+        },
+        "KSM/USDT": {
+          "market_lot_size.maxQty": [
+            "4087.40870833",
+            "5164.55984583"
+          ]
+        },
+        "LINK/USDT": {
+          "tickSize": [
+            "0.01000000",
+            "0.00100000"
+          ],
+          "minPrice": [
+            "0.01000000",
+            "0.00100000"
+          ],
+          "market_lot_size.maxQty": [
+            "106488.68233333",
+            "38760.61483333"
+          ]
+        },
+        "LTC/USDT": {
+          "market_lot_size.maxQty": [
+            "16135.17945833",
+            "5330.53065833"
+          ]
+        },
+        "MANA/USDT": {
+          "market_lot_size.maxQty": [
+            "157412.72083333",
+            "599347.72083333"
+          ]
+        },
+        "MASK/USDT": {
+          "market_lot_size.maxQty": [
+            "61916.97166666",
+            "51954.52916666"
+          ]
+        },
+        "NEAR/USDT": {
+          "market_lot_size.maxQty": [
+            "691077.26541666",
+            "142569.92041666"
+          ]
+        },
+        "NEO/USDT": {
+          "market_lot_size.maxQty": [
+            "12448.88962500",
+            "11202.85087500"
+          ]
+        },
+        "RUNE/USDT": {
+          "market_lot_size.maxQty": [
+            "134644.47750000",
+            "115989.43875000"
+          ]
+        },
+        "SAND/USDT": {
+          "tickSize": [
+            "0.00010000",
+            "0.00001000"
+          ],
+          "minPrice": [
+            "0.00010000",
+            "0.00001000"
+          ],
+          "market_lot_size.maxQty": [
+            "377683.05000000",
+            "1120420.56250000"
+          ]
+        },
+        "SKL/USDT": {
+          "market_lot_size.maxQty": [
+            "4086004.02916666",
+            "6546819.79583333"
+          ]
+        },
+        "SNX/USDT": {
+          "tickSize": [
+            "0.00100000",
+            "0.00010000"
+          ],
+          "minPrice": [
+            "0.00100000",
+            "0.00010000"
+          ],
+          "market_lot_size.maxQty": [
+            "129856.40125000",
+            "82155.70791666"
+          ]
+        },
+        "SOL/USDT": {
+          "market_lot_size.maxQty": [
+            "75236.50928750",
+            "89919.15165000"
+          ]
+        },
+        "SUSHI/USDT": {
+          "market_lot_size.maxQty": [
+            "120128.35375000",
+            "172132.47833333"
+          ]
+        },
+        "THETA/USDT": {
+          "tickSize": [
+            "0.00100000",
+            "0.00010000"
+          ],
+          "minPrice": [
+            "0.00100000",
+            "0.00010000"
+          ],
+          "market_lot_size.maxQty": [
+            "278767.53000000",
+            "151473.82291666"
+          ]
+        },
+        "TRX/USDT": {
+          "market_lot_size.maxQty": [
+            "8662952.20666666",
+            "4311634.68166666"
+          ]
+        },
+        "UNI/USDT": {
+          "market_lot_size.maxQty": [
+            "87961.66712500",
+            "61023.71395833"
+          ]
+        },
+        "XRP/USDT": {
+          "market_lot_size.maxQty": [
+            "2978263.17625000",
+            "2587325.48083333"
+          ]
+        }
+      }
+    },
+    {
+      "before": "futures-20260217041328",
+      "after": "futures-20260510103016",
+      "common_pairs": 40,
+      "changed_pairs_by_field": {
+        "minNotional": 1,
+        "tickSize": 5,
+        "minPrice": 5,
+        "maxPrice": 5
+      },
+      "changes": {
+        "BTC/USDT:USDT": {
+          "minNotional": [
+            "100",
+            "50"
+          ]
+        },
+        "CELO/USDT:USDT": {
+          "tickSize": [
+            "0.001",
+            "0.000010"
+          ],
+          "minPrice": [
+            "0.001",
+            "0.000010"
+          ],
+          "maxPrice": [
+            "100000",
+            "200"
+          ]
+        },
+        "CRV/USDT:USDT": {
+          "tickSize": [
+            "0.001",
+            "0.000100"
+          ],
+          "minPrice": [
+            "0.001",
+            "0.000100"
+          ],
+          "maxPrice": [
+            "1000",
+            "200"
+          ]
+        },
+        "DYDX/USDT:USDT": {
+          "tickSize": [
+            "0.001",
+            "0.000100"
+          ],
+          "minPrice": [
+            "0.001",
+            "0.000100"
+          ],
+          "maxPrice": [
+            "100000",
+            "200"
+          ]
+        },
+        "GALA/USDT:USDT": {
+          "tickSize": [
+            "0.00001",
+            "0.0000010"
+          ],
+          "minPrice": [
+            "0.00001",
+            "0.0000010"
+          ],
+          "maxPrice": [
+            "20000",
+            "200"
+          ]
+        },
+        "SNX/USDT:USDT": {
+          "tickSize": [
+            "0.001",
+            "0.000100"
+          ],
+          "minPrice": [
+            "0.001",
+            "0.000100"
+          ],
+          "maxPrice": [
+            "1144",
+            "200"
+          ]
+        }
+      }
+    }
+  ],
+  "continuous_effective_intervals_verified": 0,
+  "historical_rule_admission": false,
+  "financial_accounts": 0
+}
