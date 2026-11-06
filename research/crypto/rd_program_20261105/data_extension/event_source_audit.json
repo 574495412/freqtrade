@@ -1,0 +1,1317 @@
+{
+  "observed_at_utc": "2026-11-06T01:51:28.931317+00:00",
+  "registration_sha256": "fca884a2b004cc73918974bb700d34aa2af45d0ac3c0563337f741786c432ead",
+  "runtime_result": {
+    "path": "user_data/crypto_quant/rd_program_20261105_v1/event_source_probe_v001/result.json",
+    "sha256": "0dcf7dcbf7fc770e03984e0d51530f6c3e8ae2076ef3744c529dfb43cd16979e"
+  },
+  "probes": [
+    {
+      "id": "binance_metadata",
+      "kind": "metadata",
+      "url": "https://api.tardis.dev/v1/exchanges/binance",
+      "started_at_utc": "2026-11-06T01:49:43.960667+00:00",
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Encoding": "gzip"
+      },
+      "state": "body_complete",
+      "raw": {
+        "path": "user_data/crypto_quant/rd_program_20261105_v1/event_source_probe_v001/binance_metadata.raw",
+        "bytes": 61063,
+        "sha256": "d5fea79498be223f043590030e1b337ade749377fd8895d4f26c2f518901a756"
+      },
+      "metadata_keys": [
+        "id",
+        "name",
+        "enabled",
+        "availableSince",
+        "availableChannels",
+        "availableSymbols",
+        "channelDetails",
+        "apiDocsUrl",
+        "dataCollectionDetails",
+        "datasets",
+        "incidentReports"
+      ],
+      "available_symbols": 3448,
+      "btc_metadata": [
+        {
+          "id": "btcusdt",
+          "type": "spot",
+          "availableSince": "2019-03-30T00:00:00.000Z"
+        }
+      ],
+      "finished_at_utc": "2026-11-06T01:49:44.373241+00:00"
+    },
+    {
+      "id": "binance_2025-01-01",
+      "kind": "minute",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance?from=2025-01-01&offset=0&filters=%5B%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22trade%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%5D",
+      "started_at_utc": "2026-11-06T01:49:43.960971+00:00",
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "143280",
+        "Content-Encoding": "gzip"
+      },
+      "state": "body_complete",
+      "raw": {
+        "path": "user_data/crypto_quant/rd_program_20261105_v1/event_source_probe_v001/binance_2025-01-01.raw",
+        "bytes": 143280,
+        "sha256": "d92ce4f091a206ff2b6eb183086a4ecb47ef85fb39526c79dcc46ec7a0974d0e"
+      },
+      "minute_schema": {
+        "messages": 3232,
+        "disconnect_markers": 0,
+        "streams": {
+          "btcusdt@trade": 2631,
+          "btcusdt@depth@100ms": 600,
+          "btcusdt@depthSnapshot": 1
+        },
+        "data_fields": {
+          "btcusdt@trade": [
+            "E",
+            "M",
+            "T",
+            "e",
+            "m",
+            "p",
+            "q",
+            "s",
+            "t"
+          ],
+          "btcusdt@depth@100ms": [
+            "E",
+            "U",
+            "a",
+            "b",
+            "e",
+            "s",
+            "u"
+          ],
+          "btcusdt@depthSnapshot": [
+            "asks",
+            "bids",
+            "lastUpdateId"
+          ]
+        },
+        "first_message_metadata": {
+          "btcusdt@trade": {
+            "local_timestamp": "2025-01-01T00:00:00.0158039Z",
+            "payload_top_keys": [
+              "data",
+              "stream"
+            ]
+          },
+          "btcusdt@depth@100ms": {
+            "local_timestamp": "2025-01-01T00:00:00.0176998Z",
+            "payload_top_keys": [
+              "data",
+              "stream"
+            ]
+          },
+          "btcusdt@depthSnapshot": {
+            "local_timestamp": "2025-01-01T00:00:00.8008865Z",
+            "payload_top_keys": [
+              "data",
+              "generated",
+              "stream"
+            ]
+          }
+        },
+        "local_timestamp_monotonic": true,
+        "first_local_timestamp": "2025-01-01T00:00:00.015803+00:00",
+        "last_local_timestamp": "2025-01-01T00:00:59.954047+00:00"
+      },
+      "finished_at_utc": "2026-11-06T01:49:44.665820+00:00"
+    },
+    {
+      "id": "binance_2025-01-02",
+      "kind": "minute",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance?from=2025-01-02&offset=0&filters=%5B%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22trade%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%5D",
+      "started_at_utc": "2026-11-06T01:49:44.373747+00:00",
+      "http_status": 401,
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "190"
+      },
+      "state": "body_complete",
+      "raw": {
+        "path": "user_data/crypto_quant/rd_program_20261105_v1/event_source_probe_v001/binance_2025-01-02.raw",
+        "bytes": 190,
+        "sha256": "e0f99418f0a43e21e7f27d941ffa6304fedc07fa73864d003d1c9f6ae89a577a"
+      },
+      "error_body_excerpt": "{\n  \"code\": 10,\n  \"message\": \"For unauthorized requests, only historical market data for the first day of each month is available (data for '2025-01-02T00:00:00.000Z' has been requested).\"\n}",
+      "finished_at_utc": "2026-11-06T01:49:56.520026+00:00"
+    },
+    {
+      "id": "binance-futures_metadata",
+      "kind": "metadata",
+      "url": "https://api.tardis.dev/v1/exchanges/binance-futures",
+      "started_at_utc": "2026-11-06T01:49:44.665868+00:00",
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Encoding": "gzip"
+      },
+      "state": "body_complete",
+      "raw": {
+        "path": "user_data/crypto_quant/rd_program_20261105_v1/event_source_probe_v001/binance-futures_metadata.raw",
+        "bytes": 22885,
+        "sha256": "b2e4f6a79d7a359504bff0a122f3d286dd8e90e755072b5674339d32719c57ac"
+      },
+      "metadata_keys": [
+        "id",
+        "name",
+        "enabled",
+        "availableSince",
+        "availableChannels",
+        "availableSymbols",
+        "channelDetails",
+        "apiDocsUrl",
+        "dataCollectionDetails",
+        "datasets",
+        "incidentReports"
+      ],
+      "available_symbols": 1062,
+      "btc_metadata": [
+        {
+          "id": "btcusdt",
+          "type": "perpetual",
+          "availableSince": "2019-11-17T00:00:00.000Z"
+        }
+      ],
+      "finished_at_utc": "2026-11-06T01:49:45.169579+00:00"
+    },
+    {
+      "id": "binance-futures_2025-01-01",
+      "kind": "minute",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2025-01-01&offset=0&filters=%5B%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22trade%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%5D",
+      "started_at_utc": "2026-11-06T01:49:45.169769+00:00",
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "299872",
+        "Content-Encoding": "gzip"
+      },
+      "state": "body_complete",
+      "raw": {
+        "path": "user_data/crypto_quant/rd_program_20261105_v1/event_source_probe_v001/binance-futures_2025-01-01.raw",
+        "bytes": 299872,
+        "sha256": "e4bb0e9cefdfede23d5e050be905899b8761f544cccf68fbcd87bd6ebe562fdc"
+      },
+      "minute_schema": {
+        "messages": 2774,
+        "disconnect_markers": 0,
+        "streams": {
+          "btcusdt@depth@0ms": 1053,
+          "btcusdt@trade": 1660,
+          "btcusdt@markPrice@1s": 60,
+          "btcusdt@depthSnapshot": 1
+        },
+        "data_fields": {
+          "btcusdt@depth@0ms": [
+            "E",
+            "T",
+            "U",
+            "a",
+            "b",
+            "e",
+            "pu",
+            "s",
+            "u"
+          ],
+          "btcusdt@trade": [
+            "E",
+            "T",
+            "X",
+            "e",
+            "m",
+            "p",
+            "q",
+            "s",
+            "t"
+          ],
+          "btcusdt@markPrice@1s": [
+            "E",
+            "P",
+            "T",
+            "e",
+            "i",
+            "p",
+            "r",
+            "s"
+          ],
+          "btcusdt@depthSnapshot": [
+            "E",
+            "T",
+            "asks",
+            "bids",
+            "lastUpdateId"
+          ]
+        },
+        "first_message_metadata": {
+          "btcusdt@depth@0ms": {
+            "local_timestamp": "2025-01-01T00:00:00.0258177Z",
+            "payload_top_keys": [
+              "data",
+              "stream"
+            ]
+          },
+          "btcusdt@trade": {
+            "local_timestamp": "2025-01-01T00:00:00.0535099Z",
+            "payload_top_keys": [
+              "data",
+              "stream"
+            ]
+          },
+          "btcusdt@markPrice@1s": {
+            "local_timestamp": "2025-01-01T00:00:00.0548765Z",
+            "payload_top_keys": [
+              "data",
+              "stream"
+            ]
+          },
+          "btcusdt@depthSnapshot": {
+            "local_timestamp": "2025-01-01T00:00:01.0078131Z",
+            "payload_top_keys": [
+              "data",
+              "generated",
+              "stream"
+            ]
+          }
+        },
+        "local_timestamp_monotonic": true,
+        "first_local_timestamp": "2025-01-01T00:00:00.025817+00:00",
+        "last_local_timestamp": "2025-01-01T00:00:59.956005+00:00"
+      },
+      "finished_at_utc": "2026-11-06T01:49:46.271181+00:00"
+    },
+    {
+      "id": "binance-futures_2025-01-02",
+      "kind": "minute",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2025-01-02&offset=0&filters=%5B%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22trade%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%5D",
+      "started_at_utc": "2026-11-06T01:49:46.271225+00:00",
+      "http_status": 401,
+      "headers": {
+        "Content-Type": "application/json",
+        "Content-Length": "190"
+      },
+      "state": "body_complete",
+      "raw": {
+        "path": "user_data/crypto_quant/rd_program_20261105_v1/event_source_probe_v001/binance-futures_2025-01-02.raw",
+        "bytes": 190,
+        "sha256": "e0f99418f0a43e21e7f27d941ffa6304fedc07fa73864d003d1c9f6ae89a577a"
+      },
+      "error_body_excerpt": "{\n  \"code\": 10,\n  \"message\": \"For unauthorized requests, only historical market data for the first day of each month is available (data for '2025-01-02T00:00:00.000Z' has been requested).\"\n}",
+      "finished_at_utc": "2026-11-06T01:49:51.606853+00:00"
+    },
+    {
+      "id": "binance_public_bookDepth",
+      "kind": "archive",
+      "url": "https://data.binance.vision/data/futures/um/daily/bookDepth/BTCUSDT/BTCUSDT-bookDepth-2025-01-01.zip",
+      "started_at_utc": "2026-11-06T01:49:51.606927+00:00",
+      "http_status": 200,
+      "headers": {
+        "Content-Type": "binary/octet-stream",
+        "Content-Length": "463389",
+        "Last-Modified": "Thu, 02 Jan 2025 06:36:35 GMT",
+        "ETag": "\"6b0a4d72c0e7a6519974ba084eda8e5d\""
+      },
+      "state": "body_complete",
+      "raw": {
+        "path": "user_data/crypto_quant/rd_program_20261105_v1/event_source_probe_v001/binance_public_bookDepth.raw",
+        "bytes": 463389,
+        "sha256": "fa37c9f66c96a95cf3081c5812d8e1d8fdbb0fc0df1c05989fd973492eaebd48"
+      },
+      "official_checksum_verified": true,
+      "archive_schema": {
+        "columns": [
+          "timestamp",
+          "percentage",
+          "depth",
+          "notional"
+        ],
+        "rows": 28800,
+        "first_rows": [
+          [
+            "2025-01-01 00:00:07",
+            "-5",
+            "9445.59000000",
+            "860670550.20650000"
+          ],
+          [
+            "2025-01-01 00:00:07",
+            "-4",
+            "7939.65000000",
+            "726293373.33020000"
+          ]
+        ],
+        "percentage_values": [
+          "-1",
+          "-2",
+          "-3",
+          "-4",
+          "-5",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ]
+      },
+      "finished_at_utc": "2026-11-06T01:49:52.199593+00:00"
+    },
+    {
+      "id": "binance_public_bookTicker",
+      "kind": "archive",
+      "url": "https://data.binance.vision/data/futures/um/daily/bookTicker/BTCUSDT/BTCUSDT-bookTicker-2025-01-01.zip",
+      "started_at_utc": "2026-11-06T01:49:52.199641+00:00",
+      "http_status": 404,
+      "headers": {
+        "Content-Type": "application/xml"
+      },
+      "state": "body_complete",
+      "raw": {
+        "path": "user_data/crypto_quant/rd_program_20261105_v1/event_source_probe_v001/binance_public_bookTicker.raw",
+        "bytes": 365,
+        "sha256": "baafe82d4a15bbdd9c1b69765ecc9e5a3ad125e678bfecafe2e5401ff3fae5a9"
+      },
+      "error_body_excerpt": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>NoSuchKey</Code><Message>The specified key does not exist.</Message><Key>data/futures/um/daily/bookTicker/BTCUSDT/BTCUSDT-bookTicker-2025-01-01.zip</Key><RequestId>ESET5BHF1MHN6Z1R</RequestId><HostId>OLfHmwWfw43hOQrqRXqpsLLMPn8DkZHq4USW2L2nmk1VD+9gxybP6uVYaonVYIPwAXV86+QxLW6gGy58qo3vlT06MeNJjsNd</HostId></Error>",
+      "finished_at_utc": "2026-11-06T01:49:52.402308+00:00"
+    }
+  ],
+  "fixed_universe_metadata": [
+    {
+      "market": "spot",
+      "pair": "BTC/USDT",
+      "raw_symbol": "btcusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "btcusdt",
+        "type": "spot",
+        "availableSince": "2019-03-30T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "ETH/USDT",
+      "raw_symbol": "ethusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "ethusdt",
+        "type": "spot",
+        "availableSince": "2019-03-30T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "SOL/USDT",
+      "raw_symbol": "solusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "solusdt",
+        "type": "spot",
+        "availableSince": "2020-08-11T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "AVAX/USDT",
+      "raw_symbol": "avaxusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "avaxusdt",
+        "type": "spot",
+        "availableSince": "2020-09-22T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "DOGE/USDT",
+      "raw_symbol": "dogeusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "dogeusdt",
+        "type": "spot",
+        "availableSince": "2019-07-05T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "XRP/USDT",
+      "raw_symbol": "xrpusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "xrpusdt",
+        "type": "spot",
+        "availableSince": "2019-03-30T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "ADA/USDT",
+      "raw_symbol": "adausdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "adausdt",
+        "type": "spot",
+        "availableSince": "2019-03-30T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "LINK/USDT",
+      "raw_symbol": "linkusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "linkusdt",
+        "type": "spot",
+        "availableSince": "2019-11-07T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "DOT/USDT",
+      "raw_symbol": "dotusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "dotusdt",
+        "type": "spot",
+        "availableSince": "2020-08-18T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "FIL/USDT",
+      "raw_symbol": "filusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "filusdt",
+        "type": "spot",
+        "availableSince": "2020-10-17T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "NEAR/USDT",
+      "raw_symbol": "nearusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "nearusdt",
+        "type": "spot",
+        "availableSince": "2020-10-14T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "ATOM/USDT",
+      "raw_symbol": "atomusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "atomusdt",
+        "type": "spot",
+        "availableSince": "2019-05-03T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "DYDX/USDT",
+      "raw_symbol": "dydxusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "dydxusdt",
+        "type": "spot",
+        "availableSince": "2021-09-09T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "LTC/USDT",
+      "raw_symbol": "ltcusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "ltcusdt",
+        "type": "spot",
+        "availableSince": "2019-03-30T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "BCH/USDT",
+      "raw_symbol": "bchusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "bchusdt",
+        "type": "spot",
+        "availableSince": "2019-11-28T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "ETC/USDT",
+      "raw_symbol": "etcusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "etcusdt",
+        "type": "spot",
+        "availableSince": "2019-03-30T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "GALA/USDT",
+      "raw_symbol": "galausdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "galausdt",
+        "type": "spot",
+        "availableSince": "2021-09-13T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "SAND/USDT",
+      "raw_symbol": "sandusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "sandusdt",
+        "type": "spot",
+        "availableSince": "2021-01-25T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "UNI/USDT",
+      "raw_symbol": "uniusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "uniusdt",
+        "type": "spot",
+        "availableSince": "2020-09-17T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "IOTA/USDT",
+      "raw_symbol": "iotausdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "iotausdt",
+        "type": "spot",
+        "availableSince": "2019-03-30T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "RUNE/USDT",
+      "raw_symbol": "runeusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "runeusdt",
+        "type": "spot",
+        "availableSince": "2020-09-04T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "AXS/USDT",
+      "raw_symbol": "axsusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "axsusdt",
+        "type": "spot",
+        "availableSince": "2020-11-20T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "EGLD/USDT",
+      "raw_symbol": "egldusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "egldusdt",
+        "type": "spot",
+        "availableSince": "2020-09-15T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "ALGO/USDT",
+      "raw_symbol": "algousdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "algousdt",
+        "type": "spot",
+        "availableSince": "2019-11-07T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "SNX/USDT",
+      "raw_symbol": "snxusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "snxusdt",
+        "type": "spot",
+        "availableSince": "2020-07-09T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "CRV/USDT",
+      "raw_symbol": "crvusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "crvusdt",
+        "type": "spot",
+        "availableSince": "2020-08-17T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "MASK/USDT",
+      "raw_symbol": "maskusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "maskusdt",
+        "type": "spot",
+        "availableSince": "2021-05-25T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "SUSHI/USDT",
+      "raw_symbol": "sushiusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "sushiusdt",
+        "type": "spot",
+        "availableSince": "2020-09-02T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "KSM/USDT",
+      "raw_symbol": "ksmusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "ksmusdt",
+        "type": "spot",
+        "availableSince": "2020-09-16T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "IOTX/USDT",
+      "raw_symbol": "iotxusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "iotxusdt",
+        "type": "spot",
+        "availableSince": "2021-03-04T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "MANA/USDT",
+      "raw_symbol": "manausdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "manausdt",
+        "type": "spot",
+        "availableSince": "2020-08-06T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "NEO/USDT",
+      "raw_symbol": "neousdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "neousdt",
+        "type": "spot",
+        "availableSince": "2019-03-30T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "GRT/USDT",
+      "raw_symbol": "grtusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "grtusdt",
+        "type": "spot",
+        "availableSince": "2020-12-19T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "TRX/USDT",
+      "raw_symbol": "trxusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "trxusdt",
+        "type": "spot",
+        "availableSince": "2019-03-30T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "SKL/USDT",
+      "raw_symbol": "sklusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "sklusdt",
+        "type": "spot",
+        "availableSince": "2020-12-01T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "spot",
+      "pair": "THETA/USDT",
+      "raw_symbol": "thetausdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "thetausdt",
+        "type": "spot",
+        "availableSince": "2020-05-19T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "BTC/USDT:USDT",
+      "raw_symbol": "btcusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "btcusdt",
+        "type": "perpetual",
+        "availableSince": "2019-11-17T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "ETH/USDT:USDT",
+      "raw_symbol": "ethusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "ethusdt",
+        "type": "perpetual",
+        "availableSince": "2019-11-27T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "SOL/USDT:USDT",
+      "raw_symbol": "solusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "solusdt",
+        "type": "perpetual",
+        "availableSince": "2020-09-14T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "AVAX/USDT:USDT",
+      "raw_symbol": "avaxusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "avaxusdt",
+        "type": "perpetual",
+        "availableSince": "2020-09-23T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "TRB/USDT:USDT",
+      "raw_symbol": "trbusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "trbusdt",
+        "type": "perpetual",
+        "availableSince": "2020-09-03T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "DOGE/USDT:USDT",
+      "raw_symbol": "dogeusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "dogeusdt",
+        "type": "perpetual",
+        "availableSince": "2020-07-10T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "XRP/USDT:USDT",
+      "raw_symbol": "xrpusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "xrpusdt",
+        "type": "perpetual",
+        "availableSince": "2020-01-06T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "ADA/USDT:USDT",
+      "raw_symbol": "adausdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "adausdt",
+        "type": "perpetual",
+        "availableSince": "2020-01-31T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "BNB/USDT:USDT",
+      "raw_symbol": "bnbusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "bnbusdt",
+        "type": "perpetual",
+        "availableSince": "2020-02-10T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "LINK/USDT:USDT",
+      "raw_symbol": "linkusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "linkusdt",
+        "type": "perpetual",
+        "availableSince": "2020-01-17T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "DOT/USDT:USDT",
+      "raw_symbol": "dotusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "dotusdt",
+        "type": "perpetual",
+        "availableSince": "2020-08-22T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "FIL/USDT:USDT",
+      "raw_symbol": "filusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "filusdt",
+        "type": "perpetual",
+        "availableSince": "2020-10-16T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "NEAR/USDT:USDT",
+      "raw_symbol": "nearusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "nearusdt",
+        "type": "perpetual",
+        "availableSince": "2020-10-16T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "ATOM/USDT:USDT",
+      "raw_symbol": "atomusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "atomusdt",
+        "type": "perpetual",
+        "availableSince": "2020-02-07T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "DYDX/USDT:USDT",
+      "raw_symbol": "dydxusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "dydxusdt",
+        "type": "perpetual",
+        "availableSince": "2021-09-10T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "LTC/USDT:USDT",
+      "raw_symbol": "ltcusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "ltcusdt",
+        "type": "perpetual",
+        "availableSince": "2020-01-09T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "BCH/USDT:USDT",
+      "raw_symbol": "bchusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "bchusdt",
+        "type": "perpetual",
+        "availableSince": "2019-12-19T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "ETC/USDT:USDT",
+      "raw_symbol": "etcusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "etcusdt",
+        "type": "perpetual",
+        "availableSince": "2020-01-16T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "GALA/USDT:USDT",
+      "raw_symbol": "galausdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "galausdt",
+        "type": "perpetual",
+        "availableSince": "2021-09-18T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "SAND/USDT:USDT",
+      "raw_symbol": "sandusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "sandusdt",
+        "type": "perpetual",
+        "availableSince": "2021-01-25T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "UNI/USDT:USDT",
+      "raw_symbol": "uniusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "uniusdt",
+        "type": "perpetual",
+        "availableSince": "2020-09-18T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "IOTA/USDT:USDT",
+      "raw_symbol": "iotausdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "iotausdt",
+        "type": "perpetual",
+        "availableSince": "2020-02-12T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "RUNE/USDT:USDT",
+      "raw_symbol": "runeusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "runeusdt",
+        "type": "perpetual",
+        "availableSince": "2020-09-04T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "AXS/USDT:USDT",
+      "raw_symbol": "axsusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "axsusdt",
+        "type": "perpetual",
+        "availableSince": "2020-11-20T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "AAVE/USDT:USDT",
+      "raw_symbol": "aaveusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "aaveusdt",
+        "type": "perpetual",
+        "availableSince": "2020-10-16T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "EGLD/USDT:USDT",
+      "raw_symbol": "egldusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "egldusdt",
+        "type": "perpetual",
+        "availableSince": "2020-09-14T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "ALGO/USDT:USDT",
+      "raw_symbol": "algousdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "algousdt",
+        "type": "perpetual",
+        "availableSince": "2020-06-16T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "SNX/USDT:USDT",
+      "raw_symbol": "snxusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "snxusdt",
+        "type": "perpetual",
+        "availableSince": "2020-08-15T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "CRV/USDT:USDT",
+      "raw_symbol": "crvusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "crvusdt",
+        "type": "perpetual",
+        "availableSince": "2020-09-01T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "MASK/USDT:USDT",
+      "raw_symbol": "maskusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "maskusdt",
+        "type": "perpetual",
+        "availableSince": "2021-08-27T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "SUSHI/USDT:USDT",
+      "raw_symbol": "sushiusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "sushiusdt",
+        "type": "perpetual",
+        "availableSince": "2020-09-04T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "KSM/USDT:USDT",
+      "raw_symbol": "ksmusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "ksmusdt",
+        "type": "perpetual",
+        "availableSince": "2020-10-14T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "IOTX/USDT:USDT",
+      "raw_symbol": "iotxusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "iotxusdt",
+        "type": "perpetual",
+        "availableSince": "2021-08-12T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "MANA/USDT:USDT",
+      "raw_symbol": "manausdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "manausdt",
+        "type": "perpetual",
+        "availableSince": "2021-03-15T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "NEO/USDT:USDT",
+      "raw_symbol": "neousdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "neousdt",
+        "type": "perpetual",
+        "availableSince": "2020-02-17T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "GRT/USDT:USDT",
+      "raw_symbol": "grtusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "grtusdt",
+        "type": "perpetual",
+        "availableSince": "2020-12-19T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "TRX/USDT:USDT",
+      "raw_symbol": "trxusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "trxusdt",
+        "type": "perpetual",
+        "availableSince": "2020-01-15T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "CELO/USDT:USDT",
+      "raw_symbol": "celousdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "celousdt",
+        "type": "perpetual",
+        "availableSince": "2021-09-27T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "SKL/USDT:USDT",
+      "raw_symbol": "sklusdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "sklusdt",
+        "type": "perpetual",
+        "availableSince": "2020-12-08T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    },
+    {
+      "market": "futures",
+      "pair": "THETA/USDT:USDT",
+      "raw_symbol": "thetausdt",
+      "listed_in_vendor_metadata": true,
+      "declared_availability": {
+        "id": "thetausdt",
+        "type": "perpetual",
+        "availableSince": "2020-05-27T00:00:00.000Z"
+      },
+      "actual_complete_L_S_verified": false
+    }
+  ],
+  "actual_sample_scope": "BTC only, one minute on2025-01-01 in each market; not feature warmup, validation fold, or full universe coverage",
+  "sample_event_count": 6006,
+  "ordinary_date_access": "Both2025-01-02 requests returned401 requiring authorized data access; no credentials searched or used.",
+  "timestamp_limit": "Raw7-digit fractional local timestamps retained; probe datetime summaries truncate to Python microseconds. Full-precision ordering not yet audited.",
+  "public_bookDepth_limit": "Only +/-1..5 percent aggregate depth; no individual levels or20bps depth in inspected file.",
+  "bookTicker_limit": "One requested BTC2025-01-01 archive returned404; not proof of universal absence.",
+  "remaining_gates": [
+    "Full-window licensed raw data access and actual fixed-universe coverage",
+    "Full-precision local chronology and book sequence continuity",
+    "20bps depth reconstruction and complete boundary coverage",
+    "168h/24h feature availability and source timing convention",
+    "Historical full trading-rule versions, not just current metadata",
+    "Funding and modeled private account event sequencing"
+  ],
+  "financial_runs": 0,
+  "orders_enabled": false,
+  "economic_qualified": false
+}
