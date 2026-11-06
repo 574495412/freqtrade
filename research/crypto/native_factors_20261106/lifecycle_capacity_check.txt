@@ -1,0 +1,14 @@
+test_open_partial_then_cancellation_preserves_fill_history_and_no_double_reservation (__main__.NativeReconciliationTests.test_open_partial_then_cancellation_preserves_fill_history_and_no_double_reservation) ... FAIL
+
+======================================================================
+FAIL: test_open_partial_then_cancellation_preserves_fill_history_and_no_double_reservation (__main__.NativeReconciliationTests.test_open_partial_then_cancellation_preserves_fill_history_and_no_double_reservation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_lifecycle.py", line 110, in test_open_partial_then_cancellation_preserves_fill_history_and_no_double_reservation
+    self.assertTrue(result["reserved"], result)
+AssertionError: False is not true : {'reserved': False, 'reasons': ['trade_risk_including_roundtrip_cost'], 'submission_authorized': False}
+
+----------------------------------------------------------------------
+Ran 1 test in 0.062s
+
+FAILED (failures=1)

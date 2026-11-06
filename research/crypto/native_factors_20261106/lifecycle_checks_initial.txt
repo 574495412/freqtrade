@@ -1,0 +1,26 @@
+test_base_fee_and_partial_exit_reconcile_net_inventory_not_gross_fills (__main__.NativeReconciliationTests.test_base_fee_and_partial_exit_reconcile_net_inventory_not_gross_fills) ... ok
+test_full_exit_uses_zero_exposure_despite_closed_native_historical_amount (__main__.NativeReconciliationTests.test_full_exit_uses_zero_exposure_despite_closed_native_historical_amount) ... ok
+test_lifecycle_commit_ack_loss_recovers_without_double_release_or_request (__main__.NativeReconciliationTests.test_lifecycle_commit_ack_loss_recovers_without_double_release_or_request) ... Long GTC order with time in force limit for BTC/USDT is rejected by Binance. zero amount is fulfilled.
+ok
+test_missing_native_order_with_nonzero_fill_is_not_a_rejection (__main__.NativeReconciliationTests.test_missing_native_order_with_nonzero_fill_is_not_a_rejection) ... Long GTC order with time in force limit for BTC/USDT is rejected by Binance. zero amount is fulfilled.
+ok
+test_missing_or_changed_fill_evidence_does_not_release_capacity (__main__.NativeReconciliationTests.test_missing_or_changed_fill_evidence_does_not_release_capacity) ... ok
+test_open_partial_then_cancellation_preserves_fill_history_and_no_double_reservation (__main__.NativeReconciliationTests.test_open_partial_then_cancellation_preserves_fill_history_and_no_double_reservation) ... FAIL
+test_same_venue_id_on_two_pairs_is_independent_but_pair_reuse_is_rejected (__main__.NativeReconciliationTests.test_same_venue_id_on_two_pairs_is_independent_but_pair_reuse_is_rejected) ... Long GTC order with time in force limit for BTC/USDT is rejected by Binance. zero amount is fulfilled.
+ok
+test_unknown_completeness_sequence_and_fee_are_rejected (__main__.NativeReconciliationTests.test_unknown_completeness_sequence_and_fee_are_rejected) ... ok
+test_zero_rejection_releases_reservation_and_exact_replay_is_idempotent (__main__.NativeReconciliationTests.test_zero_rejection_releases_reservation_and_exact_replay_is_idempotent) ... Long GTC order with time in force limit for BTC/USDT is rejected by Binance. zero amount is fulfilled.
+ok
+
+======================================================================
+FAIL: test_open_partial_then_cancellation_preserves_fill_history_and_no_double_reservation (__main__.NativeReconciliationTests.test_open_partial_then_cancellation_preserves_fill_history_and_no_double_reservation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_lifecycle.py", line 108, in test_open_partial_then_cancellation_preserves_fill_history_and_no_double_reservation
+    self.assertTrue(gate.bridge.reserve(asset, account, p, report.received_at)["reserved"])
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.405s
+
+FAILED (failures=1)

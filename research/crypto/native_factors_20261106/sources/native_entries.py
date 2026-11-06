@@ -2,10 +2,11 @@
 
 Calls the installed Freqtrade and CCXT request builders, backed exclusively by
 explicit synthetic Binance responses. This is not a production Exchange class.
-Risk capacity stays pending until a separate complete lifecycle reconciliation.
+Risk capacity stays pending until complete native lifecycle reconciliation.
 """
 from contextlib import contextmanager
 from contextvars import ContextVar
+from dataclasses import asdict
 import copy
 import json
 from pathlib import Path
@@ -18,7 +19,7 @@ from freqtrade.persistence import Order, Trade
 
 from native_snapshot import NativeSnapshotBridge
 from native_evidence import CapturedOrder, decimal_text
-from rd1 import RiskError, StateError, Store, dec, stamp, parse
+from rd1 import RiskError, StateError, Store, dec, stamp, parse, primitive, digest
 
 
 class LocalBinanceTape(ccxt.binance):
@@ -232,3 +233,38 @@ class NativeEntryGate:
             item["native_binding"] = binding
             self._persist()
             return copy.deepcopy(binding)
+
+    def reconcile_native(self, request_id, event_id, envelope, evidence, now, *, fills, fills_complete, sequence_basis):
+        """Persist report inputs before handing off to native lifecycle release.
+
+        These stores are separate transactions. Acknowledgement failure keeps the
+        writer poisoned; replaying identical evidence after reopening is idempotent.
+        """
+        from native_lifecycle import NativeLifecycle
+        fills = tuple(fills)
+        evidence = copy.deepcopy(evidence)
+        with self._mutex:
+            if self._poisoned or self.store.lock.closed:
+                raise StateError("Entry receipt writer unavailable")
+            if not isinstance(self.lifecycle, NativeLifecycle):
+                raise RiskError("Native lifecycle required for capacity reconciliation")
+            if envelope.evidence_class != "synthetic" or evidence.evidence_class != "synthetic":
+                raise RiskError("Local entry tape cannot be upgraded to captured exchange evidence")
+            if not isinstance(event_id, str) or not event_id:
+                raise RiskError("Reconciliation event identity required")
+            item = self.s["requests"][request_id]
+            payload = primitive({"envelope": asdict(envelope), "evidence": asdict(evidence),
+                                 "fills": [asdict(f) for f in fills], "fills_complete": fills_complete,
+                                 "sequence_basis": sequence_basis})
+            signature = digest(payload)
+            events = item.setdefault("lifecycle_reports", {})
+            if event_id in events and events[event_id]["signature"] != signature:
+                raise StateError("Conflicting native receipt event")
+            if event_id not in events:
+                events[event_id] = {"signature": signature, "payload": payload, "result": None}
+                self._persist()
+            result = self.lifecycle.reconcile_native(request_id, event_id, envelope, evidence, now,
+                fills=fills, fills_complete=fills_complete, sequence_basis=sequence_basis)
+            events[event_id]["result"] = result["state"]
+            self._persist()
+            return result
