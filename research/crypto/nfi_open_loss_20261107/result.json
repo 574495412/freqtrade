@@ -1,0 +1,820 @@
+{
+  "registration_sha256": "a9e17c53ae5f4acf731d60b391446f750c454b2b37f4015c62e28db1e3c07917",
+  "accounts": {
+    "2024_OpenLoss_15bps": {
+      "archive_sha256": "399e40bff9a81111b5af2a235b278dd0d2eab9dab04083049cca0d9337a5e85d",
+      "trades": 228,
+      "filled_orders": 604,
+      "maximum_cash_error_usdt": 1.75955751e-08,
+      "aggregate_cash_error_usdt": 8.0935961783e-09,
+      "periods": {
+        "continuous": {
+          "name": "continuous",
+          "start": "2024-01-01 00:00:00+00:00",
+          "end": "2024-12-31 23:00:00+00:00",
+          "net_return": 1.3757415148105419,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 2375.741514810542,
+          "hourly_mark_drawdown": 0.22643946854714203,
+          "daily_nav_sharpe": 2.5488435950014288,
+          "completed_campaigns": 227,
+          "campaign_profit_factor": 2.5841157822377334,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 2246.44108269,
+          "campaign_gross_loss": 869.32679183,
+          "open_campaigns_at_end": 1,
+          "calendar_hours": 8784,
+          "equity_insolvent": false
+        },
+        "H1": {
+          "name": "H1",
+          "start": "2024-01-01 00:00:00+00:00",
+          "end": "2024-07-01 00:00:00+00:00",
+          "net_return": 0.3811893893619198,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1381.18938936192,
+          "hourly_mark_drawdown": 0.22643946854714203,
+          "daily_nav_sharpe": 1.7686565573100699,
+          "completed_campaigns": 126,
+          "campaign_profit_factor": 1.7305030399233567,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 910.0820722999999,
+          "campaign_gross_loss": 525.90608124,
+          "open_campaigns_at_end": 1,
+          "calendar_hours": 4369,
+          "equity_insolvent": false
+        },
+        "H2": {
+          "name": "H2",
+          "start": "2024-07-01 00:00:00+00:00",
+          "end": "2024-12-31 23:00:00+00:00",
+          "net_return": 0.7200693352474159,
+          "initial_marked_equity": 1381.18938936192,
+          "ending_marked_equity": 2375.741514810542,
+          "hourly_mark_drawdown": 0.11025544350823913,
+          "daily_nav_sharpe": 3.5809154015195954,
+          "completed_campaigns": 101,
+          "campaign_profit_factor": 3.8913174691593957,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 1336.35901039,
+          "campaign_gross_loss": 343.42071059,
+          "open_campaigns_at_end": 1,
+          "calendar_hours": 4416,
+          "equity_insolvent": false
+        }
+      },
+      "native_result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_open_loss_20261107_v001/2024_OpenLoss_15bps/result.json",
+        "sha256": "bad4c01467e17bbcbf897e8f9b2ba322acbbfcb44ca8a5e80c02dde0e504afce"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_open_loss_20261107_v001/2024_OpenLoss_15bps/hourly_equity.parquet",
+        "sha256": "007ea1c723870abb05fe7b61017e74e8601caf37cdd707a1a50c7b2d4a6ca7d7"
+      },
+      "trigger_count": 20,
+      "trigger_dates": {
+        "2024-03-05": 4,
+        "2024-03-15": 1,
+        "2024-03-20": 1,
+        "2024-04-13": 5,
+        "2024-08-05": 6,
+        "2024-11-15": 1,
+        "2024-12-20": 2
+      },
+      "trigger_trace": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_open_loss_20261107_v001/2024_OpenLoss_15bps/open_loss_trigger.jsonl",
+        "sha256": "adba06b018ed96a82a2ec92e16c3e88f324fb56858592f80d4721cd57ae7b23a"
+      },
+      "overlay_exits": [
+        {
+          "pair": "SAND/USDT:USDT",
+          "time": "2024-03-05T19:55:00+00:00",
+          "group_open_loss": 0.05863860709831716,
+          "trade_pnl": -35.83637715
+        },
+        {
+          "pair": "DYDX/USDT:USDT",
+          "time": "2024-03-05T20:00:00+00:00",
+          "group_open_loss": 0.053208767106928664,
+          "trade_pnl": -33.3364136
+        },
+        {
+          "pair": "ALGO/USDT:USDT",
+          "time": "2024-03-05T20:45:00+00:00",
+          "group_open_loss": 0.055026866185151915,
+          "trade_pnl": -25.50396733
+        },
+        {
+          "pair": "UNI/USDT:USDT",
+          "time": "2024-03-05T20:50:00+00:00",
+          "group_open_loss": 0.052011501996296665,
+          "trade_pnl": -23.655319
+        },
+        {
+          "pair": "GALA/USDT:USDT",
+          "time": "2024-03-15T08:50:00+00:00",
+          "group_open_loss": 0.05519074470228626,
+          "trade_pnl": -3.54553855
+        },
+        {
+          "pair": "GALA/USDT:USDT",
+          "time": "2024-03-20T05:30:00+00:00",
+          "group_open_loss": 0.1463040330717422,
+          "trade_pnl": -93.62524881
+        },
+        {
+          "pair": "NEO/USDT:USDT",
+          "time": "2024-04-13T17:05:00+00:00",
+          "group_open_loss": 0.05381340523279157,
+          "trade_pnl": -31.492810119999998
+        },
+        {
+          "pair": "FIL/USDT:USDT",
+          "time": "2024-04-13T19:50:00+00:00",
+          "group_open_loss": 0.06526475923691513,
+          "trade_pnl": -41.63487393
+        },
+        {
+          "pair": "DOGE/USDT:USDT",
+          "time": "2024-04-13T20:05:00+00:00",
+          "group_open_loss": 0.050033290830446685,
+          "trade_pnl": -50.05770788
+        },
+        {
+          "pair": "GALA/USDT:USDT",
+          "time": "2024-04-13T20:10:00+00:00",
+          "group_open_loss": 0.1071289987270888,
+          "trade_pnl": -66.02708477
+        },
+        {
+          "pair": "ETH/USDT:USDT",
+          "time": "2024-04-13T21:30:00+00:00",
+          "group_open_loss": 0.0539804232923243,
+          "trade_pnl": -26.5496646
+        },
+        {
+          "pair": "NEAR/USDT:USDT",
+          "time": "2024-08-05T06:20:00+00:00",
+          "group_open_loss": 0.057082681430619106,
+          "trade_pnl": -44.255481
+        },
+        {
+          "pair": "SAND/USDT:USDT",
+          "time": "2024-08-05T06:25:00+00:00",
+          "group_open_loss": 0.09213140406146361,
+          "trade_pnl": -51.014407
+        },
+        {
+          "pair": "UNI/USDT:USDT",
+          "time": "2024-08-05T06:30:00+00:00",
+          "group_open_loss": 0.07307758310644351,
+          "trade_pnl": -32.426918
+        },
+        {
+          "pair": "ETH/USDT:USDT",
+          "time": "2024-08-05T06:40:00+00:00",
+          "group_open_loss": 0.05029399544692635,
+          "trade_pnl": -27.80720405
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "time": "2024-08-05T09:50:00+00:00",
+          "group_open_loss": 0.05483576193166763,
+          "trade_pnl": -16.46544637
+        },
+        {
+          "pair": "LINK/USDT:USDT",
+          "time": "2024-08-05T11:10:00+00:00",
+          "group_open_loss": 0.052603747250379855,
+          "trade_pnl": -22.12027551
+        },
+        {
+          "pair": "FIL/USDT:USDT",
+          "time": "2024-11-15T01:15:00+00:00",
+          "group_open_loss": 0.05247644053129356,
+          "trade_pnl": -32.64563658
+        },
+        {
+          "pair": "AAVE/USDT:USDT",
+          "time": "2024-12-20T11:40:00+00:00",
+          "group_open_loss": 0.05231926782879755,
+          "trade_pnl": -45.737016
+        },
+        {
+          "pair": "IOTA/USDT:USDT",
+          "time": "2024-12-20T12:00:00+00:00",
+          "group_open_loss": 0.052529114804839315,
+          "trade_pnl": -58.13486964
+        }
+      ],
+      "exit_dates": 7,
+      "unknown_inputs": 0,
+      "native_liquidations": 0
+    },
+    "2024_OpenLoss_8bps": {
+      "archive_sha256": "e3fe8e11139e1cadd2a14a8fc769255b1b04d6c246d9de385cb15649ca728e45",
+      "trades": 231,
+      "filled_orders": 612,
+      "maximum_cash_error_usdt": 2.11237295e-08,
+      "aggregate_cash_error_usdt": 8.2016215299e-09,
+      "periods": {
+        "continuous": {
+          "name": "continuous",
+          "start": "2024-01-01 00:00:00+00:00",
+          "end": "2024-12-31 23:00:00+00:00",
+          "net_return": 2.1287948859372436,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 3128.7948859372436,
+          "hourly_mark_drawdown": 0.13209329124282554,
+          "daily_nav_sharpe": 3.3856333352964705,
+          "completed_campaigns": 230,
+          "campaign_profit_factor": 3.9135911009984423,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 2859.63922999,
+          "campaign_gross_loss": 730.69443286,
+          "open_campaigns_at_end": 1,
+          "calendar_hours": 8784,
+          "equity_insolvent": false
+        },
+        "H1": {
+          "name": "H1",
+          "start": "2024-01-01 00:00:00+00:00",
+          "end": "2024-07-01 00:00:00+00:00",
+          "net_return": 0.6928510261379837,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1692.8510261379836,
+          "hourly_mark_drawdown": 0.13209329124282554,
+          "daily_nav_sharpe": 2.9796321483601016,
+          "completed_campaigns": 126,
+          "campaign_profit_factor": 2.585859769978083,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 1135.39785835,
+          "campaign_gross_loss": 439.07943947,
+          "open_campaigns_at_end": 1,
+          "calendar_hours": 4369,
+          "equity_insolvent": false
+        },
+        "H2": {
+          "name": "H2",
+          "start": "2024-07-01 00:00:00+00:00",
+          "end": "2024-12-31 23:00:00+00:00",
+          "net_return": 0.8482399441108393,
+          "initial_marked_equity": 1692.8510261379836,
+          "ending_marked_equity": 3128.7948859372436,
+          "hourly_mark_drawdown": 0.09375107743914568,
+          "daily_nav_sharpe": 3.8349944200897124,
+          "completed_campaigns": 104,
+          "campaign_profit_factor": 5.912732235046757,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 1724.24137164,
+          "campaign_gross_loss": 291.61499339,
+          "open_campaigns_at_end": 1,
+          "calendar_hours": 4416,
+          "equity_insolvent": false
+        }
+      },
+      "native_result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_open_loss_20261107_v001/2024_OpenLoss_8bps/result.json",
+        "sha256": "e7814921fcdbd88926bafd12eeb450dd823227cad937b3bb250125021942bf70"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_open_loss_20261107_v001/2024_OpenLoss_8bps/hourly_equity.parquet",
+        "sha256": "f305563a96146b1ad62875ab869fa141cd66be9b3ef4a4b9cbc98ef98abac1a5"
+      },
+      "trigger_count": 12,
+      "trigger_dates": {
+        "2024-03-05": 1,
+        "2024-03-20": 1,
+        "2024-04-13": 3,
+        "2024-08-05": 6,
+        "2024-11-15": 1
+      },
+      "trigger_trace": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_open_loss_20261107_v001/2024_OpenLoss_8bps/open_loss_trigger.jsonl",
+        "sha256": "cb9210d513e9a5d6b776e586e632402573b502b5316ddcaa2b9866a8adbe3ab6"
+      },
+      "overlay_exits": [
+        {
+          "pair": "SAND/USDT:USDT",
+          "time": "2024-03-05T19:55:00+00:00",
+          "group_open_loss": 0.061192368356200774,
+          "trade_pnl": -35.60543784
+        },
+        {
+          "pair": "GALA/USDT:USDT",
+          "time": "2024-03-20T05:30:00+00:00",
+          "group_open_loss": 0.1461424865046358,
+          "trade_pnl": -105.06276663
+        },
+        {
+          "pair": "NEO/USDT:USDT",
+          "time": "2024-04-13T20:00:00+00:00",
+          "group_open_loss": 0.05297035937708633,
+          "trade_pnl": -78.67722505
+        },
+        {
+          "pair": "GALA/USDT:USDT",
+          "time": "2024-04-13T20:10:00+00:00",
+          "group_open_loss": 0.106792267112693,
+          "trade_pnl": -76.74760505
+        },
+        {
+          "pair": "ETH/USDT:USDT",
+          "time": "2024-04-13T21:30:00+00:00",
+          "group_open_loss": 0.05389881762892205,
+          "trade_pnl": -31.1512702
+        },
+        {
+          "pair": "NEAR/USDT:USDT",
+          "time": "2024-08-05T06:20:00+00:00",
+          "group_open_loss": 0.05706161940776861,
+          "trade_pnl": -54.0418592
+        },
+        {
+          "pair": "SAND/USDT:USDT",
+          "time": "2024-08-05T06:25:00+00:00",
+          "group_open_loss": 0.09213888742518153,
+          "trade_pnl": -62.4643344
+        },
+        {
+          "pair": "UNI/USDT:USDT",
+          "time": "2024-08-05T06:30:00+00:00",
+          "group_open_loss": 0.07347811362880284,
+          "trade_pnl": -39.3403488
+        },
+        {
+          "pair": "ETH/USDT:USDT",
+          "time": "2024-08-05T06:40:00+00:00",
+          "group_open_loss": 0.05066792499477261,
+          "trade_pnl": -33.68505698
+        },
+        {
+          "pair": "CRV/USDT:USDT",
+          "time": "2024-08-05T09:50:00+00:00",
+          "group_open_loss": 0.054830981662651754,
+          "trade_pnl": -20.01187914
+        },
+        {
+          "pair": "LINK/USDT:USDT",
+          "time": "2024-08-05T11:10:00+00:00",
+          "group_open_loss": 0.05261025538377435,
+          "trade_pnl": -27.03349212
+        },
+        {
+          "pair": "FIL/USDT:USDT",
+          "time": "2024-11-15T01:15:00+00:00",
+          "group_open_loss": 0.05263389532330611,
+          "trade_pnl": -39.5595944
+        }
+      ],
+      "exit_dates": 5,
+      "unknown_inputs": 0,
+      "native_liquidations": 0
+    }
+  },
+  "marks": {
+    "2024_OpenLoss_15bps": {
+      "drawdown": 0.2628943686740053,
+      "points": 105397,
+      "hourly_error_usdt": 2.2737367544323206e-12,
+      "curve": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_open_loss_20261107_v001/2024-mark/2024_OpenLoss_15bps.parquet",
+        "sha256": "6984441a53f0a375b7e9056375db1858167dbe2080cffa6a9d5fc4110b53f2f1"
+      }
+    },
+    "2024_OpenLoss_8bps": {
+      "drawdown": 0.17599091764273989,
+      "points": 105397,
+      "hourly_error_usdt": 2.2737367544323206e-12,
+      "curve": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_open_loss_20261107_v001/2024-mark/2024_OpenLoss_8bps.parquet",
+        "sha256": "2021a92b0a8628a06945bc7344c95993aab9dfd6e7fe015314776b2a6af9c7f3"
+      }
+    }
+  },
+  "mark_sources": {
+    "AAVE/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "30d133c5e8e8f9a352060aa12769f49b51d09e17040a05adecb08b6107156717",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/AAVEUSDT.parquet",
+        "sha256": "3f89fd68dc41c4d7df6d6a7870a4f4199aae6773352c88edd773c51be8db4ec3"
+      }
+    },
+    "ADA/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "7514b30ed82fcc92cd9404735c663af92990f97652f5160b5b3f04bffc0b10c3",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/ADAUSDT.parquet",
+        "sha256": "b3db6825391f7558f68619037da18c02eb89b47f5fad15a8ac3984d87de349d4"
+      }
+    },
+    "ALGO/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "c625377238a0c1b5e18cdfce247df2f6c9012b2d522bb0f67252b7c720e7a477",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/ALGOUSDT.parquet",
+        "sha256": "c6c6056871ae156ca974bf4e665ce1590d1e5a3dcaf6db1c83296add02ab3561"
+      }
+    },
+    "ATOM/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "cbafa4f8ada5df7b42bde3e27c4de51dcc801869185c3b32cc5e986d01dff515",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/ATOMUSDT.parquet",
+        "sha256": "43ba0228dc9df0215e609abbc1abee0618d483e5411272f595ab81dcf9481b1e"
+      }
+    },
+    "AVAX/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "a3ba56d86d440828fcf0c997eaedb602e68c78682abfb656b6f0ab8f2ca30da4",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/AVAXUSDT.parquet",
+        "sha256": "42ef17fa995685d4f2fd77292e2477566078703ada06bc0424387beb579bf6fa"
+      }
+    },
+    "AXS/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "f0d2ddfe5494b3f5ed7db9533e1c4c3ac749454aa67a9df7739b06f545a38ea2",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/AXSUSDT.parquet",
+        "sha256": "5dc4bd301e82443196a83d390a2a636a3918dfd3ce776717471470624e378ac2"
+      }
+    },
+    "BCH/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "34c5358d8ffa36e6c6f81c9d500200e2858d08b496b1c1849557aafd1869f83a",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/BCHUSDT.parquet",
+        "sha256": "5d2637c86e7505cda176cb6548955f1ddd700af5e7707ad1502d0110017e99f4"
+      }
+    },
+    "BNB/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "83d79fc34ebee5ae68a6804939edeeb98c44e65a3c0b49afa224e05ea1342339",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/BNBUSDT.parquet",
+        "sha256": "6f49ac5c0ca6eaa0cbb6b329d9aadfc1133ff0f6abc5098fb5f30f8b83aa4574"
+      }
+    },
+    "CELO/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "64d4ca6ec9347a24ec5ee32b47bc608de300c931497bc5c7582f67326adcf790",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/CELOUSDT.parquet",
+        "sha256": "587a26cb54c2991af6c8bed74c24560e6a0f4d0733b0c74f64c90c8743fb678c"
+      }
+    },
+    "CRV/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "517e71a982d19bd895597421b7b18940f75e98795dbef84b6c9238678ad967e0",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/CRVUSDT.parquet",
+        "sha256": "dbeaebd06d08f11a391d4cb87f8d285cc89199d94f09684bc3ebfd18cf12059f"
+      }
+    },
+    "DOGE/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "9071925134191201166b4151597fa569a9ecc25b5499639987124a7c6aa7800c",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/DOGEUSDT.parquet",
+        "sha256": "f4443a99120ea7a48167e9cc855a9823d6d52d7ff069e132ff55b2d0fae1c94a"
+      }
+    },
+    "DOT/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "378be85ac6d16e43a971d397d52301755077a30febc05e3de2683849653714c6",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/DOTUSDT.parquet",
+        "sha256": "fd3cc1e3c056029880b369f3fc10ddcb218fb265f80e73fde5666e6d8aecf3fd"
+      }
+    },
+    "DYDX/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "8d1096631a1de73b1e3798432a1d4f2c6b6949e5e4f6bf5d00cc78314ca6067a",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/DYDXUSDT.parquet",
+        "sha256": "94439f967da291960ef8ae667bebd441005674a2bebd48363552f401740752e0"
+      }
+    },
+    "EGLD/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "f7a0e29885d4516c97da0f60a3ae0ae904b55e103621e0f85be08267987c939b",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/EGLDUSDT.parquet",
+        "sha256": "61fb803bc4a7ec184cf5a5c9dc4f5c89b0ccd54dd590ace5987f99b5d29299d7"
+      }
+    },
+    "ETC/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "1b4e4b3a9edf1a4408e12f19ccdbb9f486d34a466b32f4acffe029ff56e4b3ee",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/ETCUSDT.parquet",
+        "sha256": "6cf53182d94a3c25ed76458e319f67a31c34538664c4da3a570d65993710342a"
+      }
+    },
+    "ETH/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "55dc9526d58ec9e376eb434a8e7ab1e325af60a543d3740803d10b70ae7c7c2a",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/ETHUSDT.parquet",
+        "sha256": "c3eb12063ab46b5ac66ebd85096ee384c47f7984e8bcbe9c33f26fff603cde79"
+      }
+    },
+    "FIL/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "b29429b9df34ac17ac0c9062dd1449ce654c7ec3213047e60eb614f49bb408b6",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/FILUSDT.parquet",
+        "sha256": "664b3b500cb4999394c4494271d730a08e3f4adff9ce37cc20c6996a942e185f"
+      }
+    },
+    "GALA/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "12d29db8948ab7ea3e3f173c189a029c84ae82e6603316d5322bbc50fc61b2fd",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/GALAUSDT.parquet",
+        "sha256": "21ed0e83f83f836216e8d6f275d66e24d1ebe8f099e327f6a963d41419ee7d74"
+      }
+    },
+    "GRT/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "84d0e9bed9eb14fbeb42660fda928771285dc1c36ce8fff0b6aa703267f32ffd",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/GRTUSDT.parquet",
+        "sha256": "5c49b43b3649bac6c8fb6ac2cf029b305ce9bbfee4be799b670937bab186185f"
+      }
+    },
+    "IOTA/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "dc90c08498c18f876d9bd1e005d3cc778c62108ec079f106a571d33e21c4d3be",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/IOTAUSDT.parquet",
+        "sha256": "0f20906aee5857208402807604508cde731e62851c25054887c72e2836ca2041"
+      }
+    },
+    "IOTX/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "0cbb33ca67fdc69d0a526599e20d8cc91073a7b25f0d487bcfedf8c9fa482aaa",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/IOTXUSDT.parquet",
+        "sha256": "cd9e7b96cff00d3fefd6f6aa269ea60b0565fc335948cdc4fdec2455401d3c7a"
+      }
+    },
+    "KSM/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "c3c6d8f85f22ab91d2685f08403535dac3a49acb0e30ccd0d706fddf61833669",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/KSMUSDT.parquet",
+        "sha256": "d631bb464d1a3ea8dee1ccddb14394d7834c1de4d95831525868dd1ca2abecda"
+      }
+    },
+    "LINK/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "d592bd187a7333d4e73ca57b0793c1fdd95fee0760a8c69e89c7eddfb6b41833",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/LINKUSDT.parquet",
+        "sha256": "61cbadac44f66d42ddfb4ab3351a2e7f2d25ccf110a16bca2e41151b7a04f52d"
+      }
+    },
+    "LTC/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "1cea35b5dcfed0128ab0e58d3facaa1e15ccc125cc461ddcc81da6b4dbd76c2b",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/LTCUSDT.parquet",
+        "sha256": "49f6a7015a95b46b852ce285e7cbe2dc26758c529b4b2a4d7ffcf959390d202f"
+      }
+    },
+    "MANA/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "65f3bae771bc218c78ef2a49ab79147d8e7aa3929d1527e9da6489e86a524ec1",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/MANAUSDT.parquet",
+        "sha256": "8b86f3ff5a5e8f579a3cdce13c6722638bf5aec9e4188938f57cd8d5718dd5bc"
+      }
+    },
+    "NEAR/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "20336db20eadac7855740c07887308500dd6b87403094349fb7f5cf55b45bce9",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/NEARUSDT.parquet",
+        "sha256": "c9a1c5f8bc3b1652fba65ef9a1a56134edabfb640b7a98bfe36d837631235bc1"
+      }
+    },
+    "NEO/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "dcbfac82de32cf25c5474a83e64a81bedf19bca5e95bac574bc0a9fa1cb1a0ab",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/NEOUSDT.parquet",
+        "sha256": "fc4d81432b53e21396bdb5cb1a1112fd90cdd9c861ba03646e32c296e1fbd315"
+      }
+    },
+    "RUNE/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "ada79e38f9f0d3c723716ec3d11f88c4c7acca1856cc01a32fd7d65dc2e874d0",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/RUNEUSDT.parquet",
+        "sha256": "d28f16b09d9ad3bd58ed26d637a1bafd2701d7cc9f89e4ee0e9b36ab8bb4ac06"
+      }
+    },
+    "SAND/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "6319ce3311a50c925ca420bb22a1ceef9c564f72b585d7ec8937b46a70a78631",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/SANDUSDT.parquet",
+        "sha256": "19cbf1d8a9e2a9c8f5bd780f1e11ff6e35c0613b5ce67dfc43aad27cfb4cb8d9"
+      }
+    },
+    "SKL/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "bad1eeaed3e26ae100d360e7d1534b706b19749deeeb0ac2b7ce103b85003f2c",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/SKLUSDT.parquet",
+        "sha256": "bb9fdc9c5ae98adb72d1a1e039fae4a8b5028f66903bd871eda32a003ec123c6"
+      }
+    },
+    "SOL/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "e68f6f68df68089130cbcc01747cca715eb3ce4e45d703f80569c61e86186290",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/SOLUSDT.parquet",
+        "sha256": "2c4fa5cdb954f8d2d254a6f0a3f3c555447f23f2513d56f284c76bc4ec5ed935"
+      }
+    },
+    "SUSHI/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "bdbe7d76e89d120f1e590ec052e55708fef9d609f1947e033c31e93e307b6d99",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/SUSHIUSDT.parquet",
+        "sha256": "7fb808f8320a0d7c1e730cb56c6dabb8022673abce4704eb00686a5025fd4ec1"
+      }
+    },
+    "THETA/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "9cba1f7ee8aed775a56e3a0c6640866081766f53eff0ea96e7d24afba199241a",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/THETAUSDT.parquet",
+        "sha256": "c2ecb05275e9d6fb934329fe771f6ada9f823fc91c91c692f28bbb096f6a8c21"
+      }
+    },
+    "TRB/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "06973c99e013b496c59367728108ef7dcc1e250d245d614b50a782bdcb312877",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/TRBUSDT.parquet",
+        "sha256": "cddedbf67ba0a167d6056ea9892aeea0faf4813191b6977efd814c82750cf693"
+      }
+    },
+    "TRX/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "0a68d7c8547c3d8eb6dd690bf9b5e42cd8a1c06ec16eb059acef6b1b43c9d0ac",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/TRXUSDT.parquet",
+        "sha256": "ef64c30004a0e1141505effce6be66995f508f801bcdfd76358ba95476f7e635"
+      }
+    },
+    "UNI/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "a30061a743c0ec9bc16e126a0544b4fc540bd91b260cf867e3a0aa23400422fa",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/UNIUSDT.parquet",
+        "sha256": "22a67796ec7b5d290dcb29fa4dad352cafee14932f266641d8ddb66dd14d75ba"
+      }
+    },
+    "XRP/USDT:USDT": {
+      "status": "verified",
+      "rows": 105397,
+      "receipts_sha256": "d203c87eef759b7ea439ac4f5a44a856a17aa0373c45192d045244085190ebc8",
+      "frame": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/XRPUSDT.parquet",
+        "sha256": "9dcf69f97fc003dabbcf96e61066f2cd196837ba8605abfa19b3b27fe26a93c6"
+      }
+    }
+  },
+  "comparisons": {
+    "15": {
+      "original": {
+        "return": 1.10262155292,
+        "drawdown": 0.18749805917811668,
+        "period_returns": {
+          "continuous": 1.10262155292,
+          "H1": 0.4218015549413854,
+          "H2": 0.47884319412400833
+        },
+        "natural_closes": 213
+      },
+      "uniform": {
+        "return": 2.3860827273416256,
+        "drawdown": 0.3233087911074095,
+        "period_returns": {
+          "continuous": 2.3860827273416256,
+          "H1": 0.6511929644917849,
+          "H2": 1.0506886839745087
+        },
+        "native_liquidations": 0,
+        "natural_closes": 202,
+        "checks": {
+          "no_liquidation": true,
+          "sample": true,
+          "absolute_return": true,
+          "risk_adjusted_return": true,
+          "drawdown": false,
+          "halves": true
+        }
+      },
+      "net": 1.3757415148105419,
+      "drawdown": 0.2628943686740053,
+      "retention": 0.21279955119298377,
+      "checks": {
+        "risk": false,
+        "return_retention": false,
+        "risk_adjusted": false,
+        "halves": false,
+        "sample": true,
+        "no_liquidations": true,
+        "no_unknown": true
+      }
+    },
+    "8": {
+      "original": {
+        "return": 1.1347254775599995,
+        "drawdown": 0.11710449995211647,
+        "period_returns": {
+          "continuous": 1.1347254775599995,
+          "H1": 0.46468999862163196,
+          "H2": 0.4574589022720945
+        },
+        "natural_closes": 223
+      },
+      "uniform": {
+        "return": 2.9935518382200517,
+        "drawdown": 0.22310398398173048,
+        "period_returns": {
+          "continuous": 2.9935518382200517,
+          "H1": 0.9444408829043514,
+          "H2": 1.0538304215528562
+        },
+        "native_liquidations": 0,
+        "natural_closes": 216,
+        "checks": {
+          "no_liquidation": true,
+          "sample": true,
+          "absolute_return": true,
+          "risk_adjusted_return": true,
+          "drawdown": true,
+          "halves": true
+        }
+      },
+      "net": 2.1287948859372436,
+      "drawdown": 0.17599091764273989,
+      "retention": 0.5347833608429456,
+      "checks": {
+        "risk": true,
+        "return_retention": false,
+        "risk_adjusted": false,
+        "halves": true,
+        "sample": true,
+        "no_liquidations": true,
+        "no_unknown": true
+      }
+    }
+  },
+  "advance": false,
+  "paper_eligible": false
+}

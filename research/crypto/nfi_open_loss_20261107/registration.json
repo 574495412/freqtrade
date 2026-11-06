@@ -1,0 +1,41 @@
+{
+  "registered_at": "2026-11-06T21:46:43.146350+00:00",
+  "plan": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_open_loss_20261107/native_2024.json",
+    "sha256": "04cda59519b51cf19c038b76c0978857d9da5b109a65529f2fea4af79d157db4"
+  },
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_open_loss_20261107/study.py",
+      "sha256": "c84b23ac92a0cbda24c32855aafbf07cb533206484df1d577f0c742bf78a9bf1"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_leverage_20261107/native_2024_Native2x.json",
+      "sha256": "d9278ceb3d262bb96bbb7f0825ebdf0e2f2a948785c139579cc1f5a9fb2cddda"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_leverage_20261107/registration.json",
+      "sha256": "00361a3479aa8b68d93b637796eb647999c2b12c854ffe8d42ee07bde5513e41"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_leverage_20261107/result.json",
+      "sha256": "31f1ff6991350602548ae23bcd631325e74b6af5b6f1dec00174350ea8aca607"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_leverage_20261107/evaluate.py",
+      "sha256": "0a3faeba7c9861270e4e02f33689fae88476326616b11757c601f0ec3b872ecc"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal.py",
+      "sha256": "529d3b191816817c1bd34817a62a21a76cb6d0dd7259452b1803968f4c85177c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/admission.json",
+      "sha256": "05d95da57e76267edb7b40a9be61a6611daf29f4881e967901bdc1218e29abca"
+    }
+  ],
+  "known_history": "The incumbent 1x and 2x 2024 accounts and their drawdown were known. This candidate's outcomes are unknown. Same-calendar adaptation only.",
+  "rule": "Snapshot the inventory before each native 5m loop. Consider each side with at least three filled open positions and no pending orders among them. Value signed open price PnL at the exact preceding candle close versus native remaining entry basis (stake times leverage). If the side loses 5% of remaining entry notional, select the most negative dollar contributor, ties by pair. No triggers on missing bars or if leverage differs. Suppress positive adjustment of the selected trade for this loop and request a native full exit if the incumbent has no custom exit and no order is pending. Other adjustments, native confirmation, pricing and entries unchanged. The trigger excludes fees and funding; economics include both. Re-entry remains native. This is a research exit signal, not an exchange stop.",
+  "gate": "Both 2024 costs require <=25% observed 5m drawdown and lower than full 2x, >=60% of 2x excess over 1x retained, return/drawdown >= both controls, net return > 1x in each half, >=60 naturally completed trades, at least 3 filled overlay exits across at least 2 UTC dates, no model liquidation and no unknown trigger inputs. Passing permits separately registered temporal testing.",
+  "orders_enabled": false
+}
