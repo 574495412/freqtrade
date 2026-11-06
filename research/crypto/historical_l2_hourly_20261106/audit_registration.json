@@ -1,0 +1,31 @@
+{
+  "registered_at_utc": "2026-11-06T14:40:21.754659+00:00",
+  "pyarrow_version": "26.0.0",
+  "input_hashes": {
+    "research/crypto/historical_l2_hourly_20261106/audit.py": "8fd5f9ad58b3ee7f8fb870d20caa28b6ea7efa27f8904191010d238aad7cc45b",
+    "research/crypto/rd_program_20261105/data_extension/book_replay.py": "521e9be9329efdedc8615e3af8c72cbc4a4756aeb1b285b336ba92156c7326c5",
+    "research/crypto/historical_l2_hourly_20261106/registration_v3.json": "439844da46c276677b73bdf276f3dee4bab56adb97255f73533de2f9fb10912a",
+    "research/crypto/historical_l2_hourly_20261106/download_receipts.json": "89f771c53798d291476135ad11b211a42ba61aabe42fbad4e0c8a7ca4e9092c7",
+    "research/crypto/historical_funding_clock_20261106/audit_result.json": "8c845af251ce33d4c0f9d5230e6323359274722b5d40509cb13511312771cb12",
+    "user_data/crypto_quant/rd_program_20261105_v1/funding_clock_probe_v001/normalized_bbo.jsonl": "88f394551b71236d22149384d29b3ccc155f9a45f6bf999fd139e3ee172095e6",
+    "research/crypto/factor_cost_futures_long_20261106/plan.json": "4f89a1cd81fc810fb7b71bbf41993a91712280e55037ec769d98c06cf7c406d2"
+  },
+  "cutoff_minutes": [
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55
+  ],
+  "reference_quotes": "user_data/crypto_quant/rd_program_20261105_v1/funding_clock_probe_v001/normalized_bbo.jsonl",
+  "snapshot_policy": "Ignore possible synthetic REST timestamps. Hourly checkpoints may bridge sequences, but cannot certify the original depth boundary.",
+  "reference_policy": "Same symbol and exact sequence ID, with each collector clock retained.",
+  "depth_policy": "Both edges must be inside a raw REST snapshot with a verified subsequent sequence bridge. Equal or regressing receipt clocks are never filled from event time. Cutoffs use inclusive receipt time.",
+  "financial_accounts": 0
+}

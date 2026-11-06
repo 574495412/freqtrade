@@ -1,0 +1,70 @@
+{
+  "registered_at_utc": "2026-11-06T14:36:55.120862+00:00",
+  "cases": [
+    {
+      "id": "spot-2026-08-31-BTCUSDT",
+      "market": "spot",
+      "window": "L",
+      "day": "2026-08-31",
+      "hour": 0,
+      "symbol": "BTCUSDT",
+      "file": "binance_spot/2026/08/31/00/BTCUSDT_orderbook.parquet",
+      "url": "https://api.cryptohftdata.com/v1/download?file=binance_spot%2F2026%2F08%2F31%2F00%2FBTCUSDT_orderbook.parquet"
+    },
+    {
+      "id": "futures-2026-08-31-BTCUSDT",
+      "market": "futures",
+      "window": "L",
+      "day": "2026-08-31",
+      "hour": 0,
+      "symbol": "BTCUSDT",
+      "file": "binance_futures/2026/08/31/00/BTCUSDT_orderbook.parquet",
+      "url": "https://api.cryptohftdata.com/v1/download?file=binance_futures%2F2026%2F08%2F31%2F00%2FBTCUSDT_orderbook.parquet"
+    },
+    {
+      "id": "spot-2026-11-01-BTCUSDT",
+      "market": "spot",
+      "window": "S",
+      "day": "2026-11-01",
+      "hour": 0,
+      "symbol": "BTCUSDT",
+      "file": "binance_spot/2026/11/01/00/BTCUSDT_orderbook.parquet",
+      "url": "https://api.cryptohftdata.com/v1/download?file=binance_spot%2F2026%2F11%2F01%2F00%2FBTCUSDT_orderbook.parquet"
+    },
+    {
+      "id": "futures-2026-11-01-BTCUSDT",
+      "market": "futures",
+      "window": "S",
+      "day": "2026-11-01",
+      "hour": 0,
+      "symbol": "BTCUSDT",
+      "file": "binance_futures/2026/11/01/00/BTCUSDT_orderbook.parquet",
+      "url": "https://api.cryptohftdata.com/v1/download?file=binance_futures%2F2026%2F11%2F01%2F00%2FBTCUSDT_orderbook.parquet"
+    },
+    {
+      "id": "futures-2026-11-01-SOLUSDT",
+      "market": "futures",
+      "window": "S",
+      "day": "2026-11-01",
+      "hour": 0,
+      "symbol": "SOLUSDT",
+      "file": "binance_futures/2026/11/01/00/SOLUSDT_orderbook.parquet",
+      "url": "https://api.cryptohftdata.com/v1/download?file=binance_futures%2F2026%2F11%2F01%2F00%2FSOLUSDT_orderbook.parquet"
+    }
+  ],
+  "workers": 2,
+  "max_requests": 5,
+  "socket_timeout_seconds": 30,
+  "max_bytes_per_response": 134217728,
+  "redirects": false,
+  "retries": 0,
+  "financial_accounts": 0,
+  "input_hashes": {
+    "research/crypto/historical_l2_hourly_20261106/capture.py": "a221a5eb1dba7cedd3a3fd736651760e18db306d99c52d605adc85d430a99aad",
+    "research/crypto/rd_program_20261105/data_extension/probe_event_sources.py": "50aa06752eafc3009316726e1ff7b8b66401ec566b147f2f95324e789b7f3e1d",
+    "research/crypto/rd_program_20261105/plan.json": "91845eed78faa0788f4ac6fde6c0e92ff370cff26b6d1b3cc0dadc47be920034",
+    "research/crypto/factor_cost_futures_long_20261106/plan.json": "4f89a1cd81fc810fb7b71bbf41993a91712280e55037ec769d98c06cf7c406d2",
+    "research/crypto/factor_cost_futures_20261106/plan.json": "a23faa12f1262083412df8af1ac750e84d40688587bd0bb1a8694e67bd0a7693"
+  },
+  "scope": "Window-matched sample access and schema probe. Public GET; no credentials."
+}
