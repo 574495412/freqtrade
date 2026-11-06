@@ -102,7 +102,8 @@ class _ForcedExitStrategy:
 class _ExitBot:
     def __init__(self, bot, exchange, owner, action_id):
         self.bot = bot; self.exchange = exchange; self.owner = owner; self.action_id = action_id
-        self.strategy = _ForcedExitStrategy(bot.strategy)
+        forced = owner.s["actions"][action_id]["action"]["kind"] == "EXIT_POSITION"
+        self.strategy = _ForcedExitStrategy(bot.strategy) if forced else bot.strategy
         self._exit_reason_cache = {}
         self.get_valid_price = MethodType(FreqtradeBot.get_valid_price,self)
         self._safe_exit_amount = MethodType(FreqtradeBot._safe_exit_amount,self)
@@ -111,7 +112,9 @@ class _ExitBot:
         return getattr(self.bot,key)
 
     def _notify_exit(self,*args,**kwargs):
-        pass  # explicitly no RPC/notification transport in this research adapter
+        # Keep the semantic native trade.exit_reason (e.g. stop_loss) separate
+        # from the stable client identity on its Order; no RPC transport.
+        kwargs["order"].ft_order_tag = self.owner.s["actions"][self.action_id]["client_order_id"]
 
     def update_trade_state(self,*args,**kwargs):
         # An immediate fill needs its fresh source wallet/account and complete
@@ -192,7 +195,7 @@ class NativeRiskExit:
             raise RiskError("Exit receipt status, quantities or freshness invalid")
         return envelope
 
-    def dispatch(self,trade,evidence,exchange,bot,now,*,limit):
+    def dispatch(self,trade,evidence,exchange,bot,now,*,limit,strategy_inputs=None):
         with self._mutex:
             self._ready(now); self.wallet.require_entry_clear(now)
             if type(exchange) is not LocalExitExchange or exchange.controller is not self or bot.wallets is not self.wallet.wallets:
@@ -204,11 +207,31 @@ class NativeRiskExit:
             if (checkpoint is None or checkpoint["output"] != primitive(asdict(evidence))
                     or self.provider.s["last_cursor"] != evidence.snapshot.cursor):
                 raise RiskError("Exit needs the checked complete account checkpoint")
+            if any(a["trade_id"] == trade.id and a["state"] != "TERMINAL_RECONCILED" for a in self.s["actions"].values()):
+                raise StateError("Exit action already attempted; query/reconcile before any retry")
             source_id = next((pid for pid,tid in evidence.position_bindings.items() if tid==trade.id),None)
             decision = self.risk.evaluate(evidence.snapshot,now)
             action = next((a for a in decision.actions if a["kind"]=="EXIT_POSITION" and a["target"]==source_id),None)
+            exit_check = ExitCheckTuple(ExitType.FORCE_EXIT); policy = None
             if action is None:
-                raise RiskError("Frozen RD1 has no full-position exit action")
+                if strategy_inputs is None:
+                    raise RiskError("Frozen RD1 has no full-position exit action")
+                from native_strategy_exits import evaluate_fixed_exit
+                try:
+                    exits, policy = evaluate_fixed_exit(bot.strategy,trade,evidence,strategy_inputs,now)
+                except Exception:
+                    Trade.session.rollback()
+                    raise
+                key = digest({"trade_id":trade.id,"strategy":policy["strategy"],"cursor":evidence.snapshot.cursor})
+                observations = self.s.setdefault("strategy_evaluations",{})
+                if key in observations and observations[key] != policy:
+                    raise StateError("Conflicting same-checkpoint strategy exit evaluation")
+                observations[key] = policy; self._persist()
+                if not exits:
+                    return None
+                exit_check = exits[0]
+                action = dict(id=digest({"account":self.risk.s["identity"],"trade_id":trade.id,"kind":"STRATEGY_EXIT"})[:24],
+                              kind="STRATEGY_EXIT",target=source_id)
             previous = self.s["actions"].get(action["id"])
             if previous and (previous["state"] != "TERMINAL_RECONCILED" or not previous["requires_further_exit"]
                     or evidence.snapshot.cursor <= previous["reconciled_cursor"]):
@@ -222,7 +245,7 @@ class NativeRiskExit:
                 raise RiskError("Exit precision changes explicit quantity or limit")
             request = dict(pair=trade.pair,ordertype="limit",side="sell",amount=amount,rate=rate,leverage=1,
                            reduceOnly=self.risk.market=="futures",time_in_force="GTC",initial_order=False)
-            claimed = self.risk.claim_action(action["id"],now)
+            claimed = self.risk.claim_action(action["id"],now) if policy is None else copy.deepcopy(action)
             prior_funding = sum((dec(decimal_text(o.funding_fee)) for o in trade.orders if o.funding_fee is not None),D(0))
             total_funding = D(0) if trade.funding_fees is None else dec(decimal_text(trade.funding_fees))
             history = [] if previous is None else previous.get("prior_attempts",[])+[{k:copy.deepcopy(v) for k,v in previous.items() if k!="prior_attempts"}]
@@ -230,16 +253,19 @@ class NativeRiskExit:
                 quantity_before=decimal_text(trade.amount),request=request,source_position_id=source_id,
                 client_order_id="rd1x-"+digest(client_key)[:28],
                 running_funding_credit=str(total_funding-prior_funding),last_filled_at=stamp(trade.date_last_filled_utc),
-                checkpoint_hash=digest(checkpoint),native_binding=None)
+                checkpoint_hash=digest(checkpoint),native_binding=None,
+                exit_type=exit_check.exit_type.value,strategy_evaluation=policy)
             self.s["actions"][action["id"]] = ticket; self._persist()
             token = exchange.ticket.set(ticket)
             try:
                 proxy = _ExitBot(bot,exchange,self,action["id"])
-                result = FreqtradeBot.execute_trade_exit(proxy,trade,rate,ExitCheckTuple(ExitType.FORCE_EXIT),
-                    exit_tag=ticket["client_order_id"],ordertype="limit",skip_custom_exit_price=True)
+                tag = ticket["client_order_id"] if policy is None else (policy["exit_tag"] if exit_check.exit_type == ExitType.EXIT_SIGNAL else None)
+                result = FreqtradeBot.execute_trade_exit(proxy,trade,rate,exit_check,
+                    exit_tag=tag,ordertype="limit",skip_custom_exit_price=True)
             finally:
                 exchange.ticket.reset(token)
             if not result:
+                Trade.session.rollback()  # discard uncommitted funding/metadata after a veto
                 raise RiskError("Native exit did not complete submission; intent remains unknown")
             self.bind(action["id"],now)
             return action["id"]

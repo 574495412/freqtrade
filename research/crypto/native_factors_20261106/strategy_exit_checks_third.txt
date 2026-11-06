@@ -1,0 +1,31 @@
+test_changed_stop_or_roi_settings_cannot_be_used_as_fixed_strategy (test_native_strategy_exits.NativeStrategyExitTests.test_changed_stop_or_roi_settings_cannot_be_used_as_fixed_strategy) ... /Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/AverageStrategy.py:9: FutureWarning: 'freqtrade.vendor.qtpylib.indicators' is deprecated and will be removed in a future release. Import from technical instead - either the module (`from technical import qtpylib`) or a single function (`from technical.qtpylib import crossed_above`).
+  import freqtrade.vendor.qtpylib.indicators as qtpylib
+ok
+test_closed_ema_cross_uses_official_signal_and_future_bars_do_not_change_exit (test_native_strategy_exits.NativeStrategyExitTests.test_closed_ema_cross_uses_official_signal_and_future_bars_do_not_change_exit) ... ok
+test_daily_f1_selection_exits_only_at_next_five_minute_boundary (test_native_strategy_exits.NativeStrategyExitTests.test_daily_f1_selection_exits_only_at_next_five_minute_boundary) ... ok
+test_f1_has_no_roi_and_no_exit_creates_no_order_or_attempt (test_native_strategy_exits.NativeStrategyExitTests.test_f1_has_no_roi_and_no_exit_creates_no_order_or_attempt) ... ok
+test_futures_native_stop_preserves_reason_and_reduce_only (test_native_strategy_exits.NativeStrategyExitTests.test_futures_native_stop_preserves_reason_and_reduce_only) ... ok
+test_official_roi_is_preserved_for_control_and_f2 (test_native_strategy_exits.NativeStrategyExitTests.test_official_roi_is_preserved_for_control_and_f2) ... ok
+test_rd1_full_exit_has_priority_without_factor_inputs (test_native_strategy_exits.NativeStrategyExitTests.test_rd1_full_exit_has_priority_without_factor_inputs) ... ok
+test_spot_native_five_percent_stop_without_signal_data_reconciles_full_account (test_native_strategy_exits.NativeStrategyExitTests.test_spot_native_five_percent_stop_without_signal_data_reconciles_full_account) ... ok
+test_strategy_veto_retains_unknown_attempt_and_cannot_fall_through_to_second_exit (test_native_strategy_exits.NativeStrategyExitTests.test_strategy_veto_retains_unknown_attempt_and_cannot_fall_through_to_second_exit) ... ERROR
+
+======================================================================
+ERROR: test_strategy_veto_retains_unknown_attempt_and_cannot_fall_through_to_second_exit (test_native_strategy_exits.NativeStrategyExitTests.test_strategy_veto_retains_unknown_attempt_and_cannot_fall_through_to_second_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_strategy_exits.py", line 168, in test_strategy_veto_retains_unknown_attempt_and_cannot_fall_through_to_second_exit
+    c.dispatch(trade,e,ex,bot,now,limit='9.4',strategy_inputs=ExitBarInputs(None,{},'synthetic-no-bars'))
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_exits.py", line 200, in dispatch
+    self._ready(now); self.wallet.require_entry_clear(now)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 286, in require_entry_clear
+    self.provider.bridge.validate(self._checked_evidence,now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_snapshot.py", line 53, in validate
+    raise RiskError("Native account has uncommitted changes")
+rd1.RiskError: Native account has uncommitted changes
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.921s
+
+FAILED (errors=1)

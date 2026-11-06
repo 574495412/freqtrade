@@ -1,0 +1,140 @@
+test_changed_stop_or_roi_settings_cannot_be_used_as_fixed_strategy (test_native_strategy_exits.NativeStrategyExitTests.test_changed_stop_or_roi_settings_cannot_be_used_as_fixed_strategy) ... /Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/AverageStrategy.py:9: FutureWarning: 'freqtrade.vendor.qtpylib.indicators' is deprecated and will be removed in a future release. Import from technical instead - either the module (`from technical import qtpylib`) or a single function (`from technical.qtpylib import crossed_above`).
+  import freqtrade.vendor.qtpylib.indicators as qtpylib
+FAIL
+test_closed_ema_cross_uses_official_signal_and_future_bars_do_not_change_exit (test_native_strategy_exits.NativeStrategyExitTests.test_closed_ema_cross_uses_official_signal_and_future_bars_do_not_change_exit) ... ERROR
+test_daily_f1_selection_exits_only_at_next_five_minute_boundary (test_native_strategy_exits.NativeStrategyExitTests.test_daily_f1_selection_exits_only_at_next_five_minute_boundary) ... ERROR
+test_f1_has_no_roi_and_no_exit_creates_no_order_or_attempt (test_native_strategy_exits.NativeStrategyExitTests.test_f1_has_no_roi_and_no_exit_creates_no_order_or_attempt) ... ERROR
+test_futures_native_stop_preserves_reason_and_reduce_only (test_native_strategy_exits.NativeStrategyExitTests.test_futures_native_stop_preserves_reason_and_reduce_only) ... ERROR
+test_official_roi_is_preserved_for_control_and_f2 (test_native_strategy_exits.NativeStrategyExitTests.test_official_roi_is_preserved_for_control_and_f2) ... ERROR
+test_rd1_full_exit_has_priority_without_factor_inputs (test_native_strategy_exits.NativeStrategyExitTests.test_rd1_full_exit_has_priority_without_factor_inputs) ... ok
+test_spot_native_five_percent_stop_without_signal_data_reconciles_full_account (test_native_strategy_exits.NativeStrategyExitTests.test_spot_native_five_percent_stop_without_signal_data_reconciles_full_account) ... ERROR
+test_strategy_veto_retains_unknown_attempt_and_cannot_fall_through_to_second_exit (test_native_strategy_exits.NativeStrategyExitTests.test_strategy_veto_retains_unknown_attempt_and_cannot_fall_through_to_second_exit) ... FAIL
+
+======================================================================
+ERROR: test_closed_ema_cross_uses_official_signal_and_future_bars_do_not_change_exit (test_native_strategy_exits.NativeStrategyExitTests.test_closed_ema_cross_uses_official_signal_and_future_bars_do_not_change_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_strategy_exits.py", line 136, in test_closed_ema_cross_uses_official_signal_and_future_bars_do_not_change_exit
+    exits,proof=evaluate_fixed_exit(bot.strategy,trade,e,inputs,now)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_strategy_exits.py", line 66, in evaluate_fixed_exit
+    if (name not in NAMES or dec(strategy.stoploss) != dec('-.05') or strategy.use_custom_stoploss
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 36, in dec
+    raise RiskError("use Decimal/string/integer, never binary float or bool")
+rd1.RiskError: use Decimal/string/integer, never binary float or bool
+
+======================================================================
+ERROR: test_daily_f1_selection_exits_only_at_next_five_minute_boundary (test_native_strategy_exits.NativeStrategyExitTests.test_daily_f1_selection_exits_only_at_next_five_minute_boundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_strategy_exits.py", line 155, in test_daily_f1_selection_exits_only_at_next_five_minute_boundary
+    with wallet.clock.at(now):out,proof=evaluate_fixed_exit(bot.strategy,trade,ev,inputs,now)
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_strategy_exits.py", line 66, in evaluate_fixed_exit
+    if (name not in NAMES or dec(strategy.stoploss) != dec('-.05') or strategy.use_custom_stoploss
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 36, in dec
+    raise RiskError("use Decimal/string/integer, never binary float or bool")
+rd1.RiskError: use Decimal/string/integer, never binary float or bool
+
+======================================================================
+ERROR: test_f1_has_no_roi_and_no_exit_creates_no_order_or_attempt (test_native_strategy_exits.NativeStrategyExitTests.test_f1_has_no_roi_and_no_exit_creates_no_order_or_attempt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_strategy_exits.py", line 124, in test_f1_has_no_roi_and_no_exit_creates_no_order_or_attempt
+    self.assertIsNone(c.dispatch(trade,e,ex,bot,now,limit='16',strategy_inputs=ExitBarInputs(None,{},'synthetic-no-bars')))
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_exits.py", line 222, in dispatch
+    exits, policy = evaluate_fixed_exit(bot.strategy,trade,evidence,strategy_inputs,now)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_strategy_exits.py", line 66, in evaluate_fixed_exit
+    if (name not in NAMES or dec(strategy.stoploss) != dec('-.05') or strategy.use_custom_stoploss
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 36, in dec
+    raise RiskError("use Decimal/string/integer, never binary float or bool")
+rd1.RiskError: use Decimal/string/integer, never binary float or bool
+
+======================================================================
+ERROR: test_futures_native_stop_preserves_reason_and_reduce_only (test_native_strategy_exits.NativeStrategyExitTests.test_futures_native_stop_preserves_reason_and_reduce_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_strategy_exits.py", line 107, in test_futures_native_stop_preserves_reason_and_reduce_only
+    _,ex=self.stop_cycle('futures')
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_strategy_exits.py", line 79, in stop_cycle
+    aid=c.dispatch(trade,e,ex,bot,now,limit='9.4',strategy_inputs=ExitBarInputs(None,{},'synthetic-missing-signal-bars'))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_exits.py", line 222, in dispatch
+    exits, policy = evaluate_fixed_exit(bot.strategy,trade,evidence,strategy_inputs,now)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_strategy_exits.py", line 66, in evaluate_fixed_exit
+    if (name not in NAMES or dec(strategy.stoploss) != dec('-.05') or strategy.use_custom_stoploss
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 36, in dec
+    raise RiskError("use Decimal/string/integer, never binary float or bool")
+rd1.RiskError: use Decimal/string/integer, never binary float or bool
+
+======================================================================
+ERROR: test_official_roi_is_preserved_for_control_and_f2 (test_native_strategy_exits.NativeStrategyExitTests.test_official_roi_is_preserved_for_control_and_f2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_strategy_exits.py", line 114, in test_official_roi_is_preserved_for_control_and_f2
+    roi,proof=evaluate_fixed_exit(resolved('AverageRD1ControlNative',(trade.pair,)),trade,e,ExitBarInputs(None,{},'synthetic-no-bars'),now)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_strategy_exits.py", line 66, in evaluate_fixed_exit
+    if (name not in NAMES or dec(strategy.stoploss) != dec('-.05') or strategy.use_custom_stoploss
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 36, in dec
+    raise RiskError("use Decimal/string/integer, never binary float or bool")
+rd1.RiskError: use Decimal/string/integer, never binary float or bool
+
+======================================================================
+ERROR: test_spot_native_five_percent_stop_without_signal_data_reconciles_full_account (test_native_strategy_exits.NativeStrategyExitTests.test_spot_native_five_percent_stop_without_signal_data_reconciles_full_account)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_strategy_exits.py", line 104, in test_spot_native_five_percent_stop_without_signal_data_reconciles_full_account
+    self.stop_cycle('spot')
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_strategy_exits.py", line 79, in stop_cycle
+    aid=c.dispatch(trade,e,ex,bot,now,limit='9.4',strategy_inputs=ExitBarInputs(None,{},'synthetic-missing-signal-bars'))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_exits.py", line 222, in dispatch
+    exits, policy = evaluate_fixed_exit(bot.strategy,trade,evidence,strategy_inputs,now)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_strategy_exits.py", line 66, in evaluate_fixed_exit
+    if (name not in NAMES or dec(strategy.stoploss) != dec('-.05') or strategy.use_custom_stoploss
+                             ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 36, in dec
+    raise RiskError("use Decimal/string/integer, never binary float or bool")
+rd1.RiskError: use Decimal/string/integer, never binary float or bool
+
+======================================================================
+FAIL: test_changed_stop_or_roi_settings_cannot_be_used_as_fixed_strategy (test_native_strategy_exits.NativeStrategyExitTests.test_changed_stop_or_roi_settings_cannot_be_used_as_fixed_strategy)
+----------------------------------------------------------------------
+rd1.RiskError: use Decimal/string/integer, never binary float or bool
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_strategy_exits.py", line 186, in test_changed_stop_or_roi_settings_cannot_be_used_as_fixed_strategy
+    with self.assertRaisesRegex(RiskError,'settings differ'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "settings differ" does not match "use Decimal/string/integer, never binary float or bool"
+
+======================================================================
+FAIL: test_strategy_veto_retains_unknown_attempt_and_cannot_fall_through_to_second_exit (test_native_strategy_exits.NativeStrategyExitTests.test_strategy_veto_retains_unknown_attempt_and_cannot_fall_through_to_second_exit)
+----------------------------------------------------------------------
+rd1.RiskError: use Decimal/string/integer, never binary float or bool
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_strategy_exits.py", line 165, in test_strategy_veto_retains_unknown_attempt_and_cannot_fall_through_to_second_exit
+    with self.assertRaisesRegex(RiskError,'did not complete submission'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "did not complete submission" does not match "use Decimal/string/integer, never binary float or bool"
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.825s
+
+FAILED (failures=2, errors=6)

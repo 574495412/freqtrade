@@ -1,0 +1,23 @@
+test_native_strategy_exits (unittest.loader._FailedTest.test_native_strategy_exits) ... ERROR
+
+======================================================================
+ERROR: test_native_strategy_exits (unittest.loader._FailedTest.test_native_strategy_exits)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_native_strategy_exits
+Traceback (most recent call last):
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 396, in _find_test_path
+    module = self._get_module_from_name(name)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/loader.py", line 339, in _get_module_from_name
+    __import__(name)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_strategy_exits.py", line 16, in <module>
+    from native_strategy_exits import ExitBarInputs, evaluate_fixed_exit, TIMING
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_strategy_exits.py", line 14, in <module>
+    from rd1 import RiskError, aware, dec, primitive, stamp
+ModuleNotFoundError: No module named 'rd1'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
