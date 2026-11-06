@@ -25,16 +25,20 @@ from rd1 import RiskError, StateError, Store, dec, stamp, parse, primitive, dige
 class LocalBinanceTape(ccxt.binance):
     """Real CCXT builder/parser; fetch2 only consumes explicit local responses."""
 
-    def __init__(self, markets, responses):
+    def __init__(self, markets, responses, *, allowed_methods=("POST",)):
         super().__init__({"enableRateLimit": False})
         self.set_markets(copy.deepcopy(markets))
         self.responses = list(responses)
         self.requests = []
         self.last_response = None
+        self.allowed_methods = frozenset(allowed_methods)
+        if not self.allowed_methods or not self.allowed_methods <= {"POST", "GET", "DELETE"}:
+            raise RiskError("Unsupported local order transport methods")
 
     def fetch2(self, path, api="public", method="GET", params=None, *args, **kwargs):
-        if path != "order" or api not in (["private"], ["fapiPrivate"]) or method != "POST":
-            raise RiskError(f"Only local synthetic new-order requests supported: {path!r}, {api!r}, {method!r}")
+        if path != "order" or api not in (["private"], ["fapiPrivate"]) or method not in self.allowed_methods:
+            raise RiskError(f"Unsupported local synthetic order request: {path!r}, {api!r}, {method!r}")
+        self.last_response = None
         self.requests.append(dict(path=path, api=copy.deepcopy(api), method=method, params=copy.deepcopy(params)))
         if not self.responses:
             raise RiskError("Synthetic response tape exhausted")

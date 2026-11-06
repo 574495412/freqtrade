@@ -46,7 +46,7 @@ class NativeSnapshotBridge:
         self.market = reservations.risk.market
         self.engine = Trade.session.get_bind()
 
-    def validate(self, evidence, now):
+    def validate(self, evidence, now, *, valuation_required=True):
         if not Trade.use_db or Trade.session.get_bind() is not self.engine:
             raise RiskError("Native database identity changed or unavailable")
         if Trade.session.new or Trade.session.dirty or Trade.session.deleted:
@@ -55,7 +55,10 @@ class NativeSnapshotBridge:
             raise RiskError("Account evidence identity mismatch")
         if not evidence.source_id or evidence.evidence_class not in ("synthetic", "captured"):
             raise RiskError("Source identity and evidence class required")
-        if any(flag is not True for flag in (evidence.positions_complete, evidence.orders_complete, evidence.balance_complete)):
+        required = (evidence.positions_complete, evidence.orders_complete)
+        if valuation_required:
+            required += (evidence.balance_complete,)
+        if any(flag is not True for flag in required):
             raise RiskError("Incomplete source account inventory")
         snap = evidence.snapshot
         now = aware(now)
@@ -173,10 +176,13 @@ class NativeSnapshotBridge:
             if pos.pair != pair or abs(dec(pos.quantity)-quantity) > EPS or abs(dec(pos.entry_price)-entry) > EPS or dec(pos.leverage) != leverage:
                 raise RiskError("Source/native position values differ")
         # Existing RD1 remains the controlling balance/funding/quote/clock contract.
-        self.reservations.risk.equity(snap)
-        quality = self.reservations.risk.quality(snap, now)
-        if quality:
-            raise RiskError("RD1 snapshot quality: " + ",".join(quality))
+        if valuation_required:
+            self.reservations.risk.equity(snap)
+            quality = self.reservations.risk.quality(snap, now)
+            if quality:
+                raise RiskError("RD1 snapshot quality: " + ",".join(quality))
+        elif not self.reservations.risk.actions_safe(snap, now):
+            raise RiskError("RD1 cancellation inventory is not action-safe")
         return snap
 
     def reserve(self, request_id, evidence, proposal, now):
