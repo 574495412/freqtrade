@@ -1,0 +1,619 @@
+{
+  "schema_version": 1,
+  "program_id": "official_factor_20261106",
+  "registered_at_utc": "2026-11-06T02:31:14.315659+00:00",
+  "user_direction": "全部采用官方的方案先研究出来因子策略",
+  "supersedes_active_workflow": "Continue official-repository strategy research; archived v1 RD1/F1/F2/execution work preserved, no further custom engine expansion",
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "strategy_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "engine_entrypoint": [
+    ".venv-paper/bin/python",
+    "-B",
+    "-m",
+    "freqtrade",
+    "backtesting"
+  ],
+  "framework_modifications": false,
+  "engine_monkeypatching": false,
+  "private_runtime_reads": false,
+  "strategy_policy": "Exact upstream Python; native resolved parameters including source buy_params; no hyperopt or parameter files",
+  "strategies": {
+    "ADXMomentum": {
+      "timeframe": "1h",
+      "startup": 20,
+      "roi": {
+        "0": 0.01
+      },
+      "stoploss": -0.25,
+      "family": "ADX/DI plus momentum"
+    },
+    "MACDStrategy_crossed": {
+      "timeframe": "5m",
+      "startup": 0,
+      "roi": {
+        "60": 0.01,
+        "30": 0.03,
+        "20": 0.04,
+        "0": 0.05
+      },
+      "stoploss": -0.3,
+      "family": "MACD cross plus CCI"
+    },
+    "AverageStrategy": {
+      "timeframe": "4h",
+      "startup": 0,
+      "roi": {
+        "0": 0.5
+      },
+      "stoploss": -0.2,
+      "family": "EMA8/21 cross control"
+    }
+  },
+  "markets": {
+    "spot": {
+      "initial_equity_usdt": 1000,
+      "max_capital_usdt": 1000,
+      "leverage": 1,
+      "margin_mode": null,
+      "universe_source": "deploy/configs/spot.json",
+      "universe_sha256": "d07b845b3807d1f3782b7be05c2f1608994f4059672e4cc5b82ba11edb412f9d",
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT",
+        "SOL/USDT",
+        "AVAX/USDT",
+        "DOGE/USDT",
+        "XRP/USDT",
+        "ADA/USDT",
+        "LINK/USDT",
+        "DOT/USDT",
+        "FIL/USDT",
+        "NEAR/USDT",
+        "ATOM/USDT",
+        "DYDX/USDT",
+        "LTC/USDT",
+        "BCH/USDT",
+        "ETC/USDT",
+        "GALA/USDT",
+        "SAND/USDT",
+        "UNI/USDT",
+        "IOTA/USDT",
+        "RUNE/USDT",
+        "AXS/USDT",
+        "EGLD/USDT",
+        "ALGO/USDT",
+        "SNX/USDT",
+        "CRV/USDT",
+        "MASK/USDT",
+        "SUSHI/USDT",
+        "KSM/USDT",
+        "IOTX/USDT",
+        "MANA/USDT",
+        "NEO/USDT",
+        "GRT/USDT",
+        "TRX/USDT",
+        "SKL/USDT",
+        "THETA/USDT"
+      ],
+      "cost_scenarios": [
+        {
+          "id": "base",
+          "fee_bps_per_side": 10,
+          "execution_proxy_bps_per_side": 3,
+          "total_bps_per_side": 13
+        },
+        {
+          "id": "stress",
+          "fee_bps_per_side": 10,
+          "execution_proxy_bps_per_side": 10,
+          "total_bps_per_side": 20
+        }
+      ],
+      "funding": "none",
+      "cost_application": "commission+execution proxy folded into fee only in parity model; no duplicate slippage deduction",
+      "baseline_max_open_trades": 6,
+      "baseline_tradable_balance_ratio": 0.99
+    },
+    "futures": {
+      "initial_equity_usdt": 1000,
+      "max_capital_usdt": 1000,
+      "leverage": 1,
+      "margin_mode": "isolated",
+      "universe_source": "deploy/configs/futures.json",
+      "universe_sha256": "1c57b9bf77f6b5d36dfbf53d2439c237a2ebfb1d61a96d59538789b923626ae3",
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT",
+        "AVAX/USDT:USDT",
+        "TRB/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "XRP/USDT:USDT",
+        "ADA/USDT:USDT",
+        "BNB/USDT:USDT",
+        "LINK/USDT:USDT",
+        "DOT/USDT:USDT",
+        "FIL/USDT:USDT",
+        "NEAR/USDT:USDT",
+        "ATOM/USDT:USDT",
+        "DYDX/USDT:USDT",
+        "LTC/USDT:USDT",
+        "BCH/USDT:USDT",
+        "ETC/USDT:USDT",
+        "GALA/USDT:USDT",
+        "SAND/USDT:USDT",
+        "UNI/USDT:USDT",
+        "IOTA/USDT:USDT",
+        "RUNE/USDT:USDT",
+        "AXS/USDT:USDT",
+        "AAVE/USDT:USDT",
+        "EGLD/USDT:USDT",
+        "ALGO/USDT:USDT",
+        "SNX/USDT:USDT",
+        "CRV/USDT:USDT",
+        "MASK/USDT:USDT",
+        "SUSHI/USDT:USDT",
+        "KSM/USDT:USDT",
+        "IOTX/USDT:USDT",
+        "MANA/USDT:USDT",
+        "NEO/USDT:USDT",
+        "GRT/USDT:USDT",
+        "TRX/USDT:USDT",
+        "CELO/USDT:USDT",
+        "SKL/USDT:USDT",
+        "THETA/USDT:USDT"
+      ],
+      "cost_scenarios": [
+        {
+          "id": "base",
+          "fee_bps_per_side": 5,
+          "execution_proxy_bps_per_side": 3,
+          "total_bps_per_side": 8
+        },
+        {
+          "id": "stress",
+          "fee_bps_per_side": 5,
+          "execution_proxy_bps_per_side": 10,
+          "total_bps_per_side": 15
+        }
+      ],
+      "funding": "actual_events_required_no_zero_fill",
+      "cost_application": "commission+execution proxy folded into fee only in parity model; no duplicate slippage deduction",
+      "baseline_max_open_trades": 6,
+      "baseline_tradable_balance_ratio": 0.99
+    }
+  },
+  "windows": {
+    "S": [
+      "2026-10-23",
+      "2026-11-05"
+    ],
+    "L": [
+      "2025-01-01",
+      "2026-09-01"
+    ]
+  },
+  "account": {
+    "initial_balance_usdt": 1000,
+    "stake_amount": "unlimited",
+    "max_open_trades": 6,
+    "tradable_balance_ratio": 0.99,
+    "futures_leverage": 1,
+    "futures_margin": "isolated",
+    "long_only": true
+  },
+  "costs": "Reuse frozen spot13/20bps and futures8/15bps per side; fee includes slippage proxy; native funding separately, no second slippage deduction",
+  "native_protections": "Upstream original strategy defaults first; no appended RD1 or custom equity fuse; native stoploss/ROI",
+  "research_gates": [
+    "source hash and resolved strategy contract",
+    "same fixed pairs and data",
+    "no unknown silent pair exclusion",
+    "official CLI config/data load",
+    "retain technical failures and results"
+  ],
+  "research_vs_execution": "OHLCV bar timing and matching are official model assumptions, not historical receipt or executable depth; these missing inputs block execution certification, not descriptive native cost research",
+  "decision_rule": "Report each complete account net return, native drawdown, costs/funding, trades, concentration, period differences; retain losses. No profitability qualification before diagnostics and independent forward evidence.",
+  "budget": {
+    "account_runs": 24,
+    "max_total_new_account_runs": 80,
+    "parameter_variants_per_strategy": 1,
+    "hyperopt_runs": 0,
+    "max_new_diagnostic_commands": 8,
+    "old_v1_diagnostic_budget_remaining": 0,
+    "financial_workers": 1,
+    "max_rss_bytes": 5905580032,
+    "wall_seconds_per_run": 3600,
+    "technical_retries_per_run": 2
+  },
+  "official_data_assumptions_reference": "https://www.freqtrade.io/en/stable/backtesting/#assumptions-made-by-backtesting",
+  "live_orders_enabled": false,
+  "deployment_modified": false,
+  "financial_runs_started": 0,
+  "runs": [
+    {
+      "id": "OFFICIAL_ADXMomentum_spot_S_base",
+      "strategy": "ADXMomentum",
+      "market": "spot",
+      "window": "S",
+      "cost": "base",
+      "timerange": "20261023-20261105",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/data-receipts.json",
+        "sha256": "d1c55449e6b38b67a577da3fcae4d2884e2af6274f27e12b0f147ffc6d0715ff"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/spot_base.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_ADXMomentum_spot_S_stress",
+      "strategy": "ADXMomentum",
+      "market": "spot",
+      "window": "S",
+      "cost": "stress",
+      "timerange": "20261023-20261105",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/data-receipts.json",
+        "sha256": "d1c55449e6b38b67a577da3fcae4d2884e2af6274f27e12b0f147ffc6d0715ff"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/spot_stress.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_MACDStrategy_crossed_spot_S_base",
+      "strategy": "MACDStrategy_crossed",
+      "market": "spot",
+      "window": "S",
+      "cost": "base",
+      "timerange": "20261023-20261105",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/data-receipts.json",
+        "sha256": "d1c55449e6b38b67a577da3fcae4d2884e2af6274f27e12b0f147ffc6d0715ff"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/spot_base.json",
+      "timeframe_detail": null,
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_MACDStrategy_crossed_spot_S_stress",
+      "strategy": "MACDStrategy_crossed",
+      "market": "spot",
+      "window": "S",
+      "cost": "stress",
+      "timerange": "20261023-20261105",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/data-receipts.json",
+        "sha256": "d1c55449e6b38b67a577da3fcae4d2884e2af6274f27e12b0f147ffc6d0715ff"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/spot_stress.json",
+      "timeframe_detail": null,
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_AverageStrategy_spot_S_base",
+      "strategy": "AverageStrategy",
+      "market": "spot",
+      "window": "S",
+      "cost": "base",
+      "timerange": "20261023-20261105",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/data-receipts.json",
+        "sha256": "d1c55449e6b38b67a577da3fcae4d2884e2af6274f27e12b0f147ffc6d0715ff"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/spot_base.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_AverageStrategy_spot_S_stress",
+      "strategy": "AverageStrategy",
+      "market": "spot",
+      "window": "S",
+      "cost": "stress",
+      "timerange": "20261023-20261105",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/data-receipts.json",
+        "sha256": "d1c55449e6b38b67a577da3fcae4d2884e2af6274f27e12b0f147ffc6d0715ff"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/spot_stress.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_ADXMomentum_futures_S_base",
+      "strategy": "ADXMomentum",
+      "market": "futures",
+      "window": "S",
+      "cost": "base",
+      "timerange": "20261023-20261105",
+      "datadir": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+        "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/futures_base.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_ADXMomentum_futures_S_stress",
+      "strategy": "ADXMomentum",
+      "market": "futures",
+      "window": "S",
+      "cost": "stress",
+      "timerange": "20261023-20261105",
+      "datadir": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+        "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/futures_stress.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_MACDStrategy_crossed_futures_S_base",
+      "strategy": "MACDStrategy_crossed",
+      "market": "futures",
+      "window": "S",
+      "cost": "base",
+      "timerange": "20261023-20261105",
+      "datadir": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+        "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/futures_base.json",
+      "timeframe_detail": null,
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_MACDStrategy_crossed_futures_S_stress",
+      "strategy": "MACDStrategy_crossed",
+      "market": "futures",
+      "window": "S",
+      "cost": "stress",
+      "timerange": "20261023-20261105",
+      "datadir": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+        "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/futures_stress.json",
+      "timeframe_detail": null,
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_AverageStrategy_futures_S_base",
+      "strategy": "AverageStrategy",
+      "market": "futures",
+      "window": "S",
+      "cost": "base",
+      "timerange": "20261023-20261105",
+      "datadir": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+        "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/futures_base.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_AverageStrategy_futures_S_stress",
+      "strategy": "AverageStrategy",
+      "market": "futures",
+      "window": "S",
+      "cost": "stress",
+      "timerange": "20261023-20261105",
+      "datadir": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+        "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/futures_stress.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_ADXMomentum_spot_L_base",
+      "strategy": "ADXMomentum",
+      "market": "spot",
+      "window": "L",
+      "cost": "base",
+      "timerange": "20250101-20260901",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+        "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/spot_base.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_ADXMomentum_spot_L_stress",
+      "strategy": "ADXMomentum",
+      "market": "spot",
+      "window": "L",
+      "cost": "stress",
+      "timerange": "20250101-20260901",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+        "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/spot_stress.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_MACDStrategy_crossed_spot_L_base",
+      "strategy": "MACDStrategy_crossed",
+      "market": "spot",
+      "window": "L",
+      "cost": "base",
+      "timerange": "20250101-20260901",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+        "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/spot_base.json",
+      "timeframe_detail": null,
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_MACDStrategy_crossed_spot_L_stress",
+      "strategy": "MACDStrategy_crossed",
+      "market": "spot",
+      "window": "L",
+      "cost": "stress",
+      "timerange": "20250101-20260901",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+        "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/spot_stress.json",
+      "timeframe_detail": null,
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_AverageStrategy_spot_L_base",
+      "strategy": "AverageStrategy",
+      "market": "spot",
+      "window": "L",
+      "cost": "base",
+      "timerange": "20250101-20260901",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+        "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/spot_base.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_AverageStrategy_spot_L_stress",
+      "strategy": "AverageStrategy",
+      "market": "spot",
+      "window": "L",
+      "cost": "stress",
+      "timerange": "20250101-20260901",
+      "datadir": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/candles",
+      "data_receipt": {
+        "path": "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json",
+        "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/spot_stress.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_ADXMomentum_futures_L_base",
+      "strategy": "ADXMomentum",
+      "market": "futures",
+      "window": "L",
+      "cost": "base",
+      "timerange": "20250101-20260901",
+      "datadir": "user_data/crypto_quant/nfi40_data_v002/candles",
+      "data_receipt": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+        "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/futures_base.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_ADXMomentum_futures_L_stress",
+      "strategy": "ADXMomentum",
+      "market": "futures",
+      "window": "L",
+      "cost": "stress",
+      "timerange": "20250101-20260901",
+      "datadir": "user_data/crypto_quant/nfi40_data_v002/candles",
+      "data_receipt": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+        "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/futures_stress.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_MACDStrategy_crossed_futures_L_base",
+      "strategy": "MACDStrategy_crossed",
+      "market": "futures",
+      "window": "L",
+      "cost": "base",
+      "timerange": "20250101-20260901",
+      "datadir": "user_data/crypto_quant/nfi40_data_v002/candles",
+      "data_receipt": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+        "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/futures_base.json",
+      "timeframe_detail": null,
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_MACDStrategy_crossed_futures_L_stress",
+      "strategy": "MACDStrategy_crossed",
+      "market": "futures",
+      "window": "L",
+      "cost": "stress",
+      "timerange": "20250101-20260901",
+      "datadir": "user_data/crypto_quant/nfi40_data_v002/candles",
+      "data_receipt": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+        "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/futures_stress.json",
+      "timeframe_detail": null,
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_AverageStrategy_futures_L_base",
+      "strategy": "AverageStrategy",
+      "market": "futures",
+      "window": "L",
+      "cost": "base",
+      "timerange": "20250101-20260901",
+      "datadir": "user_data/crypto_quant/nfi40_data_v002/candles",
+      "data_receipt": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+        "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/futures_base.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    },
+    {
+      "id": "OFFICIAL_AverageStrategy_futures_L_stress",
+      "strategy": "AverageStrategy",
+      "market": "futures",
+      "window": "L",
+      "cost": "stress",
+      "timerange": "20250101-20260901",
+      "datadir": "user_data/crypto_quant/nfi40_data_v002/candles",
+      "data_receipt": {
+        "path": "research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+        "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47"
+      },
+      "config": "research/crypto/official_factor_20261106/configs/futures_stress.json",
+      "timeframe_detail": "5m",
+      "status": "registered_not_run"
+    }
+  ],
+  "custom_RD1_applied": false
+}
