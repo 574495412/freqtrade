@@ -1,0 +1,84 @@
+test_real_native_and_ccxt_builders_persist_initial_order_and_client_identity (__main__.NativeEntryTests.test_real_native_and_ccxt_builders_persist_initial_order_and_client_identity) ... 
+  test_real_native_and_ccxt_builders_persist_initial_order_and_client_identity (__main__.NativeEntryTests.test_real_native_and_ccxt_builders_persist_initial_order_and_client_identity) (market='spot') ... ERROR
+  test_real_native_and_ccxt_builders_persist_initial_order_and_client_identity (__main__.NativeEntryTests.test_real_native_and_ccxt_builders_persist_initial_order_and_client_identity) (market='futures') ... ERROR
+
+======================================================================
+ERROR: test_real_native_and_ccxt_builders_persist_initial_order_and_client_identity (__main__.NativeEntryTests.test_real_native_and_ccxt_builders_persist_initial_order_and_client_identity) (market='spot')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_entries.py", line 91, in test_real_native_and_ccxt_builders_persist_initial_order_and_client_identity
+    self.assertTrue(self.execute(ex, bot, e, p))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_entries.py", line 85, in execute
+    return bot.execute_entry(proposal.pair, 50)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/freqtrade/freqtradebot.py", line 1134, in execute_entry
+    order = self.exchange.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 97, in create_order
+    return self.gate.submit(self, *context, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 188, in submit
+    order = exchange._native_create(ticket, kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 116, in _native_create
+    return super().create_order(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/freqtrade/exchange/exchange.py", line 1549, in create_order
+    order = self._api.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/.venv-paper/lib/python3.12/site-packages/ccxt/binance.py", line 6836, in create_order
+    response = self.privatePostOrder(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/.venv-paper/lib/python3.12/site-packages/ccxt/base/types.py", line 43, in unbound_method
+    return _self.request(self.path, self.api, self.method, params, config=self.config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/.venv-paper/lib/python3.12/site-packages/ccxt/binance.py", line 12674, in request
+    response = self.fetch2(path, api, method, params, config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 37, in fetch2
+    raise RiskError(f"Only local synthetic new-order requests supported: {path!r}, {api!r}, {method!r}")
+rd1.RiskError: Only local synthetic new-order requests supported: 'order', ['private'], 'POST'
+
+======================================================================
+ERROR: test_real_native_and_ccxt_builders_persist_initial_order_and_client_identity (__main__.NativeEntryTests.test_real_native_and_ccxt_builders_persist_initial_order_and_client_identity) (market='futures')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_entries.py", line 91, in test_real_native_and_ccxt_builders_persist_initial_order_and_client_identity
+    self.assertTrue(self.execute(ex, bot, e, p))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_entries.py", line 85, in execute
+    return bot.execute_entry(proposal.pair, 50)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/freqtrade/freqtradebot.py", line 1134, in execute_entry
+    order = self.exchange.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 97, in create_order
+    return self.gate.submit(self, *context, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 188, in submit
+    order = exchange._native_create(ticket, kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 116, in _native_create
+    return super().create_order(**kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/freqtrade/exchange/exchange.py", line 1549, in create_order
+    order = self._api.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/.venv-paper/lib/python3.12/site-packages/ccxt/binance.py", line 6812, in create_order
+    response = self.fapiPrivatePostOrder(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/.venv-paper/lib/python3.12/site-packages/ccxt/base/types.py", line 43, in unbound_method
+    return _self.request(self.path, self.api, self.method, params, config=self.config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/.venv-paper/lib/python3.12/site-packages/ccxt/binance.py", line 12674, in request
+    response = self.fetch2(path, api, method, params, config)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 37, in fetch2
+    raise RiskError(f"Only local synthetic new-order requests supported: {path!r}, {api!r}, {method!r}")
+rd1.RiskError: Only local synthetic new-order requests supported: 'order', ['fapiPrivate'], 'POST'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.059s
+
+FAILED (errors=2)
