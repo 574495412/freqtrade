@@ -1,0 +1,728 @@
+{
+  "registration_sha256": "e1e32d6c650139f3265a37de3885519f36406847a7b55b92acf938a6ee5dcebb",
+  "rows": [
+    {
+      "id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_L_base",
+      "strategy": "F1FuturesCandleCost",
+      "cost": "base",
+      "window": "L",
+      "five_minute_samples": 175104,
+      "baseline_max_nav_error_usdt": 2.8467752599681262e-08,
+      "ambiguous_model_position_events": 0,
+      "exact_fill_tie_events": 0,
+      "mdd_bounds": [
+        0.1015621320560467,
+        0.1015621320560467
+      ],
+      "variants": {
+        "frozen_native": {
+          "terminal_equity_usdt": 928.8339546799999,
+          "net_return": -0.07116604532000004,
+          "maximum_5m_drawdown": 0.1015621320560467,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0
+        },
+        "public_ms_native_inclusive": {
+          "terminal_equity_usdt": 928.8339546799999,
+          "net_return": -0.07116604532000004,
+          "maximum_5m_drawdown": 0.1015621320560467,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.05193900654251138
+        },
+        "public_ms_once_before_exact_ties": {
+          "terminal_equity_usdt": 928.8339546799999,
+          "net_return": -0.07116604532000004,
+          "maximum_5m_drawdown": 0.1015621320560467,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.05193900654251138
+        },
+        "public_ms_once_after_exact_ties": {
+          "terminal_equity_usdt": 928.8339546799999,
+          "net_return": -0.07116604532000004,
+          "maximum_5m_drawdown": 0.1015621320560467,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.05193900654251138
+        },
+        "one_book_lower": {
+          "terminal_equity_usdt": 928.8339546799999,
+          "net_return": -0.07116604532000004,
+          "maximum_5m_drawdown": 0.1015621320560467,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.05193900654251138
+        },
+        "one_book_upper": {
+          "terminal_equity_usdt": 928.8339546799999,
+          "net_return": -0.07116604532000004,
+          "maximum_5m_drawdown": 0.1015621320560467,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.05193900654251138
+        }
+      },
+      "output": "user_data/crypto_quant/rd_program_20261105_v1/funding_order_sensitivity_v001/CANDLE_MINREM_V1_F1FuturesCandleCost_futures_L_base.parquet",
+      "output_sha256": "0500feaed907ae7be2dbcc38b8db4ae0d9ede50cc379c0c182ee13a11e4525e4"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_L_stress",
+      "strategy": "F1FuturesCandleCost",
+      "cost": "stress",
+      "window": "L",
+      "five_minute_samples": 175104,
+      "baseline_max_nav_error_usdt": 3.7304630495782476e-08,
+      "ambiguous_model_position_events": 0,
+      "exact_fill_tie_events": 0,
+      "mdd_bounds": [
+        0.10361281456759508,
+        0.10361281456759508
+      ],
+      "variants": {
+        "frozen_native": {
+          "terminal_equity_usdt": 918.73029577,
+          "net_return": -0.08126970423000002,
+          "maximum_5m_drawdown": 0.10361281456759508,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0
+        },
+        "public_ms_native_inclusive": {
+          "terminal_equity_usdt": 918.73029577,
+          "net_return": -0.08126970423000002,
+          "maximum_5m_drawdown": 0.10361281456759508,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.04846088620433875
+        },
+        "public_ms_once_before_exact_ties": {
+          "terminal_equity_usdt": 918.73029577,
+          "net_return": -0.08126970423000002,
+          "maximum_5m_drawdown": 0.10361281456759508,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0910983695869163
+        },
+        "public_ms_once_after_exact_ties": {
+          "terminal_equity_usdt": 918.73029577,
+          "net_return": -0.08126970423000002,
+          "maximum_5m_drawdown": 0.10361281456759508,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0910983695869163
+        },
+        "one_book_lower": {
+          "terminal_equity_usdt": 918.73029577,
+          "net_return": -0.08126970423000002,
+          "maximum_5m_drawdown": 0.10361281456759508,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0910983695869163
+        },
+        "one_book_upper": {
+          "terminal_equity_usdt": 918.73029577,
+          "net_return": -0.08126970423000002,
+          "maximum_5m_drawdown": 0.10361281456759508,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0910983695869163
+        }
+      },
+      "output": "user_data/crypto_quant/rd_program_20261105_v1/funding_order_sensitivity_v001/CANDLE_MINREM_V1_F1FuturesCandleCost_futures_L_stress.parquet",
+      "output_sha256": "2980314acd9c7d8fd46a60793f9c7ded8b50709be3d4f9d94851ebf0dfd4c0e3"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_L_base",
+      "strategy": "F2FuturesCandleCost",
+      "cost": "base",
+      "window": "L",
+      "five_minute_samples": 175104,
+      "baseline_max_nav_error_usdt": 1.2894815881736577e-07,
+      "ambiguous_model_position_events": 159,
+      "exact_fill_tie_events": 90,
+      "mdd_bounds": [
+        0.10218485015698242,
+        0.10264525794679413
+      ],
+      "variants": {
+        "frozen_native": {
+          "terminal_equity_usdt": 928.35386933,
+          "net_return": -0.07164613067000003,
+          "maximum_5m_drawdown": 0.10242910567229335,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0
+        },
+        "public_ms_native_inclusive": {
+          "terminal_equity_usdt": 928.3132501755213,
+          "net_return": -0.07168674982447876,
+          "maximum_5m_drawdown": 0.10244509875323893,
+          "terminal_change_vs_frozen_usdt": -0.04061915447869069,
+          "max_absolute_path_change_usdt": 0.5522281383143763
+        },
+        "public_ms_once_before_exact_ties": {
+          "terminal_equity_usdt": 928.3132501755213,
+          "net_return": -0.07168674982447876,
+          "maximum_5m_drawdown": 0.10244509875323893,
+          "terminal_change_vs_frozen_usdt": -0.04061915447869069,
+          "max_absolute_path_change_usdt": 0.5522281383143763
+        },
+        "public_ms_once_after_exact_ties": {
+          "terminal_equity_usdt": 928.3462231955247,
+          "net_return": -0.07165377680447538,
+          "maximum_5m_drawdown": 0.1024010388334734,
+          "terminal_change_vs_frozen_usdt": -0.007646134475294275,
+          "max_absolute_path_change_usdt": 0.5188257593005119
+        },
+        "one_book_lower": {
+          "terminal_equity_usdt": 928.1871232155698,
+          "net_return": -0.07181287678443016,
+          "maximum_5m_drawdown": 0.10250118537159736,
+          "terminal_change_vs_frozen_usdt": -0.16674611443011145,
+          "max_absolute_path_change_usdt": 0.657912567536755
+        },
+        "one_book_upper": {
+          "terminal_equity_usdt": 928.5129693099549,
+          "net_return": -0.07148703069004514,
+          "maximum_5m_drawdown": 0.10232897351244574,
+          "terminal_change_vs_frozen_usdt": 0.15909997995493086,
+          "max_absolute_path_change_usdt": 0.3999998994394218
+        }
+      },
+      "output": "user_data/crypto_quant/rd_program_20261105_v1/funding_order_sensitivity_v001/CANDLE_MINREM_V1_F2FuturesCandleCost_futures_L_base.parquet",
+      "output_sha256": "21d13f9f7f55d56cbbe2269d4355e6b27f2fb3abb39b82b08cae76189bd9b2fc"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_L_stress",
+      "strategy": "F2FuturesCandleCost",
+      "cost": "stress",
+      "window": "L",
+      "five_minute_samples": 175104,
+      "baseline_max_nav_error_usdt": 1.8978767002408858e-07,
+      "ambiguous_model_position_events": 160,
+      "exact_fill_tie_events": 90,
+      "mdd_bounds": [
+        0.10299528138953185,
+        0.10345263580122988
+      ],
+      "variants": {
+        "frozen_native": {
+          "terminal_equity_usdt": 909.50616747,
+          "net_return": -0.09049383252999998,
+          "maximum_5m_drawdown": 0.10324214316648661,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0
+        },
+        "public_ms_native_inclusive": {
+          "terminal_equity_usdt": 909.4808126941164,
+          "net_return": -0.0905191873058836,
+          "maximum_5m_drawdown": 0.10324359667161698,
+          "terminal_change_vs_frozen_usdt": -0.0253547758836703,
+          "max_absolute_path_change_usdt": 0.502810430647628
+        },
+        "public_ms_once_before_exact_ties": {
+          "terminal_equity_usdt": 909.4808126941164,
+          "net_return": -0.0905191873058836,
+          "maximum_5m_drawdown": 0.10324359667161698,
+          "terminal_change_vs_frozen_usdt": -0.0253547758836703,
+          "max_absolute_path_change_usdt": 0.502810430647628
+        },
+        "public_ms_once_after_exact_ties": {
+          "terminal_equity_usdt": 909.501878788622,
+          "net_return": -0.09049812121137801,
+          "maximum_5m_drawdown": 0.10320581261609785,
+          "terminal_change_vs_frozen_usdt": -0.0042886813780569355,
+          "max_absolute_path_change_usdt": 0.48817593724936614
+        },
+        "one_book_lower": {
+          "terminal_equity_usdt": 909.3505834848183,
+          "net_return": -0.09064941651518166,
+          "maximum_5m_drawdown": 0.10329797876932811,
+          "terminal_change_vs_frozen_usdt": -0.1555839851816927,
+          "max_absolute_path_change_usdt": 0.6122956826329755
+        },
+        "one_book_upper": {
+          "terminal_equity_usdt": 909.6574627738036,
+          "net_return": -0.09034253722619645,
+          "maximum_5m_drawdown": 0.10314999062860741,
+          "terminal_change_vs_frozen_usdt": 0.15129530380352207,
+          "max_absolute_path_change_usdt": 0.37749411925096865
+        }
+      },
+      "output": "user_data/crypto_quant/rd_program_20261105_v1/funding_order_sensitivity_v001/CANDLE_MINREM_V1_F2FuturesCandleCost_futures_L_stress.parquet",
+      "output_sha256": "37c98b75a2addcf0c93150a5a1fb1e5a4a30940d12f973063e53fad506ec80af"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_L_base",
+      "strategy": "AverageFuturesCandleControl",
+      "cost": "base",
+      "window": "L",
+      "five_minute_samples": 175104,
+      "baseline_max_nav_error_usdt": 3.701836703839945e-08,
+      "ambiguous_model_position_events": 18,
+      "exact_fill_tie_events": 17,
+      "mdd_bounds": [
+        0.10080033948671319,
+        0.1009027262315082
+      ],
+      "variants": {
+        "frozen_native": {
+          "terminal_equity_usdt": 927.22844701,
+          "net_return": -0.07277155299000004,
+          "maximum_5m_drawdown": 0.10087234740745166,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0
+        },
+        "public_ms_native_inclusive": {
+          "terminal_equity_usdt": 927.2270365289758,
+          "net_return": -0.07277296347102424,
+          "maximum_5m_drawdown": 0.10087371640278131,
+          "terminal_change_vs_frozen_usdt": -0.0014104810242088206,
+          "max_absolute_path_change_usdt": 0.022833204132211904
+        },
+        "public_ms_once_before_exact_ties": {
+          "terminal_equity_usdt": 927.2270365289758,
+          "net_return": -0.07277296347102424,
+          "maximum_5m_drawdown": 0.10087371640278131,
+          "terminal_change_vs_frozen_usdt": -0.0014104810242088206,
+          "max_absolute_path_change_usdt": 0.03178883829014012
+        },
+        "public_ms_once_after_exact_ties": {
+          "terminal_equity_usdt": 927.277914807017,
+          "net_return": -0.07272208519298295,
+          "maximum_5m_drawdown": 0.10083071907717478,
+          "terminal_change_vs_frozen_usdt": 0.04946779701708692,
+          "max_absolute_path_change_usdt": 0.08266711633143586
+        },
+        "one_book_lower": {
+          "terminal_equity_usdt": 927.2060332581349,
+          "net_return": -0.07279396674186511,
+          "maximum_5m_drawdown": 0.10089186156023833,
+          "terminal_change_vs_frozen_usdt": -0.02241375186508776,
+          "max_absolute_path_change_usdt": 0.02866146049211693
+        },
+        "one_book_upper": {
+          "terminal_equity_usdt": 927.3003285588821,
+          "net_return": -0.07269967144111789,
+          "maximum_5m_drawdown": 0.1008112052639204,
+          "terminal_change_vs_frozen_usdt": 0.07188154888217468,
+          "max_absolute_path_change_usdt": 0.10508086819652362
+        }
+      },
+      "output": "user_data/crypto_quant/rd_program_20261105_v1/funding_order_sensitivity_v001/CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_L_base.parquet",
+      "output_sha256": "95370393a89653b6a6d5f1a340e4ea7e5b4cf556f05c9fa8441f0779902c3fd0"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_L_stress",
+      "strategy": "AverageFuturesCandleControl",
+      "cost": "stress",
+      "window": "L",
+      "five_minute_samples": 175104,
+      "baseline_max_nav_error_usdt": 4.8838955990504473e-08,
+      "ambiguous_model_position_events": 12,
+      "exact_fill_tie_events": 12,
+      "mdd_bounds": [
+        0.10876181214018565,
+        0.10884002698418183
+      ],
+      "variants": {
+        "frozen_native": {
+          "terminal_equity_usdt": 926.42811311,
+          "net_return": -0.07357188688999994,
+          "maximum_5m_drawdown": 0.10881010619462284,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0
+        },
+        "public_ms_native_inclusive": {
+          "terminal_equity_usdt": 926.42811311,
+          "net_return": -0.07357188688999994,
+          "maximum_5m_drawdown": 0.10881010619462284,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.038866629388166984
+        },
+        "public_ms_once_before_exact_ties": {
+          "terminal_equity_usdt": 926.42811311,
+          "net_return": -0.07357188688999994,
+          "maximum_5m_drawdown": 0.10881010619462284,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.038993072617131475
+        },
+        "public_ms_once_after_exact_ties": {
+          "terminal_equity_usdt": 926.4676335339211,
+          "net_return": -0.07353236646607886,
+          "maximum_5m_drawdown": 0.10879173372703821,
+          "terminal_change_vs_frozen_usdt": 0.03952042392108979,
+          "max_absolute_path_change_usdt": 0.05792876514999534
+        },
+        "one_book_lower": {
+          "terminal_equity_usdt": 926.4109256593592,
+          "net_return": -0.07358907434064077,
+          "maximum_5m_drawdown": 0.10882449916695347,
+          "terminal_change_vs_frozen_usdt": -0.017187450640790303,
+          "max_absolute_path_change_usdt": 0.03649357900076211
+        },
+        "one_book_upper": {
+          "terminal_equity_usdt": 926.4848209845619,
+          "net_return": -0.07351517901543814,
+          "maximum_5m_drawdown": 0.10877734104967107,
+          "terminal_change_vs_frozen_usdt": 0.05670787456188009,
+          "max_absolute_path_change_usdt": 0.07511621579078565
+        }
+      },
+      "output": "user_data/crypto_quant/rd_program_20261105_v1/funding_order_sensitivity_v001/CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_L_stress.parquet",
+      "output_sha256": "22644f13858404698b25e214a3a75a78eac86508f8f7adf1858530548e138492"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_S_base",
+      "strategy": "F1FuturesCandleCost",
+      "cost": "base",
+      "window": "S",
+      "five_minute_samples": 3744,
+      "baseline_max_nav_error_usdt": 7.832227311155293e-09,
+      "ambiguous_model_position_events": 0,
+      "exact_fill_tie_events": 0,
+      "mdd_bounds": [
+        0.039109181308010776,
+        0.039109181308010776
+      ],
+      "variants": {
+        "frozen_native": {
+          "terminal_equity_usdt": 979.6259092780907,
+          "net_return": -0.02037409072190932,
+          "maximum_5m_drawdown": 0.039109181308010776,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0
+        },
+        "public_ms_native_inclusive": {
+          "terminal_equity_usdt": 979.6259092780907,
+          "net_return": -0.02037409072190932,
+          "maximum_5m_drawdown": 0.039109181308010776,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.02620429644912292
+        },
+        "public_ms_once_before_exact_ties": {
+          "terminal_equity_usdt": 979.6259092780907,
+          "net_return": -0.02037409072190932,
+          "maximum_5m_drawdown": 0.039109181308010776,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.028897171334619998
+        },
+        "public_ms_once_after_exact_ties": {
+          "terminal_equity_usdt": 979.6259092780907,
+          "net_return": -0.02037409072190932,
+          "maximum_5m_drawdown": 0.039109181308010776,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.028897171334619998
+        },
+        "one_book_lower": {
+          "terminal_equity_usdt": 979.6259092780907,
+          "net_return": -0.02037409072190932,
+          "maximum_5m_drawdown": 0.039109181308010776,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.028897171334619998
+        },
+        "one_book_upper": {
+          "terminal_equity_usdt": 979.6259092780907,
+          "net_return": -0.02037409072190932,
+          "maximum_5m_drawdown": 0.039109181308010776,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.028897171334619998
+        }
+      },
+      "output": "user_data/crypto_quant/rd_program_20261105_v1/funding_order_sensitivity_v001/CANDLE_MINREM_V1_F1FuturesCandleCost_futures_S_base.parquet",
+      "output_sha256": "332247f3fbf17e0d93f0ebfe158473825476c44ba004da15012745de373f98fe"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_S_stress",
+      "strategy": "F1FuturesCandleCost",
+      "cost": "stress",
+      "window": "S",
+      "five_minute_samples": 3744,
+      "baseline_max_nav_error_usdt": 1.7148636288766284e-08,
+      "ambiguous_model_position_events": 0,
+      "exact_fill_tie_events": 0,
+      "mdd_bounds": [
+        0.04101660387128592,
+        0.04101660387128592
+      ],
+      "variants": {
+        "frozen_native": {
+          "terminal_equity_usdt": 976.9351637841705,
+          "net_return": -0.023064836215829443,
+          "maximum_5m_drawdown": 0.04101660387128592,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0
+        },
+        "public_ms_native_inclusive": {
+          "terminal_equity_usdt": 976.9351637841705,
+          "net_return": -0.023064836215829443,
+          "maximum_5m_drawdown": 0.04101660387128592,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.03706056855253337
+        },
+        "public_ms_once_before_exact_ties": {
+          "terminal_equity_usdt": 976.9351637841705,
+          "net_return": -0.023064836215829443,
+          "maximum_5m_drawdown": 0.04101660387128592,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.03706056855253337
+        },
+        "public_ms_once_after_exact_ties": {
+          "terminal_equity_usdt": 976.9351637841705,
+          "net_return": -0.023064836215829443,
+          "maximum_5m_drawdown": 0.04101660387128592,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.03706056855253337
+        },
+        "one_book_lower": {
+          "terminal_equity_usdt": 976.9351637841705,
+          "net_return": -0.023064836215829443,
+          "maximum_5m_drawdown": 0.04101660387128592,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.03706056855253337
+        },
+        "one_book_upper": {
+          "terminal_equity_usdt": 976.9351637841705,
+          "net_return": -0.023064836215829443,
+          "maximum_5m_drawdown": 0.04101660387128592,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.03706056855253337
+        }
+      },
+      "output": "user_data/crypto_quant/rd_program_20261105_v1/funding_order_sensitivity_v001/CANDLE_MINREM_V1_F1FuturesCandleCost_futures_S_stress.parquet",
+      "output_sha256": "6ac03d09ee7772569505a03a21882722ef18f9b4c084ed26f9ce78236b5aac67"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_S_base",
+      "strategy": "F2FuturesCandleCost",
+      "cost": "base",
+      "window": "S",
+      "five_minute_samples": 3744,
+      "baseline_max_nav_error_usdt": 1.0609596756694373e-08,
+      "ambiguous_model_position_events": 6,
+      "exact_fill_tie_events": 4,
+      "mdd_bounds": [
+        0.029704904937927212,
+        0.029717778370326187
+      ],
+      "variants": {
+        "frozen_native": {
+          "terminal_equity_usdt": 981.3956320332057,
+          "net_return": -0.01860436796679421,
+          "maximum_5m_drawdown": 0.029717778370326187,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0
+        },
+        "public_ms_native_inclusive": {
+          "terminal_equity_usdt": 981.3999320620693,
+          "net_return": -0.018600067937930675,
+          "maximum_5m_drawdown": 0.029713495208495422,
+          "terminal_change_vs_frozen_usdt": 0.004300028863553962,
+          "max_absolute_path_change_usdt": 0.023244677352295184
+        },
+        "public_ms_once_before_exact_ties": {
+          "terminal_equity_usdt": 981.3999320620693,
+          "net_return": -0.018600067937930675,
+          "maximum_5m_drawdown": 0.029713495208495422,
+          "terminal_change_vs_frozen_usdt": 0.004300028863553962,
+          "max_absolute_path_change_usdt": 0.03128416769300202
+        },
+        "public_ms_once_after_exact_ties": {
+          "terminal_equity_usdt": 981.4085561610053,
+          "net_return": -0.018591443838994692,
+          "maximum_5m_drawdown": 0.029704904937927212,
+          "terminal_change_vs_frozen_usdt": 0.012924127799578855,
+          "max_absolute_path_change_usdt": 0.0353244106290731
+        },
+        "one_book_lower": {
+          "terminal_equity_usdt": 981.3956320332057,
+          "net_return": -0.01860436796679421,
+          "maximum_5m_drawdown": 0.029717778370326187,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.026984138829448057
+        },
+        "one_book_upper": {
+          "terminal_equity_usdt": 981.4085561610053,
+          "net_return": -0.018591443838994692,
+          "maximum_5m_drawdown": 0.029704904937927212,
+          "terminal_change_vs_frozen_usdt": 0.012924127799578855,
+          "max_absolute_path_change_usdt": 0.0353244106290731
+        }
+      },
+      "output": "user_data/crypto_quant/rd_program_20261105_v1/funding_order_sensitivity_v001/CANDLE_MINREM_V1_F2FuturesCandleCost_futures_S_base.parquet",
+      "output_sha256": "1e8ad59d19e7e3dc1c1369b14d3d85c00aa8a29468351af429778f3f7c502537"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_S_stress",
+      "strategy": "F2FuturesCandleCost",
+      "cost": "stress",
+      "window": "S",
+      "five_minute_samples": 3744,
+      "baseline_max_nav_error_usdt": 1.3955059330328368e-08,
+      "ambiguous_model_position_events": 6,
+      "exact_fill_tie_events": 4,
+      "mdd_bounds": [
+        0.022383390713507256,
+        0.022396008066233652
+      ],
+      "variants": {
+        "frozen_native": {
+          "terminal_equity_usdt": 987.7952663313357,
+          "net_return": -0.012204733668664258,
+          "maximum_5m_drawdown": 0.022396008066233652,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0
+        },
+        "public_ms_native_inclusive": {
+          "terminal_equity_usdt": 987.7995093144237,
+          "net_return": -0.01220049068557627,
+          "maximum_5m_drawdown": 0.022391778694005215,
+          "terminal_change_vs_frozen_usdt": 0.004242983088033725,
+          "max_absolute_path_change_usdt": 0.018469425174998833
+        },
+        "public_ms_once_before_exact_ties": {
+          "terminal_equity_usdt": 987.7995093144237,
+          "net_return": -0.01220049068557627,
+          "maximum_5m_drawdown": 0.022391778694005215,
+          "terminal_change_vs_frozen_usdt": 0.004242983088033725,
+          "max_absolute_path_change_usdt": 0.030837565917522625
+        },
+        "public_ms_once_after_exact_ties": {
+          "terminal_equity_usdt": 987.8079242889102,
+          "net_return": -0.012192075711089823,
+          "maximum_5m_drawdown": 0.022383390713507256,
+          "terminal_change_vs_frozen_usdt": 0.01265795757444721,
+          "max_absolute_path_change_usdt": 0.03476310840392216
+        },
+        "one_book_lower": {
+          "terminal_equity_usdt": 987.7952663313357,
+          "net_return": -0.012204733668664258,
+          "maximum_5m_drawdown": 0.022396008066233652,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0265945828294889
+        },
+        "one_book_upper": {
+          "terminal_equity_usdt": 987.8079242889102,
+          "net_return": -0.012192075711089823,
+          "maximum_5m_drawdown": 0.022383390713507256,
+          "terminal_change_vs_frozen_usdt": 0.01265795757444721,
+          "max_absolute_path_change_usdt": 0.03476310840392216
+        }
+      },
+      "output": "user_data/crypto_quant/rd_program_20261105_v1/funding_order_sensitivity_v001/CANDLE_MINREM_V1_F2FuturesCandleCost_futures_S_stress.parquet",
+      "output_sha256": "efb5ea6fe7c1bed6db9f56d76f6be22043a0768a9fbaee23e0191b4eac7685b0"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_S_base",
+      "strategy": "AverageFuturesCandleControl",
+      "cost": "base",
+      "window": "S",
+      "five_minute_samples": 3744,
+      "baseline_max_nav_error_usdt": 1.224930201715324e-08,
+      "ambiguous_model_position_events": 6,
+      "exact_fill_tie_events": 4,
+      "mdd_bounds": [
+        0.031348009284005496,
+        0.031371724614473795
+      ],
+      "variants": {
+        "frozen_native": {
+          "terminal_equity_usdt": 985.9098502293484,
+          "net_return": -0.014090149770651594,
+          "maximum_5m_drawdown": 0.031371724614473795,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0
+        },
+        "public_ms_native_inclusive": {
+          "terminal_equity_usdt": 985.9178768426809,
+          "net_return": -0.014082123157319049,
+          "maximum_5m_drawdown": 0.0313637821542071,
+          "terminal_change_vs_frozen_usdt": 0.008026613332503985,
+          "max_absolute_path_change_usdt": 0.039157598198698906
+        },
+        "public_ms_once_before_exact_ties": {
+          "terminal_equity_usdt": 985.9178768426809,
+          "net_return": -0.014082123157319049,
+          "maximum_5m_drawdown": 0.0313637821542071,
+          "terminal_change_vs_frozen_usdt": 0.008026613332503985,
+          "max_absolute_path_change_usdt": 0.039157598198698906
+        },
+        "public_ms_once_after_exact_ties": {
+          "terminal_equity_usdt": 985.9338168318028,
+          "net_return": -0.014066183168197188,
+          "maximum_5m_drawdown": 0.031348009284005496,
+          "terminal_change_vs_frozen_usdt": 0.023966602454379426,
+          "max_absolute_path_change_usdt": 0.046037607825951454
+        },
+        "one_book_lower": {
+          "terminal_equity_usdt": 985.9098502293484,
+          "net_return": -0.014090149770651594,
+          "maximum_5m_drawdown": 0.031371724614473795,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.039157598198698906
+        },
+        "one_book_upper": {
+          "terminal_equity_usdt": 985.9338168318028,
+          "net_return": -0.014066183168197188,
+          "maximum_5m_drawdown": 0.031348009284005496,
+          "terminal_change_vs_frozen_usdt": 0.023966602454379426,
+          "max_absolute_path_change_usdt": 0.046037607825951454
+        }
+      },
+      "output": "user_data/crypto_quant/rd_program_20261105_v1/funding_order_sensitivity_v001/CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_S_base.parquet",
+      "output_sha256": "7d5ebf9b6cd332c48364db5462e4705be3bd6b4f697eedcdaa741cf9ec474040"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_S_stress",
+      "strategy": "AverageFuturesCandleControl",
+      "cost": "stress",
+      "window": "S",
+      "five_minute_samples": 3744,
+      "baseline_max_nav_error_usdt": 1.7993443179875612e-08,
+      "ambiguous_model_position_events": 7,
+      "exact_fill_tie_events": 5,
+      "mdd_bounds": [
+        0.0508946263731086,
+        0.050920068511354444
+      ],
+      "variants": {
+        "frozen_native": {
+          "terminal_equity_usdt": 966.4481696316908,
+          "net_return": -0.03355183036830922,
+          "maximum_5m_drawdown": 0.050920068511354444,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.0
+        },
+        "public_ms_native_inclusive": {
+          "terminal_equity_usdt": 966.4559870771799,
+          "net_return": -0.033544012922820166,
+          "maximum_5m_drawdown": 0.05091232977508031,
+          "terminal_change_vs_frozen_usdt": 0.007817445489081365,
+          "max_absolute_path_change_usdt": 0.028156097446753847
+        },
+        "public_ms_once_before_exact_ties": {
+          "terminal_equity_usdt": 966.4559870771799,
+          "net_return": -0.033544012922820166,
+          "maximum_5m_drawdown": 0.05091232977508031,
+          "terminal_change_vs_frozen_usdt": 0.007817445489081365,
+          "max_absolute_path_change_usdt": 0.028156097446753847
+        },
+        "public_ms_once_after_exact_ties": {
+          "terminal_equity_usdt": 966.473870537086,
+          "net_return": -0.033526129462914,
+          "maximum_5m_drawdown": 0.0508946263731086,
+          "terminal_change_vs_frozen_usdt": 0.025700905395183327,
+          "max_absolute_path_change_usdt": 0.043733629395092066
+        },
+        "one_book_lower": {
+          "terminal_equity_usdt": 966.4481696316908,
+          "net_return": -0.03355183036830922,
+          "maximum_5m_drawdown": 0.050920068511354444,
+          "terminal_change_vs_frozen_usdt": 0.0,
+          "max_absolute_path_change_usdt": 0.028156097446753847
+        },
+        "one_book_upper": {
+          "terminal_equity_usdt": 966.473870537086,
+          "net_return": -0.033526129462914,
+          "maximum_5m_drawdown": 0.0508946263731086,
+          "terminal_change_vs_frozen_usdt": 0.025700905395183327,
+          "max_absolute_path_change_usdt": 0.043733629395092066
+        }
+      },
+      "output": "user_data/crypto_quant/rd_program_20261105_v1/funding_order_sensitivity_v001/CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_S_stress.parquet",
+      "output_sha256": "cd0cf34f48661ea361bce6f851862b39eaa42aef1b68e4254aeda60cf93d2cb4"
+    }
+  ],
+  "historical_account_funding_verified": false,
+  "full_RD1_financial_admission": false,
+  "financial_accounts": 0
+}

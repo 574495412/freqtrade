@@ -1,0 +1,113 @@
+{
+  "observed_at_utc": "2026-11-06T15:34:02.803033+00:00",
+  "input_hashes": {
+    "research/crypto/funding_order_sensitivity_20261106/verify_sensitivity.py": "df5b06539a6fc8f107c205ecb10bd8682dbe0794d1ed0e4b06406f8569c22b1f",
+    "research/crypto/funding_order_sensitivity_20261106/registration.json": "e1e32d6c650139f3265a37de3885519f36406847a7b55b92acf938a6ee5dcebb",
+    "research/crypto/funding_order_sensitivity_20261106/result.json": "e4d7ee44a6c83cf1857cfc34b5067183a5c5abd67140b73d828df0dc5b2631a1",
+    "research/crypto/factor_cost_futures_long_20261106/plan.json": "4f89a1cd81fc810fb7b71bbf41993a91712280e55037ec769d98c06cf7c406d2",
+    "research/crypto/factor_cost_futures_20261106/plan.json": "a23faa12f1262083412df8af1ac750e84d40688587bd0bb1a8694e67bd0a7693"
+  },
+  "preserved_accounts": 12,
+  "five_minute_points": 1073088,
+  "maximum_native_baseline_nav_error_usdt": 1.8978767002408858e-07,
+  "maximum_terminal_absolute_difference_usdt": 0.16674611443011145,
+  "maximum_path_absolute_difference_usdt": 0.657912567536755,
+  "maximum_shift_only_terminal_difference_usdt": 0.04061915447869069,
+  "max_f1_terminal_absolute_difference_usdt": 0.0,
+  "profitable_variant_accounts": 0,
+  "best_bounded_factor_account": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_S_stress",
+  "best_bounded_factor_net_return": -0.012192075711089823,
+  "f2_matched_pairs": [
+    {
+      "window": "L",
+      "cost": "base",
+      "f2_net_return_bounds": [
+        -0.07181287678443016,
+        -0.07148703069004514
+      ],
+      "control_net_return_bounds": [
+        -0.07279396674186511,
+        -0.07269967144111789
+      ],
+      "f2_minus_control_return_bounds": [
+        0.0008867946566877283,
+        0.0013069360518199735
+      ],
+      "drawdown_improvement_bounds": [
+        -0.018302700858702226,
+        -0.012706534038857908
+      ],
+      "control_can_be_positive": false,
+      "frozen_f2_profit_retention_gate_passed": false
+    },
+    {
+      "window": "L",
+      "cost": "stress",
+      "f2_net_return_bounds": [
+        -0.09064941651518166,
+        -0.09034253722619645
+      ],
+      "control_net_return_bounds": [
+        -0.07358907434064077,
+        -0.07351517901543814
+      ],
+      "f2_minus_control_return_bounds": [
+        -0.01713423749974352,
+        -0.01675346288555568
+      ],
+      "drawdown_improvement_bounds": [
+        0.04881471018626149,
+        0.05370033209840552
+      ],
+      "control_can_be_positive": false,
+      "frozen_f2_profit_retention_gate_passed": false
+    },
+    {
+      "window": "S",
+      "cost": "base",
+      "f2_net_return_bounds": [
+        -0.01860436796679421,
+        -0.018591443838994692
+      ],
+      "control_net_return_bounds": [
+        -0.014090149770651594,
+        -0.014066183168197188
+      ],
+      "f2_minus_control_return_bounds": [
+        -0.0045381847985970225,
+        -0.004501294068343098
+      ],
+      "drawdown_improvement_bounds": [
+        0.052004288339645655,
+        0.05313127336893586
+      ],
+      "control_can_be_positive": false,
+      "frozen_f2_profit_retention_gate_passed": false
+    },
+    {
+      "window": "S",
+      "cost": "stress",
+      "f2_net_return_bounds": [
+        -0.012204733668664258,
+        -0.012192075711089823
+      ],
+      "control_net_return_bounds": [
+        -0.03355183036830922,
+        -0.033526129462914
+      ],
+      "f2_minus_control_return_bounds": [
+        0.021321395794249742,
+        0.0213597546572194
+      ],
+      "drawdown_improvement_bounds": [
+        0.5599533848220345,
+        0.560421040900287
+      ],
+      "control_can_be_positive": false,
+      "frozen_f2_profit_retention_gate_passed": false
+    }
+  ],
+  "historical_account_funding_verified": false,
+  "full_RD1_economic_comparison_complete": false,
+  "financial_accounts": 0
+}
