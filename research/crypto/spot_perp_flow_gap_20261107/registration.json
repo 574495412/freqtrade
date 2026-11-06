@@ -1,0 +1,72 @@
+{
+  "registered_at_utc": "2026-11-06T19:32:24.231496+00:00",
+  "checksums": {
+    "research/crypto/spot_perp_flow_gap_20261107/run.py": "71224aa7ab36398dc64516e6ef46f41715333218e12b9a62dd6d8e586d703150",
+    "research/crypto/spot_perp_flow_gap_20261107/audit.py": "bff2c0ab07e9d529457dbac20c9772300fdb32d895c25ffdcbdf634b27430ad4",
+    "research/crypto/spot_perp_flow_gap_20261107/inputs.py": "21444fb2b50c40072907441100ec1df7bff16085a8e1de634312eba6b2fcd51e",
+    "research/crypto/listing_reversal_20261107/catalog.py": "b9b0bce5736a1b1f81b0eea9851febcd3b45e220e5908f6b57bd3ede1064f603",
+    "freqtrade/research/data.py": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+    "research/crypto/calendar_portfolio.py": "1162f3d1bf9d7808432d69a7f6e9552490c99c2c7bcf0a3a1b175222786e0616",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/receipts.json": "d664e25bebe874546a18df36267fd1a2825ffe59a5512f57388a040f0de9e8e3",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/ADAUSDT_5m.parquet": "f7d50ea1c2e2f9f675b74286a1a089b661e3e5a9a35838a53153f5114ef27143",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/AVAXUSDT_5m.parquet": "a3064ebecc2fb6e159f7fa1ac59db51f6ab714b018d12f0beb1ec568def334ce",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/BNBUSDT_5m.parquet": "0f54b73e4a2b189d6dfa8996c0d5d6c6582c775b132f99c5a6e02cdd476fa03f",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/DOGEUSDT_5m.parquet": "13d95bc7a8d29d05c3ac52a9b2f83d49e6e2358d5ddfe2fb0a15d24fd6190a7c",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/DOTUSDT_5m.parquet": "2a02e0cd72213f8a87d12d3aa9344732471b8e3c70a7edc1dfed759dcff4fdc8",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/ETHUSDT_5m.parquet": "155cb2fff1a26f2384999e94a4851fe958ef5b880a50ce835d343e396ed251b7",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/LINKUSDT_5m.parquet": "d386a2570c19145d3454eafa08790957eae9f7c082a060048458513b69625ca3",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/LTCUSDT_5m.parquet": "cae0b0d3a22247f5ff3456bc2d811791efeb6c45caf74c5a72751fc9f5a83443",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/SOLUSDT_5m.parquet": "3a8d91bec6f1b9bf5a5e64dcf7141dbbb44a113ab6c018d3f0998d6ec2a0811c",
+    "user_data/crypto_quant/breadth_diffusion_20261107_v001/data/XRPUSDT_5m.parquet": "641ac8f9dc757ec49474c950cacd76f91e4eee8719dfa89c6c5c59e54cc50156"
+  },
+  "symbols": [
+    "ADAUSDT",
+    "AVAXUSDT",
+    "BNBUSDT",
+    "DOGEUSDT",
+    "DOTUSDT",
+    "ETHUSDT",
+    "LINKUSDT",
+    "LTCUSDT",
+    "SOLUSDT",
+    "XRPUSDT"
+  ],
+  "cases": [
+    "Gap",
+    "SpotOnly",
+    "PerpOnly"
+  ],
+  "data_start": "2023-11-01",
+  "windows": [
+    {
+      "name": "2024",
+      "start": "2024-01-01",
+      "end": "2025-01-01"
+    },
+    {
+      "name": "2025-26",
+      "start": "2025-01-01",
+      "end": "2026-09-01"
+    }
+  ],
+  "hypothesis": "Relative spot buying pressure versus same-asset perpetual buying pressure identifies return continuation that each single-market imbalance misses.",
+  "signal": "Per market, quote-volume-weighted taker buy fraction over three completed UTC daily candles minus the analogous fraction over the preceding nonoverlapping 30 days. Gap equals spot anomaly minus perpetual anomaly. Controls use only one of the two anomalies, identical account policy. At 08:00 UTC Monday and Thursday, rank the ten assets using data through the previous UTC day, long the top three and short the bottom three, with alphabetical tie break. Require all ten pairs have both market scores. Empty target begins 23:00 UTC on the last day of each window to attempt a normal volume-bounded liquidation.",
+  "model": {
+    "capital": 1000,
+    "fee_bps": 5,
+    "gross": 0.95,
+    "max_positions": 6,
+    "participation": 0.01,
+    "stop_loss": 0.12,
+    "drawdown_halt": 0.35
+  },
+  "execution": "Existing calendar replay, 1x gross margin equivalent, six equal targets with 47.5% per side at rebalance, one-percent preceding-hour/interval volume caps, 5m close plus adverse slippage, exact published funding times and mark values. Actual exposures drift and fills may be asymmetric. 12% price stop and 35% account halt use the engine's delayed execution. Observe drawdown on 5m transaction closes including exit cost. Record open terminal inventory.",
+  "total_cost_bps_per_side": [
+    8,
+    15
+  ],
+  "gate": "Each window independently starts from 1000 USDT in cash. At both costs and in both windows require positive net return above both single-market controls, no account drawdown halt, maximum 5m close-based account drawdown at most 35%, at least 60 completed position lifecycles and no remaining positions. At 15 bps also require at least 25% annualized net return in each window for an upside admission. Positive results still require held-out and marked-risk evaluation.",
+  "evidence_scope": "Fixed incumbent liquid cohort with survivorship bias. Both windows and fee schedules frozen before candidate economics. All historical, no orders.",
+  "candidate_economics_observed": false,
+  "paper_eligible": false
+}

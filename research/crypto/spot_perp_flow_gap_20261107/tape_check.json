@@ -1,0 +1,988 @@
+{
+  "policy_sha256": "f909c3c1e3813f733fcb6ef226c42c8d53eeb585412259dd10d8b7ce8816919d",
+  "source_sha256": "c9a3667f2f08d03b93c483a5ff10270ef4dfe62c88ffdece24004f6e7881eeca",
+  "original_result_sha256": "0a07e71e5cf1020291c5c91d11e59d5e013c8a3c0730592550bd8a601e98e503",
+  "coverage": {
+    "ADAUSDT": {
+      "days": 1035,
+      "selected": 4,
+      "max_relative_gap": 0.010440886953224794
+    },
+    "AVAXUSDT": {
+      "days": 1035,
+      "selected": 4,
+      "max_relative_gap": 0.010518714777235861
+    },
+    "BNBUSDT": {
+      "days": 1035,
+      "selected": 3,
+      "max_relative_gap": 0.010804334700786589
+    },
+    "DOGEUSDT": {
+      "days": 1035,
+      "selected": 5,
+      "max_relative_gap": 0.006966171375614673
+    },
+    "DOTUSDT": {
+      "days": 1035,
+      "selected": 4,
+      "max_relative_gap": 0.020170006891378107
+    },
+    "ETHUSDT": {
+      "days": 1035,
+      "selected": 5,
+      "max_relative_gap": 0.009488828899543155
+    },
+    "LINKUSDT": {
+      "days": 1035,
+      "selected": 3,
+      "max_relative_gap": 0.010110736744976125
+    },
+    "LTCUSDT": {
+      "days": 1035,
+      "selected": 4,
+      "max_relative_gap": 0.009024086314658173
+    },
+    "SOLUSDT": {
+      "days": 1035,
+      "selected": 4,
+      "max_relative_gap": 0.007835697594825683
+    },
+    "XRPUSDT": {
+      "days": 1035,
+      "selected": 3,
+      "max_relative_gap": 0.008080296853651676
+    }
+  },
+  "day_audits": [
+    {
+      "symbol": "ADAUSDT",
+      "day": "2024-03-27T00:00:00+00:00",
+      "price_bars_different": 2,
+      "archive_quote": 391644067.3025,
+      "rest_quote": 390021493.173,
+      "rest_daily_quote": 390021493.173,
+      "receipt": {
+        "ADAUSDT-5m-rest-check-1711497600000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "ADAUSDT",
+            "interval": "5m",
+            "startTime": 1711497600000,
+            "endTime": 1711583999999,
+            "limit": 300
+          },
+          "sha256": "52e792bfd1ed739acb490fa9b97ec5515d3531433c3f03747b349b1ed0ed18d5"
+        }
+      }
+    },
+    {
+      "symbol": "ADAUSDT",
+      "day": "2024-03-28T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 198114891.8231,
+      "rest_quote": 197650131.45319998,
+      "rest_daily_quote": 197650131.4532,
+      "receipt": {
+        "ADAUSDT-5m-rest-check-1711584000000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "ADAUSDT",
+            "interval": "5m",
+            "startTime": 1711584000000,
+            "endTime": 1711670399999,
+            "limit": 300
+          },
+          "sha256": "4b884f983136ca5950a3945006d2557cae8789b50a6969a8981fbe11e86cadf0"
+        }
+      }
+    },
+    {
+      "symbol": "ADAUSDT",
+      "day": "2025-01-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 649906044.2923,
+      "rest_quote": 656763234.9837999,
+      "rest_daily_quote": 656763234.9838,
+      "receipt": {
+        "ADAUSDT-5m-rest-check-1736812800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "ADAUSDT",
+            "interval": "5m",
+            "startTime": 1736812800000,
+            "endTime": 1736899199999,
+            "limit": 300
+          },
+          "sha256": "1ef267a811a59ab08642799f45d98aa40fcee774a2016939916889ba3227e7b4"
+        }
+      }
+    },
+    {
+      "symbol": "ADAUSDT",
+      "day": "2025-01-29T00:00:00+00:00",
+      "price_bars_different": 4,
+      "archive_quote": 498192154.0459,
+      "rest_quote": 500192136.1733,
+      "rest_daily_quote": 500192136.1733,
+      "receipt": {
+        "ADAUSDT-5m-rest-check-1738108800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "ADAUSDT",
+            "interval": "5m",
+            "startTime": 1738108800000,
+            "endTime": 1738195199999,
+            "limit": 300
+          },
+          "sha256": "d757f2110b3073654f34e33eb196d01461fb49cb8e9922d86fa9650a4190a93f"
+        }
+      }
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "day": "2024-03-27T00:00:00+00:00",
+      "price_bars_different": 2,
+      "archive_quote": 535226275.915,
+      "rest_quote": 532387814.661,
+      "rest_daily_quote": 532387814.661,
+      "receipt": {
+        "AVAXUSDT-5m-rest-check-1711497600000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "AVAXUSDT",
+            "interval": "5m",
+            "startTime": 1711497600000,
+            "endTime": 1711583999999,
+            "limit": 300
+          },
+          "sha256": "baa7c5e72db727270fac8e88b9f0fa0ad76940fb9b9a8a336c580765b6e59dbb"
+        }
+      }
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "day": "2024-03-28T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 296380043.808,
+      "rest_quote": 296081420.184,
+      "rest_daily_quote": 296081420.184,
+      "receipt": {
+        "AVAXUSDT-5m-rest-check-1711584000000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "AVAXUSDT",
+            "interval": "5m",
+            "startTime": 1711584000000,
+            "endTime": 1711670399999,
+            "limit": 300
+          },
+          "sha256": "b74bdb4a61766ca805bfd16e049d5591df4f1b71d1f67f8b4947f6db495fbfaf"
+        }
+      }
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "day": "2025-01-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 198513885.19099998,
+      "rest_quote": 200019234.947,
+      "rest_daily_quote": 200019234.947,
+      "receipt": {
+        "AVAXUSDT-5m-rest-check-1736812800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "AVAXUSDT",
+            "interval": "5m",
+            "startTime": 1736812800000,
+            "endTime": 1736899199999,
+            "limit": 300
+          },
+          "sha256": "d7c70c7a8cad59d3b3e742d7d9f519f075cc144140a764ca6c3591c49144f977"
+        }
+      }
+    },
+    {
+      "symbol": "AVAXUSDT",
+      "day": "2025-01-29T00:00:00+00:00",
+      "price_bars_different": 4,
+      "archive_quote": 265226118.267,
+      "rest_quote": 268045613.62399998,
+      "rest_daily_quote": 268045613.624,
+      "receipt": {
+        "AVAXUSDT-5m-rest-check-1738108800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "AVAXUSDT",
+            "interval": "5m",
+            "startTime": 1738108800000,
+            "endTime": 1738195199999,
+            "limit": 300
+          },
+          "sha256": "8983dbda4a3f5a39ea781cdc80d9bad19ad25de51244b59a78fde412933a4cb3"
+        }
+      }
+    },
+    {
+      "symbol": "BNBUSDT",
+      "day": "2023-11-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 369711794.2759,
+      "rest_quote": 370120765.88960004,
+      "rest_daily_quote": 370120765.8896,
+      "receipt": {
+        "BNBUSDT-5m-rest-check-1699920000000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "BNBUSDT",
+            "interval": "5m",
+            "startTime": 1699920000000,
+            "endTime": 1700006399999,
+            "limit": 300
+          },
+          "sha256": "876f65ffb2edb92a37c791fc57320689d703d50996d2d627265d9c207981a8a5"
+        }
+      }
+    },
+    {
+      "symbol": "BNBUSDT",
+      "day": "2025-01-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 332965283.3551,
+      "rest_quote": 336602044.5049,
+      "rest_daily_quote": 336602044.5049,
+      "receipt": {
+        "BNBUSDT-5m-rest-check-1736812800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "BNBUSDT",
+            "interval": "5m",
+            "startTime": 1736812800000,
+            "endTime": 1736899199999,
+            "limit": 300
+          },
+          "sha256": "4f12cbfd206cc0a6afbb8ae0b74c5c3311347f491efb896da6b67f569d911a72"
+        }
+      }
+    },
+    {
+      "symbol": "BNBUSDT",
+      "day": "2025-01-29T00:00:00+00:00",
+      "price_bars_different": 4,
+      "archive_quote": 394669453.036,
+      "rest_quote": 397435594.5457,
+      "rest_daily_quote": 397435594.5457,
+      "receipt": {
+        "BNBUSDT-5m-rest-check-1738108800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "BNBUSDT",
+            "interval": "5m",
+            "startTime": 1738108800000,
+            "endTime": 1738195199999,
+            "limit": 300
+          },
+          "sha256": "5dfdcb6abf33bb24d525b2938efc1dc3d9eef4080fbcd586ebf18902ebc612ca"
+        }
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2023-11-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 578296746.54073,
+      "rest_quote": 578985202.43314,
+      "rest_daily_quote": 578985202.43314,
+      "receipt": {
+        "DOGEUSDT-5m-rest-check-1699920000000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "DOGEUSDT",
+            "interval": "5m",
+            "startTime": 1699920000000,
+            "endTime": 1700006399999,
+            "limit": 300
+          },
+          "sha256": "fd458fe3e1522a92a9449cdb8822ddf59ab2a6bb5a7bfdba096e06da7f1bd291"
+        }
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2024-03-27T00:00:00+00:00",
+      "price_bars_different": 2,
+      "archive_quote": 2999975339.38171,
+      "rest_quote": 2987885221.80904,
+      "rest_daily_quote": 2987885221.80904,
+      "receipt": {
+        "DOGEUSDT-5m-rest-check-1711497600000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "DOGEUSDT",
+            "interval": "5m",
+            "startTime": 1711497600000,
+            "endTime": 1711583999999,
+            "limit": 300
+          },
+          "sha256": "6318c33552345c1c4b2fe59848412c26740448c286e729c5baad1d10deb17c54"
+        }
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2024-03-28T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 4781501425.49771,
+      "rest_quote": 4770560285.94463,
+      "rest_daily_quote": 4770560285.94463,
+      "receipt": {
+        "DOGEUSDT-5m-rest-check-1711584000000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "DOGEUSDT",
+            "interval": "5m",
+            "startTime": 1711584000000,
+            "endTime": 1711670399999,
+            "limit": 300
+          },
+          "sha256": "819746eb88b2ce71c9939920fd78dd3f2d9ee18eec3698f035894b981760082b"
+        }
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2025-01-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 2084558092.02455,
+      "rest_quote": 2099181349.05053,
+      "rest_daily_quote": 2099181349.05053,
+      "receipt": {
+        "DOGEUSDT-5m-rest-check-1736812800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "DOGEUSDT",
+            "interval": "5m",
+            "startTime": 1736812800000,
+            "endTime": 1736899199999,
+            "limit": 300
+          },
+          "sha256": "ecba42f94311656e3f6fb77e8ed9b12f13a66cc14f8cfda1bc31ab00e1e7f355"
+        }
+      }
+    },
+    {
+      "symbol": "DOGEUSDT",
+      "day": "2025-01-29T00:00:00+00:00",
+      "price_bars_different": 4,
+      "archive_quote": 1417001284.3070998,
+      "rest_quote": 1423992036.6108298,
+      "rest_daily_quote": 1423992036.61083,
+      "receipt": {
+        "DOGEUSDT-5m-rest-check-1738108800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "DOGEUSDT",
+            "interval": "5m",
+            "startTime": 1738108800000,
+            "endTime": 1738195199999,
+            "limit": 300
+          },
+          "sha256": "65689ccabba11964556215688f7223e25be8b602b66519bc615f07cb7fe5843a"
+        }
+      }
+    },
+    {
+      "symbol": "DOTUSDT",
+      "day": "2023-11-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 217388500.76749998,
+      "rest_quote": 217692376.38910002,
+      "rest_daily_quote": 217692376.3891,
+      "receipt": {
+        "DOTUSDT-5m-rest-check-1699920000000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "DOTUSDT",
+            "interval": "5m",
+            "startTime": 1699920000000,
+            "endTime": 1700006399999,
+            "limit": 300
+          },
+          "sha256": "f5d91c08c2ce7b5f15e4e67af98bc0cafe2bee39a8d59d3bfcc11866db139b27"
+        }
+      }
+    },
+    {
+      "symbol": "DOTUSDT",
+      "day": "2024-03-27T00:00:00+00:00",
+      "price_bars_different": 2,
+      "archive_quote": 267620162.74590003,
+      "rest_quote": 262328985.3045,
+      "rest_daily_quote": 262328985.3045,
+      "receipt": {
+        "DOTUSDT-5m-rest-check-1711497600000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "DOTUSDT",
+            "interval": "5m",
+            "startTime": 1711497600000,
+            "endTime": 1711583999999,
+            "limit": 300
+          },
+          "sha256": "61b61374e47075e7be9205912aaab453fc25ccdcf4b05a24cad1b74b3670b01f"
+        }
+      }
+    },
+    {
+      "symbol": "DOTUSDT",
+      "day": "2025-01-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 159422514.9393,
+      "rest_quote": 161383667.1954,
+      "rest_daily_quote": 161383667.1954,
+      "receipt": {
+        "DOTUSDT-5m-rest-check-1736812800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "DOTUSDT",
+            "interval": "5m",
+            "startTime": 1736812800000,
+            "endTime": 1736899199999,
+            "limit": 300
+          },
+          "sha256": "7f080e4f99aaa5b06362a10775af8fb20f87cedb13709eb7dd55c8250ee848d8"
+        }
+      }
+    },
+    {
+      "symbol": "DOTUSDT",
+      "day": "2025-01-29T00:00:00+00:00",
+      "price_bars_different": 4,
+      "archive_quote": 149164045.44519997,
+      "rest_quote": 149930050.1199,
+      "rest_daily_quote": 149930050.1199,
+      "receipt": {
+        "DOTUSDT-5m-rest-check-1738108800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "DOTUSDT",
+            "interval": "5m",
+            "startTime": 1738108800000,
+            "endTime": 1738195199999,
+            "limit": 300
+          },
+          "sha256": "e1adbc175854607a63cdb129cba08ef495a17d027d11c32f4aea456c84140b4c"
+        }
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2023-11-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 7671804787.4206505,
+      "rest_quote": 7681721989.8978,
+      "rest_daily_quote": 7681721989.8978,
+      "receipt": {
+        "ETHUSDT-5m-rest-check-1699920000000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "ETHUSDT",
+            "interval": "5m",
+            "startTime": 1699920000000,
+            "endTime": 1700006399999,
+            "limit": 300
+          },
+          "sha256": "343ff90cd4e197100366af9aa3d3d2ac965435ebb0ae105fbd95fd1e09521252"
+        }
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2024-03-27T00:00:00+00:00",
+      "price_bars_different": 2,
+      "archive_quote": 10365566873.478302,
+      "rest_quote": 10352080808.706459,
+      "rest_daily_quote": 10352080808.70646,
+      "receipt": {
+        "ETHUSDT-5m-rest-check-1711497600000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "ETHUSDT",
+            "interval": "5m",
+            "startTime": 1711497600000,
+            "endTime": 1711583999999,
+            "limit": 300
+          },
+          "sha256": "2662059cac18cabe4ad990405061971bfa25049b6bd8448410befc8704837072"
+        }
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2024-03-28T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 7024952133.982759,
+      "rest_quote": 7017608937.73292,
+      "rest_daily_quote": 7017608937.73292,
+      "receipt": {
+        "ETHUSDT-5m-rest-check-1711584000000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "ETHUSDT",
+            "interval": "5m",
+            "startTime": 1711584000000,
+            "endTime": 1711670399999,
+            "limit": 300
+          },
+          "sha256": "d38792bd406520480226414cad448a833493a12eb7f520a4b332792d8255e5a0"
+        }
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2025-01-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 8597317910.413969,
+      "rest_quote": 8679677888.803978,
+      "rest_daily_quote": 8679677888.80398,
+      "receipt": {
+        "ETHUSDT-5m-rest-check-1736812800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "ETHUSDT",
+            "interval": "5m",
+            "startTime": 1736812800000,
+            "endTime": 1736899199999,
+            "limit": 300
+          },
+          "sha256": "d303df35b161f324a77eda4f72df7e74f57eda9bdb62cf937749593355edd1ce"
+        }
+      }
+    },
+    {
+      "symbol": "ETHUSDT",
+      "day": "2025-01-29T00:00:00+00:00",
+      "price_bars_different": 4,
+      "archive_quote": 8884256097.52159,
+      "rest_quote": 8927573088.10282,
+      "rest_daily_quote": 8927573088.10282,
+      "receipt": {
+        "ETHUSDT-5m-rest-check-1738108800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "ETHUSDT",
+            "interval": "5m",
+            "startTime": 1738108800000,
+            "endTime": 1738195199999,
+            "limit": 300
+          },
+          "sha256": "2b09b548e969d5ea642bdbd3e8a5b065b0b595b918121c6d99a6940305d84e6b"
+        }
+      }
+    },
+    {
+      "symbol": "LINKUSDT",
+      "day": "2024-03-27T00:00:00+00:00",
+      "price_bars_different": 2,
+      "archive_quote": 354664261.87423,
+      "rest_quote": 354018893.44943005,
+      "rest_daily_quote": 354018893.44943,
+      "receipt": {
+        "LINKUSDT-5m-rest-check-1711497600000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "LINKUSDT",
+            "interval": "5m",
+            "startTime": 1711497600000,
+            "endTime": 1711583999999,
+            "limit": 300
+          },
+          "sha256": "de03ebd1b4701c3f28cf0cefbfa1fa8a07737d36d4905e9131623341841e8f93"
+        }
+      }
+    },
+    {
+      "symbol": "LINKUSDT",
+      "day": "2025-01-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 278510746.21488,
+      "rest_quote": 281355457.17412996,
+      "rest_daily_quote": 281355457.17413,
+      "receipt": {
+        "LINKUSDT-5m-rest-check-1736812800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "LINKUSDT",
+            "interval": "5m",
+            "startTime": 1736812800000,
+            "endTime": 1736899199999,
+            "limit": 300
+          },
+          "sha256": "c5bb6fadbb9bb6e8708574841b27d7163c04423c479ebc31494c2332c1fedfc5"
+        }
+      }
+    },
+    {
+      "symbol": "LINKUSDT",
+      "day": "2025-01-29T00:00:00+00:00",
+      "price_bars_different": 4,
+      "archive_quote": 491515516.83508,
+      "rest_quote": 495507731.86258,
+      "rest_daily_quote": 495507731.86258,
+      "receipt": {
+        "LINKUSDT-5m-rest-check-1738108800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "LINKUSDT",
+            "interval": "5m",
+            "startTime": 1738108800000,
+            "endTime": 1738195199999,
+            "limit": 300
+          },
+          "sha256": "4d0b7689b44ca6a74354504e6096ce0ac203b30ff266bb6dfd7bc195bfcfe65b"
+        }
+      }
+    },
+    {
+      "symbol": "LTCUSDT",
+      "day": "2024-03-27T00:00:00+00:00",
+      "price_bars_different": 2,
+      "archive_quote": 605575778.86704,
+      "rest_quote": 601811497.10535,
+      "rest_daily_quote": 601811497.10535,
+      "receipt": {
+        "LTCUSDT-5m-rest-check-1711497600000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "LTCUSDT",
+            "interval": "5m",
+            "startTime": 1711497600000,
+            "endTime": 1711583999999,
+            "limit": 300
+          },
+          "sha256": "ecf5bf6e55512f7c82eb20afdadb15edc17c4bb4e9a3f22eb47250534b732a44"
+        }
+      }
+    },
+    {
+      "symbol": "LTCUSDT",
+      "day": "2024-03-28T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 362613695.3275,
+      "rest_quote": 362207805.5464,
+      "rest_daily_quote": 362207805.5464,
+      "receipt": {
+        "LTCUSDT-5m-rest-check-1711584000000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "LTCUSDT",
+            "interval": "5m",
+            "startTime": 1711584000000,
+            "endTime": 1711670399999,
+            "limit": 300
+          },
+          "sha256": "391b5c73d5f67aa7d81cc8c67672339a050a9fb07e611b1201113ff37ccfdb59"
+        }
+      }
+    },
+    {
+      "symbol": "LTCUSDT",
+      "day": "2025-01-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 174667127.65265,
+      "rest_quote": 176257692.28142,
+      "rest_daily_quote": 176257692.28142,
+      "receipt": {
+        "LTCUSDT-5m-rest-check-1736812800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "LTCUSDT",
+            "interval": "5m",
+            "startTime": 1736812800000,
+            "endTime": 1736899199999,
+            "limit": 300
+          },
+          "sha256": "83f9dae3ad34bca8e409c966bdc69773198aaf7dccbebbf82e7ab8860881b008"
+        }
+      }
+    },
+    {
+      "symbol": "LTCUSDT",
+      "day": "2025-01-29T00:00:00+00:00",
+      "price_bars_different": 4,
+      "archive_quote": 374718189.28567,
+      "rest_quote": 376375230.59498,
+      "rest_daily_quote": 376375230.59498,
+      "receipt": {
+        "LTCUSDT-5m-rest-check-1738108800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "LTCUSDT",
+            "interval": "5m",
+            "startTime": 1738108800000,
+            "endTime": 1738195199999,
+            "limit": 300
+          },
+          "sha256": "bc38646b282d213de4bc575925dfcf8240dbe12211f4ca029a851955a1616bfb"
+        }
+      }
+    },
+    {
+      "symbol": "SOLUSDT",
+      "day": "2024-03-27T00:00:00+00:00",
+      "price_bars_different": 2,
+      "archive_quote": 3725064334.715,
+      "rest_quote": 3717961826.9440002,
+      "rest_daily_quote": 3717961826.944,
+      "receipt": {
+        "SOLUSDT-5m-rest-check-1711497600000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "SOLUSDT",
+            "interval": "5m",
+            "startTime": 1711497600000,
+            "endTime": 1711583999999,
+            "limit": 300
+          },
+          "sha256": "6ec5fe72481bbb6fa733b6e8ed1c4101f0a924d067a3de250da2bdc226d1a34a"
+        }
+      }
+    },
+    {
+      "symbol": "SOLUSDT",
+      "day": "2024-03-28T00:00:00+00:00",
+      "price_bars_different": 0,
+      "archive_quote": 2884465739.9399996,
+      "rest_quote": 2881555378.066,
+      "rest_daily_quote": 2881555378.066,
+      "receipt": {
+        "SOLUSDT-5m-rest-check-1711584000000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "SOLUSDT",
+            "interval": "5m",
+            "startTime": 1711584000000,
+            "endTime": 1711670399999,
+            "limit": 300
+          },
+          "sha256": "9fa444d5c6543aa6ae792df9557e7b2a9040fbd04f97850a82f254b760733cd4"
+        }
+      }
+    },
+    {
+      "symbol": "SOLUSDT",
+      "day": "2025-01-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 2074586387.804,
+      "rest_quote": 2090970601.1139998,
+      "rest_daily_quote": 2090970601.114,
+      "receipt": {
+        "SOLUSDT-5m-rest-check-1736812800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "SOLUSDT",
+            "interval": "5m",
+            "startTime": 1736812800000,
+            "endTime": 1736899199999,
+            "limit": 300
+          },
+          "sha256": "d82447ce583f4615e9a5a2e869d5231a4124f6a547ef58086b8407622261cf5f"
+        }
+      }
+    },
+    {
+      "symbol": "SOLUSDT",
+      "day": "2025-01-29T00:00:00+00:00",
+      "price_bars_different": 4,
+      "archive_quote": 4542107479.673,
+      "rest_quote": 4558915039.853,
+      "rest_daily_quote": 4558915039.853,
+      "receipt": {
+        "SOLUSDT-5m-rest-check-1738108800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "SOLUSDT",
+            "interval": "5m",
+            "startTime": 1738108800000,
+            "endTime": 1738195199999,
+            "limit": 300
+          },
+          "sha256": "c15d0714475469f4abac184fd0f0019cb10d4340786c0d8ec01b0bb20f030554"
+        }
+      }
+    },
+    {
+      "symbol": "XRPUSDT",
+      "day": "2024-03-27T00:00:00+00:00",
+      "price_bars_different": 2,
+      "archive_quote": 824024464.2915599,
+      "rest_quote": 822222422.95696,
+      "rest_daily_quote": 822222422.95696,
+      "receipt": {
+        "XRPUSDT-5m-rest-check-1711497600000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "XRPUSDT",
+            "interval": "5m",
+            "startTime": 1711497600000,
+            "endTime": 1711583999999,
+            "limit": 300
+          },
+          "sha256": "b5169d327ed593a0c24e036f46646fb2647abb08e85f5ffe9d2676b747ec9b1a"
+        }
+      }
+    },
+    {
+      "symbol": "XRPUSDT",
+      "day": "2025-01-14T00:00:00+00:00",
+      "price_bars_different": 1,
+      "archive_quote": 3184478028.62045,
+      "rest_quote": 3210419168.5268,
+      "rest_daily_quote": 3210419168.5268,
+      "receipt": {
+        "XRPUSDT-5m-rest-check-1736812800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "XRPUSDT",
+            "interval": "5m",
+            "startTime": 1736812800000,
+            "endTime": 1736899199999,
+            "limit": 300
+          },
+          "sha256": "08aa16d2e2091238a52b37963147f9213eed45b45d3bc5a70c6b87a461469cde"
+        }
+      }
+    },
+    {
+      "symbol": "XRPUSDT",
+      "day": "2025-01-29T00:00:00+00:00",
+      "price_bars_different": 4,
+      "archive_quote": 2633711498.0241,
+      "rest_quote": 2644584867.5784597,
+      "rest_daily_quote": 2644584867.57846,
+      "receipt": {
+        "XRPUSDT-5m-rest-check-1738108800000.json": {
+          "url": "https://fapi.binance.com/fapi/v1/klines",
+          "query": {
+            "symbol": "XRPUSDT",
+            "interval": "5m",
+            "startTime": 1738108800000,
+            "endTime": 1738195199999,
+            "limit": 300
+          },
+          "sha256": "5fb66d576bca2c766893568a2024d657ca96a74f93d5b9df44d3479fa396a5c7"
+        }
+      }
+    }
+  ],
+  "accounts": {
+    "2024_Gap_8bps": {
+      "rest_net_return": 0.1258600304383315,
+      "net_change_percentage_points": 0.0,
+      "rest_max_drawdown": 0.21202727521613318,
+      "drawdown_change_percentage_points": 0.0,
+      "max_nav_difference_usdt": 0.185676558633304,
+      "events_exactly_equal": true,
+      "risk_halted": false
+    },
+    "2024_SpotOnly_8bps": {
+      "rest_net_return": 0.21357496952738209,
+      "net_change_percentage_points": 0.0,
+      "rest_max_drawdown": 0.1793512902267247,
+      "drawdown_change_percentage_points": 0.0,
+      "max_nav_difference_usdt": 0.1943109291989913,
+      "events_exactly_equal": true,
+      "risk_halted": false
+    },
+    "2024_PerpOnly_8bps": {
+      "rest_net_return": 0.40637199692728854,
+      "net_change_percentage_points": 0.0,
+      "rest_max_drawdown": 0.21810219040049794,
+      "drawdown_change_percentage_points": 0.0,
+      "max_nav_difference_usdt": 0.4609886287616973,
+      "events_exactly_equal": true,
+      "risk_halted": false
+    },
+    "2024_Gap_15bps": {
+      "rest_net_return": 0.03633242471540221,
+      "net_change_percentage_points": 0.0,
+      "rest_max_drawdown": 0.21739918213486376,
+      "drawdown_change_percentage_points": 0.0,
+      "max_nav_difference_usdt": 0.18306143195172808,
+      "events_exactly_equal": true,
+      "risk_halted": false
+    },
+    "2024_SpotOnly_15bps": {
+      "rest_net_return": 0.10587022614003261,
+      "net_change_percentage_points": 0.0,
+      "rest_max_drawdown": 0.20337939279891792,
+      "drawdown_change_percentage_points": 0.0,
+      "max_nav_difference_usdt": 0.19192219845876934,
+      "events_exactly_equal": true,
+      "risk_halted": false
+    },
+    "2024_PerpOnly_15bps": {
+      "rest_net_return": 0.27976693245700357,
+      "net_change_percentage_points": 0.0,
+      "rest_max_drawdown": 0.2581512988617083,
+      "drawdown_change_percentage_points": 0.0,
+      "max_nav_difference_usdt": 0.4522140078368011,
+      "events_exactly_equal": true,
+      "risk_halted": false
+    },
+    "2025-26_Gap_8bps": {
+      "rest_net_return": -0.1993465814904728,
+      "net_change_percentage_points": 0.0,
+      "rest_max_drawdown": 0.3376098497723373,
+      "drawdown_change_percentage_points": 0.0,
+      "max_nav_difference_usdt": 0.5526206434708456,
+      "events_exactly_equal": true,
+      "risk_halted": false
+    },
+    "2025-26_SpotOnly_8bps": {
+      "rest_net_return": -0.30985040501214367,
+      "net_change_percentage_points": 0.0,
+      "rest_max_drawdown": 0.35018807211302805,
+      "drawdown_change_percentage_points": 1.1102230246251565e-14,
+      "max_nav_difference_usdt": 0.6804896541336802,
+      "events_exactly_equal": true,
+      "risk_halted": true
+    },
+    "2025-26_PerpOnly_8bps": {
+      "rest_net_return": -0.3313379969046646,
+      "net_change_percentage_points": 0.0,
+      "rest_max_drawdown": 0.35025888980068387,
+      "drawdown_change_percentage_points": 0.0,
+      "max_nav_difference_usdt": 1.009033698848043,
+      "events_exactly_equal": true,
+      "risk_halted": true
+    },
+    "2025-26_Gap_15bps": {
+      "rest_net_return": -0.34566997113907416,
+      "net_change_percentage_points": 0.0,
+      "rest_max_drawdown": 0.3502208775279728,
+      "drawdown_change_percentage_points": -1.1102230246251565e-14,
+      "max_nav_difference_usdt": 0.551190324851973,
+      "events_exactly_equal": true,
+      "risk_halted": true
+    },
+    "2025-26_SpotOnly_15bps": {
+      "rest_net_return": -0.3277159985903323,
+      "net_change_percentage_points": 0.0,
+      "rest_max_drawdown": 0.3507867208011881,
+      "drawdown_change_percentage_points": 0.0,
+      "max_nav_difference_usdt": 0.6768288835355634,
+      "events_exactly_equal": true,
+      "risk_halted": true
+    },
+    "2025-26_PerpOnly_15bps": {
+      "rest_net_return": -0.33794981560035187,
+      "net_change_percentage_points": 0.0,
+      "rest_max_drawdown": 0.3618372428432013,
+      "drawdown_change_percentage_points": 0.0,
+      "max_nav_difference_usdt": 1.000222117831754,
+      "events_exactly_equal": true,
+      "risk_halted": true
+    }
+  }
+}

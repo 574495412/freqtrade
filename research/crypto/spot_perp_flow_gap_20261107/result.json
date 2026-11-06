@@ -1,0 +1,406 @@
+{
+  "registration_sha256": "4e7329c55fabd8dd416e554e558e8250477fcaaffe461e4a14046863231ad1d2",
+  "admission_sha256": "47a7b0c61a1de3613f2318c903e5cf9f57e8c6987e6cce5424c4fe45748cd052",
+  "accounts": {
+    "2024_Gap_8bps": {
+      "window": "2024",
+      "case": "Gap",
+      "cost_bps": 8,
+      "net_return": 0.1258600304383315,
+      "annualized_net_return": 0.12558656453416916,
+      "max_5m_close_drawdown": 0.21202727521613318,
+      "max_absolute_net_exposure_fraction": 0.5619796835850167,
+      "completed_positions": 439,
+      "open_positions": 0,
+      "risk_halted": false,
+      "capacity": {
+        "entry_requests": 536,
+        "partially_filled_entries": 62,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 74375.71403880253,
+        "filled_entry_notional": 74283.85144838462,
+        "filled_request_ratio": 0.9987648845916292,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "44b8f6d7e965a5246f49907c61e3c35df7acaaf7e0b053c53899b85d45cda4e2",
+        "targets.parquet": "f11c332a7aec6ff74c917b23e96cdb2ca65f695c8cce01478634b30c4460f035",
+        "events.json": "30ad5d37ce03121267f5eeb30549ffdededdafa01208ce892c14624a2fa2c45f",
+        "resume_state.json": "7983eb69bcf0584a5df363666547a8f6b2ee1cf159bac85a3b3cc42d421f2270",
+        "nav.parquet": "085b773817f4d15e2b8803f779d918871da2b45e6b401a12965d399e3423c3c5",
+        "requests.json": "b08c2f68a54e65ccfcd77891568fa162e8c80c800489793dbf8f46382734e5ef"
+      }
+    },
+    "2024_SpotOnly_8bps": {
+      "window": "2024",
+      "case": "SpotOnly",
+      "cost_bps": 8,
+      "net_return": 0.21357496952738209,
+      "annualized_net_return": 0.21309368723540434,
+      "max_5m_close_drawdown": 0.1793512902267247,
+      "max_absolute_net_exposure_fraction": 0.5749059881056543,
+      "completed_positions": 445,
+      "open_positions": 0,
+      "risk_halted": false,
+      "capacity": {
+        "entry_requests": 533,
+        "partially_filled_entries": 64,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 74956.1840496889,
+        "filled_entry_notional": 74871.96167996591,
+        "filled_request_ratio": 0.9988763786365223,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "b414a948f020e015356d60b2f2a824fe813f262a22ce4c55de9a0a521d8ba38c",
+        "targets.parquet": "276bf310e6c8713a6c912a35e50ca2f837226236de60300bcec9c11a9e86e564",
+        "events.json": "89154a074edb48e31593f33d8fc5b1caf0e229a45f23e9f5999b20fe3baf867c",
+        "resume_state.json": "1d063c71de6964ed534d8d1bd76285795aeec079179cc23d351103735aeccb35",
+        "nav.parquet": "0da275dbba12742004c9b6453669212716a34d900b070df6d44c442d4deb1a8a",
+        "requests.json": "86945cc2e951ebc3a9c0f2f0463cdf09f5d011ad09ef8651915b060265500b82"
+      }
+    },
+    "2024_PerpOnly_8bps": {
+      "window": "2024",
+      "case": "PerpOnly",
+      "cost_bps": 8,
+      "net_return": 0.40637199692728854,
+      "annualized_net_return": 0.405389570539209,
+      "max_5m_close_drawdown": 0.21810219040049794,
+      "max_absolute_net_exposure_fraction": 0.5382962549239018,
+      "completed_positions": 405,
+      "open_positions": 0,
+      "risk_halted": false,
+      "capacity": {
+        "entry_requests": 522,
+        "partially_filled_entries": 64,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 67346.18289934473,
+        "filled_entry_notional": 67246.91782576611,
+        "filled_request_ratio": 0.9985260475159078,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "7c4bf89d19bb5c199e5279c5a56ef52786680abfc50d3632002c8e302ef7e121",
+        "targets.parquet": "ca1704e9e68e1813d1e397d429e16f2a0d3f3ebe20d657efaf6cb6b84edd4b7f",
+        "events.json": "53534eeff2567d98e9d2b5b8de9d9d00f79939f7e04c4b9d912851d4e9a07ccf",
+        "resume_state.json": "0fde3e5c6221544a8c3d6b497f85ae92c6060611645621b81a426d2948f1ce89",
+        "nav.parquet": "7573d894c4f86db890759c9d8e65630495459b6836a6861a21907004c9873e6c",
+        "requests.json": "6e24d262e49d94f6aea3352e7bc7b1c30eba36233f1d056c8e663d49c95c8c50"
+      }
+    },
+    "2024_Gap_15bps": {
+      "window": "2024",
+      "case": "Gap",
+      "cost_bps": 15,
+      "net_return": 0.03633242471540221,
+      "annualized_net_return": 0.03625663938006962,
+      "max_5m_close_drawdown": 0.21739918213486376,
+      "max_absolute_net_exposure_fraction": 0.5625579413947014,
+      "completed_positions": 439,
+      "open_positions": 0,
+      "risk_halted": false,
+      "capacity": {
+        "entry_requests": 536,
+        "partially_filled_entries": 75,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 71374.19599656688,
+        "filled_entry_notional": 71249.52766033055,
+        "filled_request_ratio": 0.9982533136171184,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "b3894c209118a725856b61db9bad509488ea219d337714386709a0b8b87a8fdf",
+        "targets.parquet": "f11c332a7aec6ff74c917b23e96cdb2ca65f695c8cce01478634b30c4460f035",
+        "events.json": "1ff261f21e958b89855957dc0bee9d37dd5952492ca077881912ca8626d2862e",
+        "resume_state.json": "463f9257e87080e43c5fe5f2c68067dd3d7c77d16088f97fdb7a82b70cc02a76",
+        "nav.parquet": "231ff35dfc0209e271b7525f2154ce2bb59c5ee31b022cb5b05b35aedf97506b",
+        "requests.json": "bcb51b6baa8c33ef9e0baff4a81a0aaa45c1ea7fabcad1db1ba872c1e4826ac6"
+      }
+    },
+    "2024_SpotOnly_15bps": {
+      "window": "2024",
+      "case": "SpotOnly",
+      "cost_bps": 15,
+      "net_return": 0.10587022614003261,
+      "annualized_net_return": 0.10564220343874076,
+      "max_5m_close_drawdown": 0.20337939279891792,
+      "max_absolute_net_exposure_fraction": 0.5772035094151591,
+      "completed_positions": 445,
+      "open_positions": 0,
+      "risk_halted": false,
+      "capacity": {
+        "entry_requests": 531,
+        "partially_filled_entries": 77,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 71859.14767159529,
+        "filled_entry_notional": 71737.5373089688,
+        "filled_request_ratio": 0.9983076564840113,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "214e7b2b1f2284b12f44ca2c32c4c815879b3a4dc22a8e5ebfb14a8cc792c4a6",
+        "targets.parquet": "276bf310e6c8713a6c912a35e50ca2f837226236de60300bcec9c11a9e86e564",
+        "events.json": "373c4b5addb90e941860e671b1c4b379707a1d177975560928c6f7286cabbf4c",
+        "resume_state.json": "1ed248d895433b3b86053ddeef1f48fe888cefbc7f368f6475ad40e5d46eec16",
+        "nav.parquet": "3e8702457b2cc4e3c8253ebdcbfadb304201d86a4c6fe866301dc4ff17c64a78",
+        "requests.json": "b4600425a8747c35ccf2e2a8c6d1e1a0cf60253c44790b9a475844f0ff8b0247"
+      }
+    },
+    "2024_PerpOnly_15bps": {
+      "window": "2024",
+      "case": "PerpOnly",
+      "cost_bps": 15,
+      "net_return": 0.27976693245700357,
+      "annualized_net_return": 0.2791201895409785,
+      "max_5m_close_drawdown": 0.2581512988617083,
+      "max_absolute_net_exposure_fraction": 0.5384515203099558,
+      "completed_positions": 405,
+      "open_positions": 0,
+      "risk_halted": false,
+      "capacity": {
+        "entry_requests": 522,
+        "partially_filled_entries": 69,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 64345.93816359381,
+        "filled_entry_notional": 64218.447816981396,
+        "filled_request_ratio": 0.9980186729690959,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "436a15dd7cf6a37e5717426f95400aa04e64b94973c5e37f21d12cf295c97a9e",
+        "targets.parquet": "ca1704e9e68e1813d1e397d429e16f2a0d3f3ebe20d657efaf6cb6b84edd4b7f",
+        "events.json": "521340895e5541828f8196fb6e0d65a6007f228678325fda03d38732da3ea029",
+        "resume_state.json": "bc17be70cf595662476e3a6b358f9bc7d128c924db247e5c868262d7113a84ef",
+        "nav.parquet": "e8ca2c75643b560ef43599432bff78ea8cdaf082eadd61c1c5fe1cd610a275b6",
+        "requests.json": "d8172448e5a5d15d92a11843b2c6dc41fa2c5698ca3fc86e55e27b953f7c19c1"
+      }
+    },
+    "2025-26_Gap_8bps": {
+      "window": "2025-26",
+      "case": "Gap",
+      "cost_bps": 8,
+      "net_return": -0.1993465814904728,
+      "annualized_net_return": -0.12502574704268798,
+      "max_5m_close_drawdown": 0.3376098497723373,
+      "max_absolute_net_exposure_fraction": 0.5738434793294276,
+      "completed_positions": 738,
+      "open_positions": 0,
+      "risk_halted": false,
+      "capacity": {
+        "entry_requests": 906,
+        "partially_filled_entries": 102,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 88007.79689244399,
+        "filled_entry_notional": 87874.96835556398,
+        "filled_request_ratio": 0.9984907185321052,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "9d35682631043f860cc68be41323aee1676e98ec88f31935c8527a32bde8ce23",
+        "targets.parquet": "4fdae14558c4a2c2a16c31310a15994885819078a18dbda7c7e2e16b2d069490",
+        "events.json": "e0050920140ec0527306810a874e925795d1d0b2626c7ca1bd2d9d2ca79d7930",
+        "resume_state.json": "314db10207d0c9b02bd036485a70cba0a77973032ae39901702289b4673f6c98",
+        "nav.parquet": "f2e88d73c831ae742c9fd55610e7ad47361fbee75f8e3b1f3278d48436992491",
+        "requests.json": "10ea5a2e4f1144cd1261788e0f2f3a20901ca37ac945b388eb1ba9ca15104910"
+      }
+    },
+    "2025-26_SpotOnly_8bps": {
+      "window": "2025-26",
+      "case": "SpotOnly",
+      "cost_bps": 8,
+      "net_return": -0.30985040501214367,
+      "annualized_net_return": -0.19971119950269045,
+      "max_5m_close_drawdown": 0.35018807211302794,
+      "max_absolute_net_exposure_fraction": 0.5459598603477248,
+      "completed_positions": 512,
+      "open_positions": 0,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 639,
+        "partially_filled_entries": 74,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 67184.37861391816,
+        "filled_entry_notional": 67069.39533559998,
+        "filled_request_ratio": 0.9982885414632032,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "18de140cb78318c76e1204bc572c7f1cd3032988d3d37f129925962c23e5356e",
+        "targets.parquet": "a1f53af01f10f86a3192d879285be3722ef5ef78b22520b8858a059c7e70a6c9",
+        "events.json": "dc22ed0927aedc0bbed93693e0151a92ed55d775bdd45cbfb8fdf61f65c54db0",
+        "resume_state.json": "cf4bffbc6419c02bbf741381a9d70212b6d6238085bb913fff577c90efbcc458",
+        "nav.parquet": "07b74cd0771b29c173202fefc1767718bdaa8c5e5a3c404f18a045e84be50d9e",
+        "requests.json": "6e8a729f1d0a09c24fc3c2041b8cca6f21e54500a3128c2d70b62942c0d572f4"
+      }
+    },
+    "2025-26_PerpOnly_8bps": {
+      "window": "2025-26",
+      "case": "PerpOnly",
+      "cost_bps": 8,
+      "net_return": -0.3313379969046646,
+      "annualized_net_return": -0.21477409833264338,
+      "max_5m_close_drawdown": 0.35025888980068387,
+      "max_absolute_net_exposure_fraction": 0.5538003786510785,
+      "completed_positions": 378,
+      "open_positions": 0,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 456,
+        "partially_filled_entries": 53,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 53087.58153911173,
+        "filled_entry_notional": 52999.35033482355,
+        "filled_request_ratio": 0.998338006710229,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "8b5bfbd3cc5aeb1d8a0e0c5a38db61c92386050983e08fc13729b3d4e481c25e",
+        "targets.parquet": "98dbec9d369d9bcfd4e1d611db9d1b27fc7691a28a38c8dbb2b703a90db40813",
+        "events.json": "d9d911b05d34f99e58e6b75bbc22cd2d5136d48c34b805b3804ce5620ce3b97d",
+        "resume_state.json": "cdf16481fe4b5d4e244e8ff3abf3423bb26cabdd11bce282675ad56cd09880fc",
+        "nav.parquet": "5d15a47fd3f2f4f8723ff518e8127c5b62b6bb2bfa9ba9454d3af7e5a21ab108",
+        "requests.json": "3b2d0af214952c81242ccb3b8e18de3071fbaece259e4feed15c9b0caa620868"
+      }
+    },
+    "2025-26_Gap_15bps": {
+      "window": "2025-26",
+      "case": "Gap",
+      "cost_bps": 15,
+      "net_return": -0.34566997113907416,
+      "annualized_net_return": -0.22492848468114945,
+      "max_5m_close_drawdown": 0.35022087752797293,
+      "max_absolute_net_exposure_fraction": 0.5347375073577013,
+      "completed_positions": 381,
+      "open_positions": 0,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 461,
+        "partially_filled_entries": 55,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 45474.960092025845,
+        "filled_entry_notional": 45377.689237078026,
+        "filled_request_ratio": 0.9978610018623221,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "b20fb5e5bb397305a8d13744dec9857e8d82a4a975d23c80a50ad781e756fe29",
+        "targets.parquet": "4fdae14558c4a2c2a16c31310a15994885819078a18dbda7c7e2e16b2d069490",
+        "events.json": "fadb790c717a48005d0b1c51bb0541c0ebcf913da38192ef61dc1fabddfe202c",
+        "resume_state.json": "761db38c94ccd8af289fb8099c740f09f6996630c20bbcfcd55344baecedcc4f",
+        "nav.parquet": "cba30ea2a973afb217cc5adfe1d0a2f7c6f39051cfe4481e50b438e5fe75b3f8",
+        "requests.json": "9b70a9ce8ff4330357ab9e1a8cce414bc5c117df626610a6080920c4d559fc3f"
+      }
+    },
+    "2025-26_SpotOnly_15bps": {
+      "window": "2025-26",
+      "case": "SpotOnly",
+      "cost_bps": 15,
+      "net_return": -0.3277159985903323,
+      "annualized_net_return": -0.21222166642197005,
+      "max_5m_close_drawdown": 0.3507867208011881,
+      "max_absolute_net_exposure_fraction": 0.5463676012296923,
+      "completed_positions": 391,
+      "open_positions": 0,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 475,
+        "partially_filled_entries": 59,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 50509.12148941993,
+        "filled_entry_notional": 50390.749945051306,
+        "filled_request_ratio": 0.9976564323259232,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "5296b1116034b12773c197891e4e86022c75a87c6e17360da24ab5c0681cf0c5",
+        "targets.parquet": "a1f53af01f10f86a3192d879285be3722ef5ef78b22520b8858a059c7e70a6c9",
+        "events.json": "2474ee2ebfb3707e594de3d11685f29e327807bc15a549fe5d39aca921a50846",
+        "resume_state.json": "03d0d51083b0410766f1ac7c15cd8a9484c2aa4eee71c1f05c6042bd085b4635",
+        "nav.parquet": "b97e273e1aab236b2390ac0cdc3e73fa77dd575ba812737b42a39a8a2f6712a7",
+        "requests.json": "24c0920be45f8524b4a8b4b218d9ab6a169c6422eeca93bd66a4c3edc63b68ee"
+      }
+    },
+    "2025-26_PerpOnly_15bps": {
+      "window": "2025-26",
+      "case": "PerpOnly",
+      "cost_bps": 15,
+      "net_return": -0.33794981560035187,
+      "annualized_net_return": -0.2194477459136993,
+      "max_5m_close_drawdown": 0.3618372428432013,
+      "max_absolute_net_exposure_fraction": 0.5540986662551703,
+      "completed_positions": 353,
+      "open_positions": 0,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 414,
+        "partially_filled_entries": 52,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 46517.55113805854,
+        "filled_entry_notional": 46418.885858215275,
+        "filled_request_ratio": 0.9978789665958461,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "6f272a8b6512b436909d460beafb061fb77fc45035c333c7d79d263825c19a95",
+        "targets.parquet": "98dbec9d369d9bcfd4e1d611db9d1b27fc7691a28a38c8dbb2b703a90db40813",
+        "events.json": "e010e7ddbc73f64f8ffae8e81860e599ce94f5ee0febc5c374dfe9f8cd6fc55d",
+        "resume_state.json": "43e339ad014040be6b0b2e39e7f88acce814fab5888d62e422f6a2cc4a89650d",
+        "nav.parquet": "e3ce63d82c292189146336bd4f8322dd8f04ddd92962f0497a9d475cfd1975e1",
+        "requests.json": "970c621c779b7a7e35b23cb8388c02949eda3c2f3cf9bb9f0c26bf9e1046f8fc"
+      }
+    }
+  },
+  "gates": {
+    "2024_8bps": {
+      "beats_controls_and_cash": false,
+      "risk": true,
+      "sample_and_flat": true,
+      "upside": true
+    },
+    "2024_15bps": {
+      "beats_controls_and_cash": false,
+      "risk": true,
+      "sample_and_flat": true,
+      "upside": false
+    },
+    "2025-26_8bps": {
+      "beats_controls_and_cash": false,
+      "risk": true,
+      "sample_and_flat": true,
+      "upside": true
+    },
+    "2025-26_15bps": {
+      "beats_controls_and_cash": false,
+      "risk": false,
+      "sample_and_flat": true,
+      "upside": false
+    }
+  },
+  "passed": false,
+  "paper_eligible": false
+}
