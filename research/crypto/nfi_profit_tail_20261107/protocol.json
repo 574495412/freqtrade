@@ -1,0 +1,88 @@
+{
+  "registered_at_utc": "2026-11-06T20:50:12.867871+00:00",
+  "plans": {
+    "temporal": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_tail_20261107/native_temporal.json",
+      "sha256": "089d5bfef72684a3a4700f76fcc8e8129bae346d35212be471ecccd29616915f"
+    },
+    "long": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_tail_20261107/native_long.json",
+      "sha256": "ac5529709fa22192b4b87165b285a16e8e4ee6a493d297b260f92556d61eb806"
+    }
+  },
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_tail_20261107/study.py",
+      "sha256": "6df6ffa39dd2c71228ad1e5106c72fa85d29d1a255449a344a94ef61648388b7"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_tail_20261107/ProfitTail.py",
+      "sha256": "64f1010eff449cca3191f2cb705be9acf2090c0e52023b64e32104a71c219c2e"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_tail_20261107/evaluate.py",
+      "sha256": "fba3ceacf5062eb792fece507a382d10d726132bc6a6eae166c46e0c29582fe6"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_tail_20261107/FlatProfitTail.json",
+      "sha256": "c11b0970bdc10aaba21fd81b98ef93d57cf25e39bc18ea28e2e0aa6fee0dfb72"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_tail_20261107/TrendProfitTail.json",
+      "sha256": "6714e6a75d0a13c30ab5f70fbe25b6780b9f8bd620be9c02e303640947cca132"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal_registration.json",
+      "sha256": "bdd93e55ceb6f2a0b0313518d9722ec7206062dacc7c7752d1c6f2920f24d661"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/registration.json",
+      "sha256": "eab310edfa3bb1d05037ac2a78cb069c163718019381739f16a7a8ecf598450e"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal_result.json",
+      "sha256": "646afef0224d9d4232aac88db16b501a70a7982fd0364ee58c15d740794f2467"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/mark_result.json",
+      "sha256": "52fe467489fa3b44007c581ac6ba5dd92545b8d0c25a75c355a4b9153725e09c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/result.json",
+      "sha256": "0db5c6ffd60d9b3c70b742c9be40ff104707cbced6ae00011b29b3f399b70428"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/long_mark_result.json",
+      "sha256": "366e9bffaacf8cb8b529165d2d99f37757b36c006c8f9b594f87a495968ff2cb"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_solo_allocation_20261107_v001/long_mark/admission.json",
+      "sha256": "da4236b558a259a24f6ea8611d7fce6e9057409e7fad08c4c44f3db10d558c6b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/long_mark.py",
+      "sha256": "7b5b34c001c1a80ae9711041e6d69c3778e0b5d0a07e547eb2c717a5885fe976"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/mark_valuation.py",
+      "sha256": "482c0b08081126a58e7c1386bbeb233c4c31084383d7abda413a49119fd5a654"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal.py",
+      "sha256": "529d3b191816817c1bd34817a62a21a76cb6d0dd7259452b1803968f4c85177c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/docs/research-20261105/crypto-wide-comparison-20261105/reconstruct-five-minute-reference-v002.py",
+      "sha256": "861494c519d5e849fbd4fc41a989d93e77069711f34add7205ca7a6e614e7c12"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/audit.py",
+      "sha256": "2514cb9d6f537c156ca04a7cfcaa5320e31f71dd51d4db827659c0b8242d1617"
+    }
+  ],
+  "hypothesis": "Profitable pure Top Coins longs with continued price discovery can capture positive price tails after native profit taking.",
+  "scope": "Only a native custom exit with exit_profit_long_tc_ prefix and >=0.5% native current profit on a pure Top Coins long with one successful entry, no previous exit and no open order. FlatProfitTail extends all; TrendProfitTail requires the last admitted hourly trade close strictly exceeds the preceding 24 closes. Select the most recent completed 1h candle as of t minus 5m, exact grid and no filled gaps. Each trade can arm once. Base engine and strategy unchanged apart from the custom-exit response on eligible lifecycles.",
+  "exit": "At arm set peak to native current profit and allowable drawback to half that profit. On later callbacks update peak from native current 5m open, never highs. Honor native non-Top Coins-profit custom exits immediately. Otherwise request exit if position changes, current profit <= peak minus allowance, or 24h from arm, whichever is first. Keep release sticky if unfilled; priority native risk, then changed position, drawback, deadline. A gap or native order path may exceed the allowance. No standing protective order. Base native position adjustment, stop, ROI, regular exits and 1x leverage unchanged.",
+  "gates": "Always run both strategies at both costs in the 65-day comparison. At both costs TrendProfitTail must have positive full net return above original and flat deferral, higher full return/5m drawdown than both, within +1pp 5m drawdown of original, at least 20 natural closes and 4 naturally closed deferred trades. Run 20 months only if both costs pass; additionally require above original in both calendar slices and at least 60 closes and 20 deferred natural closes. Controls in both windows were previously known.",
+  "orders_enabled": false
+}

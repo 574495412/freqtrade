@@ -1,0 +1,48 @@
+{
+  "registered_at_utc": "2026-11-06T20:53:16.268979+00:00",
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_tail_20261107/flat_2024.py",
+      "sha256": "a190a70ce9f16fe9a6e314d40f627cd183994731154fc84578620820b4c3db1c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_tail_20261107/flat_native_2024.json",
+      "sha256": "4ed60193e85f5b13307466de1c78889e91aa20d37925601703bbe503fd22fb27"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_tail_20261107/result.json",
+      "sha256": "46dc8c943e2a2d7083cde7d27d6939e0e19e3cd04ae12bec04676070e8d6818c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_tail_20261107/protocol.json",
+      "sha256": "3393b30dc187b53475001faaac707fcf60c507f533b401f5582dd3ef714403c1"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_ramp_20261107/native_2024.json",
+      "sha256": "a316d55b692ee9ae3a6f11ebee7599dda3a1ea87c4ea27cc0cccbdb19cc850c3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_profit_ramp_20261107/result.json",
+      "sha256": "dcc341db543d499bae7c805b55ec89562e2e03ee6aff9cd56e9200aa89cdf69f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/admission.json",
+      "sha256": "05d95da57e76267edb7b40a9be61a6611daf29f4881e967901bdc1218e29abca"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/docs/research-20261105/crypto-wide-comparison-20261105/reconstruct-five-minute-reference-v002.py",
+      "sha256": "861494c519d5e849fbd4fc41a989d93e77069711f34add7205ca7a6e614e7c12"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/mark_valuation.py",
+      "sha256": "482c0b08081126a58e7c1386bbeb233c4c31084383d7abda413a49119fd5a654"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal.py",
+      "sha256": "529d3b191816817c1bd34817a62a21a76cb6d0dd7259452b1803968f4c85177c"
+    }
+  ],
+  "rule": "Freeze the existing unconditional A18 control unchanged. 65-day economics were known and motivated this follow-up. Calendar 2024 account comparisons use known original/flat-stake controls, with new flat-tail economics unavailable at registration.",
+  "gate": "Both costs must beat original on positive total and both half-window returns and full return/5m drawdown, keep 5m drawdown <= original +1pp, and have at least 60 natural closes including 20 deferred natural closes. Fixed 1.25x stake economics are reported separately.",
+  "orders_enabled": false
+}

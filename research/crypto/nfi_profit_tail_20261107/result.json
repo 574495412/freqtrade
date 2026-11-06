@@ -1,0 +1,467 @@
+{
+  "protocol_sha256": "3393b30dc187b53475001faaac707fcf60c507f533b401f5582dd3ef714403c1",
+  "stages": {
+    "temporal": {
+      "accounts": {
+        "temporal_FlatProfitTail_15bps": {
+          "archive_sha256": "110bc01cf1ad26f3b021a5ca691d262e77be4c5ce16bf66bc1decaeb36c544bd",
+          "trades": 22,
+          "filled_orders": 46,
+          "maximum_cash_error_usdt": 6.85386999e-09,
+          "aggregate_cash_error_usdt": 1.22498056903e-08,
+          "periods": {
+            "continuous": {
+              "name": "continuous",
+              "start": "2026-09-01 00:00:00+00:00",
+              "end": "2026-11-04 23:00:00+00:00",
+              "net_return": 0.06919819749,
+              "initial_marked_equity": 1000.0,
+              "ending_marked_equity": 1069.19819749,
+              "hourly_mark_drawdown": 0.03525069396075031,
+              "daily_nav_sharpe": 5.498163546366285,
+              "completed_campaigns": 22,
+              "campaign_profit_factor": null,
+              "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+              "campaign_gross_profit": 69.19819749,
+              "campaign_gross_loss": -0.0,
+              "open_campaigns_at_end": 0,
+              "calendar_hours": 1560,
+              "equity_insolvent": false
+            },
+            "before-source-release-cutoff": {
+              "name": "before-source-release-cutoff",
+              "start": "2026-09-01 00:00:00+00:00",
+              "end": "2026-10-23 00:00:00+00:00",
+              "net_return": 0.061386563729999954,
+              "initial_marked_equity": 1000.0,
+              "ending_marked_equity": 1061.38656373,
+              "hourly_mark_drawdown": 0.03525069396075031,
+              "daily_nav_sharpe": 5.554910350251978,
+              "completed_campaigns": 17,
+              "campaign_profit_factor": null,
+              "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+              "campaign_gross_profit": 61.38656373,
+              "campaign_gross_loss": -0.0,
+              "open_campaigns_at_end": 0,
+              "calendar_hours": 1249,
+              "equity_insolvent": false
+            },
+            "after-source-release-cutoff": {
+              "name": "after-source-release-cutoff",
+              "start": "2026-10-23 00:00:00+00:00",
+              "end": "2026-11-04 23:00:00+00:00",
+              "net_return": 0.007359838561124876,
+              "initial_marked_equity": 1061.38656373,
+              "ending_marked_equity": 1069.19819749,
+              "hourly_mark_drawdown": 0.009007303298691927,
+              "daily_nav_sharpe": 6.432666526989776,
+              "completed_campaigns": 5,
+              "campaign_profit_factor": null,
+              "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+              "campaign_gross_profit": 7.81163376,
+              "campaign_gross_loss": -0.0,
+              "open_campaigns_at_end": 0,
+              "calendar_hours": 312,
+              "equity_insolvent": false
+            }
+          },
+          "native_result": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_tail_20261107_v001/temporal_FlatProfitTail_15bps/result.json",
+            "sha256": "f643952ceaf89f7b99c146389a3acb44a6727e883e7b3b40d7b485b7bcb352ab"
+          },
+          "hourly_equity": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_tail_20261107_v001/temporal_FlatProfitTail_15bps/hourly_equity.parquet",
+            "sha256": "c7e0cccada3f523962368e59d7563d7d43d1eb802e6817543c16862539d27b3e"
+          },
+          "actions": {
+            "arm": 5,
+            "hold": 47,
+            "release": 5
+          },
+          "naturally_closed_deferred": 5,
+          "forced_or_other_arms": 0,
+          "mean_elapsed_minutes": 52.0,
+          "max_elapsed_minutes": 90.0,
+          "trace_sha256": "f783a880526ae5c15333414d9a7f37276703db38db55cf7e75d6fa6fb82cbc6a"
+        },
+        "temporal_TrendProfitTail_15bps": {
+          "archive_sha256": "3813364c08d3bf55bbf1b45c71e7baf64c0d0c4ac195bc453cbd8b73ff433132",
+          "trades": 23,
+          "filled_orders": 48,
+          "maximum_cash_error_usdt": 5e-09,
+          "aggregate_cash_error_usdt": 1.1529242133e-09,
+          "periods": {
+            "continuous": {
+              "name": "continuous",
+              "start": "2026-09-01 00:00:00+00:00",
+              "end": "2026-11-04 23:00:00+00:00",
+              "net_return": 0.06269476412999997,
+              "initial_marked_equity": 1000.0,
+              "ending_marked_equity": 1062.69476413,
+              "hourly_mark_drawdown": 0.034707643641753494,
+              "daily_nav_sharpe": 5.5411497160465375,
+              "completed_campaigns": 23,
+              "campaign_profit_factor": null,
+              "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+              "campaign_gross_profit": 62.69476413,
+              "campaign_gross_loss": -0.0,
+              "open_campaigns_at_end": 0,
+              "calendar_hours": 1560,
+              "equity_insolvent": false
+            },
+            "before-source-release-cutoff": {
+              "name": "before-source-release-cutoff",
+              "start": "2026-09-01 00:00:00+00:00",
+              "end": "2026-10-23 00:00:00+00:00",
+              "net_return": 0.05376606121999994,
+              "initial_marked_equity": 1000.0,
+              "ending_marked_equity": 1053.76606122,
+              "hourly_mark_drawdown": 0.034707643641753494,
+              "daily_nav_sharpe": 5.495242883889749,
+              "completed_campaigns": 18,
+              "campaign_profit_factor": null,
+              "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+              "campaign_gross_profit": 53.76606122,
+              "campaign_gross_loss": -0.0,
+              "open_campaigns_at_end": 0,
+              "calendar_hours": 1249,
+              "equity_insolvent": false
+            },
+            "after-source-release-cutoff": {
+              "name": "after-source-release-cutoff",
+              "start": "2026-10-23 00:00:00+00:00",
+              "end": "2026-11-04 23:00:00+00:00",
+              "net_return": 0.00847313577328812,
+              "initial_marked_equity": 1053.76606122,
+              "ending_marked_equity": 1062.69476413,
+              "hourly_mark_drawdown": 0.00881054349542898,
+              "daily_nav_sharpe": 6.324613997879705,
+              "completed_campaigns": 5,
+              "campaign_profit_factor": null,
+              "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+              "campaign_gross_profit": 8.92870291,
+              "campaign_gross_loss": -0.0,
+              "open_campaigns_at_end": 0,
+              "calendar_hours": 312,
+              "equity_insolvent": false
+            }
+          },
+          "native_result": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_tail_20261107_v001/temporal_TrendProfitTail_15bps/result.json",
+            "sha256": "77bd47fa1674b2a561ac7176555ec9d7bd14e9e856903ec5794f902ed0e9ac32"
+          },
+          "hourly_equity": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_tail_20261107_v001/temporal_TrendProfitTail_15bps/hourly_equity.parquet",
+            "sha256": "68baf7662e174fef8999b55597c9118fd7854a514840adab01ac96fcf4ea68a0"
+          },
+          "actions": {
+            "decline": 5
+          },
+          "naturally_closed_deferred": 0,
+          "forced_or_other_arms": 0,
+          "mean_elapsed_minutes": null,
+          "max_elapsed_minutes": null,
+          "trace_sha256": "f74f9456f28abe9e5a8c4a7c97277a028832fa05b71a4b91e46ac73a0ab35dc3"
+        },
+        "temporal_FlatProfitTail_8bps": {
+          "archive_sha256": "102d4c29843fff4e4e5b40790263adbf1a9b8c89a844b2ce096412328771c541",
+          "trades": 22,
+          "filled_orders": 46,
+          "maximum_cash_error_usdt": 4.841744504e-09,
+          "aggregate_cash_error_usdt": 1.16595132772e-08,
+          "periods": {
+            "continuous": {
+              "name": "continuous",
+              "start": "2026-09-01 00:00:00+00:00",
+              "end": "2026-11-04 23:00:00+00:00",
+              "net_return": 0.07696937019000005,
+              "initial_marked_equity": 1000.0,
+              "ending_marked_equity": 1076.96937019,
+              "hourly_mark_drawdown": 0.033985699580637796,
+              "daily_nav_sharpe": 5.645929677516994,
+              "completed_campaigns": 22,
+              "campaign_profit_factor": null,
+              "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+              "campaign_gross_profit": 76.96937019,
+              "campaign_gross_loss": -0.0,
+              "open_campaigns_at_end": 0,
+              "calendar_hours": 1560,
+              "equity_insolvent": false
+            },
+            "before-source-release-cutoff": {
+              "name": "before-source-release-cutoff",
+              "start": "2026-09-01 00:00:00+00:00",
+              "end": "2026-10-23 00:00:00+00:00",
+              "net_return": 0.06838310619999999,
+              "initial_marked_equity": 1000.0,
+              "ending_marked_equity": 1068.3831062,
+              "hourly_mark_drawdown": 0.033985699580637796,
+              "daily_nav_sharpe": 5.694840389501206,
+              "completed_campaigns": 17,
+              "campaign_profit_factor": null,
+              "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+              "campaign_gross_profit": 68.3831062,
+              "campaign_gross_loss": -0.0,
+              "open_campaigns_at_end": 0,
+              "calendar_hours": 1249,
+              "equity_insolvent": false
+            },
+            "after-source-release-cutoff": {
+              "name": "after-source-release-cutoff",
+              "start": "2026-10-23 00:00:00+00:00",
+              "end": "2026-11-04 23:00:00+00:00",
+              "net_return": 0.00803669015372166,
+              "initial_marked_equity": 1068.3831062,
+              "ending_marked_equity": 1076.96937019,
+              "hourly_mark_drawdown": 0.008950549885073045,
+              "daily_nav_sharpe": 7.1166523420985435,
+              "completed_campaigns": 5,
+              "campaign_profit_factor": null,
+              "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+              "campaign_gross_profit": 8.586263989999999,
+              "campaign_gross_loss": -0.0,
+              "open_campaigns_at_end": 0,
+              "calendar_hours": 312,
+              "equity_insolvent": false
+            }
+          },
+          "native_result": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_tail_20261107_v001/temporal_FlatProfitTail_8bps/result.json",
+            "sha256": "58a76f6e4c5b79db40b927e5939074192c748e170427191a7bb709007830bd97"
+          },
+          "hourly_equity": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_tail_20261107_v001/temporal_FlatProfitTail_8bps/hourly_equity.parquet",
+            "sha256": "da125b020adae0ba167e69756a19fdb8602310003754fb6eb7b7e82de07ed5d5"
+          },
+          "actions": {
+            "arm": 5,
+            "hold": 52,
+            "release": 5
+          },
+          "naturally_closed_deferred": 5,
+          "forced_or_other_arms": 0,
+          "mean_elapsed_minutes": 57.0,
+          "max_elapsed_minutes": 115.0,
+          "trace_sha256": "7641c5e1a1d1a050a524f2d5f2e6333d305b6d8afa3f115311562d7a456a0d74"
+        },
+        "temporal_TrendProfitTail_8bps": {
+          "archive_sha256": "5cbaa608a4f7fa6c42ab9a272b64d9903973e23be56ec5ca6c3bbc35c9414d8a",
+          "trades": 23,
+          "filled_orders": 48,
+          "maximum_cash_error_usdt": 4.66994293e-09,
+          "aggregate_cash_error_usdt": 1.09554253358e-08,
+          "periods": {
+            "continuous": {
+              "name": "continuous",
+              "start": "2026-09-01 00:00:00+00:00",
+              "end": "2026-11-04 23:00:00+00:00",
+              "net_return": 0.06636577383000009,
+              "initial_marked_equity": 1000.0,
+              "ending_marked_equity": 1066.36577383,
+              "hourly_mark_drawdown": 0.03347316018817725,
+              "daily_nav_sharpe": 5.8983709395412856,
+              "completed_campaigns": 23,
+              "campaign_profit_factor": null,
+              "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+              "campaign_gross_profit": 66.36577383,
+              "campaign_gross_loss": -0.0,
+              "open_campaigns_at_end": 0,
+              "calendar_hours": 1560,
+              "equity_insolvent": false
+            },
+            "before-source-release-cutoff": {
+              "name": "before-source-release-cutoff",
+              "start": "2026-09-01 00:00:00+00:00",
+              "end": "2026-10-23 00:00:00+00:00",
+              "net_return": 0.056565501589999956,
+              "initial_marked_equity": 1000.0,
+              "ending_marked_equity": 1056.56550159,
+              "hourly_mark_drawdown": 0.03347316018817725,
+              "daily_nav_sharpe": 5.816310536862909,
+              "completed_campaigns": 18,
+              "campaign_profit_factor": null,
+              "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+              "campaign_gross_profit": 56.56550159,
+              "campaign_gross_loss": -0.0,
+              "open_campaigns_at_end": 0,
+              "calendar_hours": 1249,
+              "equity_insolvent": false
+            },
+            "after-source-release-cutoff": {
+              "name": "after-source-release-cutoff",
+              "start": "2026-10-23 00:00:00+00:00",
+              "end": "2026-11-04 23:00:00+00:00",
+              "net_return": 0.009275593633572221,
+              "initial_marked_equity": 1056.56550159,
+              "ending_marked_equity": 1066.36577383,
+              "hourly_mark_drawdown": 0.008902865461107745,
+              "daily_nav_sharpe": 6.9625239536214,
+              "completed_campaigns": 5,
+              "campaign_profit_factor": null,
+              "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+              "campaign_gross_profit": 9.80027224,
+              "campaign_gross_loss": -0.0,
+              "open_campaigns_at_end": 0,
+              "calendar_hours": 312,
+              "equity_insolvent": false
+            }
+          },
+          "native_result": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_tail_20261107_v001/temporal_TrendProfitTail_8bps/result.json",
+            "sha256": "d3215e371e37be79ddf538832eb152236e13e5e0f62064b682951f8d6f66a7f2"
+          },
+          "hourly_equity": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_tail_20261107_v001/temporal_TrendProfitTail_8bps/hourly_equity.parquet",
+            "sha256": "140fa4cac6bc580d88af8a5254068d4d51ae73e327317fdc981c05ca58c90961"
+          },
+          "actions": {
+            "decline": 5
+          },
+          "naturally_closed_deferred": 0,
+          "forced_or_other_arms": 0,
+          "mean_elapsed_minutes": null,
+          "max_elapsed_minutes": null,
+          "trace_sha256": "63f8e740ccc814d6f6bc1c549c0a3e20fb63600a7e2bb4183e279f8fbc6b5531"
+        }
+      },
+      "marked_risk": {
+        "temporal_FlatProfitTail_15bps": {
+          "drawdown": 0.0387354065370179,
+          "points": 18709,
+          "hourly_error_usdt": 4.547473508864641e-13,
+          "curve": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_tail_20261107_v001/temporal-mark/temporal_FlatProfitTail_15bps.parquet",
+            "sha256": "eda807f260d4c4140c2cf04f723dd36a86adc3b4e1d996cfadd4442ab038502b"
+          }
+        },
+        "temporal_TrendProfitTail_15bps": {
+          "drawdown": 0.04126154784985547,
+          "points": 18709,
+          "hourly_error_usdt": 6.821210263296962e-13,
+          "curve": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_tail_20261107_v001/temporal-mark/temporal_TrendProfitTail_15bps.parquet",
+            "sha256": "56023ac4c8bf70c76f9161034647ed1d817053cb29277a51554385b07f48a40f"
+          }
+        },
+        "temporal_FlatProfitTail_8bps": {
+          "drawdown": 0.03746514459272676,
+          "points": 18709,
+          "hourly_error_usdt": 4.547473508864641e-13,
+          "curve": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_tail_20261107_v001/temporal-mark/temporal_FlatProfitTail_8bps.parquet",
+            "sha256": "29c1d2906e55e2c35ba6c0a0e1b4514e977796ebb51c165ef989839bd331cc87"
+          }
+        },
+        "temporal_TrendProfitTail_8bps": {
+          "drawdown": 0.03997491816480436,
+          "points": 18709,
+          "hourly_error_usdt": 4.547473508864641e-13,
+          "curve": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_tail_20261107_v001/temporal-mark/temporal_TrendProfitTail_8bps.parquet",
+            "sha256": "96d4e906daca77cd4e5ff7eee4e16c579f5481d0727df6bf3f6af5b4f295f5a8"
+          }
+        }
+      },
+      "mark_sources": {
+        "ALGO/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "9616927f55af7e2657b2208439c7a8913f7a95775e35f9464e5d7dda9eb7f8f0"
+        },
+        "AVAX/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "3cb7d4a945a6b996e6e0346f122ede114ba1269df61d5bd4f4dc50d15dd061c1"
+        },
+        "BCH/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "6b9e1ebd2ed564e6611dca4ab1df765a9b5b072fdc6243ae53e74f8763dfaf87"
+        },
+        "BNB/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "d89d63e4ccceb362a616f7ac69e7cb1fd509e9ea36506fbc3fdd18dcc5f0c698"
+        },
+        "CRV/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "c250bc308f294c78da163414f135ac0b713f8cd50701cd27b1bdc06c7f45ae0b"
+        },
+        "DOT/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "d41736be7968dd42fe8e4eac64577d64ecf73e88d4d76e15aa7a79f59acd5a6f"
+        },
+        "FIL/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "6ddf5b1ce0566fa309cc21c37583068ebb3b9767ede687d108988d17a93d9747"
+        },
+        "GALA/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "fc8f0416a61f49f7c65a810d617a7c69ac9532fd81f8c1432f98a12a7742956a"
+        },
+        "IOTA/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "dceb8d4a3d81c6737955855bcabc563e51dcfb3c0f977f9312676cb7cc9f6ea2"
+        },
+        "IOTX/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "dc900863e38a74266aa759066d9d20b89dbccdf0aa3f5e5a44abfbfa4bc933cc"
+        },
+        "LTC/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "43a81a723266d16639d5e1cddc9360cd4ca00fa9601e914fb3c1d9153ad19150"
+        },
+        "MANA/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "56bc34dc65715ae31e450a7882cd127e17e73688ddb040a83f488dd1fe6d2a0d"
+        },
+        "NEAR/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "8b0fb9764353321182efbf540ec46c5f4a738124c60a9c6f076db36bebd8b4c6"
+        },
+        "RUNE/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "a7d6aafa62e4014caf4a3c437dd7ffb35d5e3a2a0d5798b010628720f94382e1"
+        },
+        "SAND/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "1a283a5d4f85f36c9b4c7ea7b293a53fbf569e414fab934f78480aecad242ae7"
+        },
+        "SKL/USDT:USDT": {
+          "rows": 18709,
+          "receipts_sha256": "452b2774eb416f647007ac2990d63034c6690d61c4dae46f7dfd027acd988508"
+        }
+      },
+      "comparison": {
+        "15": {
+          "original_return": 0.06269476412999997,
+          "original_drawdown": 0.04126154784985547,
+          "flat_return": 0.06919819749,
+          "flat_drawdown": 0.0387354065370179,
+          "trend_return": 0.06269476412999997,
+          "trend_drawdown": 0.04126154784985547,
+          "checks": {
+            "returns": false,
+            "risk_adjusted_returns": false,
+            "risk_budget": true,
+            "samples": false,
+            "slices": true
+          }
+        },
+        "8": {
+          "original_return": 0.06636577383000009,
+          "original_drawdown": 0.03997491816480436,
+          "flat_return": 0.07696937019000005,
+          "flat_drawdown": 0.03746514459272676,
+          "trend_return": 0.06636577383000009,
+          "trend_drawdown": 0.03997491816480436,
+          "checks": {
+            "returns": false,
+            "risk_adjusted_returns": false,
+            "risk_budget": true,
+            "samples": false,
+            "slices": true
+          }
+        }
+      },
+      "passed": false
+    }
+  },
+  "paper_eligible": false
+}
