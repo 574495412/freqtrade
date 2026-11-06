@@ -180,6 +180,11 @@ class NativeEntryGate:
                 raise StateError('Registered research startup must be reattached before entry')
             runtime.ready(now)
 
+    def require_research_driver(self, now, phase):
+        if self.s.get('required_research_driver') is not None:
+            from native_research_driver import require_driver
+            require_driver(self, now, phase)
+
     def _check_request(self, exchange, proposal, kwargs):
         expected = dict(pair=proposal.pair, ordertype="limit", side="buy",
                         amount=float(proposal.quantity), rate=float(proposal.price), leverage=1,
@@ -224,6 +229,7 @@ class NativeEntryGate:
     def submit(self, exchange, request_id, evidence, proposal, now, **kwargs):
         with self._mutex:
             self.require_account_batch_clear()
+            self.require_research_driver(now, 'dispatch')
             self.require_research_startup(now)
             if self._poisoned or self.store.lock.closed:
                 raise StateError("Entry receipt writer unavailable")

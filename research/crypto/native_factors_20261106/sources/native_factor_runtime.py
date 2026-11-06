@@ -53,6 +53,7 @@ Reports cover ALL unresolved bound initial requests, even unchanged open orders.
         source-ordered and distinct from wallet settlement.
 """
         now=aware(now);self._ready(now)
+        self.gate.require_research_driver(now,'observe')
         if not isinstance(batch_id,str) or not batch_id:
             raise RiskError('Explicit observation batch identity required')
         if (type(bot.exchange) is not OfflineProtectionExchange
@@ -259,6 +260,7 @@ The full signal set is frozen before sizing the first pair. Pair processing uses
 the original universe order; source-map insertion order cannot allocate capital.
 """
         now=aware(now);self._ready(now);self.gate.require_account_batch_clear()
+        self.gate.require_research_driver(now,'dispatch')
         self.gate.require_research_startup(now)
         self.wallet.require_entry_clear(now);self.guard.require_entry_clear()
         if set(inputs)!=set(self.universe):raise RiskError('Entry schedule requires the full frozen input universe')

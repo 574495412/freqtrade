@@ -34,6 +34,7 @@ class NativeFactorLoop:
     def observe(self,batch_id,evidence,receipt,quotes,reports,events,bot,now,*,complete_sequence,
                 complete_from_inception,funding_complete):
         """Connect both controllers on every batch, including unchanged open reports."""
+        self.gate.require_research_driver(now,'observe')
         prior=self.gate.s.get('account_batches',{}).get(batch_id)
         cancel_ids=prior['input']['cancel_requests'] if prior else [rid for rid,item in self.cancellations.s['requests'].items()
             if item['state']!='TERMINAL_RECONCILED']
@@ -84,6 +85,7 @@ A new observation is mandatory after a transport step. Callers retain explicit
 GET/cancel transport responsibilities and supply each actual captured response.
 """
         now=aware(now);self.runtime._ready(now);self.gate.require_account_batch_clear()
+        self.gate.require_research_driver(now,'dispatch')
         self.cancellations._ready();self.exits._ready(now)
         evidence=self.wallet._checked_evidence
         if evidence is None:raise RiskError('Dispatch requires a complete account observation')

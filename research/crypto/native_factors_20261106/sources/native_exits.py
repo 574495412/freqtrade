@@ -199,6 +199,7 @@ class NativeRiskExit:
     def dispatch(self,trade,evidence,exchange,bot,now,*,limit,strategy_inputs=None,reduction_inputs=None):
         with self._mutex:
             self._ready(now); self.gate.require_account_batch_clear(); self.wallet.require_entry_clear(now)
+            self.gate.require_research_driver(now,'dispatch')
             if type(exchange) is not LocalExitExchange or exchange.controller is not self or bot.wallets is not self.wallet.wallets:
                 raise RiskError("Exit bot/exchange/wallet binding differs")
             if (not trade.is_open or trade.amount <= 0 or trade.is_short or trade.leverage != 1

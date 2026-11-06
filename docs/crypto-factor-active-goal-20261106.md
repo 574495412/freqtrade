@@ -1,6 +1,8 @@
 # 因子研究目标与当前状态
 
-当前机器可读入口：[current_status_v21.json](../research/crypto/native_factors_20261106/current_status_v21.json)。用户已明确“允许自研因子”，当前接续为官方 Freqtrade 框架下的固定 F1/F2 原生接入。工程说明与真实数据覆盖见 [自研因子接入](../research/crypto/native_factors_20261106/README.md)。253 项工程检查通过、152 份真实小时文件已检查；F1/F2 的配对收益实验仍为 0，整个持续目标未完成。
+当前机器可读入口：[current_status_v22.json](../research/crypto/native_factors_20261106/current_status_v22.json)。用户已明确“允许自研因子”，当前接续为官方 Freqtrade 框架下的固定 F1/F2 原生接入。工程说明与真实数据覆盖见 [自研因子接入](../research/crypto/native_factors_20261106/README.md)。262 项工程检查通过、152 份真实小时文件已检查；F1/F2 的配对收益实验仍为 0，整个持续目标未完成。
+
+注册数据提供器现已统一驱动入场、退出和减仓；F2 双合约持仓的资金费、次日日减仓、单笔止损／冷却及另一笔未平仓净值通过完整合成链路验证。新增 9 项检查，联合回归 262 项通过；这些是账本与执行工程证据，收益账户仍为 0。延迟决策、未知提交绑定、数量型风险路径及平仓后资金费修正仍待完成。详见 [数据驱动证据](../research/crypto/native_factors_20261106/driver_verification.json)。
 
 隔离研究启动已调用官方回测策略启动、原生 DataProvider 截断和同一个 ProtectionManager，支持合成账户的启动登记、确认丢失重开及未完成启动拒绝。新增 12 项检查，联合回归 253 项通过；完整 F2 合约／保护／资金费持续流和数据驱动仍待接通，金融账户保持 0。详见 [启动证据](../research/crypto/native_factors_20261106/startup_verification.json)。
 

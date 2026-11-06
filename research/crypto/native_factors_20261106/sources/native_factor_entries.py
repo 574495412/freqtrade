@@ -229,6 +229,7 @@ def execute_fixed_entry(gate, exchange, strategy, evidence, inputs, liquidity, r
     if type(exchange) is not ReplayEntryExchange or exchange.gate is not gate or wallet is None or gate.after_fill_guard is None:
         raise RiskError('Fixed entry requires matching local exchange, native wallet and protection guard')
     gate.require_account_batch_clear()
+    gate.require_research_driver(now,'dispatch')
     gate.require_research_startup(now)
     wallet.require_entry_clear(now); gate.after_fill_guard.require_entry_clear()
     if evidence != wallet._checked_evidence:

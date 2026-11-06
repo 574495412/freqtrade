@@ -160,6 +160,7 @@ class NativeCancellation:
         """Claim once, call official cancel/query, retain risk pending finalization."""
         with self._mutex:
             self._ready(); self.gate.require_account_batch_clear()
+            self.gate.require_research_driver(now,'dispatch')
             if request_id in self.s["requests"]:
                 raise StateError("Cancellation already attempted; query and reconcile, never redispatch")
             if type(exchange) is not LocalCancelExchange or exchange.trading_mode.value != self.risk.market:
