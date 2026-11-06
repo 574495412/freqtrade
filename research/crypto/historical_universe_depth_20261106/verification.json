@@ -1,0 +1,140 @@
+{
+  "observed_at_utc": "2026-11-06T15:10:15.130890+00:00",
+  "capture_bodies_verified": 76,
+  "source_bytes_verified": 49580906,
+  "input_hashes": {
+    "research/crypto/historical_universe_depth_20261106/verify_universe.py": "03b9a28976ddc66573bb3c11f492e9e858acffa0630b65723d04c9f530eacce0",
+    "research/crypto/historical_universe_depth_20261106/capture_receipts.json": "5dd5ddb75a38a8882a082e8e7a191682ea5cd707cc28e9e8446e69da9cceecdf",
+    "research/crypto/historical_universe_depth_20261106/audit_result.json": "6735fbff579e6caf1d6b95b27983c4f413d95bf8440f8c643b515c4054c05323",
+    "research/crypto/historical_universe_depth_20261106/predecessor_result.json": "ec618325507c02a6d2bd9dc2836a6da0729d157614935d1130f2209a86e5768e",
+    "research/crypto/factor_cost_futures_long_20261106/plan.json": "4f89a1cd81fc810fb7b71bbf41993a91712280e55037ec769d98c06cf7c406d2"
+  },
+  "exact_predecessor_recoveries": 16,
+  "coverage": {
+    "spot_L": {
+      "frozen_pairs": 36,
+      "valid_received_snapshots": 36,
+      "replayed_at_cutoff": 36,
+      "fresh_bbo_inside_known_snapshot": 36,
+      "fresh_complete_both_sides_20bps": 35,
+      "bbo_exact_id_and_prices_match": 5,
+      "complete_depth_and_bbo_exact_id_match": 5,
+      "separately_received_fresh_book_ticker": 36
+    },
+    "futures_L": {
+      "frozen_pairs": 40,
+      "valid_received_snapshots": 40,
+      "replayed_at_cutoff": 40,
+      "fresh_bbo_inside_known_snapshot": 40,
+      "fresh_complete_both_sides_20bps": 39,
+      "bbo_exact_id_and_prices_match": 2,
+      "complete_depth_and_bbo_exact_id_match": 2,
+      "separately_received_fresh_book_ticker": 40
+    },
+    "spot_S": {
+      "frozen_pairs": 36,
+      "valid_received_snapshots": 36,
+      "replayed_at_cutoff": 36,
+      "fresh_bbo_inside_known_snapshot": 36,
+      "fresh_complete_both_sides_20bps": 36,
+      "bbo_exact_id_and_prices_match": 14,
+      "complete_depth_and_bbo_exact_id_match": 14,
+      "separately_received_fresh_book_ticker": 34
+    },
+    "futures_S": {
+      "frozen_pairs": 40,
+      "valid_received_snapshots": 40,
+      "replayed_at_cutoff": 40,
+      "fresh_bbo_inside_known_snapshot": 40,
+      "fresh_complete_both_sides_20bps": 39,
+      "bbo_exact_id_and_prices_match": 7,
+      "complete_depth_and_bbo_exact_id_match": 7,
+      "separately_received_fresh_book_ticker": 40
+    }
+  },
+  "frozen_pair_points": 152,
+  "fresh_bbo_points": 152,
+  "complete_both_sides_points": 149,
+  "same_id_bbo_matches": 28,
+  "incomplete_20bps": [
+    {
+      "cohort": "spot_L",
+      "pair": "BTC/USDT",
+      "has_fresh_bbo": true,
+      "book": {
+        "last_update_id": 57621322232,
+        "bid": "93661.20000000",
+        "ask": "93661.21000000",
+        "bbo_within_known_snapshot_region": true,
+        "spread_bps": "0.001067677914244216695695939423",
+        "visible_bid_quantity_within20bps": "105.30497000",
+        "visible_ask_quantity_within20bps": "129.77948000",
+        "bid_band_complete": true,
+        "ask_band_complete": false,
+        "depth_values_are_lower_bounds_when_band_incomplete": true,
+        "band_anchor": "bid*(1-0.002) and ask*(1+0.002); diagnostic convention only"
+      },
+      "snapshot": {
+        "sequence": 57621184031,
+        "source_line": 31,
+        "received_ns": 1735689600800886500,
+        "bid_boundary": "93305.03000000",
+        "ask_boundary": "93831.15000000"
+      }
+    },
+    {
+      "cohort": "futures_L",
+      "pair": "BTC/USDT:USDT",
+      "has_fresh_bbo": true,
+      "book": {
+        "last_update_id": 6296398220810,
+        "bid": "93648.30",
+        "ask": "93648.40",
+        "bbo_within_known_snapshot_region": true,
+        "spread_bps": "0.01067824473148752754319750428",
+        "visible_bid_quantity_within20bps": "331.553",
+        "visible_ask_quantity_within20bps": "373.176",
+        "bid_band_complete": true,
+        "ask_band_complete": false,
+        "depth_values_are_lower_bounds_when_band_incomplete": true,
+        "band_anchor": "bid*(1-0.002) and ask*(1+0.002); diagnostic convention only"
+      },
+      "snapshot": {
+        "sequence": 6296359359055,
+        "source_line": 18,
+        "received_ns": 1735689601007813100,
+        "bid_boundary": "93383.60",
+        "ask_boundary": "93730.90"
+      }
+    },
+    {
+      "cohort": "futures_S",
+      "pair": "BTC/USDT:USDT",
+      "has_fresh_bbo": true,
+      "book": {
+        "last_update_id": 11980751437508,
+        "bid": "77493.40",
+        "ask": "77493.50",
+        "bbo_within_known_snapshot_region": true,
+        "spread_bps": "0.01290431642932402674032450485",
+        "visible_bid_quantity_within20bps": "603.229",
+        "visible_ask_quantity_within20bps": "640.194",
+        "bid_band_complete": false,
+        "ask_band_complete": true,
+        "depth_values_are_lower_bounds_when_band_incomplete": true,
+        "band_anchor": "bid*(1-0.002) and ask*(1+0.002); diagnostic convention only"
+      },
+      "snapshot": {
+        "sequence": 11980728210949,
+        "source_line": 2,
+        "received_ns": 1793491200019430300,
+        "bid_boundary": "77377.60",
+        "ask_boundary": "77671.50"
+      }
+    }
+  ],
+  "same_id_price_disagreements": [],
+  "frozen_financial_inputs_verified": 145,
+  "full_window_depth_admission": false,
+  "financial_accounts": 0
+}
