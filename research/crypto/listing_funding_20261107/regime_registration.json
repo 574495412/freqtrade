@@ -1,0 +1,704 @@
+{
+  "registered_utc": "2026-11-06T18:43:11.763899+00:00",
+  "sources": {
+    "research/crypto/listing_funding_20261107/verify_regimes.py": "7634a76e4779b06ea1f5eb72e7260a9e2ebe8a7b364f24099a06d07e07669826",
+    "research/crypto/listing_funding_20261107/replicate.py": "73e4549717be5ff98c8a343ad7c8ef3ff3b687f927d82f4fa1fa45a9194343c9",
+    "user_data/crypto_quant/listing_reversal_20261107_v001/catalog.json": "01c94c430c08146e160a66badea456c119275de918bce11a87d0655a4165d1cf",
+    "research/crypto/listing_reversal_20261107/registration.json": "9e072bf515831847f54ca308ccf34ec5eff4dd3decf81c4a12be0b32d9bb38ea",
+    "research/crypto/listing_reversal_20261107/coverage_registration.json": "3850c8a59d185c4296c4408db733dc9e5cf06619d7ecae34a2fecf32983e8009",
+    "research/crypto/listing_reversal_20261107/coverage_result.json": "115549ea1ba980794b5c88c26e900cfb7135ca9a48f352ccc3e58b7cec550fc8",
+    "research/crypto/listing_reversal_20261107/replay.py": "e9b3bbc0b78170a035a15c25af62d5d99f4475a15dca294a015c4ec382bafe66",
+    "research/crypto/listing_reversal_20261107/intake.py": "0e5f20f608d9d34e69c063cbeda2d953234073812087dbe339dbdcba20b8a700",
+    "research/crypto/listing_reversal_20261107/coverage.py": "02e59292067e8a6472fb3b9dab19fa1e7f3a758694b776ed34d6af18071501a7",
+    "research/crypto/listing_reversal_20261107/audit.py": "25b4d7eb06f5a409d23ec9dd7425ffeaedcd2009ae9d8e9fa5a651406f5b7dd5",
+    "research/crypto/listing_reversal_20261107/catalog.py": "b9b0bce5736a1b1f81b0eea9851febcd3b45e220e5908f6b57bd3ede1064f603",
+    "freqtrade/research/data.py": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+    "research/crypto/listing_funding_20261107/registration.json": "a11bd2e5111ffd804fea10d3254cee38c80cccea580aed567f4b67a156f56953",
+    "research/crypto/listing_funding_20261107/result.json": "22c69457a77f3f3f23465b51d1302097b7e2f537198f24c11c1821ad5cecffae",
+    "user_data/crypto_quant/listing_reversal_20261107_v001/admission.json": "1b0164fd505ec9bb7c39ca0350d96c96702eceee2869c1d06f4fd3de5f5546a0",
+    "research/crypto/listing_reversal_20261107/reset_2026_registration.json": "3cdc4a863fc63f9de61340c230879ad5c89591dd8e389d64a9ab153854506535"
+  },
+  "symbols": {
+    "2023": [
+      {
+        "symbol": "1000BONKUSDT",
+        "first_archive_day": "2023-11-22",
+        "receipt_sha256": "ad98bb275fe49b318d7317cf47b7b0c1bf87b3b79f1089105e0281d06744759e",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-22T14:00:00+00:00",
+        "collector_since": "2023-11-22T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "1000FLOKIUSDT",
+        "first_archive_day": "2023-05-06",
+        "receipt_sha256": "3a9d65758e7a4f0aeb0165a2478716daa91157b78940bdf63e81e45f03dbf443",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-05-06T00:00:00+00:00",
+        "collector_since": "2023-05-06T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "1000PEPEUSDT",
+        "first_archive_day": "2023-05-05",
+        "receipt_sha256": "74e1faad0e49313a3dfcb9eaec9d28689c13c75063f06c143614bdf8ae864a86",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-05-05T00:00:00+00:00",
+        "collector_since": "2023-05-05T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "1000RATSUSDT",
+        "first_archive_day": "2023-12-15",
+        "receipt_sha256": "02022a9a19245bad73ca5f2081aaeb907cb5336cfc238c5555ddc034f5345a26",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-12-15T14:00:00+00:00",
+        "collector_since": "2023-12-15T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "1000SATSUSDT",
+        "first_archive_day": "2023-12-12",
+        "receipt_sha256": "45fc1aa2ef367cee9853a0a20fbd4df22fa53bba5ca7be1cd2accd90af5da3bf",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-12-12T14:00:00+00:00",
+        "collector_since": "2023-12-12T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "ACEUSDT",
+        "first_archive_day": "2023-12-18",
+        "receipt_sha256": "f93972eb562282f4ff1c7d3e9905932904f9ced7b0efd355fa6f8d49e7a298b8",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-12-18T10:00:00+00:00",
+        "collector_since": "2023-12-18T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "AGLDUSDT",
+        "first_archive_day": "2023-07-29",
+        "receipt_sha256": "bd06f954facad7c09a28ba17fd9daf4c673ac5790986312f6245561c5f16e4a6",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-07-29T02:30:00+00:00",
+        "collector_since": "2023-07-29T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "ARBUSDT",
+        "first_archive_day": "2023-03-23",
+        "receipt_sha256": "f8676c6aad11ed6988577c0f4acdccf7160f4775ab96758079e5c81fa3464575",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-03-23T07:00:00+00:00",
+        "collector_since": "2023-03-23T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "ARKMUSDT",
+        "first_archive_day": "2023-07-28",
+        "receipt_sha256": "a9d6136d87e3b3186ad0591c464130075a3192a863ce913c34002e0b08b27b71",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-07-28T02:45:00+00:00",
+        "collector_since": "2023-07-28T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "ARKUSDT",
+        "first_archive_day": "2023-09-19",
+        "receipt_sha256": "802119910b8f5e80d622c144c3bca59f84efa01885b207056edc8d56632c58d7",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-09-19T14:30:00+00:00",
+        "collector_since": "2023-09-19T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "AUCTIONUSDT",
+        "first_archive_day": "2023-12-15",
+        "receipt_sha256": "84806081a4e4dc07c0294ec82b79ad21d9d489aa08e95ae702c1db93fd8e2962",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-12-15T13:00:00+00:00",
+        "collector_since": "2023-12-15T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "BADGERUSDT",
+        "first_archive_day": "2023-11-09",
+        "receipt_sha256": "bcc832b18a78c72ea8e9b3fe4bf29c576fe6c91c3c7c9b907ee49b413a195876",
+        "exchange_status": "SETTLING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-09T12:30:00+00:00",
+        "collector_since": "2023-11-09T00:00:00.000Z",
+        "collector_to": "2025-04-15T00:00:00.000Z"
+      },
+      {
+        "symbol": "BEAMXUSDT",
+        "first_archive_day": "2023-11-17",
+        "receipt_sha256": "7dd04e7226fcc4bb761d7ee0a978fd78c8670be2ad455da8d26875291f8bc317",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-17T13:30:00+00:00",
+        "collector_since": "2023-11-17T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "BICOUSDT",
+        "first_archive_day": "2023-09-28",
+        "receipt_sha256": "a29fa357057fb5b2e35b6b3f31d2f38f6dd035f0031aea95a55104ac6376b175",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-09-28T12:30:00+00:00",
+        "collector_since": "2023-09-28T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "BIGTIMEUSDT",
+        "first_archive_day": "2023-10-12",
+        "receipt_sha256": "68f7a65d5742bba50c2f22b2fd6ae9287a173fe8445eb5f6dc7942264a5d9096",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-10-12T14:30:00+00:00",
+        "collector_since": "2023-10-12T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "BNTUSDT",
+        "first_archive_day": "2023-08-10",
+        "receipt_sha256": "dc94a1f96434bdde0d46002b4b93f4824eb0414d3e646fdb2ef108a1d2d3b5b9",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-08-10T12:00:00+00:00",
+        "collector_since": "2023-08-10T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "BONDUSDT",
+        "first_archive_day": "2023-10-15",
+        "receipt_sha256": "599d42e9917ee4743117784e2a3d0675f0f97482232e043c61c5ddd591c410b7",
+        "exchange_status": "SETTLING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-10-15T14:30:00+00:00",
+        "collector_since": "2023-10-15T00:00:00.000Z",
+        "collector_to": "2024-12-17T00:00:00.000Z"
+      },
+      {
+        "symbol": "BSVUSDT",
+        "first_archive_day": "2023-10-20",
+        "receipt_sha256": "7fb363975ea5ff1abee18203ebf37a2e8c95034c697f07a17178ddf23cbf3f22",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-10-20T12:30:00+00:00",
+        "collector_since": "2023-10-20T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "CAKEUSDT",
+        "first_archive_day": "2023-11-02",
+        "receipt_sha256": "5f522abda9d42d66b4995a3fc6aec4468b5ea3f20e784eb80db85f076295a3c3",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-02T12:45:00+00:00",
+        "collector_since": "2023-11-02T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "COCOSUSDT",
+        "first_archive_day": "2023-02-21",
+        "receipt_sha256": "c99b1d84ec7dc842d22766977c04de56193ebd55fd613e87246b9bac13dd57a5",
+        "collector_since": "2023-02-21T00:00:00.000Z",
+        "collector_to": "2023-05-26T00:00:00.000Z"
+      },
+      {
+        "symbol": "COMBOUSDT",
+        "first_archive_day": "2023-06-02",
+        "receipt_sha256": "820b118a23cd9e9bccb0094d716dc641ba8908fc448c22f2fab5694295241d24",
+        "exchange_status": "SETTLING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-06-02T12:00:00+00:00",
+        "collector_since": "2023-06-02T00:00:00.000Z",
+        "collector_to": "2025-03-28T00:00:00.000Z"
+      },
+      {
+        "symbol": "CYBERUSDT",
+        "first_archive_day": "2023-08-21",
+        "receipt_sha256": "043c4074a6e41bd248357b6ad644aaaaa9d05df1b695ccb74f733c934ce6a6ea",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-08-21T12:00:00+00:00",
+        "collector_since": "2023-08-21T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "DODOXUSDT",
+        "first_archive_day": "2023-08-08",
+        "receipt_sha256": "0a6868fc50df91a1176486d349816b54c33d3a06d1406399e15f0723aa6d0819",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-08-08T12:00:00+00:00",
+        "collector_since": "2023-08-08T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "ETHWUSDT",
+        "first_archive_day": "2023-11-28",
+        "receipt_sha256": "31c0d278bbf34d8d44471d61e3d6013001507573a0b7a89d1f227fd953329099",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-28T12:30:00+00:00",
+        "collector_since": "2023-11-28T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "FRONTUSDT",
+        "first_archive_day": "2023-09-22",
+        "receipt_sha256": "26d8f09a5ddb1ee98fc8dc8d66e915867505eaab752c8953a6e8c84c8f4a001f",
+        "collector_since": "2023-09-22T00:00:00.000Z",
+        "collector_to": "2024-08-24T00:00:00.000Z"
+      },
+      {
+        "symbol": "GASUSDT",
+        "first_archive_day": "2023-10-25",
+        "receipt_sha256": "da39f103456c8a1cb9d03ea389f6fd126589a36d85989dbcf76b4645ff32b885",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-10-25T02:45:00+00:00",
+        "collector_since": "2023-10-25T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "GLMRUSDT",
+        "first_archive_day": "2023-09-26",
+        "receipt_sha256": "f44bb1e1f715e4c8b6b3cf235bd0c6a5fcdaefa8246f9eb9da2dfb3dc354e40d",
+        "exchange_status": "SETTLING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-09-26T01:30:00+00:00",
+        "collector_since": "2023-09-26T00:00:00.000Z",
+        "collector_to": "2024-05-16T00:00:00.000Z"
+      },
+      {
+        "symbol": "HIFIUSDT",
+        "first_archive_day": "2023-09-16",
+        "receipt_sha256": "dcbe43f4c1fdbb73303e7846342b310762b7be1a487caeb1ccebf00946aa5cd8",
+        "exchange_status": "SETTLING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-09-16T14:30:00+00:00",
+        "collector_since": "2023-09-16T00:00:00.000Z",
+        "collector_to": "2025-10-04T00:00:00.000Z"
+      },
+      {
+        "symbol": "IDUSDT",
+        "first_archive_day": "2023-03-23",
+        "receipt_sha256": "2665769b6f8a5e427197b81e27ebc00b352592118cdce364d57db1440241b8a0",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-03-23T00:00:00+00:00",
+        "collector_since": "2023-03-23T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "ILVUSDT",
+        "first_archive_day": "2023-11-10",
+        "receipt_sha256": "3b4ce75c61a72f74ed490e33fbe0b5eb5af482d6b197fa65a71d968b370bfc57",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-10T16:30:00+00:00",
+        "collector_since": "2023-11-10T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "JTOUSDT",
+        "first_archive_day": "2023-12-08",
+        "receipt_sha256": "02cf00a288ae498c7034b3fd5fd8d375a1df29cd5852c21d4626df114db9aaf6",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-12-08T10:00:00+00:00",
+        "collector_since": "2023-12-08T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "KASUSDT",
+        "first_archive_day": "2023-11-17",
+        "receipt_sha256": "571e7891be850f0d028953723ef83fd2b6ae8daa8bbd5e1356c2338953968104",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-17T02:00:00+00:00",
+        "collector_since": "2023-11-17T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "LOOMUSDT",
+        "first_archive_day": "2023-10-11",
+        "receipt_sha256": "c624588c69b18d92bd02e455b40d67a8863c1b03eb428a172813b2bd0cfdc232",
+        "exchange_status": "SETTLING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-10-11T14:30:00+00:00",
+        "collector_since": "2023-10-11T00:00:00.000Z",
+        "collector_to": "2024-12-10T00:00:00.000Z"
+      },
+      {
+        "symbol": "MAVUSDT",
+        "first_archive_day": "2023-06-29",
+        "receipt_sha256": "b8e20f2371cde7dfd3480c1c3cf6045481b8419217d48c23bfaf680955d5361f",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-06-29T12:00:00+00:00",
+        "collector_since": "2023-06-29T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "MBLUSDT",
+        "first_archive_day": "2023-11-14",
+        "receipt_sha256": "6b7cd503121459bbe948e04393c864870c902a90709a21efdb9552825b379a97",
+        "collector_since": "2023-11-14T00:00:00.000Z",
+        "collector_to": "2024-05-14T00:00:00.000Z"
+      },
+      {
+        "symbol": "MEMEUSDT",
+        "first_archive_day": "2023-11-03",
+        "receipt_sha256": "463f9afd2ea5ed27e1c16263eaa18940210b1f6b61e1ae525f283cefe341f43a",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-03T12:00:00+00:00",
+        "collector_since": "2023-11-03T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "MOVRUSDT",
+        "first_archive_day": "2023-12-26",
+        "receipt_sha256": "950496b1470e5e5b31ecc7587543c4fd490f3955431705d9580db03b0df60d3b",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-12-26T12:30:00+00:00",
+        "collector_since": "2023-12-26T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "NMRUSDT",
+        "first_archive_day": "2023-06-22",
+        "receipt_sha256": "c2f20f749221c7dd1ee637033c62d0be93d902ea1853f838e905b4bfc5415f98",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-06-22T12:00:00+00:00",
+        "collector_since": "2023-06-22T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "NTRNUSDT",
+        "first_archive_day": "2023-11-14",
+        "receipt_sha256": "cf8e2dc54d07f4a7e2c05d8eefea7876f22c7ae63bc3ec0b251d9c0eb5fd1ba8",
+        "exchange_status": "SETTLING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-14T12:00:00+00:00",
+        "collector_since": "2023-11-14T00:00:00.000Z",
+        "collector_to": "2026-03-25T00:00:00.000Z"
+      },
+      {
+        "symbol": "ONGUSDT",
+        "first_archive_day": "2023-11-27",
+        "receipt_sha256": "0a5b30279bd824c73bbdfc5f78fcd182e8026cde63ebf669dd0ca396282e79b4",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-27T13:00:00+00:00",
+        "collector_since": "2023-11-27T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "ORBSUSDT",
+        "first_archive_day": "2023-10-17",
+        "receipt_sha256": "91f92ba5037b3d11e04c2ebc98f7b2bad8c5e52b55439926e607cdc660a3a254",
+        "exchange_status": "SETTLING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-10-17T06:00:00+00:00",
+        "collector_since": "2023-10-17T00:00:00.000Z",
+        "collector_to": "2024-12-10T00:00:00.000Z"
+      },
+      {
+        "symbol": "ORDIUSDT",
+        "first_archive_day": "2023-11-07",
+        "receipt_sha256": "c147e62da0348f0f73c574993c31ecc48910aeacdeb49cfbda5ce500abf385bb",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-07T12:30:00+00:00",
+        "collector_since": "2023-11-07T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "OXTUSDT",
+        "first_archive_day": "2023-08-11",
+        "receipt_sha256": "5e5be3826823b1333d244004cebe770bf053f45db669acbcd28457e49c526eb5",
+        "exchange_status": "SETTLING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-08-11T12:00:00+00:00",
+        "collector_since": "2023-08-11T00:00:00.000Z",
+        "collector_to": "2026-04-16T00:00:00.000Z"
+      },
+      {
+        "symbol": "PENDLEUSDT",
+        "first_archive_day": "2023-07-28",
+        "receipt_sha256": "febb7a1f95685775c3a1dd9fa28e45d444d8a49a3c37f52908816d57bccf031f",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-07-28T02:30:00+00:00",
+        "collector_since": "2023-07-28T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "POLYXUSDT",
+        "first_archive_day": "2023-10-25",
+        "receipt_sha256": "c6820d091d4e1f60a1373a634000d7b788417f0962406aa42e198d8ffaba1d7a",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-10-25T02:30:00+00:00",
+        "collector_since": "2023-10-25T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "POWRUSDT",
+        "first_archive_day": "2023-10-27",
+        "receipt_sha256": "97e41f21f05c555a29d744272fb29a2ac60b2899acdac7b7719fbcf7b64d25e3",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-10-27T02:30:00+00:00",
+        "collector_since": "2023-10-27T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "PYTHUSDT",
+        "first_archive_day": "2023-11-22",
+        "receipt_sha256": "e186151c52cee802cb063c073ccd3777aa2c5418eb82107c8a9e1d7653b8527b",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-22T14:30:00+00:00",
+        "collector_since": "2023-11-22T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "RIFUSDT",
+        "first_archive_day": "2023-10-21",
+        "receipt_sha256": "6094646e283b3c4f37315f52e3672e9efa79788814e071df9e465746b437ba8f",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-10-21T12:30:00+00:00",
+        "collector_since": "2023-10-21T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "RNDRUSDT",
+        "first_archive_day": "2023-02-03",
+        "receipt_sha256": "72686df29c05dd0629f6932b5de6fd5c0f196d4598df02703c6bca772ca0e390",
+        "collector_since": "2023-02-03T00:00:00.000Z",
+        "collector_to": "2024-07-18T00:00:00.000Z"
+      },
+      {
+        "symbol": "SEIUSDT",
+        "first_archive_day": "2023-08-17",
+        "receipt_sha256": "12965a9aba28d8cd77ebb737b9e18887f6899b1d1ca34e475e55c6610d072f01",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-08-17T02:30:00+00:00",
+        "collector_since": "2023-08-17T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "SNTUSDT",
+        "first_archive_day": "2023-11-02",
+        "receipt_sha256": "c081170c5b35cbfea8a672cdb40b0b82ac5d04876ffd493132b9df10748aa7f1",
+        "exchange_status": "SETTLING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-02T12:30:00+00:00",
+        "collector_since": "2023-11-02T00:00:00.000Z",
+        "collector_to": "2024-05-14T00:00:00.000Z"
+      },
+      {
+        "symbol": "STEEMUSDT",
+        "first_archive_day": "2023-11-08",
+        "receipt_sha256": "7bd49a63556e357bc1915b70a205ef346d2fbdcad9163ae89ad803f17ae3a9ec",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-08T14:30:00+00:00",
+        "collector_since": "2023-11-08T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "STPTUSDT",
+        "first_archive_day": "2023-10-18",
+        "receipt_sha256": "e66217ed44d801cd977448b023246e0ffb3c6deeb24352903bf7fa20ed873190",
+        "exchange_status": "SETTLING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-10-18T14:30:00+00:00",
+        "collector_since": "2023-10-18T00:00:00.000Z",
+        "collector_to": "2024-05-14T00:00:00.000Z"
+      },
+      {
+        "symbol": "STRAXUSDT",
+        "first_archive_day": "2023-10-11",
+        "receipt_sha256": "a281c5858389f50ab511568d6409d4e92ec1d9991aa4046e39880bc7f05de7f6",
+        "exchange_status": "SETTLING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-10-11T02:30:00+00:00",
+        "collector_since": "2023-10-11T00:00:00.000Z",
+        "collector_to": "2024-03-16T00:00:00.000Z"
+      },
+      {
+        "symbol": "SUIUSDT",
+        "first_archive_day": "2023-05-03",
+        "receipt_sha256": "00d8b259318b1941525a08e45b7fa752e4459f40781b69212216abc474096f0c",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-05-03T00:00:00+00:00",
+        "collector_since": "2023-05-03T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "SUPERUSDT",
+        "first_archive_day": "2023-11-26",
+        "receipt_sha256": "1202a3a7ee83fccf57cabec68b4faf962a14224bf4d17b7dddcaae0866a21133",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-26T13:00:00+00:00",
+        "collector_since": "2023-11-26T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "TIAUSDT",
+        "first_archive_day": "2023-10-31",
+        "receipt_sha256": "716aed41ae2b75e73a50d2abfb59f54c79a4c515b8a495fab6704446930f1a0b",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-10-31T16:30:00+00:00",
+        "collector_since": "2023-10-31T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "TOKENUSDT",
+        "first_archive_day": "2023-11-03",
+        "receipt_sha256": "14ffd7acbab4e4aaeb22ee68d12c32c51a5ec00f2dc0a7f0a2d51ace057483b3",
+        "exchange_status": "SETTLING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-03T15:00:00+00:00",
+        "collector_since": "2023-11-03T00:00:00.000Z",
+        "collector_to": "2025-12-07T00:00:00.000Z"
+      },
+      {
+        "symbol": "TWTUSDT",
+        "first_archive_day": "2023-11-03",
+        "receipt_sha256": "368f0cd90f8a7c248ee8b903f8f099defbab9921c4cb2c54ec84d6c95f69693d",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-03T14:30:00+00:00",
+        "collector_since": "2023-11-03T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "USTCUSDT",
+        "first_archive_day": "2023-11-27",
+        "receipt_sha256": "83c89fe3c2d28779040f068d1166679847a80361ac12dbc2066f4bcf73798e76",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-11-27T12:30:00+00:00",
+        "collector_since": "2023-11-27T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "WAXPUSDT",
+        "first_archive_day": "2023-10-18",
+        "receipt_sha256": "5e23b3219009a02ba28a4698f8be35cfca87856e0798fac0150bb512dcc655ad",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-10-18T14:45:00+00:00",
+        "collector_since": "2023-10-18T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "WLDUSDT",
+        "first_archive_day": "2023-07-24",
+        "receipt_sha256": "516a25efbd3d0a09e5fa6544841bdd5c0775882f595e059c1d3c3bf0ac01ce04",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-07-24T12:00:00+00:00",
+        "collector_since": "2023-07-24T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "XVGUSDT",
+        "first_archive_day": "2023-07-05",
+        "receipt_sha256": "aa137916eb96dbb8705aa4a389bc099b98482e98c298c346999e6c9f7395bdba",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-07-05T12:00:00+00:00",
+        "collector_since": "2023-07-05T00:00:00.000Z",
+        "collector_to": null
+      },
+      {
+        "symbol": "YGGUSDT",
+        "first_archive_day": "2023-08-05",
+        "receipt_sha256": "926e4bdef0e9a283e92d9e78b2644fb82669f719f086691fa2db162a8803a0c4",
+        "exchange_status": "TRADING",
+        "contract_type": "PERPETUAL",
+        "onboard_utc": "2023-08-05T03:30:00+00:00",
+        "collector_since": "2023-08-05T00:00:00.000Z",
+        "collector_to": null
+      }
+    ]
+  },
+  "metadata_exclusions_2023": {
+    "ACHUSDT": "A06 metadata admission failed",
+    "AGIXUSDT": "A06 metadata admission failed",
+    "AMBUSDT": "A06 metadata admission failed",
+    "ASTRUSDT": "A06 metadata admission failed",
+    "BLURUSDT": "A06 metadata admission failed",
+    "CFXUSDT": "A06 metadata admission failed",
+    "CKBUSDT": "A06 metadata admission failed",
+    "EDUUSDT": "A06 metadata admission failed",
+    "FETUSDT": "A06 metadata admission failed",
+    "FXSUSDT": "A06 metadata admission failed",
+    "GMXUSDT": "A06 metadata admission failed",
+    "HFTUSDT": "A06 metadata admission failed",
+    "HIGHUSDT": "A06 metadata admission failed",
+    "HOOKUSDT": "A06 metadata admission failed",
+    "IDEXUSDT": "A06 metadata admission failed",
+    "JOEUSDT": "A06 metadata admission failed",
+    "KEYUSDT": "A06 metadata admission failed",
+    "LEVERUSDT": "A06 metadata admission failed",
+    "LQTYUSDT": "A06 metadata admission failed",
+    "MAGICUSDT": "A06 metadata admission failed",
+    "MDTUSDT": "A06 metadata admission failed",
+    "MINAUSDT": "A06 metadata admission failed",
+    "PERPUSDT": "A06 metadata admission failed",
+    "PHBUSDT": "A06 metadata admission failed",
+    "RADUSDT": "A06 metadata admission failed",
+    "RDNTUSDT": "A06 metadata admission failed",
+    "SLPUSDT": "A06 metadata admission failed",
+    "SSVUSDT": "A06 metadata admission failed",
+    "STXUSDT": "A06 metadata admission failed",
+    "TRUUSDT": "A06 metadata admission failed",
+    "TUSDT": "A06 metadata admission failed",
+    "UMAUSDT": "A06 metadata admission failed",
+    "USDCUSDT": "A06 metadata admission failed",
+    "XVSUSDT": "A06 metadata admission failed"
+  },
+  "2023_window": {
+    "common_start": "2023-01-01",
+    "split": "2023-07-01",
+    "common_end": "2024-01-01"
+  },
+  "2023_last_launch_exclusive": "2023-12-27",
+  "factor": {
+    "minimum_visible_funding_observations": 2,
+    "visibility_buffer_minutes": 5,
+    "exclude_first_minutes": 5,
+    "minimum_first_day_rate_sum": -0.001,
+    "hypothesis": "At listing plus 24h, skipping coins whose already settled first-day funding implies shorts paid more than 10 bps reduces adverse carry enough to improve net returns versus shorting all eligible launches. Same size, entries, slot ordering, fees, 72h exits and stop rules."
+  },
+  "policy": "Add the disjoint 2023 year with no changes to the A06 gate or A05 execution. Also apply the fixed A06 gate to the already published 2025–26 A05 market cohort and the same 2026 cash reset. The original broad A05 economics were known, and all supplementation is retrospective. Preserve earlier results.",
+  "orders_enabled": false
+}
