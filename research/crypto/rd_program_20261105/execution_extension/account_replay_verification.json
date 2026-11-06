@@ -1,0 +1,26 @@
+{
+  "observed_at_utc": "2026-11-06T02:01:21.403943+00:00",
+  "stage": "synthetic_ordered_account_arithmetic",
+  "tests_passed": 42,
+  "failures": 0,
+  "command": ".venv-paper/bin/python -B -m unittest discover -s research/crypto/rd_program_20261105/execution_extension -p 'test_*.py' -q",
+  "source_hashes": {
+    "research/crypto/rd_program_20261105/execution_extension/test_account_replay.py": "aa0a5c53dbb7f97fa463e38dbe87e7b8fce23b63f4cf807554dec4c69b331a7c",
+    "research/crypto/rd_program_20261105/execution_extension/test_lifecycle.py": "cffd42cdabe8e0d9424a6b7089a7656c3f748906d1be88586f4fd67103021c8b",
+    "research/crypto/rd_program_20261105/execution_extension/test_native_evidence.py": "6c0d32d1c1eb2531629f59c775d56878019bc12194885d96acc754c4331d6012",
+    "research/crypto/rd_program_20261105/execution_extension/test_reservations.py": "8885495b4bd6c766ffb67db276fb259c491048ad8ec16e91ef7c5c852d41d358",
+    "research/crypto/rd_program_20261105/execution_extension/native_evidence.py": "435e7b004d6b974d311940f615a39ef0b77209c6a61ed90d113856c5f6283045",
+    "research/crypto/rd_program_20261105/execution_extension/lifecycle.py": "191ffe0234c4e71a9a7368a8c2aa0256aee4d154369654397f9e497814ceef6d",
+    "research/crypto/rd_program_20261105/execution_extension/account_replay.py": "90a967b04533b36ca7f9eb4bdb31dfb4f4f61e4db33819f8e2362fcb6a3abead",
+    "research/crypto/rd_program_20261105/execution_extension/reservations.py": "68c0654f17fd8fac8201f58698b0cf54dd6e4adfaa06306f9e27e43935002228",
+    "research/crypto/rd_program_20261105/p0/risk/rd1.py": "6d34d8f0817f3511dfa523e3fb42a51a9f62fa33c333d2aee7373bd82df730f0",
+    "research/crypto/rd_program_20261105/data_extension/book_replay.py": "521e9be9329efdedc8615e3af8c72cbc4a4756aeb1b285b336ba92156c7326c5"
+  },
+  "frozen_plan_validation_passed": true,
+  "actual_exchange_event_order_certified": false,
+  "historical_full_account_replay_completed": false,
+  "financial_runs": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "economic_qualified": false
+}
