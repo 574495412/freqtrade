@@ -1,0 +1,501 @@
+{
+  "verified_at_utc": "2026-11-06T02:51:40.692337+00:00",
+  "accounts": 24,
+  "all_checks_passed": true,
+  "official_engine_core_unchanged": true,
+  "data_receipts": {
+    "user_data/crypto_quant/spot_baseline_data_short_20261105_v001/data-receipts.json": {
+      "sha256": "d1c55449e6b38b67a577da3fcae4d2884e2af6274f27e12b0f147ffc6d0715ff",
+      "payloads_verified": 180
+    },
+    "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json": {
+      "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e",
+      "payloads_verified": 280
+    },
+    "user_data/crypto_quant/spot_baseline_data_long_20261105_v001/data-receipts.json": {
+      "sha256": "9df7f6e687ee2563698bbef2e69b772b16b50550e1c66479470fec360cc26e86",
+      "payloads_verified": 180
+    },
+    "research/crypto/strategy_comparison_wide_20261105/data-receipts.json": {
+      "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47",
+      "payloads_verified": 280
+    }
+  },
+  "per_account": [
+    {
+      "run_id": "OFFICIAL_ADXMomentum_spot_S_base",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "d31cf42b5e12b254e654e5d05daaf5e7ba2dc87cf3ced5afefc1b4fbde328453"
+    },
+    {
+      "run_id": "OFFICIAL_ADXMomentum_spot_S_stress",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "783ad166087584fea2342597a893c7b2131561670d28946e0ce4766a613de400"
+    },
+    {
+      "run_id": "OFFICIAL_MACDStrategy_crossed_spot_S_base",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "1c1be5ea13296af41fc9be83b8de1f81fc520f713448de8b671e13399373d631"
+    },
+    {
+      "run_id": "OFFICIAL_MACDStrategy_crossed_spot_S_stress",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "d2d883ae5e5cd391c315cdc6fbee99eb0aa46bed6e29a87e00f9e3aa15e21df4"
+    },
+    {
+      "run_id": "OFFICIAL_AverageStrategy_spot_S_base",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "6118271f8525f52207fc1da182160d90c45b3a161b4e5d457ff54b809409124f"
+    },
+    {
+      "run_id": "OFFICIAL_AverageStrategy_spot_S_stress",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "47e8759a0c3e3340b615ae362500030b736a552c68e3cf5467a1775901f34718"
+    },
+    {
+      "run_id": "OFFICIAL_ADXMomentum_futures_S_base",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "b8426644010304231c3f134bb133c81c39454509e0bdf667a82e65a0b6b1dade"
+    },
+    {
+      "run_id": "OFFICIAL_ADXMomentum_futures_S_stress",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "e66f04a699226261ae6b1c0bf566abdb4018538921395de71e7cb88c1bc9a171"
+    },
+    {
+      "run_id": "OFFICIAL_MACDStrategy_crossed_futures_S_base",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "1be044204128c16228d81c76e8ac0a623863a6c9567f466629f3c06f346d3f36"
+    },
+    {
+      "run_id": "OFFICIAL_MACDStrategy_crossed_futures_S_stress",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "61a96198a0f0f076934893812c85d75a645a3ac129bc31c372218f21e9171031"
+    },
+    {
+      "run_id": "OFFICIAL_AverageStrategy_futures_S_base",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "92c81f31436406928f7c305532a59f455be56dba1b6c6907fc021059a1b33abc"
+    },
+    {
+      "run_id": "OFFICIAL_AverageStrategy_futures_S_stress",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "adff782bfd8d15c5f9f931eb13ae42cd9147311b7de02fa151b420082f1c70f1"
+    },
+    {
+      "run_id": "OFFICIAL_ADXMomentum_spot_L_base",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "279fe75613ef6249ea023d325f5121fb5ff0e36fdbd97bcfa883974e5b290459"
+    },
+    {
+      "run_id": "OFFICIAL_ADXMomentum_spot_L_stress",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "babe648ca0133e470ce3cb7605cbb01e52ef9154fc6ae47244800e523140267a"
+    },
+    {
+      "run_id": "OFFICIAL_MACDStrategy_crossed_spot_L_base",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "595ac999d190828774300782c45661b6ec3f77d0c0250d2b4be0a1334d69e853"
+    },
+    {
+      "run_id": "OFFICIAL_MACDStrategy_crossed_spot_L_stress",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "8149feadf9b76dcd720b20e6b50ff42422bf0f6f224fc9d1ae725eb4ca1ab1bc"
+    },
+    {
+      "run_id": "OFFICIAL_AverageStrategy_spot_L_base",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "e72586fc4f4440c4c3c9d80aeefe1a00153760eb452e8192693002b08ccf60da"
+    },
+    {
+      "run_id": "OFFICIAL_AverageStrategy_spot_L_stress",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "2c3185e026b98bfdba87472d2539821b89b8c811bd8d0c78366980d346f8affa"
+    },
+    {
+      "run_id": "OFFICIAL_ADXMomentum_futures_L_base",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "19d9dbb76ba584a03203cc2630380c6adebba3e8af931bffdd0131514c8e6395"
+    },
+    {
+      "run_id": "OFFICIAL_ADXMomentum_futures_L_stress",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "a2efc99069bf9eaab23e1638338beb33e4797bd7abcc3c056a129370fedd1959"
+    },
+    {
+      "run_id": "OFFICIAL_MACDStrategy_crossed_futures_L_base",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "54cc8006fc10c334e558a1f5f63946f87dca8433a33cd909ed55ba0e8c564e11"
+    },
+    {
+      "run_id": "OFFICIAL_MACDStrategy_crossed_futures_L_stress",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "ee1797f3ed85362feacfca80c048c1899f3dfc5deb5ba2ff5bdf43c7759db2e3"
+    },
+    {
+      "run_id": "OFFICIAL_AverageStrategy_futures_L_base",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "0739174959d10de7021a973182ff4a2c93a32ca55494f1719462860e0a59716a"
+    },
+    {
+      "run_id": "OFFICIAL_AverageStrategy_futures_L_stress",
+      "checks": {
+        "initial_balance_1000": true,
+        "fixed_pairlist_and_order": true,
+        "original_timeframe": true,
+        "original_stoploss": true,
+        "original_roi": true,
+        "cost_scenario": true,
+        "max_open_trades": true,
+        "original_stake_policy": true,
+        "one_x": true,
+        "long_only": true,
+        "native_final_identity": true,
+        "exported_upstream_source": true
+      },
+      "archive_sha256": "2676214b7617ef52b579713346b5596c4b3ab3d9feb525f7a5414b92f47dc5b5"
+    }
+  ],
+  "retained_configuration_failures": [
+    {
+      "path": "user_data/crypto_quant/official_factor_20261106/accounts/OFFICIAL_ADXMomentum_futures_S_base/receipt.json",
+      "sha256": "a87ca9a419caeb5b91881565256f19e1a46769dd74a47b3da419316d59a584d4",
+      "status": "no_exported_native_result",
+      "original_exit_code": 0
+    },
+    {
+      "path": "user_data/crypto_quant/official_factor_20261106/accounts/OFFICIAL_ADXMomentum_futures_S_stress/receipt.json",
+      "sha256": "215ba9aebf112d96bce77d997a157f1af60d3c0938f4cfbdc06710de809a9d34",
+      "status": "no_exported_native_result",
+      "original_exit_code": 0
+    },
+    {
+      "path": "user_data/crypto_quant/official_factor_20261106/accounts/OFFICIAL_AverageStrategy_futures_S_base/receipt.json",
+      "sha256": "9f9bb483997737f1255cca7932e01ed08ee3ad8a4fbd662ef707346bdd5adc07",
+      "status": "no_exported_native_result",
+      "original_exit_code": 0
+    },
+    {
+      "path": "user_data/crypto_quant/official_factor_20261106/accounts/OFFICIAL_AverageStrategy_futures_S_stress/receipt.json",
+      "sha256": "947142190f9f786b89c4437dee8a913f93976ef610f86920fe0284ade6b98daa",
+      "status": "no_exported_native_result",
+      "original_exit_code": 0
+    },
+    {
+      "path": "user_data/crypto_quant/official_factor_20261106/accounts/OFFICIAL_MACDStrategy_crossed_futures_S_base/receipt.json",
+      "sha256": "1de2b35dfd8703e62c29ea5faa3c0d56ae577b9d9215329e9d56de850d4b5c1a",
+      "status": "no_exported_native_result",
+      "original_exit_code": 0
+    },
+    {
+      "path": "user_data/crypto_quant/official_factor_20261106/accounts/OFFICIAL_MACDStrategy_crossed_futures_S_stress/receipt.json",
+      "sha256": "a3619ae85a0a54fece48dd6c09bd302099f4ff829f418d371a5faf1d4a80471b",
+      "status": "no_exported_native_result",
+      "original_exit_code": 0
+    }
+  ],
+  "new_causality_diagnostics_run": 0,
+  "profitability_qualified": false,
+  "production_eligible": false,
+  "orders_enabled": false,
+  "scope": "Official source/config/result identity and input immutability only"
+}

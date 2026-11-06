@@ -47,6 +47,10 @@ def collect():
                 if key in stats:row[key]=stats[key]
             row['native_pair_result_count']=sum(x.get('key')!='TOTAL' for x in stats.get('results_per_pair',[]))
             row['requested_pair_count']=len(plan['markets'][run['market']]['pairs'])
+            row['native_pairlist']=stats.get('pairlist',[])
+            row['frozen_pairlist_match']=row['native_pairlist']==plan['markets'][run['market']]['pairs']
+            row['native_wallet_stats']=stats.get('wallet_stats',{})
+            row['drawdown_scope']='max_drawdown_account uses closed-trade profit_abs; native_wallet_stats is separate native sampled wallet valuation, not certified executable 5m NAV'
             row['resolved_timeframe']=cfg.get('timeframe')
             row['resolved_fee']=cfg.get('fee')
             row['native_exit_reasons']=stats.get('exit_reason_summary',[])
@@ -58,7 +62,13 @@ def collect():
             row['archive']=str(archive.relative_to(ROOT));row['archive_sha256']=sha(archive)
             row['economic_qualified']=False
         rows.append(row)
+    failures=[]
+    for receipt in sorted((RUNTIME/'accounts').glob('*/receipt.json')):
+        if not list(receipt.parent.glob('*.zip')):
+            failures.append({'path':str(receipt.relative_to(ROOT)),'sha256':sha(receipt),
+                             'status':'no_exported_native_result','original_exit_code':json.loads(receipt.read_text())['returncode']})
     return {'observed_at_utc':datetime.now(timezone.utc).isoformat(),'registered_accounts':24,'completed_or_failed':len(rows),
+            'retained_failed_attempts':failures,
             'scope':'Official native cost-scenario exports; no executable-depth, independent OOS or live profitability claim',
             'native_endpoints_may_differ_by_strategy_timeframe':True,'production_eligible':False,'rows':rows}
 
