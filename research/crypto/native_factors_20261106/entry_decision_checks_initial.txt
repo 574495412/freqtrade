@@ -1,0 +1,109 @@
+/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/AverageStrategy.py:9: FutureWarning: 'freqtrade.vendor.qtpylib.indicators' is deprecated and will be removed in a future release. Import from technical instead - either the module (`from technical import qtpylib`) or a single function (`from technical.qtpylib import crossed_above`).
+  import freqtrade.vendor.qtpylib.indicators as qtpylib
+test_durable_decision_ack_failure_sends_no_request (test_native_factor_entries.FixedEntryTests.test_durable_decision_ack_failure_sends_no_request) ... ERROR
+test_f2_actual_ema_signal_scales_the_unscaled_budget_once (test_native_factor_entries.FixedEntryTests.test_f2_actual_ema_signal_scales_the_unscaled_budget_once) ... ERROR
+test_futures_mark_sizes_risk_independently_of_entry_ask (test_native_factor_entries.FixedEntryTests.test_futures_mark_sizes_risk_independently_of_entry_ask) ... ERROR
+test_missing_cross_section_and_nonboundary_do_not_place_orders (test_native_factor_entries.FixedEntryTests.test_missing_cross_section_and_nonboundary_do_not_place_orders) ... ERROR
+test_native_wallet_callback_rejects_increased_stake_and_restores_after_failure (test_native_factor_entries.FixedEntryTests.test_native_wallet_callback_rejects_increased_stake_and_restores_after_failure) ... ERROR
+test_small_liquidity_budget_skips_instead_of_native_minimum_clamp (test_native_factor_entries.FixedEntryTests.test_small_liquidity_budget_skips_instead_of_native_minimum_clamp) ... ERROR
+test_spot_fixed_f1_uses_computed_risk_stake_actual_wallet_and_native_callbacks (test_native_factor_entries.FixedEntryTests.test_spot_fixed_f1_uses_computed_risk_stake_actual_wallet_and_native_callbacks) ... ERROR
+test_spread_stale_book_expired_rules_and_missing_futures_tiers_reject (test_native_factor_entries.FixedEntryTests.test_spread_stale_book_expired_rules_and_missing_futures_tiers_reject) ... ok
+
+======================================================================
+ERROR: test_durable_decision_ack_failure_sends_no_request (test_native_factor_entries.FixedEntryTests.test_durable_decision_ack_failure_sends_no_request)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_entries.py", line 174, in test_durable_decision_ack_failure_sends_no_request
+    with self.assertRaises(StateError):execute_fixed_entry(gate,ex,s,checked,b,l,'r1',now)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_entries.py", line 208, in execute_fixed_entry
+    signal,signal_proof = fixed_entry_signal(strategy,liquidity.pair,inputs,now,risk.plan['markets'][risk.market]['pairs'])
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_entries.py", line 62, in fixed_entry_signal
+    raise RiskError('Entry strategy differs from fixed universe or contract')
+rd1.RiskError: Entry strategy differs from fixed universe or contract
+
+======================================================================
+ERROR: test_f2_actual_ema_signal_scales_the_unscaled_budget_once (test_native_factor_entries.FixedEntryTests.test_f2_actual_ema_signal_scales_the_unscaled_budget_once)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_entries.py", line 107, in test_f2_actual_ema_signal_scales_the_unscaled_budget_once
+    signal,proof=fixed_entry_signal(s,l.pair,b,now,provider.risk.plan['markets']['spot']['pairs'])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_entries.py", line 62, in fixed_entry_signal
+    raise RiskError('Entry strategy differs from fixed universe or contract')
+rd1.RiskError: Entry strategy differs from fixed universe or contract
+
+======================================================================
+ERROR: test_futures_mark_sizes_risk_independently_of_entry_ask (test_native_factor_entries.FixedEntryTests.test_futures_mark_sizes_risk_independently_of_entry_ask)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_entries.py", line 98, in test_futures_mark_sizes_risk_independently_of_entry_ask
+    execute_fixed_entry(gate,ex,s,checked,b,l,'r1',now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_entries.py", line 208, in execute_fixed_entry
+    signal,signal_proof = fixed_entry_signal(strategy,liquidity.pair,inputs,now,risk.plan['markets'][risk.market]['pairs'])
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_entries.py", line 62, in fixed_entry_signal
+    raise RiskError('Entry strategy differs from fixed universe or contract')
+rd1.RiskError: Entry strategy differs from fixed universe or contract
+
+======================================================================
+ERROR: test_missing_cross_section_and_nonboundary_do_not_place_orders (test_native_factor_entries.FixedEntryTests.test_missing_cross_section_and_nonboundary_do_not_place_orders)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_entries.py", line 123, in test_missing_cross_section_and_nonboundary_do_not_place_orders
+    result=execute_fixed_entry(gate,ex,s,checked,replace(b,hourly=hours),l,'r1',now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_entries.py", line 208, in execute_fixed_entry
+    signal,signal_proof = fixed_entry_signal(strategy,liquidity.pair,inputs,now,risk.plan['markets'][risk.market]['pairs'])
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_entries.py", line 62, in fixed_entry_signal
+    raise RiskError('Entry strategy differs from fixed universe or contract')
+rd1.RiskError: Entry strategy differs from fixed universe or contract
+
+======================================================================
+ERROR: test_native_wallet_callback_rejects_increased_stake_and_restores_after_failure (test_native_factor_entries.FixedEntryTests.test_native_wallet_callback_rejects_increased_stake_and_restores_after_failure)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_entries.py", line 159, in test_native_wallet_callback_rejects_increased_stake_and_restores_after_failure
+    result=execute_fixed_entry(gate,ex,s,checked,b,l,'r1',now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_entries.py", line 208, in execute_fixed_entry
+    signal,signal_proof = fixed_entry_signal(strategy,liquidity.pair,inputs,now,risk.plan['markets'][risk.market]['pairs'])
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_entries.py", line 62, in fixed_entry_signal
+    raise RiskError('Entry strategy differs from fixed universe or contract')
+rd1.RiskError: Entry strategy differs from fixed universe or contract
+
+======================================================================
+ERROR: test_small_liquidity_budget_skips_instead_of_native_minimum_clamp (test_native_factor_entries.FixedEntryTests.test_small_liquidity_budget_skips_instead_of_native_minimum_clamp)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_entries.py", line 134, in test_small_liquidity_budget_skips_instead_of_native_minimum_clamp
+    result=execute_fixed_entry(gate,ex,s,checked,b,l,'r1',now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_entries.py", line 208, in execute_fixed_entry
+    signal,signal_proof = fixed_entry_signal(strategy,liquidity.pair,inputs,now,risk.plan['markets'][risk.market]['pairs'])
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_entries.py", line 62, in fixed_entry_signal
+    raise RiskError('Entry strategy differs from fixed universe or contract')
+rd1.RiskError: Entry strategy differs from fixed universe or contract
+
+======================================================================
+ERROR: test_spot_fixed_f1_uses_computed_risk_stake_actual_wallet_and_native_callbacks (test_native_factor_entries.FixedEntryTests.test_spot_fixed_f1_uses_computed_risk_stake_actual_wallet_and_native_callbacks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_entries.py", line 74, in test_spot_fixed_f1_uses_computed_risk_stake_actual_wallet_and_native_callbacks
+    result=execute_fixed_entry(gate,ex,s,checked,b,l,'r1',now)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_entries.py", line 208, in execute_fixed_entry
+    signal,signal_proof = fixed_entry_signal(strategy,liquidity.pair,inputs,now,risk.plan['markets'][risk.market]['pairs'])
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_entries.py", line 62, in fixed_entry_signal
+    raise RiskError('Entry strategy differs from fixed universe or contract')
+rd1.RiskError: Entry strategy differs from fixed universe or contract
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.380s
+
+FAILED (errors=7)
