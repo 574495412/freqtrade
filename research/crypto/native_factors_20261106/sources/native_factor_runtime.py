@@ -1,8 +1,8 @@
-"""Whole-account initial-order batches and serial fixed-factor entry scheduling.
+"""Whole-account entry/terminal-exit/funding batches and fixed entry scheduling.
 
 All inputs are explicit local evidence. Existing native account/guard/lifecycle
 journals remain authoritative; no generated receipts, polling or live transport.
-This does not replace the separate cancellation/exit runtime or enable bot_start.
+Cancellation dispatch and the full main loop remain separate; bot_start stays disabled.
 """
 from dataclasses import asdict
 from decimal import Decimal as D
@@ -12,6 +12,7 @@ from freqtrade.persistence import Trade
 from native_after_fill import OfflineProtectionExchange
 from native_evidence import CapturedOrder, decimal_text
 from native_factor_entries import execute_fixed_entry, fixed_entry_signal
+from native_exits import NativeRiskExit
 from native_snapshot import EPS
 from rd1 import RiskError, StateError, aware, dec, digest, primitive, stamp
 
@@ -36,11 +37,19 @@ class NativeFactorRuntime:
 
     def observe_entries(self, batch_id, evidence, receipt, quote_receipts, reports, events, bot, now,
                         *, complete_sequence, complete_from_inception, funding_complete):
-        """Apply every initial-order report before a single full-account checkpoint.
+        return self.observe_account(batch_id,evidence,receipt,quote_receipts,reports,events,bot,now,
+            complete_sequence=complete_sequence,complete_from_inception=complete_from_inception,
+            funding_complete=funding_complete,entry_only=True)
+
+    def observe_account(self, batch_id, evidence, receipt, quote_receipts, reports, events, bot, now,
+                        *, complete_sequence, complete_from_inception, funding_complete,
+                        exit_controller=None, exit_actions=(), entry_only=False):
+        """Apply all supported reports before one complete account checkpoint.
 
 Reports cover ALL unresolved bound initial requests, even unchanged open orders.
-Partial fills stay protection-pending; only fully reconciled closed fills release
-virtual reservations. Cancellation receipts use NativeRiskRuntime instead.
+        Initial partials remain pending; positive terminal exits use their existing
+        controller. Funding is source-ordered and distinct from wallet settlement.
+        Cancellation receipts still use NativeRiskRuntime instead.
 """
         now=aware(now);self._ready(now)
         if not isinstance(batch_id,str) or not batch_id:
@@ -49,10 +58,21 @@ virtual reservations. Cancellation receipts use NativeRiskRuntime instead.
                 or bot.exchange.trading_mode.value!=self.risk.market):
             raise RiskError('Batch requires explicit matching offline protection rules')
         events=tuple(events);quote_receipts=tuple(quote_receipts)
+        exit_actions=tuple(exit_actions)
+        if exit_controller is not None and (type(exit_controller) is not NativeRiskExit
+                or exit_controller.gate is not self.gate or exit_controller.wallet is not self.wallet):
+            raise RiskError('Account batch exit controller differs from the registered account')
+        if (exit_actions and exit_controller is None) or len(set(exit_actions))!=len(exit_actions):
+            raise RiskError('Unique registered exit actions required')
+        exit_reports={} if exit_controller is None else {
+            aid:dict(response=exit_controller.s['actions'][aid].get('response'),
+                     received_at=exit_controller.s['actions'][aid].get('received_at')) for aid in exit_actions}
         payload=primitive(dict(evidence=asdict(evidence),receipt=asdict(receipt),quotes=[asdict(q) for q in quote_receipts],
             reports={k:asdict(v) for k,v in reports.items()},events=events,now=stamp(now),
             complete_sequence=complete_sequence,complete_from_inception=complete_from_inception,
-            funding_complete=funding_complete,rules_hash=bot.exchange.rules_hash))
+            funding_complete=funding_complete,rules_hash=bot.exchange.rules_hash,
+            exit_reports=exit_reports,exit_controller=None if exit_controller is None else exit_controller.store.identity,
+            entry_only=entry_only))
         signature=digest(payload)
         active=self.gate.s.get('pending_account_batch')
         if active not in (None,batch_id):raise StateError('Resume the pending account batch before another observation')
@@ -64,7 +84,7 @@ virtual reservations. Cancellation receipts use NativeRiskRuntime instead.
         # A newly observed but invalid/incomplete account must revoke the old
         # wallet permission too. Corrected observations use a fresh batch ID.
         bot.wallets=self.wallet.stage('batch-'+batch_id,receipt,evidence,now)
-        if any(e.get('kind')!='fill' or dec(e.get('signed_quantity','0'))<=0 for e in events):
+        if entry_only and (exit_actions or any(e.get('kind')!='fill' or dec(e.get('signed_quantity','0'))<=0 for e in events)):
             raise RiskError('Initial-order batch accepts positive entry fills only')
         expected={rid for rid in self.gate.s['requests']
             if self.gate.lifecycle.s['requests'][rid]['lifecycle']['state']!='TERMINAL_RECONCILED'}
@@ -86,9 +106,38 @@ virtual reservations. Cancellation receipts use NativeRiskRuntime instead.
                 raise RiskError('Batch needs matching initial open or fully filled native reports')
             envelope.normalize()
             bindings[rid]=b
-        if any(e.get('native_trade_id') not in {b['trade_id'] for b in bindings.values()} for e in events):
-            raise RiskError('Financial events need a report in the same complete batch')
+        exits={}
+        if exit_controller is not None:
+            exit_controller._ready(now)
+            expected_exits={aid for aid,item in exit_controller.s['actions'].items() if item['state']!='TERMINAL_RECONCILED'}
+            if previous is None and set(exit_actions)!=expected_exits:
+                raise RiskError('Batch must cover every unresolved native exit action')
+            for aid in exit_actions:
+                item=exit_controller.s['actions'][aid];envelope=exit_controller.envelope(aid,now);raw=json.loads(envelope.payload_json)
+                if item['native_binding'] is None:
+                    raise RiskError('Recover native exit binding before batching')
+                if (raw['status']=='open' and dec(decimal_text(raw['filled']))>0) or (raw['status']!='open' and dec(decimal_text(raw['filled']))<=0):
+                    raise RiskError('Open partial and zero-fill terminal exit batch application is not implemented')
+                exits[aid]=(item,envelope)
+        entry_orders={(b['trade_id'],b['venue_order_id']) for b in bindings.values()}
+        exit_orders={(item['trade_id'],item['native_binding']['order_id']) for item,_ in exits.values()}
+        exit_started=set()
+        for event in events:
+            tid=event.get('native_trade_id');kind=event.get('kind')
+            if kind=='fill':
+                q=dec(event.get('signed_quantity','0'));order=(tid,event.get('order_id'))
+                if not ((q>0 and order in entry_orders) or (q<0 and order in exit_orders)):
+                    raise RiskError('Financial fill needs its matching entry or exit report in this batch')
+                if q<0:exit_started.add(tid)
+            elif kind in ('funding_accrual','funding_settlement'):
+                if self.risk.market!='futures' or tid in exit_started:
+                    raise RiskError('Funding must be futures and precede same-batch exit fills; split source checkpoints')
+            else:raise RiskError('Unsupported whole-account financial event')
         batch=previous or dict(signature=signature,input=payload,state='PREPARED',applied={})
+        if previous is None:
+            funding_trades={e['native_trade_id'] for e in events if e['kind'] in ('funding_accrual','funding_settlement')}
+            before=self._funding_totals()
+            batch['funding']={str(tid):dict(credit_before=str(before.get(tid,D(0))),state='PREPARED') for tid in funding_trades}
         self.gate.s.setdefault('account_batches',{})[batch_id]=batch
         self.gate.s['pending_account_batch']=batch_id
         self.gate._persist()  # Durable entry fence before financial/native mutations.
@@ -120,17 +169,63 @@ virtual reservations. Cancellation receipts use NativeRiskRuntime instead.
                 envelope.normalize(trade.select_order_by_order_id(raw['id']))
                 batch['applied'][rid]='UNFILLED_OPEN'
             self.gate._persist()
+        self._apply_funding(batch)
+        for aid,(item,envelope) in exits.items():
+            raw=json.loads(envelope.payload_json)
+            if raw['status']=='open':
+                trade=Trade.session.get(Trade,item['trade_id'])
+                envelope.normalize(trade.select_order_by_order_id(item['native_binding']['order_id']))
+                batch['applied']['exit:'+aid]='UNFILLED_OPEN'
+            else:
+                result=exit_controller.apply_filled(aid,bot,now)
+                batch['applied']['exit:'+aid]=result['state']
+            self.gate._persist()
         checked,audit=self.provider.checkpoint(evidence,quote_receipts,now,complete_sequence=complete_sequence,
             complete_from_inception=complete_from_inception,funding_complete=funding_complete)
         self.wallet.confirm(checked,now)
         for rid in ordered:
             self.gate.reconcile_native(rid,'batch-life-'+digest([batch_id,rid])[:28],reports[rid],checked,now,
                 fills=self._fills(bindings[rid]['trade_id']),fills_complete=True,sequence_basis='source_ordered')
+        for aid,(_,envelope) in exits.items():
+            if envelope.normalize()['status']!='open':exit_controller.reconcile(aid,checked,now)
         decision=self.risk.evaluate(checked.snapshot,now)
         batch.update(state='COMPLETE',checkpoint_cursor=checked.snapshot.cursor,audit=audit,decision=primitive(asdict(decision)))
         self.gate.s['pending_account_batch']=None
         self.gate._persist()  # Failure poisons gate; no earlier child receipt releases entry permission.
         return dict(evidence=checked,audit=audit,decision=decision,protection=dict(batch['applied']))
+
+    def _funding_totals(self):
+        unique={}
+        for event in self.provider.s['events']:
+            if event['kind'] in ('funding_accrual','funding_settlement'):
+                unique[event['funding_id']]=(event['native_trade_id'],dec(event['cost_quote']))
+        totals={}
+        for tid,cost in unique.values():totals[tid]=totals.get(tid,D(0))-cost
+        return totals
+
+    def _apply_funding(self,batch):
+        """Use native running credit, preserving funding already assigned to orders."""
+        totals=self._funding_totals()
+        for key,record in batch.get('funding',{}).items():
+            tid=int(key);trade=Trade.session.get(Trade,tid)
+            if trade is None or trade.trading_mode.value!='futures':
+                raise RiskError('Funding batch requires an existing native futures campaign')
+            target=totals[tid];allocated=sum((dec(decimal_text(o.funding_fee)) for o in trade.orders if o.funding_fee is not None),D(0))
+            actual=D(0) if trade.funding_fees is None else dec(decimal_text(trade.funding_fees))
+            running=D(0) if trade.funding_fee_running is None else dec(decimal_text(trade.funding_fee_running))
+            allowed=(dec(record['credit_before']),target) if 'credit_target' in record else (dec(record['credit_before']),)
+            if (min(abs(actual-value) for value in allowed)>EPS
+                    or abs(actual-allocated-running)>EPS):
+                raise RiskError('Native funding changed outside acknowledged source transition')
+            if not trade.is_open and abs(actual-target)>EPS:
+                raise RiskError('New post-close funding cost needs explicit closed-profit reconciliation')
+            record.update(credit_target=str(target),allocated_credit=str(allocated),running_credit_target=str(target-allocated))
+            self.gate._persist()
+            trade.set_funding_fees(float(target-allocated))
+            Trade.commit()
+            if abs(dec(decimal_text(trade.funding_fees))-target)>EPS:
+                raise RiskError('Native funding total differs after source synchronization')
+            record['state']='NATIVE_APPLIED';self.gate._persist()
 
     def entry_step(self, strategy, inputs, liquidity, exchange, now):
         """At most one native submission, then require a new whole-account batch.

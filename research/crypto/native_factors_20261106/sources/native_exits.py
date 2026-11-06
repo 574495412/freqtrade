@@ -197,7 +197,7 @@ class NativeRiskExit:
 
     def dispatch(self,trade,evidence,exchange,bot,now,*,limit,strategy_inputs=None,reduction_inputs=None):
         with self._mutex:
-            self._ready(now); self.wallet.require_entry_clear(now)
+            self._ready(now); self.gate.require_account_batch_clear(); self.wallet.require_entry_clear(now)
             if type(exchange) is not LocalExitExchange or exchange.controller is not self or bot.wallets is not self.wallet.wallets:
                 raise RiskError("Exit bot/exchange/wallet binding differs")
             if (not trade.is_open or trade.amount <= 0 or trade.is_short or trade.leverage != 1
@@ -354,10 +354,13 @@ class NativeRiskExit:
 
     def reconcile(self,action_id,evidence,now):
         with self._mutex:
-            self._ready(now); self.wallet.require_entry_clear(now);self.gate.after_fill_guard.require_entry_clear()
+            self._ready(now); self.wallet.require_entry_clear(now)
             item=self.s["actions"][action_id]
             if item["state"] not in ("NATIVE_FILLED_ACCOUNT_PENDING","TERMINAL_RECONCILED"):
                 raise StateError("Exit native fill application remains unconfirmed")
+            # Other campaigns may still have open partial entries. Verify this
+            # exit's committed protection without granting global entry permission.
+            self.gate.after_fill_guard.verify_committed("exit-"+action_id+"-"+str(item["attempt"]))
             checkpoint=self.provider.s["checkpoints"].get(str(evidence.snapshot.cursor))
             if (checkpoint is None or checkpoint["output"] != primitive(asdict(evidence))
                     or self.provider.s["last_cursor"] != evidence.snapshot.cursor):

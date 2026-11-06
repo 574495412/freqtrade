@@ -1,0 +1,59 @@
+/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/AverageStrategy.py:9: FutureWarning: 'freqtrade.vendor.qtpylib.indicators' is deprecated and will be removed in a future release. Import from technical instead - either the module (`from technical import qtpylib`) or a single function (`from technical.qtpylib import crossed_above`).
+  import freqtrade.vendor.qtpylib.indicators as qtpylib
+test_accrual_then_settlement_changes_cash_once_and_preserves_nav (test_native_account_runtime.AccountRuntimeTests.test_accrual_then_settlement_changes_cash_once_and_preserves_nav) ... ok
+test_funding_native_commit_ack_loss_resumes_without_double_charge (test_native_account_runtime.AccountRuntimeTests.test_funding_native_commit_ack_loss_resumes_without_double_charge) ... ok
+test_funding_partial_exit_new_credit_and_final_exit_preserve_full_economics (test_native_account_runtime.AccountRuntimeTests.test_funding_partial_exit_new_credit_and_final_exit_preserve_full_economics) ... ok
+test_incomplete_exit_inventory_and_spot_funding_revoke_old_permission (test_native_account_runtime.AccountRuntimeTests.test_incomplete_exit_inventory_and_spot_funding_revoke_old_permission) ... ok
+test_same_batch_funding_and_full_exit_recover_then_settle_after_close (test_native_account_runtime.AccountRuntimeTests.test_same_batch_funding_and_full_exit_recover_then_settle_after_close) ... ok
+test_wrong_native_funding_is_not_overwritten_by_source_batch (test_native_account_runtime.AccountRuntimeTests.test_wrong_native_funding_is_not_overwritten_by_source_batch) ... ok
+test_terminal_exit_reconciles_while_another_entry_remains_partial (test_native_account_runtime.MultiAccountRuntimeTests.test_terminal_exit_reconciles_while_another_entry_remains_partial) ... ERROR
+test_three_factor_campaigns_funding_and_one_exit_preserve_other_two_holdings (test_native_account_runtime.MultiAccountRuntimeTests.test_three_factor_campaigns_funding_and_one_exit_preserve_other_two_holdings) ... FAIL
+
+======================================================================
+ERROR: test_terminal_exit_reconciles_while_another_entry_remains_partial (test_native_account_runtime.MultiAccountRuntimeTests.test_terminal_exit_reconciles_while_another_entry_remains_partial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/freqtrade/exchange/exchange.py", line 1549, in create_order
+    order = self._api.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/.venv-paper/lib/python3.12/site-packages/ccxt/binance.py", line 6769, in create_order
+    market = self.market(symbol)
+             ^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/.venv-paper/lib/python3.12/site-packages/ccxt/binance.py", line 2961, in market
+    raise BadSymbol(self.id + ' does not have market symbol ' + symbol)
+ccxt.base.errors.BadSymbol: binance does not have market symbol ETH/USDT:USDT
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account_runtime.py", line 299, in test_terminal_exit_reconciles_while_another_entry_remains_partial
+    checked=self.general(c,'mixed-drawdown',e,reports={rid:report})['evidence'];aid,ex,venue=self.dispatch(c,checked,now)
+                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account_runtime.py", line 115, in dispatch
+    self.assertEqual(c.exits.dispatch(c.trade,e,ex,c.bot,now,limit='5'),aid)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_exits.py", line 301, in dispatch
+    result = FreqtradeBot.execute_trade_exit(proxy,trade,rate,exit_check,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/freqtrade/freqtradebot.py", line 2345, in execute_trade_exit
+    order = self.exchange.create_order(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_exits.py", line 71, in create_order
+    result = super().create_order(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/freqtrade/exchange/exchange.py", line 1588, in create_order
+    raise TemporaryError(
+freqtrade.exceptions.TemporaryError: Could not place sell order due to BadSymbol. Message: binance does not have market symbol ETH/USDT:USDT
+
+======================================================================
+FAIL: test_three_factor_campaigns_funding_and_one_exit_preserve_other_two_holdings (test_native_account_runtime.MultiAccountRuntimeTests.test_three_factor_campaigns_funding_and_one_exit_preserve_other_two_holdings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account_runtime.py", line 282, in test_three_factor_campaigns_funding_and_one_exit_preserve_other_two_holdings
+    self.assertEqual(sum(p.quantity for p in result['evidence'].snapshot.positions),D(19))
+AssertionError: Decimal('19.36') != Decimal('19')
+
+----------------------------------------------------------------------
+Ran 8 tests in 29.586s
+
+FAILED (failures=1, errors=1)
