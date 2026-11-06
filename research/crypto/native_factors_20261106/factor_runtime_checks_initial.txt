@@ -1,0 +1,246 @@
+/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/AverageStrategy.py:9: FutureWarning: 'freqtrade.vendor.qtpylib.indicators' is deprecated and will be removed in a future release. Import from technical instead - either the module (`from technical import qtpylib`) or a single function (`from technical.qtpylib import crossed_above`).
+  import freqtrade.vendor.qtpylib.indicators as qtpylib
+test_checkpoint_failure_after_all_native_updates_resumes_without_fill_callbacks (test_native_factor_runtime.FactorRuntimeTests.test_checkpoint_failure_after_all_native_updates_resumes_without_fill_callbacks) ... ERROR
+test_futures_three_fixed_entries_separate_cash_collateral_and_fee_nav (test_native_factor_runtime.FactorRuntimeTests.test_futures_three_fixed_entries_separate_cash_collateral_and_fee_nav) ... ERROR
+test_missing_open_report_and_inconsistent_same_bar_inputs_do_not_advance (test_native_factor_runtime.FactorRuntimeTests.test_missing_open_report_and_inconsistent_same_bar_inputs_do_not_advance) ... ERROR
+test_partial_on_one_pair_blocks_new_entry_even_when_other_pair_fully_filled (test_native_factor_runtime.FactorRuntimeTests.test_partial_on_one_pair_blocks_new_entry_even_when_other_pair_fully_filled) ... ERROR
+test_spot_three_fixed_entries_share_one_account_and_batched_fill_nav (test_native_factor_runtime.FactorRuntimeTests.test_spot_three_fixed_entries_share_one_account_and_batched_fill_nav) ... ERROR
+test_durable_decision_ack_failure_sends_no_request (test_native_factor_entries.FixedEntryTests.test_durable_decision_ack_failure_sends_no_request) ... ok
+test_f2_actual_ema_signal_scales_the_unscaled_budget_once (test_native_factor_entries.FixedEntryTests.test_f2_actual_ema_signal_scales_the_unscaled_budget_once) ... ok
+test_f2_zero_volatility_and_future_hour_perturbation (test_native_factor_entries.FixedEntryTests.test_f2_zero_volatility_and_future_hour_perturbation) ... ok
+test_futures_mark_sizes_risk_independently_of_entry_ask (test_native_factor_entries.FixedEntryTests.test_futures_mark_sizes_risk_independently_of_entry_ask) ... ok
+test_immediate_fill_requires_explicit_fee_account_and_protection_reconciliation (test_native_factor_entries.FixedEntryTests.test_immediate_fill_requires_explicit_fee_account_and_protection_reconciliation) ... ok
+test_inactive_market_and_changed_signal_method_are_rejected (test_native_factor_entries.FixedEntryTests.test_inactive_market_and_changed_signal_method_are_rejected) ... ok
+test_lost_native_reply_retains_request_and_restores_callbacks (test_native_factor_entries.FixedEntryTests.test_lost_native_reply_retains_request_and_restores_callbacks) ... ok
+test_missing_cross_section_and_nonboundary_do_not_place_orders (test_native_factor_entries.FixedEntryTests.test_missing_cross_section_and_nonboundary_do_not_place_orders) ... ok
+test_native_wallet_callback_rejects_increased_stake_and_restores_after_failure (test_native_factor_entries.FixedEntryTests.test_native_wallet_callback_rejects_increased_stake_and_restores_after_failure) ... ok
+test_noninteger_price_preserves_exact_approved_quantity_through_float_division (test_native_factor_entries.FixedEntryTests.test_noninteger_price_preserves_exact_approved_quantity_through_float_division) ... ok
+test_small_liquidity_budget_skips_instead_of_native_minimum_clamp (test_native_factor_entries.FixedEntryTests.test_small_liquidity_budget_skips_instead_of_native_minimum_clamp) ... ok
+test_spot_fixed_f1_uses_computed_risk_stake_actual_wallet_and_native_callbacks (test_native_factor_entries.FixedEntryTests.test_spot_fixed_f1_uses_computed_risk_stake_actual_wallet_and_native_callbacks) ... ok
+test_spread_stale_book_expired_rules_and_missing_futures_tiers_reject (test_native_factor_entries.FixedEntryTests.test_spread_stale_book_expired_rules_and_missing_futures_tiers_reject) ... ok
+
+======================================================================
+ERROR: test_checkpoint_failure_after_all_native_updates_resumes_without_fill_callbacks (test_native_factor_runtime.FactorRuntimeTests.test_checkpoint_failure_after_all_native_updates_resumes_without_fill_callbacks)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 164, in _persist
+    self.store.save(self.s)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 270, in save
+    envelope = canonical({"state": state, "sha256": digest(state)})
+                                                    ^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 78, in digest
+    return hashlib.sha256(canonical(value)).hexdigest()
+                          ^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 73, in canonical
+    return json.dumps(primitive(value), sort_keys=True, separators=(",", ":"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decision is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_runtime.py", line 197, in test_checkpoint_failure_after_all_native_updates_resumes_without_fill_callbacks
+    c=self.submit_open(self.setup_runtime(),count=2);now=c.now+timedelta(seconds=1)
+                       ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_runtime.py", line 70, in setup_runtime
+    c.runtime.observe_entries('boot',evidence,receipt,quotes,{},(),bot,now,complete_sequence=0,complete_from_inception=True,funding_complete=True)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_runtime.py", line 130, in observe_entries
+    self.gate._persist()  # Failure poisons gate; no earlier child receipt releases entry permission.
+    ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 167, in _persist
+    raise StateError("Entry receipt not durably acknowledged; reconcile") from exc
+rd1.StateError: Entry receipt not durably acknowledged; reconcile
+
+======================================================================
+ERROR: test_futures_three_fixed_entries_separate_cash_collateral_and_fee_nav (test_native_factor_runtime.FactorRuntimeTests.test_futures_three_fixed_entries_separate_cash_collateral_and_fee_nav)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 164, in _persist
+    self.store.save(self.s)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 270, in save
+    envelope = canonical({"state": state, "sha256": digest(state)})
+                                                    ^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 78, in digest
+    return hashlib.sha256(canonical(value)).hexdigest()
+                          ^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 73, in canonical
+    return json.dumps(primitive(value), sort_keys=True, separators=(",", ":"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decision is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_runtime.py", line 169, in test_futures_three_fixed_entries_separate_cash_collateral_and_fee_nav
+    def test_futures_three_fixed_entries_separate_cash_collateral_and_fee_nav(self):self.cycle('futures')
+                                                                                    ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_runtime.py", line 152, in cycle
+    c=self.submit_open(self.setup_runtime(market))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_runtime.py", line 70, in setup_runtime
+    c.runtime.observe_entries('boot',evidence,receipt,quotes,{},(),bot,now,complete_sequence=0,complete_from_inception=True,funding_complete=True)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_runtime.py", line 130, in observe_entries
+    self.gate._persist()  # Failure poisons gate; no earlier child receipt releases entry permission.
+    ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 167, in _persist
+    raise StateError("Entry receipt not durably acknowledged; reconcile") from exc
+rd1.StateError: Entry receipt not durably acknowledged; reconcile
+
+======================================================================
+ERROR: test_missing_open_report_and_inconsistent_same_bar_inputs_do_not_advance (test_native_factor_runtime.FactorRuntimeTests.test_missing_open_report_and_inconsistent_same_bar_inputs_do_not_advance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 164, in _persist
+    self.store.save(self.s)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 270, in save
+    envelope = canonical({"state": state, "sha256": digest(state)})
+                                                    ^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 78, in digest
+    return hashlib.sha256(canonical(value)).hexdigest()
+                          ^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 73, in canonical
+    return json.dumps(primitive(value), sort_keys=True, separators=(",", ":"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decision is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_runtime.py", line 185, in test_missing_open_report_and_inconsistent_same_bar_inputs_do_not_advance
+    c=self.submit_open(self.setup_runtime(),count=2)
+                       ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_runtime.py", line 70, in setup_runtime
+    c.runtime.observe_entries('boot',evidence,receipt,quotes,{},(),bot,now,complete_sequence=0,complete_from_inception=True,funding_complete=True)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_runtime.py", line 130, in observe_entries
+    self.gate._persist()  # Failure poisons gate; no earlier child receipt releases entry permission.
+    ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 167, in _persist
+    raise StateError("Entry receipt not durably acknowledged; reconcile") from exc
+rd1.StateError: Entry receipt not durably acknowledged; reconcile
+
+======================================================================
+ERROR: test_partial_on_one_pair_blocks_new_entry_even_when_other_pair_fully_filled (test_native_factor_runtime.FactorRuntimeTests.test_partial_on_one_pair_blocks_new_entry_even_when_other_pair_fully_filled)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 164, in _persist
+    self.store.save(self.s)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 270, in save
+    envelope = canonical({"state": state, "sha256": digest(state)})
+                                                    ^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 78, in digest
+    return hashlib.sha256(canonical(value)).hexdigest()
+                          ^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 73, in canonical
+    return json.dumps(primitive(value), sort_keys=True, separators=(",", ":"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decision is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_runtime.py", line 172, in test_partial_on_one_pair_blocks_new_entry_even_when_other_pair_fully_filled
+    c=self.submit_open(self.setup_runtime(),count=2);now=c.now+timedelta(seconds=1)
+                       ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_runtime.py", line 70, in setup_runtime
+    c.runtime.observe_entries('boot',evidence,receipt,quotes,{},(),bot,now,complete_sequence=0,complete_from_inception=True,funding_complete=True)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_runtime.py", line 130, in observe_entries
+    self.gate._persist()  # Failure poisons gate; no earlier child receipt releases entry permission.
+    ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 167, in _persist
+    raise StateError("Entry receipt not durably acknowledged; reconcile") from exc
+rd1.StateError: Entry receipt not durably acknowledged; reconcile
+
+======================================================================
+ERROR: test_spot_three_fixed_entries_share_one_account_and_batched_fill_nav (test_native_factor_runtime.FactorRuntimeTests.test_spot_three_fixed_entries_share_one_account_and_batched_fill_nav)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 164, in _persist
+    self.store.save(self.s)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 270, in save
+    envelope = canonical({"state": state, "sha256": digest(state)})
+                                                    ^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 78, in digest
+    return hashlib.sha256(canonical(value)).hexdigest()
+                          ^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/p0/risk/rd1.py", line 73, in canonical
+    return json.dumps(primitive(value), sort_keys=True, separators=(",", ":"),
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type Decision is not JSON serializable
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_runtime.py", line 168, in test_spot_three_fixed_entries_share_one_account_and_batched_fill_nav
+    def test_spot_three_fixed_entries_share_one_account_and_batched_fill_nav(self):self.cycle('spot')
+                                                                                   ^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_runtime.py", line 152, in cycle
+    c=self.submit_open(self.setup_runtime(market))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_factor_runtime.py", line 70, in setup_runtime
+    c.runtime.observe_entries('boot',evidence,receipt,quotes,{},(),bot,now,complete_sequence=0,complete_from_inception=True,funding_complete=True)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_runtime.py", line 130, in observe_entries
+    self.gate._persist()  # Failure poisons gate; no earlier child receipt releases entry permission.
+    ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_entries.py", line 167, in _persist
+    raise StateError("Entry receipt not durably acknowledged; reconcile") from exc
+rd1.StateError: Entry receipt not durably acknowledged; reconcile
+
+----------------------------------------------------------------------
+Ran 18 tests in 2.037s
+
+FAILED (errors=5)

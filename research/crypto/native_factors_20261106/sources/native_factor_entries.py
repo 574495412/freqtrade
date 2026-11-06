@@ -116,7 +116,7 @@ def size_entry(provider, evidence, exchange, wallet, liquidity, scale, now):
         raise RiskError('Invalid entry bid/ask/depth/volume')
     decision = risk.evaluate(snap,now)
     if not decision.entry_allowed:
-        return None,dict(reason='rd1_entry_blocked',decision=primitive(decision))
+        return None,dict(reason='rd1_entry_blocked',decision=primitive(asdict(decision)))
     quotes = {q.pair:dec(q.price) for q in snap.quotes}
     if l.pair not in quotes:
         raise RiskError('Missing synchronized entry valuation')
@@ -220,6 +220,7 @@ def execute_fixed_entry(gate, exchange, strategy, evidence, inputs, liquidity, r
     now = aware(now); wallet = gate.runtime_barrier
     if type(exchange) is not ReplayEntryExchange or exchange.gate is not gate or wallet is None or gate.after_fill_guard is None:
         raise RiskError('Fixed entry requires matching local exchange, native wallet and protection guard')
+    gate.require_account_batch_clear()
     wallet.require_entry_clear(now); gate.after_fill_guard.require_entry_clear()
     if evidence != wallet._checked_evidence:
         raise RiskError('Entry evidence differs from current wallet checkpoint')
