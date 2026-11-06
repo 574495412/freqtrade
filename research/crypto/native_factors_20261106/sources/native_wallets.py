@@ -82,6 +82,7 @@ class NativeWalletBridge:
         self.store = Store(Path(directory), dict(self.identity, layer="native_wallet_bridge_v1", market_hash=self.market_hash,
             provider_identity_hash=digest(provider.store.identity)), create=create)
         self._poisoned = False; self._mutex = threading.RLock(); self.wallets = None; self._checked_evidence = None
+        self.gate = None
         if create:
             self.s = {"schema_version": 1, "sequence": 0, "identity": self.store.identity,
                       "state": "BOOTSTRAP_PENDING", "frames": {}, "current": None}
@@ -99,6 +100,7 @@ class NativeWalletBridge:
         if gate.runtime_barrier not in (None, self):
             raise StateError("A different runtime barrier is already attached")
         gate.bind_runtime_barrier(self)
+        self.gate = gate
 
     def _ready(self, now):
         if self._poisoned or self.store.lock.closed:
@@ -275,24 +277,90 @@ class NativeWalletBridge:
             self._persist()
             self._checked_evidence = copy.deepcopy(checked_evidence)
 
-    def require_entry_clear(self, now):
+    def _check_verified_source(self, checked, now):
+        self._check_native()
+        if checked is None:
+            raise RiskError("Wallet bootstrap needs a fresh complete account confirmation")
+        self.provider.bridge.validate(checked,now)
+        self.provider._native_events()
+        frame = self.s["frames"][self.s["current"]]
+        checkpoint = self.provider.s["checkpoints"].get(frame["checkpoint_cursor"])
+        if (checkpoint is None or digest(checkpoint) != frame["checkpoint_hash"]
+                or str(self.provider.s["last_cursor"]) != frame["checkpoint_cursor"]
+                or checkpoint["audit"]["event_sequence"] != self.provider.ledger.last_sequence
+                or checkpoint["output"] != primitive(asdict(checked))
+                or checkpoint["input"]["evidence"] != frame["raw"]["evidence"]
+                or digest(frame["raw"]) != frame["signature"]):
+            raise RiskError("Wallet account event watermark or source receipt changed")
+        from rd1 import parse
+        if not 0 <= (aware(now)-parse(frame["raw"]["receipt"]["received_at"])).total_seconds() <= 15:
+            raise RiskError("Verified wallet source receipt is stale")
+        return frame
+
+    def _require_verified(self, now):
+        self._ready(now)
+        if self.s["state"] != "VERIFIED":
+            raise RiskError("Wallet/account bootstrap or reconciliation is pending")
+        return self._check_verified_source(self._checked_evidence,now)
+
+    def refresh_verified(self, now):
+        """Reparse the same fresh local receipt; never manufacture an observation.
+
+        This records execution time separately from source time. Any failed
+        native update or durable acknowledgement requires account revalidation.
+        """
         with self._mutex:
             self._ready(now)
-            if self.s["state"] != "VERIFIED":
-                raise RiskError("Wallet/account bootstrap or reconciliation is pending")
-            self._check_native()
-            if self._checked_evidence is None:
-                raise RiskError("Wallet bootstrap needs a fresh complete account confirmation")
-            self.provider.bridge.validate(self._checked_evidence,now)
-            self.provider._native_events()
-            frame = self.s["frames"][self.s["current"]]
-            checkpoint = self.provider.s["checkpoints"].get(frame["checkpoint_cursor"])
-            if (checkpoint is None or digest(checkpoint) != frame["checkpoint_hash"]
-                    or str(self.provider.s["last_cursor"]) != frame["checkpoint_cursor"]
-                    or checkpoint["audit"]["event_sequence"] != self.provider.ledger.last_sequence):
-                raise RiskError("Wallet account event watermark changed")
+            gate = self.gate
+            if gate is None or gate.runtime_barrier is not self:
+                raise StateError("Wallet refresh needs its attached account gate")
+            gate.require_account_batch_clear()
+            gate.require_research_driver(now,'dispatch')
+            gate.after_fill_guard.require_entry_clear()
+            frame = self._require_verified(now)
+            checked = self._checked_evidence
+            cycle = gate.s.get('dispatch_cycles',{}).get(frame['checkpoint_cursor'])
+            if cycle and cycle['state'] in ('DISPATCH_STARTED','AWAIT_ACCOUNT'):
+                raise RiskError("Wallet refresh requires a new whole-account observation after dispatch")
+            for item in gate.lifecycle.s['requests'].values():
+                life = item.get('lifecycle',{})
+                if life.get('state') == 'TERMINAL_RECONCILED':
+                    continue
+                if life.get('state') != 'OBSERVED_OPEN' or life.get('snapshot_hash') != digest(asdict(checked.snapshot)):
+                    raise RiskError("Wallet refresh requires complete initial-order observation")
             from rd1 import parse
-            if not 0 <= (aware(now)-parse(frame["raw"]["receipt"]["received_at"])).total_seconds() <= 15:
-                raise RiskError("Verified wallet source receipt is stale")
+            previous = parse(frame['native_refresh_at'])
+            if self.wallets._last_wallet_refresh != previous or self.source.now != previous:
+                raise RiskError("Native wallet refresh time changed outside the verified receipt")
+            if aware(now) < previous:
+                raise RiskError("Native wallet refresh time regressed")
+            if aware(now) == previous:
+                return None
+            key = digest([self.s['current'],stamp(now)])
+            record = dict(state='PREPARED',frame=self.s['current'],source_signature=frame['signature'],
+                checkpoint_cursor=frame['checkpoint_cursor'],checkpoint_hash=frame['checkpoint_hash'],
+                source_received_at=frame['raw']['receipt']['received_at'],
+                previous_native_refresh_at=stamp(previous),native_refresh_at=stamp(now))
+            if key in self.s.get('refreshes',{}):
+                raise StateError("Prior wallet refresh attempt needs explicit account reconciliation")
+            self.s.setdefault('refreshes',{})[key] = record
+            self.s['state'] = 'REFRESH_PENDING'
+            self._checked_evidence = None
+            self._persist()
+            self.source.now = aware(now)
+            self.wallets.update()
+            self._check_verified_source(checked,now)
+            if self.wallets._last_wallet_refresh != aware(now):
+                raise RiskError("Native wallet did not refresh at the explicit execution time")
+            frame['native_refresh_at'] = stamp(now)
+            record['state'] = 'COMPLETE'
+            self.s['state'] = 'VERIFIED'
+            self._persist()
+            self._checked_evidence = checked
+            return copy.deepcopy(record)
+
+    def require_entry_clear(self, now):
+        with self._mutex:
+            self._require_verified(now)
             if self.wallets._last_wallet_refresh != aware(now) or self.source.now != aware(now):
                 raise RiskError("Wallet needs explicit refresh at the current replay event time")

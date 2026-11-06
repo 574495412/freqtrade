@@ -37,7 +37,7 @@ class NativeResearchDriver:
         self.startup, self.loop = startup, loop
         self.gate, self.wallet = loop.gate, loop.wallet
         self.closed = False
-        self.binding = dict(policy='registered_boundary_same_execution_bar_v2',
+        self.binding = dict(policy='registered_boundary_fresh_receipt_dispatch_v3',
             startup=copy.deepcopy(startup.binding), loop=copy.deepcopy(self.gate.s['factor_loop_binding']))
         old = self.gate.s.get('required_research_driver')
         if old not in (None, self.binding):
@@ -123,6 +123,7 @@ class NativeResearchDriver:
             # wallet or signal read is needed merely to report WAIT_ACCOUNT.
             if cycle and cycle['state'] in ('DISPATCH_STARTED', 'AWAIT_ACCOUNT'):
                 return self.loop.dispatch(bot, now, strategy_inputs={}, reduction_inputs=None, **args)
+            self.wallet.refresh_verified(now)
             self.startup.ready(now)
             decision = self.loop.risk.evaluate(checked.snapshot, now)
             urgent = any(a['kind'] in ('CANCEL_ENTRY', 'EXIT_POSITION') for a in decision.actions)

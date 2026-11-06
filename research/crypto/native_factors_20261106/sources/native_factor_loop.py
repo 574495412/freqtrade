@@ -94,8 +94,8 @@ GET/cancel transport responsibilities and supply each actual captured response.
         if cycle and cycle['state'] in ('DISPATCH_STARTED','AWAIT_ACCOUNT'):
             return dict(state='WAIT_ACCOUNT',cursor=cursor,kind=cycle['kind'],target=cycle['target'])
         self.wallet.require_entry_clear(now)
-        if bot.wallets is not self.wallet.wallets or now!=evidence.snapshot.at:
-            raise RiskError('Dispatch needs the checked native wallet and its exact event time')
+        if bot.wallets is not self.wallet.wallets or not 0 <= (now-aware(evidence.snapshot.at)).total_seconds() <= 15:
+            raise RiskError('Dispatch needs the checked native wallet and a fresh original account receipt')
         checkpoint=self.provider.s['checkpoints'].get(key)
         if checkpoint is None or checkpoint['output']!=primitive(asdict(evidence)) or self.provider.s['last_cursor']!=cursor:
             raise RiskError('Dispatch account is not the latest complete source checkpoint')

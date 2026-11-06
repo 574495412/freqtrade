@@ -1,6 +1,8 @@
 # 因子研究目标与当前状态
 
-当前机器可读入口：[current_status_v23.json](../research/crypto/native_factors_20261106/current_status_v23.json)。用户已明确“允许自研因子”，当前接续为官方 Freqtrade 框架下的固定 F1/F2 原生接入。工程说明与真实数据覆盖见 [自研因子接入](../research/crypto/native_factors_20261106/README.md)。271 项工程检查通过、152 份真实小时文件已检查；F1/F2 的配对收益实验仍为 0，整个持续目标未完成。
+当前机器可读入口：[current_status_v24.json](../research/crypto/native_factors_20261106/current_status_v24.json)。用户已明确“允许自研因子”，当前接续为官方 Freqtrade 框架下的固定 F1/F2 原生接入。工程说明与真实数据覆盖见 [自研因子接入](../research/crypto/native_factors_20261106/README.md)。287 项工程检查通过、152 份真实小时文件已检查；F1/F2 的配对收益实验仍为 0，整个持续目标未完成。
+
+账户回执与派单时间现可独立：在原始账户仍满足 15 秒新鲜度且完整对账的条件下，重新解析同一来源到官方钱包，保留回执、游标和账本；原生派单使用当前时刻。刷新准备／完成写入确认丢失及更新失败继续阻断，重开必须显式重新核验原回执。新增 16 项检查，完整回归 287 项通过；仅合成隔离工程证据，收益实验仍为 0。未知提交原生绑定恢复、数量型风险路径、平仓后新增资金费修正和历史准入仍待完成。详见 [回执与派单证据](../research/crypto/native_factors_20261106/receipt_dispatch_verification.json)。
 
 边界信号登记现可在同一根执行 5m 内等待新的同步完整账户后续接，保留原决策时间、当前派单时间与同一请求身份；F2 日目标在优先止损前登记，避免另一持仓因回执迟到漏调。新增 9 项检查，两次完整回归均为 271 项通过。不同账户接收／派单时刻的独立刷新、未知提交恢复及其余风险路径仍待完成，收益账户仍为 0。详见 [延迟续接证据](../research/crypto/native_factors_20261106/delayed_verification.json)。
 
