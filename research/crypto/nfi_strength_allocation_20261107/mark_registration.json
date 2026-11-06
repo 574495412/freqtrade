@@ -1,0 +1,32 @@
+{
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal_result.json",
+      "sha256": "646afef0224d9d4232aac88db16b501a70a7982fd0364ee58c15d740794f2467"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal_registration.json",
+      "sha256": "bdd93e55ceb6f2a0b0313518d9722ec7206062dacc7c7752d1c6f2920f24d661"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/docs/research-20261105/crypto-wide-comparison-20261105/reconstruct-five-minute-reference-v002.py",
+      "sha256": "861494c519d5e849fbd4fc41a989d93e77069711f34add7205ca7a6e614e7c12"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/mark_valuation.py",
+      "sha256": "482c0b08081126a58e7c1386bbeb233c4c31084383d7abda413a49119fd5a654"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_reversal_20261107/catalog.py",
+      "sha256": "b9b0bce5736a1b1f81b0eea9851febcd3b45e220e5908f6b57bd3ede1064f603"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/listing_reversal_20261107/intake.py",
+      "sha256": "0e5f20f608d9d34e69c063cbeda2d953234073812087dbe339dbdcba20b8a700"
+    }
+  ],
+  "max_native_hourly_nav_error_usdt": 1e-05,
+  "mark_source": "Binance official monthly/daily marks with REST gap recovery",
+  "policy": "Use the same trade fills and model funding ledger. First require independent hourly NAV parity, then use 5m official mark OPEN to measure observed drawdown, with a 1 percentage point difference budget. No new economic account.",
+  "orders_enabled": false
+}
