@@ -1,0 +1,87 @@
+{
+  "registered_at_utc": "2026-11-06T22:17:31.884453+00:00",
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/low_vol_portfolio_20261107/study.py",
+      "sha256": "3b85f858e7c376b8e9b3e62b365b1f0bdbc884342991aa5ac1d8a42f44e7af20"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/low_vol_portfolio_20261107/account.py",
+      "sha256": "c8326f216ef3bd551c66bf02301e710b1a33c4f593fdc2218624320bd93af5a5"
+    },
+    {
+      "path": "/Users/chrise/GitHub/Vibe-Trading/agent/src/factors/zoo/core/low_volatility_63.py",
+      "sha256": "b40b86a6c727763d80d996affc0444abf8b994e23e6d61d7533be271b91b3514"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_leverage_20261107/native_2024_Native2x.json",
+      "sha256": "d9278ceb3d262bb96bbb7f0825ebdf0e2f2a948785c139579cc1f5a9fb2cddda"
+    },
+    {
+      "path": "/Users/chrise/GitHub/Vibe-Trading/research/core_factor_price_diagnostic/result/accounts_0m/accounts.json",
+      "sha256": "6f8092076e51310fdf220cfd4234924c36d1e1a2eb216ee09d03f2b3979eb939"
+    },
+    {
+      "path": "/Users/chrise/GitHub/Vibe-Trading/research/core_factor_price_diagnostic/result/accounts_0m/trades.csv",
+      "sha256": "60a3da885ca1abcb3c759a684d5acee10a7838b017de9ca02e802cb2d1d430ae"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_profit_ramp_20261107_v001/5m/admission.json",
+      "sha256": "05d95da57e76267edb7b40a9be61a6611daf29f4881e967901bdc1218e29abca"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_solo_allocation_20261107_v001/long_mark/admission.json",
+      "sha256": "da4236b558a259a24f6ea8611d7fce6e9057409e7fad08c4c44f3db10d558c6b"
+    }
+  ],
+  "parent": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_leverage_20261107/native_2024_Native2x.json",
+    "sha256": "d9278ceb3d262bb96bbb7f0825ebdf0e2f2a948785c139579cc1f5a9fb2cddda"
+  },
+  "symbols": [
+    "AAVEUSDT",
+    "ADAUSDT",
+    "AVAXUSDT",
+    "AXSUSDT",
+    "BCHUSDT",
+    "BNBUSDT",
+    "CRVUSDT",
+    "DOGEUSDT",
+    "DOTUSDT",
+    "ETHUSDT",
+    "FILUSDT",
+    "GALAUSDT",
+    "LINKUSDT",
+    "LTCUSDT",
+    "MASKUSDT",
+    "NEARUSDT",
+    "RUNEUSDT",
+    "SANDUSDT",
+    "SKLUSDT",
+    "SNXUSDT",
+    "SOLUSDT",
+    "TRBUSDT",
+    "TRXUSDT",
+    "UNIUSDT",
+    "XRPUSDT"
+  ],
+  "windows": {
+    "2024": [
+      "2024-01-01",
+      "2024-12-30"
+    ],
+    "earlier_2025": [
+      "2025-01-06",
+      "2025-09-15"
+    ],
+    "original": [
+      "2025-09-15",
+      "2026-08-31"
+    ]
+  },
+  "source_parity": "Before funding, rerun the original 50 weekly ranks and 13bps unrounded 1x ledger, compare exact signed portfolios, NAV/return and execution prices.",
+  "funded_experiment": "Same 25 perpetuals, 63 daily simple-return sample SD, long lowest 5 and short highest 5, equal signed absolute weights and alphabetical ties. Read completed Sunday close only, Monday 00:05 trade OPEN proxy, weekly rebalance. Each window resets to 1000 USDT. Close at final Monday. 1x/2x total gross targets after costs, one pooled cross-margin model with 2x per-instrument margin, current snapshot lot/minimum/first-tier maintenance. Charge 13/25bps on actual change in notional. Missing or excessive order is a recorded rejection. Batch cap = 1% of average completed 5m base volume over prior hour; terminal/stop closes are modeled and excess is flagged. Exact public rate times and settlement mark prices must match official archived events. Apply at first 5m mark clock at or after the event, before trades at that clock. Do not treat a missing event as observed zero; affected outcomes only partial and ineligible.",
+  "risk": "Estimate marked NAV and close-cost reserve each 5m. At observed 30% drawdown or modeled maintenance breach halt and flatten next 5m open. No live fill/liquidation guarantee. 5m open may miss intrabar extremes. A rebalancing batch is atomic only in the model.",
+  "gate": "2x at both costs in all 3 windows must have zero missing held settlements, modeled margin breaches, halt and rejected batches, absolute 5m DD <=25%, positive net and >=25% annualized net, >=1.5x the 1x net gain and return/DD >= 1x. 2024 and earlier 2025 are separate retrospective checks, while original known returns do not count as new OOS.",
+  "orders_enabled": false
+}
