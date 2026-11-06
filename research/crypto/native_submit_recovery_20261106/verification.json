@@ -1,0 +1,45 @@
+{
+  "observed_at_utc": "2026-11-06T12:59:07.845211+00:00",
+  "tests_passed": 15,
+  "source_manifest": "research/crypto/native_submit_recovery_20261106/test_run_003_sources.json",
+  "checks": {
+    "frozen_native": {
+      "files": 22,
+      "mismatches": []
+    },
+    "quantity_increment": {
+      "files": 4,
+      "mismatches": []
+    },
+    "frozen_financial_inputs": {
+      "files": 145,
+      "mismatches": []
+    }
+  },
+  "logs": [
+    {
+      "path": "research/crypto/native_submit_recovery_20261106/test_run_001.log.gz",
+      "archive_sha256": "d90c03e87bcec01091c6fcd5edc93930c3c7b75ac35a8fcfed90f917935285bb",
+      "raw_sha256": "7ec4a0751e813bad0d1d5b6b7177573f025ff2e028a7900b4aeffdcb0366fb7f"
+    },
+    {
+      "path": "research/crypto/native_submit_recovery_20261106/test_run_002.log.gz",
+      "archive_sha256": "718daa788cf9121ab91837e152addd7ed9485a79719254c72db87cc302b0cd11",
+      "raw_sha256": "b35c89c0e13b9cbb6b294c24da205d75883f848d0789513a9615948c8f2e4536"
+    },
+    {
+      "path": "research/crypto/native_submit_recovery_20261106/test_run_003.log.gz",
+      "archive_sha256": "d30037c732c1a85b71d0d3ffcfa293ef3a5edf75e34c14c5f3b6e05dd97891b6",
+      "raw_sha256": "a14507500d21669f5cac259011d73afb44b4ea4a51e5119660f3f813bfd4417b"
+    }
+  ],
+  "financial_runs": 0,
+  "profit_improvement_established": false,
+  "production_eligible": false,
+  "goal_complete": false,
+  "remaining": [
+    "initial entry unknown-submit native Trade/Order recovery",
+    "post-close funding adjustments",
+    "full historical execution qualification and full RD1 financial comparison"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "registered_at_utc": "2026-11-06T12:56:14.982905+00:00",
+  "scope": "Synthetic exit submission-unknown Order recovery. Initial entry recovery and post-close funding remain separate gaps.",
+  "financial_runs": 0,
+  "real_orders_enabled": false,
+  "network": "blocked by fixture",
+  "parent_commit": "78cd138a6d825c613d8cb7590fc2071daa71c9eb",
+  "requirements": [
+    "retain original stable client identity",
+    "only captured source response can create Order",
+    "durable recovery intent before native writes",
+    "actual native Order parser/update; no financial fill callback during binding",
+    "recognize either side of native commit after acknowledgement loss",
+    "new cumulative query can advance during recovery",
+    "complete native fee/account reconciliation after binding",
+    "no duplicate POST, no fabricated OPEN state for terminal zero exit"
+  ],
+  "source_hashes": {
+    "research/crypto/native_submit_recovery_20261106/test_exit_recovery.py": "10c9e5b8b83673b574ccee22e2ddca5a38dff07446db0b8fad6f774ef25fea4c",
+    "research/crypto/native_submit_recovery_20261106/exit_recovery.py": "e3a8cb22df081db7d7d0329ed53c5474179310751fbff020d19893f069cbbf79"
+  },
+  "frozen_sources": {
+    "research/crypto/native_factors_20261106/sources/factor_inputs.py": "fad50a2085a1993fe764eca59eb8b368b446d4ab208e36c0e1268df888dfee5b",
+    "research/crypto/native_factors_20261106/sources/native_factor_loop.py": "9e2fb87b98beb007d5ed5d59107c1853ee046deb9bd1946ffbd88980f725a0ad",
+    "research/crypto/native_factors_20261106/sources/native_after_fill.py": "c2462f136234e9fbe41eacac90b2fb6fd8306af12689932666e7938640d23ae3",
+    "research/crypto/native_factors_20261106/sources/native_wallets.py": "3def279ae678bd41ab9ccb82c351e8349bf4c20f373f878ca88296a7d7da2ec7",
+    "research/crypto/native_factors_20261106/sources/native_factor_entries.py": "4a7e1b8aeaab3669418097291184dc09575c744b80644f09a15ba71587e4f11b",
+    "research/crypto/native_factors_20261106/sources/native_research_driver.py": "9a97dbd69f8cca0b73a86d0adc1ba1718a02cf3214e41ac387e55a744335187a",
+    "research/crypto/native_factors_20261106/sources/FixedFactorSignals.py": "b740a0e7898c3d38258b7291e145a036074d4ee1f5b460081cf3dbe87d4c21dc",
+    "research/crypto/native_factors_20261106/sources/native_cancellations.py": "ef0746818900dc8d8b3b76bf43e2712b2595df44620722a9bc9a43b47e017bed",
+    "research/crypto/native_factors_20261106/sources/native_clock.py": "fb619c9f9cf7e1ad45cae945c895900a56c64bd3694d23ae8d10935faa7e55c3",
+    "research/crypto/native_factors_20261106/sources/native_risk_runtime.py": "8a0cfdabf93725471c7115ec4fa4dc214c1c87fef70d21de52922fd4fe65dfe6",
+    "research/crypto/native_factors_20261106/sources/native_reductions.py": "ce4aef0359be42ad91e88b648378088343f35fc33e287874ae04736e7dbe9456",
+    "research/crypto/native_factors_20261106/sources/native_entries.py": "4929276c166e335ca210a78de41360ffef1c616706c8a438b6bce7ea9d96e8a6",
+    "research/crypto/native_factors_20261106/sources/native_strategy_exits.py": "f99948154b34c23a53c5eafe6a7822927087543a65e8c60e6e90ae6211f1c160",
+    "research/crypto/native_factors_20261106/sources/native_account.py": "462bd5f87a7f3e764107cec8bc90cdc39a31a8e70e44d3c3606d45fb8a6b33bd",
+    "research/crypto/native_factors_20261106/sources/native_snapshot.py": "4ab262f350a74f4c4ae7f125de5a1efa1b98d7d9046fb245c7909b3fd34e3faa",
+    "research/crypto/native_factors_20261106/sources/native_position_targets.py": "9e1d6ecaff1fae6e9f4366d6c2243444d0e68f1569cb7b9bb05489b88a939557",
+    "research/crypto/native_factors_20261106/sources/AverageStrategy.py": "63606866fdf1cb3d71dc39a951ed0784a31686690b1c4014c12d2481c8dbf094",
+    "research/crypto/native_factors_20261106/sources/native_exits.py": "cd02173782c5a5e0488ae41ecb90b141963fb40f1933b96964c9c2da49bde412",
+    "research/crypto/native_factors_20261106/sources/native_lifecycle.py": "4771a2688119dbd8548951d99911d3d63c47410674b75c9957d4c4f9112591d4",
+    "research/crypto/native_factors_20261106/sources/native_protections.py": "77b033aa377e951846a6f697b766f9ecc058411a4816c23329d973e1ec9a046b",
+    "research/crypto/native_factors_20261106/sources/native_research_startup.py": "6ee7f1aea0e3addc8befb921692953d4a44000c560d9d64cb24716221382eafc",
+    "research/crypto/native_factors_20261106/sources/native_factor_runtime.py": "22c0a7d2b27c8fafa3bdb10653f371fbf37a2c170ec19e67f2049a6ecdcaf63a"
+  }
+}
