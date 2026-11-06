@@ -195,7 +195,7 @@ class NativeRiskExit:
             raise RiskError("Exit receipt status, quantities or freshness invalid")
         return envelope
 
-    def dispatch(self,trade,evidence,exchange,bot,now,*,limit,strategy_inputs=None):
+    def dispatch(self,trade,evidence,exchange,bot,now,*,limit,strategy_inputs=None,reduction_inputs=None):
         with self._mutex:
             self._ready(now); self.wallet.require_entry_clear(now)
             if type(exchange) is not LocalExitExchange or exchange.controller is not self or bot.wallets is not self.wallet.wallets:
@@ -212,40 +212,76 @@ class NativeRiskExit:
             source_id = next((pid for pid,tid in evidence.position_bindings.items() if tid==trade.id),None)
             decision = self.risk.evaluate(evidence.snapshot,now)
             action = next((a for a in decision.actions if a["kind"]=="EXIT_POSITION" and a["target"]==source_id),None)
-            exit_check = ExitCheckTuple(ExitType.FORCE_EXIT); policy = None
+            exit_check = ExitCheckTuple(ExitType.FORCE_EXIT); policy = None; allocation = None
+            target_quantity = D(0); risk_reduction = None
             if action is None:
-                if strategy_inputs is None:
+                if strategy_inputs is None and reduction_inputs is None:
                     raise RiskError("Frozen RD1 has no full-position exit action")
-                from native_strategy_exits import evaluate_fixed_exit
-                try:
-                    exits, policy = evaluate_fixed_exit(bot.strategy,trade,evidence,strategy_inputs,now)
-                except Exception:
-                    Trade.session.rollback()
-                    raise
-                key = digest({"trade_id":trade.id,"strategy":policy["strategy"],"cursor":evidence.snapshot.cursor})
-                observations = self.s.setdefault("strategy_evaluations",{})
-                if key in observations and observations[key] != policy:
-                    raise StateError("Conflicting same-checkpoint strategy exit evaluation")
-                observations[key] = policy; self._persist()
-                if not exits:
+                exits = []
+                if strategy_inputs is not None:
+                    from native_strategy_exits import evaluate_fixed_exit
+                    try:
+                        exits, policy = evaluate_fixed_exit(bot.strategy,trade,evidence,strategy_inputs,now)
+                    except Exception:
+                        Trade.session.rollback()
+                        raise
+                    key = digest({"trade_id":trade.id,"strategy":policy["strategy"],"cursor":evidence.snapshot.cursor})
+                    observations = self.s.setdefault("strategy_evaluations",{})
+                    if key in observations and observations[key] != policy:
+                        raise StateError("Conflicting same-checkpoint strategy exit evaluation")
+                    observations[key] = policy; self._persist()
+                if exits:
+                    exit_check = exits[0]
+                    action = dict(id=digest({"account":self.risk.s["identity"],"trade_id":trade.id,"kind":"STRATEGY_EXIT"})[:24],
+                                  kind="STRATEGY_EXIT",target=source_id)
+                elif reduction_inputs is not None:
+                    from native_position_targets import build_position_targets
+                    targets, daily, allocation = build_position_targets(self.provider,evidence,bot.strategy,reduction_inputs,now,
+                        self.s.get("daily_position_targets",{}),apply_factor=policy is not None)
+                    risk_reduction = next((a for a in decision.actions if a["kind"]=="REDUCE_EXPOSURE"),None)
+                    if bot.strategy.__class__.__name__ == "F2Volatility24Native" and policy is None and risk_reduction is None:
+                        raise RiskError("F2 voluntary reduction requires native stop/signal evaluation first")
+                    target_quantity = dec(decimal_text(exchange.amount_to_contract_precision(trade.pair,float(targets[trade.pair]))))
+                    if not 0 <= target_quantity <= targets[trade.pair]:
+                        raise RiskError("Native target precision must not enlarge retained inventory")
+                    allocation.update(rounded_target_quantity=str(target_quantity),trade_id=trade.id,state="READY")
+                    quantity = dec(decimal_text(trade.amount))-target_quantity
+                    minimum = exchange.get_min_pair_stake_amount(trade.pair,float(dec(limit)),bot.strategy.stoploss,1)
+                    if quantity <= 0:
+                        allocation["state"] = "NO_REDUCTION"
+                    elif minimum is None or (quantity*dec(limit) < dec(decimal_text(minimum))
+                            or (target_quantity>0 and target_quantity*dec(limit) < dec(decimal_text(minimum)))):
+                        allocation["state"] = "BLOCKED_NATIVE_MINIMUM"
+                    allocation["native_minimum_stake"] = None if minimum is None else decimal_text(minimum)
+                    key = digest({"trade_id":trade.id,"strategy":allocation["strategy"],"cursor":evidence.snapshot.cursor})
+                    records = self.s.setdefault("reduction_evaluations",{})
+                    if key in records and records[key] != allocation:
+                        raise StateError("Conflicting same-checkpoint position target")
+                    self.s.setdefault("daily_position_targets",{}).update(daily)
+                    records[key] = allocation; self._persist()
+                    if allocation["state"] != "READY":
+                        return None
+                    action = dict(id=digest({"account":self.risk.s["identity"],"trade_id":trade.id,"kind":"POSITION_REDUCTION"})[:24],
+                                  kind="POSITION_REDUCTION",target=source_id)
+                    exit_check = ExitCheckTuple(ExitType.PARTIAL_EXIT)
+                else:
                     return None
-                exit_check = exits[0]
-                action = dict(id=digest({"account":self.risk.s["identity"],"trade_id":trade.id,"kind":"STRATEGY_EXIT"})[:24],
-                              kind="STRATEGY_EXIT",target=source_id)
             previous = self.s["actions"].get(action["id"])
-            if previous and (previous["state"] != "TERMINAL_RECONCILED" or not previous["requires_further_exit"]
+            if previous and (previous["state"] != "TERMINAL_RECONCILED" or (not previous["requires_further_exit"] and allocation is None)
                     or evidence.snapshot.cursor <= previous["reconciled_cursor"]):
                 raise StateError("Exit action already attempted; query/reconcile before any retry")
             ordinal = 1 if previous is None else previous["attempt"]+1
             client_key = {"account":self.risk.s["identity"],"action":action["id"]}
             if ordinal > 1:
                 client_key["attempt"] = ordinal
-            amount = float(trade.amount); rate = float(dec(limit))
+            amount = float(dec(decimal_text(trade.amount))-target_quantity); rate = float(dec(limit))
             if rate <= 0 or exchange.amount_to_precision(trade.pair,amount) != amount or exchange.price_to_precision(trade.pair,rate) != rate:
                 raise RiskError("Exit precision changes explicit quantity or limit")
             request = dict(pair=trade.pair,ordertype="limit",side="sell",amount=amount,rate=rate,leverage=1,
                            reduceOnly=self.risk.market=="futures",time_in_force="GTC",initial_order=False)
-            claimed = self.risk.claim_action(action["id"],now) if policy is None else copy.deepcopy(action)
+            claimed = self.risk.claim_action(action["id"],now) if action["kind"] == "EXIT_POSITION" else copy.deepcopy(action)
+            if risk_reduction is not None:
+                claimed["rd1_parent_action"] = self.risk.claim_action(risk_reduction["id"],now)
             prior_funding = sum((dec(decimal_text(o.funding_fee)) for o in trade.orders if o.funding_fee is not None),D(0))
             total_funding = D(0) if trade.funding_fees is None else dec(decimal_text(trade.funding_fees))
             history = [] if previous is None else previous.get("prior_attempts",[])+[{k:copy.deepcopy(v) for k,v in previous.items() if k!="prior_attempts"}]
@@ -254,14 +290,17 @@ class NativeRiskExit:
                 client_order_id="rd1x-"+digest(client_key)[:28],
                 running_funding_credit=str(total_funding-prior_funding),last_filled_at=stamp(trade.date_last_filled_utc),
                 checkpoint_hash=digest(checkpoint),native_binding=None,
-                exit_type=exit_check.exit_type.value,strategy_evaluation=policy)
+                exit_type=exit_check.exit_type.value,strategy_evaluation=policy,
+                target_remaining_quantity=str(target_quantity),reduction_evaluation=allocation)
             self.s["actions"][action["id"]] = ticket; self._persist()
             token = exchange.ticket.set(ticket)
             try:
                 proxy = _ExitBot(bot,exchange,self,action["id"])
-                tag = ticket["client_order_id"] if policy is None else (policy["exit_tag"] if exit_check.exit_type == ExitType.EXIT_SIGNAL else None)
+                tag = ("rd1_reduction" if risk_reduction is not None else "F2_daily_scale") if allocation is not None else (
+                    ticket["client_order_id"] if policy is None else (policy["exit_tag"] if exit_check.exit_type == ExitType.EXIT_SIGNAL else None))
                 result = FreqtradeBot.execute_trade_exit(proxy,trade,rate,exit_check,
-                    exit_tag=tag,ordertype="limit",skip_custom_exit_price=True)
+                    exit_tag=tag,ordertype="limit",skip_custom_exit_price=True,
+                    sub_trade_amt=amount if allocation is not None else None)
             finally:
                 exchange.ticket.reset(token)
             if not result:
@@ -330,6 +369,7 @@ class NativeRiskExit:
                 raise RiskError("Exit remaining inventory is not reconciled")
             decision=self.risk.evaluate(evidence.snapshot,now)
             item.update(state="TERMINAL_RECONCILED",remaining_quantity=str(remaining),risk_state=decision.state,
-                        account_checkpoint_hash=digest(checkpoint),requires_further_exit=remaining>0,reconciled_cursor=evidence.snapshot.cursor)
+                        account_checkpoint_hash=digest(checkpoint),
+                        requires_further_exit=remaining>dec(item.get("target_remaining_quantity","0"))+EPS,reconciled_cursor=evidence.snapshot.cursor)
             self._persist()
             return copy.deepcopy(item)

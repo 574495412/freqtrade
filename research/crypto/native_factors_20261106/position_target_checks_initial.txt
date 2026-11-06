@@ -1,0 +1,192 @@
+test_existing_unknown_reduction_blocks_other_exit_sources (test_native_position_targets.NativePositionTargetTests.test_existing_unknown_reduction_blocks_other_exit_sources) ... ERROR
+test_futures_scaled_reduction_preserves_collateral_and_native_reduce_only (test_native_position_targets.NativePositionTargetTests.test_futures_scaled_reduction_preserves_collateral_and_native_reduce_only) ... ERROR
+test_missing_daily_decision_is_not_backfilled_at_a_later_poll (test_native_position_targets.NativePositionTargetTests.test_missing_daily_decision_is_not_backfilled_at_a_later_poll) ... ERROR
+test_missing_volatility_does_not_invent_a_zero_target (test_native_position_targets.NativePositionTargetTests.test_missing_volatility_does_not_invent_a_zero_target) ... ERROR
+test_native_minimum_blocks_tiny_reduction_without_enlargement (test_native_position_targets.NativePositionTargetTests.test_native_minimum_blocks_tiny_reduction_without_enlargement) ... ERROR
+test_partial_cancel_reconciles_against_target_not_against_flat (test_native_position_targets.NativePositionTargetTests.test_partial_cancel_reconciles_against_target_not_against_flat) ... ERROR
+test_spot_fixed_f2_budget_dispatches_and_reconciles_partial_native_exit (test_native_position_targets.NativePositionTargetTests.test_spot_fixed_f2_budget_dispatches_and_reconciles_partial_native_exit) ... ERROR
+
+======================================================================
+ERROR: test_existing_unknown_reduction_blocks_other_exit_sources (test_native_position_targets.NativePositionTargetTests.test_existing_unknown_reduction_blocks_other_exit_sources)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 171, in test_existing_unknown_reduction_blocks_other_exit_sources
+    values=self.planned();c,wallet,_,_,trade,bot,e,now,ri,si,ex,*_=values
+           ^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 80, in planned
+    c,wallet,p,guard,trade,bot,e,now,ri,si=self.position(market)
+                                           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 50, in position
+    wallet,p,guard,trade,bot,e,_,_,now=self.fill_cycle(market)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 86, in fill_cycle
+    bot.wallets=self.boot(provider,wallet,e,"pre-entry")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 63, in boot
+    native=wallet.stage(event,self.receipt(e),e,e.snapshot.at)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 198, in stage
+    self._ready(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 106, in _ready
+    self.clock.require(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_clock.py", line 37, in require
+    raise StateError("Explicit matching native replay clock is not active")
+rd1.StateError: Explicit matching native replay clock is not active
+
+======================================================================
+ERROR: test_futures_scaled_reduction_preserves_collateral_and_native_reduce_only (test_native_position_targets.NativePositionTargetTests.test_futures_scaled_reduction_preserves_collateral_and_native_reduce_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 134, in test_futures_scaled_reduction_preserves_collateral_and_native_reduce_only
+    values=self.planned('futures');_,_,result,_,_=self.fill_reduction(values)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 80, in planned
+    c,wallet,p,guard,trade,bot,e,now,ri,si=self.position(market)
+                                           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 50, in position
+    wallet,p,guard,trade,bot,e,_,_,now=self.fill_cycle(market)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 86, in fill_cycle
+    bot.wallets=self.boot(provider,wallet,e,"pre-entry")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 63, in boot
+    native=wallet.stage(event,self.receipt(e),e,e.snapshot.at)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 198, in stage
+    self._ready(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 106, in _ready
+    self.clock.require(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_clock.py", line 37, in require
+    raise StateError("Explicit matching native replay clock is not active")
+rd1.StateError: Explicit matching native replay clock is not active
+
+======================================================================
+ERROR: test_missing_daily_decision_is_not_backfilled_at_a_later_poll (test_native_position_targets.NativePositionTargetTests.test_missing_daily_decision_is_not_backfilled_at_a_later_poll)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 139, in test_missing_daily_decision_is_not_backfilled_at_a_later_poll
+    c,wallet,p,_,trade,bot,e,now,ri,si=self.position()
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 50, in position
+    wallet,p,guard,trade,bot,e,_,_,now=self.fill_cycle(market)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 86, in fill_cycle
+    bot.wallets=self.boot(provider,wallet,e,"pre-entry")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 63, in boot
+    native=wallet.stage(event,self.receipt(e),e,e.snapshot.at)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 198, in stage
+    self._ready(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 106, in _ready
+    self.clock.require(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_clock.py", line 37, in require
+    raise StateError("Explicit matching native replay clock is not active")
+rd1.StateError: Explicit matching native replay clock is not active
+
+======================================================================
+ERROR: test_missing_volatility_does_not_invent_a_zero_target (test_native_position_targets.NativePositionTargetTests.test_missing_volatility_does_not_invent_a_zero_target)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 147, in test_missing_volatility_does_not_invent_a_zero_target
+    c,wallet,p,_,trade,bot,e,now,ri,si=self.position()
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 50, in position
+    wallet,p,guard,trade,bot,e,_,_,now=self.fill_cycle(market)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 86, in fill_cycle
+    bot.wallets=self.boot(provider,wallet,e,"pre-entry")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 63, in boot
+    native=wallet.stage(event,self.receipt(e),e,e.snapshot.at)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 198, in stage
+    self._ready(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 106, in _ready
+    self.clock.require(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_clock.py", line 37, in require
+    raise StateError("Explicit matching native replay clock is not active")
+rd1.StateError: Explicit matching native replay clock is not active
+
+======================================================================
+ERROR: test_native_minimum_blocks_tiny_reduction_without_enlargement (test_native_position_targets.NativePositionTargetTests.test_native_minimum_blocks_tiny_reduction_without_enlargement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 160, in test_native_minimum_blocks_tiny_reduction_without_enlargement
+    c,wallet,p,_,trade,bot,e,now,ri,si=self.position()
+                                       ^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 50, in position
+    wallet,p,guard,trade,bot,e,_,_,now=self.fill_cycle(market)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 86, in fill_cycle
+    bot.wallets=self.boot(provider,wallet,e,"pre-entry")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 63, in boot
+    native=wallet.stage(event,self.receipt(e),e,e.snapshot.at)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 198, in stage
+    self._ready(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 106, in _ready
+    self.clock.require(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_clock.py", line 37, in require
+    raise StateError("Explicit matching native replay clock is not active")
+rd1.StateError: Explicit matching native replay clock is not active
+
+======================================================================
+ERROR: test_partial_cancel_reconciles_against_target_not_against_flat (test_native_position_targets.NativePositionTargetTests.test_partial_cancel_reconciles_against_target_not_against_flat)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 154, in test_partial_cancel_reconciles_against_target_not_against_flat
+    values=self.planned();_,_,result,_,_=self.fill_reduction(values,filled='1',status='CANCELED')
+           ^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 80, in planned
+    c,wallet,p,guard,trade,bot,e,now,ri,si=self.position(market)
+                                           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 50, in position
+    wallet,p,guard,trade,bot,e,_,_,now=self.fill_cycle(market)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 86, in fill_cycle
+    bot.wallets=self.boot(provider,wallet,e,"pre-entry")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 63, in boot
+    native=wallet.stage(event,self.receipt(e),e,e.snapshot.at)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 198, in stage
+    self._ready(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 106, in _ready
+    self.clock.require(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_clock.py", line 37, in require
+    raise StateError("Explicit matching native replay clock is not active")
+rd1.StateError: Explicit matching native replay clock is not active
+
+======================================================================
+ERROR: test_spot_fixed_f2_budget_dispatches_and_reconciles_partial_native_exit (test_native_position_targets.NativePositionTargetTests.test_spot_fixed_f2_budget_dispatches_and_reconciles_partial_native_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 119, in test_spot_fixed_f2_budget_dispatches_and_reconciles_partial_native_exit
+    values=self.planned();checked,_,result,e,now=self.fill_reduction(values)
+           ^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 80, in planned
+    c,wallet,p,guard,trade,bot,e,now,ri,si=self.position(market)
+                                           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_position_targets.py", line 50, in position
+    wallet,p,guard,trade,bot,e,_,_,now=self.fill_cycle(market)
+                                       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 86, in fill_cycle
+    bot.wallets=self.boot(provider,wallet,e,"pre-entry")
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_wallets.py", line 63, in boot
+    native=wallet.stage(event,self.receipt(e),e,e.snapshot.at)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 198, in stage
+    self._ready(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_wallets.py", line 106, in _ready
+    self.clock.require(now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_clock.py", line 37, in require
+    raise StateError("Explicit matching native replay clock is not active")
+rd1.StateError: Explicit matching native replay clock is not active
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.228s
+
+FAILED (errors=7)
