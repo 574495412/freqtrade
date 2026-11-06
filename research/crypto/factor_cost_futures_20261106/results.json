@@ -1,0 +1,2131 @@
+{
+  "rows": [
+    {
+      "run_id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_S_base",
+      "strategy": "F1FuturesCandleCost",
+      "cost": "base",
+      "window": "S",
+      "result": {
+        "run_id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_S_base",
+        "finished_at_utc": "2026-11-06T11:05:48.285788+00:00",
+        "financial_runs": 1,
+        "risk_profile": "RD1_CANDLE_COST_FUTURES_MINIMUM_REMAINDER_V1_NOT_EXECUTION_CERTIFIED",
+        "evidence_class": "observed_retrospective_candle_cost_scenario_not_independent_oos",
+        "net_model_return": -0.02037409072190932,
+        "ending_model_equity": 979.6259092780907,
+        "max_5m_model_drawdown": 0.039109181308010776,
+        "natural_campaigns": 16,
+        "terminal_open_campaigns": 2,
+        "native_final_balance": 979.61832021,
+        "native_terminal_profit": -20.38167979,
+        "fees_including_native_terminal": 2.5702709128000003,
+        "funding_including_native_terminal": -0.35064387459306534,
+        "daily_nav": {
+          "2026-10-23 00:00:00+00:00": 999.620622056288,
+          "2026-10-24 00:00:00+00:00": 996.6341120555284,
+          "2026-10-25 00:00:00+00:00": 994.0917633748883,
+          "2026-10-26 00:00:00+00:00": 995.2764624396317,
+          "2026-10-27 00:00:00+00:00": 1001.1094715508841,
+          "2026-10-28 00:00:00+00:00": 996.8755058849476,
+          "2026-10-29 00:00:00+00:00": 983.32654012,
+          "2026-10-30 00:00:00+00:00": 978.43297004,
+          "2026-10-31 00:00:00+00:00": 978.5244653540134,
+          "2026-11-01 00:00:00+00:00": 978.607423248208,
+          "2026-11-02 00:00:00+00:00": 974.7952520735788,
+          "2026-11-03 00:00:00+00:00": 976.3125096526045,
+          "2026-11-04 00:00:00+00:00": 979.6259092780907
+        },
+        "rows": 3744,
+        "hard_halt": false,
+        "suppressed_callback_error": null,
+        "elapsed_seconds": 17.423212124966085,
+        "peak_rss_bytes": 834715648,
+        "RD1_applied": false,
+        "simulated_shared_risk_rules": true,
+        "economic_qualified": false,
+        "production_eligible": false,
+        "orders_enabled": false,
+        "capacity_verified": false
+      },
+      "audit": {
+        "all_5m_equity_maximum_error_usdt": 7.832227311155293e-09,
+        "all_5m_gross_maximum_error_usdt": 5.684341886080802e-14,
+        "passed": true,
+        "terminal_projected_funding": -0.3506438745930654,
+        "fees_before_endpoint": 2.4538317128,
+        "one_sided_turnover_initial_capital": 3.067289641,
+        "pairs": {
+          "IOTX/USDT:USDT": 1.9005152452000151,
+          "CRV/USDT:USDT": -7.630618186265256,
+          "BCH/USDT:USDT": -11.096409758539277,
+          "XRP/USDT:USDT": 1.1019876323084998,
+          "TRX/USDT:USDT": -5.783377472305872,
+          "BNB/USDT:USDT": -4.9645170025660015,
+          "RUNE/USDT:USDT": 4.467831176984036,
+          "UNI/USDT:USDT": 3.2518596542999587,
+          "SKL/USDT:USDT": -1.0154010747350035,
+          "EGLD/USDT:USDT": -0.6059609288933469
+        },
+        "campaigns": [
+          {
+            "pair": "IOTX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 3.5710347952000063,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "CRV/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.980001100790836,
+            "terminal_projected_funding": -0.0016082127908336702,
+            "native_terminal_funding": -0.0016082127908336702,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "IOTX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.6705195499999912,
+            "terminal_projected_funding": -0.009473814000000011,
+            "native_terminal_funding": -0.009473814000000002,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "CRV/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -2.6506170854744195,
+            "terminal_projected_funding": -0.004763485474424203,
+            "native_terminal_funding": -0.004763485474424201,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 3.781854343290245,
+            "terminal_projected_funding": -0.05747736870972968,
+            "native_terminal_funding": -0.05747736870972967,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "XRP/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 1.1019876323084998,
+            "terminal_projected_funding": -0.02905976769149999,
+            "native_terminal_funding": -0.029059767691500003,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -5.003205157413119,
+            "terminal_projected_funding": -0.01632195741312501,
+            "native_terminal_funding": -0.016321957413124998,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "TRX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.8898073923058689,
+            "terminal_projected_funding": -0.008301440305871202,
+            "native_terminal_funding": -0.0083014403058712,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BNB/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.9645170025660015,
+            "terminal_projected_funding": -0.0660941225660029,
+            "native_terminal_funding": -0.06609412256600292,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.969669357301151,
+            "terminal_projected_funding": -0.0030947013011453557,
+            "native_terminal_funding": -0.0030947013011453466,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "TRX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.8935700800000035,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 4.064581600000011,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.905389587115252,
+            "terminal_projected_funding": -0.029453515115250253,
+            "native_terminal_funding": -0.029453515115250236,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.44246994570003007,
+            "terminal_projected_funding": -0.07330114570004723,
+            "native_terminal_funding": -0.0733011457000472,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "SKL/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.0154010747350035,
+            "terminal_projected_funding": -0.009820798735000011,
+            "native_terminal_funding": -0.009820798735,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 3.694329599999989,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "terminal_quantity": 148.0,
+            "terminal_marked_pnl": 0.4032495769840245,
+            "terminal_projected_funding": 0.00657405698400801,
+            "native_terminal_funding": 0.006574056984008,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "EGLD/USDT:USDT",
+            "terminal_quantity": 15.1,
+            "terminal_marked_pnl": -0.6059609288933469,
+            "terminal_projected_funding": -0.04844760177414388,
+            "native_terminal_funding": -0.04844760177414388,
+            "terminal_forced_exit_excluded": true
+          }
+        ],
+        "funding_scope": "Independent arithmetic under native inclusive model intervals; not verified settlement/fill chronology",
+        "maximum_positive_pair_share": 0.41669002615764017,
+        "minimum_full_exit_campaigns": 5,
+        "native_partial_reduction_fills": 0,
+        "funding_event_order_certified": false,
+        "historical_capacity_verified": false
+      },
+      "calendar": {
+        "complete_day_count": 12,
+        "complete_daily_interval_start": "2026-10-23T00:00:00+00:00",
+        "complete_daily_interval_end": "2026-11-04T00:00:00+00:00",
+        "final_partial_day_excluded_from_daily_and_annualized_metrics": true,
+        "final_partial_day_start": "2026-11-04T00:00:00+00:00",
+        "complete_week_count": 1,
+        "week_definition": "Monday00:00 UTC to next Monday00:00 UTC; both endpoints observed",
+        "worst_complete_day_return": -0.01366108608474692,
+        "worst_complete_day_start": "2026-10-29T00:00:00+00:00",
+        "worst_complete_day_end": "2026-10-30T00:00:00+00:00",
+        "worst_complete_week_return": -0.015938850045643993,
+        "worst_complete_week_start": "2026-10-26T00:00:00+00:00",
+        "worst_complete_week_end": "2026-11-02T00:00:00+00:00",
+        "daily_ES95_mean_return": -0.01366108608474692,
+        "ES95_observed_tail_days": 1,
+        "daily_NAV_Sharpe_365_ddof1_rf0": -8.103151420340103,
+        "daily_Sortino_365_target0_all_day_downside": -8.23711203381352,
+        "complete_days_geometric_annualized_return": -0.5194897946477643,
+        "complete_days_five_minute_reference_mdd": 0.03549672679823268,
+        "Calmar_complete_days_CAGR_over_same_interval_5m_reference_MDD": -14.634864718671155,
+        "max_complete_day_positive_pnl_contribution_share": 0.6765377002565385,
+        "annualization_is_descriptive_not_forecast": true,
+        "less_than_one_year_of_complete_days": true,
+        "small_sample_warning": "Only12 complete daily returns and1 complete UTC week; annualized ratios/ES are unstable descriptive statistics."
+      },
+      "drawdown": {
+        "mdd": 0.039109181308010776,
+        "mdd_peak_at": "2026-10-23T14:55:00+00:00",
+        "mdd_trough_at": "2026-11-04T03:10:00+00:00",
+        "mdd_recovery_at": null,
+        "mdd_episode_recovered": false,
+        "mdd_peak_to_trough_hours": 276.25,
+        "longest_underwater_episode_hours": 297.0,
+        "longest_episode_right_censored": true,
+        "terminal_underwater_hours": 297.0,
+        "underwater_snapshot_fraction": 0.9927884615384616,
+        "observation_resolution_minutes": 5
+      },
+      "artifact_manifest_sha256": "3e9ee7ec7720a5679dbcb3287000ee455268503c77631d3c0efc46b79d3e7917"
+    },
+    {
+      "run_id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_S_stress",
+      "strategy": "F1FuturesCandleCost",
+      "cost": "stress",
+      "window": "S",
+      "result": {
+        "run_id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_S_stress",
+        "finished_at_utc": "2026-11-06T11:06:05.504264+00:00",
+        "financial_runs": 1,
+        "risk_profile": "RD1_CANDLE_COST_FUTURES_MINIMUM_REMAINDER_V1_NOT_EXECUTION_CERTIFIED",
+        "evidence_class": "observed_retrospective_candle_cost_scenario_not_independent_oos",
+        "net_model_return": -0.023064836215829443,
+        "ending_model_equity": 976.9351637841705,
+        "max_5m_model_drawdown": 0.04101660387128592,
+        "natural_campaigns": 14,
+        "terminal_open_campaigns": 3,
+        "native_final_balance": 976.93652375,
+        "native_terminal_profit": -23.063476249999997,
+        "fees_including_native_terminal": 4.3503948255000005,
+        "funding_including_native_terminal": -0.3067544051974035,
+        "daily_nav": {
+          "2026-10-23 00:00:00+00:00": 990.9159885764705,
+          "2026-10-24 00:00:00+00:00": 984.5843502855133,
+          "2026-10-25 00:00:00+00:00": 982.0199435869279,
+          "2026-10-26 00:00:00+00:00": 983.1386890221356,
+          "2026-10-27 00:00:00+00:00": 989.6760296044564,
+          "2026-10-28 00:00:00+00:00": 990.9318857492807,
+          "2026-10-29 00:00:00+00:00": 978.06677458,
+          "2026-10-30 00:00:00+00:00": 973.19466388,
+          "2026-10-31 00:00:00+00:00": 975.2981391479004,
+          "2026-11-01 00:00:00+00:00": 975.2283886999213,
+          "2026-11-02 00:00:00+00:00": 971.495246156104,
+          "2026-11-03 00:00:00+00:00": 972.9978334471349,
+          "2026-11-04 00:00:00+00:00": 976.9351637841705
+        },
+        "rows": 3744,
+        "hard_halt": false,
+        "suppressed_callback_error": null,
+        "elapsed_seconds": 16.49281795800198,
+        "peak_rss_bytes": 1425833984,
+        "RD1_applied": false,
+        "simulated_shared_risk_rules": true,
+        "economic_qualified": false,
+        "production_eligible": false,
+        "orders_enabled": false,
+        "capacity_verified": false
+      },
+      "audit": {
+        "all_5m_equity_maximum_error_usdt": 1.7148636288766284e-08,
+        "all_5m_gross_maximum_error_usdt": 5.684341886080802e-14,
+        "passed": true,
+        "terminal_projected_funding": -0.3067544051974035,
+        "fees_before_endpoint": 3.9984585255000002,
+        "one_sided_turnover_initial_capital": 2.665639017,
+        "pairs": {
+          "IOTX/USDT:USDT": -9.866998720970894,
+          "CRV/USDT:USDT": -7.653464737624804,
+          "XRP/USDT:USDT": 0.9293782960777021,
+          "BCH/USDT:USDT": -4.5311764639591185,
+          "TRX/USDT:USDT": -5.858430419814891,
+          "BNB/USDT:USDT": -4.702349559291676,
+          "RUNE/USDT:USDT": 6.428440269766242,
+          "UNI/USDT:USDT": 3.9290016738691955,
+          "SKL/USDT:USDT": -1.0616056912350025,
+          "EGLD/USDT:USDT": -0.6776308454976397
+        },
+        "campaigns": [
+          {
+            "pair": "IOTX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.934710545470891,
+            "terminal_projected_funding": 0.04787675502911001,
+            "native_terminal_funding": 0.047876755029110006,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "CRV/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.976137419476952,
+            "terminal_projected_funding": -0.0015653994769419604,
+            "native_terminal_funding": -0.0015653994769419602,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "IOTX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.9322881755000045,
+            "terminal_projected_funding": -0.00914217300000001,
+            "native_terminal_funding": -0.009142173000000002,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "CRV/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -2.677327318147852,
+            "terminal_projected_funding": -0.0045809431478495526,
+            "native_terminal_funding": -0.004580943147849552,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "XRP/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 0.9293782960777021,
+            "terminal_projected_funding": -0.027952728922299993,
+            "native_terminal_funding": -0.027952728922300003,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 5.2949763567417145,
+            "terminal_projected_funding": -0.06383730325829534,
+            "native_terminal_funding": -0.06383730325829533,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "TRX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.9863197198148835,
+            "terminal_projected_funding": -0.007988714814896603,
+            "native_terminal_funding": -0.007988714814896599,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BNB/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.702349559291676,
+            "terminal_projected_funding": -0.06100995929169498,
+            "native_terminal_funding": -0.06100995929169499,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.948447325573581,
+            "terminal_projected_funding": -0.0030020455735661534,
+            "native_terminal_funding": -0.0030020455735661447,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "TRX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.8721107000000075,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 6.164579089998025,
+            "terminal_projected_funding": -0.009303310002,
+            "native_terminal_funding": -0.009303310002000001,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.877705495127252,
+            "terminal_projected_funding": -0.028535960127236228,
+            "native_terminal_funding": -0.02853596012723621,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.5281085960308174,
+            "terminal_projected_funding": -0.06766259603081282,
+            "native_terminal_funding": -0.0676625960308128,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "SKL/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.0616056912350025,
+            "terminal_projected_funding": -0.009820798735000011,
+            "native_terminal_funding": -0.009820798735,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 12.0,
+            "terminal_marked_pnl": 4.457110269900013,
+            "terminal_projected_funding": -0.018178005840000025,
+            "native_terminal_funding": -0.01817800584,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "terminal_quantity": 144.0,
+            "terminal_marked_pnl": 0.26386117976821793,
+            "terminal_projected_funding": 0.006396379768224009,
+            "native_terminal_funding": 0.006396379768224,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "EGLD/USDT:USDT",
+            "terminal_quantity": 15.1,
+            "terminal_marked_pnl": -0.6776308454976397,
+            "terminal_projected_funding": -0.04844760177414388,
+            "native_terminal_funding": -0.04844760177414388,
+            "terminal_forced_exit_excluded": true
+          }
+        ],
+        "funding_scope": "Independent arithmetic under native inclusive model intervals; not verified settlement/fill chronology",
+        "maximum_positive_pair_share": 0.5695528176436718,
+        "minimum_full_exit_campaigns": 2,
+        "native_partial_reduction_fills": 0,
+        "funding_event_order_certified": false,
+        "historical_capacity_verified": false
+      },
+      "calendar": {
+        "complete_day_count": 12,
+        "complete_daily_interval_start": "2026-10-23T00:00:00+00:00",
+        "complete_daily_interval_end": "2026-11-04T00:00:00+00:00",
+        "final_partial_day_excluded_from_daily_and_annualized_metrics": true,
+        "final_partial_day_start": "2026-11-04T00:00:00+00:00",
+        "complete_week_count": 1,
+        "week_definition": "Monday00:00 UTC to next Monday00:00 UTC; both endpoints observed",
+        "worst_complete_day_return": -0.013048787670279283,
+        "worst_complete_day_start": "2026-10-29T00:00:00+00:00",
+        "worst_complete_day_end": "2026-10-30T00:00:00+00:00",
+        "worst_complete_week_return": -0.007264047669492513,
+        "worst_complete_week_start": "2026-10-26T00:00:00+00:00",
+        "worst_complete_week_end": "2026-11-02T00:00:00+00:00",
+        "daily_ES95_mean_return": -0.013048787670279283,
+        "ES95_observed_tail_days": 1,
+        "daily_NAV_Sharpe_365_ddof1_rf0": -7.980124041959751,
+        "daily_Sortino_365_target0_all_day_downside": -8.178148843658843,
+        "complete_days_geometric_annualized_return": -0.5667153132935201,
+        "complete_days_five_minute_reference_mdd": 0.03736754953648658,
+        "Calmar_complete_days_CAGR_over_same_interval_5m_reference_MDD": -15.16597476482009,
+        "max_complete_day_positive_pnl_contribution_share": 0.5125184686516863,
+        "annualization_is_descriptive_not_forecast": true,
+        "less_than_one_year_of_complete_days": true,
+        "small_sample_warning": "Only12 complete daily returns and1 complete UTC week; annualized ratios/ES are unstable descriptive statistics."
+      },
+      "drawdown": {
+        "mdd": 0.04101660387128592,
+        "mdd_peak_at": "2026-10-23T05:55:00+00:00",
+        "mdd_trough_at": "2026-11-04T03:10:00+00:00",
+        "mdd_recovery_at": null,
+        "mdd_episode_recovered": false,
+        "mdd_peak_to_trough_hours": 285.25,
+        "longest_underwater_episode_hours": 306.0,
+        "longest_episode_right_censored": true,
+        "terminal_underwater_hours": 306.0,
+        "underwater_snapshot_fraction": 0.9949252136752137,
+        "observation_resolution_minutes": 5
+      },
+      "artifact_manifest_sha256": "6b8c9e296f9b7b52de196eeaad26245313cdebe0bf0e79a467c1b950a42ac111"
+    },
+    {
+      "run_id": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_S_base",
+      "strategy": "F2FuturesCandleCost",
+      "cost": "base",
+      "window": "S",
+      "result": {
+        "run_id": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_S_base",
+        "finished_at_utc": "2026-11-06T11:06:17.940861+00:00",
+        "financial_runs": 1,
+        "risk_profile": "RD1_CANDLE_COST_FUTURES_MINIMUM_REMAINDER_V1_NOT_EXECUTION_CERTIFIED",
+        "evidence_class": "observed_retrospective_candle_cost_scenario_not_independent_oos",
+        "net_model_return": -0.01860436796679421,
+        "ending_model_equity": 981.3956320332057,
+        "max_5m_model_drawdown": 0.029717778370326187,
+        "natural_campaigns": 26,
+        "terminal_open_campaigns": 6,
+        "native_final_balance": 980.08535621,
+        "native_terminal_profit": -19.91464379,
+        "fees_including_native_terminal": 1.9640117984,
+        "funding_including_native_terminal": -0.21200397819302086,
+        "daily_nav": {
+          "2026-10-23 00:00:00+00:00": 1000.0,
+          "2026-10-24 00:00:00+00:00": 1000.0,
+          "2026-10-25 00:00:00+00:00": 1000.0,
+          "2026-10-26 00:00:00+00:00": 1000.1504864,
+          "2026-10-27 00:00:00+00:00": 1002.110975373431,
+          "2026-10-28 00:00:00+00:00": 1000.917762851051,
+          "2026-10-29 00:00:00+00:00": 989.2400624837715,
+          "2026-10-30 00:00:00+00:00": 988.6494563,
+          "2026-10-31 00:00:00+00:00": 987.4838692367902,
+          "2026-11-01 00:00:00+00:00": 986.9101911009992,
+          "2026-11-02 00:00:00+00:00": 981.267765051347,
+          "2026-11-03 00:00:00+00:00": 978.9689528428388,
+          "2026-11-04 00:00:00+00:00": 981.3956320332057
+        },
+        "rows": 3744,
+        "hard_halt": false,
+        "suppressed_callback_error": null,
+        "elapsed_seconds": 11.807444375008345,
+        "peak_rss_bytes": 1263550464,
+        "RD1_applied": false,
+        "simulated_shared_risk_rules": true,
+        "economic_qualified": false,
+        "production_eligible": false,
+        "orders_enabled": false,
+        "capacity_verified": false
+      },
+      "audit": {
+        "all_5m_equity_maximum_error_usdt": 1.0609596756694373e-08,
+        "all_5m_gross_maximum_error_usdt": 5.684341886080802e-14,
+        "passed": true,
+        "terminal_projected_funding": -0.21200397819302094,
+        "fees_before_endpoint": 1.7647623704000002,
+        "one_sided_turnover_initial_capital": 2.205952962999999,
+        "pairs": {
+          "UNI/USDT:USDT": 0.9239541430110789,
+          "BTC/USDT:USDT": 0.05046291753527255,
+          "CELO/USDT:USDT": -2.8529045927746512,
+          "XRP/USDT:USDT": 0.4052352009676378,
+          "BCH/USDT:USDT": -1.0114842520284606,
+          "GALA/USDT:USDT": -1.5112968752000029,
+          "LINK/USDT:USDT": -3.0489274674143285,
+          "DOGE/USDT:USDT": -2.7085971973990004,
+          "DYDX/USDT:USDT": -1.6695337600000038,
+          "TRX/USDT:USDT": 1.665809831173159,
+          "IOTX/USDT:USDT": -1.7370200959999949,
+          "RUNE/USDT:USDT": -0.5600783621437025,
+          "MASK/USDT:USDT": -2.109969918863505,
+          "SKL/USDT:USDT": -0.10996729289625606,
+          "AVAX/USDT:USDT": -0.7685643744990042,
+          "AAVE/USDT:USDT": -0.7043330709699088,
+          "EGLD/USDT:USDT": -0.9120729370323019,
+          "ETH/USDT:USDT": 0.32743920385905056,
+          "FIL/USDT:USDT": -1.2696896640000013,
+          "IOTA/USDT:USDT": -1.0028294038124974
+        },
+        "campaigns": [
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 0.25154228796800226,
+            "terminal_projected_funding": -0.002860912032,
+            "native_terminal_funding": -0.002860912032,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BTC/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 0.05046291753527255,
+            "terminal_projected_funding": -0.01787852246472498,
+            "native_terminal_funding": -0.017878522464724992,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "CELO/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.1082203236092836,
+            "terminal_projected_funding": 0.00567107719072,
+            "native_terminal_funding": 0.005671077190720001,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "XRP/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.44922173250357106,
+            "terminal_projected_funding": -0.01862761250357611,
+            "native_terminal_funding": -0.018627612503576113,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.20078487661334407,
+            "terminal_projected_funding": -0.012609196613343565,
+            "native_terminal_funding": -0.012609196613343563,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "CELO/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.7446842691653675,
+            "terminal_projected_funding": 0.0028275852346280003,
+            "native_terminal_funding": 0.0028275852346280003,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "GALA/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.5112968752000029,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "LINK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.8161073200000004,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "DOGE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -2.7085971973990004,
+            "terminal_projected_funding": -0.027561693398999998,
+            "native_terminal_funding": -0.027561693399,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "DYDX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.6695337600000038,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "TRX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 2.6228349795755665,
+            "terminal_projected_funding": -0.026032508424441207,
+            "native_terminal_funding": -0.0260325084244412,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "IOTX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.7370200959999949,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.8106993754151165,
+            "terminal_projected_funding": -0.0025183834151159983,
+            "native_terminal_funding": -0.002518383415116,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.519218053094999,
+            "terminal_projected_funding": -0.001006453095,
+            "native_terminal_funding": -0.001006453095,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "LINK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.2328201474143279,
+            "terminal_projected_funding": -0.0056537474143264,
+            "native_terminal_funding": -0.0056537474143264,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "MASK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.6617642299999988,
+            "terminal_projected_funding": -0.0018090299999999984,
+            "native_terminal_funding": -0.0018090300000000003,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "SKL/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.10996729289625606,
+            "terminal_projected_funding": -0.003721276896256003,
+            "native_terminal_funding": -0.0037212768962560003,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "AVAX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.7685643744990042,
+            "terminal_projected_funding": -0.013044374499000002,
+            "native_terminal_funding": -0.013044374498999999,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "AAVE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.7043330709699088,
+            "terminal_projected_funding": -0.00517627096990805,
+            "native_terminal_funding": -0.005176270969908051,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "EGLD/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.9120729370323019,
+            "terminal_projected_funding": -0.002247097032298437,
+            "native_terminal_funding": -0.0022470970322984395,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "ETH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.4388950337775956,
+            "terminal_projected_funding": -0.0019789377776052905,
+            "native_terminal_funding": -0.0019789377776052875,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "MASK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.4482056888635062,
+            "terminal_projected_funding": -0.0050258488635,
+            "native_terminal_funding": -0.0050258488635,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.603839017396919,
+            "terminal_projected_funding": -0.015107017396918804,
+            "native_terminal_funding": -0.0151070173969188,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "FIL/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.2696896640000013,
+            "terminal_projected_funding": -0.004583856,
+            "native_terminal_funding": -0.004583856,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "IOTA/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.1453839919999957,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "ETH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.1505820189215021,
+            "terminal_projected_funding": -0.004619530921500004,
+            "native_terminal_funding": -0.0046195309215,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "ETH/USDT:USDT",
+            "terminal_quantity": 0.026,
+            "terminal_marked_pnl": 2.9169162565581486,
+            "terminal_projected_funding": -0.006307007441851999,
+            "native_terminal_funding": -0.006307007441851999,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "XRP/USDT:USDT",
+            "terminal_quantity": 34.4,
+            "terminal_marked_pnl": 0.8544569334712089,
+            "terminal_projected_funding": -0.01424708197839998,
+            "native_terminal_funding": -0.014247081978400002,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 3.0,
+            "terminal_marked_pnl": 1.2762508724399957,
+            "terminal_projected_funding": -0.008917228992000004,
+            "native_terminal_funding": -0.008917228992,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "IOTA/USDT:USDT",
+            "terminal_quantity": 427.5,
+            "terminal_marked_pnl": 0.1425545881874983,
+            "terminal_projected_funding": -0.0017467508924999989,
+            "native_terminal_funding": -0.0017467508925,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "terminal_quantity": 13.0,
+            "terminal_marked_pnl": -0.04086030904870357,
+            "terminal_projected_funding": -0.00024310904870199993,
+            "native_terminal_funding": -0.00024310904870200012,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "TRX/USDT:USDT",
+            "terminal_quantity": 294.0,
+            "terminal_marked_pnl": -0.9570251484024074,
+            "terminal_projected_funding": -0.016979192546400085,
+            "native_terminal_funding": -0.0169791925464,
+            "terminal_forced_exit_excluded": true
+          }
+        ],
+        "funding_scope": "Independent arithmetic under native inclusive model intervals; not verified settlement/fill chronology",
+        "maximum_positive_pair_share": 0.4938803969386604,
+        "minimum_full_exit_campaigns": 3,
+        "native_partial_reduction_fills": 3,
+        "funding_event_order_certified": false,
+        "historical_capacity_verified": false
+      },
+      "calendar": {
+        "complete_day_count": 12,
+        "complete_daily_interval_start": "2026-10-23T00:00:00+00:00",
+        "complete_daily_interval_end": "2026-11-04T00:00:00+00:00",
+        "final_partial_day_excluded_from_daily_and_annualized_metrics": true,
+        "final_partial_day_start": "2026-11-04T00:00:00+00:00",
+        "complete_week_count": 1,
+        "week_definition": "Monday00:00 UTC to next Monday00:00 UTC; both endpoints observed",
+        "worst_complete_day_return": -0.011737508836726196,
+        "worst_complete_day_start": "2026-10-29T00:00:00+00:00",
+        "worst_complete_day_end": "2026-10-30T00:00:00+00:00",
+        "worst_complete_week_return": -0.013168729630140819,
+        "worst_complete_week_start": "2026-10-26T00:00:00+00:00",
+        "worst_complete_week_end": "2026-11-02T00:00:00+00:00",
+        "daily_ES95_mean_return": -0.011737508836726196,
+        "ES95_observed_tail_days": 1,
+        "daily_NAV_Sharpe_365_ddof1_rf0": -9.572904024722323,
+        "daily_Sortino_365_target0_all_day_downside": -8.941591212326857,
+        "complete_days_geometric_annualized_return": -0.4878551043222704,
+        "complete_days_five_minute_reference_mdd": 0.025596343052006865,
+        "Calmar_complete_days_CAGR_over_same_interval_5m_reference_MDD": -19.0595626621757,
+        "max_complete_day_positive_pnl_contribution_share": 0.8964088785128974,
+        "annualization_is_descriptive_not_forecast": true,
+        "less_than_one_year_of_complete_days": true,
+        "small_sample_warning": "Only12 complete daily returns and1 complete UTC week; annualized ratios/ES are unstable descriptive statistics."
+      },
+      "drawdown": {
+        "mdd": 0.029717778370326187,
+        "mdd_peak_at": "2026-10-28T10:05:00+00:00",
+        "mdd_trough_at": "2026-11-04T03:10:00+00:00",
+        "mdd_recovery_at": null,
+        "mdd_episode_recovered": false,
+        "mdd_peak_to_trough_hours": 161.08333333333334,
+        "longest_underwater_episode_hours": 181.83333333333334,
+        "longest_episode_right_censored": true,
+        "terminal_underwater_hours": 181.83333333333334,
+        "underwater_snapshot_fraction": 0.6933760683760684,
+        "observation_resolution_minutes": 5
+      },
+      "artifact_manifest_sha256": "f9dd832ad5ef44b0d380480fb9b375ccb9f1493a2118c8b74204db43283f13c5"
+    },
+    {
+      "run_id": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_S_stress",
+      "strategy": "F2FuturesCandleCost",
+      "cost": "stress",
+      "window": "S",
+      "result": {
+        "run_id": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_S_stress",
+        "finished_at_utc": "2026-11-06T11:06:30.286943+00:00",
+        "financial_runs": 1,
+        "risk_profile": "RD1_CANDLE_COST_FUTURES_MINIMUM_REMAINDER_V1_NOT_EXECUTION_CERTIFIED",
+        "evidence_class": "observed_retrospective_candle_cost_scenario_not_independent_oos",
+        "net_model_return": -0.012204733668664258,
+        "ending_model_equity": 987.7952663313357,
+        "max_5m_model_drawdown": 0.022396008066233652,
+        "natural_campaigns": 23,
+        "terminal_open_campaigns": 6,
+        "native_final_balance": 986.51297198,
+        "native_terminal_profit": -13.48702802,
+        "fees_including_native_terminal": 3.1847951415,
+        "funding_including_native_terminal": -0.20215588111473518,
+        "daily_nav": {
+          "2026-10-23 00:00:00+00:00": 1000.0,
+          "2026-10-24 00:00:00+00:00": 1000.0,
+          "2026-10-25 00:00:00+00:00": 1000.0,
+          "2026-10-26 00:00:00+00:00": 1000.0829965,
+          "2026-10-27 00:00:00+00:00": 1001.6310555882367,
+          "2026-10-28 00:00:00+00:00": 1000.5534799893766,
+          "2026-10-29 00:00:00+00:00": 996.6056673190574,
+          "2026-10-30 00:00:00+00:00": 996.00368804,
+          "2026-10-31 00:00:00+00:00": 994.7340429850112,
+          "2026-11-01 00:00:00+00:00": 994.1011389935069,
+          "2026-11-02 00:00:00+00:00": 988.2685722739981,
+          "2026-11-03 00:00:00+00:00": 985.618115086657,
+          "2026-11-04 00:00:00+00:00": 987.7952663313357
+        },
+        "rows": 3744,
+        "hard_halt": false,
+        "suppressed_callback_error": null,
+        "elapsed_seconds": 11.721464917005505,
+        "peak_rss_bytes": 1268400128,
+        "RD1_applied": false,
+        "simulated_shared_risk_rules": true,
+        "economic_qualified": false,
+        "production_eligible": false,
+        "orders_enabled": false,
+        "capacity_verified": false
+      },
+      "audit": {
+        "all_5m_equity_maximum_error_usdt": 1.3955059330328368e-08,
+        "all_5m_gross_maximum_error_usdt": 5.684341886080802e-14,
+        "passed": true,
+        "terminal_projected_funding": -0.20215588111473523,
+        "fees_before_endpoint": 2.818855029,
+        "one_sided_turnover_initial_capital": 1.8792366859999998,
+        "pairs": {
+          "CELO/USDT:USDT": -2.8497877529848585,
+          "XRP/USDT:USDT": 0.2820107383784082,
+          "BCH/USDT:USDT": -1.0461715948546801,
+          "LINK/USDT:USDT": -3.0536744674660454,
+          "UNI/USDT:USDT": -0.5267635863967346,
+          "DOGE/USDT:USDT": -2.718818229695006,
+          "DYDX/USDT:USDT": -1.6686636750000012,
+          "TRX/USDT:USDT": 7.188925691611652,
+          "RUNE/USDT:USDT": -0.5854785621437008,
+          "MASK/USDT:USDT": -2.196929383087996,
+          "SKL/USDT:USDT": -0.11837255689625636,
+          "AVAX/USDT:USDT": -0.8416443744990015,
+          "AAVE/USDT:USDT": -0.7228452709699088,
+          "EGLD/USDT:USDT": -0.9269817288254353,
+          "ETH/USDT:USDT": -0.05524474393164214,
+          "FIL/USDT:USDT": -1.3071961369999985,
+          "IOTA/USDT:USDT": -1.0570980438674935
+        },
+        "campaigns": [
+          {
+            "pair": "CELO/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.1071410376655981,
+            "terminal_projected_funding": 0.0055186173344,
+            "native_terminal_funding": 0.0055186173344,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "XRP/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.4836870205357975,
+            "terminal_projected_funding": -0.01813182053580032,
+            "native_terminal_funding": -0.01813182053580032,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.2272867126378839,
+            "terminal_projected_funding": -0.012179337637888673,
+            "native_terminal_funding": -0.012179337637888669,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "CELO/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.7426467153192604,
+            "terminal_projected_funding": 0.002751308680736,
+            "native_terminal_funding": 0.002751308680736,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "LINK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.8136405350000047,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.1385164089428184,
+            "terminal_projected_funding": -0.014326408942816199,
+            "native_terminal_funding": -0.0143264089428162,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "DOGE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -2.718818229695006,
+            "terminal_projected_funding": -0.026823784695,
+            "native_terminal_funding": -0.026823784695000005,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "DYDX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.6686636750000012,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "TRX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 8.255938950984447,
+            "terminal_projected_funding": -0.025319289015552405,
+            "native_terminal_funding": -0.0253192890155524,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.8188848822167962,
+            "terminal_projected_funding": -0.002436262216796998,
+            "native_terminal_funding": -0.002436262216797,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.5329657030949999,
+            "terminal_projected_funding": -0.001006453095,
+            "native_terminal_funding": -0.001006453095,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "LINK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.2400339324660405,
+            "terminal_projected_funding": -0.0055406724660398724,
+            "native_terminal_funding": -0.0055406724660398724,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "MASK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.7128250299999936,
+            "terminal_projected_funding": -0.0018090299999999984,
+            "native_terminal_funding": -0.0018090300000000003,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "SKL/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.11837255689625636,
+            "terminal_projected_funding": -0.003721276896256003,
+            "native_terminal_funding": -0.0037212768962560003,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "AVAX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.8416443744990015,
+            "terminal_projected_funding": -0.013044374499000002,
+            "native_terminal_funding": -0.013044374498999999,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "AAVE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.7228452709699088,
+            "terminal_projected_funding": -0.00517627096990805,
+            "native_terminal_funding": -0.005176270969908051,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "EGLD/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.9269817288254353,
+            "terminal_projected_funding": -0.0022114288254365573,
+            "native_terminal_funding": -0.0022114288254365595,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "ETH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.5533766177775992,
+            "terminal_projected_funding": -0.0019789377776052905,
+            "native_terminal_funding": -0.0019789377776052875,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "MASK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.484104353088002,
+            "terminal_projected_funding": -0.004910753088,
+            "native_terminal_funding": -0.004910753088,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.6333545173969177,
+            "terminal_projected_funding": -0.015107017396918804,
+            "native_terminal_funding": -0.0151070173969188,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "FIL/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.3071961369999985,
+            "terminal_projected_funding": -0.004489432,
+            "native_terminal_funding": -0.004489432,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "IOTA/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.1758199849999933,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "ETH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.2237254459215001,
+            "terminal_projected_funding": -0.004619530921500004,
+            "native_terminal_funding": -0.0046195309215,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "ETH/USDT:USDT",
+            "terminal_quantity": 0.025,
+            "terminal_marked_pnl": 2.7218573197674574,
+            "terminal_projected_funding": -0.00606443023255,
+            "native_terminal_funding": -0.00606443023255,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "XRP/USDT:USDT",
+            "terminal_quantity": 33.8,
+            "terminal_marked_pnl": 0.7656977589142057,
+            "terminal_projected_funding": -0.01398952857179998,
+            "native_terminal_funding": -0.0139895285718,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 3.0,
+            "terminal_marked_pnl": 1.2451073399430015,
+            "terminal_projected_funding": -0.008917228992000004,
+            "native_terminal_funding": -0.008917228992,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "IOTA/USDT:USDT",
+            "terminal_quantity": 427.5,
+            "terminal_marked_pnl": 0.11872194113249977,
+            "terminal_projected_funding": -0.0017467508924999989,
+            "native_terminal_funding": -0.0017467508925,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "terminal_quantity": 13.0,
+            "terminal_marked_pnl": -0.05251285904870089,
+            "terminal_projected_funding": -0.00024310904870199993,
+            "native_terminal_funding": -0.00024310904870200012,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "TRX/USDT:USDT",
+            "terminal_quantity": 288.0,
+            "terminal_marked_pnl": -1.0670132593727955,
+            "terminal_projected_funding": -0.016632678412800084,
+            "native_terminal_funding": -0.0166326784128,
+            "terminal_forced_exit_excluded": true
+          }
+        ],
+        "funding_scope": "Independent arithmetic under native inclusive model intervals; not verified settlement/fill chronology",
+        "maximum_positive_pair_share": 0.9622522904563406,
+        "minimum_full_exit_campaigns": 1,
+        "native_partial_reduction_fills": 3,
+        "funding_event_order_certified": false,
+        "historical_capacity_verified": false
+      },
+      "calendar": {
+        "complete_day_count": 12,
+        "complete_daily_interval_start": "2026-10-23T00:00:00+00:00",
+        "complete_daily_interval_end": "2026-11-04T00:00:00+00:00",
+        "final_partial_day_excluded_from_daily_and_annualized_metrics": true,
+        "final_partial_day_start": "2026-11-04T00:00:00+00:00",
+        "complete_week_count": 1,
+        "week_definition": "Monday00:00 UTC to next Monday00:00 UTC; both endpoints observed",
+        "worst_complete_day_return": -0.005801259600221043,
+        "worst_complete_day_start": "2026-11-02T00:00:00+00:00",
+        "worst_complete_day_end": "2026-11-03T00:00:00+00:00",
+        "worst_complete_week_return": -0.005977999665123246,
+        "worst_complete_week_start": "2026-10-26T00:00:00+00:00",
+        "worst_complete_week_end": "2026-11-02T00:00:00+00:00",
+        "daily_ES95_mean_return": -0.005801259600221043,
+        "ES95_observed_tail_days": 1,
+        "daily_NAV_Sharpe_365_ddof1_rf0": -11.570076394503879,
+        "daily_Sortino_365_target0_all_day_downside": -10.369495930371823,
+        "complete_days_geometric_annualized_return": -0.37052237793226694,
+        "complete_days_five_minute_reference_mdd": 0.018261683503732695,
+        "Calmar_complete_days_CAGR_over_same_interval_5m_reference_MDD": -20.289606807419045,
+        "max_complete_day_positive_pnl_contribution_share": 0.9160103456430507,
+        "annualization_is_descriptive_not_forecast": true,
+        "less_than_one_year_of_complete_days": true,
+        "small_sample_warning": "Only12 complete daily returns and1 complete UTC week; annualized ratios/ES are unstable descriptive statistics."
+      },
+      "drawdown": {
+        "mdd": 0.022396008066233652,
+        "mdd_peak_at": "2026-10-28T10:05:00+00:00",
+        "mdd_trough_at": "2026-11-04T03:10:00+00:00",
+        "mdd_recovery_at": null,
+        "mdd_episode_recovered": false,
+        "mdd_peak_to_trough_hours": 161.08333333333334,
+        "longest_underwater_episode_hours": 181.83333333333334,
+        "longest_episode_right_censored": true,
+        "terminal_underwater_hours": 181.83333333333334,
+        "underwater_snapshot_fraction": 0.7094017094017094,
+        "observation_resolution_minutes": 5
+      },
+      "artifact_manifest_sha256": "e70311c586a4069f7a67636e4bea4feb76286621555f4ca69248d99a695a55de"
+    },
+    {
+      "run_id": "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_S_base",
+      "strategy": "AverageFuturesCandleControl",
+      "cost": "base",
+      "window": "S",
+      "result": {
+        "run_id": "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_S_base",
+        "finished_at_utc": "2026-11-06T11:06:42.211362+00:00",
+        "financial_runs": 1,
+        "risk_profile": "RD1_CANDLE_COST_FUTURES_MINIMUM_REMAINDER_V1_NOT_EXECUTION_CERTIFIED",
+        "evidence_class": "observed_retrospective_candle_cost_scenario_not_independent_oos",
+        "net_model_return": -0.014090149770651594,
+        "ending_model_equity": 985.9098502293484,
+        "max_5m_model_drawdown": 0.031371724614473795,
+        "natural_campaigns": 30,
+        "terminal_open_campaigns": 6,
+        "native_final_balance": 984.05877303,
+        "native_terminal_profit": -15.94122697,
+        "fees_including_native_terminal": 4.4508684864,
+        "funding_including_native_terminal": -0.32544649238321705,
+        "daily_nav": {
+          "2026-10-23 00:00:00+00:00": 1000.0,
+          "2026-10-24 00:00:00+00:00": 1000.0,
+          "2026-10-25 00:00:00+00:00": 1000.0,
+          "2026-10-26 00:00:00+00:00": 1000.4890808,
+          "2026-10-27 00:00:00+00:00": 1005.2128375820524,
+          "2026-10-28 00:00:00+00:00": 1006.3125732307966,
+          "2026-10-29 00:00:00+00:00": 995.8288530538703,
+          "2026-10-30 00:00:00+00:00": 1000.802919663489,
+          "2026-10-31 00:00:00+00:00": 994.9945988393972,
+          "2026-11-01 00:00:00+00:00": 992.252009275367,
+          "2026-11-02 00:00:00+00:00": 986.13634554,
+          "2026-11-03 00:00:00+00:00": 985.976533984736,
+          "2026-11-04 00:00:00+00:00": 985.9098502293484
+        },
+        "rows": 3744,
+        "hard_halt": false,
+        "suppressed_callback_error": null,
+        "elapsed_seconds": 11.291603624995332,
+        "peak_rss_bytes": 1290797056,
+        "RD1_applied": false,
+        "simulated_shared_risk_rules": true,
+        "economic_qualified": false,
+        "production_eligible": false,
+        "orders_enabled": false,
+        "capacity_verified": false
+      },
+      "audit": {
+        "all_5m_equity_maximum_error_usdt": 1.224930201715324e-08,
+        "all_5m_gross_maximum_error_usdt": 1.1368683772161603e-13,
+        "passed": true,
+        "terminal_projected_funding": -0.3254464923832171,
+        "fees_before_endpoint": 4.0857304064000015,
+        "one_sided_turnover_initial_capital": 5.107163007999999,
+        "pairs": {
+          "BCH/USDT:USDT": -2.2384573828948424,
+          "NEAR/USDT:USDT": -4.854563729360002,
+          "CELO/USDT:USDT": -9.938922093565544,
+          "XRP/USDT:USDT": -1.3755288765842415,
+          "UNI/USDT:USDT": 6.755022504367491,
+          "DOGE/USDT:USDT": 2.369534428416994,
+          "BTC/USDT:USDT": -0.03112671999998895,
+          "LINK/USDT:USDT": 0.03204159999999945,
+          "IOTX/USDT:USDT": 0.684298620000007,
+          "TRX/USDT:USDT": 1.6682817675878583,
+          "RUNE/USDT:USDT": 4.093286476287962,
+          "MASK/USDT:USDT": -4.246062071552503,
+          "AAVE/USDT:USDT": -1.14638968310445,
+          "EGLD/USDT:USDT": -3.0561841030399193,
+          "AVAX/USDT:USDT": -3.21811769999999,
+          "TRB/USDT:USDT": -0.0034265599999994123,
+          "SKL/USDT:USDT": -0.42319201259612294,
+          "ETH/USDT:USDT": 3.430430537753276,
+          "FIL/USDT:USDT": -0.04834940799999998,
+          "IOTA/USDT:USDT": -2.542725368899999
+        },
+        "campaigns": [
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 3.8507256799999854,
+            "terminal_projected_funding": -0.0195908,
+            "native_terminal_funding": -0.0195908,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "NEAR/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.854563729360002,
+            "terminal_projected_funding": -0.028195729359999998,
+            "native_terminal_funding": -0.02819572936,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "CELO/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.990558238805444,
+            "terminal_projected_funding": 0.025538099594559997,
+            "native_terminal_funding": 0.02553809959456,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "XRP/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.2673860285842415,
+            "terminal_projected_funding": -0.05255394858423374,
+            "native_terminal_funding": -0.05255394858423375,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 5.142224494581128,
+            "terminal_projected_funding": -0.0620811054188702,
+            "native_terminal_funding": -0.0620811054188702,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "DOGE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 2.369534428416994,
+            "terminal_projected_funding": -0.045559547582999994,
+            "native_terminal_funding": -0.04555954758300001,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BTC/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.08064399999997818,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "LINK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 0.03204159999999945,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "CELO/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.948363854760101,
+            "terminal_projected_funding": 0.008019743639908,
+            "native_terminal_funding": 0.008019743639908,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "IOTX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 0.684298620000007,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "TRX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 2.631817291149457,
+            "terminal_projected_funding": -0.026121660850552307,
+            "native_terminal_funding": -0.0261216608505523,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -3.004874858875576,
+            "terminal_projected_funding": -0.009334442875592994,
+            "native_terminal_funding": -0.009334442875593001,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 4.561608480000004,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -3.0843082040192518,
+            "terminal_projected_funding": -0.02677146801926311,
+            "native_terminal_funding": -0.0267714680192631,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "MASK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.3055779082200036,
+            "terminal_projected_funding": -0.002006068219999999,
+            "native_terminal_funding": -0.0020060682199999997,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "AAVE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.14638968310445,
+            "terminal_projected_funding": -0.00828488310445635,
+            "native_terminal_funding": -0.00828488310445635,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "EGLD/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -2.1330027985620146,
+            "terminal_projected_funding": 0.008190801438008002,
+            "native_terminal_funding": 0.008190801438008002,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.007561754509639357,
+            "terminal_projected_funding": -0.0021649545096396,
+            "native_terminal_funding": -0.0021649545096396,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "AVAX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.306829700000005,
+            "terminal_projected_funding": -0.0096393,
+            "native_terminal_funding": -0.0096393,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "TRB/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.0034265599999994123,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "MASK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.2320078749999985,
+            "terminal_projected_funding": -0.0033678749999999967,
+            "native_terminal_funding": -0.0033678750000000006,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "SKL/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.42319201259612294,
+            "terminal_projected_funding": -0.014320754996121612,
+            "native_terminal_funding": -0.014320754996121602,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "ETH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.6387415662467129,
+            "terminal_projected_funding": -0.0022537902467171366,
+            "native_terminal_funding": -0.0022537902467171336,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "MASK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -2.7084762883325,
+            "terminal_projected_funding": -0.0093994883325,
+            "native_terminal_funding": -0.0093994883325,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 1.6203597642960033,
+            "terminal_projected_funding": -0.009559435703999995,
+            "native_terminal_funding": -0.009559435704,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "ETH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.10013807200000713,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "XRP/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.10814284799999996,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "FIL/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.04834940799999998,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "IOTA/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -2.904197119999992,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "ETH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 5.169310175999996,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BTC/USDT:USDT",
+            "terminal_quantity": 0.001,
+            "terminal_marked_pnl": 0.04951727999998923,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "AVAX/USDT:USDT",
+            "terminal_quantity": 10.0,
+            "terminal_marked_pnl": -1.9112879999999848,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "IOTA/USDT:USDT",
+            "terminal_quantity": 1084.0,
+            "terminal_marked_pnl": 0.3614717510999931,
+            "terminal_projected_funding": -0.004429188227999997,
+            "native_terminal_funding": -0.004429188228,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "terminal_quantity": 149.0,
+            "terminal_marked_pnl": -0.4683220037120415,
+            "terminal_projected_funding": -0.002786403712045999,
+            "native_terminal_funding": -0.0027864037120460005,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "EGLD/USDT:USDT",
+            "terminal_quantity": 16.9,
+            "terminal_marked_pnl": -0.9231813044779046,
+            "terminal_projected_funding": -0.011679595053100001,
+            "native_terminal_funding": -0.0116795950531,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "TRX/USDT:USDT",
+            "terminal_quantity": 296.0,
+            "terminal_marked_pnl": -0.9635355235615986,
+            "terminal_projected_funding": -0.017094697257600086,
+            "native_terminal_funding": -0.0170946972576,
+            "terminal_forced_exit_excluded": true
+          }
+        ],
+        "funding_scope": "Independent arithmetic under native inclusive model intervals; not verified settlement/fill chronology",
+        "maximum_positive_pair_share": 0.3549130162664138,
+        "minimum_full_exit_campaigns": 18,
+        "native_partial_reduction_fills": 0,
+        "funding_event_order_certified": false,
+        "historical_capacity_verified": false
+      },
+      "calendar": {
+        "complete_day_count": 12,
+        "complete_daily_interval_start": "2026-10-23T00:00:00+00:00",
+        "complete_daily_interval_end": "2026-11-04T00:00:00+00:00",
+        "final_partial_day_excluded_from_daily_and_annualized_metrics": true,
+        "final_partial_day_start": "2026-11-04T00:00:00+00:00",
+        "complete_week_count": 1,
+        "week_definition": "Monday00:00 UTC to next Monday00:00 UTC; both endpoints observed",
+        "worst_complete_day_return": -0.011006127184863823,
+        "worst_complete_day_start": "2026-10-29T00:00:00+00:00",
+        "worst_complete_day_end": "2026-10-30T00:00:00+00:00",
+        "worst_complete_week_return": -0.0077748841139870795,
+        "worst_complete_week_start": "2026-10-26T00:00:00+00:00",
+        "worst_complete_week_end": "2026-11-02T00:00:00+00:00",
+        "daily_ES95_mean_return": -0.011006127184863823,
+        "ES95_observed_tail_days": 1,
+        "daily_NAV_Sharpe_365_ddof1_rf0": -5.083387829062778,
+        "daily_Sortino_365_target0_all_day_downside": -5.694277317583951,
+        "complete_days_geometric_annualized_return": -0.36105391772374495,
+        "complete_days_five_minute_reference_mdd": 0.02553105098734243,
+        "Calmar_complete_days_CAGR_over_same_interval_5m_reference_MDD": -14.141756949322033,
+        "max_complete_day_positive_pnl_contribution_share": 0.4353765948127046,
+        "annualization_is_descriptive_not_forecast": true,
+        "less_than_one_year_of_complete_days": true,
+        "small_sample_warning": "Only12 complete daily returns and1 complete UTC week; annualized ratios/ES are unstable descriptive statistics."
+      },
+      "drawdown": {
+        "mdd": 0.031371724614473795,
+        "mdd_peak_at": "2026-10-28T21:55:00+00:00",
+        "mdd_trough_at": "2026-11-04T03:10:00+00:00",
+        "mdd_recovery_at": null,
+        "mdd_episode_recovered": false,
+        "mdd_peak_to_trough_hours": 149.25,
+        "longest_underwater_episode_hours": 170.0,
+        "longest_episode_right_censored": true,
+        "terminal_underwater_hours": 170.0,
+        "underwater_snapshot_fraction": 0.7091346153846154,
+        "observation_resolution_minutes": 5
+      },
+      "artifact_manifest_sha256": "a73617c8d64b4b9a500bf577a4cefb6d4dcb609c0a389c192516167067f17689"
+    },
+    {
+      "run_id": "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_S_stress",
+      "strategy": "AverageFuturesCandleControl",
+      "cost": "stress",
+      "window": "S",
+      "result": {
+        "run_id": "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_S_stress",
+        "finished_at_utc": "2026-11-06T11:06:53.804448+00:00",
+        "financial_runs": 1,
+        "risk_profile": "RD1_CANDLE_COST_FUTURES_MINIMUM_REMAINDER_V1_NOT_EXECUTION_CERTIFIED",
+        "evidence_class": "observed_retrospective_candle_cost_scenario_not_independent_oos",
+        "net_model_return": -0.03355183036830922,
+        "ending_model_equity": 966.4481696316908,
+        "max_5m_model_drawdown": 0.050920068511354444,
+        "natural_campaigns": 33,
+        "terminal_open_campaigns": 6,
+        "native_final_balance": 964.0624757100001,
+        "native_terminal_profit": -35.93752429,
+        "fees_including_native_terminal": 8.991466044000001,
+        "funding_including_native_terminal": -0.30595022663334837,
+        "daily_nav": {
+          "2026-10-23 00:00:00+00:00": 1000.0,
+          "2026-10-24 00:00:00+00:00": 1000.0,
+          "2026-10-25 00:00:00+00:00": 1000.0,
+          "2026-10-26 00:00:00+00:00": 1000.3596515,
+          "2026-10-27 00:00:00+00:00": 1005.6138970273385,
+          "2026-10-28 00:00:00+00:00": 1006.540661174686,
+          "2026-10-29 00:00:00+00:00": 985.74812446,
+          "2026-10-30 00:00:00+00:00": 981.3613722302227,
+          "2026-10-31 00:00:00+00:00": 976.7502463550599,
+          "2026-11-01 00:00:00+00:00": 976.0948298688264,
+          "2026-11-02 00:00:00+00:00": 966.76831549,
+          "2026-11-03 00:00:00+00:00": 965.8616018000321,
+          "2026-11-04 00:00:00+00:00": 966.4481696316908
+        },
+        "rows": 3744,
+        "hard_halt": false,
+        "suppressed_callback_error": null,
+        "elapsed_seconds": 10.957678832986858,
+        "peak_rss_bytes": 1267400704,
+        "RD1_applied": false,
+        "simulated_shared_risk_rules": true,
+        "economic_qualified": false,
+        "production_eligible": false,
+        "orders_enabled": false,
+        "capacity_verified": false
+      },
+      "audit": {
+        "all_5m_equity_maximum_error_usdt": 1.7993443179875612e-08,
+        "all_5m_gross_maximum_error_usdt": 1.1368683772161603e-13,
+        "passed": true,
+        "terminal_projected_funding": -0.3059502266333484,
+        "fees_before_endpoint": 8.310285969,
+        "one_sided_turnover_initial_capital": 5.540190646000002,
+        "pairs": {
+          "UNI/USDT:USDT": 1.0721051056906825,
+          "BCH/USDT:USDT": 1.765435011083751,
+          "XRP/USDT:USDT": 1.7674448844931931,
+          "DOGE/USDT:USDT": -0.010262069999999568,
+          "NEAR/USDT:USDT": -4.982635729359991,
+          "CELO/USDT:USDT": -9.91805878342728,
+          "BTC/USDT:USDT": -1.7641502738227262,
+          "LINK/USDT:USDT": -3.8038035139267468,
+          "LTC/USDT:USDT": 1.3131554119209032,
+          "DYDX/USDT:USDT": 0.08267766999999893,
+          "TRX/USDT:USDT": -1.6071336829108704,
+          "IOTX/USDT:USDT": -0.10732906800001274,
+          "RUNE/USDT:USDT": -5.476886467313652,
+          "AAVE/USDT:USDT": -0.7892969999999906,
+          "EGLD/USDT:USDT": -2.293419364849602,
+          "MASK/USDT:USDT": -4.402099413709009,
+          "TRB/USDT:USDT": -1.2824244780187442,
+          "SKL/USDT:USDT": -0.45553836299612394,
+          "AVAX/USDT:USDT": -2.1558982483299842,
+          "ETH/USDT:USDT": 2.2995497340843416,
+          "FIL/USDT:USDT": -0.12293208000000178,
+          "IOTA/USDT:USDT": -2.6803296369879965
+        },
+        "campaigns": [
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.30158479981331776,
+            "terminal_projected_funding": -0.025191799813304796,
+            "native_terminal_funding": -0.0251917998133048,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 4.610464078982289,
+            "terminal_projected_funding": -0.02751879601770296,
+            "native_terminal_funding": -0.027518796017702962,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "XRP/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 1.998481004493192,
+            "terminal_projected_funding": -0.01914438550679999,
+            "native_terminal_funding": -0.019144385506800005,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "DOGE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.010262069999999568,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "NEAR/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.982635729359991,
+            "terminal_projected_funding": -0.028195729359999998,
+            "native_terminal_funding": -0.02819572936,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "CELO/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.980842286960977,
+            "terminal_projected_funding": 0.02482733603904,
+            "native_terminal_funding": 0.024827336039040002,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BTC/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.505937673822733,
+            "terminal_projected_funding": -0.02211392382273381,
+            "native_terminal_funding": -0.022113923822733816,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "LINK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -3.6962215439267343,
+            "terminal_projected_funding": -0.024249023926723196,
+            "native_terminal_funding": -0.0242490239267232,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "LTC/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 1.3131554119209032,
+            "terminal_projected_funding": -0.02474368307909403,
+            "native_terminal_funding": -0.024743683079094036,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BTC/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.1951324999999855,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "LINK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 0.0009407999999950789,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "DYDX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 0.08267766999999893,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "CELO/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.937216496466304,
+            "terminal_projected_funding": 0.0077949285337000004,
+            "native_terminal_funding": 0.0077949285337000004,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "TRX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.5623498664416726,
+            "terminal_projected_funding": -0.025408441441663505,
+            "native_terminal_funding": -0.0254084414416635,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.9780824550000062,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "IOTX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.10732906800001274,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -4.903284468473993,
+            "terminal_projected_funding": -0.009259368474000001,
+            "native_terminal_funding": -0.009259368474000001,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BCH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.8669466128985315,
+            "terminal_projected_funding": -0.01340957289855367,
+            "native_terminal_funding": -0.013409572898553669,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "AAVE/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.7892969999999906,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "EGLD/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.2898236000000054,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "LINK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.10852277000000754,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "MASK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.3619032682199989,
+            "terminal_projected_funding": -0.002006068219999999,
+            "native_terminal_funding": -0.0020060682199999997,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "TRB/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.2824244780187442,
+            "terminal_projected_funding": -0.009108478018750001,
+            "native_terminal_funding": -0.009108478018750001,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "MASK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.3270678750000022,
+            "terminal_projected_funding": -0.0033678749999999967,
+            "native_terminal_funding": -0.0033678750000000006,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "SKL/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.45553836299612394,
+            "terminal_projected_funding": -0.014320754996121612,
+            "native_terminal_funding": -0.014320754996121602,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "AVAX/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -2.1558982483299842,
+            "terminal_projected_funding": -0.026023248330000002,
+            "native_terminal_funding": -0.02602324833,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "ETH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -1.7259740197529005,
+            "terminal_projected_funding": -0.0021988197528947672,
+            "native_terminal_funding": -0.002198819752894764,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "MASK/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -2.713128270489008,
+            "terminal_projected_funding": -0.008977470489,
+            "native_terminal_funding": -0.008977470489000001,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": 1.3736899055040004,
+            "terminal_projected_funding": -0.008824094495999996,
+            "native_terminal_funding": -0.008824094496,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "ETH/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.2205736649999892,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "XRP/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.23103611999999885,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "FIL/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -0.12293208000000178,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "IOTA/USDT:USDT",
+            "terminal_quantity": 0.0,
+            "terminal_marked_pnl": -2.9813695999999936,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": false
+          },
+          {
+            "pair": "BTC/USDT:USDT",
+            "terminal_quantity": 0.001,
+            "terminal_marked_pnl": -0.06308010000000763,
+            "terminal_projected_funding": 0.0,
+            "native_terminal_funding": 0.0,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "ETH/USDT:USDT",
+            "terminal_quantity": 0.039,
+            "terminal_marked_pnl": 4.246097418837231,
+            "terminal_projected_funding": -0.009460511162777999,
+            "native_terminal_funding": -0.009460511162777999,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "IOTA/USDT:USDT",
+            "terminal_quantity": 1084.0,
+            "terminal_marked_pnl": 0.301039963011997,
+            "terminal_projected_funding": -0.004429188227999997,
+            "native_terminal_funding": -0.004429188228,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "terminal_quantity": 142.0,
+            "terminal_marked_pnl": -0.5736019988396589,
+            "terminal_projected_funding": -0.0026554988396679993,
+            "native_terminal_funding": -0.0026554988396680006,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "EGLD/USDT:USDT",
+            "terminal_quantity": 16.9,
+            "terminal_marked_pnl": -1.0035957648495966,
+            "terminal_projected_funding": -0.011679595053100001,
+            "native_terminal_funding": -0.0116795950531,
+            "terminal_forced_exit_excluded": true
+          },
+          {
+            "pair": "TRX/USDT:USDT",
+            "terminal_quantity": 282.0,
+            "terminal_marked_pnl": -1.0447838164691978,
+            "terminal_projected_funding": -0.016286164279200082,
+            "native_terminal_funding": -0.0162861642792,
+            "terminal_forced_exit_excluded": true
+          }
+        ],
+        "funding_scope": "Independent arithmetic under native inclusive model intervals; not verified settlement/fill chronology",
+        "maximum_positive_pair_share": 0.27704190762474795,
+        "minimum_full_exit_campaigns": 16,
+        "native_partial_reduction_fills": 0,
+        "funding_event_order_certified": false,
+        "historical_capacity_verified": false
+      },
+      "calendar": {
+        "complete_day_count": 12,
+        "complete_daily_interval_start": "2026-10-23T00:00:00+00:00",
+        "complete_daily_interval_end": "2026-11-04T00:00:00+00:00",
+        "final_partial_day_excluded_from_daily_and_annualized_metrics": true,
+        "final_partial_day_start": "2026-11-04T00:00:00+00:00",
+        "complete_week_count": 1,
+        "week_definition": "Monday00:00 UTC to next Monday00:00 UTC; both endpoints observed",
+        "worst_complete_day_return": -0.02082604656319731,
+        "worst_complete_day_start": "2026-10-29T00:00:00+00:00",
+        "worst_complete_day_end": "2026-10-30T00:00:00+00:00",
+        "worst_complete_week_return": -0.02406743598558836,
+        "worst_complete_week_start": "2026-10-26T00:00:00+00:00",
+        "worst_complete_week_end": "2026-11-02T00:00:00+00:00",
+        "daily_ES95_mean_return": -0.02082604656319731,
+        "ES95_observed_tail_days": 1,
+        "daily_NAV_Sharpe_365_ddof1_rf0": -8.365963491935142,
+        "daily_Sortino_365_target0_all_day_downside": -8.1157349191569,
+        "complete_days_geometric_annualized_return": -0.6584880833061564,
+        "complete_days_five_minute_reference_mdd": 0.04468050583931471,
+        "Calmar_complete_days_CAGR_over_same_interval_5m_reference_MDD": -14.737704306085716,
+        "max_complete_day_positive_pnl_contribution_share": 0.6988440231265635,
+        "annualization_is_descriptive_not_forecast": true,
+        "less_than_one_year_of_complete_days": true,
+        "small_sample_warning": "Only12 complete daily returns and1 complete UTC week; annualized ratios/ES are unstable descriptive statistics."
+      },
+      "drawdown": {
+        "mdd": 0.050920068511354444,
+        "mdd_peak_at": "2026-10-28T20:05:00+00:00",
+        "mdd_trough_at": "2026-11-04T03:10:00+00:00",
+        "mdd_recovery_at": null,
+        "mdd_episode_recovered": false,
+        "mdd_peak_to_trough_hours": 151.08333333333334,
+        "longest_underwater_episode_hours": 171.83333333333334,
+        "longest_episode_right_censored": true,
+        "terminal_underwater_hours": 171.83333333333334,
+        "underwater_snapshot_fraction": 0.7096688034188035,
+        "observation_resolution_minutes": 5
+      },
+      "artifact_manifest_sha256": "aaa64656534236f25214131dd3baea56fb84ea8156ad110516b9b1fefa227226"
+    }
+  ],
+  "F2_vs_control": [
+    {
+      "cost": "base",
+      "net_return_difference": -0.0045142181961426164,
+      "control_profitable": false,
+      "drawdown_reduction": 0.0527209219280389,
+      "positive_control_profit_retention": null,
+      "production_eligible": false
+    },
+    {
+      "cost": "stress",
+      "net_return_difference": 0.021347096699644963,
+      "control_profitable": false,
+      "drawdown_reduction": 0.5601732534739292,
+      "positive_control_profit_retention": null,
+      "production_eligible": false
+    }
+  ],
+  "complete_model_accounts": 6,
+  "evidence": "observed S candle-cost research with separate tradable-minimum routing profile",
+  "RD1_applied": false,
+  "independent_oos": false,
+  "production_eligible": false,
+  "orders_enabled": false
+}

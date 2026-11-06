@@ -1,0 +1,75 @@
+{
+  "generated_at_utc": "2026-11-06T11:05:58.069213+00:00",
+  "model": "unchanged V1 candle cost model",
+  "new_complete_accounts": 6,
+  "total_complete_model_accounts": 12,
+  "prior_failed_model_attempts": 1,
+  "total_new_account_attempts": 37,
+  "remaining_new_account_budget": 43,
+  "F2_matched_comparisons": [
+    {
+      "window": "L",
+      "cost": "base",
+      "net_return_difference": -0.034149671260000014,
+      "drawdown_reduction": 0.0028479903920536342,
+      "control_profitable": false,
+      "positive_control_profit_retention": null,
+      "descriptive_matched_model_F2_rule_passed": false,
+      "full_RD1_qualified": false,
+      "production_eligible": false
+    },
+    {
+      "window": "L",
+      "cost": "stress",
+      "net_return_difference": -0.0346565243000001,
+      "drawdown_reduction": -0.008748094225657255,
+      "control_profitable": false,
+      "positive_control_profit_retention": null,
+      "descriptive_matched_model_F2_rule_passed": false,
+      "full_RD1_qualified": false,
+      "production_eligible": false
+    },
+    {
+      "window": "S",
+      "cost": "base",
+      "net_return_difference": 0.02541000294863993,
+      "drawdown_reduction": 0.6412928704196635,
+      "control_profitable": false,
+      "positive_control_profit_retention": null,
+      "descriptive_matched_model_F2_rule_passed": false,
+      "full_RD1_qualified": false,
+      "production_eligible": false
+    },
+    {
+      "window": "S",
+      "cost": "stress",
+      "net_return_difference": 0.02258570163320006,
+      "drawdown_reduction": 0.6183840690702562,
+      "control_profitable": false,
+      "positive_control_profit_retention": null,
+      "descriptive_matched_model_F2_rule_passed": false,
+      "full_RD1_qualified": false,
+      "production_eligible": false
+    }
+  ],
+  "btc_full_exposure_reference": {
+    "L": {
+      "base": -0.16268532345498943,
+      "stress": -0.16385674705133635
+    },
+    "S": {
+      "base": -0.013206703004816744,
+      "stress": -0.014587250826559095
+    }
+  },
+  "btc_same_risk": false,
+  "long_positive_account_count": 0,
+  "short_positive_account_count": 0,
+  "long_audit_sha256": "481c2903abd4799aa4810425f3f4d17ea58ed135492242a67054bfd64b9c94f6",
+  "short_audit_sha256": "8299f574f418ea76c72a3ee37e21fe563284817852072e9787b63772cd778f7b",
+  "full_RD1_qualified": false,
+  "independent_oos": false,
+  "production_eligible": false,
+  "orders_enabled": false,
+  "statistical_qualification": "not established; missing full execution/causality and reset-fold qualification is not a pass"
+}
