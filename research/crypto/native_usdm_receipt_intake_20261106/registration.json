@@ -1,0 +1,67 @@
+{
+  "registered_at_utc": "2026-11-06T15:43:59.043835+00:00",
+  "base_commit": "086b0dbb8",
+  "scope": "Single-connection, redacted Binance USD-M financial receipt matching and isolated arithmetic replay",
+  "financial_accounts": 0,
+  "authenticated_archives_supplied": 0,
+  "sequence_basis": "unknown",
+  "requirements": [
+    "exact dual-source fill and funding reconciliation",
+    "retain transaction, publication and receive clocks separately",
+    "reject shared transaction milliseconds and regressions without sorting",
+    "reject missing order fragments, campaign bindings and unsupported cash events",
+    "preserve debit and credit signs and allow separately bound post-close posting",
+    "no authenticated-source, completeness or economic promotion from declaration"
+  ],
+  "official_references": {
+    "user_data_streams": "https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/user-data-streams",
+    "ws_schemas": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/ws-streams/~schemas",
+    "user_trades": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/trade#account-trade-list-user_data",
+    "income": "https://developers.binance.com/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/account#get-income-history-user_data"
+  },
+  "sdk": {
+    "tag_object": "e80c3a9bde047e27bae0e794d7c12802b785b7a8",
+    "git_commit": "d715a372625a7ce214b580963ee53777a1750c8c",
+    "version": "v1.24.0",
+    "archive_url": "https://proxy.golang.org/github.com/binance/binance-connector-go/clients/derivativestradingusdsfutures/@v/v1.24.0.zip",
+    "archive_sha256": "02851dbedc02fcc4bdcd41f1dfed3dabdd78b774ea7e5b1f9855cc4081b59764",
+    "models": {
+      "src/websocketstreams/models/model_account_update.go": {
+        "url": "https://raw.githubusercontent.com/binance/binance-connector-go/d715a372625a7ce214b580963ee53777a1750c8c/clients/derivativestradingusdsfutures/src/websocketstreams/models/model_account_update.go",
+        "sha256": "bff43cce98d1817b0c055233c92ab4cc835d45572782debe18c2fda2b07a6075"
+      },
+      "src/websocketstreams/models/model_account_update_a.go": {
+        "url": "https://raw.githubusercontent.com/binance/binance-connector-go/d715a372625a7ce214b580963ee53777a1750c8c/clients/derivativestradingusdsfutures/src/websocketstreams/models/model_account_update_a.go",
+        "sha256": "f378f00f9e5fb27945a43e0fc134e324c4b34f78ad921a089ec626dc8e3811a4"
+      },
+      "src/websocketstreams/models/model_account_update_a_b_inner.go": {
+        "url": "https://raw.githubusercontent.com/binance/binance-connector-go/d715a372625a7ce214b580963ee53777a1750c8c/clients/derivativestradingusdsfutures/src/websocketstreams/models/model_account_update_a_b_inner.go",
+        "sha256": "06280204ec4a9bdebc52de659b2720724234ae34b7a65bcd5898b79166f7573b"
+      },
+      "src/websocketstreams/models/model_account_update_a_p_inner.go": {
+        "url": "https://raw.githubusercontent.com/binance/binance-connector-go/d715a372625a7ce214b580963ee53777a1750c8c/clients/derivativestradingusdsfutures/src/websocketstreams/models/model_account_update_a_p_inner.go",
+        "sha256": "6bd2979c17bcf26a13bbff1c900903615ea02dd3462b88362346abe67329a03a"
+      },
+      "src/websocketstreams/models/model_order_trade_update.go": {
+        "url": "https://raw.githubusercontent.com/binance/binance-connector-go/d715a372625a7ce214b580963ee53777a1750c8c/clients/derivativestradingusdsfutures/src/websocketstreams/models/model_order_trade_update.go",
+        "sha256": "6f9e5af23c324c20908358b1b4879ee76ed22e9c492157ffa04b20c962f774bd"
+      },
+      "src/websocketstreams/models/model_order_trade_update_o.go": {
+        "url": "https://raw.githubusercontent.com/binance/binance-connector-go/d715a372625a7ce214b580963ee53777a1750c8c/clients/derivativestradingusdsfutures/src/websocketstreams/models/model_order_trade_update_o.go",
+        "sha256": "637276189b267918f4f84baac6644647e06b3c5f3a48717b33b33c553ebd5c11"
+      }
+    }
+  },
+  "source_hashes": {
+    "research/crypto/native_usdm_receipt_intake_20261106/receipt_intake.py": "07d6bc14fc87a1ad61aee4c1afbf598a33dce6774649103a728a2733e995dfb1",
+    "research/crypto/native_usdm_receipt_intake_20261106/test_receipt_intake.py": "40e2a3921333f481cb81c60292627d4a683cc3c73c8bf5370c057d5e79c5e7fe",
+    "research/crypto/rd_program_20261105/execution_extension/account_replay.py": "90a967b04533b36ca7f9eb4bdb31dfb4f4f61e4db33819f8e2362fcb6a3abead",
+    "research/crypto/rd_program_20261105/execution_extension/test_account_replay.py": "aa0a5c53dbb7f97fa463e38dbe87e7b8fce23b63f4cf807554dec4c69b331a7c",
+    "research/crypto/rd_program_20261105/data_extension/book_replay.py": "521e9be9329efdedc8615e3af8c72cbc4a4756aeb1b285b336ba92156c7326c5",
+    "research/crypto/rd_program_20261105/p0/risk/rd1.py": "6d34d8f0817f3511dfa523e3fb42a51a9f62fa33c333d2aee7373bd82df730f0",
+    "research/crypto/rd_program_20261105/freeze.json": "22d71d0cc57eb7a5f2456f755ab4bb524eddc5014c90c7290e472e40d3ae603d",
+    "research/crypto/factor_cost_futures_long_20261106/plan.json": "4f89a1cd81fc810fb7b71bbf41993a91712280e55037ec769d98c06cf7c406d2",
+    "research/crypto/factor_cost_futures_20261106/plan.json": "a23faa12f1262083412df8af1ac750e84d40688587bd0bb1a8694e67bd0a7693",
+    "research/crypto/native_factors_20261106/current_status_v50.json": "ab2a8e17e2d17b0bd1168b96b7788d28cca4385eef776a7ce66423dd4d5b1ac1"
+  }
+}
