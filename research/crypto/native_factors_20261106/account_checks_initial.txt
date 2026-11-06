@@ -1,0 +1,326 @@
+test_commit_ack_loss_reopens_from_durable_events_without_second_fee (test_native_account.NativeAccountTests.test_commit_ack_loss_reopens_from_durable_events_without_second_fee) ... ERROR
+test_event_after_complete_checkpoint_cannot_backdate_its_receipt (test_native_account.NativeAccountTests.test_event_after_complete_checkpoint_cannot_backdate_its_receipt) ... ERROR
+test_event_gap_conflicting_duplicate_and_reused_fill_do_not_change_state (test_native_account.NativeAccountTests.test_event_gap_conflicting_duplicate_and_reused_fill_do_not_change_state) ... ERROR
+test_future_quote_receipt_and_false_mark_kind_are_rejected (test_native_account.NativeAccountTests.test_future_quote_receipt_and_false_mark_kind_are_rejected) ... ERROR
+test_futures_unpaid_then_settled_funding_has_same_nav_and_native_sign (test_native_account.NativeAccountTests.test_futures_unpaid_then_settled_funding_has_same_nav_and_native_sign) ... ERROR
+test_losing_open_position_and_partial_exit_remain_in_nav (test_native_account.NativeAccountTests.test_losing_open_position_and_partial_exit_remain_in_nav) ... ERROR
+test_missing_midnight_cannot_be_replaced_with_first_later_sample (test_native_account.NativeAccountTests.test_missing_midnight_cannot_be_replaced_with_first_later_sample) ... ERROR
+test_missing_native_fill_event_and_wrong_basis_cannot_certify_inventory (test_native_account.NativeAccountTests.test_missing_native_fill_event_and_wrong_basis_cannot_certify_inventory) ... ERROR
+test_missing_wallet_charge_missing_funding_and_unknown_coverage_reject (test_native_account.NativeAccountTests.test_missing_wallet_charge_missing_funding_and_unknown_coverage_reject) ... ERROR
+test_native_funding_sign_error_is_not_hidden_by_correct_wallet (test_native_account.NativeAccountTests.test_native_funding_sign_error_is_not_hidden_by_correct_wallet) ... ERROR
+test_restart_reconstructs_exact_ledger_and_checkpoint_without_double_booking (test_native_account.NativeAccountTests.test_restart_reconstructs_exact_ledger_and_checkpoint_without_double_booking) ... ERROR
+test_spot_full_account_cash_fees_remaining_exit_cost_and_native_release (test_native_account.NativeAccountTests.test_spot_full_account_cash_fees_remaining_exit_cost_and_native_release) ... ERROR
+
+======================================================================
+ERROR: test_commit_ack_loss_reopens_from_durable_events_without_second_fee (test_native_account.NativeAccountTests.test_commit_ack_loss_reopens_from_durable_events_without_second_fee)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 184, in test_commit_ack_loss_reopens_from_durable_events_without_second_fee
+    life,gate,ex,bot,e,p,provider,_=self.harness()
+                                    ^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 45, in harness
+    self.checkpoint(provider,start,sequence=0)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 52, in checkpoint
+    return provider.checkpoint(e,self.receipts(e),e.snapshot.at,complete_sequence=provider.ledger.last_sequence if sequence is None else sequence,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_account.py", line 244, in checkpoint
+    value = self.ledger.value(quotes, stamp(at), self.exit_rate, funding_complete=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/execution_extension/account_replay.py", line 91, in value
+    clock=nanoseconds(asof);rate=dec(exit_rate)
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/data_extension/book_replay.py", line 10, in nanoseconds
+    if not match:raise ValueError('UTC timestamp precision/format unsupported')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: UTC timestamp precision/format unsupported
+
+======================================================================
+ERROR: test_event_after_complete_checkpoint_cannot_backdate_its_receipt (test_native_account.NativeAccountTests.test_event_after_complete_checkpoint_cannot_backdate_its_receipt)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 178, in test_event_after_complete_checkpoint_cannot_backdate_its_receipt
+    _,_,_,_,provider,trade,_,e,_=self.filled()
+                                 ^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 69, in filled
+    life,gate,ex,bot,e,p,provider,start=self.harness(market)
+                                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 45, in harness
+    self.checkpoint(provider,start,sequence=0)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 52, in checkpoint
+    return provider.checkpoint(e,self.receipts(e),e.snapshot.at,complete_sequence=provider.ledger.last_sequence if sequence is None else sequence,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_account.py", line 244, in checkpoint
+    value = self.ledger.value(quotes, stamp(at), self.exit_rate, funding_complete=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/execution_extension/account_replay.py", line 91, in value
+    clock=nanoseconds(asof);rate=dec(exit_rate)
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/data_extension/book_replay.py", line 10, in nanoseconds
+    if not match:raise ValueError('UTC timestamp precision/format unsupported')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: UTC timestamp precision/format unsupported
+
+======================================================================
+ERROR: test_event_gap_conflicting_duplicate_and_reused_fill_do_not_change_state (test_native_account.NativeAccountTests.test_event_gap_conflicting_duplicate_and_reused_fill_do_not_change_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 171, in test_event_gap_conflicting_duplicate_and_reused_fill_do_not_change_state
+    _,_,_,_,provider,trade,_,e,_=self.filled()
+                                 ^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 69, in filled
+    life,gate,ex,bot,e,p,provider,start=self.harness(market)
+                                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 45, in harness
+    self.checkpoint(provider,start,sequence=0)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 52, in checkpoint
+    return provider.checkpoint(e,self.receipts(e),e.snapshot.at,complete_sequence=provider.ledger.last_sequence if sequence is None else sequence,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_account.py", line 244, in checkpoint
+    value = self.ledger.value(quotes, stamp(at), self.exit_rate, funding_complete=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/execution_extension/account_replay.py", line 91, in value
+    clock=nanoseconds(asof);rate=dec(exit_rate)
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/data_extension/book_replay.py", line 10, in nanoseconds
+    if not match:raise ValueError('UTC timestamp precision/format unsupported')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: UTC timestamp precision/format unsupported
+
+======================================================================
+ERROR: test_future_quote_receipt_and_false_mark_kind_are_rejected (test_native_account.NativeAccountTests.test_future_quote_receipt_and_false_mark_kind_are_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 154, in test_future_quote_receipt_and_false_mark_kind_are_rejected
+    _,_,_,_,provider,_,_,e,_=self.filled()
+                             ^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 69, in filled
+    life,gate,ex,bot,e,p,provider,start=self.harness(market)
+                                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 45, in harness
+    self.checkpoint(provider,start,sequence=0)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 52, in checkpoint
+    return provider.checkpoint(e,self.receipts(e),e.snapshot.at,complete_sequence=provider.ledger.last_sequence if sequence is None else sequence,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_account.py", line 244, in checkpoint
+    value = self.ledger.value(quotes, stamp(at), self.exit_rate, funding_complete=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/execution_extension/account_replay.py", line 91, in value
+    clock=nanoseconds(asof);rate=dec(exit_rate)
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/data_extension/book_replay.py", line 10, in nanoseconds
+    if not match:raise ValueError('UTC timestamp precision/format unsupported')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: UTC timestamp precision/format unsupported
+
+======================================================================
+ERROR: test_futures_unpaid_then_settled_funding_has_same_nav_and_native_sign (test_native_account.NativeAccountTests.test_futures_unpaid_then_settled_funding_has_same_nav_and_native_sign)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 89, in test_futures_unpaid_then_settled_funding_has_same_nav_and_native_sign
+    life,_,_,_,provider,trade,report,e,_=self.filled("futures")
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 69, in filled
+    life,gate,ex,bot,e,p,provider,start=self.harness(market)
+                                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 45, in harness
+    self.checkpoint(provider,start,sequence=0)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 52, in checkpoint
+    return provider.checkpoint(e,self.receipts(e),e.snapshot.at,complete_sequence=provider.ledger.last_sequence if sequence is None else sequence,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_account.py", line 244, in checkpoint
+    value = self.ledger.value(quotes, stamp(at), self.exit_rate, funding_complete=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/execution_extension/account_replay.py", line 91, in value
+    clock=nanoseconds(asof);rate=dec(exit_rate)
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/data_extension/book_replay.py", line 10, in nanoseconds
+    if not match:raise ValueError('UTC timestamp precision/format unsupported')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: UTC timestamp precision/format unsupported
+
+======================================================================
+ERROR: test_losing_open_position_and_partial_exit_remain_in_nav (test_native_account.NativeAccountTests.test_losing_open_position_and_partial_exit_remain_in_nav)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 106, in test_losing_open_position_and_partial_exit_remain_in_nav
+    life,_,_,_,provider,trade,report,e,_=self.filled()
+                                         ^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 69, in filled
+    life,gate,ex,bot,e,p,provider,start=self.harness(market)
+                                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 45, in harness
+    self.checkpoint(provider,start,sequence=0)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 52, in checkpoint
+    return provider.checkpoint(e,self.receipts(e),e.snapshot.at,complete_sequence=provider.ledger.last_sequence if sequence is None else sequence,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_account.py", line 244, in checkpoint
+    value = self.ledger.value(quotes, stamp(at), self.exit_rate, funding_complete=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/execution_extension/account_replay.py", line 91, in value
+    clock=nanoseconds(asof);rate=dec(exit_rate)
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/data_extension/book_replay.py", line 10, in nanoseconds
+    if not match:raise ValueError('UTC timestamp precision/format unsupported')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: UTC timestamp precision/format unsupported
+
+======================================================================
+ERROR: test_missing_midnight_cannot_be_replaced_with_first_later_sample (test_native_account.NativeAccountTests.test_missing_midnight_cannot_be_replaced_with_first_later_sample)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 147, in test_missing_midnight_cannot_be_replaced_with_first_later_sample
+    _,_,_,_,provider,_,report,e,_=self.filled()
+                                  ^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 69, in filled
+    life,gate,ex,bot,e,p,provider,start=self.harness(market)
+                                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 45, in harness
+    self.checkpoint(provider,start,sequence=0)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 52, in checkpoint
+    return provider.checkpoint(e,self.receipts(e),e.snapshot.at,complete_sequence=provider.ledger.last_sequence if sequence is None else sequence,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_account.py", line 244, in checkpoint
+    value = self.ledger.value(quotes, stamp(at), self.exit_rate, funding_complete=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/execution_extension/account_replay.py", line 91, in value
+    clock=nanoseconds(asof);rate=dec(exit_rate)
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/data_extension/book_replay.py", line 10, in nanoseconds
+    if not match:raise ValueError('UTC timestamp precision/format unsupported')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: UTC timestamp precision/format unsupported
+
+======================================================================
+ERROR: test_missing_native_fill_event_and_wrong_basis_cannot_certify_inventory (test_native_account.NativeAccountTests.test_missing_native_fill_event_and_wrong_basis_cannot_certify_inventory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 163, in test_missing_native_fill_event_and_wrong_basis_cannot_certify_inventory
+    _,_,_,_,provider,trade,_,e,_=self.filled()
+                                 ^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 69, in filled
+    life,gate,ex,bot,e,p,provider,start=self.harness(market)
+                                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 45, in harness
+    self.checkpoint(provider,start,sequence=0)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 52, in checkpoint
+    return provider.checkpoint(e,self.receipts(e),e.snapshot.at,complete_sequence=provider.ledger.last_sequence if sequence is None else sequence,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_account.py", line 244, in checkpoint
+    value = self.ledger.value(quotes, stamp(at), self.exit_rate, funding_complete=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/execution_extension/account_replay.py", line 91, in value
+    clock=nanoseconds(asof);rate=dec(exit_rate)
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/data_extension/book_replay.py", line 10, in nanoseconds
+    if not match:raise ValueError('UTC timestamp precision/format unsupported')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: UTC timestamp precision/format unsupported
+
+======================================================================
+ERROR: test_missing_wallet_charge_missing_funding_and_unknown_coverage_reject (test_native_account.NativeAccountTests.test_missing_wallet_charge_missing_funding_and_unknown_coverage_reject)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 129, in test_missing_wallet_charge_missing_funding_and_unknown_coverage_reject
+    _,_,_,_,provider,trade,report,e,_=self.filled("futures")
+                                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 69, in filled
+    life,gate,ex,bot,e,p,provider,start=self.harness(market)
+                                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 45, in harness
+    self.checkpoint(provider,start,sequence=0)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 52, in checkpoint
+    return provider.checkpoint(e,self.receipts(e),e.snapshot.at,complete_sequence=provider.ledger.last_sequence if sequence is None else sequence,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_account.py", line 244, in checkpoint
+    value = self.ledger.value(quotes, stamp(at), self.exit_rate, funding_complete=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/execution_extension/account_replay.py", line 91, in value
+    clock=nanoseconds(asof);rate=dec(exit_rate)
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/data_extension/book_replay.py", line 10, in nanoseconds
+    if not match:raise ValueError('UTC timestamp precision/format unsupported')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: UTC timestamp precision/format unsupported
+
+======================================================================
+ERROR: test_native_funding_sign_error_is_not_hidden_by_correct_wallet (test_native_account.NativeAccountTests.test_native_funding_sign_error_is_not_hidden_by_correct_wallet)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 139, in test_native_funding_sign_error_is_not_hidden_by_correct_wallet
+    _,_,_,_,provider,trade,report,e,_=self.filled("futures")
+                                      ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 69, in filled
+    life,gate,ex,bot,e,p,provider,start=self.harness(market)
+                                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 45, in harness
+    self.checkpoint(provider,start,sequence=0)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 52, in checkpoint
+    return provider.checkpoint(e,self.receipts(e),e.snapshot.at,complete_sequence=provider.ledger.last_sequence if sequence is None else sequence,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_account.py", line 244, in checkpoint
+    value = self.ledger.value(quotes, stamp(at), self.exit_rate, funding_complete=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/execution_extension/account_replay.py", line 91, in value
+    clock=nanoseconds(asof);rate=dec(exit_rate)
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/data_extension/book_replay.py", line 10, in nanoseconds
+    if not match:raise ValueError('UTC timestamp precision/format unsupported')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: UTC timestamp precision/format unsupported
+
+======================================================================
+ERROR: test_restart_reconstructs_exact_ledger_and_checkpoint_without_double_booking (test_native_account.NativeAccountTests.test_restart_reconstructs_exact_ledger_and_checkpoint_without_double_booking)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 121, in test_restart_reconstructs_exact_ledger_and_checkpoint_without_double_booking
+    life,_,_,_,provider,trade,_,e,_=self.filled()
+                                    ^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 69, in filled
+    life,gate,ex,bot,e,p,provider,start=self.harness(market)
+                                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 45, in harness
+    self.checkpoint(provider,start,sequence=0)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 52, in checkpoint
+    return provider.checkpoint(e,self.receipts(e),e.snapshot.at,complete_sequence=provider.ledger.last_sequence if sequence is None else sequence,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_account.py", line 244, in checkpoint
+    value = self.ledger.value(quotes, stamp(at), self.exit_rate, funding_complete=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/execution_extension/account_replay.py", line 91, in value
+    clock=nanoseconds(asof);rate=dec(exit_rate)
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/data_extension/book_replay.py", line 10, in nanoseconds
+    if not match:raise ValueError('UTC timestamp precision/format unsupported')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: UTC timestamp precision/format unsupported
+
+======================================================================
+ERROR: test_spot_full_account_cash_fees_remaining_exit_cost_and_native_release (test_native_account.NativeAccountTests.test_spot_full_account_cash_fees_remaining_exit_cost_and_native_release)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 77, in test_spot_full_account_cash_fees_remaining_exit_cost_and_native_release
+    life,gate,_,_,provider,trade,report,e,_=self.filled()
+                                            ^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 69, in filled
+    life,gate,ex,bot,e,p,provider,start=self.harness(market)
+                                        ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 45, in harness
+    self.checkpoint(provider,start,sequence=0)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_account.py", line 52, in checkpoint
+    return provider.checkpoint(e,self.receipts(e),e.snapshot.at,complete_sequence=provider.ledger.last_sequence if sequence is None else sequence,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_account.py", line 244, in checkpoint
+    value = self.ledger.value(quotes, stamp(at), self.exit_rate, funding_complete=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/execution_extension/account_replay.py", line 91, in value
+    clock=nanoseconds(asof);rate=dec(exit_rate)
+          ^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/rd_program_20261105/data_extension/book_replay.py", line 10, in nanoseconds
+    if not match:raise ValueError('UTC timestamp precision/format unsupported')
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: UTC timestamp precision/format unsupported
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.254s
+
+FAILED (errors=12)

@@ -1,0 +1,142 @@
+{
+  "observed_at_utc": "2026-11-06T04:56:02.154011+00:00",
+  "scope": "Durable complete source-account journal reconciled to native SQLite history, independent wallet/positions/funding and explicit quote receipts; native after-fill/lifecycle link and RD1 daily-loss intent checked with synthetic inputs",
+  "engineering_tests_passed": 107,
+  "new_account_tests": 18,
+  "financial_runs": 0,
+  "causality_commands": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "real_exchange_transport_used": false,
+  "source_completeness_certified_by_this_code": false,
+  "whole_native_transaction_atomicity_verified": false,
+  "complete_account_runtime_integration_verified": false,
+  "historical_native_callback_clock_verified": false,
+  "account_journal_persistence_and_ack_loss_recovery_checked": true,
+  "native_fill_history_and_current_positions_checked": true,
+  "independent_observed_wallet_reconciled_to_complete_events": true,
+  "funding_accrual_settlement_no_double_count_checked": true,
+  "native_funding_credit_sign_checked": true,
+  "exact_midnight_anchors_required": true,
+  "partial_exit_does_not_hide_open_losses": true,
+  "original_RD1_daily_loss_exit_intent_from_full_account_checked": true,
+  "source_receipt_times_never_inferred": true,
+  "cost_contract": "Frozen per-market base/stress total bps used for remaining exit reserve; paid fees supplied in each event. Synthetic arithmetic is not a registered economic cost-scenario run.",
+  "actual_methods": [
+    "AccountReplay.apply/value (unchanged frozen implementation)",
+    "Store fsync/checksum/journal recovery",
+    "NativeSnapshotBridge.validate",
+    "NativeLifecycle.reconcile_native",
+    "AfterFillGuard.apply with native update_trade_state",
+    "Trade.update_trade",
+    "Trade.set_funding_fees",
+    "RD1.equity/evaluate"
+  ],
+  "synthetic_boundaries": [
+    "Source event ordering and complete-from-inception watermark are explicit unverified input claims",
+    "Independent source wallet/positions/orders, quote receipts, source fees and funding events are synthetic fixtures",
+    "Native wallet/RPC/ProtectionManager remain explicit isolated test boundaries",
+    "No strategy bot_start activation, complete bot loop or historical callback time integration"
+  ],
+  "limitations": [
+    "No actual authenticated account journal or historical coverage certification",
+    "Only quote-currency fees, 1x long positions and one initial entry order per campaign",
+    "No deposits/withdrawals, base-fee/dust or late corrections; sub-microsecond events rejected rather than truncated",
+    "Full mandatory startup, wallet runtime linkage, immediate open-partial protection and risk-action orchestration remain incomplete",
+    "Provider creates checked account evidence and audit, not permission or order dispatch",
+    "No candidate admission, paired factor economics or proven profit improvement"
+  ],
+  "log": {
+    "path": "research/crypto/native_factors_20261106/account_regression_final_checks.txt",
+    "sha256": "dfd47241a639573a7f54acf978863466f821265efadcebd57f845ebc0b790900"
+  },
+  "initial_failures_retained": {
+    "log": {
+      "path": "research/crypto/native_factors_20261106/account_checks_initial.txt",
+      "sha256": "cd0f44b342dc2f4248dd03e8fb6dda55294d45b1576f48f0602dabf1c8dff912"
+    },
+    "cause": "All first 12 cases hit legacy nanoseconds parser rejecting +00:00; explicit UTC suffix normalization added solely at new provider boundary, preserving fractional seconds and original records."
+  },
+  "source_hashes": {
+    "research/crypto/native_factors_20261106/sources/FixedFactorSignals.py": "390476e0ef408a2b3206a54a823d6fde1e74193be4f2aade3d04febecdcd747b",
+    "research/crypto/native_factors_20261106/sources/native_reductions.py": "ce4aef0359be42ad91e88b648378088343f35fc33e287874ae04736e7dbe9456",
+    "research/crypto/native_factors_20261106/sources/factor_inputs.py": "fad50a2085a1993fe764eca59eb8b368b446d4ab208e36c0e1268df888dfee5b",
+    "research/crypto/native_factors_20261106/test_native_factors.py": "24e0776d9dc58d176768bbe25dd03acfc6cf1f6c5675cab2c3ba1aed4737cbc1",
+    "research/crypto/native_factors_20261106/test_native_reductions.py": "5796cbc9d0ff234980ce28286d4436f95b244d0b464de9cbfd3c0d5dd6b183c5",
+    "research/crypto/native_factors_20261106/reduction_regression_checks.txt": "f52e47bd0150b9af7aed07483c1558c57a0743b866311df6ed6b5acc96d63d01",
+    "freqtrade/freqtradebot.py": "41b94e988989c773e02a00030a530866e4e5be0a31fd0096decc075ce4e91b74",
+    "freqtrade/persistence/custom_data.py": "a48ece9ccf3b1236662337c939df61e89e8839e260209187ef9c408316de035a",
+    "freqtrade/persistence/models.py": "729d261a8927f96dec2700f2f1f1dd16f2f91d43f880c30f48fb0a8d15c38bdf",
+    "freqtrade/persistence/trade_model.py": "a011ca8686a205fd279ef665a2a3d5a1a4e3fb8cec9cbbac7f429eed0da85c2d",
+    "research/crypto/native_factors_20261106/sources/native_snapshot.py": "4ab262f350a74f4c4ae7f125de5a1efa1b98d7d9046fb245c7909b3fd34e3faa",
+    "research/crypto/native_factors_20261106/test_native_snapshot.py": "c59486544477b026793b4c5ba69d2dc5a8aab3793354113f43713536406b88ba",
+    "research/crypto/native_factors_20261106/README.md": "fe774990e2cc85811c2f33714e5456d8cdbe356ba5d5bf572e025e8ad66e0fe1",
+    "research/crypto/native_factors_20261106/snapshot_checks.txt": "c46e1c05965d70ef59f233f6fd566674056ae8ac165c5d5ccb30cac782fcb8ca",
+    "research/crypto/native_factors_20261106/snapshot_regression_checks.txt": "b60f83d0b7d6e719ddf9bf86a768eed73e1f28ab63c55a2c5b1f4b7b2ec18178",
+    "research/crypto/rd_program_20261105/execution_extension/native_evidence.py": "435e7b004d6b974d311940f615a39ef0b77209c6a61ed90d113856c5f6283045",
+    "research/crypto/rd_program_20261105/execution_extension/reservations.py": "68c0654f17fd8fac8201f58698b0cf54dd6e4adfaa06306f9e27e43935002228",
+    "research/crypto/rd_program_20261105/p0/risk/rd1.py": "6d34d8f0817f3511dfa523e3fb42a51a9f62fa33c333d2aee7373bd82df730f0",
+    "research/crypto/native_factors_20261106/sources/native_entries.py": "a4810f34fa75dc79625a0b0eb9efae164ead751beebe8df995500a2535da1826",
+    "research/crypto/native_factors_20261106/test_native_entries.py": "0c779a82ef011bedd3cfeffc5a6318674e069c075ef6f4c7ecfcabfb889307e8",
+    "research/crypto/native_factors_20261106/entry_checks_initial.txt": "7f352a8c8ef71a09835f6d90debe1f39cdf6f4cbe97bfd2473636320380bae32",
+    "research/crypto/native_factors_20261106/entry_debug_checks.txt": "fcd2819412c10703ec6fbab81021993a3150e3f1db7ce863a3148d1c61badaf6",
+    "research/crypto/native_factors_20261106/entry_checks.txt": "8ba5682c3786b8dbf93281eaadddf7f59c73380baa1a8ce13b80c5a57559f52f",
+    "research/crypto/native_factors_20261106/entry_regression_checks.txt": "6ad19a33460e50c072d917da07763c28d8a118cf42ecaf71275117cd740620a5",
+    "research/crypto/native_factors_20261106/entry_regression_final_checks.txt": "0b66c775d9037786b1371e3691b28b7b947a1f167621ec83ec1559cbb4466d97",
+    "research/crypto/rd_program_20261105/execution_extension/lifecycle.py": "191ffe0234c4e71a9a7368a8c2aa0256aee4d154369654397f9e497814ceef6d",
+    "freqtrade/exchange/exchange.py": "37c31dce2a4cd73f3f929c341d7ac3b848417657050cc563a881ad5db526f4b5",
+    "freqtrade/exchange/binance.py": "07184118e8a5ad1da42c7a322532039530e3df054516f616e4b3f5755298f8ad",
+    "research/crypto/native_factors_20261106/sources/native_lifecycle.py": "4771a2688119dbd8548951d99911d3d63c47410674b75c9957d4c4f9112591d4",
+    "research/crypto/native_factors_20261106/test_native_lifecycle.py": "677ee94e78ab75c3df482427ec22d0d8a5f0f1abf1b696c1c4b898e228b4e4d7",
+    "research/crypto/native_factors_20261106/lifecycle_checks_initial.txt": "2fc92d1970cc4ea66592f7047118997fa09c4eb1ffa1c213982d7ac62efd8b70",
+    "research/crypto/native_factors_20261106/lifecycle_capacity_check.txt": "a92ef5f951ff166799a5ec4108723ff621e452f3cbf7ce588931824d14cb70b4",
+    "research/crypto/native_factors_20261106/lifecycle_regression_checks.txt": "100ce1beb8de38bec1d9254940d0b7e6e24315fa3a9def57d07b1d3177a1be4b",
+    "research/crypto/native_factors_20261106/lifecycle_regression_final_checks.txt": "0f0f9553afcdc2c59e003450f3114483f4f6af8fc37a5173a48f159869fc32be",
+    "research/crypto/native_factors_20261106/sources/native_after_fill.py": "da7050e6de12a93bdf970572f627735778e99942510b8e0150177d2b45598413",
+    "research/crypto/native_factors_20261106/test_native_after_fill.py": "156acd252b4a3018dd1afda4c2ca0f126b25fb7bdf820fdbf535ab84e50a85f8",
+    "research/crypto/native_factors_20261106/after_fill_checks_initial.txt": "f3688d24cfb7f4949ee654ebb78a1da723bd141ea5c3ef969f0103e34e63e73a",
+    "research/crypto/native_factors_20261106/after_fill_regression_checks.txt": "f972a4b92875508083602990788d02e20fcb82d59f701906110dac4c13fab057",
+    "research/crypto/native_factors_20261106/after_fill_regression_final_checks.txt": "dc7633de20e6ed95a243b4ee830733071179c6aa79a9c7e2398751a7904f230f",
+    "research/crypto/native_factors_20261106/sources/AverageStrategy.py": "63606866fdf1cb3d71dc39a951ed0784a31686690b1c4014c12d2481c8dbf094",
+    "research/crypto/native_factors_20261106/sources/LICENSE": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "freqtrade/leverage/liquidation_price.py": "fc51e207f5b07ec164d9908d65ac48da0a54e3c4e91e9511f50309171ef7ec57",
+    "freqtrade/strategy/strategy_wrapper.py": "6421d4beab6dce897d6f94ab717a5eed9feb8747222245fd3c5d0c5f74853b41",
+    "freqtrade/strategy/interface.py": "5d0faa6da85bd223bcea2281bd173c7ffc54c3a9647ae136e4ebc7d5685dea02",
+    "research/crypto/native_factors_20261106/sources/native_cancellations.py": "0af3106175d210525d5214781133d82406ca2ad1481b76d3ef34f22e0e2cf260",
+    "research/crypto/native_factors_20261106/test_native_cancellations.py": "2eaefbfdae763e16b29d09796ee5025cfd3824e2b7a3dca6a20972d23acf7266",
+    "research/crypto/native_factors_20261106/cancellation_checks_initial.txt": "23697e0b9da85ca8e7dc93400e3f3d44d8181063ac4f258f7b7c9b8f124f4088",
+    "research/crypto/native_factors_20261106/cancellation_checks_second.txt": "a4ee4758e88e3a3b4ab3ceaf4fba24ec58b8d566fce286239dd960fc1107997c",
+    "research/crypto/native_factors_20261106/cancellation_regression_checks.txt": "786424d19d5d7c36971faf5561de61ca08b69ef10f170b63f7182de17af66b22",
+    "research/crypto/native_factors_20261106/cancellation_regression_final_checks.txt": "edbbe93544bd1d51bb5b2f50648b9e4b6eab1ef8cb9afe0794b337b1b6793dc7",
+    "research/crypto/native_factors_20261106/sources/native_account.py": "462bd5f87a7f3e764107cec8bc90cdc39a31a8e70e44d3c3606d45fb8a6b33bd",
+    "research/crypto/native_factors_20261106/test_native_account.py": "e6e245acb5972f13f0d90aa423c23c9799100f3a8daf7f12177a37274b8c2edf",
+    "research/crypto/native_factors_20261106/account_checks_initial.txt": "cd0f44b342dc2f4248dd03e8fb6dda55294d45b1576f48f0602dabf1c8dff912",
+    "research/crypto/native_factors_20261106/account_checks_second.txt": "175e447bcbf556373c3a059dd23538e0f5de51b8f29fdf07275fa9c8ae226912",
+    "research/crypto/native_factors_20261106/account_regression_checks.txt": "d56b523a4b8379fc14673d6181d1e9c13c4eb3697502d756fa170ef1e16d73d1",
+    "research/crypto/native_factors_20261106/account_regression_final_checks.txt": "dfd47241a639573a7f54acf978863466f821265efadcebd57f845ebc0b790900",
+    "research/crypto/rd_program_20261105/execution_extension/account_replay.py": "90a967b04533b36ca7f9eb4bdb31dfb4f4f61e4db33819f8e2362fcb6a3abead",
+    "research/crypto/rd_program_20261105/data_extension/book_replay.py": "521e9be9329efdedc8615e3af8c72cbc4a4756aeb1b285b336ba92156c7326c5"
+  },
+  "changed_previous_sources": {
+    "research/crypto/native_factors_20261106/README.md": {
+      "prior_sha256": "92a78edd36cc74d1330ee0e8f73c97470791f93935b757c51bafd8d26f6b99a0",
+      "current_sha256": "fe774990e2cc85811c2f33714e5456d8cdbe356ba5d5bf572e025e8ad66e0fe1"
+    }
+  },
+  "frozen_manifests": {
+    "research/crypto/rd_program_20261105/freeze.json": {
+      "sha256": "22d71d0cc57eb7a5f2456f755ab4bb524eddc5014c90c7290e472e40d3ae603d",
+      "files_verified": 11,
+      "all_match": true
+    },
+    "research/crypto/official_factor_20261106/freeze.json": {
+      "sha256": "9c8dba145f5a70afc35d9ca58966e2ef6cab929dc357bf41bcbf4606d570fa95",
+      "files_verified": 13,
+      "all_match": true
+    }
+  },
+  "prior_status": {
+    "path": "research/crypto/native_factors_20261106/current_status_v7.json",
+    "sha256": "a9e2b3add430b3edcfbd3812c97a9bde9d21ab6fd063658fa263cc81f69a6051"
+  }
+}
