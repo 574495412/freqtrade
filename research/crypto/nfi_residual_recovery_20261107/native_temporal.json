@@ -1,0 +1,382 @@
+{
+  "schema": "freqtrade.research.nfi-residual-recovery.v1",
+  "registered_at": "2026-11-06T20:28:07.800953+00:00",
+  "economic_results_observed_at_registration": true,
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "start": "2026-09-01T00:00:00Z",
+  "end": "2026-11-05T00:00:00Z",
+  "comparison_end": "2026-11-04T23:00:00Z",
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "TRB/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "XRP/USDT:USDT",
+    "ADA/USDT:USDT",
+    "BNB/USDT:USDT",
+    "LINK/USDT:USDT",
+    "DOT/USDT:USDT",
+    "FIL/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "DYDX/USDT:USDT",
+    "LTC/USDT:USDT",
+    "BCH/USDT:USDT",
+    "ETC/USDT:USDT",
+    "GALA/USDT:USDT",
+    "SAND/USDT:USDT",
+    "UNI/USDT:USDT",
+    "IOTA/USDT:USDT",
+    "RUNE/USDT:USDT",
+    "AXS/USDT:USDT",
+    "AAVE/USDT:USDT",
+    "EGLD/USDT:USDT",
+    "ALGO/USDT:USDT",
+    "SNX/USDT:USDT",
+    "CRV/USDT:USDT",
+    "MASK/USDT:USDT",
+    "SUSHI/USDT:USDT",
+    "KSM/USDT:USDT",
+    "IOTX/USDT:USDT",
+    "MANA/USDT:USDT",
+    "NEO/USDT:USDT",
+    "GRT/USDT:USDT",
+    "TRX/USDT:USDT",
+    "CELO/USDT:USDT",
+    "SKL/USDT:USDT",
+    "THETA/USDT:USDT"
+  ],
+  "initial_equity_usdt": 1000,
+  "allowed_leverage": 1.0,
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "cost_model": "5bps commission plus 0/3/10bps fee proxy; actual dataset funding separately; not orderbook fill/slippage proof",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json",
+    "sha256": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e"
+  },
+  "original_dataset_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/receipts.json",
+    "sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06"
+  },
+  "marks": {
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "6444bc1f50d6e168f47a55f7a98786566476d116a3a215aabc46cc18280b53c1"
+    },
+    "ETH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "188f154f4dae7a98519d507af3541924adad4be3004c5eef16988cb5c2fa3c05"
+    },
+    "SOL/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SOL_USDT_USDT-1h-mark.feather",
+      "sha256": "8822193b6dbadbf8c808b267a5e5a18a9e58332049bf80b106c682fc31948e08"
+    },
+    "AVAX/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/AVAX_USDT_USDT-1h-mark.feather",
+      "sha256": "447cb384247ec2e0e7c3858a683f95615467920092b6b9d46b19031ecd25e2fd"
+    },
+    "TRB/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/TRB_USDT_USDT-1h-mark.feather",
+      "sha256": "7407b5569b80a0dc5cace0de75b1aa3d35c38ce796914936e4b54e8763955fa3"
+    },
+    "DOGE/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/DOGE_USDT_USDT-1h-mark.feather",
+      "sha256": "6244704d001a8e206fdb0f794982ae82a0c876af3bdc44641e222c6d4a1ffc5d"
+    },
+    "XRP/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/XRP_USDT_USDT-1h-mark.feather",
+      "sha256": "ee93bb0325769292f19dfa8656b11e716d4050d189847db4ec7bf592709d24ca"
+    },
+    "ADA/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ADA_USDT_USDT-1h-mark.feather",
+      "sha256": "f97fb47591c77a83d20267ece8131aad6679cff9859dce50a90a54c6162f67eb"
+    },
+    "BNB/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/BNB_USDT_USDT-1h-mark.feather",
+      "sha256": "714d1531145d33d69cd9cbdc096daadf0bfc2324a98158a49af8266d01a51343"
+    },
+    "LINK/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/LINK_USDT_USDT-1h-mark.feather",
+      "sha256": "f3048f28041e822cbf5eaa812a73d8f7dc0cb76389ccba0b70901260743a2cc1"
+    },
+    "DOT/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/DOT_USDT_USDT-1h-mark.feather",
+      "sha256": "87a404c9d8ba9dea6ecb046086aefa7d9adbc1ed609d79923eb03e6aeaf75b77"
+    },
+    "FIL/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/FIL_USDT_USDT-1h-mark.feather",
+      "sha256": "a90c8ec97761f53bded6bc74288934e83136622bf202c226ae2baf9c537d0614"
+    },
+    "NEAR/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/NEAR_USDT_USDT-1h-mark.feather",
+      "sha256": "8d6d23cdd1fc2aec1513a9ceed9e615578b8c6b32cec735084fe31438b699aa7"
+    },
+    "ATOM/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ATOM_USDT_USDT-1h-mark.feather",
+      "sha256": "31f520004cf8f59e01d346f817e51ba1816fa726814531628ce75b2216f5403f"
+    },
+    "DYDX/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/DYDX_USDT_USDT-1h-mark.feather",
+      "sha256": "3e54d5c28b691e351eb3d53946eca2a3b6dde0f506c007872dc094271bdd7619"
+    },
+    "LTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/LTC_USDT_USDT-1h-mark.feather",
+      "sha256": "ad57f2715dc703b56183bc3aa1eaa17f85f0c75f6c83caa5430558ebbae41762"
+    },
+    "BCH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/BCH_USDT_USDT-1h-mark.feather",
+      "sha256": "dc68faebd81bb82796cde178fee6899109fe9119a3672f55089b7321bbe794a4"
+    },
+    "ETC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ETC_USDT_USDT-1h-mark.feather",
+      "sha256": "2d1913cfd93363447200bb77d1d4b073793c47553d7c862304eaadf0c5e7647c"
+    },
+    "GALA/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/GALA_USDT_USDT-1h-mark.feather",
+      "sha256": "7b0558b28a41f3f64124097249b05ac37dbe04ad51a373736a3ffa8341cb26c6"
+    },
+    "SAND/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SAND_USDT_USDT-1h-mark.feather",
+      "sha256": "33be5e2182bcdf4d49c661789dcda1adc2b46fdc840f8533b6774d534eca79e4"
+    },
+    "UNI/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/UNI_USDT_USDT-1h-mark.feather",
+      "sha256": "e868e2a87343a6cdcd65fc78bb3f26de320756e554b7041250cf12ac596368ad"
+    },
+    "IOTA/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/IOTA_USDT_USDT-1h-mark.feather",
+      "sha256": "22400ff2ba7615b0aed3a0d9229378bcf268a180b8fa1f3ab6f0db3c2ad42607"
+    },
+    "RUNE/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/RUNE_USDT_USDT-1h-mark.feather",
+      "sha256": "d89b624b0065b5507caa4a129d19f774b4e16d4f878cd5d135cc5ff4a96ae9c7"
+    },
+    "AXS/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/AXS_USDT_USDT-1h-mark.feather",
+      "sha256": "1d74ed17c5cc87c319cdc9b9fd7ea63c7b3550ff2dd097d764be42f139303000"
+    },
+    "AAVE/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/AAVE_USDT_USDT-1h-mark.feather",
+      "sha256": "a11e8ed83307c4db0367c51482cf0ac81f7992aff7882cce5b6e8c12f16c2229"
+    },
+    "EGLD/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/EGLD_USDT_USDT-1h-mark.feather",
+      "sha256": "23454c4744cf1f62a278ff433309dc6b6b6a5bbb22ea5cb3a810b4f2fd74faf1"
+    },
+    "ALGO/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/ALGO_USDT_USDT-1h-mark.feather",
+      "sha256": "112d10101ce968dd915eb2280bc364fca745b3469089400d55abdab22155204b"
+    },
+    "SNX/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SNX_USDT_USDT-1h-mark.feather",
+      "sha256": "f117d7784fad6e5bc7d4bbe6f012c11f249366960304caa78d3e121a3f5f53da"
+    },
+    "CRV/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/CRV_USDT_USDT-1h-mark.feather",
+      "sha256": "1de382ba842755a947cce16fac3f02990ea536c7b3250de163c022b8c9d4f6b2"
+    },
+    "MASK/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/MASK_USDT_USDT-1h-mark.feather",
+      "sha256": "85673cea6d82d7b45b20d073a58f6bd270675665c8fdcb929d175820067b577d"
+    },
+    "SUSHI/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SUSHI_USDT_USDT-1h-mark.feather",
+      "sha256": "46dc7ed034a59f715bad86bd3d2814edfa0d10eee585b9cf0544137fba40a15d"
+    },
+    "KSM/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/KSM_USDT_USDT-1h-mark.feather",
+      "sha256": "8170bee4a1c8f0049759c42378167753ed4357e53fe3cad2116445b3e3a5da59"
+    },
+    "IOTX/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/IOTX_USDT_USDT-1h-mark.feather",
+      "sha256": "96019792b768249e30be7ea0881c0b5f9d10585b7c902c9706b0984ab080eed4"
+    },
+    "MANA/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/MANA_USDT_USDT-1h-mark.feather",
+      "sha256": "06d6a5db995bc879b6d03dd52669daaa92acd8f879ffd877335b549f080db568"
+    },
+    "NEO/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/NEO_USDT_USDT-1h-mark.feather",
+      "sha256": "12ce5f72216b994330cadb8d25d98c57e9ac07d76f67e4415c4543e3e09de9f1"
+    },
+    "GRT/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/GRT_USDT_USDT-1h-mark.feather",
+      "sha256": "7767903612e575633233d435d00606dface92f6852227464d8936fab07b6fb0b"
+    },
+    "TRX/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/TRX_USDT_USDT-1h-mark.feather",
+      "sha256": "b759a791f3488341c6367488fbf9fcef29cd505728313156eb110e29812bb54a"
+    },
+    "CELO/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/CELO_USDT_USDT-1h-mark.feather",
+      "sha256": "f895bc111bad2d5e04d9b2597aa12423acfec1d65ca3aebdccfb7b38bafe1437"
+    },
+    "SKL/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SKL_USDT_USDT-1h-mark.feather",
+      "sha256": "75968a1b255b2d3cc541e3ae97cf27cccebf8f194246505dbcdf593db7aeee15"
+    },
+    "THETA/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/THETA_USDT_USDT-1h-mark.feather",
+      "sha256": "0611773b1b2656905169b7d1786390f17f48fc88187214d3d4dfc74c2c8e9596"
+    }
+  },
+  "candidates": [
+    {
+      "name": "ResidualRecovery",
+      "strategy": "ResidualRecovery",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_residual_recovery_20261107/ResidualRecovery.json",
+        "sha256": "5031cffd8c0ca6aa33d4bca7aa7fe028b3e4871c3cc696d4ca9ae8110047390e"
+      },
+      "source_files": {
+        "NostalgiaForInfinityX8.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        },
+        "StrengthAllocation.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/StrengthAllocation.py",
+          "sha256": "eb9708702b628fbd5e1bd7a818b77162650590b27bd48d3d82c9a14a4c2290ef"
+        },
+        "ResidualRecovery.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_residual_recovery_20261107/ResidualRecovery.py",
+          "sha256": "7f163cdbb9bb238ea4389e38562af09248d2ed14f40831fbfa532e1a1692d5a0"
+        }
+      },
+      "original_source_files": {
+        "/Users/chrise/GitHub/CZ-Agent/vendor/nfi-x8/NostalgiaForInfinityX8.py": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+      },
+      "max_open_trades": 6,
+      "stake_amount": "unlimited",
+      "signal_timeframe": "5m",
+      "matching_timeframe": "5m",
+      "source_and_risk_behavior": "Double the Top Coins first stake on residual recovery."
+    }
+  ],
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "runner_sha256": "866d2792d8f8ac7469b378d800e0846ade27dbe0e8f71e9a8cf7854ef0f86ba5",
+  "memory_guard_bytes": 5905580032,
+  "wall_guard_seconds": 3600,
+  "maximum_financial_workers": 1,
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2026-09-01T00:00:00Z",
+      "end": "2026-11-04T23:00:00Z"
+    },
+    {
+      "name": "before-source-release-cutoff",
+      "start": "2026-09-01T00:00:00Z",
+      "end": "2026-10-23T00:00:00Z"
+    },
+    {
+      "name": "after-source-release-cutoff",
+      "start": "2026-10-23T00:00:00Z",
+      "end": "2026-11-04T23:00:00Z"
+    }
+  ],
+  "selection_protocol": {
+    "primary": "report both account returns, hourly marked drawdowns and complete campaigns across three registered calendar periods; no unique global winner claim",
+    "native_cash_and_order_identity_required": true,
+    "no_post_result_retuning": true
+  },
+  "known_limitations": [
+    "registered after prior 2025-2026Aug outcomes known; before post-source-period data evaluation; historical source-time OOS, not prospective paper/live and not independent random sample",
+    "new independent cash wallet, starts flat at window start, not a carry-forward account",
+    "13-day window has limited opportunity and cannot establish long-run profitability",
+    "40-pair pool has historical survivorship limits; current exchange metadata may differ from historical rules",
+    "Public prices and funding do not prove customer fills, funding settlement or on-exchange protection"
+  ],
+  "new_factors": 0,
+  "parameter_optimization": false,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+    "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+  },
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "registration_completed_at": "2026-11-05T11:52:17.586200+00:00",
+  "storage_policy": {
+    "lossless_indicator_map_lru": 1,
+    "lossless_trim_map_lru": 1,
+    "analyzed_provider_lru": 6,
+    "reason": "bound RAM for 40 pairs; no numerical downcast or decision change"
+  },
+  "technical_revision": 2,
+  "revision_reason": "Explicit native datadir CLI option required; first attempt stopped before loading market candles or calculating economics. Frozen economic contract unchanged.",
+  "revision_at": "2026-11-05T11:53:52.025182+00:00",
+  "registration_note": "registered after prior 2025-2026Aug outcomes known; before post-source-period data evaluation; historical source-time OOS, not prospective paper/live and not independent random sample",
+  "input_inventory": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/cz-comparison-data-inventory-20261105.json",
+    "sha256": "17338ca5b6cc3335e2c6ed6a8b5a9618eae522fe27bcd6eaf3f1188d3294efdb"
+  },
+  "original_full_market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+    "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+  },
+  "comparison_purpose": "Same forty-pair wallet and historical window for unchanged NFI X8 and existing X4 compact; no financial account or result at registration",
+  "post_source_protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_post_source_inputs_20261105_v001/registered_protocol.json",
+    "sha256": "f9046f73e664728f71c3af202c9200528bf8a71acf6d46b301823713319ad2ab"
+  },
+  "candidate_window_economics_observed": false,
+  "known_history": "Both 2025–August 2026 accounts were known, along with the 13-day original X8 base-cost account. Full September-to-November paired economics were unknown. Retrospective and reset to cash.",
+  "temporal_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/plan-post-source.json",
+      "sha256": "7eb38fd353d5ec59122f337db541a60def5c27ac00fcea5bb1e590f1b1899293"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/registration.json",
+      "sha256": "eab310edfa3bb1d05037ac2a78cb069c163718019381739f16a7a8ecf598450e"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/result.json",
+      "sha256": "0db5c6ffd60d9b3c70b742c9be40ff104707cbced6ae00011b29b3f399b70428"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/audit.py",
+      "sha256": "2514cb9d6f537c156ca04a7cfcaa5320e31f71dd51d4db827659c0b8242d1617"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal.py",
+      "sha256": "529d3b191816817c1bd34817a62a21a76cb6d0dd7259452b1803968f4c85177c"
+    }
+  ],
+  "decision": "At each cost require positive full-window flat net return greater than original, positive paired excess in both slices, full-window drawdown within one percentage point of original, at least 20 natural closes full-window and 10 filled pure Top Coins campaigns. Record research-only and preserve A04 outcomes."
+}
