@@ -211,7 +211,7 @@ class AfterFillGuard:
             self._persist()
             return copy.deepcopy(item)
 
-    def apply(self, event, bot, trade, envelope, now):
+    def apply(self, event, bot, trade, envelope, now, *, return_pending_partial=False):
         with self._mutex:
             self._database_ready()
             if self._poisoned or self.store.lock.closed:
@@ -256,6 +256,13 @@ class AfterFillGuard:
             if event in self.s["events"]:
                 if self.s["events"][event]["signature"] != signature:
                     raise StateError("Conflicting after-fill event")
+                previous = self.s["events"][event]
+                if return_pending_partial is True and previous["state"] == "OPEN_PARTIAL_PENDING":
+                    post = previous["stages"].get("after_fill_hook", {})
+                    if (post.get("post_trade") != trade_state(trade)
+                            or post.get("post_order") != order_state(order)):
+                        raise RiskError("Pending partial native state changed; fresh observation required")
+                    return copy.deepcopy(previous)  # pending is never protection permission
                 return self.verify_committed(event)  # never rerun an uncertain callback
             for prior in self.s["events"].values():
                 if prior["trade_id"] == trade.id and prior["order_id"] == order.order_id and prior["state"] != "OPEN_PARTIAL_PENDING":
@@ -270,6 +277,8 @@ class AfterFillGuard:
                 if order.status == "open":
                     self.s["events"][event]["state"] = "OPEN_PARTIAL_PENDING"
                     self._persist()
+                    if return_pending_partial is True:
+                        return copy.deepcopy(self.s["events"][event])
                 return self.verify_committed(event)
             except Exception:
                 Trade.session.rollback()  # earlier native commits remain; never claim whole-transaction rollback
