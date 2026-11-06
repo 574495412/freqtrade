@@ -1,0 +1,123 @@
+{
+  "registration_sha256": "5fb5c25dffc72ac2ec8d3648331d74a39b19417f4e9912558587cb1fa7b3ea8b",
+  "result_sha256": "b0da116537beb42410024a0595b73ff3498b47e739afc24a6f8c866de4103583",
+  "independent_account_code_sha256": "e4466aa67fdf79dff2dad3e691dcf33ac3289d30c99ea4f8e63d569945f591d2",
+  "data_quality_receipt_sha256": "1726c1e185a9d19dab7104ea48d6a8db19297ae89cab179b64ace54d05cd75d2",
+  "data_hash_index_sha256": "d664e25bebe874546a18df36267fd1a2825ffe59a5512f57388a040f0de9e8e3",
+  "accounts": {
+    "BreadthDiffusion_8bps": {
+      "nav_points": 280513,
+      "first_drawdown_threshold_breach_utc": "2025-01-18T05:15:00+00:00",
+      "fixed_fill_path_attribution": {
+        "pre_cost_price_pnl_usdt": -63.171547276883885,
+        "modeled_slippage_usdt": 98.70898192104349,
+        "fees_usdt": 164.514979344138,
+        "funding_usdt": 0.9521913726740983
+      },
+      "events": {
+        "entry": 1081,
+        "exit": 1081,
+        "funding": 1269
+      },
+      "maximum_curve_error_usdt": {
+        "cash": 1.7053025658242404e-12,
+        "equity": 1.8189894035458565e-12,
+        "gross_exposure": 0.0
+      },
+      "aggregate_event_cash_error_usdt": 0.0,
+      "sha256": {
+        "decisions.json": "52ac50763a7ea220c1c80ea8962a6f30878ff64199aa36b56e9f54dcb4651621",
+        "events.json": "694cbbb111079138eb341b5aea013c739719032ad543dc7da731e23a8a4e47f4",
+        "nav.parquet": "a8c0777df605b8fc025276cc6b1978c3bf6644e784174488374607a4046d333c",
+        "state.json": "fe7b4606dc8a85ba9b1029785a3663c65ccfc0b2ef50545ab8e9aed98150a6f9",
+        "trades.json": "00ab803df0491548673b92ba6877fe66f3277c80750b86d28932462cf19219f0"
+      }
+    },
+    "BreadthDiffusion_15bps": {
+      "nav_points": 280513,
+      "first_drawdown_threshold_breach_utc": "2024-10-07T12:15:00+00:00",
+      "fixed_fill_path_attribution": {
+        "pre_cost_price_pnl_usdt": -8.832081631381726,
+        "modeled_slippage_usdt": 222.99106485893267,
+        "fees_usdt": 111.49553684550722,
+        "funding_usdt": 1.5422965829059303
+      },
+      "events": {
+        "entry": 740,
+        "exit": 740,
+        "funding": 879
+      },
+      "maximum_curve_error_usdt": {
+        "cash": 1.4779288903810084e-12,
+        "equity": 1.5916157281026244e-12,
+        "gross_exposure": 0.0
+      },
+      "aggregate_event_cash_error_usdt": 0.0,
+      "sha256": {
+        "decisions.json": "5791921fc0fb61f7cf98d5b202510dde128c38c82eb8df33074eefce429e8f83",
+        "events.json": "299527b32a329e3fefc41114a430c303a102031e203953912db78b2cbbcb5a4d",
+        "nav.parquet": "fd2077e84319ff3aade4f4715195da7c138475d81d55cd60d61d9749e61f89d1",
+        "state.json": "f53fa81da0b5be4542ecb73347521896ddde065925d5f893dc063953a8d03c4c",
+        "trades.json": "608970b9a7bf05a6c756d7be3afc54fccd51c5d4ad2f1cc7f7216bffbee84f4e"
+      }
+    },
+    "LocalConfirmation_8bps": {
+      "nav_points": 280513,
+      "first_drawdown_threshold_breach_utc": "2024-10-28T22:05:00+00:00",
+      "fixed_fill_path_attribution": {
+        "pre_cost_price_pnl_usdt": 4.807798280935344,
+        "modeled_slippage_usdt": 125.50034998091957,
+        "fees_usdt": 209.16724924702984,
+        "funding_usdt": -1.2505751633842668
+      },
+      "events": {
+        "entry": 1484,
+        "exit": 1484,
+        "funding": 1586
+      },
+      "maximum_curve_error_usdt": {
+        "cash": 2.0463630789890885e-12,
+        "equity": 2.1600499167107046e-12,
+        "gross_exposure": 0.0
+      },
+      "aggregate_event_cash_error_usdt": 0.0,
+      "sha256": {
+        "decisions.json": "c6ce046e309c3038a4471c499f598106aa131edd4c37f8cf3c2be846b2fc556f",
+        "events.json": "fe34ba050fa707e5d2a94a2e7c9fb3fd02e2f4d0ceb9f65b70eb225718d2bf59",
+        "nav.parquet": "31287897ea83354c63c7134ca3afb1a730b7f9911824cc0a25b3ad9ba6775a1b",
+        "state.json": "aa9f8cc1bbb0037754e60086a7fa194511ca8dc3c4600b153951cfe4d20c6099",
+        "trades.json": "14417227dbb52b27dff2ea5036a9f3ee5956506209ab498d69630a7dce434233"
+      }
+    },
+    "LocalConfirmation_15bps": {
+      "nav_points": 280513,
+      "first_drawdown_threshold_breach_utc": "2024-05-15T18:30:00+00:00",
+      "fixed_fill_path_attribution": {
+        "pre_cost_price_pnl_usdt": -62.974871907736855,
+        "modeled_slippage_usdt": 180.74054727848454,
+        "fees_usdt": 90.37030512667837,
+        "funding_usdt": -1.1008362992443281
+      },
+      "events": {
+        "entry": 672,
+        "exit": 672,
+        "funding": 724
+      },
+      "maximum_curve_error_usdt": {
+        "cash": 2.3874235921539366e-12,
+        "equity": 2.5011104298755527e-12,
+        "gross_exposure": 0.0
+      },
+      "aggregate_event_cash_error_usdt": 0.0,
+      "sha256": {
+        "decisions.json": "51dcb8c20eb2e91eb18737542d965c5180fc5da4695ce2b0bbefaaaf6b320a05",
+        "events.json": "6ee9f4433ee40db838d12cbf6a39c9341e2ef8b326363887382747fed235dead",
+        "nav.parquet": "e0d81ef7a698c16c58535756010baad72d640be19920c694c43e8e177904a4d2",
+        "state.json": "894d15b13662f65241134014896bc018fdd2b9854e857c480611b4fa350cd31c",
+        "trades.json": "01513501f09d635621c7cebe431508df59fe8d30bb947ceab67280ba43f711e0"
+      }
+    }
+  },
+  "passed": true,
+  "authenticated_execution": false
+}

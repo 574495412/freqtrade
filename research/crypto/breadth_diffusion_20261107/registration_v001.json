@@ -1,0 +1,77 @@
+{
+  "registered_at_utc": "2026-11-06T17:46:11.877228+00:00",
+  "symbols": [
+    "ADAUSDT",
+    "AVAXUSDT",
+    "BNBUSDT",
+    "DOGEUSDT",
+    "DOTUSDT",
+    "ETHUSDT",
+    "LINKUSDT",
+    "LTCUSDT",
+    "SOLUSDT",
+    "XRPUSDT"
+  ],
+  "universe_basis": "Ten established liquid altcoin perpetuals drawn from the original fixed wide X8 list; selected for liquidity and complete schedule before viewing candidate outcomes. Survivorship remains.",
+  "market_dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002_klines",
+  "funding_dataset": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002",
+  "market_receipts_sha256": "bcbd3a20bac350b6bc2bc26ce9dc39edc5d51ca640b27a09a281f8070c41d0c4",
+  "funding_receipts_sha256": "1411cd39981be70a7769e37881ebde4d6136f1313f9fec3e3840b70d5875cd06",
+  "source_hashes": {
+    "research/crypto/breadth_diffusion_20261107/run.py": "d8a4077250c175a70329c7b6e6eab565a93280980d4c47cf7c5697b9fa022ac8",
+    "freqtrade/research/data.py": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+    "research/crypto/trend_mainline/data.py": "a73440d8cd712e883e31974a02f0b2e51d0428005faf16eae9a3d2e634b9b621",
+    "research/crypto/trend_mainline/account.py": "dc2086887ea30c054a18b6f3b1bf13d0d6eb967085a9cdb7c7c338465459f47a"
+  },
+  "hypothesis": "A laggard that starts moving in the direction of a broad prior peer impulse may continue closing the gap over the next 12 hours.",
+  "cases": [
+    "BreadthDiffusion",
+    "LocalConfirmation"
+  ],
+  "data_start": "2023-10-01",
+  "start": "2024-01-01",
+  "validation_start": "2025-01-01",
+  "holdout_start": "2026-01-01",
+  "end": "2026-09-01",
+  "capital_usdt": 1000,
+  "fee_per_side": 0.0005,
+  "extra_cost_bps_per_side": [
+    3,
+    10
+  ],
+  "liquidity": {
+    "top_n": 10,
+    "minimum_daily_quote_usdt": 50000000
+  },
+  "signal": {
+    "local_1h_min_abs": 0.0035,
+    "local_4h_max_abs": 0.01,
+    "minimum_aligned_other_contracts": 7,
+    "peer_4h_median_min_abs": 0.01,
+    "pulse_hours": 12,
+    "feature_buffer_minutes": 5,
+    "clock_policy": "Use close known at t-5m, prior completed daily features and prior 60m turnover ending t-5m. Signal only on a new eligible false-to-true edge. Hold signal for 12h; same symbol ignores new pulses during that interval.",
+    "control": "Identical local entry, holding, sizing and execution. Omit only the leave-one-out peer breadth and median gate."
+  },
+  "risk": {
+    "risk_per_position": 0.02,
+    "maximum_position_fraction": 0.45,
+    "maximum_gross_fraction": 0.9,
+    "maximum_positions": 2,
+    "leverage": 1,
+    "account_drawdown_halt": 0.35
+  },
+  "execution": {
+    "prior_hour_participation": 0.01,
+    "realized_interval_participation": 0.01,
+    "policy": "Existing account engine. Trade at next five-minute close with adverse costs and volume cap. Permanent 35% observed drawdown halt, fixed two-daily-ATR stop checked on completed bars, 24h reentry cooldown, alphabetical admission, hourly signal expiry, no DCA. Funding uses sealed 8h schedule and hourly mark-open."
+  },
+  "decision": {
+    "cash_control": "constant 1000 USDT",
+    "pass": "Both cost cases have at least 30 natural closes, positive full net return greater than local-only control, max drawdown <=35%, no risk halt, positive paired net excess in both 2025 and Jan-Aug 2026 continuous slices.",
+    "promotion": "A historical screening pass only. Independent future data and execution evidence required before paper deployment.",
+    "frozen_trials": 4
+  },
+  "known_history": "Periods are retrospective. Prior breadth20/crowding features used six contracts and 20m context, without this 4h leave-one-out diffusion account. No parameter sweep or post-result threshold change.",
+  "orders_enabled": false
+}
