@@ -1,0 +1,134 @@
+{
+  "completed_at_utc": "2026-11-06T01:55:28.973003+00:00",
+  "registration_sha256": "47a45d4db935329b1dbbb73fa5b9188beb72c9dfd2ebeb22336bdbf4711b0292",
+  "rows": [
+    {
+      "market": "spot",
+      "input_path": "user_data/crypto_quant/rd_program_20261105_v1/event_source_probe_v001/binance_2025-01-01.raw",
+      "input_sha256": "d92ce4f091a206ff2b6eb183086a4ecb47ef85fb39526c79dcc46ec7a0974d0e",
+      "input_messages_processed": 3232,
+      "local_timestamp_fraction_digits": {
+        "7": 3232
+      },
+      "exact_local_timestamp_order_passed": true,
+      "disconnects": 0,
+      "applied_depth_updates_including_buffer": 594,
+      "obsolete_depth_updates": 6,
+      "errors": [],
+      "usable_book_observations": 593,
+      "bbo_known_region_observations": 593,
+      "complete_bid_20bps_observations": 593,
+      "complete_ask_20bps_observations": 593,
+      "complete_both_20bps_observations": 593,
+      "first_observation": {
+        "last_update_id": 57621184107,
+        "bid": "93576.00000000",
+        "ask": "93576.01000000",
+        "bbo_within_known_snapshot_region": true,
+        "spread_bps": "0.001068650024116759419254968194",
+        "visible_bid_quantity_within20bps": "68.53668000",
+        "visible_ask_quantity_within20bps": "82.82125000",
+        "bid_band_complete": true,
+        "ask_band_complete": true,
+        "depth_values_are_lower_bounds_when_band_incomplete": true,
+        "band_anchor": "bid*(1-0.002) and ask*(1+0.002); diagnostic convention only",
+        "received_at": "2025-01-01T00:00:00.8008865Z",
+        "received_ns": 1735689600800886500,
+        "source_line": 47
+      },
+      "last_observation": {
+        "last_update_id": 57621219706,
+        "bid": "93610.92000000",
+        "ask": "93610.93000000",
+        "bbo_within_known_snapshot_region": true,
+        "spread_bps": "0.001068251381983459729727059101",
+        "visible_bid_quantity_within20bps": "92.25058000",
+        "visible_ask_quantity_within20bps": "81.11050000",
+        "bid_band_complete": true,
+        "ask_band_complete": true,
+        "depth_values_are_lower_bounds_when_band_incomplete": true,
+        "band_anchor": "bid*(1-0.002) and ask*(1+0.002); diagnostic convention only",
+        "received_at": "2025-01-01T00:00:59.9160338Z",
+        "received_ns": 1735689659916033800,
+        "source_line": 3228
+      },
+      "arrival_minus_exchange_E_ns": {
+        "minimum": 1503100,
+        "maximum": 26820600,
+        "negative_count": 0,
+        "not_certified_network_latency": true
+      },
+      "output": {
+        "path": "user_data/crypto_quant/rd_program_20261105_v1/event_book_replay_v001/spot_observations.jsonl",
+        "sha256": "98f889903e3fdb9184e96737b07ba4372837780c88d46e449203f5ec9473b09b"
+      },
+      "economic_qualified": false
+    },
+    {
+      "market": "futures",
+      "input_path": "user_data/crypto_quant/rd_program_20261105_v1/event_source_probe_v001/binance-futures_2025-01-01.raw",
+      "input_sha256": "e4bb0e9cefdfede23d5e050be905899b8761f544cccf68fbcd87bd6ebe562fdc",
+      "input_messages_processed": 2774,
+      "local_timestamp_fraction_digits": {
+        "7": 2774
+      },
+      "exact_local_timestamp_order_passed": true,
+      "disconnects": 0,
+      "applied_depth_updates_including_buffer": 1051,
+      "obsolete_depth_updates": 2,
+      "errors": [],
+      "usable_book_observations": 1049,
+      "bbo_known_region_observations": 1049,
+      "complete_bid_20bps_observations": 326,
+      "complete_ask_20bps_observations": 395,
+      "complete_both_20bps_observations": 0,
+      "first_observation": {
+        "last_update_id": 6296359649191,
+        "bid": "93548.70",
+        "ask": "93548.80",
+        "bbo_within_known_snapshot_region": true,
+        "spread_bps": "0.01068961370408476863667339222",
+        "visible_bid_quantity_within20bps": "568.163",
+        "visible_ask_quantity_within20bps": "265.299",
+        "bid_band_complete": false,
+        "ask_band_complete": false,
+        "depth_values_are_lower_bounds_when_band_incomplete": true,
+        "band_anchor": "bid*(1-0.002) and ask*(1+0.002); diagnostic convention only",
+        "received_at": "2025-01-01T00:00:01.0078131Z",
+        "received_ns": 1735689601007813100,
+        "source_line": 9
+      },
+      "last_observation": {
+        "last_update_id": 6296370064804,
+        "bid": "93595.50",
+        "ask": "93595.60",
+        "bbo_within_known_snapshot_region": true,
+        "spread_bps": "0.01068426864311390872749826247",
+        "visible_bid_quantity_within20bps": "330.913",
+        "visible_ask_quantity_within20bps": "318.711",
+        "bid_band_complete": true,
+        "ask_band_complete": false,
+        "depth_values_are_lower_bounds_when_band_incomplete": true,
+        "band_anchor": "bid*(1-0.002) and ask*(1+0.002); diagnostic convention only",
+        "received_at": "2025-01-01T00:00:59.9528266Z",
+        "received_ns": 1735689659952826600,
+        "source_line": 2758
+      },
+      "arrival_minus_exchange_E_ns": {
+        "minimum": 1318100,
+        "maximum": 893813100,
+        "negative_count": 0,
+        "not_certified_network_latency": true
+      },
+      "output": {
+        "path": "user_data/crypto_quant/rd_program_20261105_v1/event_book_replay_v001/futures_observations.jsonl",
+        "sha256": "e04a8ce7457082d145a78867ef5a912027826091b27d16e579ae97252fdc55f3"
+      },
+      "economic_qualified": false
+    }
+  ],
+  "financial_runs": 0,
+  "orders_enabled": false,
+  "economic_qualified": false,
+  "full_window_coverage": false
+}
