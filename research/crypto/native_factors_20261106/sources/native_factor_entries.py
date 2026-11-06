@@ -4,6 +4,7 @@ Source-labelled bars/books/rules remain assumptions or synthetic evidence. This
 does not enable strategy startup, fetch market data, or certify historical fills.
 """
 from contextlib import contextmanager
+import copy
 from dataclasses import asdict, dataclass
 from datetime import datetime, timedelta
 from decimal import Decimal as D, ROUND_FLOOR
@@ -20,6 +21,14 @@ from native_entries import ReplayEntryExchange
 from native_evidence import decimal_text
 from native_strategy_exits import TIMING, _closed, _frame_evidence
 from rd1 import Entry, RiskError, StateError, aware, dec, digest, primitive, stamp
+
+
+def entry_boundary(strategy, now):
+    """Start of the frozen execution 5m bar, or None outside that bar."""
+    now = aware(now)
+    boundary = now.replace(minute=(now.minute//5)*5, second=0, microsecond=0)
+    f1 = type(strategy).__name__ == 'F1Momentum168Native'
+    return boundary if boundary.minute == 5 and (boundary.hour == 0 if f1 else boundary.hour % 4 == 0) else None
 
 
 @dataclass(frozen=True)
@@ -57,6 +66,7 @@ def validate_fixed_strategy(strategy, universe):
             or strategy.can_short or strategy.stoploss != -.05
             or strategy.max_entry_position_adjustment != 0 or strategy.use_custom_stoploss
             or strategy.trailing_stop or strategy.order_types.get('stoploss_on_exchange')
+            or strategy.ignore_buying_expired_candle_after != 0
             or strategy.order_types['entry'] != 'limit' or strategy.order_time_in_force['entry'] != 'GTC'
             or strategy.timeframe != ('5m' if f1 else '4h')
             or strategy.minimal_roi != ({} if f1 else {0:.5})):
@@ -105,6 +115,37 @@ def fixed_entry_signal(strategy, pair, inputs, now, universe):
     if not math.isfinite(scale) or not 0 < scale <= 1:
         return None, dict(proof,reason='missing_or_zero_volatility')
     return (tag,dec(decimal_text(scale))), dict(proof,reason='fixed_long_signal',entry_tag=tag,scale=decimal_text(scale))
+
+
+def registered_entry_signal(gate, strategy, pair, inputs, decision_at, now, universe):
+    """Verify and reuse a signal actually registered at its original boundary.
+
+No native clock is moved backwards, no late data are used to recompute a missed
+signal, and this does not reuse a past wallet, price, stake or risk permission.
+"""
+    now, decision_at = aware(now), aware(decision_at)
+    validate_fixed_strategy(strategy, universe)
+    if entry_boundary(strategy, now) != decision_at or decision_at > now:
+        raise RiskError('Registered signal is outside its original execution 5m bar')
+    key = digest([type(strategy).__name__, stamp(decision_at)])
+    schedule = gate.s.get('factor_schedules', {}).get(key)
+    if (schedule is None or schedule['at'] != stamp(decision_at)
+            or schedule.get('signals_sha256') != digest(schedule['signals'])
+            or pair not in schedule['signals']):
+        raise StateError('No intact boundary-registered factor schedule')
+    item = schedule['signals'][pair]
+    proof = item['proof']
+    if (type(inputs) is not EntryInputs or inputs.source_id != proof['source_id']
+            or inputs.timing != proof['timing'] or pair not in universe):
+        raise RiskError('Delayed signal input source differs from its boundary receipt')
+    minutes = 5 if type(strategy).__name__ == 'F1Momentum168Native' else 240
+    primary = _frame_evidence(_closed(inputs.main, minutes, decision_at))
+    hours = {p:_frame_evidence(_closed(inputs.hourly.get(p), 60, decision_at))
+        for p in (universe if minutes == 5 else (pair,))}
+    if proof.get('primary') != primary or proof.get('hourly') != hours:
+        raise StateError('Delayed signal prefix differs from its boundary receipt')
+    signal = item['signal']
+    return (None if signal is None else (signal[0], dec(signal[1]))), copy.deepcopy(proof)
 
 
 def size_entry(provider, evidence, exchange, wallet, liquidity, scale, now):
@@ -223,7 +264,7 @@ def _scoped_callbacks(strategy, proposal, tag, now, gate):
             else: delattr(strategy,n)
 
 
-def execute_fixed_entry(gate, exchange, strategy, evidence, inputs, liquidity, request_id, now):
+def execute_fixed_entry(gate, exchange, strategy, evidence, inputs, liquidity, request_id, now, *, decision_at=None):
     """One explicitly clocked decision; durable gate is final submission authority."""
     now = aware(now); wallet = gate.runtime_barrier
     if type(exchange) is not ReplayEntryExchange or exchange.gate is not gate or wallet is None or gate.after_fill_guard is None:
@@ -236,11 +277,14 @@ def execute_fixed_entry(gate, exchange, strategy, evidence, inputs, liquidity, r
         raise RiskError('Entry evidence differs from current wallet checkpoint')
     if request_id in gate.s.get('factor_decisions',{}) or request_id in gate.s['requests']:
         raise StateError('Factor entry request already evaluated; reconcile instead of resubmitting')
-    signal_key = digest([type(strategy).__name__,liquidity.pair,stamp(now)])
+    decision_at = now if decision_at is None else aware(decision_at)
+    signal_key = digest([type(strategy).__name__,liquidity.pair,stamp(decision_at)])
     if signal_key in gate.s.get('factor_signal_requests',{}):
         raise StateError('Fixed signal already evaluated under another request identity')
     risk = gate.lifecycle.risk
-    signal,signal_proof = fixed_entry_signal(strategy,liquidity.pair,inputs,now,risk.plan['markets'][risk.market]['pairs'])
+    universe = risk.plan['markets'][risk.market]['pairs']
+    signal,signal_proof = (fixed_entry_signal(strategy,liquidity.pair,inputs,now,universe) if decision_at == now
+        else registered_entry_signal(gate,strategy,liquidity.pair,inputs,decision_at,now,universe))
     p = None; sizing = None
     if signal is not None:
         tag,scale = signal
@@ -253,6 +297,7 @@ def execute_fixed_entry(gate, exchange, strategy, evidence, inputs, liquidity, r
         else:p,sizing = size_entry(wallet.provider,evidence,exchange,wallet.wallets,liquidity,scale,now)
         if p is not None: sizing['native_stake_float'] = _native_stake(p)
     record = primitive(dict(signal=signal_proof,sizing=sizing,account_cursor=evidence.snapshot.cursor,
+                            decision_at=stamp(decision_at),dispatched_at=stamp(now),delay_seconds=(now-decision_at).total_seconds(),
                             state='PREPARED' if p else 'SKIPPED',proposal=None if p is None else asdict(p)))
     gate.s.setdefault('factor_decisions',{})[request_id] = record
     gate.s.setdefault('factor_signal_requests',{})[signal_key] = request_id

@@ -78,7 +78,7 @@ class NativeFactorLoop:
         return dict(state='DISPATCHED_'+kind,target=target,result=cycle['result'])
 
     def dispatch(self,bot,now,*,cancel_exchanges,exit_exchanges,exit_rates,strategy_inputs,reduction_inputs,
-                 entry_exchange=None,entry_inputs=None,entry_liquidity=None,allow_entry=True):
+                 entry_exchange=None,entry_inputs=None,entry_liquidity=None,allow_entry=True,entry_decision_at=None):
         """Use a fresh checked account; never bypass pending native/source effects.
 
 A new observation is mandatory after a transport step. Callers retain explicit
@@ -123,6 +123,7 @@ GET/cancel transport responsibilities and supply each actual captured response.
         reduction_proof=None if urgent or reduction_inputs is None else dict(source_id=reduction_inputs.source_id,timing=reduction_inputs.timing,
             hourly={p:_frame_evidence(_closed(frame,60,now)) for p,frame in reduction_inputs.hourly.items()})
         signature=digest(dict(checkpoint=checkpoint,strategy=type(bot.strategy).__name__,at=stamp(now),policy=POLICY,allow_entry=allow_entry,
+            entry_decision_at=None if entry_decision_at is None else stamp(entry_decision_at),
             strategy_inputs=input_proof,reductions=reduction_proof,exit_rates={} if urgent else {p:asdict(r) for p,r in exit_rates.items()}))
         if cycle is None:
             cycle=dict(state='EVALUATING',signature=signature,at=stamp(now),cursor=cursor,checked_positions=[])
@@ -183,4 +184,4 @@ GET/cancel transport responsibilities and supply each actual captured response.
         if entry_exchange is None or entry_inputs is None or entry_liquidity is None:
             raise RiskError('Entry phase needs explicit fixed factor inputs, liquidity and local transport')
         return self._attempt(cycle,'ENTRY',type(bot.strategy).__name__,lambda:self.runtime.entry_step(
-            bot.strategy,entry_inputs,entry_liquidity,entry_exchange,now))
+            bot.strategy,entry_inputs,entry_liquidity,entry_exchange,now,decision_at=entry_decision_at))

@@ -1,0 +1,41 @@
+/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/AverageStrategy.py:9: FutureWarning: 'freqtrade.vendor.qtpylib.indicators' is deprecated and will be removed in a future release. Import from technical instead - either the module (`from technical import qtpylib`) or a single function (`from technical.qtpylib import crossed_above`).
+  import freqtrade.vendor.qtpylib.indicators as qtpylib
+test_changed_signal_prefix_cannot_replace_the_registered_boundary (test_native_delayed_decisions.DelayedDecisionTests.test_changed_signal_prefix_cannot_replace_the_registered_boundary) ... ok
+test_completed_startup_reinitialization_retains_original_pending_schedule (test_native_delayed_decisions.DelayedDecisionTests.test_completed_startup_reinitialization_retains_original_pending_schedule) ... ok
+test_delayed_entry_sizes_against_current_mark_and_execution_ask (test_native_delayed_decisions.DelayedDecisionTests.test_delayed_entry_sizes_against_current_mark_and_execution_ask) ... ok
+test_f1_three_entries_resume_one_registered_signal_set_after_real_time_feedback (test_native_delayed_decisions.DelayedDecisionTests.test_f1_three_entries_resume_one_registered_signal_set_after_real_time_feedback) ... ERROR
+test_f2_boundary_targets_survive_priority_stop_before_other_pair_reduction (test_native_delayed_decisions.DelayedDecisionTests.test_f2_boundary_targets_survive_priority_stop_before_other_pair_reduction) ... ok
+test_f2_entries_resume_original_ema_and_scale_without_retimestamping (test_native_delayed_decisions.DelayedDecisionTests.test_f2_entries_resume_original_ema_and_scale_without_retimestamping) ... ok
+test_late_first_observation_does_not_backfill_boundary_signal (test_native_delayed_decisions.DelayedDecisionTests.test_late_first_observation_does_not_backfill_boundary_signal) ... ok
+test_old_signal_expires_at_next_execution_bar_without_new_orders (test_native_delayed_decisions.DelayedDecisionTests.test_old_signal_expires_at_next_execution_bar_without_new_orders) ... ok
+test_original_signal_never_reuses_stale_liquidity_permission (test_native_delayed_decisions.DelayedDecisionTests.test_original_signal_never_reuses_stale_liquidity_permission) ... ok
+
+======================================================================
+ERROR: test_f1_three_entries_resume_one_registered_signal_set_after_real_time_feedback (test_native_delayed_decisions.DelayedDecisionTests.test_f1_three_entries_resume_one_registered_signal_set_after_real_time_feedback)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_delayed_decisions.py", line 101, in test_f1_three_entries_resume_one_registered_signal_set_after_real_time_feedback
+    self.delayed('F1Momentum168Native',3)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_delayed_decisions.py", line 79, in delayed
+    self.feedback(c,now,i+1)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/test_native_delayed_decisions.py", line 70, in feedback
+    c.driver.observe('delayed-feedback-'+str(cursor),e,receipt,quotes,reports,(),c.bot,now,
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_research_driver.py", line 79, in observe
+    result = self.loop.observe(batch_id, evidence, receipt, quotes, reports, events, bot, now,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_loop.py", line 43, in observe
+    return self.runtime.observe_account(batch_id,evidence,receipt,quotes,reports,events,bot,now,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_factor_runtime.py", line 207, in observe_account
+    checked,audit=self.provider.checkpoint(evidence,quote_receipts,now,complete_sequence=complete_sequence,
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_account.py", line 309, in checkpoint
+    self.bridge.validate(result, now)
+  File "/Users/chrise/GitHub/freqtrade/research/crypto/native_factors_20261106/sources/native_snapshot.py", line 101, in validate
+    raise RiskError("Order creation/receipt chronology mismatch")
+rd1.RiskError: Order creation/receipt chronology mismatch
+
+----------------------------------------------------------------------
+Ran 9 tests in 26.820s
+
+FAILED (errors=1)

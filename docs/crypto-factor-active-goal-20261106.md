@@ -1,6 +1,8 @@
 # 因子研究目标与当前状态
 
-当前机器可读入口：[current_status_v22.json](../research/crypto/native_factors_20261106/current_status_v22.json)。用户已明确“允许自研因子”，当前接续为官方 Freqtrade 框架下的固定 F1/F2 原生接入。工程说明与真实数据覆盖见 [自研因子接入](../research/crypto/native_factors_20261106/README.md)。262 项工程检查通过、152 份真实小时文件已检查；F1/F2 的配对收益实验仍为 0，整个持续目标未完成。
+当前机器可读入口：[current_status_v23.json](../research/crypto/native_factors_20261106/current_status_v23.json)。用户已明确“允许自研因子”，当前接续为官方 Freqtrade 框架下的固定 F1/F2 原生接入。工程说明与真实数据覆盖见 [自研因子接入](../research/crypto/native_factors_20261106/README.md)。271 项工程检查通过、152 份真实小时文件已检查；F1/F2 的配对收益实验仍为 0，整个持续目标未完成。
+
+边界信号登记现可在同一根执行 5m 内等待新的同步完整账户后续接，保留原决策时间、当前派单时间与同一请求身份；F2 日目标在优先止损前登记，避免另一持仓因回执迟到漏调。新增 9 项检查，两次完整回归均为 271 项通过。不同账户接收／派单时刻的独立刷新、未知提交恢复及其余风险路径仍待完成，收益账户仍为 0。详见 [延迟续接证据](../research/crypto/native_factors_20261106/delayed_verification.json)。
 
 注册数据提供器现已统一驱动入场、退出和减仓；F2 双合约持仓的资金费、次日日减仓、单笔止损／冷却及另一笔未平仓净值通过完整合成链路验证。新增 9 项检查，联合回归 262 项通过；这些是账本与执行工程证据，收益账户仍为 0。延迟决策、未知提交绑定、数量型风险路径及平仓后资金费修正仍待完成。详见 [数据驱动证据](../research/crypto/native_factors_20261106/driver_verification.json)。
 

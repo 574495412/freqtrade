@@ -196,6 +196,42 @@ class NativeRiskExit:
             raise RiskError("Exit receipt status, quantities or freshness invalid")
         return envelope
 
+    def register_daily_targets(self, strategy, evidence, inputs, now):
+        """Capture all eligible F2 targets before an earlier ordinary exit wins.
+
+An actual 00:05 complete account is required. This never backfills a missed
+decision, allocates around pending orders or submits a reduction by itself.
+"""
+        now=aware(now)
+        with self._mutex:
+            self._ready(now);self.gate.require_account_batch_clear()
+            self.gate.require_research_driver(now,'dispatch')
+            self.wallet.require_entry_clear(now)
+            if evidence != self.wallet._checked_evidence:
+                raise RiskError('Daily registration needs the current checked account')
+            if (type(strategy).__name__!='F2Volatility24Native'
+                    or (now.hour,now.minute,now.second,now.microsecond)!=(0,5,0,0)
+                    or evidence.snapshot.orders or not evidence.snapshot.positions):
+                return None
+            from native_position_targets import build_position_targets, PositionReductionInputs
+            from native_strategy_exits import _closed, _frame_evidence
+            if type(inputs) is not PositionReductionInputs:
+                raise RiskError('Daily registration needs explicit factor inputs')
+            key=digest([type(strategy).__name__,stamp(now),evidence.snapshot.cursor])
+            signature=digest(dict(evidence=asdict(evidence),source_id=inputs.source_id,timing=inputs.timing,
+                hourly={p:_frame_evidence(_closed(f,60,now)) for p,f in inputs.hourly.items()}))
+            records=self.s.setdefault('daily_target_registrations',{})
+            if key in records:
+                if records[key]['signature']!=signature:raise StateError('Daily target registration input changed')
+                return copy.deepcopy(records[key])
+            _,daily,proof=build_position_targets(self.provider,evidence,strategy,inputs,now,
+                self.s.get('daily_position_targets',{}))
+            self.s.setdefault('daily_position_targets',{}).update(daily)
+            record=dict(at=stamp(now),account_cursor=evidence.snapshot.cursor,signature=signature,
+                created_keys=sorted(daily),proof=proof)
+            records[key]=record;self._persist()
+            return copy.deepcopy(record)
+
     def dispatch(self,trade,evidence,exchange,bot,now,*,limit,strategy_inputs=None,reduction_inputs=None):
         with self._mutex:
             self._ready(now); self.gate.require_account_batch_clear(); self.wallet.require_entry_clear(now)

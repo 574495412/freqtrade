@@ -11,7 +11,7 @@ import json
 from freqtrade.persistence import Trade
 from native_after_fill import OfflineProtectionExchange
 from native_evidence import CapturedOrder, decimal_text
-from native_factor_entries import execute_fixed_entry, fixed_entry_signal
+from native_factor_entries import execute_fixed_entry, fixed_entry_signal, registered_entry_signal, entry_boundary
 from native_exits import NativeRiskExit
 from native_cancellations import NativeCancellation
 from native_snapshot import EPS
@@ -253,7 +253,29 @@ Reports cover ALL unresolved bound initial requests, even unchanged open orders.
                 raise RiskError('Native funding total differs after source synchronization')
             record['state']='NATIVE_APPLIED';self.gate._persist()
 
-    def entry_step(self, strategy, inputs, liquidity, exchange, now):
+    def register_entry_schedule(self, strategy, inputs, now):
+        """Persist all signals at the real boundary before any priority dispatch."""
+        now=aware(now);self._ready(now);self.gate.require_account_batch_clear()
+        self.gate.require_research_driver(now,'dispatch')
+        self.gate.require_research_startup(now)
+        if entry_boundary(strategy,now)!=now:
+            raise RiskError('New signal schedules require the exact frozen boundary')
+        if set(inputs)!=set(self.universe):raise RiskError('Entry schedule requires the full frozen input universe')
+        key=digest([type(strategy).__name__,stamp(now)])
+        signals={}
+        for pair in self.universe:
+            signal,proof=fixed_entry_signal(strategy,pair,inputs[pair],now,self.universe)
+            signals[pair]=dict(signal=None if signal is None else primitive(signal),proof=proof)
+        schedule=self.gate.s.get('factor_schedules',{}).get(key)
+        if schedule is None:
+            schedule=dict(at=stamp(now),strategy=type(strategy).__name__,signals=signals,
+                signals_sha256=digest(signals),requests={},skipped=[])
+            self.gate.s.setdefault('factor_schedules',{})[key]=schedule;self.gate._persist()
+        elif schedule['signals']!=signals or schedule.get('signals_sha256')!=digest(signals):
+            raise StateError('Frozen same-bar signal inputs changed')
+        return key,schedule
+
+    def entry_step(self, strategy, inputs, liquidity, exchange, now, *, decision_at=None):
         """At most one native submission, then require a new whole-account batch.
 
 The full signal set is frozen before sizing the first pair. Pair processing uses
@@ -264,16 +286,17 @@ the original universe order; source-map insertion order cannot allocate capital.
         self.gate.require_research_startup(now)
         self.wallet.require_entry_clear(now);self.guard.require_entry_clear()
         if set(inputs)!=set(self.universe):raise RiskError('Entry schedule requires the full frozen input universe')
-        key=digest([type(strategy).__name__,stamp(now)])
-        signals={}
-        for pair in self.universe:
-            signal,proof=fixed_entry_signal(strategy,pair,inputs[pair],now,self.universe)
-            signals[pair]=dict(signal=None if signal is None else primitive(signal),proof=proof)
-        schedule=self.gate.s.get('factor_schedules',{}).get(key)
-        if schedule is None:
-            schedule=dict(at=stamp(now),strategy=type(strategy).__name__,signals=signals,requests={},skipped=[])
-            self.gate.s.setdefault('factor_schedules',{})[key]=schedule;self.gate._persist()
-        elif schedule['signals']!=signals:raise StateError('Frozen same-bar signal inputs changed')
+        decision_at=now if decision_at is None else aware(decision_at)
+        if decision_at==now:
+            if entry_boundary(strategy,now)!=now:
+                return dict(state='SIGNALS_EXHAUSTED',reason='not_fixed_entry_boundary',schedule_key=None)
+            key,schedule=self.register_entry_schedule(strategy,inputs,now)
+        else:
+            key=digest([type(strategy).__name__,stamp(decision_at)])
+            for pair in self.universe:
+                registered_entry_signal(self.gate,strategy,pair,inputs[pair],decision_at,now,self.universe)
+            schedule=self.gate.s['factor_schedules'][key]
+        signals=schedule['signals']
         # Unknown/open-but-unobserved submission cannot be bypassed by selecting
         # a different pair. Every observed-open reservation must share this NAV.
         for rid,item in self.gate.lifecycle.s['requests'].items():
@@ -296,6 +319,7 @@ the original universe order; source-map insertion order cannot allocate capital.
             rid=schedule['requests'].get(pair,'factor-'+digest([key,pair])[:28])
             if pair not in schedule['requests']:
                 schedule['requests'][pair]=rid;self.gate._persist()
-            result=execute_fixed_entry(self.gate,exchange,strategy,self.wallet._checked_evidence,inputs[pair],liquidity[pair],rid,now)
+            result=execute_fixed_entry(self.gate,exchange,strategy,self.wallet._checked_evidence,inputs[pair],liquidity[pair],rid,now,
+                decision_at=decision_at)
             return dict(state='ENTRY_STEP',pair=pair,request_id=rid,result=result)
         return dict(state='SIGNALS_EXHAUSTED',schedule_key=key)

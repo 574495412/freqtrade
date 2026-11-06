@@ -7,7 +7,7 @@ import copy
 from contextlib import contextmanager
 from contextvars import ContextVar
 
-from native_factor_entries import EntryInputs
+from native_factor_entries import EntryInputs, entry_boundary
 from native_factor_loop import NativeFactorLoop
 from native_position_targets import PositionReductionInputs
 from native_research_startup import NativeResearchStartup
@@ -37,7 +37,7 @@ class NativeResearchDriver:
         self.startup, self.loop = startup, loop
         self.gate, self.wallet = loop.gate, loop.wallet
         self.closed = False
-        self.binding = dict(policy='registered_native_data_explicit_events_v1',
+        self.binding = dict(policy='registered_boundary_same_execution_bar_v2',
             startup=copy.deepcopy(startup.binding), loop=copy.deepcopy(self.gate.s['factor_loop_binding']))
         old = self.gate.s.get('required_research_driver')
         if old not in (None, self.binding):
@@ -126,6 +126,8 @@ class NativeResearchDriver:
             self.startup.ready(now)
             decision = self.loop.risk.evaluate(checked.snapshot, now)
             urgent = any(a['kind'] in ('CANCEL_ENTRY', 'EXIT_POSITION') for a in decision.actions)
+            entry_decision_at = None
+            entry_timing = 'entry_not_requested' if not allow_entry else 'no_active_boundary_registration'
             if urgent:
                 entries, exits, reductions = None, {}, None
                 proof = dict(source_id=self.startup.dp.source_id, data_hash=self.startup.binding['data_hash'],
@@ -136,7 +138,21 @@ class NativeResearchDriver:
                 # receipt still covers the entire registered universe once.
                 held = {p.pair for p in checked.snapshot.positions}
                 exits = {p: value for p, value in exits.items() if p in held}
-            record = dict(at=stamp(now), cursor=checked.snapshot.cursor, binding=self.binding, data=proof)
+                if reductions is not None:
+                    self.loop.exits.register_daily_targets(bot.strategy,checked,reductions,now)
+                if allow_entry and not proof['errors']:
+                    boundary = entry_boundary(bot.strategy,now)
+                    if boundary == now:
+                        self.loop.runtime.register_entry_schedule(bot.strategy,entries,now)
+                    if boundary is not None:
+                        schedule_key = digest([type(bot.strategy).__name__,stamp(boundary)])
+                        if schedule_key in self.gate.s.get('factor_schedules',{}):
+                            entry_decision_at = boundary
+                            entry_timing = 'boundary_registered' if now == boundary else 'same_execution_bar_continuation'
+            if allow_entry and entry_decision_at is None:
+                args['allow_entry'] = False
+            record = dict(at=stamp(now), cursor=checked.snapshot.cursor, binding=self.binding, data=proof,
+                entry_decision_at=None if entry_decision_at is None else stamp(entry_decision_at))
             frames = self.gate.s.setdefault('research_driver_frames', {})
             if key in frames and digest(frames[key]) != digest(record):
                 raise StateError('Research driver data changed within the same account cursor')
@@ -148,7 +164,8 @@ class NativeResearchDriver:
                 # Native stop/ROI can still use independent price evidence.
                 args['allow_entry'] = False
             result = self.loop.dispatch(bot, now, strategy_inputs=exits, reduction_inputs=reductions,
-                entry_inputs=entries, **args)
+                entry_inputs=entries, entry_decision_at=entry_decision_at, **args)
+            result = dict(result, entry_timing=entry_timing)
             if proof['errors']:
                 result = dict(result, data_errors=copy.deepcopy(proof['errors']))
                 if result['state'] == 'IDLE':
