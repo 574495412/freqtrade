@@ -1,0 +1,29 @@
+{
+  "observed_at_utc": "2026-11-06T12:47:38.257043+00:00",
+  "checks": {
+    "tested_sources": {
+      "files": 4,
+      "mismatches": []
+    },
+    "frozen_sources": {
+      "files": 46,
+      "mismatches": []
+    },
+    "financial_inputs": {
+      "files": 145,
+      "mismatches": []
+    }
+  },
+  "tests": {
+    "command": ".venv-paper/bin/python -B -m unittest discover -s research/crypto/native_quantity_exit_20261106 -p test_quantity*.py -v",
+    "count": 19,
+    "outcome": "passed",
+    "log_sha256": "b21c8bc31ad8ae62aa085759f177fa5f7e73ead543affc21fdcdbddbcde4a65b",
+    "source_manifest_sha256": "01f0d14cc31d5a807b827c152fb71a282fa974e0ae101b12fb335b8a52bdce72"
+  },
+  "scope": "synthetic native quantity exit integration, not financial or production validation",
+  "new_financial_accounts": 0,
+  "profit_improvement_established": false,
+  "production_eligible": false,
+  "original_goal_complete": false
+}
