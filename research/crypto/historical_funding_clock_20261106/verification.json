@@ -1,0 +1,30 @@
+{
+  "observed_at_utc": "2026-11-06T14:17:57.384672+00:00",
+  "receipt_files_verified": 9,
+  "funding_identities_verified": 6,
+  "funding_observations": 12,
+  "independent_bbo_records_verified": 11316,
+  "exact_depth_overlap_messages": 4245,
+  "complete_20bps_observations": {
+    "BTCUSDT": 0,
+    "SOLUSDT": 12057
+  },
+  "frozen_financial_inputs_verified": 145,
+  "non_first_day_request_status": 401,
+  "result_hashes": {
+    "capture_receipts.json": "726dab036db8de13d9ddc4a485480012e330d7dbaaf5f00f1d8f38f54922670c",
+    "audit_result.json": "8c845af251ce33d4c0f9d5230e6323359274722b5d40509cb13511312771cb12",
+    "anchor_result.json": "0be117542abe472b3915e4a6235b005733f1c0a75261697dc0238c6a60d9d26c"
+  },
+  "scope": "first-day public sample with distinct settlement and collector clocks and actual snapshot replay",
+  "missing": [
+    "fixed full L/S and warm-up coverage",
+    "historical rule timeline",
+    "origin publication and strategy receipt times",
+    "private fill and funding chronology",
+    "full RD1 paired economic qualification"
+  ],
+  "economic_admission": false,
+  "new_financial_accounts": 0,
+  "goal_complete": false
+}

@@ -1,0 +1,89 @@
+{
+  "registration_sha256": "27222ccabd5fb0508028bcb6c1aa345c9eb5766ef78d616a87c6106a45f8f355",
+  "receipt": {
+    "id": "funding-predecessor-0000-0005",
+    "day": "2026-11-01",
+    "offset_minutes": 0,
+    "channels": [
+      "depth",
+      "depthSnapshot"
+    ],
+    "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2026-11-01&offset=0&filters=%5B%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%5D&sliceSize=6",
+    "slice_minutes": 6,
+    "started_at_utc": "2026-11-06T14:16:17.405250+00:00",
+    "http_status": 200,
+    "headers": {
+      "Content-Type": "application/json",
+      "Content-Length": "2291401",
+      "Content-Encoding": "gzip"
+    },
+    "response_state": "body_complete",
+    "path": "user_data/crypto_quant/rd_program_20261105_v1/funding_clock_probe_v001/funding-predecessor-0000-0005.raw",
+    "bytes": 2291401,
+    "sha256": "0b9a158326b80077b213913cc62239a910bccd1cbb94aa4af6df4c99f46c40ae",
+    "finished_at_utc": "2026-11-06T14:16:19.855533+00:00"
+  },
+  "financial_accounts": 0,
+  "economic_admission": false,
+  "replay": {
+    "stream_counts": {
+      "btcusdt@depth@0ms": 13451,
+      "btcusdt@depthSnapshot": 1,
+      "solusdt@depth@0ms": 12061,
+      "solusdt@depthSnapshot": 1
+    },
+    "symbols": {
+      "BTCUSDT": {
+        "snapshots": 1,
+        "valid_book_observations": 13451,
+        "complete_20bps_observations": 0,
+        "complete_20bps_before_funding_poll": 0,
+        "errors": [],
+        "first_snapshot_received_at": "2026-11-01T00:00:00.0194303Z",
+        "latest_before_funding_poll": {
+          "last_update_id": 11980751439396,
+          "bid": "77493.40",
+          "ask": "77493.50",
+          "bbo_within_known_snapshot_region": true,
+          "spread_bps": "0.01290431642932402674032450485",
+          "visible_bid_quantity_within20bps": "603.250",
+          "visible_ask_quantity_within20bps": "640.194",
+          "bid_band_complete": false,
+          "ask_band_complete": true,
+          "depth_values_are_lower_bounds_when_band_incomplete": true,
+          "band_anchor": "bid*(1-0.002) and ask*(1+0.002); diagnostic convention only",
+          "collector_received_at": "2026-11-01T00:05:00.0066349Z",
+          "source_line": 21270
+        },
+        "unbridged_updates_at_end": 0
+      },
+      "SOLUSDT": {
+        "snapshots": 1,
+        "valid_book_observations": 12057,
+        "complete_20bps_observations": 12057,
+        "complete_20bps_before_funding_poll": 10056,
+        "errors": [],
+        "first_snapshot_received_at": "2026-11-01T00:00:00.1301845Z",
+        "latest_before_funding_poll": {
+          "last_update_id": 11980751440778,
+          "bid": "95.4400",
+          "ask": "95.4500",
+          "bbo_within_known_snapshot_region": true,
+          "spread_bps": "1.047723820001047723820001048",
+          "visible_bid_quantity_within20bps": "89872.77",
+          "visible_ask_quantity_within20bps": "54843.74",
+          "bid_band_complete": true,
+          "ask_band_complete": true,
+          "depth_values_are_lower_bounds_when_band_incomplete": true,
+          "band_anchor": "bid*(1-0.002) and ask*(1+0.002); diagnostic convention only",
+          "collector_received_at": "2026-11-01T00:05:00.0156391Z",
+          "source_line": 21271
+        },
+        "unbridged_updates_at_end": 0
+      }
+    },
+    "overlapping_messages": 4245,
+    "overlap_exactly_matches_prior_capture": true,
+    "prior_capture_overlap_rows": 4245
+  }
+}

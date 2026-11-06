@@ -1,0 +1,23 @@
+{
+  "registered_at_utc": "2026-11-06T14:16:17.108209+00:00",
+  "request": {
+    "id": "funding-predecessor-0000-0005",
+    "day": "2026-11-01",
+    "offset_minutes": 0,
+    "channels": [
+      "depth",
+      "depthSnapshot"
+    ],
+    "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2026-11-01&offset=0&filters=%5B%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%5D&sliceSize=6",
+    "slice_minutes": 6
+  },
+  "maximum_requests": 1,
+  "retries": 0,
+  "input_hashes": {
+    "research/crypto/historical_funding_clock_20261106/anchor.py": "0e3f3eeaa362fa53f8a0709a12c6b457a2f7592a4b4b6ada2c494177a0d8164c",
+    "research/crypto/historical_funding_clock_20261106/audit_result.json": "8c845af251ce33d4c0f9d5230e6323359274722b5d40509cb13511312771cb12",
+    "research/crypto/historical_funding_clock_20261106/capture_receipts.json": "726dab036db8de13d9ddc4a485480012e330d7dbaaf5f00f1d8f38f54922670c"
+  },
+  "scope": "Search for a captured snapshot before the observed funding poll, preserving all unbridged updates",
+  "economic_admission": false
+}

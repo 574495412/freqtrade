@@ -1,0 +1,105 @@
+{
+  "registered_at_utc": "2026-11-06T14:10:02.974527+00:00",
+  "target_symbols": [
+    "BTCUSDT",
+    "SOLUSDT"
+  ],
+  "target_day": "2026-11-01",
+  "input_hashes": {
+    "research/crypto/historical_funding_clock_20261106/capture.py": "6887e3e820d041a884319d3b7f2ca1d125ddd6e7890f102e82d82b92d70d32b3",
+    "research/crypto/rd_program_20261105/data_extension/probe_event_sources.py": "50aa06752eafc3009316726e1ff7b8b66401ec566b147f2f95324e789b7f3e1d",
+    "research/crypto/rd_program_20261105/data_extension/book_replay.py": "521e9be9329efdedc8615e3af8c72cbc4a4756aeb1b285b336ba92156c7326c5",
+    "research/crypto/factor_cost_futures_20261106/plan.json": "a23faa12f1262083412df8af1ac750e84d40688587bd0bb1a8694e67bd0a7693",
+    "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/data-receipts.json": "609aa4bbd7f6cd842deddbe5e89a81f6659322d706f091edd4d669de94204f6e",
+    "user_data/crypto_quant/nfi40_post_source_inputs_20261105_v001/funding_api/BTCUSDT.json": "9f11f933de77fba6ac0b5f5b92aae2d7771375f40f0f61a1c192ce857ef8fbe6",
+    "user_data/crypto_quant/nfi40_post_source_inputs_20261105_v001/funding_api/SOLUSDT.json": "5c6ba5cad725a2de180dc1c064c387b0c340cec8aba987b0c3f51d8599720d39",
+    "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/BTC_USDT_USDT-1h-funding_rate.feather": "81b80dfa3e7f99182e2628c1989ce5e51afca38d13c3f038dfb4966b10dc5be5",
+    "user_data/crypto_quant/nfi40_post_source_data_20261105_v002/candles/futures/SOL_USDT_USDT-1h-funding_rate.feather": "aff3eb3ff75febab1ece835390d9f0551c7dfb2ea62c563e72eb0dbdf7408242"
+  },
+  "source_sample_cases": [
+    {
+      "id": "2026-11-01_0005_fundingRate",
+      "day": "2026-11-01",
+      "offset_minutes": 5,
+      "channels": [
+        "fundingRate"
+      ],
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2026-11-01&offset=5&filters=%5B%7B%22channel%22%3A%22fundingRate%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%5D"
+    },
+    {
+      "id": "2026-11-01_0065_fundingRate",
+      "day": "2026-11-01",
+      "offset_minutes": 65,
+      "channels": [
+        "fundingRate"
+      ],
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2026-11-01&offset=65&filters=%5B%7B%22channel%22%3A%22fundingRate%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%5D"
+    },
+    {
+      "id": "2026-11-01_0485_fundingRate",
+      "day": "2026-11-01",
+      "offset_minutes": 485,
+      "channels": [
+        "fundingRate"
+      ],
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2026-11-01&offset=485&filters=%5B%7B%22channel%22%3A%22fundingRate%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%5D"
+    },
+    {
+      "id": "2026-11-01_0545_fundingRate",
+      "day": "2026-11-01",
+      "offset_minutes": 545,
+      "channels": [
+        "fundingRate"
+      ],
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2026-11-01&offset=545&filters=%5B%7B%22channel%22%3A%22fundingRate%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%5D"
+    },
+    {
+      "id": "2026-11-01_0965_fundingRate",
+      "day": "2026-11-01",
+      "offset_minutes": 965,
+      "channels": [
+        "fundingRate"
+      ],
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2026-11-01&offset=965&filters=%5B%7B%22channel%22%3A%22fundingRate%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%5D"
+    },
+    {
+      "id": "2026-11-01_1025_fundingRate",
+      "day": "2026-11-01",
+      "offset_minutes": 1025,
+      "channels": [
+        "fundingRate"
+      ],
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2026-11-01&offset=1025&filters=%5B%7B%22channel%22%3A%22fundingRate%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%5D"
+    },
+    {
+      "id": "2026-11-01_0005_depth",
+      "day": "2026-11-01",
+      "offset_minutes": 5,
+      "channels": [
+        "depth",
+        "depthSnapshot",
+        "bookTicker",
+        "trade",
+        "markPrice"
+      ],
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2026-11-01&offset=5&filters=%5B%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%2C%7B%22channel%22%3A%22bookTicker%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%2C%7B%22channel%22%3A%22trade%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%2C%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%5D"
+    },
+    {
+      "id": "2026-11-02_0005_fundingRate",
+      "day": "2026-11-02",
+      "offset_minutes": 5,
+      "channels": [
+        "fundingRate"
+      ],
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2026-11-02&offset=5&filters=%5B%7B%22channel%22%3A%22fundingRate%22%2C%22symbols%22%3A%5B%22btcusdt%22%2C%22solusdt%22%5D%7D%5D"
+    }
+  ],
+  "maximum_requests": 8,
+  "retries": 0,
+  "workers": 2,
+  "timeout_seconds": 30,
+  "raw_cap": 8388608,
+  "expanded_cap": 33554432,
+  "scope": "source arrival and aggregate funding-rate audit; no private funding or economic qualification",
+  "financial_accounts": 0
+}
