@@ -1,0 +1,56 @@
+{
+  "registered_at_utc": "2026-11-06T01:49:43.553866+00:00",
+  "source_sha256": "50aa06752eafc3009316726e1ff7b8b66401ec566b147f2f95324e789b7f3e1d",
+  "requests": [
+    {
+      "id": "binance_metadata",
+      "kind": "metadata",
+      "url": "https://api.tardis.dev/v1/exchanges/binance"
+    },
+    {
+      "id": "binance_2025-01-01",
+      "kind": "minute",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance?from=2025-01-01&offset=0&filters=%5B%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22trade%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%5D"
+    },
+    {
+      "id": "binance_2025-01-02",
+      "kind": "minute",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance?from=2025-01-02&offset=0&filters=%5B%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22trade%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%5D"
+    },
+    {
+      "id": "binance-futures_metadata",
+      "kind": "metadata",
+      "url": "https://api.tardis.dev/v1/exchanges/binance-futures"
+    },
+    {
+      "id": "binance-futures_2025-01-01",
+      "kind": "minute",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2025-01-01&offset=0&filters=%5B%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22trade%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%5D"
+    },
+    {
+      "id": "binance-futures_2025-01-02",
+      "kind": "minute",
+      "url": "https://api.tardis.dev/v1/data-feeds/binance-futures?from=2025-01-02&offset=0&filters=%5B%7B%22channel%22%3A%22depth%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22depthSnapshot%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22trade%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%2C%7B%22channel%22%3A%22markPrice%22%2C%22symbols%22%3A%5B%22btcusdt%22%5D%7D%5D"
+    },
+    {
+      "id": "binance_public_bookDepth",
+      "kind": "archive",
+      "url": "https://data.binance.vision/data/futures/um/daily/bookDepth/BTCUSDT/BTCUSDT-bookDepth-2025-01-01.zip"
+    },
+    {
+      "id": "binance_public_bookTicker",
+      "kind": "archive",
+      "url": "https://data.binance.vision/data/futures/um/daily/bookTicker/BTCUSDT/BTCUSDT-bookTicker-2025-01-01.zip"
+    }
+  ],
+  "requests_max_including_conditional_checksums": 10,
+  "workers": 2,
+  "timeout_seconds": 30,
+  "raw_cap_bytes": 8388608,
+  "expanded_cap_bytes": 33554432,
+  "retries": 0,
+  "output_directory": "user_data/crypto_quant/rd_program_20261105_v1/event_source_probe_v001",
+  "financial_runs": 0,
+  "orders_enabled": false,
+  "access": "public unauthenticated requests only; no credential lookup, subscription or purchase"
+}
