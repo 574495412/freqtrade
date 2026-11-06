@@ -1,0 +1,406 @@
+{
+  "registration_sha256": "3e5b6a97c8a892a775df0f466481bcefc8a44dfeac9415a40e76fc00f89363cb",
+  "funding_admission_sha256": "55abc2a4c1d7367c4b310ae0e16971d40d863dbf549e2e511491c3096cc635ed",
+  "accounts": {
+    "2024_RelativeRecovery_8bps": {
+      "case": "RelativeRecovery",
+      "cost_bps": 8,
+      "window": "2024",
+      "net_return": -0.09223491938579909,
+      "annualized_net_return": -0.09205489310606374,
+      "max_drawdown": 0.38956208570939355,
+      "completed": 42,
+      "open_positions": 0,
+      "entry_days": 36,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 71,
+        "partially_filled_entries": 23,
+        "partial_exit_intervals": 1,
+        "max_exit_delay_minutes": 10.0,
+        "requested_entry_notional": 21984.078248549635,
+        "filled_entry_notional": 21366.20530442215,
+        "filled_request_ratio": 0.9718945257953561,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "eccad9282d0890372d85da006fc83a8dca7161b9af5a3528ca356e70854a2be7",
+        "targets.parquet": "35794787b2158df78da275506a62895cf02eebf27944e2ea3a58e6538f60316f",
+        "events.json": "2f163da14a3fd920cc595f8f9f4a71914b664fd66a2efaa2bd18e8add4582b1e",
+        "resume_state.json": "497eb6b49577803f98a4e14df160704772ef54ab96df2d3525f9bc94bf544cb7",
+        "nav.parquet": "0378acc603f703cb2b9fc1b95b1f24e1a25caaf05159e895da0309c3abd296d3",
+        "requests.json": "e9b92ec3059f28e138881b0c81adbda6b2705d2a54fc220d8911bf4b1e8d8c74"
+      }
+    },
+    "2024_RelativeRecovery_15bps": {
+      "case": "RelativeRecovery",
+      "cost_bps": 15,
+      "window": "2024",
+      "net_return": -0.11725045067595996,
+      "annualized_net_return": -0.1170248255131604,
+      "max_drawdown": 0.39282044597364896,
+      "completed": 42,
+      "open_positions": 0,
+      "entry_days": 36,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 71,
+        "partially_filled_entries": 27,
+        "partial_exit_intervals": 1,
+        "max_exit_delay_minutes": 10.0,
+        "requested_entry_notional": 21656.89024863336,
+        "filled_entry_notional": 21050.182411471746,
+        "filled_request_ratio": 0.9719854591219577,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "f1cb995715f186af5cd4d8415dab67adb7626363e12f598c7a0b736cf582f077",
+        "targets.parquet": "35794787b2158df78da275506a62895cf02eebf27944e2ea3a58e6538f60316f",
+        "events.json": "870744693bb758b47ec6a637fe8b8acb8bc310fc70971579e639031383174e15",
+        "resume_state.json": "b4f72242d51334666ac57f4818a9c2d4f381f3db4fee51f6a03bd6190e4cccfa",
+        "nav.parquet": "3e50c94df2749d2fac0d15ac2aa92b4baacbc21263bde2d9de33fe71968c4a12",
+        "requests.json": "9937563a8490272d1ae3240e932da7ab7436cc9465cb71f89d4816f3f09162fe"
+      }
+    },
+    "2024_AbsoluteRecovery_8bps": {
+      "case": "AbsoluteRecovery",
+      "cost_bps": 8,
+      "window": "2024",
+      "net_return": -0.1770886658063564,
+      "annualized_net_return": -0.17675993001793722,
+      "max_drawdown": 0.35513334104301486,
+      "completed": 36,
+      "open_positions": 0,
+      "entry_days": 27,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 51,
+        "partially_filled_entries": 16,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 16724.462090837587,
+        "filled_entry_notional": 16695.955191229823,
+        "filled_request_ratio": 0.9982954967727553,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "77eb9e552a37a8d904edac4f2e17d2c5e5b2fbf4f6a6be542c0fb247d7156d3e",
+        "targets.parquet": "6067df6ad2e42773f37d11fe26b8963e3c1b66503d105bf5abfa65d3ffac1f4b",
+        "events.json": "7467901fbd54ba19a4be0ba6c9ef9e6e4d8ddd9fbd18dd17de3ca317b5454000",
+        "resume_state.json": "49d9c927d18a4d78b232e594d7881193c07e8accf38ac12d5b7ddcbd5835df47",
+        "nav.parquet": "c577b1fbf6f7fdce59343646c0b3170587a0635f522ab91d8644b12b0ac8288b",
+        "requests.json": "fe327255eb0934b6b3c880c1c401d9fa3c20d39201c47506984cffbcfd92d40e"
+      }
+    },
+    "2024_AbsoluteRecovery_15bps": {
+      "case": "AbsoluteRecovery",
+      "cost_bps": 15,
+      "window": "2024",
+      "net_return": -0.19655766761253846,
+      "annualized_net_return": -0.19619727277496013,
+      "max_drawdown": 0.3562762817494308,
+      "completed": 36,
+      "open_positions": 0,
+      "entry_days": 27,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 52,
+        "partially_filled_entries": 19,
+        "partial_exit_intervals": 0,
+        "max_exit_delay_minutes": 5.0,
+        "requested_entry_notional": 16523.101555882342,
+        "filled_entry_notional": 16492.39404524503,
+        "filled_request_ratio": 0.9981415407674245,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "1942b125a1ccf5531cb66aecc3fb74056e4ec0b610d05f4c6016de8ae6c39d1b",
+        "targets.parquet": "6067df6ad2e42773f37d11fe26b8963e3c1b66503d105bf5abfa65d3ffac1f4b",
+        "events.json": "aac100bccc11f187f067b825317fc0ad3456fd82dfc1b86232fc03a8e1a56702",
+        "resume_state.json": "fdaf80796de6c8d48b5766da51e3dd158a1536121f4858943ca59e448f299a02",
+        "nav.parquet": "23d9c5b3fdb6a5b94b218f4e3c121b288504073b037a97b498412e151723a42e",
+        "requests.json": "16b3012a13a71cead591cb3e71b3b962e556a5d7d7e8f3cc60529f3d78921d35"
+      }
+    },
+    "2024_ResidualDrop_8bps": {
+      "case": "ResidualDrop",
+      "cost_bps": 8,
+      "window": "2024",
+      "net_return": -0.10704144640266788,
+      "annualized_net_return": -0.10683425761084131,
+      "max_drawdown": 0.3732014013007129,
+      "completed": 41,
+      "open_positions": 0,
+      "entry_days": 36,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 60,
+        "partially_filled_entries": 18,
+        "partial_exit_intervals": 4,
+        "max_exit_delay_minutes": 20.0,
+        "requested_entry_notional": 22624.80951269658,
+        "filled_entry_notional": 21543.459129341947,
+        "filled_request_ratio": 0.9522051055171181,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "3c5480a81759f067f97d61a69d851af172ccf19b279d684fd0d190bd521f95af",
+        "targets.parquet": "8aa026e0fdcdf9955b6dc670b90c87168cb32ca28846d8c635a30cbc362c7f35",
+        "events.json": "f1b7dc07e822ffe2935bfb2c7af153e09daadd01b2b0b9755bdf328492454138",
+        "resume_state.json": "fe00e0c03d933ac879f749fb1d4ef6e2ee21818a14aeadd6a6c56a94437dbb3b",
+        "nav.parquet": "6fbf80f51e00a0b7cbc359a0da6d57b4ba09694a764f5ea6d35683968f66ff80",
+        "requests.json": "a62813023aa53810b7b762db92ba3dd3a7e8783fd1d940ab4cc1704414913229"
+      }
+    },
+    "2024_ResidualDrop_15bps": {
+      "case": "ResidualDrop",
+      "cost_bps": 15,
+      "window": "2024",
+      "net_return": -0.1311017765279413,
+      "annualized_net_return": -0.13085152401862865,
+      "max_drawdown": 0.3783737339334575,
+      "completed": 41,
+      "open_positions": 0,
+      "entry_days": 36,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 59,
+        "partially_filled_entries": 26,
+        "partial_exit_intervals": 4,
+        "max_exit_delay_minutes": 20.0,
+        "requested_entry_notional": 22308.233885770573,
+        "filled_entry_notional": 21257.251600257394,
+        "filled_request_ratio": 0.9528881447588035,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "96c130a26417732d0f8d5e1e1aa38929931fed5828f93dcbc674be0cedf3399c",
+        "targets.parquet": "8aa026e0fdcdf9955b6dc670b90c87168cb32ca28846d8c635a30cbc362c7f35",
+        "events.json": "8c5ef8e70d679d8cfae7d6d89db4d15725c849e17ab70cb7cba79f2ae9019e37",
+        "resume_state.json": "a16ec2117ab050a076850bd30908a3e5084e2c24c4c94e3c820097c969649d0c",
+        "nav.parquet": "9015cf08456f01c46c7b33474f883ef88cefea345eed7acb879184b1fc6b6a9e",
+        "requests.json": "15ca6e02e65468ef6f5c3099777768249c5793088c2d95d580b11b4529a63cbe"
+      }
+    },
+    "2025-26_RelativeRecovery_8bps": {
+      "case": "RelativeRecovery",
+      "cost_bps": 8,
+      "window": "2025-26",
+      "net_return": -0.25674028231592394,
+      "annualized_net_return": -0.1632629786643427,
+      "max_drawdown": 0.3504034865414891,
+      "completed": 21,
+      "open_positions": 0,
+      "entry_days": 18,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 31,
+        "partially_filled_entries": 7,
+        "partial_exit_intervals": 10,
+        "max_exit_delay_minutes": 20.0,
+        "requested_entry_notional": 11485.4212357301,
+        "filled_entry_notional": 9013.267435181193,
+        "filled_request_ratio": 0.7847572370390506,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "868e28fe23074547c842486b66675c3693fbd18b8eee36460e6fe7183a6d2fd1",
+        "targets.parquet": "664a8e75a1939a571a997715a216743a70a627e8d88dc72af20866cc789759c3",
+        "events.json": "ff49f9d9e09987b10bb6d6a649bb9d3379cae5183a838ec0473bad78140b9eb1",
+        "resume_state.json": "6eb251fa364395e166496b5139e4122ceb1d0934c52e9f1c873fff200525eae6",
+        "nav.parquet": "e80e9f4a02af8caa2907f1fc385681a71ed6bd0e69a9890d5afcc87f5145bfef",
+        "requests.json": "160cbd0511a18c9becf17c71e21ace73cc4b643a8142e587d7b1b1053474a294"
+      }
+    },
+    "2025-26_RelativeRecovery_15bps": {
+      "case": "RelativeRecovery",
+      "cost_bps": 15,
+      "window": "2025-26",
+      "net_return": -0.26249891791763114,
+      "annualized_net_return": -0.16716355039584352,
+      "max_drawdown": 0.3539954661539265,
+      "completed": 21,
+      "open_positions": 0,
+      "entry_days": 18,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 30,
+        "partially_filled_entries": 7,
+        "partial_exit_intervals": 10,
+        "max_exit_delay_minutes": 20.0,
+        "requested_entry_notional": 11406.343913049319,
+        "filled_entry_notional": 8967.74012027186,
+        "filled_request_ratio": 0.7862063592535029,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "35ab4db2beb99cca0000abaf293dab8bb90c0743f73a1d37ec1c4f819f6e9fce",
+        "targets.parquet": "664a8e75a1939a571a997715a216743a70a627e8d88dc72af20866cc789759c3",
+        "events.json": "b71a5e678cdc47caee3490c56ace8d74f08aa3eea40be06fa68be90eb0decce0",
+        "resume_state.json": "ddd01cf623e16a030dca3dc50f0849333682a780a3c6fee445e57810e6d5c3ee",
+        "nav.parquet": "14f47f1b0c2ed58ea49fec7956642c0d95af88a98491d4d10128f5df5a53556b",
+        "requests.json": "c2c20c929c37bb29a140dd60541f455408b4834634eca599f4272935dcbf25d7"
+      }
+    },
+    "2025-26_AbsoluteRecovery_8bps": {
+      "case": "AbsoluteRecovery",
+      "cost_bps": 8,
+      "window": "2025-26",
+      "net_return": -0.3095004377833509,
+      "annualized_net_return": -0.19946743325614602,
+      "max_drawdown": 0.5165079200864783,
+      "completed": 88,
+      "open_positions": 0,
+      "entry_days": 70,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 134,
+        "partially_filled_entries": 42,
+        "partial_exit_intervals": 18,
+        "max_exit_delay_minutes": 20.0,
+        "requested_entry_notional": 50640.47605145029,
+        "filled_entry_notional": 39362.38802852766,
+        "filled_request_ratio": 0.7772910347157047,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "a7223e8869fabb161e99d8259d578dc4c5ab039a9c62b4b8b701a7505a5fbb7f",
+        "targets.parquet": "ccc54a9ff2fb2384f4acc61f8259a312aaaa25ad06ba22cbdc12608299339626",
+        "events.json": "a18cd62b8608ff1139670f712b0a8b80b4d588c133583eb5c4ce33a09c525410",
+        "resume_state.json": "bbe427cbb9560c706e8d7c49f8db90967690465bab099d7f9546cdb6ae8aad05",
+        "nav.parquet": "97483939e7d45ced1989aceaa6ce328b8d793678ea327a20765cbf82d8b3f3f8",
+        "requests.json": "bac6725a010306e45be20d360a1702bf143a7a0cfc6100bcc853ec01913b8ded"
+      }
+    },
+    "2025-26_AbsoluteRecovery_15bps": {
+      "case": "AbsoluteRecovery",
+      "cost_bps": 15,
+      "window": "2025-26",
+      "net_return": -0.35739701158392545,
+      "annualized_net_return": -0.23330347138542218,
+      "max_drawdown": 0.5393230037576093,
+      "completed": 88,
+      "open_positions": 0,
+      "entry_days": 70,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 133,
+        "partially_filled_entries": 44,
+        "partial_exit_intervals": 18,
+        "max_exit_delay_minutes": 20.0,
+        "requested_entry_notional": 49115.24291363033,
+        "filled_entry_notional": 38435.27845865521,
+        "filled_request_ratio": 0.7825529546141927,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "0d89ba8d41cbd13d6e10f6d5f02ee4c5365e95f1016ef30f90391332302d0a57",
+        "targets.parquet": "ccc54a9ff2fb2384f4acc61f8259a312aaaa25ad06ba22cbdc12608299339626",
+        "events.json": "fcef8e5f8ba1460297953f222c7d05816e60a0fe4e54b612220bd8196a98cb1d",
+        "resume_state.json": "dff6b3387f163e2864f52e58cc3d12aca1d0f510c93c26cfa53ed274af3bd1f1",
+        "nav.parquet": "aa85ac4b0e1ee191b790c3958921a7df3aead91d63d0f27766ba4e0e579a7190",
+        "requests.json": "93d5df9c7a83fa6ba340fb7df7de52e4369663881661bc29130e4f138f388bda"
+      }
+    },
+    "2025-26_ResidualDrop_8bps": {
+      "case": "ResidualDrop",
+      "cost_bps": 8,
+      "window": "2025-26",
+      "net_return": -0.2957410721580701,
+      "annualized_net_return": -0.18992222229363565,
+      "max_drawdown": 0.3508160712602294,
+      "completed": 8,
+      "open_positions": 0,
+      "entry_days": 6,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 12,
+        "partially_filled_entries": 2,
+        "partial_exit_intervals": 1,
+        "max_exit_delay_minutes": 10.0,
+        "requested_entry_notional": 3534.851519462857,
+        "filled_entry_notional": 3525.935241667761,
+        "filled_request_ratio": 0.9974776089615072,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "b71901395d9b18600f608d0255594fee61f4057321d26174248f3580b37e707d",
+        "targets.parquet": "d346febae90d7be76579c84c8074588ca4b5dc43f5d82a0c0d1598eb8a462a67",
+        "events.json": "7d2825de9c1445541075f191158907a8b6ef31dc301b6d987b0e6912c790731c",
+        "resume_state.json": "b512ce3a07ccf1117f52a8d0ff49f6cadbef2fff8ad5240f386c0d9f9ecc294a",
+        "nav.parquet": "26074ca192d06dfe812d8a7d87621418119fb3bfb64bdd952dae1f2dfcc72547",
+        "requests.json": "a72d8b3d58bb19d932e9e782387a7b7bbf1a214e181982d71a98b8d751608842"
+      }
+    },
+    "2025-26_ResidualDrop_15bps": {
+      "case": "ResidualDrop",
+      "cost_bps": 15,
+      "window": "2025-26",
+      "net_return": -0.299392837091788,
+      "annualized_net_return": -0.19244822741211232,
+      "max_drawdown": 0.3533341874516468,
+      "completed": 8,
+      "open_positions": 0,
+      "entry_days": 6,
+      "risk_halted": true,
+      "capacity": {
+        "entry_requests": 12,
+        "partially_filled_entries": 3,
+        "partial_exit_intervals": 1,
+        "max_exit_delay_minutes": 10.0,
+        "requested_entry_notional": 3526.6956516683103,
+        "filled_entry_notional": 3518.354304718543,
+        "filled_request_ratio": 0.9976347981868463,
+        "participation_cap": 0.01,
+        "actual_order_book_verified": false
+      },
+      "hashes": {
+        "trades.json": "609dcd9807c23089f72f4c1478bb9c34ce4319cb7d5fd3e9e67e960e161c067c",
+        "targets.parquet": "d346febae90d7be76579c84c8074588ca4b5dc43f5d82a0c0d1598eb8a462a67",
+        "events.json": "f349bc0baae02dfb56411f12092cd92dce0f058499505ad06de4c0780397f7f8",
+        "resume_state.json": "d4a44258fc2fc3a4c2445667ea06f6668a38ffcdf22e52c543431abd66785a72",
+        "nav.parquet": "36f1e1226dbfac03bc18824004b3ff2831ae999078844f98c9dc0f12a3c80263",
+        "requests.json": "0729efe16e68cf6cdd5c1ec14b70f39f24c45662cad5e9307b333399b03d399f"
+      }
+    }
+  },
+  "gates": {
+    "2024_8bps": {
+      "returns": false,
+      "risk": false,
+      "sample": false,
+      "upside": true
+    },
+    "2024_15bps": {
+      "returns": false,
+      "risk": false,
+      "sample": false,
+      "upside": false
+    },
+    "2025-26_8bps": {
+      "returns": false,
+      "risk": false,
+      "sample": false,
+      "upside": true
+    },
+    "2025-26_15bps": {
+      "returns": false,
+      "risk": false,
+      "sample": false,
+      "upside": false
+    }
+  },
+  "passed": false,
+  "paper_eligible": false
+}
