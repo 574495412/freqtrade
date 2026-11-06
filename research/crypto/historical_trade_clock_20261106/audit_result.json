@@ -1,0 +1,1573 @@
+{
+  "registration_sha256": "e5b6254ae7d420782c87cbde072d0e773f1b82522601fc9f2886701816d8e237",
+  "results": [
+    {
+      "id": "spot-2026-08-31-BTCUSDT",
+      "official_checksum_verified": true,
+      "collector_counts": {
+        "rows": 231426,
+        "duplicated_ids_excluded": 0
+      },
+      "join_counts": {
+        "official_economic_rows": 231415,
+        "same_id_economic_and_clock_bucket_matches": 231415,
+        "collector_only_in_hour": 0,
+        "collector_receipts_for_trades_outside_hour": 11
+      },
+      "receipt_minus_exchange_event": {
+        "min_ns": 120750402,
+        "p50_ns": 127928314,
+        "p95_ns": 135831235,
+        "max_ns": 366332204
+      },
+      "receipt_minus_official_trade": {
+        "min_ns": 120067402,
+        "p50_ns": 128189654,
+        "p95_ns": 141092037,
+        "max_ns": 367979204
+      },
+      "discrepancy_examples": [],
+      "bars": [
+        {
+          "start_ns": 1788134400000000000,
+          "end_ns": 1788134700000000000,
+          "official_trades": 42948,
+          "verified_collector_receipts": 42948,
+          "verified_receipts_at_or_after_end": 134,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77682.00000000",
+            "high": "77827.99000000",
+            "low": "77572.00000000",
+            "close": "77808.05000000",
+            "volume": "106.56499000"
+          },
+          "frozen_ohlcv": {
+            "open": 77682.0,
+            "high": 77827.99,
+            "low": 77572.0,
+            "close": 77808.05,
+            "volume": 106.56499
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 6637767054,
+          "last_trade_at_ns": 1788134699991623000,
+          "last_trade_observed_at_ns": 1788134700113147946,
+          "latest_matched_constituent_receipt_ns": 1788134700113147946,
+          "all_constituents_receipt_minus_end_ns": 113147946,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788134700000000000,
+          "end_ns": 1788135000000000000,
+          "official_trades": 28883,
+          "verified_collector_receipts": 28883,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77808.06000000",
+            "high": "77808.07000000",
+            "low": "77436.40000000",
+            "close": "77437.58000000",
+            "volume": "136.77537000"
+          },
+          "frozen_ohlcv": {
+            "open": 77808.06,
+            "high": 77808.07,
+            "low": 77436.4,
+            "close": 77437.58,
+            "volume": 136.77537
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 6637795937,
+          "last_trade_at_ns": 1788134999644608000,
+          "last_trade_observed_at_ns": 1788134999774210368,
+          "latest_matched_constituent_receipt_ns": 1788134999774210368,
+          "all_constituents_receipt_minus_end_ns": -225789632,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788135000000000000,
+          "end_ns": 1788135300000000000,
+          "official_trades": 25228,
+          "verified_collector_receipts": 25228,
+          "verified_receipts_at_or_after_end": 1,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77437.57000000",
+            "high": "77763.22000000",
+            "low": "77436.41000000",
+            "close": "77754.70000000",
+            "volume": "71.76046000"
+          },
+          "frozen_ohlcv": {
+            "open": 77437.57,
+            "high": 77763.22,
+            "low": 77436.41,
+            "close": 77754.7,
+            "volume": 71.76046
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 6637821165,
+          "last_trade_at_ns": 1788135299969686000,
+          "last_trade_observed_at_ns": 1788135300097362763,
+          "latest_matched_constituent_receipt_ns": 1788135300097362763,
+          "all_constituents_receipt_minus_end_ns": 97362763,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788135300000000000,
+          "end_ns": 1788135600000000000,
+          "official_trades": 23027,
+          "verified_collector_receipts": 23027,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77754.71000000",
+            "high": "77896.00000000",
+            "low": "77720.88000000",
+            "close": "77867.51000000",
+            "volume": "57.94489000"
+          },
+          "frozen_ohlcv": {
+            "open": 77754.71,
+            "high": 77896.0,
+            "low": 77720.88,
+            "close": 77867.51,
+            "volume": 57.94489
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 6637844192,
+          "last_trade_at_ns": 1788135599640117000,
+          "last_trade_observed_at_ns": 1788135599771204635,
+          "latest_matched_constituent_receipt_ns": 1788135599771204635,
+          "all_constituents_receipt_minus_end_ns": -228795365,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788135600000000000,
+          "end_ns": 1788135900000000000,
+          "official_trades": 15543,
+          "verified_collector_receipts": 15543,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77867.50000000",
+            "high": "77970.01000000",
+            "low": "77862.00000000",
+            "close": "77967.75000000",
+            "volume": "41.90222000"
+          },
+          "frozen_ohlcv": {
+            "open": 77867.5,
+            "high": 77970.01,
+            "low": 77862.0,
+            "close": 77967.75,
+            "volume": 41.90222
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 6637859735,
+          "last_trade_at_ns": 1788135899754638000,
+          "last_trade_observed_at_ns": 1788135899876560709,
+          "latest_matched_constituent_receipt_ns": 1788135899876560709,
+          "all_constituents_receipt_minus_end_ns": -123439291,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788135900000000000,
+          "end_ns": 1788136200000000000,
+          "official_trades": 12581,
+          "verified_collector_receipts": 12581,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77967.74000000",
+            "high": "77971.47000000",
+            "low": "77888.00000000",
+            "close": "77901.33000000",
+            "volume": "48.79630000"
+          },
+          "frozen_ohlcv": {
+            "open": 77967.74,
+            "high": 77971.47,
+            "low": 77888.0,
+            "close": 77901.33,
+            "volume": 48.7963
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 6637872316,
+          "last_trade_at_ns": 1788136196585610000,
+          "last_trade_observed_at_ns": 1788136196707898954,
+          "latest_matched_constituent_receipt_ns": 1788136196707898954,
+          "all_constituents_receipt_minus_end_ns": -3292101046,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788136200000000000,
+          "end_ns": 1788136500000000000,
+          "official_trades": 12070,
+          "verified_collector_receipts": 12070,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77901.34000000",
+            "high": "77958.00000000",
+            "low": "77892.00000000",
+            "close": "77952.26000000",
+            "volume": "46.69296000"
+          },
+          "frozen_ohlcv": {
+            "open": 77901.34,
+            "high": 77958.0,
+            "low": 77892.0,
+            "close": 77952.26,
+            "volume": 46.69296
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 6637884386,
+          "last_trade_at_ns": 1788136498541653000,
+          "last_trade_observed_at_ns": 1788136498666273029,
+          "latest_matched_constituent_receipt_ns": 1788136498666273029,
+          "all_constituents_receipt_minus_end_ns": -1333726971,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788136500000000000,
+          "end_ns": 1788136800000000000,
+          "official_trades": 27583,
+          "verified_collector_receipts": 27583,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77952.26000000",
+            "high": "78185.89000000",
+            "low": "77952.25000000",
+            "close": "78012.48000000",
+            "volume": "91.30295000"
+          },
+          "frozen_ohlcv": {
+            "open": 77952.26,
+            "high": 78185.89,
+            "low": 77952.25,
+            "close": 78012.48,
+            "volume": 91.30295
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 6637911969,
+          "last_trade_at_ns": 1788136799798238000,
+          "last_trade_observed_at_ns": 1788136799920787809,
+          "latest_matched_constituent_receipt_ns": 1788136799920787809,
+          "all_constituents_receipt_minus_end_ns": -79212191,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788136800000000000,
+          "end_ns": 1788137100000000000,
+          "official_trades": 11858,
+          "verified_collector_receipts": 11858,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "78013.42000000",
+            "high": "78070.00000000",
+            "low": "78006.00000000",
+            "close": "78032.01000000",
+            "volume": "18.07343000"
+          },
+          "frozen_ohlcv": {
+            "open": 78013.42,
+            "high": 78070.0,
+            "low": 78006.0,
+            "close": 78032.01,
+            "volume": 18.07343
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 6637923827,
+          "last_trade_at_ns": 1788137098647834000,
+          "last_trade_observed_at_ns": 1788137098779778012,
+          "latest_matched_constituent_receipt_ns": 1788137098779778012,
+          "all_constituents_receipt_minus_end_ns": -1220221988,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788137100000000000,
+          "end_ns": 1788137400000000000,
+          "official_trades": 8885,
+          "verified_collector_receipts": 8885,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "78032.02000000",
+            "high": "78032.02000000",
+            "low": "77947.93000000",
+            "close": "77978.00000000",
+            "volume": "39.67961000"
+          },
+          "frozen_ohlcv": {
+            "open": 78032.02,
+            "high": 78032.02,
+            "low": 77947.93,
+            "close": 77978.0,
+            "volume": 39.67961
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 6637932712,
+          "last_trade_at_ns": 1788137399746468000,
+          "last_trade_observed_at_ns": 1788137399873875538,
+          "latest_matched_constituent_receipt_ns": 1788137399873875538,
+          "all_constituents_receipt_minus_end_ns": -126124462,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788137400000000000,
+          "end_ns": 1788137700000000000,
+          "official_trades": 15001,
+          "verified_collector_receipts": 15001,
+          "verified_receipts_at_or_after_end": 1,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77978.00000000",
+            "high": "78034.01000000",
+            "low": "77976.00000000",
+            "close": "78023.99000000",
+            "volume": "32.10401000"
+          },
+          "frozen_ohlcv": {
+            "open": 77978.0,
+            "high": 78034.01,
+            "low": 77976.0,
+            "close": 78023.99,
+            "volume": 32.10401
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 6637947713,
+          "last_trade_at_ns": 1788137699901857000,
+          "last_trade_observed_at_ns": 1788137700029281984,
+          "latest_matched_constituent_receipt_ns": 1788137700029281984,
+          "all_constituents_receipt_minus_end_ns": 29281984,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788137700000000000,
+          "end_ns": 1788138000000000000,
+          "official_trades": 7808,
+          "verified_collector_receipts": 7808,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "78023.99000000",
+            "high": "78026.01000000",
+            "low": "77922.00000000",
+            "close": "77937.04000000",
+            "volume": "19.83660000"
+          },
+          "frozen_ohlcv": {
+            "open": 78023.99,
+            "high": 78026.01,
+            "low": 77922.0,
+            "close": 77937.04,
+            "volume": 19.8366
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 6637955521,
+          "last_trade_at_ns": 1788137999636132000,
+          "last_trade_observed_at_ns": 1788137999763204917,
+          "latest_matched_constituent_receipt_ns": 1788137999763204917,
+          "all_constituents_receipt_minus_end_ns": -236795083,
+          "last_bar_at_file_edge": true
+        }
+      ]
+    },
+    {
+      "id": "futures-2026-08-31-BTCUSDT",
+      "official_checksum_verified": true,
+      "collector_counts": {
+        "rows": 210072,
+        "nontrade_markers": 817,
+        "duplicated_ids_excluded": 0
+      },
+      "join_counts": {
+        "official_economic_rows": 209255,
+        "same_id_economic_and_clock_bucket_matches": 209253,
+        "official_skipped_ids": 817,
+        "missing_collector_id": 2,
+        "collector_only_in_hour": 0,
+        "collector_receipts_for_trades_outside_hour": 2
+      },
+      "receipt_minus_exchange_event": {
+        "min_ns": 118583041,
+        "p50_ns": 128845878,
+        "p95_ns": 234623667,
+        "max_ns": 891464671
+      },
+      "receipt_minus_official_trade": {
+        "min_ns": 118604437,
+        "p50_ns": 129076459,
+        "p95_ns": 234627946,
+        "max_ns": 891464671
+      },
+      "discrepancy_examples": [],
+      "bars": [
+        {
+          "start_ns": 1788134400000000000,
+          "end_ns": 1788134700000000000,
+          "official_trades": 34174,
+          "verified_collector_receipts": 34174,
+          "verified_receipts_at_or_after_end": 89,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77634.6",
+            "high": "77786.3",
+            "low": "77530.0",
+            "close": "77769.1",
+            "volume": "1249.590"
+          },
+          "frozen_ohlcv": {
+            "open": 77634.6,
+            "high": 77786.3,
+            "low": 77530.0,
+            "close": 77769.1,
+            "volume": 1249.59
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8034797807,
+          "last_trade_at_ns": 1788134699993000000,
+          "last_trade_observed_at_ns": 1788134700121177651,
+          "latest_matched_constituent_receipt_ns": 1788134700121177651,
+          "all_constituents_receipt_minus_end_ns": 121177651,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788134700000000000,
+          "end_ns": 1788135000000000000,
+          "official_trades": 31635,
+          "verified_collector_receipts": 31635,
+          "verified_receipts_at_or_after_end": 3,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77769.1",
+            "high": "77782.3",
+            "low": "77401.0",
+            "close": "77404.7",
+            "volume": "1743.498"
+          },
+          "frozen_ohlcv": {
+            "open": 77769.1,
+            "high": 77782.3,
+            "low": 77401.0,
+            "close": 77404.7,
+            "volume": 1743.498
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8034829523,
+          "last_trade_at_ns": 1788134999977000000,
+          "last_trade_observed_at_ns": 1788135000105836630,
+          "latest_matched_constituent_receipt_ns": 1788135000105836630,
+          "all_constituents_receipt_minus_end_ns": 105836630,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788135000000000000,
+          "end_ns": 1788135300000000000,
+          "official_trades": 22479,
+          "verified_collector_receipts": 22479,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77404.7",
+            "high": "77734.9",
+            "low": "77393.5",
+            "close": "77726.3",
+            "volume": "689.651"
+          },
+          "frozen_ohlcv": {
+            "open": 77404.7,
+            "high": 77734.9,
+            "low": 77393.5,
+            "close": 77726.3,
+            "volume": 689.651
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8034852083,
+          "last_trade_at_ns": 1788135299767000000,
+          "last_trade_observed_at_ns": 1788135299895940052,
+          "latest_matched_constituent_receipt_ns": 1788135299895940052,
+          "all_constituents_receipt_minus_end_ns": -104059948,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788135300000000000,
+          "end_ns": 1788135600000000000,
+          "official_trades": 22456,
+          "verified_collector_receipts": 22456,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77726.3",
+            "high": "77872.5",
+            "low": "77680.0",
+            "close": "77823.9",
+            "volume": "865.980"
+          },
+          "frozen_ohlcv": {
+            "open": 77726.3,
+            "high": 77872.5,
+            "low": 77680.0,
+            "close": 77823.9,
+            "volume": 865.98
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8034874608,
+          "last_trade_at_ns": 1788135599661000000,
+          "last_trade_observed_at_ns": 1788135599789491876,
+          "latest_matched_constituent_receipt_ns": 1788135599789491876,
+          "all_constituents_receipt_minus_end_ns": -210508124,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788135600000000000,
+          "end_ns": 1788135900000000000,
+          "official_trades": 16664,
+          "verified_collector_receipts": 16664,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77823.8",
+            "high": "77946.0",
+            "low": "77822.0",
+            "close": "77945.9",
+            "volume": "695.236"
+          },
+          "frozen_ohlcv": {
+            "open": 77823.8,
+            "high": 77946.0,
+            "low": 77822.0,
+            "close": 77945.9,
+            "volume": 695.236
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8034891348,
+          "last_trade_at_ns": 1788135899773000000,
+          "last_trade_observed_at_ns": 1788135899896862533,
+          "latest_matched_constituent_receipt_ns": 1788135899896862533,
+          "all_constituents_receipt_minus_end_ns": -103137467,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788135900000000000,
+          "end_ns": 1788136200000000000,
+          "official_trades": 11437,
+          "verified_collector_receipts": 11437,
+          "verified_receipts_at_or_after_end": 10,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77946.0",
+            "high": "77946.0",
+            "low": "77850.0",
+            "close": "77872.0",
+            "volume": "348.988"
+          },
+          "frozen_ohlcv": {
+            "open": 77946.0,
+            "high": 77946.0,
+            "low": 77850.0,
+            "close": 77872.0,
+            "volume": 348.988
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8034902852,
+          "last_trade_at_ns": 1788136199992000000,
+          "last_trade_observed_at_ns": 1788136200115797858,
+          "latest_matched_constituent_receipt_ns": 1788136200115797858,
+          "all_constituents_receipt_minus_end_ns": 115797858,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788136200000000000,
+          "end_ns": 1788136500000000000,
+          "official_trades": 8742,
+          "verified_collector_receipts": 8742,
+          "verified_receipts_at_or_after_end": 20,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77871.9",
+            "high": "77926.7",
+            "low": "77850.0",
+            "close": "77915.2",
+            "volume": "361.845"
+          },
+          "frozen_ohlcv": {
+            "open": 77871.9,
+            "high": 77926.7,
+            "low": 77850.0,
+            "close": 77915.2,
+            "volume": 361.845
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8034911648,
+          "last_trade_at_ns": 1788136499954000000,
+          "last_trade_observed_at_ns": 1788136500077329335,
+          "latest_matched_constituent_receipt_ns": 1788136500077329335,
+          "all_constituents_receipt_minus_end_ns": 77329335,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788136500000000000,
+          "end_ns": 1788136800000000000,
+          "official_trades": 29922,
+          "verified_collector_receipts": 29922,
+          "verified_receipts_at_or_after_end": 1,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77915.1",
+            "high": "78166.7",
+            "low": "77915.1",
+            "close": "77986.9",
+            "volume": "1563.044"
+          },
+          "frozen_ohlcv": {
+            "open": 77915.1,
+            "high": 78166.7,
+            "low": 77915.1,
+            "close": 77986.9,
+            "volume": 1563.044
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8034941647,
+          "last_trade_at_ns": 1788136799988000000,
+          "last_trade_observed_at_ns": 1788136800113878320,
+          "latest_matched_constituent_receipt_ns": 1788136800113878320,
+          "all_constituents_receipt_minus_end_ns": 113878320,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788136800000000000,
+          "end_ns": 1788137100000000000,
+          "official_trades": 8917,
+          "verified_collector_receipts": 8917,
+          "verified_receipts_at_or_after_end": 1,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77986.9",
+            "high": "78038.0",
+            "low": "77964.6",
+            "close": "78001.5",
+            "volume": "278.612"
+          },
+          "frozen_ohlcv": {
+            "open": 77986.9,
+            "high": 78038.0,
+            "low": 77964.6,
+            "close": 78001.5,
+            "volume": 278.612
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8034950628,
+          "last_trade_at_ns": 1788137099882000000,
+          "last_trade_observed_at_ns": 1788137100011714796,
+          "latest_matched_constituent_receipt_ns": 1788137100011714796,
+          "all_constituents_receipt_minus_end_ns": 11714796,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788137100000000000,
+          "end_ns": 1788137400000000000,
+          "official_trades": 8383,
+          "verified_collector_receipts": 8383,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "78001.5",
+            "high": "78001.6",
+            "low": "77909.4",
+            "close": "77945.5",
+            "volume": "347.151"
+          },
+          "frozen_ohlcv": {
+            "open": 78001.5,
+            "high": 78001.6,
+            "low": 77909.4,
+            "close": 77945.5,
+            "volume": 347.151
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8034959078,
+          "last_trade_at_ns": 1788137399003000000,
+          "last_trade_observed_at_ns": 1788137399133373469,
+          "latest_matched_constituent_receipt_ns": 1788137399133373469,
+          "all_constituents_receipt_minus_end_ns": -866626531,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788137400000000000,
+          "end_ns": 1788137700000000000,
+          "official_trades": 7339,
+          "verified_collector_receipts": 7339,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77945.5",
+            "high": "78007.3",
+            "low": "77937.4",
+            "close": "77989.0",
+            "volume": "279.369"
+          },
+          "frozen_ohlcv": {
+            "open": 77945.5,
+            "high": 78007.3,
+            "low": 77937.4,
+            "close": 77989.0,
+            "volume": 279.369
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8034966481,
+          "last_trade_at_ns": 1788137699611000000,
+          "last_trade_observed_at_ns": 1788137699734877340,
+          "latest_matched_constituent_receipt_ns": 1788137699734877340,
+          "all_constituents_receipt_minus_end_ns": -265122660,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1788137700000000000,
+          "end_ns": 1788138000000000000,
+          "official_trades": 7107,
+          "verified_collector_receipts": 7105,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": false,
+          "official_ohlcv": {
+            "open": "77988.9",
+            "high": "77999.5",
+            "low": "77882.9",
+            "close": "77903.8",
+            "volume": "221.081"
+          },
+          "frozen_ohlcv": {
+            "open": 77988.9,
+            "high": 77999.5,
+            "low": 77882.9,
+            "close": 77903.8,
+            "volume": 221.081
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8034973639,
+          "last_trade_at_ns": 1788137999928000000,
+          "last_trade_observed_at_ns": null,
+          "latest_matched_constituent_receipt_ns": 1788137999996411677,
+          "all_constituents_receipt_minus_end_ns": null,
+          "last_bar_at_file_edge": true
+        }
+      ]
+    },
+    {
+      "id": "futures-2026-11-01-BTCUSDT",
+      "official_checksum_verified": true,
+      "collector_counts": {
+        "rows": 45501,
+        "nontrade_markers": 345,
+        "duplicated_ids_excluded": 0
+      },
+      "join_counts": {
+        "official_economic_rows": 45156,
+        "same_id_economic_and_clock_bucket_matches": 45156,
+        "official_skipped_ids": 345,
+        "collector_only_in_hour": 0,
+        "collector_receipts_for_trades_outside_hour": 0
+      },
+      "receipt_minus_exchange_event": {
+        "min_ns": 118691795,
+        "p50_ns": 124058716,
+        "p95_ns": 130922368,
+        "max_ns": 172595467
+      },
+      "receipt_minus_official_trade": {
+        "min_ns": 118898271,
+        "p50_ns": 124846163,
+        "p95_ns": 131537155,
+        "max_ns": 172595467
+      },
+      "discrepancy_examples": [],
+      "bars": [
+        {
+          "start_ns": 1793491200000000000,
+          "end_ns": 1793491500000000000,
+          "official_trades": 4748,
+          "verified_collector_receipts": 4748,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77522.6",
+            "high": "77522.7",
+            "low": "77470.8",
+            "close": "77493.5",
+            "volume": "140.482"
+          },
+          "frozen_ohlcv": {
+            "open": 77522.6,
+            "high": 77522.7,
+            "low": 77470.8,
+            "close": 77493.5,
+            "volume": 140.482
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8224005408,
+          "last_trade_at_ns": 1793491498743000000,
+          "last_trade_observed_at_ns": 1793491498866555936,
+          "latest_matched_constituent_receipt_ns": 1793491498866555936,
+          "all_constituents_receipt_minus_end_ns": -1133444064,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793491500000000000,
+          "end_ns": 1793491800000000000,
+          "official_trades": 3080,
+          "verified_collector_receipts": 3080,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77493.5",
+            "high": "77503.3",
+            "low": "77468.6",
+            "close": "77495.0",
+            "volume": "66.680"
+          },
+          "frozen_ohlcv": {
+            "open": 77493.5,
+            "high": 77503.3,
+            "low": 77468.6,
+            "close": 77495.0,
+            "volume": 66.68
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8224008502,
+          "last_trade_at_ns": 1793491799497000000,
+          "last_trade_observed_at_ns": 1793491799620643171,
+          "latest_matched_constituent_receipt_ns": 1793491799620643171,
+          "all_constituents_receipt_minus_end_ns": -379356829,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793491800000000000,
+          "end_ns": 1793492100000000000,
+          "official_trades": 2774,
+          "verified_collector_receipts": 2774,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77495.0",
+            "high": "77495.1",
+            "low": "77462.2",
+            "close": "77492.5",
+            "volume": "88.233"
+          },
+          "frozen_ohlcv": {
+            "open": 77495.0,
+            "high": 77495.1,
+            "low": 77462.2,
+            "close": 77492.5,
+            "volume": 88.233
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8224011298,
+          "last_trade_at_ns": 1793492097871000000,
+          "last_trade_observed_at_ns": 1793492097994373766,
+          "latest_matched_constituent_receipt_ns": 1793492097994373766,
+          "all_constituents_receipt_minus_end_ns": -2005626234,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793492100000000000,
+          "end_ns": 1793492400000000000,
+          "official_trades": 2410,
+          "verified_collector_receipts": 2410,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77492.4",
+            "high": "77511.8",
+            "low": "77477.7",
+            "close": "77511.8",
+            "volume": "92.869"
+          },
+          "frozen_ohlcv": {
+            "open": 77492.4,
+            "high": 77511.8,
+            "low": 77477.7,
+            "close": 77511.8,
+            "volume": 92.869
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8224013737,
+          "last_trade_at_ns": 1793492398433000000,
+          "last_trade_observed_at_ns": 1793492398555858574,
+          "latest_matched_constituent_receipt_ns": 1793492398555858574,
+          "all_constituents_receipt_minus_end_ns": -1444141426,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793492400000000000,
+          "end_ns": 1793492700000000000,
+          "official_trades": 5458,
+          "verified_collector_receipts": 5458,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77511.8",
+            "high": "77551.6",
+            "low": "77491.6",
+            "close": "77538.5",
+            "volume": "473.453"
+          },
+          "frozen_ohlcv": {
+            "open": 77511.8,
+            "high": 77551.6,
+            "low": 77491.6,
+            "close": 77538.5,
+            "volume": 473.453
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8224019224,
+          "last_trade_at_ns": 1793492697159000000,
+          "last_trade_observed_at_ns": 1793492697279321699,
+          "latest_matched_constituent_receipt_ns": 1793492697279321699,
+          "all_constituents_receipt_minus_end_ns": -2720678301,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793492700000000000,
+          "end_ns": 1793493000000000000,
+          "official_trades": 3857,
+          "verified_collector_receipts": 3857,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77538.5",
+            "high": "77600.0",
+            "low": "77538.4",
+            "close": "77570.8",
+            "volume": "166.918"
+          },
+          "frozen_ohlcv": {
+            "open": 77538.5,
+            "high": 77600.0,
+            "low": 77538.4,
+            "close": 77570.8,
+            "volume": 166.918
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8224023120,
+          "last_trade_at_ns": 1793492999177000000,
+          "last_trade_observed_at_ns": 1793492999296975342,
+          "latest_matched_constituent_receipt_ns": 1793492999296975342,
+          "all_constituents_receipt_minus_end_ns": -703024658,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793493000000000000,
+          "end_ns": 1793493300000000000,
+          "official_trades": 4457,
+          "verified_collector_receipts": 4457,
+          "verified_receipts_at_or_after_end": 1,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77570.9",
+            "high": "77637.4",
+            "low": "77570.8",
+            "close": "77635.7",
+            "volume": "352.027"
+          },
+          "frozen_ohlcv": {
+            "open": 77570.9,
+            "high": 77637.4,
+            "low": 77570.8,
+            "close": 77635.7,
+            "volume": 352.027
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8224027606,
+          "last_trade_at_ns": 1793493299965000000,
+          "last_trade_observed_at_ns": 1793493300084586378,
+          "latest_matched_constituent_receipt_ns": 1793493300084586378,
+          "all_constituents_receipt_minus_end_ns": 84586378,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793493300000000000,
+          "end_ns": 1793493600000000000,
+          "official_trades": 2260,
+          "verified_collector_receipts": 2260,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77635.6",
+            "high": "77635.7",
+            "low": "77608.4",
+            "close": "77608.4",
+            "volume": "85.197"
+          },
+          "frozen_ohlcv": {
+            "open": 77635.6,
+            "high": 77635.7,
+            "low": 77608.4,
+            "close": 77608.4,
+            "volume": 85.197
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8224029902,
+          "last_trade_at_ns": 1793493599633000000,
+          "last_trade_observed_at_ns": 1793493599761859038,
+          "latest_matched_constituent_receipt_ns": 1793493599761859038,
+          "all_constituents_receipt_minus_end_ns": -238140962,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793493600000000000,
+          "end_ns": 1793493900000000000,
+          "official_trades": 2095,
+          "verified_collector_receipts": 2095,
+          "verified_receipts_at_or_after_end": 2,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77608.4",
+            "high": "77608.5",
+            "low": "77592.4",
+            "close": "77595.1",
+            "volume": "81.894"
+          },
+          "frozen_ohlcv": {
+            "open": 77608.4,
+            "high": 77608.5,
+            "low": 77592.4,
+            "close": 77595.1,
+            "volume": 81.894
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8224032017,
+          "last_trade_at_ns": 1793493899945000000,
+          "last_trade_observed_at_ns": 1793493900072143789,
+          "latest_matched_constituent_receipt_ns": 1793493900072143789,
+          "all_constituents_receipt_minus_end_ns": 72143789,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793493900000000000,
+          "end_ns": 1793494200000000000,
+          "official_trades": 1966,
+          "verified_collector_receipts": 1966,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77595.2",
+            "high": "77620.0",
+            "low": "77587.8",
+            "close": "77619.9",
+            "volume": "62.326"
+          },
+          "frozen_ohlcv": {
+            "open": 77595.2,
+            "high": 77620.0,
+            "low": 77587.8,
+            "close": 77619.9,
+            "volume": 62.326
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8224033991,
+          "last_trade_at_ns": 1793494199667000000,
+          "last_trade_observed_at_ns": 1793494199795012678,
+          "latest_matched_constituent_receipt_ns": 1793494199795012678,
+          "all_constituents_receipt_minus_end_ns": -204987322,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793494200000000000,
+          "end_ns": 1793494500000000000,
+          "official_trades": 7825,
+          "verified_collector_receipts": 7825,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77620.0",
+            "high": "77671.8",
+            "low": "77615.0",
+            "close": "77628.7",
+            "volume": "434.096"
+          },
+          "frozen_ohlcv": {
+            "open": 77620.0,
+            "high": 77671.8,
+            "low": 77615.0,
+            "close": 77628.7,
+            "volume": 434.096
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8224041853,
+          "last_trade_at_ns": 1793494499173000000,
+          "last_trade_observed_at_ns": 1793494499300736531,
+          "latest_matched_constituent_receipt_ns": 1793494499300736531,
+          "all_constituents_receipt_minus_end_ns": -699263469,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793494500000000000,
+          "end_ns": 1793494800000000000,
+          "official_trades": 4226,
+          "verified_collector_receipts": 4226,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "77628.7",
+            "high": "77666.6",
+            "low": "77614.9",
+            "close": "77638.3",
+            "volume": "252.616"
+          },
+          "frozen_ohlcv": {
+            "open": 77628.7,
+            "high": 77666.6,
+            "low": 77614.9,
+            "close": 77638.3,
+            "volume": 252.616
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 8224046117,
+          "last_trade_at_ns": 1793494799427000000,
+          "last_trade_observed_at_ns": 1793494799554772981,
+          "latest_matched_constituent_receipt_ns": 1793494799554772981,
+          "all_constituents_receipt_minus_end_ns": -445227019,
+          "last_bar_at_file_edge": true
+        }
+      ]
+    },
+    {
+      "id": "futures-2026-11-01-SOLUSDT",
+      "official_checksum_verified": true,
+      "collector_counts": {
+        "rows": 33540,
+        "nontrade_markers": 212,
+        "duplicated_ids_excluded": 0
+      },
+      "join_counts": {
+        "official_economic_rows": 33328,
+        "same_id_economic_and_clock_bucket_matches": 33328,
+        "official_skipped_ids": 212,
+        "collector_only_in_hour": 0,
+        "collector_receipts_for_trades_outside_hour": 0
+      },
+      "receipt_minus_exchange_event": {
+        "min_ns": 118266046,
+        "p50_ns": 124482806,
+        "p95_ns": 131576864,
+        "max_ns": 151446239
+      },
+      "receipt_minus_official_trade": {
+        "min_ns": 118443379,
+        "p50_ns": 126053826,
+        "p95_ns": 132050585,
+        "max_ns": 154035441
+      },
+      "discrepancy_examples": [],
+      "bars": [
+        {
+          "start_ns": 1793491200000000000,
+          "end_ns": 1793491500000000000,
+          "official_trades": 2945,
+          "verified_collector_receipts": 2945,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "95.44",
+            "high": "95.48",
+            "low": "95.37",
+            "close": "95.45",
+            "volume": "16347.41"
+          },
+          "frozen_ohlcv": {
+            "open": 95.44,
+            "high": 95.48,
+            "low": 95.37,
+            "close": 95.45,
+            "volume": 16347.41
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 3621028023,
+          "last_trade_at_ns": 1793491499651000000,
+          "last_trade_observed_at_ns": 1793491499774082447,
+          "latest_matched_constituent_receipt_ns": 1793491499774082447,
+          "all_constituents_receipt_minus_end_ns": -225917553,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793491500000000000,
+          "end_ns": 1793491800000000000,
+          "official_trades": 2295,
+          "verified_collector_receipts": 2295,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "95.45",
+            "high": "95.49",
+            "low": "95.42",
+            "close": "95.45",
+            "volume": "12471.36"
+          },
+          "frozen_ohlcv": {
+            "open": 95.45,
+            "high": 95.49,
+            "low": 95.42,
+            "close": 95.45,
+            "volume": 12471.36
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 3621030330,
+          "last_trade_at_ns": 1793491796404000000,
+          "last_trade_observed_at_ns": 1793491796532826835,
+          "latest_matched_constituent_receipt_ns": 1793491796532826835,
+          "all_constituents_receipt_minus_end_ns": -3467173165,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793491800000000000,
+          "end_ns": 1793492100000000000,
+          "official_trades": 2172,
+          "verified_collector_receipts": 2172,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "95.44",
+            "high": "95.45",
+            "low": "95.34",
+            "close": "95.37",
+            "volume": "26246.00"
+          },
+          "frozen_ohlcv": {
+            "open": 95.44,
+            "high": 95.45,
+            "low": 95.34,
+            "close": 95.37,
+            "volume": 26246.0
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 3621032523,
+          "last_trade_at_ns": 1793492099748000000,
+          "last_trade_observed_at_ns": 1793492099876224822,
+          "latest_matched_constituent_receipt_ns": 1793492099876224822,
+          "all_constituents_receipt_minus_end_ns": -123775178,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793492100000000000,
+          "end_ns": 1793492400000000000,
+          "official_trades": 2425,
+          "verified_collector_receipts": 2425,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "95.36",
+            "high": "95.4",
+            "low": "95.32",
+            "close": "95.4",
+            "volume": "21764.45"
+          },
+          "frozen_ohlcv": {
+            "open": 95.36,
+            "high": 95.4,
+            "low": 95.32,
+            "close": 95.4,
+            "volume": 21764.45
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 3621034957,
+          "last_trade_at_ns": 1793492397830000000,
+          "last_trade_observed_at_ns": 1793492397958190718,
+          "latest_matched_constituent_receipt_ns": 1793492397958190718,
+          "all_constituents_receipt_minus_end_ns": -2041809282,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793492400000000000,
+          "end_ns": 1793492700000000000,
+          "official_trades": 2840,
+          "verified_collector_receipts": 2840,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "95.39",
+            "high": "95.44",
+            "low": "95.33",
+            "close": "95.42",
+            "volume": "19430.58"
+          },
+          "frozen_ohlcv": {
+            "open": 95.39,
+            "high": 95.44,
+            "low": 95.33,
+            "close": 95.42,
+            "volume": 19430.58
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 3621037819,
+          "last_trade_at_ns": 1793492699146000000,
+          "last_trade_observed_at_ns": 1793492699265039128,
+          "latest_matched_constituent_receipt_ns": 1793492699265039128,
+          "all_constituents_receipt_minus_end_ns": -734960872,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793492700000000000,
+          "end_ns": 1793493000000000000,
+          "official_trades": 2484,
+          "verified_collector_receipts": 2484,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "95.42",
+            "high": "95.53",
+            "low": "95.42",
+            "close": "95.5",
+            "volume": "20562.68"
+          },
+          "frozen_ohlcv": {
+            "open": 95.42,
+            "high": 95.53,
+            "low": 95.42,
+            "close": 95.5,
+            "volume": 20562.68
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 3621040318,
+          "last_trade_at_ns": 1793492999718000000,
+          "last_trade_observed_at_ns": 1793492999836867016,
+          "latest_matched_constituent_receipt_ns": 1793492999836867016,
+          "all_constituents_receipt_minus_end_ns": -163132984,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793493000000000000,
+          "end_ns": 1793493300000000000,
+          "official_trades": 5054,
+          "verified_collector_receipts": 5054,
+          "verified_receipts_at_or_after_end": 1,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "95.51",
+            "high": "95.75",
+            "low": "95.5",
+            "close": "95.72",
+            "volume": "46523.79"
+          },
+          "frozen_ohlcv": {
+            "open": 95.51,
+            "high": 95.75,
+            "low": 95.5,
+            "close": 95.72,
+            "volume": 46523.79
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 3621045408,
+          "last_trade_at_ns": 1793493299993000000,
+          "last_trade_observed_at_ns": 1793493300112424542,
+          "latest_matched_constituent_receipt_ns": 1793493300112424542,
+          "all_constituents_receipt_minus_end_ns": 112424542,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793493300000000000,
+          "end_ns": 1793493600000000000,
+          "official_trades": 2608,
+          "verified_collector_receipts": 2608,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "95.72",
+            "high": "95.73",
+            "low": "95.64",
+            "close": "95.7",
+            "volume": "16541.52"
+          },
+          "frozen_ohlcv": {
+            "open": 95.72,
+            "high": 95.73,
+            "low": 95.64,
+            "close": 95.7,
+            "volume": 16541.52
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 3621048035,
+          "last_trade_at_ns": 1793493599590000000,
+          "last_trade_observed_at_ns": 1793493599708771448,
+          "latest_matched_constituent_receipt_ns": 1793493599708771448,
+          "all_constituents_receipt_minus_end_ns": -291228552,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793493600000000000,
+          "end_ns": 1793493900000000000,
+          "official_trades": 2641,
+          "verified_collector_receipts": 2641,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "95.7",
+            "high": "95.7",
+            "low": "95.56",
+            "close": "95.59",
+            "volume": "14752.19"
+          },
+          "frozen_ohlcv": {
+            "open": 95.7,
+            "high": 95.7,
+            "low": 95.56,
+            "close": 95.59,
+            "volume": 14752.19
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 3621050705,
+          "last_trade_at_ns": 1793493899704000000,
+          "last_trade_observed_at_ns": 1793493899830560386,
+          "latest_matched_constituent_receipt_ns": 1793493899830560386,
+          "all_constituents_receipt_minus_end_ns": -169439614,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793493900000000000,
+          "end_ns": 1793494200000000000,
+          "official_trades": 2475,
+          "verified_collector_receipts": 2475,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "95.59",
+            "high": "95.65",
+            "low": "95.56",
+            "close": "95.62",
+            "volume": "11375.59"
+          },
+          "frozen_ohlcv": {
+            "open": 95.59,
+            "high": 95.65,
+            "low": 95.56,
+            "close": 95.62,
+            "volume": 11375.59
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 3621053193,
+          "last_trade_at_ns": 1793494197673000000,
+          "last_trade_observed_at_ns": 1793494197800054283,
+          "latest_matched_constituent_receipt_ns": 1793494197800054283,
+          "all_constituents_receipt_minus_end_ns": -2199945717,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793494200000000000,
+          "end_ns": 1793494500000000000,
+          "official_trades": 3031,
+          "verified_collector_receipts": 3031,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "95.62",
+            "high": "95.69",
+            "low": "95.58",
+            "close": "95.65",
+            "volume": "11631.95"
+          },
+          "frozen_ohlcv": {
+            "open": 95.62,
+            "high": 95.69,
+            "low": 95.58,
+            "close": 95.65,
+            "volume": 11631.95
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 3621056238,
+          "last_trade_at_ns": 1793494499690000000,
+          "last_trade_observed_at_ns": 1793494499817510916,
+          "latest_matched_constituent_receipt_ns": 1793494499817510916,
+          "all_constituents_receipt_minus_end_ns": -182489084,
+          "last_bar_at_file_edge": false
+        },
+        {
+          "start_ns": 1793494500000000000,
+          "end_ns": 1793494800000000000,
+          "official_trades": 2358,
+          "verified_collector_receipts": 2358,
+          "verified_receipts_at_or_after_end": 0,
+          "complete_observed_constituents": true,
+          "official_ohlcv": {
+            "open": "95.65",
+            "high": "95.74",
+            "low": "95.64",
+            "close": "95.66",
+            "volume": "10727.55"
+          },
+          "frozen_ohlcv": {
+            "open": 95.65,
+            "high": 95.74,
+            "low": 95.64,
+            "close": 95.66,
+            "volume": 10727.55
+          },
+          "price_fields_match": true,
+          "volume_matches": true,
+          "last_trade_id": 3621058601,
+          "last_trade_at_ns": 1793494799706000000,
+          "last_trade_observed_at_ns": 1793494799832568409,
+          "latest_matched_constituent_receipt_ns": 1793494799832568409,
+          "all_constituents_receipt_minus_end_ns": -167431591,
+          "last_bar_at_file_edge": true
+        }
+      ]
+    }
+  ],
+  "frozen_financial_inputs_verified": 145,
+  "exchange_kline_publication_verified": false,
+  "strategy_received_time_verified": false,
+  "account_fill_evidence": false,
+  "financial_accounts": 0
+}

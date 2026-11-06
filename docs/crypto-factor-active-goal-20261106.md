@@ -1,6 +1,6 @@
 # 因子研究目标与当前状态
 
-当前机器可读入口：[current_status_v44.json](../research/crypto/native_factors_20261106/current_status_v44.json)。**固定成本研究的 24 个模型账户已全部完成且全部亏损**：16 个 F1/F2 因子账户、8 个共同模拟风险控制。四个市场/因子组均未通过连续压力净收益为正的必要门槛，F2 八个同条件配对均未达到原数值条件。见[最终跨市场/窗口总表](../research/crypto/factor_cost_review_20261106/RESULTS.md)与[合约长短窗口报告](../research/crypto/factor_cost_futures_long_20261106/RESULTS.md)。没有收益提升、新策略晋级或盈利组合证据。
+当前机器可读入口：[current_status_v45.json](../research/crypto/native_factors_20261106/current_status_v45.json)。**固定成本研究的 24 个模型账户已全部完成且全部亏损**：16 个 F1/F2 因子账户、8 个共同模拟风险控制。四个市场/因子组均未通过连续压力净收益为正的必要门槛，F2 八个同条件配对均未达到原数值条件。见[最终跨市场/窗口总表](../research/crypto/factor_cost_review_20261106/RESULTS.md)与[合约长短窗口报告](../research/crypto/factor_cost_futures_long_20261106/RESULTS.md)。没有收益提升、新策略晋级或盈利组合证据。
 
 本批共 2,146,176 个 5m 观察点完成独立净值/敞口重建，合约另核对模型资金费；持仓年龄、DCA、费用、浮亏、退出预留及跨窗风险状态保留。实际台账 **49/80 次尝试**（24 官方、24 模型、1 技术失败），剩余 31 次。会话 64123 已退出 0，六个记录 PID 均不存在，共享金融锁可用；没有运行中的金融账户。[完成回执](../research/crypto/factor_cost_futures_long_20261106/completion.json)替代旧进行中检查点。
 
@@ -14,6 +14,9 @@
 
 
 已从前序原始快照接通长窗 BTC 永续的缺锚小时，验证 6 个跨小时接点，原目标小时的 136,058 条增量全部重放。该快照的原始边界无法同时覆盖双侧 20 bps，目标小时 11 个定时盘口的两侧最优价也尚未同时落在已知区间。见[跨小时盘口核验](../research/crypto/historical_l2_bridge_20261106/README.md)。
+
+
+四组原始公共成交合计 519,154 笔已对账，重建的 48 根 5m OHLCV 与冻结数据一致。独立采集端在截止时仍缺 13 根的 266 笔成分，其中 6 根的收盘价在当时与最终值不同。交易所收盘发布与策略接收时刻仍缺原始记录。见[逐笔成交时钟核验](../research/crypto/historical_trade_clock_20261106/README.md)。
 
 旧路线图、32 个 P1 账户、2 次复核、官方样例及失败记录保留；没有操作 paper、读取秘密、启用订单或发送外部通知。以下均为历史阶段记录，旧进行中或“收益账户为 0”的文字不覆盖当前结论。
 

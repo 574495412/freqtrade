@@ -1,0 +1,1145 @@
+{
+  "observed_at_utc": "2026-11-06T14:55:04.614301+00:00",
+  "input_hashes": {
+    "research/crypto/historical_trade_clock_20261106/verify_trade_clock.py": "c34902db5c00310295497e9db51eaddf8248f2ed68831a87d86e9331401a7658",
+    "research/crypto/historical_trade_clock_20261106/audit_result.json": "a1e285bce3e67c27382491ba09b848bf4b816f692140923242bbd6289c6bfd3a",
+    "research/crypto/historical_trade_clock_20261106/successor_result.json": "8f4e20e4ba3eb6c1a1ff39cf78b50453635fba6bc36b7a1e7b7672cfd90c3c54",
+    "research/crypto/rd_program_20261105/data_extension/event_source_audit.json": "6367a205ae2ecd7f68ac3882746a721fafe428679b599366f2b76a5c9315a35e",
+    "research/crypto/factor_cost_futures_long_20261106/plan.json": "4f89a1cd81fc810fb7b71bbf41993a91712280e55037ec769d98c06cf7c406d2"
+  },
+  "historical_channel_metadata": {
+    "binance_metadata": {
+      "url": "https://api.tardis.dev/v1/exchanges/binance",
+      "raw_sha256": "d5fea79498be223f043590030e1b337ade749377fd8895d4f26c2f518901a756",
+      "channels": [
+        "trade",
+        "depth",
+        "depthSnapshot",
+        "bookTicker",
+        "aggTrade",
+        "ticker",
+        "borrowInterest",
+        "recentTrades",
+        "tokenNav"
+      ],
+      "kline_advertised": false
+    },
+    "binance-futures_metadata": {
+      "url": "https://api.tardis.dev/v1/exchanges/binance-futures",
+      "raw_sha256": "b2e4f6a79d7a359504bff0a122f3d286dd8e90e755072b5674339d32719c57ac",
+      "channels": [
+        "trade",
+        "depth",
+        "depthSnapshot",
+        "bookTicker",
+        "forceOrder",
+        "ticker",
+        "markPrice",
+        "premiumIndex",
+        "indexConstituents",
+        "openInterest",
+        "fundingInfo",
+        "fundingRate",
+        "insuranceBalance",
+        "aggTrade",
+        "compositeIndex",
+        "assetIndex",
+        "topLongShortAccountRatio",
+        "topLongShortPositionRatio",
+        "globalLongShortAccountRatio",
+        "takerlongshortRatio",
+        "!contractInfo",
+        "tradingSession",
+        "recentTrades"
+      ],
+      "kline_advertised": false
+    }
+  },
+  "official_and_frozen_ohlcv_matching_bars": 48,
+  "bars_with_all_constituent_receipts": 48,
+  "matched_constituent_trades": 519154,
+  "constituents_observed_at_or_after_boundary": 266,
+  "bars_with_at_least_one_late_constituent": 13,
+  "maximum_observed_late_receipt_ns": 121177651,
+  "changed_ohlcv_fields_at_boundary": {
+    "close": 6,
+    "volume": 13
+  },
+  "recovered_boundary_trades": [
+    {
+      "trade_id": 8034973638,
+      "exchange_trade_ns": 1788137999922000000,
+      "price": "77903.9",
+      "quantity": "0.001",
+      "is_buyer_maker": false,
+      "collector_received_ns": 1788138000045034365,
+      "exchange_event_ms": 1788137999922,
+      "receipt_after_hour_boundary_ns": 45034365
+    },
+    {
+      "trade_id": 8034973639,
+      "exchange_trade_ns": 1788137999928000000,
+      "price": "77903.8",
+      "quantity": "0.025",
+      "is_buyer_maker": true,
+      "collector_received_ns": 1788138000051031527,
+      "exchange_event_ms": 1788137999928,
+      "receipt_after_hour_boundary_ns": 51031527
+    }
+  ],
+  "fixed_cases": {
+    "spot-2026-08-31-BTCUSDT": [
+      {
+        "end_ns": 1788134700000000000,
+        "constituents": 42948,
+        "constituent_receipts_after_or_at_boundary": 134,
+        "last_late_receipt_after_boundary_ns": 113147946,
+        "changed_fields": [
+          "close",
+          "volume"
+        ],
+        "final_ohlcv": {
+          "open": "77682.00000000",
+          "high": "77827.99000000",
+          "low": "77572.00000000",
+          "close": "77808.05000000",
+          "volume": "106.56499000"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77682.00000000",
+          "high": "77827.99000000",
+          "low": "77572.00000000",
+          "close": "77811.79000000",
+          "volume": "105.83079000"
+        }
+      },
+      {
+        "end_ns": 1788135000000000000,
+        "constituents": 28883,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77808.06000000",
+          "high": "77808.07000000",
+          "low": "77436.40000000",
+          "close": "77437.58000000",
+          "volume": "136.77537000"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77808.06000000",
+          "high": "77808.07000000",
+          "low": "77436.40000000",
+          "close": "77437.58000000",
+          "volume": "136.77537000"
+        }
+      },
+      {
+        "end_ns": 1788135300000000000,
+        "constituents": 25228,
+        "constituent_receipts_after_or_at_boundary": 1,
+        "last_late_receipt_after_boundary_ns": 97362763,
+        "changed_fields": [
+          "volume"
+        ],
+        "final_ohlcv": {
+          "open": "77437.57000000",
+          "high": "77763.22000000",
+          "low": "77436.41000000",
+          "close": "77754.70000000",
+          "volume": "71.76046000"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77437.57000000",
+          "high": "77763.22000000",
+          "low": "77436.41000000",
+          "close": "77754.70000000",
+          "volume": "71.75698000"
+        }
+      },
+      {
+        "end_ns": 1788135600000000000,
+        "constituents": 23027,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77754.71000000",
+          "high": "77896.00000000",
+          "low": "77720.88000000",
+          "close": "77867.51000000",
+          "volume": "57.94489000"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77754.71000000",
+          "high": "77896.00000000",
+          "low": "77720.88000000",
+          "close": "77867.51000000",
+          "volume": "57.94489000"
+        }
+      },
+      {
+        "end_ns": 1788135900000000000,
+        "constituents": 15543,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77867.50000000",
+          "high": "77970.01000000",
+          "low": "77862.00000000",
+          "close": "77967.75000000",
+          "volume": "41.90222000"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77867.50000000",
+          "high": "77970.01000000",
+          "low": "77862.00000000",
+          "close": "77967.75000000",
+          "volume": "41.90222000"
+        }
+      },
+      {
+        "end_ns": 1788136200000000000,
+        "constituents": 12581,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77967.74000000",
+          "high": "77971.47000000",
+          "low": "77888.00000000",
+          "close": "77901.33000000",
+          "volume": "48.79630000"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77967.74000000",
+          "high": "77971.47000000",
+          "low": "77888.00000000",
+          "close": "77901.33000000",
+          "volume": "48.79630000"
+        }
+      },
+      {
+        "end_ns": 1788136500000000000,
+        "constituents": 12070,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77901.34000000",
+          "high": "77958.00000000",
+          "low": "77892.00000000",
+          "close": "77952.26000000",
+          "volume": "46.69296000"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77901.34000000",
+          "high": "77958.00000000",
+          "low": "77892.00000000",
+          "close": "77952.26000000",
+          "volume": "46.69296000"
+        }
+      },
+      {
+        "end_ns": 1788136800000000000,
+        "constituents": 27583,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77952.26000000",
+          "high": "78185.89000000",
+          "low": "77952.25000000",
+          "close": "78012.48000000",
+          "volume": "91.30295000"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77952.26000000",
+          "high": "78185.89000000",
+          "low": "77952.25000000",
+          "close": "78012.48000000",
+          "volume": "91.30295000"
+        }
+      },
+      {
+        "end_ns": 1788137100000000000,
+        "constituents": 11858,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "78013.42000000",
+          "high": "78070.00000000",
+          "low": "78006.00000000",
+          "close": "78032.01000000",
+          "volume": "18.07343000"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "78013.42000000",
+          "high": "78070.00000000",
+          "low": "78006.00000000",
+          "close": "78032.01000000",
+          "volume": "18.07343000"
+        }
+      },
+      {
+        "end_ns": 1788137400000000000,
+        "constituents": 8885,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "78032.02000000",
+          "high": "78032.02000000",
+          "low": "77947.93000000",
+          "close": "77978.00000000",
+          "volume": "39.67961000"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "78032.02000000",
+          "high": "78032.02000000",
+          "low": "77947.93000000",
+          "close": "77978.00000000",
+          "volume": "39.67961000"
+        }
+      },
+      {
+        "end_ns": 1788137700000000000,
+        "constituents": 15001,
+        "constituent_receipts_after_or_at_boundary": 1,
+        "last_late_receipt_after_boundary_ns": 29281984,
+        "changed_fields": [
+          "volume"
+        ],
+        "final_ohlcv": {
+          "open": "77978.00000000",
+          "high": "78034.01000000",
+          "low": "77976.00000000",
+          "close": "78023.99000000",
+          "volume": "32.10401000"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77978.00000000",
+          "high": "78034.01000000",
+          "low": "77976.00000000",
+          "close": "78023.99000000",
+          "volume": "32.10393000"
+        }
+      },
+      {
+        "end_ns": 1788138000000000000,
+        "constituents": 7808,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "78023.99000000",
+          "high": "78026.01000000",
+          "low": "77922.00000000",
+          "close": "77937.04000000",
+          "volume": "19.83660000"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "78023.99000000",
+          "high": "78026.01000000",
+          "low": "77922.00000000",
+          "close": "77937.04000000",
+          "volume": "19.83660000"
+        }
+      }
+    ],
+    "futures-2026-08-31-BTCUSDT": [
+      {
+        "end_ns": 1788134700000000000,
+        "constituents": 34174,
+        "constituent_receipts_after_or_at_boundary": 89,
+        "last_late_receipt_after_boundary_ns": 121177651,
+        "changed_fields": [
+          "close",
+          "volume"
+        ],
+        "final_ohlcv": {
+          "open": "77634.6",
+          "high": "77786.3",
+          "low": "77530.0",
+          "close": "77769.1",
+          "volume": "1249.590"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77634.6",
+          "high": "77786.3",
+          "low": "77530.0",
+          "close": "77773.4",
+          "volume": "1246.281"
+        }
+      },
+      {
+        "end_ns": 1788135000000000000,
+        "constituents": 31635,
+        "constituent_receipts_after_or_at_boundary": 3,
+        "last_late_receipt_after_boundary_ns": 105836630,
+        "changed_fields": [
+          "close",
+          "volume"
+        ],
+        "final_ohlcv": {
+          "open": "77769.1",
+          "high": "77782.3",
+          "low": "77401.0",
+          "close": "77404.7",
+          "volume": "1743.498"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77769.1",
+          "high": "77782.3",
+          "low": "77401.0",
+          "close": "77404.6",
+          "volume": "1743.283"
+        }
+      },
+      {
+        "end_ns": 1788135300000000000,
+        "constituents": 22479,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77404.7",
+          "high": "77734.9",
+          "low": "77393.5",
+          "close": "77726.3",
+          "volume": "689.651"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77404.7",
+          "high": "77734.9",
+          "low": "77393.5",
+          "close": "77726.3",
+          "volume": "689.651"
+        }
+      },
+      {
+        "end_ns": 1788135600000000000,
+        "constituents": 22456,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77726.3",
+          "high": "77872.5",
+          "low": "77680.0",
+          "close": "77823.9",
+          "volume": "865.980"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77726.3",
+          "high": "77872.5",
+          "low": "77680.0",
+          "close": "77823.9",
+          "volume": "865.980"
+        }
+      },
+      {
+        "end_ns": 1788135900000000000,
+        "constituents": 16664,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77823.8",
+          "high": "77946.0",
+          "low": "77822.0",
+          "close": "77945.9",
+          "volume": "695.236"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77823.8",
+          "high": "77946.0",
+          "low": "77822.0",
+          "close": "77945.9",
+          "volume": "695.236"
+        }
+      },
+      {
+        "end_ns": 1788136200000000000,
+        "constituents": 11437,
+        "constituent_receipts_after_or_at_boundary": 10,
+        "last_late_receipt_after_boundary_ns": 115797858,
+        "changed_fields": [
+          "volume"
+        ],
+        "final_ohlcv": {
+          "open": "77946.0",
+          "high": "77946.0",
+          "low": "77850.0",
+          "close": "77872.0",
+          "volume": "348.988"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77946.0",
+          "high": "77946.0",
+          "low": "77850.0",
+          "close": "77872.0",
+          "volume": "348.850"
+        }
+      },
+      {
+        "end_ns": 1788136500000000000,
+        "constituents": 8742,
+        "constituent_receipts_after_or_at_boundary": 20,
+        "last_late_receipt_after_boundary_ns": 77329335,
+        "changed_fields": [
+          "close",
+          "volume"
+        ],
+        "final_ohlcv": {
+          "open": "77871.9",
+          "high": "77926.7",
+          "low": "77850.0",
+          "close": "77915.2",
+          "volume": "361.845"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77871.9",
+          "high": "77926.7",
+          "low": "77850.0",
+          "close": "77914.5",
+          "volume": "361.573"
+        }
+      },
+      {
+        "end_ns": 1788136800000000000,
+        "constituents": 29922,
+        "constituent_receipts_after_or_at_boundary": 1,
+        "last_late_receipt_after_boundary_ns": 113878320,
+        "changed_fields": [
+          "close",
+          "volume"
+        ],
+        "final_ohlcv": {
+          "open": "77915.1",
+          "high": "78166.7",
+          "low": "77915.1",
+          "close": "77986.9",
+          "volume": "1563.044"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77915.1",
+          "high": "78166.7",
+          "low": "77915.1",
+          "close": "77986.7",
+          "volume": "1563.043"
+        }
+      },
+      {
+        "end_ns": 1788137100000000000,
+        "constituents": 8917,
+        "constituent_receipts_after_or_at_boundary": 1,
+        "last_late_receipt_after_boundary_ns": 11714796,
+        "changed_fields": [
+          "volume"
+        ],
+        "final_ohlcv": {
+          "open": "77986.9",
+          "high": "78038.0",
+          "low": "77964.6",
+          "close": "78001.5",
+          "volume": "278.612"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77986.9",
+          "high": "78038.0",
+          "low": "77964.6",
+          "close": "78001.5",
+          "volume": "278.610"
+        }
+      },
+      {
+        "end_ns": 1788137400000000000,
+        "constituents": 8383,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "78001.5",
+          "high": "78001.6",
+          "low": "77909.4",
+          "close": "77945.5",
+          "volume": "347.151"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "78001.5",
+          "high": "78001.6",
+          "low": "77909.4",
+          "close": "77945.5",
+          "volume": "347.151"
+        }
+      },
+      {
+        "end_ns": 1788137700000000000,
+        "constituents": 7339,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77945.5",
+          "high": "78007.3",
+          "low": "77937.4",
+          "close": "77989.0",
+          "volume": "279.369"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77945.5",
+          "high": "78007.3",
+          "low": "77937.4",
+          "close": "77989.0",
+          "volume": "279.369"
+        }
+      },
+      {
+        "end_ns": 1788138000000000000,
+        "constituents": 7107,
+        "constituent_receipts_after_or_at_boundary": 2,
+        "last_late_receipt_after_boundary_ns": 51031527,
+        "changed_fields": [
+          "volume"
+        ],
+        "final_ohlcv": {
+          "open": "77988.9",
+          "high": "77999.5",
+          "low": "77882.9",
+          "close": "77903.8",
+          "volume": "221.081"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77988.9",
+          "high": "77999.5",
+          "low": "77882.9",
+          "close": "77903.8",
+          "volume": "221.055"
+        }
+      }
+    ],
+    "futures-2026-11-01-BTCUSDT": [
+      {
+        "end_ns": 1793491500000000000,
+        "constituents": 4748,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77522.6",
+          "high": "77522.7",
+          "low": "77470.8",
+          "close": "77493.5",
+          "volume": "140.482"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77522.6",
+          "high": "77522.7",
+          "low": "77470.8",
+          "close": "77493.5",
+          "volume": "140.482"
+        }
+      },
+      {
+        "end_ns": 1793491800000000000,
+        "constituents": 3080,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77493.5",
+          "high": "77503.3",
+          "low": "77468.6",
+          "close": "77495.0",
+          "volume": "66.680"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77493.5",
+          "high": "77503.3",
+          "low": "77468.6",
+          "close": "77495.0",
+          "volume": "66.680"
+        }
+      },
+      {
+        "end_ns": 1793492100000000000,
+        "constituents": 2774,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77495.0",
+          "high": "77495.1",
+          "low": "77462.2",
+          "close": "77492.5",
+          "volume": "88.233"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77495.0",
+          "high": "77495.1",
+          "low": "77462.2",
+          "close": "77492.5",
+          "volume": "88.233"
+        }
+      },
+      {
+        "end_ns": 1793492400000000000,
+        "constituents": 2410,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77492.4",
+          "high": "77511.8",
+          "low": "77477.7",
+          "close": "77511.8",
+          "volume": "92.869"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77492.4",
+          "high": "77511.8",
+          "low": "77477.7",
+          "close": "77511.8",
+          "volume": "92.869"
+        }
+      },
+      {
+        "end_ns": 1793492700000000000,
+        "constituents": 5458,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77511.8",
+          "high": "77551.6",
+          "low": "77491.6",
+          "close": "77538.5",
+          "volume": "473.453"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77511.8",
+          "high": "77551.6",
+          "low": "77491.6",
+          "close": "77538.5",
+          "volume": "473.453"
+        }
+      },
+      {
+        "end_ns": 1793493000000000000,
+        "constituents": 3857,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77538.5",
+          "high": "77600.0",
+          "low": "77538.4",
+          "close": "77570.8",
+          "volume": "166.918"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77538.5",
+          "high": "77600.0",
+          "low": "77538.4",
+          "close": "77570.8",
+          "volume": "166.918"
+        }
+      },
+      {
+        "end_ns": 1793493300000000000,
+        "constituents": 4457,
+        "constituent_receipts_after_or_at_boundary": 1,
+        "last_late_receipt_after_boundary_ns": 84586378,
+        "changed_fields": [
+          "volume"
+        ],
+        "final_ohlcv": {
+          "open": "77570.9",
+          "high": "77637.4",
+          "low": "77570.8",
+          "close": "77635.7",
+          "volume": "352.027"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77570.9",
+          "high": "77637.4",
+          "low": "77570.8",
+          "close": "77635.7",
+          "volume": "351.985"
+        }
+      },
+      {
+        "end_ns": 1793493600000000000,
+        "constituents": 2260,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77635.6",
+          "high": "77635.7",
+          "low": "77608.4",
+          "close": "77608.4",
+          "volume": "85.197"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77635.6",
+          "high": "77635.7",
+          "low": "77608.4",
+          "close": "77608.4",
+          "volume": "85.197"
+        }
+      },
+      {
+        "end_ns": 1793493900000000000,
+        "constituents": 2095,
+        "constituent_receipts_after_or_at_boundary": 2,
+        "last_late_receipt_after_boundary_ns": 72143789,
+        "changed_fields": [
+          "close",
+          "volume"
+        ],
+        "final_ohlcv": {
+          "open": "77608.4",
+          "high": "77608.5",
+          "low": "77592.4",
+          "close": "77595.1",
+          "volume": "81.894"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77608.4",
+          "high": "77608.5",
+          "low": "77592.4",
+          "close": "77595.2",
+          "volume": "81.881"
+        }
+      },
+      {
+        "end_ns": 1793494200000000000,
+        "constituents": 1966,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77595.2",
+          "high": "77620.0",
+          "low": "77587.8",
+          "close": "77619.9",
+          "volume": "62.326"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77595.2",
+          "high": "77620.0",
+          "low": "77587.8",
+          "close": "77619.9",
+          "volume": "62.326"
+        }
+      },
+      {
+        "end_ns": 1793494500000000000,
+        "constituents": 7825,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77620.0",
+          "high": "77671.8",
+          "low": "77615.0",
+          "close": "77628.7",
+          "volume": "434.096"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77620.0",
+          "high": "77671.8",
+          "low": "77615.0",
+          "close": "77628.7",
+          "volume": "434.096"
+        }
+      },
+      {
+        "end_ns": 1793494800000000000,
+        "constituents": 4226,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "77628.7",
+          "high": "77666.6",
+          "low": "77614.9",
+          "close": "77638.3",
+          "volume": "252.616"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "77628.7",
+          "high": "77666.6",
+          "low": "77614.9",
+          "close": "77638.3",
+          "volume": "252.616"
+        }
+      }
+    ],
+    "futures-2026-11-01-SOLUSDT": [
+      {
+        "end_ns": 1793491500000000000,
+        "constituents": 2945,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "95.44",
+          "high": "95.48",
+          "low": "95.37",
+          "close": "95.45",
+          "volume": "16347.41"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "95.44",
+          "high": "95.48",
+          "low": "95.37",
+          "close": "95.45",
+          "volume": "16347.41"
+        }
+      },
+      {
+        "end_ns": 1793491800000000000,
+        "constituents": 2295,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "95.45",
+          "high": "95.49",
+          "low": "95.42",
+          "close": "95.45",
+          "volume": "12471.36"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "95.45",
+          "high": "95.49",
+          "low": "95.42",
+          "close": "95.45",
+          "volume": "12471.36"
+        }
+      },
+      {
+        "end_ns": 1793492100000000000,
+        "constituents": 2172,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "95.44",
+          "high": "95.45",
+          "low": "95.34",
+          "close": "95.37",
+          "volume": "26246.00"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "95.44",
+          "high": "95.45",
+          "low": "95.34",
+          "close": "95.37",
+          "volume": "26246.00"
+        }
+      },
+      {
+        "end_ns": 1793492400000000000,
+        "constituents": 2425,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "95.36",
+          "high": "95.4",
+          "low": "95.32",
+          "close": "95.4",
+          "volume": "21764.45"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "95.36",
+          "high": "95.4",
+          "low": "95.32",
+          "close": "95.4",
+          "volume": "21764.45"
+        }
+      },
+      {
+        "end_ns": 1793492700000000000,
+        "constituents": 2840,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "95.39",
+          "high": "95.44",
+          "low": "95.33",
+          "close": "95.42",
+          "volume": "19430.58"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "95.39",
+          "high": "95.44",
+          "low": "95.33",
+          "close": "95.42",
+          "volume": "19430.58"
+        }
+      },
+      {
+        "end_ns": 1793493000000000000,
+        "constituents": 2484,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "95.42",
+          "high": "95.53",
+          "low": "95.42",
+          "close": "95.5",
+          "volume": "20562.68"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "95.42",
+          "high": "95.53",
+          "low": "95.42",
+          "close": "95.5",
+          "volume": "20562.68"
+        }
+      },
+      {
+        "end_ns": 1793493300000000000,
+        "constituents": 5054,
+        "constituent_receipts_after_or_at_boundary": 1,
+        "last_late_receipt_after_boundary_ns": 112424542,
+        "changed_fields": [
+          "volume"
+        ],
+        "final_ohlcv": {
+          "open": "95.51",
+          "high": "95.75",
+          "low": "95.5",
+          "close": "95.72",
+          "volume": "46523.79"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "95.51",
+          "high": "95.75",
+          "low": "95.5",
+          "close": "95.72",
+          "volume": "46483.43"
+        }
+      },
+      {
+        "end_ns": 1793493600000000000,
+        "constituents": 2608,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "95.72",
+          "high": "95.73",
+          "low": "95.64",
+          "close": "95.7",
+          "volume": "16541.52"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "95.72",
+          "high": "95.73",
+          "low": "95.64",
+          "close": "95.7",
+          "volume": "16541.52"
+        }
+      },
+      {
+        "end_ns": 1793493900000000000,
+        "constituents": 2641,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "95.7",
+          "high": "95.7",
+          "low": "95.56",
+          "close": "95.59",
+          "volume": "14752.19"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "95.7",
+          "high": "95.7",
+          "low": "95.56",
+          "close": "95.59",
+          "volume": "14752.19"
+        }
+      },
+      {
+        "end_ns": 1793494200000000000,
+        "constituents": 2475,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "95.59",
+          "high": "95.65",
+          "low": "95.56",
+          "close": "95.62",
+          "volume": "11375.59"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "95.59",
+          "high": "95.65",
+          "low": "95.56",
+          "close": "95.62",
+          "volume": "11375.59"
+        }
+      },
+      {
+        "end_ns": 1793494500000000000,
+        "constituents": 3031,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "95.62",
+          "high": "95.69",
+          "low": "95.58",
+          "close": "95.65",
+          "volume": "11631.95"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "95.62",
+          "high": "95.69",
+          "low": "95.58",
+          "close": "95.65",
+          "volume": "11631.95"
+        }
+      },
+      {
+        "end_ns": 1793494800000000000,
+        "constituents": 2358,
+        "constituent_receipts_after_or_at_boundary": 0,
+        "last_late_receipt_after_boundary_ns": null,
+        "changed_fields": [],
+        "final_ohlcv": {
+          "open": "95.65",
+          "high": "95.74",
+          "low": "95.64",
+          "close": "95.66",
+          "volume": "10727.55"
+        },
+        "observed_trade_ohlcv_before_boundary": {
+          "open": "95.65",
+          "high": "95.74",
+          "low": "95.64",
+          "close": "95.66",
+          "volume": "10727.55"
+        }
+      }
+    ]
+  },
+  "frozen_financial_inputs_verified": 145,
+  "exchange_kline_publication_verified": false,
+  "strategy_receipt_verified": false,
+  "authenticated_account_fill_verified": false,
+  "financial_accounts": 0
+}

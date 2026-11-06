@@ -1,0 +1,54 @@
+{
+  "registration_sha256": "ae6cb4b1215bbb2f815753b82bbc3083425f998808dbfce25163ca9a73d79ff3",
+  "receipt": {
+    "group": "futures-2026-08-31-BTCUSDT",
+    "day": "2026-08-31",
+    "market": "futures",
+    "window": "L",
+    "symbol": "BTCUSDT",
+    "source": "collector",
+    "id": "trade-futures-2026-08-31-BTCUSDT-hour-successor",
+    "hour": 1,
+    "file": "binance_futures/2026-08-31/01/BTCUSDT_trades.parquet",
+    "url": "https://api.cryptohftdata.com/v1/download?file=binance_futures%2F2026-08-31%2F01%2FBTCUSDT_trades.parquet",
+    "started_at_utc": "2026-11-06T14:53:45.641333+00:00",
+    "endpoint_status": 302,
+    "storage_host": "e5de051a8af1332b58a11bd5b2e40258.r2.cloudflarestorage.com",
+    "http_status": 200,
+    "headers": {
+      "content-type": "application/vnd.apache.parquet",
+      "content-length": "1795811",
+      "etag": "\"2c9e845db58d03b9e92c8aec08d64531\"",
+      "last-modified": "Mon, 31 Aug 2026 02:13:53 GMT"
+    },
+    "path": "user_data/crypto_quant/rd_program_20261105_v1/hourly_l2_v001/trade-futures-2026-08-31-BTCUSDT-hour-successor.raw",
+    "bytes": 1795811,
+    "sha256": "d823611687bebe76f61e8103625b30d60771ebc8d4742c2e37df908f7576e353",
+    "state": "body_complete",
+    "finished_at_utc": "2026-11-06T14:53:48.019089+00:00"
+  },
+  "recovered": [
+    {
+      "trade_id": 8034973638,
+      "exchange_trade_ns": 1788137999922000000,
+      "price": "77903.9",
+      "quantity": "0.001",
+      "is_buyer_maker": false,
+      "collector_received_ns": 1788138000045034365,
+      "exchange_event_ms": 1788137999922,
+      "receipt_after_hour_boundary_ns": 45034365
+    },
+    {
+      "trade_id": 8034973639,
+      "exchange_trade_ns": 1788137999928000000,
+      "price": "77903.8",
+      "quantity": "0.025",
+      "is_buyer_maker": true,
+      "collector_received_ns": 1788138000051031527,
+      "exchange_event_ms": 1788137999928,
+      "receipt_after_hour_boundary_ns": 51031527
+    }
+  ],
+  "exchange_kline_publication_verified": false,
+  "financial_accounts": 0
+}
