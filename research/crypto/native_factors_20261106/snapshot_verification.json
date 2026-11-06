@@ -1,0 +1,77 @@
+{
+  "observed_at_utc": "2026-11-06T03:44:53.449287+00:00",
+  "scope": "Actual temporary native SQLite/Trade/Order inventory and frozen RD1/reservations with explicitly synthetic source account/order/balance/quote/funding evidence; no financial run",
+  "engineering_tests_passed": 29,
+  "new_snapshot_tests": 10,
+  "financial_runs": 0,
+  "causality_commands": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "submission_authorized": false,
+  "native_database_inventory_queried": true,
+  "open_partial_fill_inventory_checked": true,
+  "cross_pair_venue_order_identity_checked": true,
+  "futures_reduce_only_source_required": true,
+  "funding_settlement_flag_preserved": true,
+  "source_completeness_independently_certified": false,
+  "whole_native_transaction_atomicity_verified": false,
+  "after_fill_stoploss_liquidation_verified": false,
+  "actual_native_methods": [
+    "Trade.get_trades_proxy",
+    "Order.parse_from_ccxt_object",
+    "Trade.recalc_trade_from_orders",
+    "Trade.commit"
+  ],
+  "external_evidence_still_required": [
+    "Account source identity and complete inventory attestation",
+    "Balances and original balance/quote/order receipt times",
+    "Original open-order payloads and partial base fees",
+    "Funding costs with authoritative settlement state"
+  ],
+  "limitations": [
+    "No native entry submission integration",
+    "No snapshot/reservation/submission transaction across all writers",
+    "No actual historical or exchange account completeness certification",
+    "No paired financial performance evidence"
+  ],
+  "log": {
+    "path": "research/crypto/native_factors_20261106/snapshot_regression_checks.txt",
+    "sha256": "b60f83d0b7d6e719ddf9bf86a768eed73e1f28ab63c55a2c5b1f4b7b2ec18178"
+  },
+  "source_hashes": {
+    "research/crypto/native_factors_20261106/sources/FixedFactorSignals.py": "c8d529c72813196265ba660fd57f9a76cbfa6109eb5b43595b383a5343ef85bf",
+    "research/crypto/native_factors_20261106/sources/native_reductions.py": "ce4aef0359be42ad91e88b648378088343f35fc33e287874ae04736e7dbe9456",
+    "research/crypto/native_factors_20261106/sources/factor_inputs.py": "fad50a2085a1993fe764eca59eb8b368b446d4ab208e36c0e1268df888dfee5b",
+    "research/crypto/native_factors_20261106/test_native_factors.py": "24e0776d9dc58d176768bbe25dd03acfc6cf1f6c5675cab2c3ba1aed4737cbc1",
+    "research/crypto/native_factors_20261106/test_native_reductions.py": "5796cbc9d0ff234980ce28286d4436f95b244d0b464de9cbfd3c0d5dd6b183c5",
+    "research/crypto/native_factors_20261106/reduction_regression_checks.txt": "f52e47bd0150b9af7aed07483c1558c57a0743b866311df6ed6b5acc96d63d01",
+    "freqtrade/freqtradebot.py": "41b94e988989c773e02a00030a530866e4e5be0a31fd0096decc075ce4e91b74",
+    "freqtrade/persistence/custom_data.py": "a48ece9ccf3b1236662337c939df61e89e8839e260209187ef9c408316de035a",
+    "freqtrade/persistence/models.py": "729d261a8927f96dec2700f2f1f1dd16f2f91d43f880c30f48fb0a8d15c38bdf",
+    "freqtrade/persistence/trade_model.py": "a011ca8686a205fd279ef665a2a3d5a1a4e3fb8cec9cbbac7f429eed0da85c2d",
+    "research/crypto/native_factors_20261106/sources/native_snapshot.py": "f7dfaac6c65550d7e8620456389f4d258ed9b95abe578d7555f71e8eb3bfaf45",
+    "research/crypto/native_factors_20261106/test_native_snapshot.py": "c59486544477b026793b4c5ba69d2dc5a8aab3793354113f43713536406b88ba",
+    "research/crypto/native_factors_20261106/README.md": "8e99dc34e6d80196659db94ae51b943b1d998811f2d5bbb493067ae0f5c050c9",
+    "research/crypto/native_factors_20261106/snapshot_checks.txt": "c46e1c05965d70ef59f233f6fd566674056ae8ac165c5d5ccb30cac782fcb8ca",
+    "research/crypto/native_factors_20261106/snapshot_regression_checks.txt": "b60f83d0b7d6e719ddf9bf86a768eed73e1f28ab63c55a2c5b1f4b7b2ec18178",
+    "research/crypto/rd_program_20261105/execution_extension/native_evidence.py": "435e7b004d6b974d311940f615a39ef0b77209c6a61ed90d113856c5f6283045",
+    "research/crypto/rd_program_20261105/execution_extension/reservations.py": "68c0654f17fd8fac8201f58698b0cf54dd6e4adfaa06306f9e27e43935002228",
+    "research/crypto/rd_program_20261105/p0/risk/rd1.py": "6d34d8f0817f3511dfa523e3fb42a51a9f62fa33c333d2aee7373bd82df730f0"
+  },
+  "frozen_manifests": {
+    "research/crypto/rd_program_20261105/freeze.json": {
+      "sha256": "22d71d0cc57eb7a5f2456f755ab4bb524eddc5014c90c7290e472e40d3ae603d",
+      "files_verified": 11,
+      "all_match": true
+    },
+    "research/crypto/official_factor_20261106/freeze.json": {
+      "sha256": "9c8dba145f5a70afc35d9ca58966e2ef6cab929dc357bf41bcbf4606d570fa95",
+      "files_verified": 13,
+      "all_match": true
+    }
+  },
+  "prior_status": {
+    "path": "research/crypto/native_factors_20261106/current_status_v2.json",
+    "sha256": "0173f50826e2851ed60ab4eab3d094e29387e2354b3ec7795d4cc501fca0993a"
+  }
+}
