@@ -1,0 +1,183 @@
+{
+  "observed_at_utc": "2026-11-06T14:47:57.916561+00:00",
+  "input_hashes": {
+    "research/crypto/historical_l2_bridge_20261106/verify_bridge.py": "5ffd5b838471292115db02ae6a57ae954c866b193bba83d57bb99575f43a8c68",
+    "research/crypto/historical_l2_bridge_20261106/replay_registration.json": "748dbb99c9a8fa1ba2f678723133df802f3c4122e44b38aeb7f5f14dbf94fcc6",
+    "research/crypto/historical_l2_bridge_20261106/replay_result.json": "49c57386b4784c730497d0bbf7205e894c0255c9f3003bf49628aab7c5f6627d",
+    "research/crypto/factor_cost_futures_long_20261106/plan.json": "4f89a1cd81fc810fb7b71bbf41993a91712280e55037ec769d98c06cf7c406d2"
+  },
+  "original_snapshot": {
+    "update_id": 11429827365509,
+    "event_ms": 1788123724455,
+    "transaction_ms": 1788123724146,
+    "event_time_copy_ns": 1788123724455000000,
+    "retained_collector_receive_ns": 1788123724923909362,
+    "receive_delay_ns": 468909362,
+    "bid_levels": 500,
+    "ask_levels": 500,
+    "snapshot_best_bid": "78313.60",
+    "snapshot_best_ask": "78313.70",
+    "raw_bid_boundary": "78243.10",
+    "raw_ask_boundary": "78385.10",
+    "bid_at_least_for_complete_20bps": "78399.89979959919839679358717",
+    "ask_at_most_for_complete_20bps": "78228.64271457085828343313373",
+    "boundaries_can_cover_both_sides_20bps": false
+  },
+  "bridges": [
+    {
+      "from_partition": "bridge-2026-08-30-21-BTCUSDT",
+      "to_partition": "bridge-2026-08-30-22-BTCUSDT",
+      "previous_update": {
+        "id": 11430158340794,
+        "received_ns": 1788127199988703951,
+        "event_ms": 1788127199866,
+        "transaction_ms": 1788127199862,
+        "partition": "bridge-2026-08-30-21-BTCUSDT",
+        "level_rows": 28,
+        "first": 11430158339549,
+        "prev": 11430158339458
+      },
+      "next_update": {
+        "id": 11430158341883,
+        "received_ns": 1788127200023874376,
+        "event_ms": 1788127199892,
+        "transaction_ms": 1788127199891,
+        "partition": "bridge-2026-08-30-22-BTCUSDT",
+        "level_rows": 15,
+        "first": 11430158340985,
+        "prev": 11430158340794
+      }
+    },
+    {
+      "from_partition": "bridge-2026-08-30-22-BTCUSDT",
+      "to_partition": "bridge-2026-08-30-23-BTCUSDT",
+      "previous_update": {
+        "id": 11430543911914,
+        "received_ns": 1788130799986293869,
+        "event_ms": 1788130799866,
+        "transaction_ms": 1788130799861,
+        "partition": "bridge-2026-08-30-22-BTCUSDT",
+        "level_rows": 7,
+        "first": 11430543910946,
+        "prev": 11430543910858
+      },
+      "next_update": {
+        "id": 11430543913668,
+        "received_ns": 1788130800012677559,
+        "event_ms": 1788130799892,
+        "transaction_ms": 1788130799890,
+        "partition": "bridge-2026-08-30-23-BTCUSDT",
+        "level_rows": 20,
+        "first": 11430543912070,
+        "prev": 11430543911914
+      }
+    },
+    {
+      "from_partition": "bridge-2026-08-30-23-BTCUSDT",
+      "to_partition": "futures-2026-08-31-BTCUSDT-download",
+      "previous_update": {
+        "id": 11431151338930,
+        "received_ns": 1788134399975320977,
+        "event_ms": 1788134399846,
+        "transaction_ms": 1788134399845,
+        "partition": "bridge-2026-08-30-23-BTCUSDT",
+        "level_rows": 401,
+        "first": 11431151328902,
+        "prev": 11431151328648
+      },
+      "next_update": {
+        "id": 11431151345648,
+        "received_ns": 1788134400001217144,
+        "event_ms": 1788134399872,
+        "transaction_ms": 1788134399871,
+        "partition": "futures-2026-08-31-BTCUSDT-download",
+        "level_rows": 267,
+        "first": 11431151339008,
+        "prev": 11431151338930
+      }
+    },
+    {
+      "from_partition": "futures-2026-08-31-BTCUSDT-download",
+      "to_partition": "bridge-2026-08-31-01-BTCUSDT",
+      "previous_update": {
+        "id": 11431643522143,
+        "received_ns": 1788137999990284496,
+        "event_ms": 1788137999868,
+        "transaction_ms": 1788137999865,
+        "partition": "futures-2026-08-31-BTCUSDT-download",
+        "level_rows": 12,
+        "first": 11431643520674,
+        "prev": 11431643520604
+      },
+      "next_update": {
+        "id": 11431643528794,
+        "received_ns": 1788138000018091703,
+        "event_ms": 1788137999896,
+        "transaction_ms": 1788137999894,
+        "partition": "bridge-2026-08-31-01-BTCUSDT",
+        "level_rows": 58,
+        "first": 11431643522360,
+        "prev": 11431643522143
+      }
+    },
+    {
+      "from_partition": "bridge-2026-08-31-01-BTCUSDT",
+      "to_partition": "bridge-2026-08-31-02-BTCUSDT",
+      "previous_update": {
+        "id": 11432161119581,
+        "received_ns": 1788141599992393681,
+        "event_ms": 1788141599866,
+        "transaction_ms": 1788141599865,
+        "partition": "bridge-2026-08-31-01-BTCUSDT",
+        "level_rows": 106,
+        "first": 11432161107789,
+        "prev": 11432161107658
+      },
+      "next_update": {
+        "id": 11432161125246,
+        "received_ns": 1788141600018435366,
+        "event_ms": 1788141599892,
+        "transaction_ms": 1788141599891,
+        "partition": "bridge-2026-08-31-02-BTCUSDT",
+        "level_rows": 50,
+        "first": 11432161119958,
+        "prev": 11432161119581
+      }
+    },
+    {
+      "from_partition": "bridge-2026-08-31-02-BTCUSDT",
+      "to_partition": "bridge-2026-08-31-03-BTCUSDT",
+      "previous_update": {
+        "id": 11432615107644,
+        "received_ns": 1788145199986087320,
+        "event_ms": 1788145199860,
+        "transaction_ms": 1788145199859,
+        "partition": "bridge-2026-08-31-02-BTCUSDT",
+        "level_rows": 13,
+        "first": 11432615105228,
+        "prev": 11432615105117
+      },
+      "next_update": {
+        "id": 11432615110903,
+        "received_ns": 1788145200014133749,
+        "event_ms": 1788145199888,
+        "transaction_ms": 1788145199885,
+        "partition": "bridge-2026-08-31-03-BTCUSDT",
+        "level_rows": 15,
+        "first": 11432615107844,
+        "prev": 11432615107644
+      }
+    }
+  ],
+  "total_price_rows": 49506860,
+  "total_update_messages": 949999,
+  "applied_update_messages": 946081,
+  "target_applied_update_messages": 136058,
+  "target_cutoffs_with_book": 11,
+  "cutoffs_with_book": 77,
+  "cutoffs_with_bbo_within_known_snapshot": 7,
+  "cutoffs_with_complete_both_sides_20bps": 0,
+  "frozen_financial_inputs_verified": 145,
+  "historical_depth_admission": false,
+  "financial_accounts": 0
+}
