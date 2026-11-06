@@ -1,0 +1,46 @@
+{
+  "observed_at_utc": "2026-11-06T11:33:25.349434+00:00",
+  "completed": [
+    {
+      "id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_L_base",
+      "net_return": -0.07116604532000004,
+      "mdd": 0.1015621320560467,
+      "result_sha256": "6ea779b44b6005f11f79efc4d7640cb266a22977effc2c25729b739f834c92b4",
+      "audit_sha256": "2a4f620a77ec072c7d3d28e390d2591bbcc5cc1dcc0c50dd8b19c69228b99901"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_L_stress",
+      "net_return": -0.08126970423000002,
+      "mdd": 0.10361281456759508,
+      "result_sha256": "46a6ea47c72d96515b54aac69c6694413358e159a393bb9a1a952a0d810e208c",
+      "audit_sha256": "27d16116136159ade532b9498dcede4643003015bc81374c41bcd1e867ae20d6"
+    }
+  ],
+  "verified_live": [
+    {
+      "id": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_L_base",
+      "pid": 95282,
+      "command": [
+        "/Users/chrise/GitHub/freqtrade/.venv-paper/bin/python",
+        "-B",
+        "research/crypto/factor_cost_futures_long_20261106/run_account.py",
+        "--run-id",
+        "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_L_base"
+      ],
+      "rss_bytes": 2251489280,
+      "started_epoch": 1793964340.395713
+    }
+  ],
+  "not_started": [
+    "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_L_stress",
+    "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_L_base",
+    "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_L_stress"
+  ],
+  "exec_session_id": 64123,
+  "batch_complete": false,
+  "total_attempts_started": 46,
+  "total_reserved_after_batch": 49,
+  "remaining_unreserved": 31,
+  "recovery": "Continue session 64123; never restart on observation timeout. Run audit_completed.py for newly completed accounts; write_report.py requires all six audits.",
+  "production_eligible": false
+}
