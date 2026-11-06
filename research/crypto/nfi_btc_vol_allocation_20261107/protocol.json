@@ -1,0 +1,80 @@
+{
+  "registered_at_utc": "2026-11-06T19:25:01.094512+00:00",
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_vol_allocation_20261107/study.py",
+      "sha256": "d3f8e65164933358af422f4a4d3b7a90e844f86604b6da31bb8381fce5083a1a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_vol_allocation_20261107/evaluate.py",
+      "sha256": "53cfad3464bfae7925022c8e8734b8954a2aa4eff3222a83f092a47161f1fe6a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_vol_allocation_20261107/BtcVolTopBoost.py",
+      "sha256": "0eb5e7c5a457f8197e96668aac6a21192a5eb2ef9de23a5c20a6bcc6b545abb2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_vol_allocation_20261107/temporal_native.json",
+      "sha256": "6d2174ae6afc430ce8b0dd90332829e04e98cd0b7904ecfc4e791936f8539b00"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_btc_vol_allocation_20261107/long_native.json",
+      "sha256": "9304a8145a59b40c236f3491774c1a98580bcb8d76e3a12b25085c423a93d74c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/result.json",
+      "sha256": "0db5c6ffd60d9b3c70b742c9be40ff104707cbced6ae00011b29b3f399b70428"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal_result.json",
+      "sha256": "646afef0224d9d4232aac88db16b501a70a7982fd0364ee58c15d740794f2467"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/mark_result.json",
+      "sha256": "52fe467489fa3b44007c581ac6ba5dd92545b8d0c25a75c355a4b9153725e09c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/result.json",
+      "sha256": "d0f1b50cbb2087108e728543b0e2502064711ae75f6b0d74d1d38157af2875a9"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/long_mark_result.json",
+      "sha256": "366e9bffaacf8cb8b529165d2d99f37757b36c006c8f9b594f87a495968ff2cb"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_solo_allocation_20261107_v001/long_mark/admission.json",
+      "sha256": "da4236b558a259a24f6ea8611d7fce6e9057409e7fad08c4c44f3db10d558c6b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/run.py",
+      "sha256": "67f6bba54ae9b3595f8659569b767721aa8bf7907e262107817399f899603cb5"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/long_mark.py",
+      "sha256": "7b5b34c001c1a80ae9711041e6d69c3778e0b5d0a07e547eb2c717a5885fe976"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/temporal.py",
+      "sha256": "529d3b191816817c1bd34817a62a21a76cb6d0dd7259452b1803968f4c85177c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/mark_valuation.py",
+      "sha256": "482c0b08081126a58e7c1386bbeb233c4c31084383d7abda413a49119fd5a654"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/docs/research-20261105/crypto-wide-comparison-20261105/reconstruct-five-minute-reference-v002.py",
+      "sha256": "861494c519d5e849fbd4fc41a989d93e77069711f34add7205ca7a6e614e7c12"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/audit.py",
+      "sha256": "2514cb9d6f537c156ca04a7cfcaa5320e31f71dd51d4db827659c0b8242d1617"
+    }
+  ],
+  "motivation": "Moreira and Muir, Volatility Managed Portfolios, doi:10.3386/w22208",
+  "hypothesis": "BTC calm periods can support a more aggressive X8 first stake than the fixed 1.25x control while avoiding full-size increases in volatile periods.",
+  "rule": "Only pure native Top Coins long first stakes. At a UTC decision day d, use sqrt(sum of squared log close returns)) for the seven BTC daily returns ending on the d-1 candle. Compare to the median of 90 trailing 7-return observations ending on d-8 down to d-97. The reference and latest 7-return window have no shared returns. If both values are positive and finite and the latest is at most the median, use 1.75x the native first stake, subject to original wallet and exchange limits. Use 1x otherwise, including missing prices. Use no interpolated candles. No change to other modes, signals, direction, leverage, or position callbacks.",
+  "gate": "At each of 8 and 15 bps in the 65-day window require full positive net return above original, 5m mark drawdown at most 1pp above original, return divided by 5m drawdown above both fixed 1.25x and A08, at least 20 natural closes, 10 matched scoped campaigns, and nonzero boosted fills. Only after passing both costs, run the 20-month window at both costs. Require each net return above original for full and both calendar slices, full 5m drawdown at most 1pp above original, and full return/5m drawdown above both fixed 1.25x and A08. Preserve all outcomes.",
+  "known_history": "Original, fixed, and A08 controls in both reused retrospective windows were known before registration. Neither window is blind to strategy family.",
+  "candidate_economics_observed": false,
+  "orders_enabled": false
+}
