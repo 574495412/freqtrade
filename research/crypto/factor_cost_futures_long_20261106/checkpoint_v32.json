@@ -1,0 +1,63 @@
+{
+  "observed_at_utc": "2026-11-06T11:55:54.512982+00:00",
+  "completed": [
+    {
+      "id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_L_base",
+      "net_return": -0.07116604532000004,
+      "mdd": 0.1015621320560467,
+      "result_sha256": "6ea779b44b6005f11f79efc4d7640cb266a22977effc2c25729b739f834c92b4",
+      "audit_sha256": "2a4f620a77ec072c7d3d28e390d2591bbcc5cc1dcc0c50dd8b19c69228b99901"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F1FuturesCandleCost_futures_L_stress",
+      "net_return": -0.08126970423000002,
+      "mdd": 0.10361281456759508,
+      "result_sha256": "46a6ea47c72d96515b54aac69c6694413358e159a393bb9a1a952a0d810e208c",
+      "audit_sha256": "27d16116136159ade532b9498dcede4643003015bc81374c41bcd1e867ae20d6"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_L_base",
+      "net_return": -0.07164613067000003,
+      "mdd": 0.10242910567229335,
+      "result_sha256": "c0d866fa513ffb2bdd6519a973c2df455d76325d1b0ca729a714a5fb06a83e81",
+      "audit_sha256": "6ddae62b8b7a502cde31908b51b5e207c84d0b23df33f65b00e11b3bf778a39d"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_F2FuturesCandleCost_futures_L_stress",
+      "net_return": -0.09049383252999998,
+      "mdd": 0.10324214316648661,
+      "result_sha256": "e50a1db4a0e2918a5a19f7fa49e1d38e73b58bda345823c5e3cd15e11cd63dcc",
+      "audit_sha256": "0fb6e77fa1f895503f87e24cda34c22234d811be13ab1d5c898c8dd8e20566b3"
+    },
+    {
+      "id": "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_L_base",
+      "net_return": -0.07277155299000004,
+      "mdd": 0.10087234740745166,
+      "result_sha256": "9f3bff54e991d88334e30978623c4379427094c1fd58035ed7d6d87936349319",
+      "audit_sha256": "bb9693744fe458228a44dbc6d271bc7043ba5a976e172c096b6db0505bd5fe34"
+    }
+  ],
+  "verified_live": [
+    {
+      "id": "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_L_stress",
+      "pid": 98013,
+      "command": [
+        "/Users/chrise/GitHub/freqtrade/.venv-paper/bin/python",
+        "-B",
+        "research/crypto/factor_cost_futures_long_20261106/run_account.py",
+        "--run-id",
+        "CANDLE_MINREM_V1_AverageFuturesCandleControl_futures_L_stress"
+      ],
+      "rss_bytes": 379535360,
+      "started_epoch": 1793965948.680766
+    }
+  ],
+  "not_started": [],
+  "exec_session_id": 64123,
+  "batch_complete": false,
+  "total_attempts_started": 49,
+  "total_reserved_after_batch": 49,
+  "remaining_unreserved": 31,
+  "recovery": "Continue session 64123; only last long stress control remains. Audit with audit_completed.py and account_details.py, then run write_report.py after all six audits. Capture terminal session status and final logs; finish 24-account report and full-goal audit.",
+  "production_eligible": false
+}
