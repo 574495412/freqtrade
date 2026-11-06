@@ -1,10 +1,10 @@
 # 因子研究目标与当前状态
 
-当前机器可读入口：[current_status_v38.json](../research/crypto/native_factors_20261106/current_status_v38.json)。**固定成本研究的 24 个模型账户已全部完成且全部亏损**：16 个 F1/F2 因子账户、8 个共同模拟风险控制。四个市场/因子组均未通过连续压力净收益为正的必要门槛，F2 八个同条件配对均未达到原数值条件。见[最终跨市场/窗口总表](../research/crypto/factor_cost_review_20261106/RESULTS.md)与[合约长短窗口报告](../research/crypto/factor_cost_futures_long_20261106/RESULTS.md)。没有收益提升、新策略晋级或盈利组合证据。
+当前机器可读入口：[current_status_v39.json](../research/crypto/native_factors_20261106/current_status_v39.json)。**固定成本研究的 24 个模型账户已全部完成且全部亏损**：16 个 F1/F2 因子账户、8 个共同模拟风险控制。四个市场/因子组均未通过连续压力净收益为正的必要门槛，F2 八个同条件配对均未达到原数值条件。见[最终跨市场/窗口总表](../research/crypto/factor_cost_review_20261106/RESULTS.md)与[合约长短窗口报告](../research/crypto/factor_cost_futures_long_20261106/RESULTS.md)。没有收益提升、新策略晋级或盈利组合证据。
 
 本批共 2,146,176 个 5m 观察点完成独立净值/敞口重建，合约另核对模型资金费；持仓年龄、DCA、费用、浮亏、退出预留及跨窗风险状态保留。实际台账 **49/80 次尝试**（24 官方、24 模型、1 技术失败），剩余 31 次。会话 64123 已退出 0，六个记录 PID 均不存在，共享金融锁可用；没有运行中的金融账户。[完成回执](../research/crypto/factor_cost_futures_long_20261106/completion.json)替代旧进行中检查点。
 
-已验证的隔离工程包括数量退出 19 项、退出绑定恢复 16 项、首次入场恢复 12 项。首次入场覆盖原提交确认丢失、全成交、部分撤单、零成交终态和原生空 Trade 清理。缺失成交时刻的原生记录由独立成交回执补正。平仓后资金费通过 6 项隔离回放。全窗口历史执行资格仍待完成。完整同 RD1 经济比较和独立留出资格仍缺少证据。见[原生订单恢复说明](../research/crypto/native_submit_recovery_20261106/README.md)和[成本批次审计](../research/crypto/factor_cost_review_20261106/GOAL_AUDIT.md)。
+已验证的隔离工程包括数量退出 19 项、退出绑定恢复 16 项、首次入场恢复 12 项。首次入场覆盖原提交确认丢失、全成交、部分撤单、零成交终态和原生空 Trade 清理。缺失成交时刻的原生记录由独立成交回执补正。平仓后资金费通过 6 项隔离回放。全窗口历史执行资格仍待完成。新抽查的三个公共合约档案包含双侧 ±0.2% 聚合档位，同日同币的 `bookTicker` 请求均返回 404。[历史深度抽查](../research/crypto/historical_depth_check_20261106/README.md)。完整同 RD1 经济比较和独立留出资格仍缺少证据。见[原生订单恢复说明](../research/crypto/native_submit_recovery_20261106/README.md)和[成本批次审计](../research/crypto/factor_cost_review_20261106/GOAL_AUDIT.md)。
 
 旧路线图、32 个 P1 账户、2 次复核、官方样例及失败记录保留；没有操作 paper、读取秘密、启用订单或发送外部通知。以下均为历史阶段记录，旧进行中或“收益账户为 0”的文字不覆盖当前结论。
 

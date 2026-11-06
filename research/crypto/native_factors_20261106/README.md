@@ -1,6 +1,6 @@
 # F1/F2 原生策略接入
 
-当前入口为 `current_status_v38.json`。平仓后资金费修正通过 6 项合成回放。现金与原生已平仓收益对账见[资金费说明](../native_closed_funding_20261106/README.md)。
+当前入口为 `current_status_v39.json`。历史公共档案的双侧窄带深度证据见[抽查记录](../historical_depth_check_20261106/README.md)。平仓后资金费修正通过 6 项合成回放。现金与原生已平仓收益对账见[资金费说明](../native_closed_funding_20261106/README.md)。
 
 最新增量为 `current_status_v35.json`：[退出提交未知的绑定恢复](../native_submit_recovery_20261106/README.md)通过 16 项合成检查，含注册驱动的完整账户恢复。首次入场恢复、平仓后资金费修正和历史资格仍未完成；以下旧状态保持历史含义。
 
