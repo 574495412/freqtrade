@@ -5,13 +5,14 @@
   "mode": "dry_run",
   "production_eligible": false,
   "files": {
-    "deploy/configs/spot.json": "d07b845b3807d1f3782b7be05c2f1608994f4059672e4cc5b82ba11edb412f9d",
-    "deploy/configs/futures.json": "1c57b9bf77f6b5d36dfbf53d2439c237a2ebfb1d61a96d59538789b923626ae3",
+    "deploy/configs/spot.json": "76fb25d38bedb18ee0c2296844b9034ebc097b56353aa5c89169395e57687d8b",
+    "deploy/configs/futures.json": "ef6fbd88293b11973cc79a342f88bdccb8affd9adeee6595f83f4b0ef0a66c2a",
     "deploy/strategy/source.json": "fa9a24723f6eb494718ba7132262cba9279f1f01c1c8f715bb55d411ea86369f",
     "deploy/strategy/nfi-x8/LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
     "deploy/strategy/nfi-x8/NostalgiaForInfinityX8.py": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3",
     "deploy/strategy/nfi-x8/README.md": "d81c3f3169edced9d20cb79c108c05497c7a34acffb4f8101977f6f4684ae132",
-    "pyproject.toml": "37ed53892173ef61e35afd66fdc7f1b359cb0ba2cd81a3579183c08ccdc1c4a3"
+    "pyproject.toml": "37ed53892173ef61e35afd66fdc7f1b359cb0ba2cd81a3579183c08ccdc1c4a3",
+    "deploy/local_proxy.py": "34833344f8d427f72af191e597119ee737b4ad910b6dc8a8eef9d2a40bbeb577"
   },
   "capital_per_market_usdt": 1000,
   "markets": [
@@ -21,5 +22,12 @@
   "note": "Native strategy candidate remains unqualified for real orders; migration changes deployment location only.",
   "upstream_metadata_exceptions": [
     "pyproject.toml"
-  ]
+  ],
+  "transport_revision": {
+    "at_utc": "2026-11-07T15:21:09.867698+00:00",
+    "previous_release_sha256": "753d64cdbc3b45f79f5565bc4a6a2c25441cdabe91850ed37d58d7393f9f6e46",
+    "reason": "CCXT ignores the system proxy by default; explicit loopback httpsProxy restores exchange connectivity.",
+    "signals_costs_universe_leverage_unchanged": true,
+    "existing_ledgers_preserved": true
+  }
 }
