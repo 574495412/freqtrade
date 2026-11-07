@@ -1,0 +1,88 @@
+{
+  "verified_at_beijing": "2026-11-07T23:29:20.534188+08:00",
+  "repair": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/deployment/network-proxy-20261107/applied.json",
+    "sha256": "a30c3ab3e596d8be16da4c06c9d0bdb6c20c3207ab81f68add3286edb0cbfbef"
+  },
+  "release": {
+    "path": "/Users/chrise/GitHub/freqtrade/deploy/release.json",
+    "sha256": "d3b661fefe980cbc205534b4e1a94927b800a34497a46861f409da9230fcf80b"
+  },
+  "services": [
+    {
+      "label": "io.freqtrade.paper.spot",
+      "pid": 29464,
+      "mode": "dry_run",
+      "heartbeat_count_since_transport_patch": 8,
+      "last_heartbeat_beijing": "2026-11-07T23:28:53+08:00",
+      "heartbeat_age_seconds": 27.534188,
+      "proxy_acknowledged_by_native_worker": true,
+      "native_trades_preserved": 3,
+      "restored_open_positions": 1,
+      "new_timeouts_outdated_history_or_errors": 0,
+      "sqlite_integrity": "ok",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/deploy/configs/spot.json",
+        "sha256": "76fb25d38bedb18ee0c2296844b9034ebc097b56353aa5c89169395e57687d8b"
+      }
+    },
+    {
+      "label": "io.freqtrade.paper.x8-addcap.spot",
+      "pid": 29469,
+      "mode": "dry_run",
+      "heartbeat_count_since_transport_patch": 8,
+      "last_heartbeat_beijing": "2026-11-07T23:28:53+08:00",
+      "heartbeat_age_seconds": 27.534188,
+      "proxy_acknowledged_by_native_worker": true,
+      "native_trades_preserved": 0,
+      "restored_open_positions": 0,
+      "new_timeouts_outdated_history_or_errors": 0,
+      "sqlite_integrity": "ok",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/deployment/nfi-x8-addcap/spot/config.json",
+        "sha256": "d1f4d7f705c2d5fb660381c0cbb3f2b0c831f206af1cf477124e2d240b8b10a5"
+      }
+    },
+    {
+      "label": "io.freqtrade.paper.futures",
+      "pid": 29467,
+      "mode": "dry_run",
+      "heartbeat_count_since_transport_patch": 7,
+      "last_heartbeat_beijing": "2026-11-07T23:28:32+08:00",
+      "heartbeat_age_seconds": 48.534188,
+      "proxy_acknowledged_by_native_worker": true,
+      "native_trades_preserved": 5,
+      "restored_open_positions": 3,
+      "new_timeouts_outdated_history_or_errors": 0,
+      "sqlite_integrity": "ok",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/deploy/configs/futures.json",
+        "sha256": "ef6fbd88293b11973cc79a342f88bdccb8affd9adeee6595f83f4b0ef0a66c2a"
+      }
+    },
+    {
+      "label": "io.freqtrade.paper.x8-addcap.futures",
+      "pid": 29472,
+      "mode": "dry_run",
+      "heartbeat_count_since_transport_patch": 7,
+      "last_heartbeat_beijing": "2026-11-07T23:28:33+08:00",
+      "heartbeat_age_seconds": 47.534188,
+      "proxy_acknowledged_by_native_worker": true,
+      "native_trades_preserved": 1,
+      "restored_open_positions": 1,
+      "new_timeouts_outdated_history_or_errors": 0,
+      "sqlite_integrity": "ok",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/deployment/nfi-x8-addcap/futures/config.json",
+        "sha256": "565b6a20bd08a33be038bca2248dbe716d1721bed59929362e3f896d9214d411"
+      }
+    }
+  ],
+  "all_native_trade_states_preserved": true,
+  "all_four_healthy": true,
+  "baseline": "NostalgiaForInfinityX8 v18.0.146",
+  "candidate": "NFIX8AddCapPaper, comparison only",
+  "cash_usdt_per_account": 1000,
+  "real_orders_enabled": false,
+  "limitations": "Two or more healthy native loops establish immediate restart/connectivity acceptance, not future uptime or strategy profitability."
+}

@@ -1,0 +1,296 @@
+{
+  "snapshot": {
+    "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/snapshot.json",
+    "sha256": "54fd8d5bb77dcb9a4d607929ed606a616d99e2f4cb627fa1b19dc264ea7b4320"
+  },
+  "window_start_utc": "2026-11-06T17:00:00+00:00",
+  "window_end_utc": "2026-11-07T15:07:00+00:00",
+  "minute_observations": 1328,
+  "accounts": {
+    "spot_original": {
+      "market": "spot",
+      "version": "original",
+      "nav_begin_usdt": "1009.2418338600000",
+      "nav_end_usdt": "1008.3972332700000",
+      "window_return_pct": -0.08368664096787344,
+      "minute_drawdown_pct": 0.5858064867751142,
+      "window_net_usdt": "-0.8446005900000",
+      "realized_lifetime_usdt": "6.57666669",
+      "window_new_fills": 0,
+      "window_new_orders": 0,
+      "window_closed_trades": 0,
+      "window_additions": 0,
+      "positions": [
+        {
+          "pair": "RUNE/USDT",
+          "is_short": 0,
+          "entry_filled_at_utc": "2026-11-06T11:20:04.124000+00:00",
+          "entry_tag": "145",
+          "entry_price": "0.589",
+          "end_mark": "0.59700000",
+          "pnl_at_end_usdt": "1.8205665800000",
+          "window_pnl_usdt": "-0.8446005900000",
+          "public_lifetime_funding_usdt": "0",
+          "native_stored_funding_usdt": 0.0,
+          "entry_fills": 1,
+          "additions": 0
+        }
+      ],
+      "ledger": {
+        "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/spot_original_ledger.json",
+        "sha256": "28bbfba312d492f15fb7987c52925f21ffbc039d91409a69b9568620a5cb0d48"
+      },
+      "nav": {
+        "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/spot_original_nav.json",
+        "sha256": "f3dea3bc1bbcb278b16a98455b662cda693a9cf48df55268888e9ca257129297"
+      }
+    },
+    "spot_addcap": {
+      "market": "spot",
+      "version": "addcap",
+      "nav_begin_usdt": "1000",
+      "nav_end_usdt": "1000",
+      "window_return_pct": 0.0,
+      "minute_drawdown_pct": 0.0,
+      "window_net_usdt": "0",
+      "realized_lifetime_usdt": "0",
+      "window_new_fills": 0,
+      "window_new_orders": 0,
+      "window_closed_trades": 0,
+      "window_additions": 0,
+      "positions": [],
+      "ledger": {
+        "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/spot_addcap_ledger.json",
+        "sha256": "425060475a00d7f3131c91d02cb0aae75dfb6582ffffa6d17d7e7f3c3efd70e6"
+      },
+      "nav": {
+        "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/spot_addcap_nav.json",
+        "sha256": "2ae68f284dd93e07bc3fae5523b92713d4e043dc4b153163f38326967597ecb8"
+      }
+    },
+    "futures_original": {
+      "market": "futures",
+      "version": "original",
+      "nav_begin_usdt": "995.303551502706860000",
+      "nav_end_usdt": "999.690829565835980000",
+      "window_return_pct": 0.44079799137712494,
+      "minute_drawdown_pct": 0.12258482820373863,
+      "window_net_usdt": "4.387278063129120000",
+      "realized_lifetime_usdt": "1.29339567",
+      "window_new_fills": 0,
+      "window_new_orders": 0,
+      "window_closed_trades": 0,
+      "window_additions": 0,
+      "positions": [
+        {
+          "pair": "IOTX/USDT:USDT",
+          "is_short": 1,
+          "entry_filled_at_utc": "2026-11-05T22:35:05.936000+00:00",
+          "entry_tag": "562",
+          "entry_price": "0.003069",
+          "end_mark": "0.00304900",
+          "pnl_at_end_usdt": "0.22427508115200000",
+          "window_pnl_usdt": "1.30123080457600000",
+          "public_lifetime_funding_usdt": "0.02101412755200000",
+          "native_stored_funding_usdt": 0.0,
+          "entry_fills": 1,
+          "additions": 0
+        },
+        {
+          "pair": "AXS/USDT:USDT",
+          "is_short": 1,
+          "entry_filled_at_utc": "2026-11-05T23:10:23.039000+00:00",
+          "entry_tag": "562",
+          "entry_price": "0.8118",
+          "end_mark": "0.82746829",
+          "pnl_at_end_usdt": "-0.82947166105400000",
+          "window_pnl_usdt": "1.86777166614600000",
+          "public_lifetime_funding_usdt": "0.01951357054600000",
+          "native_stored_funding_usdt": 0.0,
+          "entry_fills": 1,
+          "additions": 0
+        },
+        {
+          "pair": "NEO/USDT:USDT",
+          "is_short": 1,
+          "entry_filled_at_utc": "2026-11-05T23:10:12.594000+00:00",
+          "entry_tag": "562",
+          "entry_price": "1.836",
+          "end_mark": "1.87798491",
+          "pnl_at_end_usdt": "-0.997369524262020000",
+          "window_pnl_usdt": "1.218275592407120000",
+          "public_lifetime_funding_usdt": "0.013693118138700000",
+          "native_stored_funding_usdt": 0.0,
+          "entry_fills": 1,
+          "additions": 0
+        }
+      ],
+      "ledger": {
+        "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_original_ledger.json",
+        "sha256": "c496c4358d8377f02f7d809ec8922006469bffe6d71bba4a552bae636139bf7d"
+      },
+      "nav": {
+        "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_original_nav.json",
+        "sha256": "86d511663195d81719f90d2d9ceae2b7cebf8100ecf80c743a9299d40655ba32"
+      }
+    },
+    "futures_addcap": {
+      "market": "futures",
+      "version": "addcap",
+      "nav_begin_usdt": "1000",
+      "nav_end_usdt": "998.95465596522593300",
+      "window_return_pct": -0.1045344034774067,
+      "minute_drawdown_pct": 0.12469063818344454,
+      "window_net_usdt": "-1.04534403477406700",
+      "realized_lifetime_usdt": "0",
+      "window_new_fills": 1,
+      "window_new_orders": 1,
+      "window_closed_trades": 0,
+      "window_additions": 0,
+      "positions": [
+        {
+          "pair": "RUNE/USDT:USDT",
+          "is_short": 1,
+          "entry_filled_at_utc": "2026-11-07T07:30:15.779000+00:00",
+          "entry_tag": "562",
+          "entry_price": "0.5834",
+          "end_mark": "0.59740000",
+          "pnl_at_end_usdt": "-1.04534403477406700",
+          "window_pnl_usdt": "-1.04534403477406700",
+          "public_lifetime_funding_usdt": "0.00078076522593300",
+          "native_stored_funding_usdt": 0.0,
+          "entry_fills": 1,
+          "additions": 0
+        }
+      ],
+      "ledger": {
+        "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_addcap_ledger.json",
+        "sha256": "e18c6befbc433e31ea5ff5e55b18ff306c2d79165608551bab04dd2fe60af363"
+      },
+      "nav": {
+        "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_addcap_nav.json",
+        "sha256": "bc675850275d09eefe04766b45c98d0780e9908b34b37dcd5709094df8780c33"
+      }
+    }
+  },
+  "public_sources": {
+    "spot_RUNEUSDT_0": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/spot_RUNEUSDT_0.json",
+      "sha256": "aaf31a7c12b7fd914f609cae0b5629640ad64acb4a40f90fff83845fd0391c4b"
+    },
+    "spot_RUNEUSDT_1": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/spot_RUNEUSDT_1.json",
+      "sha256": "331cd5072c4cb59117472b756170cf68eb721bd211b4a0942814a5bbf0d7d986"
+    },
+    "spot_addcap_config": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/spot_addcap_config.json",
+      "sha256": "a6bc79d0632a19e6bb3a5b35e3a89b697f1d1872607f620571fa9c4d7867079a"
+    },
+    "spot_addcap_nav": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/spot_addcap_nav.json",
+      "sha256": "2ae68f284dd93e07bc3fae5523b92713d4e043dc4b153163f38326967597ecb8"
+    },
+    "spot_addcap_nav_v001": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/spot_addcap_nav_v001.json",
+      "sha256": "2ae68f284dd93e07bc3fae5523b92713d4e043dc4b153163f38326967597ecb8"
+    },
+    "spot_original_config": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/spot_original_config.json",
+      "sha256": "d07b845b3807d1f3782b7be05c2f1608994f4059672e4cc5b82ba11edb412f9d"
+    },
+    "spot_original_nav": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/spot_original_nav.json",
+      "sha256": "f3dea3bc1bbcb278b16a98455b662cda693a9cf48df55268888e9ca257129297"
+    },
+    "spot_original_nav_v001": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/spot_original_nav_v001.json",
+      "sha256": "9494ff4a3459d70e4655ac68a11dea3053abfcfb22d06b5dc1c3d4884233156f"
+    },
+    "futures_AXSUSDT_0": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_AXSUSDT_0.json",
+      "sha256": "92474f59110cc02c782e77b3334923027278ca0e88a088498f67b9e20b41a8c6"
+    },
+    "futures_AXSUSDT_1": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_AXSUSDT_1.json",
+      "sha256": "44a2f6819a46d2bc7d253cf8ee07a90f0ddfd0718c8952bead2fec476b9fbf0a"
+    },
+    "futures_IOTXUSDT_0": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_IOTXUSDT_0.json",
+      "sha256": "3ccc635d69f7a6a85a910e092ca44c1687ee69399dc705be07d0d73b7db7c12f"
+    },
+    "futures_IOTXUSDT_1": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_IOTXUSDT_1.json",
+      "sha256": "719f3f3aced06fda71b1d8e81682a581b5afd47609b40b82f644b3f139c888c3"
+    },
+    "futures_NEOUSDT_0": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_NEOUSDT_0.json",
+      "sha256": "5584ea6cdb0281f4c501f54b877877c65a61718453bf733a9420c00a67149aa9"
+    },
+    "futures_NEOUSDT_1": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_NEOUSDT_1.json",
+      "sha256": "4005726cd1216f6a025ba5b8e60022c81b3a3cd661fd4926191c4e6c329c0c51"
+    },
+    "futures_RUNEUSDT_0": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_RUNEUSDT_0.json",
+      "sha256": "92311f29e907585ff41d2eaf31b70d864cbb4d72f96c0750c4face6f6480688b"
+    },
+    "futures_RUNEUSDT_1": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_RUNEUSDT_1.json",
+      "sha256": "a24b15f24749293f85d84c1a6483f12170baf82b08e395b091efd95e6bb67adf"
+    },
+    "futures_addcap_config": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_addcap_config.json",
+      "sha256": "5a79ab956d5779c7c5b2fc9983a6cbfb8201b4dc14cc00e4d767c81c82dee05a"
+    },
+    "futures_addcap_nav": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_addcap_nav.json",
+      "sha256": "bc675850275d09eefe04766b45c98d0780e9908b34b37dcd5709094df8780c33"
+    },
+    "futures_addcap_nav_v001": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_addcap_nav_v001.json",
+      "sha256": "bc675850275d09eefe04766b45c98d0780e9908b34b37dcd5709094df8780c33"
+    },
+    "futures_original_config": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_original_config.json",
+      "sha256": "1c57b9bf77f6b5d36dfbf53d2439c237a2ebfb1d61a96d59538789b923626ae3"
+    },
+    "futures_original_nav": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_original_nav.json",
+      "sha256": "86d511663195d81719f90d2d9ceae2b7cebf8100ecf80c743a9299d40655ba32"
+    },
+    "futures_original_nav_v001": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/futures_original_nav_v001.json",
+      "sha256": "86d511663195d81719f90d2d9ceae2b7cebf8100ecf80c743a9299d40655ba32"
+    },
+    "funding_AXSUSDT": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/funding_AXSUSDT.json",
+      "sha256": "78c3670d4115e2868b66669ae10648a89b85728df55375911df9254fe7970ef0"
+    },
+    "funding_IOTXUSDT": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/funding_IOTXUSDT.json",
+      "sha256": "0ecc7618318870da8a892d5c244fde059516ebee23fad979f4eb2874aea212b9"
+    },
+    "funding_NEOUSDT": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/funding_NEOUSDT.json",
+      "sha256": "26ac58ff392cce8cd2af0daeeb2d3e982dcd31d67f72aeae8ad3ebb791040663"
+    },
+    "funding_RUNEUSDT": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime/funding_RUNEUSDT.json",
+      "sha256": "7f28ecde0adc06257371019a76353f8cf4e2b26311c29f9e5ab176cbba187b82"
+    }
+  },
+  "cash_currency": "USDT",
+  "mode": "dry_run",
+  "strategy_effect_verified": false,
+  "execution_connectivity_degraded_before_repair": true,
+  "valuation": "Operational reconciliation of existing native Freqtrade fills, minute spot closes/perpetual marks, recorded entry fees, estimated closing fees, actual public funding records. No new strategy backtest or hypothetical trades.",
+  "limitations": [
+    "Original carried positions; candidate started flat. Same observation window is not matched initial state.",
+    "Only one candidate fill and no completed candidate trades or additions; AddCap rule effect unidentified.",
+    "Both perpetual workers had observed request timeouts before the later proxy repair; candidate RUNE history was stale. This interval is not a clean continuous-execution forward test.",
+    "Minute closes omit intraminute drawdown; marks and estimated exit fees are not executable proceeds.",
+    "Public funding calculation is separate from native persisted accrued funding; not authenticated exchange settlement."
+  ],
+  "production_eligible": false,
+  "orders_enabled": false
+}

@@ -1,0 +1,150 @@
+{
+  "decided_at_utc": "2026-11-07T15:29:20.907331+00:00",
+  "decision": "KEEP_ORIGINAL_NFI_X8_AS_PAPER_BASELINE; KEEP_ADDCAP_SEPARATE_FOR_COMPARISON",
+  "user_scope": "Explicit user answer: \u63a5\u5165\u6a21\u62df\u76d8\uff08\u6cbf\u7528\u6b64\u524d\u7ea6\u5b9a\uff09",
+  "selected_strategy": "NostalgiaForInfinityX8 v18.0.146",
+  "source_commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+  "engine": "Official Freqtrade c051e9065c5b677f03817dd1f83cb980af1ed684; NFI is third-party, not an official profitable strategy.",
+  "selection_meaning": "Operational fallback to the existing reproducible paper baseline, not a statistically proven global optimum or a cross-contract return ranking.",
+  "research_closeout": {
+    "native_accounts_rechecked": 72,
+    "actual_bench_rows_rechecked": 72,
+    "scope": "Six directly comparable native perpetual portfolio studies and their matched low-volatility controls; not an exhaustive ranking of all research or a comparison against different NFI contracts.",
+    "new_backtests_run": 0,
+    "existing_factor_catalog_profiles": 636,
+    "existing_factor_catalog_open_conditional_discoveries": 0,
+    "catalog": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-residual-vol/agent/research/crypto_horizon_candidate_catalog_20261107/catalog.json",
+      "sha256": "a354314a3d05c7f38c11c5c3b8e7fd0852fa119c9ba8a4ff9e8359929a2b5090"
+    },
+    "new_replacement_strategy_selected": false,
+    "prior_rejections_and_gates_unchanged": true,
+    "risk_tolerance": "Future newly frozen contracts may allow historical DD up to50%; this does not retroactively admit rejected accounts or configure a guaranteed live stop.",
+    "volatility_label_correction": "Earlier tables called total/residual volatility blend original low-volatility combination; it is not pure core_low_volatility_63. Three original windows contain19 unfilled plan rejections in total per cost tier, so profits alone do not establish execution readiness."
+  },
+  "paper_contract": {
+    "spot_pairs": 36,
+    "futures_pairs": 40,
+    "initial_usdt_per_independent_account": 1000,
+    "leverage": 1,
+    "spot_fee_bps_per_side": 13,
+    "futures_fee_bps_per_side": 8,
+    "max_open_trades_per_account": 6,
+    "futures_margin_mode": "isolated",
+    "comparison_accounts_are_separate": true,
+    "signals_universe_costs_leverage_and_account_state_preserved": true
+  },
+  "observation_window_start_utc": "2026-11-06T17:00:00+00:00",
+  "observation_window_end_utc": "2026-11-07T15:07:00+00:00",
+  "paper_observed_results": {
+    "spot_original": {
+      "window_return_pct": -0.08368664096787344,
+      "minute_drawdown_pct": 0.5858064867751142,
+      "window_new_fills": 0,
+      "window_closed_trades": 0,
+      "window_additions": 0,
+      "nav_begin_usdt": "1009.2418338600000",
+      "nav_end_usdt": "1008.3972332700000"
+    },
+    "spot_addcap": {
+      "window_return_pct": 0.0,
+      "minute_drawdown_pct": 0.0,
+      "window_new_fills": 0,
+      "window_closed_trades": 0,
+      "window_additions": 0,
+      "nav_begin_usdt": "1000",
+      "nav_end_usdt": "1000"
+    },
+    "futures_original": {
+      "window_return_pct": 0.44079799137712494,
+      "minute_drawdown_pct": 0.12258482820373863,
+      "window_new_fills": 0,
+      "window_closed_trades": 0,
+      "window_additions": 0,
+      "nav_begin_usdt": "995.303551502706860000",
+      "nav_end_usdt": "999.690829565835980000"
+    },
+    "futures_addcap": {
+      "window_return_pct": -0.1045344034774067,
+      "minute_drawdown_pct": 0.12469063818344454,
+      "window_new_fills": 1,
+      "window_closed_trades": 0,
+      "window_additions": 0,
+      "nav_begin_usdt": "1000",
+      "nav_end_usdt": "998.95465596522593300"
+    }
+  },
+  "optimized_strategy_improvement_verified": false,
+  "observation_execution_limitation": "This observation window includes pre-repair exchange timeouts and stale candidate history. The mark-based ledger reconciliation is valid within its scope, but it is not a clean continuous-execution forward comparison.",
+  "insufficient_sample": "AddCap spot0fills; perpetual1entry,0completed trades,0additions. Original carries positions and AddCap starts flat. The common-window return gap does not identify AddCap rule effects.",
+  "deployment": {
+    "healthy_paper_workers": 4,
+    "restored_open_positions": 5,
+    "explicit_loopback_proxy": "http://127.0.0.1:7897",
+    "ledger_backups_and_integrity_checked": true,
+    "healthy_native_heartbeat_cycles_after_restart": true,
+    "new_timeouts_or_stale_history_observed_after_restart": false,
+    "runtime_evidence": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime_verification.json",
+      "sha256": "9fca69383a27b24fc7de6ca5f11d13c39d6726bea621ca0d5d836a63d293cb32"
+    }
+  },
+  "historical_NFI_scope": "Spot36 and perpetual40 have different execution, costs, directions and risk. Their returns are not a matched head-to-head ranking. Historical dates precede the pinned X8 source release; not independent OOS.",
+  "historical_NFI_causality_gap": "Prior native lookahead analyses retain three exit-time anomalies in each market; this accounting recheck does not resolve them.",
+  "inputs": {
+    "native_comparison.json": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/native_comparison.json",
+      "sha256": "99b29197a2f75a4dc5a199d9e7ca3f49f958192f6d8c7c9bf7e69568ae121ad4"
+    },
+    "nfi_history.json": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/nfi_history.json",
+      "sha256": "913360223df65df478d430a6cc1308c5e17a3d74db866937adb462127289511b"
+    },
+    "paper_comparison.json": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/paper_comparison.json",
+      "sha256": "407c35506206560b08984eacb42999ed6d3141c481f6eab6143345b6c90a89c0"
+    },
+    "paper_verification.json": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/paper_verification.json",
+      "sha256": "42a11997d3774777e110a863bcddb4673f70d444e9414895178c6db961754f68"
+    },
+    "runtime_verification.json": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime_verification.json",
+      "sha256": "9fca69383a27b24fc7de6ca5f11d13c39d6726bea621ca0d5d836a63d293cb32"
+    }
+  },
+  "implementation": {
+    "snapshot.py": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/snapshot.py",
+      "sha256": "742346027793847694e2d0f1d9605df712cedeebb6d777e0febb863d09ad96fc"
+    },
+    "observe.py": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/observe.py",
+      "sha256": "6cbb46a3b9fffac9d63f9e176b2975d9f2d4c8c7ebdad7ee2c2b5ac7ecd7379a"
+    },
+    "verify_paper.py": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/verify_paper.py",
+      "sha256": "b9ffd6874858725ab08566aa57340095c9427346d6e8307fdd27a187ca28f349"
+    },
+    "consolidate.py": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/consolidate.py",
+      "sha256": "7dfcd303ef75b160d3727ad001a16428bdfaaddec5cb3c20596c845ee501a95e"
+    },
+    "nfi_history.py": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/nfi_history.py",
+      "sha256": "7355340c830a27b8d84ed97eada877eb3b63c0ff04eb0b7aa089ee571070b7d8"
+    },
+    "runtime_health.py": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/runtime_health.py",
+      "sha256": "2bb0c6f5e871e0a9d4e301aca51e23f7e87e95756e8c55f31ee88881e632d12b"
+    },
+    "closeout.py": {
+      "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/closeout.py",
+      "sha256": "4f6ffd5c8ec0cecb62ebc5c67e66c51d8f0e617cf5a3fd1b9a109eb86da116ba"
+    }
+  },
+  "real_orders_enabled": false,
+  "production_eligible": false,
+  "independent_forward_profit_proven": false,
+  "new_strategy_research_stopped": true
+}

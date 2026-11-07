@@ -1,0 +1,47 @@
+{
+  "registered_at_utc": "2026-11-06T16:04:41.413748+00:00",
+  "hypothesis": "A native cap of two concurrently open futures short slots might reduce clustered exposure. The retained account is used only to screen admission pressure and explain the current strategy.",
+  "already_known": "Long and short aggregate baseline results were published. Four short tag-562 paper entries were observed. Historical tag/slot outcomes were not yet extracted for this review.",
+  "source_commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+  "strategy_sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3",
+  "audit_code_sha256": "af3ea7f44c8f282d8caad53ec4cb82eaf46b4f112fd5bd5f8f4575454e08989b",
+  "case_input_hashes": {
+    "futures_L_8bps": {
+      "archive_sha256": "80e731e8528e6c95a424e71ae8867b1fe48f914ecbb4569e34c8f131f9743c73",
+      "result_sha256": "5b794f9e1c98f6d7f1a24cf4ce1a6f283a89b1450c86b7dde1005afca4db3de4",
+      "curve_sha256": "b753e652a1c1301f00ef1ea2301e22fa226b9bde6361ff3b9fd31404d2bb8c21",
+      "independent_audit_sha256": "cf258866a38df96d388515f1b44b6ed2c71f1a87760c247c968d1862e12880f3"
+    },
+    "futures_L_15bps": {
+      "archive_sha256": "e2ff3c9a7de5960375b63270e2ce1ee35a4eca47a43a28ad1ad2cc3a08624fb3",
+      "result_sha256": "cf40128830760b304a0da1c0a7a26f23f32372697b71e50feac8748df239e2c3",
+      "curve_sha256": "43b2f8ba81621adef48080f17fb67e9ea985f3e95db616bbeb711886cf3c2fa2",
+      "independent_audit_sha256": "2c20e8189d69f7e4c0b7ba820a9d65c5bce8dda920721290723b1ce6c82c6193"
+    },
+    "futures_post_source_8bps": {
+      "archive_sha256": "629f90a9ca79bbee320ddbbe224b10c4edf2baac7da96c476f1efd5d6f258635",
+      "result_sha256": "bf207251793cd6e9632023e813807d3a81289cd98fcac70ecd17602820a3cf5b",
+      "curve_sha256": "3bcbf5b5d15c254c12621152fb42d0d81b030d77b8d9b670b4377c1852b053d4",
+      "independent_audit_sha256": "3a5a1ad56c5a51120afd48f14178dacf6e2de839dfa93df96f51f41713c7f63a"
+    },
+    "spot_L_13bps": {
+      "archive_sha256": "f1d210ec06126d5193ec8891aebfb0b38d112f753527c2a601981cc14804b331",
+      "result_sha256": "d4a8eaeca9b7e3ad775f759700673c6f3f6dfb4c3f95d518cbd0d7eded52a9c2",
+      "curve_sha256": "fb9baccc699c9f0d3cd869bf63e37ecb88e5b2d6dc90e285a8879b903a06b0e4",
+      "independent_audit_sha256": "aef5f434cc3280a4c9233b63f5476715536eeebf42108a72af57d26a8c6178f7"
+    },
+    "spot_L_20bps": {
+      "archive_sha256": "1da7d037e3de189fdfd88e3753078ec3d221a40d0efb8b015bc794bf32e00b1e",
+      "result_sha256": "be9d006443ca3752ee82daeb442b51637dee09112262acd5a02e6792f6dce48b",
+      "curve_sha256": "bf3f8655b809104301c5d62f32868390d90ca5007ce360251a23efc8d92c2252",
+      "independent_audit_sha256": "365be14dba4d6745509cdab09f815941baf6f7df7d4460429a885e4197262f05"
+    }
+  },
+  "slot_policy": "futures_max_open_trades_short=2 would be the only candidate change. Timestamp ties are a separate cohort. The observed entry-pressure groups do not estimate a counterfactual account.",
+  "evaluation_boundary": "No new account before candidate and causal gates are separately registered. No strategy tuning or deletion based on retrospective trade subsets.",
+  "amendment": {
+    "at_utc": "2026-11-06T16:05:37.393062+00:00",
+    "previous_registration_sha256": "30a01c9b22333ef76095a353874b27cc22b2edc7dad7766e608984364b543be9",
+    "reason": "Use a set literal for the same five Top Coins tags after lint; no analytical rule or input changed."
+  }
+}

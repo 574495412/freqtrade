@@ -1,0 +1,311 @@
+{
+  "observed_at_utc": "2026-11-06T16:05:37.669519+00:00",
+  "strategy_commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "markets": {
+    "spot": {
+      "pid": 10546,
+      "db_open_confirmed": true,
+      "config_sha256": "d07b845b3807d1f3782b7be05c2f1608994f4059672e4cc5b82ba11edb412f9d",
+      "settings": {
+        "strategy": "NostalgiaForInfinityX8",
+        "dry_run": true,
+        "trading_mode": "spot",
+        "dry_run_wallet": 1000,
+        "max_open_trades": 6,
+        "stake_amount": "unlimited",
+        "tradable_balance_ratio": 0.99,
+        "fee": 0.0013,
+        "timeframe": "5m",
+        "grinding_enable": true,
+        "order_types": {
+          "entry": "limit",
+          "exit": "limit",
+          "emergency_exit": "limit",
+          "force_entry": "limit",
+          "force_exit": "limit",
+          "stoploss": "limit",
+          "stoploss_on_exchange": false,
+          "stoploss_on_exchange_interval": 60,
+          "stoploss_on_exchange_limit_ratio": 0.99
+        },
+        "unfilledtimeout": {
+          "entry": 3,
+          "exit": 2,
+          "exit_timeout_count": 0,
+          "unit": "minutes"
+        },
+        "entry_pricing": {
+          "price_side": "other",
+          "use_order_book": false,
+          "order_book_top": 1,
+          "price_last_balance": 0,
+          "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+          }
+        },
+        "exit_pricing": {
+          "price_side": "other",
+          "use_order_book": false,
+          "order_book_top": 1,
+          "price_last_balance": 0
+        },
+        "pairlists": [
+          {
+            "method": "StaticPairList"
+          }
+        ]
+      },
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT",
+        "SOL/USDT",
+        "AVAX/USDT",
+        "DOGE/USDT",
+        "XRP/USDT",
+        "ADA/USDT",
+        "LINK/USDT",
+        "DOT/USDT",
+        "FIL/USDT",
+        "NEAR/USDT",
+        "ATOM/USDT",
+        "DYDX/USDT",
+        "LTC/USDT",
+        "BCH/USDT",
+        "ETC/USDT",
+        "GALA/USDT",
+        "SAND/USDT",
+        "UNI/USDT",
+        "IOTA/USDT",
+        "RUNE/USDT",
+        "AXS/USDT",
+        "EGLD/USDT",
+        "ALGO/USDT",
+        "SNX/USDT",
+        "CRV/USDT",
+        "MASK/USDT",
+        "SUSHI/USDT",
+        "KSM/USDT",
+        "IOTX/USDT",
+        "MANA/USDT",
+        "NEO/USDT",
+        "GRT/USDT",
+        "TRX/USDT",
+        "SKL/USDT",
+        "THETA/USDT"
+      ],
+      "trades": [
+        {
+          "pair": "SAND/USDT",
+          "is_open": 0,
+          "is_short": 0,
+          "leverage": 1.0,
+          "open_date": "2026-11-05 15:25:06.900402",
+          "close_date": "2026-11-05 19:45:04.994000",
+          "open_rate": 0.042,
+          "stake_amount": 164.976,
+          "close_profit_abs": 5.49463174,
+          "enter_tag": "142 ",
+          "filled_orders": 2
+        },
+        {
+          "pair": "CRV/USDT",
+          "is_open": 0,
+          "is_short": 0,
+          "leverage": 1.0,
+          "open_date": "2026-11-05 15:55:04.448612",
+          "close_date": "2026-11-05 16:59:34.897000",
+          "open_rate": 0.2508,
+          "stake_amount": 164.97624,
+          "close_profit_abs": 1.08203495,
+          "enter_tag": "141 142 ",
+          "filled_orders": 2
+        },
+        {
+          "pair": "RUNE/USDT",
+          "is_open": 1,
+          "is_short": 0,
+          "leverage": 1.0,
+          "open_date": "2026-11-06 11:20:04.125253",
+          "close_date": null,
+          "open_rate": 0.589,
+          "stake_amount": 166.0391,
+          "close_profit_abs": null,
+          "enter_tag": "145 ",
+          "filled_orders": 1
+        }
+      ]
+    },
+    "futures": {
+      "pid": 10548,
+      "db_open_confirmed": true,
+      "config_sha256": "1c57b9bf77f6b5d36dfbf53d2439c237a2ebfb1d61a96d59538789b923626ae3",
+      "settings": {
+        "strategy": "NostalgiaForInfinityX8",
+        "dry_run": true,
+        "trading_mode": "futures",
+        "margin_mode": "isolated",
+        "dry_run_wallet": 1000,
+        "max_open_trades": 6,
+        "stake_amount": "unlimited",
+        "tradable_balance_ratio": 0.99,
+        "fee": 0.0008,
+        "timeframe": "5m",
+        "grinding_enable": true,
+        "nfi_parameters": {
+          "futures_mode_leverage": 1.0,
+          "futures_mode_leverage_rebuy_mode": 1.0,
+          "futures_mode_leverage_grind_mode": 1.0
+        },
+        "order_types": {
+          "entry": "limit",
+          "exit": "limit",
+          "emergency_exit": "limit",
+          "force_entry": "limit",
+          "force_exit": "limit",
+          "stoploss": "limit",
+          "stoploss_on_exchange": false,
+          "stoploss_on_exchange_interval": 60,
+          "stoploss_on_exchange_limit_ratio": 0.99
+        },
+        "unfilledtimeout": {
+          "entry": 3,
+          "exit": 2,
+          "exit_timeout_count": 0,
+          "unit": "minutes"
+        },
+        "entry_pricing": {
+          "price_side": "other",
+          "use_order_book": true,
+          "order_book_top": 1,
+          "price_last_balance": 0,
+          "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+          }
+        },
+        "exit_pricing": {
+          "price_side": "other",
+          "use_order_book": true,
+          "order_book_top": 1,
+          "price_last_balance": 0
+        },
+        "pairlists": [
+          {
+            "method": "StaticPairList"
+          }
+        ]
+      },
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT",
+        "AVAX/USDT:USDT",
+        "TRB/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "XRP/USDT:USDT",
+        "ADA/USDT:USDT",
+        "BNB/USDT:USDT",
+        "LINK/USDT:USDT",
+        "DOT/USDT:USDT",
+        "FIL/USDT:USDT",
+        "NEAR/USDT:USDT",
+        "ATOM/USDT:USDT",
+        "DYDX/USDT:USDT",
+        "LTC/USDT:USDT",
+        "BCH/USDT:USDT",
+        "ETC/USDT:USDT",
+        "GALA/USDT:USDT",
+        "SAND/USDT:USDT",
+        "UNI/USDT:USDT",
+        "IOTA/USDT:USDT",
+        "RUNE/USDT:USDT",
+        "AXS/USDT:USDT",
+        "AAVE/USDT:USDT",
+        "EGLD/USDT:USDT",
+        "ALGO/USDT:USDT",
+        "SNX/USDT:USDT",
+        "CRV/USDT:USDT",
+        "MASK/USDT:USDT",
+        "SUSHI/USDT:USDT",
+        "KSM/USDT:USDT",
+        "IOTX/USDT:USDT",
+        "MANA/USDT:USDT",
+        "NEO/USDT:USDT",
+        "GRT/USDT:USDT",
+        "TRX/USDT:USDT",
+        "CELO/USDT:USDT",
+        "SKL/USDT:USDT",
+        "THETA/USDT:USDT"
+      ],
+      "trades": [
+        {
+          "pair": "CRV/USDT:USDT",
+          "is_open": 0,
+          "is_short": 0,
+          "leverage": 1.0,
+          "open_date": "2026-11-05 15:55:11.095778",
+          "close_date": "2026-11-05 16:59:45.815000",
+          "open_rate": 0.2505,
+          "stake_amount": 164.9793,
+          "close_profit_abs": 1.17250788,
+          "enter_tag": "141 142 ",
+          "filled_orders": 2
+        },
+        {
+          "pair": "IOTX/USDT:USDT",
+          "is_open": 1,
+          "is_short": 1,
+          "leverage": 1.0,
+          "open_date": "2026-11-05 22:35:05.939999",
+          "close_date": null,
+          "open_rate": 0.003069,
+          "stake_amount": 41.296464,
+          "close_profit_abs": null,
+          "enter_tag": "562 ",
+          "filled_orders": 1
+        },
+        {
+          "pair": "IOTA/USDT:USDT",
+          "is_open": 0,
+          "is_short": 1,
+          "leverage": 1.0,
+          "open_date": "2026-11-05 22:35:10.890505",
+          "close_date": "2026-11-05 23:36:08.336000",
+          "open_rate": 0.03758,
+          "stake_amount": 41.296662,
+          "close_profit_abs": 0.12088779,
+          "enter_tag": "562 ",
+          "filled_orders": 2
+        },
+        {
+          "pair": "AXS/USDT:USDT",
+          "is_open": 1,
+          "is_short": 1,
+          "leverage": 1.0,
+          "open_date": "2026-11-05 23:10:12.252690",
+          "close_date": null,
+          "open_rate": 0.8118,
+          "stake_amount": 40.59,
+          "close_profit_abs": null,
+          "enter_tag": "562 ",
+          "filled_orders": 1
+        },
+        {
+          "pair": "NEO/USDT:USDT",
+          "is_open": 1,
+          "is_short": 1,
+          "leverage": 1.0,
+          "open_date": "2026-11-05 23:10:12.596158",
+          "close_date": null,
+          "open_rate": 1.836,
+          "stake_amount": 41.29164,
+          "close_profit_abs": null,
+          "enter_tag": "562 ",
+          "filled_orders": 1
+        }
+      ]
+    }
+  }
+}

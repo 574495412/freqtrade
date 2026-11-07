@@ -1,0 +1,59 @@
+{
+  "comparison": {
+    "path": "/Users/chrise/GitHub/Vibe-Trading-delay-accounts/agent/research/crypto_research_decision_20261107/paper_comparison.json",
+    "sha256": "407c35506206560b08984eacb42999ed6d3141c481f6eab6143345b6c90a89c0"
+  },
+  "independent_implementation": {
+    "path": "/Users/chrise/GitHub/freqtrade/freqtrade/persistence/trade_model.py",
+    "sha256": "a011ca8686a205fd279ef665a2a3d5a1a4e3fb8cec9cbbac7f429eed0da85c2d"
+  },
+  "native_profit_nav_points_checked": 5312,
+  "maximum_nav_error_usdt": 1.3833187040290795e-08,
+  "per_account_nav_error_usdt": {
+    "spot_original": 1.1368683772161603e-13,
+    "spot_addcap": 0.0,
+    "futures_original": 1.3833187040290795e-08,
+    "futures_addcap": 4.985963641956914e-09
+  },
+  "release_checks": [
+    {
+      "command": [
+        "deploy/launch.py",
+        "spot",
+        "--verify"
+      ],
+      "stdout": "{\"verified\": true, \"mode\": \"dry_run\", \"upstream_commit\": \"c051e9065c5b677f03817dd1f83cb980af1ed684\"}",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "deploy/launch.py",
+        "futures",
+        "--verify"
+      ],
+      "stdout": "{\"verified\": true, \"mode\": \"dry_run\", \"upstream_commit\": \"c051e9065c5b677f03817dd1f83cb980af1ed684\"}",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "deploy/nfi_x8_addcap/launch.py",
+        "spot",
+        "--verify"
+      ],
+      "stdout": "{\"verified\": true, \"mode\": \"dry_run\", \"market\": \"spot\", \"strategy\": \"NFIX8AddCapPaper\", \"pairs\": 36}",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "deploy/nfi_x8_addcap/launch.py",
+        "futures",
+        "--verify"
+      ],
+      "stdout": "{\"verified\": true, \"mode\": \"dry_run\", \"market\": \"futures\", \"strategy\": \"NFIX8AddCapPaper\", \"pairs\": 40}",
+      "exit_code": 0
+    }
+  ],
+  "spot_funding_is_zero": true,
+  "real_orders_enabled": false,
+  "strategy_effect_verified": false
+}
