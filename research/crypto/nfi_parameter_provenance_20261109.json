@@ -1,0 +1,69 @@
+{
+  "audited_at_utc": "2026-11-09T03:43:30.761011+00:00",
+  "owner_repository": "https://github.com/iterativv/NostalgiaForInfinity",
+  "owner_commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+  "upstream_strategy_blob_matches_local": true,
+  "upstream_readme_recommendations": {
+    "open_trades_range": [
+      6,
+      12
+    ],
+    "pairs_range": [
+      40,
+      80
+    ],
+    "unlimited_stake": true,
+    "volume_pairlist_mentioned": true
+  },
+  "upstream_example_config": {
+    "max_open_trades": 6,
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99
+  },
+  "upstream_strategy_leverage_defaults": {
+    "futures_mode_leverage": 3.0,
+    "futures_mode_leverage_rebuy_mode": 3.0,
+    "futures_mode_leverage_grind_mode": 3.0
+  },
+  "local_futures_research_profile": {
+    "max_open_trades": 6,
+    "pair_count": 40,
+    "pairlist_methods": [
+      "StaticPairList"
+    ],
+    "nfi_parameter_overrides": {
+      "futures_mode_leverage": 1.0,
+      "futures_mode_leverage_rebuy_mode": 1.0,
+      "futures_mode_leverage_grind_mode": 1.0
+    }
+  },
+  "pair_universe_source": {
+    "research_plan": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/plan.json",
+    "research_plan_sha256": "1b0fea99e5d5809e8b0f24c028ebb6adc1be163eea840775d96892db40d5edc6",
+    "known_limitations": [
+      "Retrospective project-used history, not independent OOS",
+      "40-pair dataset is a retrospective current-deployable intersection with possible survivorship bias; not author 223-pair universe",
+      "One fixed 8bps cost scenario; no inference about 5bps or 15bps outcomes",
+      "Contemporary public market rules, not certified historical exchange limits",
+      "X4 retains existing float32 indicator wrapper; X8 uses full native strategy precision",
+      "Equal leverage is not equal realized risk; NFI strategy logic and direction remain distinct",
+      "Hourly mark OPEN is not worst intrahour drawdown or executable bid/ask",
+      "Only two candidates, not a global optimum or live qualification"
+    ]
+  },
+  "findings": {
+    "forty_specific_pairs_are_not_an_author_requirement": true,
+    "one_times_leverage_is_a_local_override": true,
+    "six_slots_have_author_example_support_but_are_not_a_unique_requirement": true,
+    "prior_return_rankings_apply_only_to_their_frozen_account_contracts": true,
+    "no_evidence_that_current_profile_is_globally_return_maximizing": true,
+    "source_defaults_are_not_live_suitability_recommendations": true
+  },
+  "actions": {
+    "trading_config_changed": false,
+    "leverage_changed": false,
+    "live_worker_started": false,
+    "new_backtests": 0,
+    "orders_submitted": 0
+  }
+}
