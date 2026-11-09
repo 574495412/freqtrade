@@ -7,7 +7,7 @@
 | optimized | NFIFlatTopBoostPaper：纯Top Coins多头首仓×1.25 | 同一固定80币 | 逐仓3×、最多12仓 | 8 bps |
 | control | NFIX8PaperControl：原版资金配置 | 同一固定80币 | 逐仓3×、最多12仓 | 8 bps |
 
-两边均为unlimited stake、0.99可交易资金比例；native余额为1,000 USDT，native可交易起始资本字段为990 USDT。其余信号、加减仓和退出继承固定NFI X8 v18.0.146。研究中的15 bps为历史压力情景，没有把纸面盘口成交标成15 bps实盘成本。模拟撮合使用当前公开行情，未来模拟结果不保证与历史K线撮合一致。
+两边均为unlimited stake、0.99可交易资金比例；native余额为1,000 USDT，native可交易起始资本字段为990 USDT。账户收益比较的本金分母应为完整1,000 USDT，不用990替代。其余信号、加减仓和退出继承固定NFI X8 v18.0.146。研究中的15 bps为历史压力情景，没有把纸面盘口成交标成15 bps实盘成本。模拟撮合使用当前公开行情，未来模拟结果不保证与历史K线撮合一致。
 
 ## 原生执行与来源
 
@@ -26,6 +26,8 @@
 - `io.freqtrade.paper.nfi80.control`
 
 均为开机登录自启动、退出重启。当前已核对原生API：两边RUNNING、dry_run=true、各80币、最多12仓，余额1,000，SQLite完整性正常。`runtime-receipt.json` 是带时间的当前快照；初始验收时尚无订单/成交。`market-data-receipt.json` 记录160份最新5分钟分析行情的逐币检查，时间和收盘价在两边一致，最新数据未过期；仅覆盖该次观测，不是整个前瞻期一致性证明。进程处理健康、最新行情和自然交易需随观察期继续核对。
+
+共同起点后已再次检查160份行情，均完成起点后的分析，最新闭合K线时点与收盘价在两账户一致，见 `after-start-market-data.json`。两边处理心跳更新且仍为零订单、零持仓；没有强制开仓。`before-start-receipt.json` 保留起点前1,000 USDT、零订单快照。一次验收读取把native的秒级last_analyzed_ts当成毫秒，已按官方RPC实现校正；原始技术探测保存在私有忽略目录并在部署回执中记录摘要，未修改交易配置或运行过程。
 
 ## 私有状态与通知
 

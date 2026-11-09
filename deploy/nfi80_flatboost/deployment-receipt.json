@@ -1,0 +1,52 @@
+{
+  "accepted_at_utc": "2026-11-09T08:27:54.621912+00:00",
+  "common_paper_start_utc": "2026-11-09T08:25:00+00:00",
+  "common_start_passed": true,
+  "accounts_running_after_start": [
+    "optimized",
+    "control"
+  ],
+  "initial_natural_fills": 0,
+  "services": {
+    "io.freqtrade.paper.nfi80.optimized": {
+      "pid": "46912",
+      "previous_exit_status": "0"
+    },
+    "io.freqtrade.paper.spot": {
+      "pid": "14841",
+      "previous_exit_status": "2"
+    },
+    "io.freqtrade.paper.x8-addcap.spot": {
+      "pid": "14807",
+      "previous_exit_status": "2"
+    },
+    "io.freqtrade.paper.nfi80.control": {
+      "pid": "46910",
+      "previous_exit_status": "0"
+    },
+    "io.freqtrade.notifications": {
+      "pid": "26045",
+      "previous_exit_status": "0"
+    },
+    "io.freqtrade.paper.futures": {
+      "pid": "14831",
+      "previous_exit_status": "2"
+    },
+    "io.freqtrade.paper.x8-addcap.futures": {
+      "pid": "14814",
+      "previous_exit_status": "2"
+    }
+  },
+  "release_sha256": "fcaf71744467e50a6f2dc31d0e0ec5fc9848da76afb909f5e2a5c8490841ac57",
+  "corrected_read_only_probe_retained": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/deployment/nfi80-flatboost-20261109/validation/after-start-probe-unit-error.json",
+    "sha256": "48abc935dbef421fc055ce2d55ad464e054608ee1a051804b79cd94709c4d2b1"
+  },
+  "runtime_receipt_sha256": "84e5cce1aa415370b2d49ccafeb1bcde383cb9ee5ba8463be49af7f580b6ea77",
+  "market_check_after_start_sha256": "7ef3d60543cbb47c3372e28e8c7c6c6019188636df6b3967e9255deb58c2af86",
+  "existing_four_paper_workers_preserved": true,
+  "real_orders_enabled": false,
+  "exchange_credentials_loaded": false,
+  "mainnet_configuration_changed": false,
+  "research_drawdown_screen_not_automatic_stop": true
+}
