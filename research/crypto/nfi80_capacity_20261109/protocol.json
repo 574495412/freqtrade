@@ -163,7 +163,7 @@
   "technical_revision_reason": "Restore available 800-day daily lookback, preserve prior inputs and interrupted account; no economic results used or parameters changed",
   "analysis_code": {
     "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/analyze.py",
-    "sha256": "93bd9da7cb54f9b26c337bdbee394d3e5a95681ee7b5749d430e6260adc16ca7"
+    "sha256": "fb96beed3c8aa6c02bc120412a86715e8781c8a2d61ccd4f77df42ef87bd9cf5"
   },
   "storage_code": {
     "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/compressed_storage.py",
@@ -203,5 +203,19 @@
     "economic_parameters_and_data_unchanged": true,
     "partial_control_retained": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_capacity_20261109_v002/technical_attempts/L1_S6_15bps_gzip_partial",
     "scope": "Lossless storage performance and unchanged-object writeback only, no signal/account/matching changes"
-  }
+  },
+  "analysis_revisions": [
+    {
+      "at_utc": "2026-11-09T06:15:48.001874+00:00",
+      "old_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/analyze.py",
+        "sha256": "93bd9da7cb54f9b26c337bdbee394d3e5a95681ee7b5749d430e6260adc16ca7"
+      },
+      "new_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/analyze.py",
+        "sha256": "fb96beed3c8aa6c02bc120412a86715e8781c8a2d61ccd4f77df42ef87bd9cf5"
+      },
+      "reason": "Count actual entry/add fills strictly before common pre-bar valuation boundary; no financial replay or return calculation changes"
+    }
+  ]
 }

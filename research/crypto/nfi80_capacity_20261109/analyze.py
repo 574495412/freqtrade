@@ -68,7 +68,14 @@ def account(name, cost):
     natural = [
         t for t in trades if t["exit_reason"] != "force_exit" and t["close_timestamp"] < end_ms
     ]
-    entries = [[o for o in t["orders"] if o["ft_is_entry"] and o["amount"] > 0] for t in trades]
+    entries = [
+        [
+            o
+            for o in t["orders"]
+            if o["ft_is_entry"] and o["amount"] > 0 and o["order_filled_timestamp"] < end_ms
+        ]
+        for t in trades
+    ]
     liquidations = sum(t["exit_reason"] == "liquidation" for t in trades)
     margin = frame.open_margin_usdt.fillna(0).to_numpy() / equity
     return {
