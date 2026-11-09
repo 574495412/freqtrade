@@ -1,0 +1,99 @@
+{
+  "case": "L3_S12",
+  "leverage": 3,
+  "max_open_trades": 12,
+  "cost_bps_per_side": 15,
+  "net_return_pct": 77.95630668414563,
+  "net_profit_usdt": 779.5630668414565,
+  "ending_marked_equity_usdt": 1779.5630668414565,
+  "maximum_5m_mark_drawdown_pct": 19.148962221503872,
+  "natural_completed_trades": 240,
+  "natural_campaign_win_rate_pct": 97.91666666666667,
+  "native_exported_trades_including_forced_terminal": 244,
+  "actual_entry_fills": 372,
+  "actual_addition_fills": 128,
+  "max_entries_per_trade": 47,
+  "observed_peak_open_positions": 12,
+  "observed_peak_margin_to_marked_equity_pct": 106.61310600966026,
+  "native_modeled_liquidations": 0,
+  "native_terminal_return_pct_separate": 77.94193220999999,
+  "native_model_funding_usdt_including_terminal": 9.359565196267873,
+  "research_risk_gate_passed": true,
+  "valuation_points": 89917,
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2026-01-01 00:00:00+00:00",
+      "end": "2026-11-09 05:00:00+00:00",
+      "net_return": 0.7795630668414564,
+      "initial_marked_equity": 1000.0,
+      "ending_marked_equity": 1779.5630668414565,
+      "five_minute_mark_drawdown": 0.19148962221503874,
+      "daily_nav_sharpe": 2.4505027291516246,
+      "completed_campaigns": 240,
+      "campaign_profit_factor": 3.5331712226344396,
+      "campaign_profit_factor_status": "FINITE",
+      "campaign_gross_profit": 1489.64890465,
+      "campaign_gross_loss": 421.6180906,
+      "open_campaigns_at_end": 4,
+      "calendar_hours": 89917,
+      "equity_insolvent": false
+    },
+    {
+      "name": "2026-H1",
+      "start": "2026-01-01 00:00:00+00:00",
+      "end": "2026-07-01 00:00:00+00:00",
+      "net_return": 0.8326353426069841,
+      "initial_marked_equity": 1000.0,
+      "ending_marked_equity": 1832.635342606984,
+      "five_minute_mark_drawdown": 0.03812732700159083,
+      "daily_nav_sharpe": 4.474419452070172,
+      "completed_campaigns": 154,
+      "campaign_profit_factor": 65.03247070498196,
+      "campaign_profit_factor_status": "FINITE",
+      "campaign_gross_profit": 844.74408022,
+      "campaign_gross_loss": 12.98957384,
+      "open_campaigns_at_end": 2,
+      "calendar_hours": 52129,
+      "equity_insolvent": false
+    },
+    {
+      "name": "2026-H2-to-cutoff",
+      "start": "2026-07-01 00:00:00+00:00",
+      "end": "2026-11-09 05:00:00+00:00",
+      "net_return": -0.028959539593965578,
+      "initial_marked_equity": 1832.635342606984,
+      "ending_marked_equity": 1779.5630668414565,
+      "five_minute_mark_drawdown": 0.19148962221503874,
+      "daily_nav_sharpe": -0.10455762412310275,
+      "completed_campaigns": 86,
+      "campaign_profit_factor": 1.5782178628731685,
+      "campaign_profit_factor_status": "FINITE",
+      "campaign_gross_profit": 644.90482443,
+      "campaign_gross_loss": 408.62851676,
+      "open_campaigns_at_end": 4,
+      "calendar_hours": 37789,
+      "equity_insolvent": false
+    }
+  ],
+  "native_archive": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_capacity_20261109_v002/L3_S12_15bps/native_results/backtest-result-2026-11-09_05-51-00.zip",
+    "sha256": "8cb8d87f9f864413e1d1028afa21a3d1f3a5771cb8dd9c7f284a28e986d35eed"
+  },
+  "native_result": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_capacity_20261109_v002/L3_S12_15bps/result.json",
+    "sha256": "9fdbb190ceaf92958ab018b61e536bd53988663815caafbaf81ae52c0a390856"
+  },
+  "observed_equity": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_capacity_20261109_v002/L3_S12_15bps/five_minute_equity.parquet",
+    "sha256": "a0b2e518778d528b606a7d29d38d94913f84a9e97a7c704353f6d0ca22efacd2"
+  },
+  "cash_audit": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_capacity_20261109_v002/L3_S12_15bps/fill_cash_audit.json",
+    "sha256": "5e313821b6ec0257cf450569280de49a456457ad8ec749ffc18ca25cd998aaea"
+  },
+  "completion": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_capacity_20261109_v002/L3_S12_15bps/completion.json",
+    "sha256": "dfabd6146cca5440502cc06ba45de1c477d797966c5ffcfdb4606b967217d416"
+  }
+}

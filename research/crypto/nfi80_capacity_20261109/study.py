@@ -582,9 +582,10 @@ def run():
     all_results = {}
     for cost in (15, 8):
         for name in CASES:
-            if sha(Path(plans[name]["path"])) != plans[name]["sha256"]:
-                raise ValueError("Frozen native account plan changed")
             key = f"{name}_{cost}bps"
+            plan_ref = plans.get(key, plans[name])
+            if sha(Path(plan_ref["path"])) != plan_ref["sha256"]:
+                raise ValueError("Frozen native account plan changed")
             folder = OUT / key
             if not (folder / "result.json").exists():
                 if folder.exists():
@@ -600,7 +601,7 @@ def run():
                             "-B",
                             str(HERE / "native_runner.py"),
                             "--plan",
-                            plans[name]["path"],
+                            plan_ref["path"],
                             "--candidate",
                             name,
                             "--cost-bps",

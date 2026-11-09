@@ -1,0 +1,24 @@
+{
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/zstd_storage.py",
+    "sha256": "d1498c52dd541bc1fe6d254e622410db894aa1bcd46f1fc42ea68a30b2fccabf"
+  },
+  "pyarrow_version": "26.0.0",
+  "decoded_pickle_sha256": "7f2a9f59990e4363318bebff9e3cb935debc87744a8c76906faf500ae841aa04",
+  "same_decoded_bytes": true,
+  "frame_rows": 89917,
+  "frame_columns": 237,
+  "measured_gzip_seconds": 0.993,
+  "measured_arrow_zstd_seconds": 0.167,
+  "gzip_file": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_capacity_20261109_v002/storage-benchmark/sample-gzip.pkl",
+    "sha256": "e6ece9911a4dc336769a50eff996280ed6b668f4cf35ff2574b502af81e95d17"
+  },
+  "zstd_file": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_capacity_20261109_v002/storage-benchmark/sample-zstd.pkl",
+    "sha256": "0d3078db043bceedd6cbd7ca0718e2c5aaba2868342b88577d216b6abdab412b"
+  },
+  "unit_tests_passed": 5,
+  "scope": "Lossless serialization only; no financial logic changed",
+  "writeback_skip": "Only when full serialized pickle SHA256 equals the last persisted object; mutation tests include metadata and numeric fields"
+}
