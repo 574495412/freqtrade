@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "markets": {
+    "spot": {
+      "schema": true,
+      "strategy": "NFIManualFlatBoost",
+      "pairs": 36,
+      "max_open_trades": 6,
+      "stake_budget": 99,
+      "capital_ceiling": 100,
+      "initial_state": "stopped",
+      "futures_leverage": null
+    },
+    "futures": {
+      "schema": true,
+      "strategy": "NFIManualFlatBoost",
+      "pairs": 80,
+      "max_open_trades": 12,
+      "stake_budget": 99,
+      "capital_ceiling": 100,
+      "initial_state": "stopped",
+      "futures_leverage": 3.0
+    }
+  },
+  "exchange_or_bot_instantiated": false,
+  "unit_tests_passed": 6,
+  "manual_default_command_executed_by_agent": false,
+  "live_workers_started_by_agent": 0
+}
