@@ -1,0 +1,98 @@
+{
+  "verified_at_beijing": "2026-11-09T09:44:57.783549+08:00",
+  "services": [
+    {
+      "label": "io.freqtrade.paper.spot",
+      "pid": 14841,
+      "actual_mode": "dry_run",
+      "latest_native_heartbeat_beijing": "2026-11-09T09:44:54+08:00",
+      "recent_30min_warning_or_error_records": 1,
+      "maximum_observed_heartbeat_gap_seconds_since_repair": 45051.0,
+      "sqlite_integrity": "ok",
+      "continuous_uptime_certified": false,
+      "latest_observed_warning_beijing": "2026-11-09T09:17:20+08:00",
+      "warnings_in_last_10_minutes": 0
+    },
+    {
+      "label": "io.freqtrade.paper.x8-addcap.spot",
+      "pid": 14807,
+      "actual_mode": "dry_run",
+      "latest_native_heartbeat_beijing": "2026-11-09T09:44:52+08:00",
+      "recent_30min_warning_or_error_records": 0,
+      "maximum_observed_heartbeat_gap_seconds_since_repair": 45010.0,
+      "sqlite_integrity": "ok",
+      "continuous_uptime_certified": false,
+      "latest_observed_warning_beijing": "2026-11-09T07:06:11+08:00",
+      "warnings_in_last_10_minutes": 0
+    },
+    {
+      "label": "io.freqtrade.paper.futures",
+      "pid": 14831,
+      "actual_mode": "dry_run",
+      "latest_native_heartbeat_beijing": "2026-11-09T09:44:27+08:00",
+      "recent_30min_warning_or_error_records": 39,
+      "maximum_observed_heartbeat_gap_seconds_since_repair": 45072.0,
+      "sqlite_integrity": "ok",
+      "continuous_uptime_certified": false,
+      "latest_observed_warning_beijing": "2026-11-09T09:31:50+08:00",
+      "warnings_in_last_10_minutes": 0
+    },
+    {
+      "label": "io.freqtrade.paper.x8-addcap.futures",
+      "pid": 14814,
+      "actual_mode": "dry_run",
+      "latest_native_heartbeat_beijing": "2026-11-09T09:44:47+08:00",
+      "recent_30min_warning_or_error_records": 0,
+      "maximum_observed_heartbeat_gap_seconds_since_repair": 45062.0,
+      "sqlite_integrity": "ok",
+      "continuous_uptime_certified": false,
+      "latest_observed_warning_beijing": "2026-11-09T06:18:44+08:00",
+      "warnings_in_last_10_minutes": 0
+    }
+  ],
+  "four_release_checks": [
+    {
+      "launcher": "deploy/launch.py",
+      "market": "spot",
+      "receipt": {
+        "verified": true,
+        "mode": "dry_run",
+        "upstream_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684"
+      }
+    },
+    {
+      "launcher": "deploy/launch.py",
+      "market": "futures",
+      "receipt": {
+        "verified": true,
+        "mode": "dry_run",
+        "upstream_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684"
+      }
+    },
+    {
+      "launcher": "deploy/nfi_x8_addcap/launch.py",
+      "market": "spot",
+      "receipt": {
+        "verified": true,
+        "mode": "dry_run",
+        "market": "spot",
+        "strategy": "NFIX8AddCapPaper",
+        "pairs": 36
+      }
+    },
+    {
+      "launcher": "deploy/nfi_x8_addcap/launch.py",
+      "market": "futures",
+      "receipt": {
+        "verified": true,
+        "mode": "dry_run",
+        "market": "futures",
+        "strategy": "NFIX8AddCapPaper",
+        "pairs": 40
+      }
+    }
+  ],
+  "real_orders_enabled": false,
+  "configuration_or_strategy_changed": false,
+  "limitations": "Heartbeat gaps come from available local logs; they do not distinguish sleep, restart, lost logs and exchange/data stalls."
+}
