@@ -21,6 +21,16 @@
 
 原策略静态 `stoploss=-0.99`，`stoploss_on_exchange=false`；策略另有内部退出规则，不能把 1×解释成严格亏损上限。此配置准备没有添加或验证交易所保护止损。
 
+## 用户说明为官方测试账号后的环境复核
+
+用户随后说明希望启动的是币安官方测试账号。本次按这个目标只读复核，没有把该说明当作主网余额属于虚拟资金的证明：现有配置没有 `demo_trading` 或 CCXT URL 覆盖；此前认证成功的合约账户接口为 `https://fapi.binance.com/fapi/v3/account`。币安官方文档将主网 `fapi.binance.com` 与测试网 `demo-fapi.binance.com` 区分。
+
+同一现有密钥访问官方测试网 `GET https://demo-fapi.binance.com/fapi/v3/account`，返回 HTTP 401、交易所代码 `-2015`。这表示本次测试网鉴权失败，不能据此判断是密钥、IP 还是权限原因；没有读取到测试网余额，更没有启动测试网交易。脱敏回执见 `demo-environment-check.json`。原始响应留在私有忽略目录。
+
+当前固定版本 `freqtrade/exchange/binance.py` 明确设置 `supports_demo_trading=False`；现有 CCXT 虽能离线生成 Demo URL，但不等于 Freqtrade 已支持该执行环境。因此不能把主网配置改个名称当成测试网，也不能仅切换开关就声称已完成原生适配。后续需要测试网凭据的本机配置路径，随后在原生接口完成隔离适配与验证；这与授权启动真实资金交易是不同范围。现有主网准备配置仍为 STOPPED。
+
+官方环境定义：[Binance USDⓈ-M General Info](https://developers.binance.com/en/docs/products/derivatives-trading-usds-futures/general-info)。本次所有认证请求均为 GET，无订单、撤单、划转或账户设置写入。
+
 ## 企业微信链路
 
 使用原生 `freqtrade.rpc.webhook.Webhook` 模板接口，覆盖开仓/加仓委托、成交、撤单，平仓/减仓委托、成交、撤单，以及启动、状态、警告、异常、局部/全局保护、清算预警，共 13 类。清算预警是否产生取决于当前引擎配置与状态，本次没有触发实仓预警。事件包含交易编号、币种、方向、杠杆、金额、仓位调整标志，退出事件使用引擎当时提供的盈亏值；委托通知不表示已成交。
