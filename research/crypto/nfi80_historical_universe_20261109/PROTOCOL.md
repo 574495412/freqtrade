@@ -1,0 +1,19 @@
+# Historical daily universe validation — frozen before new return runs
+
+Question: does refreshing the 80-pair universe improve the selected NFI X8 / FlatTopBoost account after costs, while staying below 30% historical marked-equity drawdown?
+
+Owner: native Freqtrade Backtesting at c051e9065c5b677f03817dd1f83cb980af1ed684. NFI source stays at 1af55971d3a64703ec449078e09fdec257d0d3c6. FlatTopBoost is a local supported stake callback, not upstream NFI. No independent portfolio simulator or orders.
+
+Freeze: 2026-01-01 through the common 2026-11-09 05:00 UTC mark, 1,000 USDT virtual capital, isolated 3x, maximum 12 positions, unlimited native stake, 0.99 tradable ratio, existing DCA and exits. Run original and FlatTopBoost at both 15 and 8 bps per side including the same native funding. No parameter search or changes after economics. Report all results and failures.
+
+Selection: at each UTC midnight, rank the frozen author candidate set after its frozen author blacklist and market eligibility by the previous completed UTC day's actual Binance quote-asset turnover. Require at least 60 completed daily observations before that decision, and a positive complete previous daily bar. Top 80, tie broken by pair symbol. Use only complete bars with close time strictly earlier than decision time. No current ticker is replayed backwards. Freeze the entire input schedule before returns.
+
+This tests a causal daily UTC version of the proposed refresh. The stopped forward selector used rolling 24-hour tickers on an approximately daily clock; these are different sampling clocks. The legacy fixed80 baseline used a 5-minute typical-price volume proxy, so disclose any initial-list differences; do not attribute those differences solely to refreshing. If the initial exact-turnover basket differs, also run a new frozen-start-basket FlatTopBoost control at both costs for an exact selection-rule comparison.
+
+Extend only the owning native dynamic pairlist path in an isolated engine copy: expose the replay clock, set it before refresh, supply a historical schedule PairList implementation, and suppress new initial entry signals for removed symbols. Native held-position processing, adjustments, fills, wallets, funding and exits remain authoritative. Preserve the base manifest and explicit patch. Validate no future selection, midnight boundary and retained-position handling before economics. Existing paper services and their root engine bytes remain unchanged.
+
+Resource contract: retain the exact native generated row lists in lossless 1,024-row blocks, verifying serialized recovery before admission; never downcast numeric values. First rerun the known fixed80 FlatTopBoost 15bps account with this storage and isolated native extension, and require an identical complete equity curve and native financial trade fields before accepting any new dynamic account. This is a technical parity control, in addition to the four new economic accounts; its known result cannot tune the hypothesis.
+
+Current author membership, blacklist, exchange metadata and source revision are retrospective. This does not recover delisted historical members or remove survivorship/source-selection bias. Missing candles/funding cannot be synthesized or replaced with zero. Failure to admit any selected symbol blocks a complete result; do not quietly rerank around missing execution data. Marked 5-minute drawdown includes open PnL and modeled close cost, but not intrabar worst cases. Costs remain fee/slippage proxies, not an orderbook simulation.
+
+Feasibility gate: positive net returns at both costs, zero modeled liquidation and maximum marked drawdown <=30%. Improvement gate: against the matched frozen-start universe, higher net return at both costs, and pass the same drawdown gate. Report return/DD tradeoff and half-year breakdown even if the gate passes. No automatic deployment or claim of independent out-of-sample validation.

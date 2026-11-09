@@ -1,0 +1,24 @@
+{
+  "time": "2026-11-09T10:25:43.125249+00:00",
+  "prior_pid": 54012,
+  "reason": "Create missing per-symbol admission directory; reuse already verified public archives. No financial accounts yet.",
+  "input_data_retained": true,
+  "economic_rules_changed": false,
+  "admission_resume_repair": {
+    "reason": "Keep canonical admitted.json separate from base completed.json, which precedes the explicit 800-day daily warmup replacement. Validate all non-daily hashes and reconstruct daily only from the pinned public input.",
+    "scope": "Input receipts/resume only; no account economics observed or universe changes",
+    "prior_interrupted_pids": [
+      54012,
+      54226
+    ],
+    "all_cached_archive_evidence_retained": true
+  },
+  "network_retry": {
+    "original_failure": "requests.exceptions.ReadTimeout from official data.binance.vision, retained v3 log",
+    "symbol": "SKL/USDT:USDT",
+    "retry_same_source_same_clocks": "passed",
+    "full_admitted_symbols": 221,
+    "final_prepare_exit_code": 0,
+    "universe_or_economic_rules_changed": false
+  }
+}

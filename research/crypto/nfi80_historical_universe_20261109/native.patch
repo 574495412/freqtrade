@@ -1,0 +1,33 @@
+--- a/freqtrade/data/dataprovider.py
++++ b/freqtrade/data/dataprovider.py
+@@ -76,6 +76,11 @@
+         :param limit_index: dataframe index.
+         """
+         self.__slice_index[pair] = limit_index
++
++    @property
++    def backtest_time(self) -> datetime | None:
++        """Current replay clock, exposed for causal historical pairlist plugins."""
++        return self.__slice_date
+ 
+     def _set_dataframe_max_date(self, limit_date: datetime):
+         """
+--- a/freqtrade/optimize/backtesting.py
++++ b/freqtrade/optimize/backtesting.py
+@@ -1664,6 +1664,7 @@
+             self.check_abort()
+ 
+             if self.dynamic_pairlist and self.pairlists:
++                self.dataprovider._set_dataframe_max_date(current_time)
+                 self.pairlists.refresh_pairlist(pairs=self.available_pairs)
+                 pairs = self.pairlists.whitelist
+ 
+@@ -1700,6 +1701,8 @@
+                         pair, self.required_startup + row_index
+                     )
+                     trade_dir = self.check_for_trade_entry(row)
++                    if self.dynamic_pairlist and pair not in pairs:
++                        trade_dir = None
+                     pair_tradedir_cache[pair] = trade_dir
+                     self._capture_wallet(current_time, pair.split("/")[0], row[OPEN_IDX])
+ 
