@@ -24,7 +24,7 @@ from research.crypto.strategy_comparison_wide_20261105.run_wide_comparison impor
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
-OUT = ROOT / "user_data/crypto_quant/nfi80_capacity_20261109_v001"
+OUT = ROOT / "user_data/crypto_quant/nfi80_capacity_20261109_v002"
 PROTOCOL = HERE / "protocol.json"
 PARENT = ROOT / "research/crypto/strategy_comparison_wide_20261105/plan.json"
 PIN = "1af55971d3a64703ec449078e09fdec257d0d3c6"
@@ -467,6 +467,7 @@ def register():
         .replace('freq="h"', 'freq="5min"')
         .replace("hourly_mark_equity", "marked_equity")
         .replace("hourly_equity.parquet", "five_minute_equity.parquet")
+        .replace('"hourly_mark_drawdown"', '"five_minute_mark_drawdown"')
     )
     runner = runner.replace(
         "part.date.reset_index(drop=True).equals(pd.Series(expected))",
@@ -487,7 +488,7 @@ def register():
     (HERE / "observer.py").write_text(observer)
     plans = {}
     for name, (leverage, slots) in CASES.items():
-        path = HERE / f"{name}.json"
+        path = HERE / f"{name}-v002.json"
         if path.exists():
             raise FileExistsError("Native plan already registered")
         config = read(template["config"]["path"])
@@ -551,6 +552,26 @@ def register():
             "orders_enabled": False,
             "production_eligible": False,
         }
+        plan.update(
+            economic_results_observed_at_registration=False,
+            prior_related_40_coin_economics_known=True,
+            parent_plan=ref(PARENT),
+            registration_note=(
+                "New 80-coin YTD parameter comparison; no accepted outcome of this contract "
+                "observed. The initial daily-warmup technical attempt was interrupted and retained."
+            ),
+            comparison_purpose=policy["request"],
+            observation_frequency="5min",
+            storage_policy={
+                "codec": "gzip-level1",
+                "lossless_indicator_map_lru": 1,
+                "lossless_trim_map_lru": 1,
+                "analyzed_provider_lru": 14,
+                "no_numeric_downcast": True,
+            },
+            parameter_experiment=True,
+            automatic_parameter_optimization=False,
+        )
         save(path, plan)
         plans[name] = ref(path)
     save(HERE / "native-plans.json", plans)

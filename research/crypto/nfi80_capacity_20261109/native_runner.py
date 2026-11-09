@@ -130,7 +130,7 @@ def period_metrics(frame, stats, period):
     loss = -math.fsum(min(t["profit_abs"], 0) for t in completed)
     return {"name": period["name"], "start": str(start), "end": str(end),
             "net_return": float(values[-1]/values[0]-1), "initial_marked_equity": float(values[0]),
-            "ending_marked_equity": float(values[-1]), "hourly_mark_drawdown": float(dd.max()),
+            "ending_marked_equity": float(values[-1]), "five_minute_mark_drawdown": float(dd.max()),
             "daily_nav_sharpe": float(daily_returns.mean()/deviation*np.sqrt(365)) if deviation > 0 else None,
             "completed_campaigns": len(completed), "campaign_profit_factor": gain/loss if loss else None,
             "campaign_profit_factor_status": "FINITE" if loss else "NO_LOSS_OBSERVED",

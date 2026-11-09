@@ -61,7 +61,7 @@ def account(name, cost):
     drawdown = float(np.max(1 - equity / np.maximum.accumulate(equity)))
     if (
         abs(ret - result["periods"][0]["net_return"]) > 1e-10
-        or abs(drawdown - result["periods"][0]["hourly_mark_drawdown"]) > 1e-10
+        or abs(drawdown - result["periods"][0]["five_minute_mark_drawdown"]) > 1e-10
     ):
         raise ValueError("Independent curve metrics differ from native-run report")
     end_ms = int(pd.Timestamp(policy["comparison_end"]).timestamp() * 1000)
