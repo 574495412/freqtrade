@@ -1,0 +1,50 @@
+{
+  "stopped_at_utc": "2026-11-09T10:14:19.190655+00:00",
+  "reason": "User clarified request was historical backtest validation, not new paper deployment",
+  "accounts": {
+    "optimized": {
+      "native_stop_response": {
+        "status": "stopping trader ..."
+      },
+      "trades": 0,
+      "orders": 0
+    },
+    "control": {
+      "native_stop_response": {
+        "status": "stopping trader ..."
+      },
+      "trades": 0,
+      "orders": 0
+    }
+  },
+  "existing_fixed_services_untouched": true,
+  "ledgers_preserved": true,
+  "service_verification": {
+    "io.freqtrade.paper.nfi80.daily.optimized": {
+      "unloaded": true,
+      "disabled": true
+    },
+    "io.freqtrade.paper.nfi80.daily.control": {
+      "unloaded": true,
+      "disabled": true
+    },
+    "io.freqtrade.paper.nfi80.daily.selector": {
+      "unloaded": true,
+      "disabled": true
+    }
+  },
+  "backup_verification": {
+    "optimized": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/deployment/nfi80-daily-20261109/optimized/stopped-backup.sqlite",
+      "integrity_check": "ok",
+      "trades": 0,
+      "orders": 0
+    },
+    "control": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/deployment/nfi80-daily-20261109/control/stopped-backup.sqlite",
+      "integrity_check": "ok",
+      "trades": 0,
+      "orders": 0
+    }
+  }
+}
