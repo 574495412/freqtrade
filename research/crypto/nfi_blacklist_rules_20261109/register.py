@@ -76,6 +76,9 @@ def main():
             historical_schedule=schedule,
             runner_sha256=sha(HERE / "native_runner.py"),
             storage_source=ref(HERE / "storage.py"),
+            row_storage=ref(
+                ROOT / "research/crypto/nfi80_historical_universe_20261109/v003/row_storage.py"
+            ),
             pairs=pairs,
             datadir=str(OUT / "candles"),
             data_receipts=ref(OUT / "data-receipts.json"),
