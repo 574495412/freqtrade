@@ -1,0 +1,21 @@
+{
+  "native_schema_passed": true,
+  "native_strategy_resolver_passed": true,
+  "strategy": "NFISelectedFlatBoost",
+  "dry_run": true,
+  "fee_bps": 8,
+  "exchange_keys_loaded": false,
+  "financial_callbacks_inherited_from_exact_parity_validated_parent": true,
+  "selection_equivalence": {
+    "passed": true,
+    "historical_days": 313,
+    "all_daily_pools_identical": true,
+    "current_day_snapshot_identical": true,
+    "bad_days": [],
+    "local_rulebook_reused": true,
+    "original_blacklist_hindsight_bias_retained": true,
+    "new_financial_backtest_run": false
+  },
+  "tests_passed": 6,
+  "preflight_order_corrected": "Native strategy resolution then full trading schema; strategy supplies stoploss"
+}
