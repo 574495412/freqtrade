@@ -1,0 +1,295 @@
+{
+  "evaluated_at_utc": "2026-11-09T07:59:08.265714+00:00",
+  "user_instruction": "Maximum historical drawdown 30%; reject approximately40% drawdown",
+  "maximum_historical_drawdown_pct": 30,
+  "risk_observation": "Complete 5m marked equity, open PnL and exit-fee reserve included",
+  "source_comparisons": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/comparison.json",
+      "sha256": "8d1737fde959cec1d070053a1000613de9403e4b13cf4f3746866e829f9a8ca4"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_flatboost_20261109/comparison.json",
+      "sha256": "ac40d7f9325c27b28f5a54f4c43993abfb35a294b21add20ef818f7773a60762"
+    }
+  ],
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_flatboost_20261109/select_dd30.py",
+    "sha256": "79b3845434c4787a51e99d5e6dbc5432bc2f3750c37c1179adf21b4be3329671"
+  },
+  "profiles": [
+    {
+      "variant": "Original",
+      "case": "L3_S12",
+      "worst_5m_drawdown_pct_across_costs": 19.148962221503872,
+      "modeled_liquidations_across_costs": 0,
+      "eligible_under_current_risk_preference": true,
+      "scenarios": [
+        {
+          "cost_bps_per_side": 15,
+          "net_return_pct": 77.95630668414563,
+          "maximum_5m_mark_drawdown_pct": 19.148962221503872,
+          "actual_addition_fills": 128,
+          "natural_completed_trades": 240
+        },
+        {
+          "cost_bps_per_side": 8,
+          "net_return_pct": 132.98604992683343,
+          "maximum_5m_mark_drawdown_pct": 17.57543475033623,
+          "actual_addition_fills": 49,
+          "natural_completed_trades": 245
+        }
+      ]
+    },
+    {
+      "variant": "Original",
+      "case": "L1_S6",
+      "worst_5m_drawdown_pct_across_costs": 14.403890198995327,
+      "modeled_liquidations_across_costs": 0,
+      "eligible_under_current_risk_preference": true,
+      "scenarios": [
+        {
+          "cost_bps_per_side": 15,
+          "net_return_pct": 34.49134181666545,
+          "maximum_5m_mark_drawdown_pct": 14.403890198995327,
+          "actual_addition_fills": 137,
+          "natural_completed_trades": 214
+        },
+        {
+          "cost_bps_per_side": 8,
+          "net_return_pct": 59.92288571295674,
+          "maximum_5m_mark_drawdown_pct": 9.43321792380214,
+          "actual_addition_fills": 36,
+          "natural_completed_trades": 221
+        }
+      ]
+    },
+    {
+      "variant": "Original",
+      "case": "L3_S6",
+      "worst_5m_drawdown_pct_across_costs": 36.17920306792828,
+      "modeled_liquidations_across_costs": 0,
+      "eligible_under_current_risk_preference": false,
+      "scenarios": [
+        {
+          "cost_bps_per_side": 15,
+          "net_return_pct": 118.22787158221853,
+          "maximum_5m_mark_drawdown_pct": 36.17920306792828,
+          "actual_addition_fills": 128,
+          "natural_completed_trades": 215
+        },
+        {
+          "cost_bps_per_side": 8,
+          "net_return_pct": 278.76460465068294,
+          "maximum_5m_mark_drawdown_pct": 35.2182048299454,
+          "actual_addition_fills": 47,
+          "natural_completed_trades": 220
+        }
+      ]
+    },
+    {
+      "variant": "Original",
+      "case": "L1_S12",
+      "worst_5m_drawdown_pct_across_costs": 9.203839206856523,
+      "modeled_liquidations_across_costs": 0,
+      "eligible_under_current_risk_preference": true,
+      "scenarios": [
+        {
+          "cost_bps_per_side": 15,
+          "net_return_pct": 21.806289349384976,
+          "maximum_5m_mark_drawdown_pct": 9.203839206856523,
+          "actual_addition_fills": 125,
+          "natural_completed_trades": 240
+        },
+        {
+          "cost_bps_per_side": 8,
+          "net_return_pct": 36.94508865803749,
+          "maximum_5m_mark_drawdown_pct": 4.319372241800535,
+          "actual_addition_fills": 36,
+          "natural_completed_trades": 247
+        }
+      ]
+    },
+    {
+      "variant": "FlatTopBoost",
+      "case": "L3_S6",
+      "worst_5m_drawdown_pct_across_costs": 40.11795640096819,
+      "modeled_liquidations_across_costs": 0,
+      "eligible_under_current_risk_preference": false,
+      "scenarios": [
+        {
+          "cost_bps_per_side": 15,
+          "net_return_pct": 157.72048181205344,
+          "maximum_5m_mark_drawdown_pct": 40.11795640096819,
+          "actual_addition_fills": 128,
+          "natural_completed_trades": 215
+        },
+        {
+          "cost_bps_per_side": 8,
+          "net_return_pct": 329.7334591151877,
+          "maximum_5m_mark_drawdown_pct": 39.79106282311912,
+          "actual_addition_fills": 46,
+          "natural_completed_trades": 220
+        }
+      ]
+    },
+    {
+      "variant": "FlatTopBoost",
+      "case": "L3_S12",
+      "worst_5m_drawdown_pct_across_costs": 20.919979897930617,
+      "modeled_liquidations_across_costs": 0,
+      "eligible_under_current_risk_preference": true,
+      "scenarios": [
+        {
+          "cost_bps_per_side": 15,
+          "net_return_pct": 90.70785964956379,
+          "maximum_5m_mark_drawdown_pct": 20.919979897930617,
+          "actual_addition_fills": 131,
+          "natural_completed_trades": 240
+        },
+        {
+          "cost_bps_per_side": 8,
+          "net_return_pct": 149.91525795830628,
+          "maximum_5m_mark_drawdown_pct": 20.76407197080791,
+          "actual_addition_fills": 49,
+          "natural_completed_trades": 244
+        }
+      ]
+    }
+  ],
+  "eligible_return_rankings_by_cost": {
+    "15": [
+      {
+        "variant": "FlatTopBoost",
+        "case": "L3_S12",
+        "cost_bps_per_side": 15,
+        "net_return_pct": 90.70785964956379,
+        "maximum_5m_mark_drawdown_pct": 20.919979897930617,
+        "actual_addition_fills": 131,
+        "natural_completed_trades": 240
+      },
+      {
+        "variant": "Original",
+        "case": "L3_S12",
+        "cost_bps_per_side": 15,
+        "net_return_pct": 77.95630668414563,
+        "maximum_5m_mark_drawdown_pct": 19.148962221503872,
+        "actual_addition_fills": 128,
+        "natural_completed_trades": 240
+      },
+      {
+        "variant": "Original",
+        "case": "L1_S6",
+        "cost_bps_per_side": 15,
+        "net_return_pct": 34.49134181666545,
+        "maximum_5m_mark_drawdown_pct": 14.403890198995327,
+        "actual_addition_fills": 137,
+        "natural_completed_trades": 214
+      },
+      {
+        "variant": "Original",
+        "case": "L1_S12",
+        "cost_bps_per_side": 15,
+        "net_return_pct": 21.806289349384976,
+        "maximum_5m_mark_drawdown_pct": 9.203839206856523,
+        "actual_addition_fills": 125,
+        "natural_completed_trades": 240
+      }
+    ],
+    "8": [
+      {
+        "variant": "FlatTopBoost",
+        "case": "L3_S12",
+        "cost_bps_per_side": 8,
+        "net_return_pct": 149.91525795830628,
+        "maximum_5m_mark_drawdown_pct": 20.76407197080791,
+        "actual_addition_fills": 49,
+        "natural_completed_trades": 244
+      },
+      {
+        "variant": "Original",
+        "case": "L3_S12",
+        "cost_bps_per_side": 8,
+        "net_return_pct": 132.98604992683343,
+        "maximum_5m_mark_drawdown_pct": 17.57543475033623,
+        "actual_addition_fills": 49,
+        "natural_completed_trades": 245
+      },
+      {
+        "variant": "Original",
+        "case": "L1_S6",
+        "cost_bps_per_side": 8,
+        "net_return_pct": 59.92288571295674,
+        "maximum_5m_mark_drawdown_pct": 9.43321792380214,
+        "actual_addition_fills": 36,
+        "natural_completed_trades": 221
+      },
+      {
+        "variant": "Original",
+        "case": "L1_S12",
+        "cost_bps_per_side": 8,
+        "net_return_pct": 36.94508865803749,
+        "maximum_5m_mark_drawdown_pct": 4.319372241800535,
+        "actual_addition_fills": 36,
+        "natural_completed_trades": 247
+      }
+    ]
+  },
+  "highest_return_eligible_in_both_cost_scenarios": {
+    "variant": "FlatTopBoost",
+    "case": "L3_S12"
+  },
+  "selected_vs_original_same_slots": [
+    {
+      "cost_bps_per_side": 15,
+      "return_increase_pp": 12.751552965418156,
+      "extra_net_profit_usdt_per_1000_initial": 127.51552965418136,
+      "relative_net_profit_increase_pct": 16.35730771223347,
+      "drawdown_increase_pp": 1.7710176764267445,
+      "original_daily_sharpe": 2.4505027291516237,
+      "optimized_daily_sharpe": 2.410581979783301,
+      "original_simple_return_to_drawdown": 4.071046032802884,
+      "optimized_simple_return_to_drawdown": 4.3359439202203305,
+      "relative_simple_ratio_change_pct": 6.506875267019918,
+      "halfyear_return_changes_pp": [
+        12.692343460130374,
+        0.2177908278258589
+      ]
+    },
+    {
+      "cost_bps_per_side": 8,
+      "return_increase_pp": 16.929208031472854,
+      "extra_net_profit_usdt_per_1000_initial": 169.29208031472854,
+      "relative_net_profit_increase_pct": 12.73006307111686,
+      "drawdown_increase_pp": 3.18863722047168,
+      "original_daily_sharpe": 3.5110208417651467,
+      "optimized_daily_sharpe": 3.3956769011920818,
+      "original_simple_return_to_drawdown": 7.566586648690971,
+      "optimized_simple_return_to_drawdown": 7.219935384979945,
+      "relative_simple_ratio_change_pct": -4.581342682053302,
+      "halfyear_return_changes_pp": [
+        13.553675321054737,
+        0.038012832721157075
+      ]
+    }
+  ],
+  "additional_metric_definitions": {
+    "simple_return_to_drawdown": "Cumulative net return / maximum5m drawdown; not annualized Calmar",
+    "daily_sharpe": "UTC daily last NAV simple-return mean / sample std * sqrt365; zero riskfree assumption, last partial day retained in both accounts"
+  },
+  "policy_applied_after_observation": true,
+  "original_50pct_registration_and_results_unchanged": true,
+  "previous_failed_experiments_unchanged": true,
+  "new_backtests": 0,
+  "parameter_changes": 0,
+  "deployment_changes": 0,
+  "production_eligible": false,
+  "orders_enabled": false,
+  "qualifications": [
+    "Retrospective source version and current market metadata; not independent OOS or PIT membership proof",
+    "Static prior-day 80-coin basket, not a dynamically refreshed year-long universe",
+    "15/8bps are fee+slippage proxies; funding and liquidation remain native model evidence",
+    "Five-minute mark observations omit intrabar worst-case risk"
+  ],
+  "historical_drawdown_is_not_a_live_loss_guarantee": true
+}
