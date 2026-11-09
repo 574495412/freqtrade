@@ -1,0 +1,209 @@
+{
+  "dry_run_wallet": 1000,
+  "grinding_enable": true,
+  "max_open_trades": 12,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "",
+  "timeframe": "5m",
+  "unfilledtimeout": {
+    "entry": 3,
+    "exit": 2,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "emergency_exit": "limit",
+    "force_entry": "limit",
+    "force_exit": "limit",
+    "stoploss": "limit",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60,
+    "stoploss_on_exchange_limit_ratio": 0.99
+  },
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0
+  },
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "pairlists": [
+    {
+      "method": "RemotePairList",
+      "number_assets": 80,
+      "pairlist_url": "file:////Users/chrise/GitHub/freqtrade/user_data/deployment/nfi80-daily-20261109/current-pairs.json",
+      "refresh_period": 60,
+      "keep_pairlist_on_failure": true
+    }
+  ],
+  "bot_name": "NFI80-daily-control-paper",
+  "strategy": "NFIDailyControl",
+  "dry_run": true,
+  "force_entry_enable": false,
+  "initial_state": "running",
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "username": "",
+    "password": ""
+  },
+  "telegram": {
+    "enabled": false,
+    "token": "",
+    "chat_id": ""
+  },
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "password": "",
+    "enable_ws": false,
+    "pair_whitelist": [],
+    "pair_blacklist": [],
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "timeout": 20000,
+      "options": {
+        "fetchMarkets": {
+          "types": [
+            "linear"
+          ]
+        },
+        "fetchCurrencies": false
+      },
+      "httpsProxy": "http://127.0.0.1:7897"
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "timeout": 20000,
+      "options": {
+        "fetchMarkets": {
+          "types": [
+            "linear"
+          ]
+        },
+        "fetchCurrencies": false
+      },
+      "httpsProxy": "http://127.0.0.1:7897"
+    }
+  },
+  "fee": 0.0008,
+  "export": "trades",
+  "backtest_cache": "none",
+  "recursive_strategy_search": false,
+  "nfi_parameters": {
+    "futures_mode_leverage": 3.0,
+    "futures_mode_leverage_rebuy_mode": 3.0,
+    "futures_mode_leverage_grind_mode": 3.0
+  },
+  "webhook": {
+    "enabled": true,
+    "format": "json",
+    "url": "",
+    "timeout": 3,
+    "retries": 2,
+    "retry_delay": 0.2,
+    "allow_custom_messages": false,
+    "entry": {
+      "msgtype": "text",
+      "text": {
+        "content": "[NFI80日更｜原版对照模拟盘] 开仓／加仓委托（尚未成交）\n交易编号 {trade_id}｜{pair}｜{direction}｜{leverage}×\n数量 {amount}｜订单价格 {order_rate}｜引擎开仓参考价 {open_rate}\n资金 {stake_amount} {stake_currency}｜仓位调整={sub_trade}"
+      }
+    },
+    "entry_fill": {
+      "msgtype": "text",
+      "text": {
+        "content": "[NFI80日更｜原版对照模拟盘] 开仓／加仓成交\n交易编号 {trade_id}｜{pair}｜{direction}｜{leverage}×\n数量 {amount}｜订单价格 {order_rate}｜引擎开仓参考价 {open_rate}\n资金 {stake_amount} {stake_currency}｜仓位调整={sub_trade}"
+      }
+    },
+    "entry_cancel": {
+      "msgtype": "text",
+      "text": {
+        "content": "[NFI80日更｜原版对照模拟盘] 开仓／加仓委托取消\n交易编号 {trade_id}｜{pair}｜{direction}｜{leverage}×\n数量 {amount}｜订单价格 {order_rate}｜引擎开仓参考价 {open_rate}\n资金 {stake_amount} {stake_currency}｜仓位调整={sub_trade}\n原因 {reason}"
+      }
+    },
+    "exit": {
+      "msgtype": "text",
+      "text": {
+        "content": "[NFI80日更｜原版对照模拟盘] 平仓／减仓委托（尚未成交）\n交易编号 {trade_id}｜{pair}｜{direction}｜{leverage}×\n数量 {amount}｜订单价格 {order_rate}｜引擎开仓参考价 {open_rate}\n资金 {stake_amount} {stake_currency}｜仓位调整={sub_trade}\n引擎盈亏 {profit_amount:.4f} {stake_currency} ({profit_ratio:.2%})\n原因 {exit_reason}"
+      }
+    },
+    "exit_fill": {
+      "msgtype": "text",
+      "text": {
+        "content": "[NFI80日更｜原版对照模拟盘] 平仓／减仓成交\n交易编号 {trade_id}｜{pair}｜{direction}｜{leverage}×\n数量 {amount}｜订单价格 {order_rate}｜引擎开仓参考价 {open_rate}\n资金 {stake_amount} {stake_currency}｜仓位调整={sub_trade}\n引擎盈亏 {profit_amount:.4f} {stake_currency} ({profit_ratio:.2%})\n原因 {exit_reason}"
+      }
+    },
+    "exit_cancel": {
+      "msgtype": "text",
+      "text": {
+        "content": "[NFI80日更｜原版对照模拟盘] 平仓／减仓委托取消\n交易编号 {trade_id}｜{pair}｜{direction}｜{leverage}×\n数量 {amount}｜订单价格 {order_rate}｜引擎开仓参考价 {open_rate}\n资金 {stake_amount} {stake_currency}｜仓位调整={sub_trade}\n引擎盈亏 {profit_amount:.4f} {stake_currency} ({profit_ratio:.2%})\n原因 {reason}"
+      }
+    },
+    "startup": {
+      "msgtype": "text",
+      "text": {
+        "content": "[NFI80日更｜原版对照模拟盘] 程序启动：{status}"
+      }
+    },
+    "status": {
+      "msgtype": "text",
+      "text": {
+        "content": "[NFI80日更｜原版对照模拟盘] 运行状态：{status}"
+      }
+    },
+    "warning": {
+      "msgtype": "text",
+      "text": {
+        "content": "[NFI80日更｜原版对照模拟盘] 运行警告：{status}"
+      }
+    },
+    "exception": {
+      "msgtype": "text",
+      "text": {
+        "content": "[NFI80日更｜原版对照模拟盘] 运行异常：{status}"
+      }
+    },
+    "protection_trigger": {
+      "msgtype": "text",
+      "text": {
+        "content": "[NFI80日更｜原版对照模拟盘] 交易保护：{pair}｜{side}\n{reason}\n截止 {lock_end_time}"
+      }
+    },
+    "protection_trigger_global": {
+      "msgtype": "text",
+      "text": {
+        "content": "[NFI80日更｜原版对照模拟盘] 全局交易保护：{side}\n{reason}\n截止 {lock_end_time}"
+      }
+    },
+    "liquidation_warning": {
+      "msgtype": "text",
+      "text": {
+        "content": "[NFI80日更｜原版对照模拟盘] 保证金风险预警：{pair}｜{direction}\n当前价 {current_rate}｜清算价 {liquidation_price}\n风险距离 {remaining_ratio:.2%}"
+      }
+    }
+  },
+  "daily_snapshot_file": "/Users/chrise/GitHub/freqtrade/user_data/deployment/nfi80-daily-20261109/current-pairs.json",
+  "daily_policy_sha256": "f503428bcf3cf45cd3862f68290ee42558a1072ec4c0cf7bb0ba40126bef5a49"
+}
