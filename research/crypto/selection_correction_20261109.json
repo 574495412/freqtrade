@@ -1,0 +1,67 @@
+{
+  "checked_at_utc": "2026-11-09T03:39:52.729981+00:00",
+  "purpose": "Correct attribution of original paper fallback as maximum-return selection",
+  "scope": "Three existing comparable NFI 1x long-window accounts only; not exhaustive global strategy ranking",
+  "window_start_utc": "2025-01-01T00:00:00Z",
+  "window_end_utc": "2026-08-31T23:00:00Z",
+  "pairs": 40,
+  "starting_usdt": 1000,
+  "leverage": 1,
+  "cost_bps_per_side": 15,
+  "cost_scope": "Fee/slippage-equivalent proxy plus native model funding; historical replay, not executable return proof",
+  "ranking": [
+    {
+      "strategy": "FlatTopBoost",
+      "net_return": 1.618360399398337,
+      "maximum_5m_drawdown": 0.08981645689882267,
+      "nav_points": 175093,
+      "curve": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_solo_allocation_20261107_v001/long_mark/flat_15bps.parquet",
+        "sha256": "e72be1f7f0a0361139103ddb6151553d51c83992fbed99b05f88747ba81b58df"
+      },
+      "curve_hash_verified": true,
+      "metrics_independently_recomputed": true
+    },
+    {
+      "strategy": "SoloTopBoost",
+      "net_return": 1.5152201901606492,
+      "maximum_5m_drawdown": 0.08808389773690173,
+      "nav_points": 175093,
+      "curve": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_solo_allocation_20261107_v001/long_mark/solo_15bps.parquet",
+        "sha256": "f490fc136182358c13baebb8fd077c72c91e8795fa8f8abee387cc59769d8198"
+      },
+      "curve_hash_verified": true,
+      "metrics_independently_recomputed": true
+    },
+    {
+      "strategy": "NostalgiaForInfinityX8",
+      "net_return": 1.3565640407887813,
+      "maximum_5m_drawdown": 0.0861206746889942,
+      "nav_points": 175093,
+      "curve": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_solo_allocation_20261107_v001/long_mark/original_15bps.parquet",
+        "sha256": "a1ba7f73682707c0a2d68b028db031a83a6660892355e48f0a2a90d261e002fd"
+      },
+      "curve_hash_verified": true,
+      "metrics_independently_recomputed": true
+    }
+  ],
+  "higher_historical_return_candidate": "FlatTopBoost",
+  "original_selection_meaning": "Operational paper fallback; not evidence that original maximizes returns",
+  "candidate_distinct_from_addcap": true,
+  "other_window_qualification": "2024 recheck failed pre-frozen +1 percentage-point incremental drawdown cap; failures retained",
+  "production_eligible": false,
+  "deployment_configuration_changed": false,
+  "live_worker_started": false,
+  "orders_submitted": 0,
+  "new_backtests": 0,
+  "source_result": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_solo_allocation_20261107/long_mark_result.json",
+    "sha256": "366e9bffaacf8cb8b529165d2d99f37757b36c006c8f9b594f87a495968ff2cb"
+  },
+  "formulas": {
+    "net_return": "equity[-1] / equity[0] - 1",
+    "maximum_5m_drawdown": "max(1 - equity / cumulative_max(equity))"
+  }
+}
