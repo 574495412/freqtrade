@@ -1,6 +1,13 @@
 # Historical daily universe validation
 
-**Current execution version: v002.** The first dynamic invocation failed native schema validation before account replay because its plugin name was not registered. `build_v002.py` adds only that name to the isolated native `AVAILABLE_PAIRLISTS`; the v001 engine, failed attempt and contracts remain intact. The v002 actual native schema and resolver preflight passed at three historical boundaries. The new manifest records the additional constants registry change; financial backtesting modules and lossless storage match the exact fixed80 parity control. Current results are written under `v002/REPORT.md` and `v002/comparison.json`.
+**Current execution version: v003.** v002 ran out of disk while copying full temporary indicator caches, before trading replay began. Its inputs, log, plans and generated-file inventory are retained; only its generated cache was removed. v003 uses the same native engine and schema extension, computes native trimming lazily, and releases each source frame after the native provider and exact row blocks retain it. It requires non-signals export, a free-disk guard and another full fixed80 parity run before the four economic accounts. Results are under `v003/REPORT.md` and `v003/comparison.json`.
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 .venv-paper/bin/python -B -m research.crypto.nfi80_historical_universe_20261109.v003.run
+PYTHONDONTWRITEBYTECODE=1 .venv-paper/bin/python -B -m research.crypto.nfi80_historical_universe_20261109.v003.analyze
+```
+
+**Preserved schema revision: v002.** The first dynamic invocation failed native schema validation before account replay because its plugin name was not registered. `build_v002.py` adds only that name to the isolated native `AVAILABLE_PAIRLISTS`; the v001 engine, failed attempt and contracts remain intact. The v002 actual native schema and resolver preflight passed at three historical boundaries. The new manifest records the additional constants registry change; financial backtesting modules and lossless storage match the exact fixed80 parity control. Current results are written under `v002/REPORT.md` and `v002/comparison.json`.
 
 ```sh
 PYTHONDONTWRITEBYTECODE=1 .venv-paper/bin/python -B research/crypto/nfi80_historical_universe_20261109/v002/preflight.py
