@@ -1,0 +1,30 @@
+{
+  "registered_at_utc": "2026-11-09T06:29:09.924786+00:00",
+  "purpose": "Verify storage/backend change cannot explain cost-sensitive performance; no strategy or data changes",
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/parity.py",
+    "sha256": "1e136d79cff7bb145bc2c313d43786bc8240578a405e5dbc3e6edaf7cc7730c7"
+  },
+  "plan": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/L3_S12-v003.json",
+    "sha256": "c7eba903b6df1a2e67da3f54d714c371e8296cad01d7429778d84b6c6b8c190b"
+  },
+  "baseline_result": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_capacity_20261109_v002/L3_S12_15bps/result.json",
+    "sha256": "9fdbb190ceaf92958ab018b61e536bd53988663815caafbaf81ae52c0a390856"
+  },
+  "expected_identical_financial_trade_fields": true,
+  "maximum_equity_difference_usdt": 1e-08,
+  "rankings_use_canonical_eight_accounts_only": true,
+  "failure_must_be_preserved_and_blocks_final_confident_ranking": true,
+  "financial_workers": 1,
+  "orders_enabled": false,
+  "prerun_technical_revision": {
+    "at_utc": "2026-11-09T06:34:07.083507+00:00",
+    "old_source": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/parity.py",
+      "sha256": "2f69fe45e8d09654863366144cc8623d1dac3d32d858eded0182a669da5aef85"
+    },
+    "reason": "Verify pinned parity source, plan and accepted baseline checksums before repeat; parity has not started"
+  }
+}

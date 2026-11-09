@@ -163,7 +163,7 @@
   "technical_revision_reason": "Restore available 800-day daily lookback, preserve prior inputs and interrupted account; no economic results used or parameters changed",
   "analysis_code": {
     "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/analyze.py",
-    "sha256": "fb96beed3c8aa6c02bc120412a86715e8781c8a2d61ccd4f77df42ef87bd9cf5"
+    "sha256": "a4da3a3a5ad363d566d9e5f64539a514ce78c139f72588ccb06d775c11da07f2"
   },
   "storage_code": {
     "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/compressed_storage.py",
@@ -216,6 +216,18 @@
         "sha256": "fb96beed3c8aa6c02bc120412a86715e8781c8a2d61ccd4f77df42ef87bd9cf5"
       },
       "reason": "Count actual entry/add fills strictly before common pre-bar valuation boundary; no financial replay or return calculation changes"
+    },
+    {
+      "at_utc": "2026-11-09T06:33:22.968644+00:00",
+      "old_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/analyze.py",
+        "sha256": "fb96beed3c8aa6c02bc120412a86715e8781c8a2d61ccd4f77df42ef87bd9cf5"
+      },
+      "new_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/analyze.py",
+        "sha256": "a4da3a3a5ad363d566d9e5f64539a514ce78c139f72588ccb06d775c11da07f2"
+      },
+      "reason": "Validate effective fee/wallet/margin contracts and half-year compounding; correct reporting-only legacy time labels, preserve raw native outputs and unchanged economics"
     }
   ]
 }

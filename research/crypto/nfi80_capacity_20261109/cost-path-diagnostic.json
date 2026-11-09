@@ -1,0 +1,44 @@
+{
+  "generated_at_utc": "2026-11-09T06:39:35.071263+00:00",
+  "scope": "Descriptive diagnostic from completed native L3_S12 accounts; no causal ablation or retuning",
+  "archives": {
+    "15bps": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_capacity_20261109_v002/L3_S12_15bps/native_results/backtest-result-2026-11-09_05-51-00.zip",
+      "sha256": "8cb8d87f9f864413e1d1028afa21a3d1f3a5771cb8dd9c7f284a28e986d35eed"
+    },
+    "8bps": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_capacity_20261109_v002/L3_S12_8bps/native_results/backtest-result-2026-11-09_06-23-39.zip",
+      "sha256": "7c1e016e15dc2b8b41786943cec95567c8796ad0265010e72a993725f2fda9cb"
+    }
+  },
+  "shared_open_campaigns": 244,
+  "first_shared_open_campaign_with_different_exit": [
+    {
+      "15": {
+        "pair": "TAO/USDT:USDT",
+        "open_timestamp": 1768164900000,
+        "open_rate": 286.15,
+        "close_timestamp": 1768362300000,
+        "close_rate": 298.92,
+        "exit_reason": "exit_long_rebuy_w_4_1 ( 64 )"
+      },
+      "8": {
+        "pair": "TAO/USDT:USDT",
+        "open_timestamp": 1768164900000,
+        "open_rate": 286.15,
+        "close_timestamp": 1768190700000,
+        "close_rate": 286.92,
+        "exit_reason": "exit_profit_long_rebuy_t_0_1_m ( 64 )"
+      }
+    }
+  ],
+  "interpretation": "Observed fee-cost scenarios differ in native exits and subsequent order sizes/additions; cannot infer lower-cost returns by subtracting fees from one fixed fill ledger",
+  "strategy_fee_logic_reference": {
+    "path": "research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+    "lines": [
+      1866,
+      1913
+    ]
+  },
+  "orders_enabled": false
+}

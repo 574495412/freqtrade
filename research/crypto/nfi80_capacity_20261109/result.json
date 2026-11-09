@@ -1,0 +1,674 @@
+{
+  "protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/protocol.json",
+    "sha256": "9bf55ad518cc9cbdd3b75764ab95056bf02846915b39cd3d053c619fd650971b"
+  },
+  "accounts": {
+    "L3_S12_15bps": {
+      "candidate": "L3_S12",
+      "strategy": "NostalgiaForInfinityX8",
+      "cost_bps_per_side": 15,
+      "periods": [
+        {
+          "name": "continuous",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": 0.7795630668414564,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1779.5630668414565,
+          "five_minute_mark_drawdown": 0.19148962221503874,
+          "daily_nav_sharpe": 2.4505027291516246,
+          "completed_campaigns": 240,
+          "campaign_profit_factor": 3.5331712226344396,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 1489.64890465,
+          "campaign_gross_loss": 421.6180906,
+          "open_campaigns_at_end": 4,
+          "calendar_hours": 89917,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H1",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-07-01 00:00:00+00:00",
+          "net_return": 0.8326353426069841,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1832.635342606984,
+          "five_minute_mark_drawdown": 0.03812732700159083,
+          "daily_nav_sharpe": 4.474419452070172,
+          "completed_campaigns": 154,
+          "campaign_profit_factor": 65.03247070498196,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 844.74408022,
+          "campaign_gross_loss": 12.98957384,
+          "open_campaigns_at_end": 2,
+          "calendar_hours": 52129,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H2-to-cutoff",
+          "start": "2026-07-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": -0.028959539593965578,
+          "initial_marked_equity": 1832.635342606984,
+          "ending_marked_equity": 1779.5630668414565,
+          "five_minute_mark_drawdown": 0.19148962221503874,
+          "daily_nav_sharpe": -0.10455762412310275,
+          "completed_campaigns": 86,
+          "campaign_profit_factor": 1.5782178628731685,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 644.90482443,
+          "campaign_gross_loss": 408.62851676,
+          "open_campaigns_at_end": 4,
+          "calendar_hours": 37789,
+          "equity_insolvent": false
+        }
+      ],
+      "source_strategy_files": {
+        "NostalgiaForInfinityX8.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        }
+      },
+      "native_terminal_return": 0.7794193220999999,
+      "native_terminal_balance": 1779.4193221,
+      "native_terminal_trade_count": 244,
+      "native_terminal_exit_times": [
+        "2026-11-09 05:00:00+00:00"
+      ],
+      "native_funding_net_usdt": 9.359565196267873,
+      "maximum_open_cash_identity_error_usdt": 2.340530613764713e-08,
+      "maximum_native_basis_rounding_bias_usdt": 0.1450820499999918,
+      "elapsed_seconds": 1250.794219125004,
+      "engine_version": "2026.10-dev",
+      "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/__init__.py",
+      "orders_enabled": false,
+      "production_eligible": false,
+      "comparison_valuation": "common hourly mark OPEN before current bar processing; remaining close fee reserved; not intrahour worst case",
+      "native_terminal_not_used_for_ranking": true
+    },
+    "L1_S6_15bps": {
+      "candidate": "L1_S6",
+      "strategy": "NostalgiaForInfinityX8",
+      "cost_bps_per_side": 15,
+      "periods": [
+        {
+          "name": "continuous",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": 0.34491341816665444,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1344.9134181666545,
+          "five_minute_mark_drawdown": 0.14403890198995328,
+          "daily_nav_sharpe": 2.2538344767468037,
+          "completed_campaigns": 214,
+          "campaign_profit_factor": 3.342181340913185,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 679.74154977,
+          "campaign_gross_loss": 203.38260568,
+          "open_campaigns_at_end": 4,
+          "calendar_hours": 89917,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H1",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-07-01 00:00:00+00:00",
+          "net_return": 0.4075257245752688,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1407.525724575269,
+          "five_minute_mark_drawdown": 0.025504410158207258,
+          "daily_nav_sharpe": 5.8093149726501245,
+          "completed_campaigns": 144,
+          "campaign_profit_factor": 39.667230803653275,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 417.60224795,
+          "campaign_gross_loss": 10.52763804,
+          "open_campaigns_at_end": 2,
+          "calendar_hours": 52129,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H2-to-cutoff",
+          "start": "2026-07-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": -0.04448395174269948,
+          "initial_marked_equity": 1407.525724575269,
+          "ending_marked_equity": 1344.9134181666545,
+          "five_minute_mark_drawdown": 0.14403890198995328,
+          "daily_nav_sharpe": -0.5189251977653684,
+          "completed_campaigns": 70,
+          "campaign_profit_factor": 1.3592561551711346,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 262.13930182,
+          "campaign_gross_loss": 192.85496764,
+          "open_campaigns_at_end": 4,
+          "calendar_hours": 37789,
+          "equity_insolvent": false
+        }
+      ],
+      "source_strategy_files": {
+        "NostalgiaForInfinityX8.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        }
+      },
+      "native_terminal_return": 0.34488566271000004,
+      "native_terminal_balance": 1344.8856627100001,
+      "native_terminal_trade_count": 218,
+      "native_terminal_exit_times": [
+        "2026-11-09 05:00:00+00:00"
+      ],
+      "native_funding_net_usdt": 6.887071860410778,
+      "maximum_open_cash_identity_error_usdt": 3.155691707945607e-08,
+      "maximum_native_basis_rounding_bias_usdt": 0.07598584999999673,
+      "elapsed_seconds": 446.97947799999383,
+      "engine_version": "2026.10-dev",
+      "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/__init__.py",
+      "orders_enabled": false,
+      "production_eligible": false,
+      "comparison_valuation": "common hourly mark OPEN before current bar processing; remaining close fee reserved; not intrahour worst case",
+      "native_terminal_not_used_for_ranking": true
+    },
+    "L3_S6_15bps": {
+      "candidate": "L3_S6",
+      "strategy": "NostalgiaForInfinityX8",
+      "cost_bps_per_side": 15,
+      "periods": [
+        {
+          "name": "continuous",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": 1.1822787158221852,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 2182.2787158221854,
+          "five_minute_mark_drawdown": 0.3617920306792828,
+          "daily_nav_sharpe": 2.086857368357159,
+          "completed_campaigns": 215,
+          "campaign_profit_factor": 2.6277118134024593,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 3262.7765874,
+          "campaign_gross_loss": 1241.6797651699999,
+          "open_campaigns_at_end": 4,
+          "calendar_hours": 89917,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H1",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-07-01 00:00:00+00:00",
+          "net_return": 1.7831249173888635,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 2783.1249173888637,
+          "five_minute_mark_drawdown": 0.07542924402018059,
+          "daily_nav_sharpe": 5.782597751422441,
+          "completed_campaigns": 144,
+          "campaign_profit_factor": 72.71520413662068,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 1805.2774220000001,
+          "campaign_gross_loss": 24.826684370000002,
+          "open_campaigns_at_end": 2,
+          "calendar_hours": 52129,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H2-to-cutoff",
+          "start": "2026-07-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": -0.21588905255837165,
+          "initial_marked_equity": 2783.1249173888637,
+          "ending_marked_equity": 2182.2787158221854,
+          "five_minute_mark_drawdown": 0.3617920306792828,
+          "daily_nav_sharpe": -0.7528757625551022,
+          "completed_campaigns": 71,
+          "campaign_profit_factor": 1.1977610020445455,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 1457.4991654,
+          "campaign_gross_loss": 1216.8530807999998,
+          "open_campaigns_at_end": 4,
+          "calendar_hours": 37789,
+          "equity_insolvent": false
+        }
+      ],
+      "source_strategy_files": {
+        "NostalgiaForInfinityX8.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        }
+      },
+      "native_terminal_return": 1.1818612691200001,
+      "native_terminal_balance": 2181.8612691200005,
+      "native_terminal_trade_count": 219,
+      "native_terminal_exit_times": [
+        "2026-11-09 05:00:00+00:00"
+      ],
+      "native_funding_net_usdt": 25.239299757109773,
+      "maximum_open_cash_identity_error_usdt": 2.8117415951101066e-08,
+      "maximum_native_basis_rounding_bias_usdt": 0.41058320000000803,
+      "elapsed_seconds": 433.1281383750029,
+      "engine_version": "2026.10-dev",
+      "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/__init__.py",
+      "orders_enabled": false,
+      "production_eligible": false,
+      "comparison_valuation": "common hourly mark OPEN before current bar processing; remaining close fee reserved; not intrahour worst case",
+      "native_terminal_not_used_for_ranking": true
+    },
+    "L1_S12_15bps": {
+      "candidate": "L1_S12",
+      "strategy": "NostalgiaForInfinityX8",
+      "cost_bps_per_side": 15,
+      "periods": [
+        {
+          "name": "continuous",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": 0.21806289349384977,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1218.0628934938497,
+          "five_minute_mark_drawdown": 0.09203839206856523,
+          "daily_nav_sharpe": 2.441734772313492,
+          "completed_campaigns": 240,
+          "campaign_profit_factor": 3.749405813695224,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 372.08018652,
+          "campaign_gross_loss": 99.23710716000001,
+          "open_campaigns_at_end": 4,
+          "calendar_hours": 89917,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H1",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-07-01 00:00:00+00:00",
+          "net_return": 0.2233455819834358,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1223.3455819834357,
+          "five_minute_mark_drawdown": 0.01280069735879985,
+          "daily_nav_sharpe": 4.4478190452608555,
+          "completed_campaigns": 154,
+          "campaign_profit_factor": 38.821718703122336,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 229.04935508,
+          "campaign_gross_loss": 5.900031289999999,
+          "open_campaigns_at_end": 2,
+          "calendar_hours": 52129,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H2-to-cutoff",
+          "start": "2026-07-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": -0.004318230733315054,
+          "initial_marked_equity": 1223.3455819834357,
+          "ending_marked_equity": 1218.0628934938497,
+          "five_minute_mark_drawdown": 0.09203839206856523,
+          "daily_nav_sharpe": -0.05370993569791704,
+          "completed_campaigns": 86,
+          "campaign_profit_factor": 1.532411746423399,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 143.03083144000001,
+          "campaign_gross_loss": 93.33707587,
+          "open_campaigns_at_end": 4,
+          "calendar_hours": 37789,
+          "equity_insolvent": false
+        }
+      ],
+      "source_strategy_files": {
+        "NostalgiaForInfinityX8.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        }
+      },
+      "native_terminal_return": 0.21806126727999997,
+      "native_terminal_balance": 1218.0612672800003,
+      "native_terminal_trade_count": 244,
+      "native_terminal_exit_times": [
+        "2026-11-09 05:00:00+00:00"
+      ],
+      "native_funding_net_usdt": 3.180244868658465,
+      "maximum_open_cash_identity_error_usdt": 1.830950502323958e-08,
+      "maximum_native_basis_rounding_bias_usdt": 0.0602902999999947,
+      "elapsed_seconds": 452.23412929200276,
+      "engine_version": "2026.10-dev",
+      "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/__init__.py",
+      "orders_enabled": false,
+      "production_eligible": false,
+      "comparison_valuation": "common hourly mark OPEN before current bar processing; remaining close fee reserved; not intrahour worst case",
+      "native_terminal_not_used_for_ranking": true
+    },
+    "L3_S12_8bps": {
+      "candidate": "L3_S12",
+      "strategy": "NostalgiaForInfinityX8",
+      "cost_bps_per_side": 8,
+      "periods": [
+        {
+          "name": "continuous",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": 1.3298604992683343,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 2329.8604992683345,
+          "five_minute_mark_drawdown": 0.17575434750336227,
+          "daily_nav_sharpe": 3.511020841765148,
+          "completed_campaigns": 245,
+          "campaign_profit_factor": 21.538371251725334,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 1698.29600491,
+          "campaign_gross_loss": 78.8497879,
+          "open_campaigns_at_end": 3,
+          "calendar_hours": 89917,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H1",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-07-01 00:00:00+00:00",
+          "net_return": 0.8737609498144363,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1873.7609498144363,
+          "five_minute_mark_drawdown": 0.031967815986904125,
+          "daily_nav_sharpe": 4.376245527897463,
+          "completed_campaigns": 155,
+          "campaign_profit_factor": 68.31319065047596,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 885.50028336,
+          "campaign_gross_loss": 12.962361660000001,
+          "open_campaigns_at_end": 2,
+          "calendar_hours": 52129,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H2-to-cutoff",
+          "start": "2026-07-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": 0.24341394749371137,
+          "initial_marked_equity": 1873.7609498144363,
+          "ending_marked_equity": 2329.8604992683345,
+          "five_minute_mark_drawdown": 0.17575434750336227,
+          "daily_nav_sharpe": 2.2821031124133957,
+          "completed_campaigns": 90,
+          "campaign_profit_factor": 12.336127967562875,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 812.79572155,
+          "campaign_gross_loss": 65.88742624,
+          "open_campaigns_at_end": 3,
+          "calendar_hours": 37789,
+          "equity_insolvent": false
+        }
+      ],
+      "source_strategy_files": {
+        "NostalgiaForInfinityX8.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        }
+      },
+      "native_terminal_return": 1.32976862039,
+      "native_terminal_balance": 2329.7686203899993,
+      "native_terminal_trade_count": 248,
+      "native_terminal_exit_times": [
+        "2026-11-09 05:00:00+00:00"
+      ],
+      "native_funding_net_usdt": 6.045976168727144,
+      "maximum_open_cash_identity_error_usdt": 1.6541523706337102e-08,
+      "maximum_native_basis_rounding_bias_usdt": 0.14668256000004154,
+      "elapsed_seconds": 367.33262254200235,
+      "engine_version": "2026.10-dev",
+      "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/__init__.py",
+      "orders_enabled": false,
+      "production_eligible": false,
+      "comparison_valuation": "common hourly mark OPEN before current bar processing; remaining close fee reserved; not intrahour worst case",
+      "native_terminal_not_used_for_ranking": true
+    },
+    "L1_S6_8bps": {
+      "candidate": "L1_S6",
+      "strategy": "NostalgiaForInfinityX8",
+      "cost_bps_per_side": 8,
+      "periods": [
+        {
+          "name": "continuous",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": 0.5992288571295674,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1599.2288571295674,
+          "five_minute_mark_drawdown": 0.0943321792380214,
+          "daily_nav_sharpe": 3.4691356812295924,
+          "completed_campaigns": 221,
+          "campaign_profit_factor": 72.12196680273937,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 752.46855336,
+          "campaign_gross_loss": 10.43327833,
+          "open_campaigns_at_end": 3,
+          "calendar_hours": 89917,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H1",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-07-01 00:00:00+00:00",
+          "net_return": 0.4268130699824788,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1426.8130699824787,
+          "five_minute_mark_drawdown": 0.021352248152587183,
+          "daily_nav_sharpe": 5.656100575289859,
+          "completed_campaigns": 145,
+          "campaign_profit_factor": 41.849310200468885,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 436.62550124,
+          "campaign_gross_loss": 10.43327833,
+          "open_campaigns_at_end": 2,
+          "calendar_hours": 52129,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H2-to-cutoff",
+          "start": "2026-07-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": 0.12083978677683826,
+          "initial_marked_equity": 1426.8130699824787,
+          "ending_marked_equity": 1599.2288571295674,
+          "five_minute_mark_drawdown": 0.0943321792380214,
+          "daily_nav_sharpe": 1.7082940678815894,
+          "completed_campaigns": 76,
+          "campaign_profit_factor": null,
+          "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+          "campaign_gross_profit": 315.84305212,
+          "campaign_gross_loss": -0.0,
+          "open_campaigns_at_end": 3,
+          "calendar_hours": 37789,
+          "equity_insolvent": false
+        }
+      ],
+      "source_strategy_files": {
+        "NostalgiaForInfinityX8.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        }
+      },
+      "native_terminal_return": 0.59912527718,
+      "native_terminal_balance": 1599.1252771800002,
+      "native_terminal_trade_count": 224,
+      "native_terminal_exit_times": [
+        "2026-11-09 05:00:00+00:00"
+      ],
+      "native_funding_net_usdt": 3.771439703889298,
+      "maximum_open_cash_identity_error_usdt": 1.3514281249626947e-08,
+      "maximum_native_basis_rounding_bias_usdt": 0.07623896000000337,
+      "elapsed_seconds": 346.87278808299743,
+      "engine_version": "2026.10-dev",
+      "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/__init__.py",
+      "orders_enabled": false,
+      "production_eligible": false,
+      "comparison_valuation": "common hourly mark OPEN before current bar processing; remaining close fee reserved; not intrahour worst case",
+      "native_terminal_not_used_for_ranking": true
+    },
+    "L3_S6_8bps": {
+      "candidate": "L3_S6",
+      "strategy": "NostalgiaForInfinityX8",
+      "cost_bps_per_side": 8,
+      "periods": [
+        {
+          "name": "continuous",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": 2.787646046506829,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 3787.646046506829,
+          "five_minute_mark_drawdown": 0.352182048299454,
+          "daily_nav_sharpe": 3.4850740350487697,
+          "completed_campaigns": 220,
+          "campaign_profit_factor": 17.400144446063795,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 4085.66500768,
+          "campaign_gross_loss": 234.80638453000003,
+          "open_campaigns_at_end": 3,
+          "calendar_hours": 89917,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H1",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-07-01 00:00:00+00:00",
+          "net_return": 1.8939650065240672,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 2893.965006524067,
+          "five_minute_mark_drawdown": 0.06350398233680277,
+          "daily_nav_sharpe": 5.626116452814565,
+          "completed_campaigns": 145,
+          "campaign_profit_factor": 75.94800440084038,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 1915.40945857,
+          "campaign_gross_loss": 25.22001037,
+          "open_campaigns_at_end": 2,
+          "calendar_hours": 52129,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H2-to-cutoff",
+          "start": "2026-07-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": 0.3088085163324623,
+          "initial_marked_equity": 2893.965006524067,
+          "ending_marked_equity": 3787.646046506829,
+          "five_minute_mark_drawdown": 0.352182048299454,
+          "daily_nav_sharpe": 1.605877479323451,
+          "completed_campaigns": 75,
+          "campaign_profit_factor": 10.354945820348076,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 2170.25554911,
+          "campaign_gross_loss": 209.58637416000002,
+          "open_campaigns_at_end": 3,
+          "calendar_hours": 37789,
+          "equity_insolvent": false
+        }
+      ],
+      "source_strategy_files": {
+        "NostalgiaForInfinityX8.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        }
+      },
+      "native_terminal_return": 2.78730964587,
+      "native_terminal_balance": 3787.30964587,
+      "native_terminal_trade_count": 223,
+      "native_terminal_exit_times": [
+        "2026-11-09 05:00:00+00:00"
+      ],
+      "native_funding_net_usdt": 19.437469836289146,
+      "maximum_open_cash_identity_error_usdt": 1.617334532966197e-08,
+      "maximum_native_basis_rounding_bias_usdt": 0.42645855999995746,
+      "elapsed_seconds": 357.52307075000135,
+      "engine_version": "2026.10-dev",
+      "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/__init__.py",
+      "orders_enabled": false,
+      "production_eligible": false,
+      "comparison_valuation": "common hourly mark OPEN before current bar processing; remaining close fee reserved; not intrahour worst case",
+      "native_terminal_not_used_for_ranking": true
+    },
+    "L1_S12_8bps": {
+      "candidate": "L1_S12",
+      "strategy": "NostalgiaForInfinityX8",
+      "cost_bps_per_side": 8,
+      "periods": [
+        {
+          "name": "continuous",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": 0.36945088658037495,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1369.450886580375,
+          "five_minute_mark_drawdown": 0.04319372241800534,
+          "daily_nav_sharpe": 3.933795138107148,
+          "completed_campaigns": 247,
+          "campaign_profit_factor": 69.20825510001403,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 403.22772795,
+          "campaign_gross_loss": 5.826295249999999,
+          "open_campaigns_at_end": 2,
+          "calendar_hours": 89917,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H1",
+          "start": "2026-01-01 00:00:00+00:00",
+          "end": "2026-07-01 00:00:00+00:00",
+          "net_return": 0.23256528938964016,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1232.5652893896402,
+          "five_minute_mark_drawdown": 0.010831046646489706,
+          "daily_nav_sharpe": 4.357080561030898,
+          "completed_campaigns": 155,
+          "campaign_profit_factor": 40.87046946342104,
+          "campaign_profit_factor_status": "FINITE",
+          "campaign_gross_profit": 238.1234221,
+          "campaign_gross_loss": 5.826295249999999,
+          "open_campaigns_at_end": 2,
+          "calendar_hours": 52129,
+          "equity_insolvent": false
+        },
+        {
+          "name": "2026-H2-to-cutoff",
+          "start": "2026-07-01 00:00:00+00:00",
+          "end": "2026-11-09 05:00:00+00:00",
+          "net_return": 0.1110574817975929,
+          "initial_marked_equity": 1232.5652893896402,
+          "ending_marked_equity": 1369.450886580375,
+          "five_minute_mark_drawdown": 0.04319372241800534,
+          "daily_nav_sharpe": 3.3172139185485974,
+          "completed_campaigns": 92,
+          "campaign_profit_factor": null,
+          "campaign_profit_factor_status": "NO_LOSS_OBSERVED",
+          "campaign_gross_profit": 165.10430585,
+          "campaign_gross_loss": -0.0,
+          "open_campaigns_at_end": 2,
+          "calendar_hours": 37789,
+          "equity_insolvent": false
+        }
+      ],
+      "source_strategy_files": {
+        "NostalgiaForInfinityX8.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        }
+      },
+      "native_terminal_return": 0.36943866813,
+      "native_terminal_balance": 1369.4386681299998,
+      "native_terminal_trade_count": 249,
+      "native_terminal_exit_times": [
+        "2026-11-09 05:00:00+00:00"
+      ],
+      "native_funding_net_usdt": 1.3502068796602142,
+      "maximum_open_cash_identity_error_usdt": 9.890110952426312e-09,
+      "maximum_native_basis_rounding_bias_usdt": 0.057445920000001226,
+      "elapsed_seconds": 352.1233820000052,
+      "engine_version": "2026.10-dev",
+      "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/__init__.py",
+      "orders_enabled": false,
+      "production_eligible": false,
+      "comparison_valuation": "common hourly mark OPEN before current bar processing; remaining close fee reserved; not intrahour worst case",
+      "native_terminal_not_used_for_ranking": true
+    }
+  },
+  "orders_enabled": false,
+  "production_eligible": false
+}

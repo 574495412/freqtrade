@@ -18,15 +18,7 @@ from research.crypto.nfi80_capacity_20261109.study import (
 )
 
 
-def account(name, cost):
-    folder = OUT / f"{name}_{cost}bps"
-    result = read(folder / "result.json")
-    completion = read(folder / "completion.json")
-    config = read(folder / "effective_config.json")
-    policy = read(PROTOCOL)
-    leverage, slots = CASES[name]
-    if completion["returncode"] != 0 or not read(folder / "fill_cash_audit.json")["passed"]:
-        raise ValueError("Native account is not completed and cash-audited")
+def validate_config(config, policy, slots, cost):
     if (
         config["max_open_trades"] != slots
         or config["exchange"]["pair_whitelist"] != policy["pairs"]
@@ -36,6 +28,27 @@ def account(name, cost):
         config["exchange"].get(k) for k in ("key", "secret", "password")
     ):
         raise ValueError("Only anonymous research accounts are admissible")
+    if (
+        config["fee"] != cost / 10000
+        or config["trading_mode"] != "futures"
+        or config["margin_mode"] != "isolated"
+        or config["stake_amount"] != "unlimited"
+        or config["tradable_balance_ratio"] != 0.99
+        or config["dry_run_wallet"] != 1000
+    ):
+        raise ValueError("Effective fee, wallet or allocation contract differs")
+
+
+def account(name, cost):
+    folder = OUT / f"{name}_{cost}bps"
+    result = read(folder / "result.json")
+    completion = read(folder / "completion.json")
+    config = read(folder / "effective_config.json")
+    policy = read(PROTOCOL)
+    leverage, slots = CASES[name]
+    if completion["returncode"] != 0 or not read(folder / "fill_cash_audit.json")["passed"]:
+        raise ValueError("Native account is not completed and cash-audited")
+    validate_config(config, policy, slots, cost)
     archives = list((folder / "native_results").glob("*.zip"))
     if len(archives) != 1:
         raise ValueError("Expected exactly one native archive")
@@ -57,6 +70,8 @@ def account(name, cost):
     equity = frame.marked_equity.to_numpy(dtype=float)
     if not np.isfinite(equity).all():
         raise ValueError("Nonfinite observed equity")
+    if equity[0] != 1000:
+        raise ValueError("Account did not start with the registered research capital")
     ret = float(equity[-1] / equity[0] - 1)
     drawdown = float(np.max(1 - equity / np.maximum.accumulate(equity)))
     if (
@@ -78,6 +93,17 @@ def account(name, cost):
     ]
     liquidations = sum(t["exit_reason"] == "liquidation" for t in trades)
     margin = frame.open_margin_usdt.fillna(0).to_numpy() / equity
+    periods = []
+    for raw_period in result["periods"]:
+        period = dict(raw_period)
+        # Preserve native output, correct legacy observer labels only in reporting.
+        period["valuation_points"] = period.pop("calendar_hours")
+        period["elapsed_calendar_hours"] = (
+            pd.Timestamp(period["end"]) - pd.Timestamp(period["start"])
+        ).total_seconds() / 3600
+        periods.append(period)
+    if abs((1 + periods[1]["net_return"]) * (1 + periods[2]["net_return"]) - 1 - ret) > 1e-10:
+        raise ValueError("Continuous half-year returns do not compound to the whole window")
     return {
         "case": name,
         "leverage": leverage,
@@ -107,7 +133,11 @@ def account(name, cost):
         "research_risk_gate_passed": drawdown <= policy["research_drawdown_limit"]
         and liquidations == 0,
         "valuation_points": len(frame),
-        "periods": result["periods"],
+        "periods": periods,
+        "comparison_valuation": (
+            "Common 5-minute mark OPEN before current bar processing; "
+            "remaining close fee reserved; not intrabar worst case"
+        ),
         "native_archive": ref(archives[0]),
         "native_result": ref(folder / "result.json"),
         "observed_equity": ref(folder / "five_minute_equity.parquet"),
@@ -137,8 +167,14 @@ def main():
         "accounts": rows,
         "rankings": rankings,
         "basis": (
-            "Same actual native fills and complete 5m marked observations; "
+            "Each account uses actual native fills and complete 5m marked observations; "
             "cumulative, not annualized returns"
+        ),
+        "legacy_native_metadata_correction": (
+            "Raw result.json retains legacy comparison_valuation text 'hourly' and "
+            "calendar_hours holding observation counts. Complete 5m clocks are verified; "
+            "this report labels valuation_points and elapsed_calendar_hours explicitly. "
+            "Raw outputs and account economics are unchanged."
         ),
         "qualifications": read(PROTOCOL)["limitations"],
         "independent_forward_validation": False,
