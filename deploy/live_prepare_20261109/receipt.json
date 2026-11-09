@@ -1,0 +1,96 @@
+{
+  "prepared_at_utc": "2026-11-09T03:03:58.973347+00:00",
+  "account_checked_at_utc": "2026-11-09T03:03:37.576135+00:00",
+  "selected_markets": [
+    "futures"
+  ],
+  "spot_selected": false,
+  "live_worker_started": false,
+  "orders_submitted": 0,
+  "engine_source_pin": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "strategy_source_pin": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+  "futures": {
+    "initial_state": "stopped",
+    "native_schema": {
+      "strategy": "NostalgiaForInfinityX8",
+      "stoploss": -0.99,
+      "position_adjustment_enable": true,
+      "futures_leverage": {
+        "regular": 1.0,
+        "rebuy": 1.0,
+        "grind": 1.0
+      }
+    },
+    "observed_available_usdt": "497.74760163",
+    "observed_99pct_budget_usdt": "492.7701256137",
+    "capital_policy": "Native unlimited stake with 0.99 tradable_balance_ratio; own wallet only.",
+    "no_wallet_transfers": true,
+    "existing_credential_source": true,
+    "pairs_outside_lead_whitelist": [],
+    "account_checked_at_utc": "2026-11-09T03:03:37.576135+00:00",
+    "startup_blockers": [
+      "HEDGE_MODE_UNSUPPORTED_BY_PINNED_FREQTRADE",
+      "USER_MANUAL_ACTIVATION_REQUIRED",
+      "UNRESOLVED_EXIT_TIME_DIAGNOSTICS"
+    ],
+    "live_worker_started": false
+  },
+  "authenticated_read_checks": {
+    "permissions": {
+      "http_status": 200,
+      "ok": true,
+      "permissions": {
+        "enableReading": true,
+        "enableSpotAndMarginTrading": false,
+        "enableFutures": true,
+        "enableWithdrawals": false,
+        "ipRestrict": true
+      }
+    },
+    "futures_account": {
+      "http_status": 200,
+      "ok": true,
+      "can_trade": null,
+      "available_usdt": "497.74760163",
+      "nonzero_positions": 0
+    },
+    "futures_open_orders": {
+      "http_status": 200,
+      "ok": true,
+      "open_orders": 0
+    },
+    "futures_config": {
+      "http_status": 200,
+      "ok": true,
+      "can_trade": true,
+      "hedge_mode": true,
+      "multi_assets_margin": false
+    },
+    "copytrading_status": {
+      "http_status": 200,
+      "ok": true,
+      "exchange_code": "000000",
+      "is_lead_trader": true
+    },
+    "lead_symbols": {
+      "http_status": 200,
+      "ok": true,
+      "exchange_code": "000000",
+      "symbol_count": 754
+    }
+  },
+  "notification_acceptance": {
+    "tested_at_utc": "2026-11-09T03:04:40.740472+00:00",
+    "native_webhook_used": true,
+    "test_label": "实盘未启动",
+    "delivery": {
+      "id": 1,
+      "state": "sent",
+      "attempts": 1,
+      "result": "errcode:0",
+      "delivered": 1794193480.8195992
+    },
+    "live_worker_started": false,
+    "orders_submitted": 0
+  }
+}
