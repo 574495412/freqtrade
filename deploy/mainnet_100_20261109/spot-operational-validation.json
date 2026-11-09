@@ -1,0 +1,92 @@
+{
+  "observed_at_utc": "2026-11-09T17:32:32.038122+00:00",
+  "scope": "Spot configuration, account GET, runtime and startup-notification evidence; no forced trade",
+  "status": "RUNNING_AWAITING_NATURAL_FILL",
+  "pid": 73660,
+  "process_command_matches": true,
+  "last_heartbeat_at_utc": "2026-11-09T17:32:26.267000+00:00",
+  "heartbeat_age_seconds": 5.771122,
+  "spot_log_errors": 0,
+  "spot_rate_limit_log_lines": 0,
+  "live_and_historical_common_config_differences": [],
+  "compared_config_fields": [
+    "max_open_trades",
+    "stake_currency",
+    "stake_amount",
+    "timeframe",
+    "order_types",
+    "unfilledtimeout",
+    "entry_pricing",
+    "exit_pricing",
+    "trading_mode",
+    "force_entry_enable",
+    "available_capital",
+    "capital_ceiling_usdt",
+    "exchange.pair_whitelist",
+    "exchange.pair_blacklist"
+  ],
+  "raw_nfi_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/deploy/strategy/nfi-x8/NostalgiaForInfinityX8.py",
+    "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+  },
+  "native_capital_extension": {
+    "path": "/Users/chrise/GitHub/freqtrade/deploy/mainnet_100_20261109/capital.py",
+    "sha256": "ed1fcaf2084b94db88351cd7624e69205dd4a08bc9be95b6f69acfc5d78c2595"
+  },
+  "historical_capital_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/capital_snapshot.py",
+    "sha256": "ed1fcaf2084b94db88351cd7624e69205dd4a08bc9be95b6f69acfc5d78c2595"
+  },
+  "account_observation": {
+    "path": "/Users/chrise/GitHub/freqtrade/deploy/mainnet_100_20261109/spot-runtime-check.json",
+    "sha256": "4b00c9481fd2b97fe3d797283c9b83c9526305c36f8f40c5b0b07a6e384d2a5f"
+  },
+  "spot_startup_notifications": [
+    {
+      "id": 27,
+      "state": "sent",
+      "attempts": 1,
+      "result": "errcode:0",
+      "created": 1794238909.354358,
+      "delivered": 1794238918.957547
+    },
+    {
+      "id": 28,
+      "state": "sent",
+      "attempts": 1,
+      "result": "errcode:0",
+      "created": 1794238909.36818,
+      "delivered": 1794238923.1284711
+    },
+    {
+      "id": 29,
+      "state": "sent",
+      "attempts": 1,
+      "result": "errcode:0",
+      "created": 1794238909.38774,
+      "delivered": 1794238927.311382
+    }
+  ],
+  "notification_relay_health": {
+    "status": "running",
+    "outbox": {
+      "sent": 29
+    }
+  },
+  "historical_report": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/cap100-comparison.json",
+    "sha256": "01d23e6f98d7dbeb3567268e45974de47a55d6b256e3f05db27695a9426ac5ce"
+  },
+  "historical_spot_result": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_truth_audit_20261109_v001/accounts/spot100_13bps-v002/result.json",
+    "sha256": "c3a99456985320b5288de38bd3db1092992f5fa4e26241829cb9e24a4deaae8b"
+  },
+  "live_fee_override_absent": true,
+  "execution_parity_proven": false,
+  "lead_specific_symbol_endpoint_verified": false,
+  "agent_orders_submitted": 0,
+  "agent_workers_started_or_restarted": 0,
+  "production_eligible": false,
+  "native_heartbeat_state": "RUNNING",
+  "validation_tests_passed": 23
+}

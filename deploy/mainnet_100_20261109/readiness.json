@@ -1,6 +1,6 @@
 {
   "verified_at_utc": "2026-11-09T15:21:23.497495+00:00",
-  "release_sha256": "098733bf8c192933e5b21018fc441b999f70dcd80a276403542382645fc4c184",
+  "release_sha256": "7da7f2d97d7c349725302627dbfaeb7174f5c7158f270b5b7e1a0eb0a258a430",
   "successful_get_only_check_at_utc": "2026-11-09T15:20:39.128956+00:00",
   "offline_native_validation": true,
   "unit_tests_passed": 6,
@@ -13,6 +13,22 @@
   "capital_ceiling_each_usdt": 100,
   "stake_budget_each_usdt": 99,
   "futures_leverage": 3,
-  "spot_same_contract_2026_backtest": false,
-  "production_eligible": false
+  "spot_same_contract_2026_backtest": true,
+  "production_eligible": false,
+  "new_live_startup_permitted": true,
+  "reason": "Research gate released by explicit user request; manual invocation must pass all operational checks",
+  "research_findings_resolved": false,
+  "user_release_at_utc": "2026-11-09T15:38:49.359902+00:00",
+  "user_release_validation": {
+    "checked_at_utc": "2026-11-09T15:39:07.351295+00:00",
+    "offline_source_and_config_integrity": true,
+    "research_gate_passed": true,
+    "tests_passed": 13,
+    "live_start_invoked": false
+  },
+  "spot_latest_readonly_validation": {
+    "path": "/Users/chrise/GitHub/freqtrade/deploy/mainnet_100_20261109/spot-operational-validation.json",
+    "sha256": "64159bd4e99fd9f11945770491909bd1669d4fc93febb96191185e4e1fc7aa92"
+  },
+  "spot_actual_fill_execution_verified": false
 }

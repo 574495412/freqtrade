@@ -15,7 +15,40 @@ from deploy.nfi80_selected.launch import verify as verify_paper_source
 from deploy.nfi80_selected.selector import read, save, sha
 
 
-def verify():
+class ResearchAuditHold(RuntimeError):
+    """Research hold pending audit clearance or the user's explicit release."""
+
+    def __init__(self, reasons):
+        # Only these public diagnostic strings may reach the terminal. Other
+        # exceptions retain type-only output because they may contain signed URLs.
+        known = {
+            "Retrospective author blacklist": "Historical author blacklist has hindsight bias",
+            "Official spot and futures exit-time lookahead warnings unresolved": (
+                "Spot/futures exit-time lookahead warnings remain unresolved"
+            ),
+            "No same-contract100USDT spot/futures economic reproduction": (
+                "Matching 100-USDT spot/futures backtests have not been reproduced"
+            ),
+        }
+        details = [
+            known.get(reason, "Additional research audit item unresolved") for reason in reasons
+        ]
+        message = "Manual command stopped: ResearchAuditHold\nNew live startup is disabled."
+        message += "".join("\n- " + detail for detail in details)
+        message += (
+            "\nAudit record: deploy/mainnet_100_20261109/audit-hold.json"
+            "\n--check-only permits read-only checks; it does not clear this hold."
+        )
+        super().__init__(message)
+
+
+def enforce_research_hold(audit):
+    # A user release permits their manual command; it does not resolve research findings.
+    if audit["status"] not in {"CLEARED", "RELEASED_BY_USER"}:
+        raise ResearchAuditHold(audit.get("reasons", []))
+
+
+def verify(*, allow_hold=False):
     verify_paper_source()
     release = read(HERE / "release.json")
     for name, digest in release["files"].items():
@@ -42,6 +75,8 @@ def verify():
             config["margin_mode"] != "isolated" or set(config["nfi_parameters"].values()) != {3.0}
         ):
             raise ValueError("Futures must remain isolated3x")
+    if not allow_hold:
+        enforce_research_hold(read(HERE / "audit-hold.json"))
     return release
 
 
@@ -86,7 +121,7 @@ def main():
     if args.worker:
         worker(args.worker)
         return
-    verify()
+    verify(allow_hold=args.check_only)
     from deploy.mainnet_100_20261109.checks import account_checks
 
     if not args.check_only and any(
@@ -134,9 +169,15 @@ def main():
     )
 
 
-if __name__ == "__main__":
+def cli():
     try:
         main()
+    except ResearchAuditHold as exc:
+        raise SystemExit(str(exc)) from None
     except Exception as exc:
         # Requests errors can contain signed queries; never print their text.
         raise SystemExit("Manual command stopped: " + type(exc).__name__) from None
+
+
+if __name__ == "__main__":
+    cli()

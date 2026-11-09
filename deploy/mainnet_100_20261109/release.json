@@ -2,9 +2,11 @@
   "files": {
     "capital.py": "ed1fcaf2084b94db88351cd7624e69205dd4a08bc9be95b6f69acfc5d78c2595",
     "prepare.py": "d9e68c3fdba4c0f7ff6ca587f090f706bbe68ba773be05a1cf0a7865bf9c09ee",
-    "manual.py": "ba6a910e76d3e30d621549c1ada0eb99bc077eb2719d4590ee36e1045a7eef7b",
+    "manual.py": "ea49468cc07e17a2646fdc6034ea7d2186f184a5449e18a8be5667580d13f893",
     "checks.py": "7b6771f54b8fbf2510acb8196eee0ea8a7c5d8b5b2b5c48830a33359e3068861",
-    "strategy/NFIManualFlatBoost.py": "aa311a07f3d683a5a8faba27cd9ac3e0267fde194d0ed38edd2e8e62879eb23d"
+    "strategy/NFIManualFlatBoost.py": "aa311a07f3d683a5a8faba27cd9ac3e0267fde194d0ed38edd2e8e62879eb23d",
+    "audit-hold.json": "c2d698cf319c58e2b80a1224916a024925fcdf1fd9e3842241f1c9c2be28e633",
+    "spot_status.py": "905060ef53e7334e8c867832823da82623d11e84a4151a809838a1c150879ba9"
   },
   "config_sha256": {
     "spot": "ecf25715d89b02b56435c1a1f500a53c01a3ec6f93769b7fb28deae960e2d493",
@@ -16,6 +18,20 @@
   "futures_nominal_ceiling_usdt": 300,
   "mode": "manual_live_only",
   "production_eligible": false,
-  "spot_2026_same_contract_backtest_available": false,
-  "live_workers_started_by_agent": 0
+  "spot_2026_same_contract_backtest_available": true,
+  "live_workers_started_by_agent": 0,
+  "audit_hold": false,
+  "audit_hold_status": "RELEASED_BY_USER",
+  "research_findings_resolved": false,
+  "spot_native_100usdt_historical_evidence": {
+    "report": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/cap100-comparison.json",
+      "sha256": "01d23e6f98d7dbeb3567268e45974de47a55d6b256e3f05db27695a9426ac5ce"
+    },
+    "result": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_truth_audit_20261109_v001/accounts/spot100_13bps-v002/result.json",
+      "sha256": "c3a99456985320b5288de38bd3db1092992f5fa4e26241829cb9e24a4deaae8b"
+    },
+    "scope": "Historical fixed100USDT/99budget,36spot assets,6slots,13bps model; not live execution parity"
+  }
 }
