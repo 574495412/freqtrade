@@ -4,6 +4,18 @@ This directory owns an isolated **research-only** Freqtrade experiment. It does 
 
 The financial engine is the pinned Freqtrade native `Backtesting` implementation. `HistoricalVolumePairList.py` is a local historical-data bridge to unchanged upstream `RangeStabilityFilter` and `VolatilityFilter`. The historical clock and initial-entry pool gate are explicit existing local engine changes. Storage adapters preserve native values and types and are validated against a complete known account. This is not an official upstream historical risk-filter feature.
 
+## User-prioritized delivery scope
+
+`user-scope-change.json` records the later request to focus on 2026 and shorten waiting. The original economic window was already 2026; older input is indicator warmup only. Deliver `REPORT-2026-15bps.md` and `comparison-2026-15bps.json` after **both** 15bps native accounts finish. `year2026_report.py` validates these actual accounts and leaves the original two-cost gate explicitly unevaluated.
+
+The unstarted `accounts/structural_8bps/DEFERRED_BY_USER.json` directory is an intentional scheduler stop barrier: the unchanged batch runner stops before launching any 8bps child. Its resulting scheduler `FileExistsError` is not a native strategy failure. Both8bps sensitivity accounts are deferred; do not remove the marker or resume them without restoring the intended scope explicitly. Original plans and the four-account protocol remain unchanged.
+
+```sh
+PYTHONDONTWRITEBYTECODE=1 .venv-paper/bin/python -B -m research.crypto.nfi_blacklist_rules_20261109.year2026_report
+```
+
+`disk-recovery.json` preserves the earlier disk-guard attempt (exit73), generated-cache inventories and unchanged noncache evidence hashes. The successful retry uses the same source, input and economic plan. Cache recovery changed no risk or resource thresholds.
+
 ## Evidence and reproduction
 
 - `plans.json` seals sources, actual plans and the pre-economics protocol. `parity-plan-v002.json` is the effective known-account control; the earlier failed adapter attempt is retained through its registration and failure receipt.
@@ -25,7 +37,7 @@ Validation:
 
 ```sh
 .venv/bin/python -m pytest -q research/crypto/nfi_blacklist_rules_20261109/test_policy.py
-.venv/bin/ruff check research/crypto/nfi_blacklist_rules_20261109 --per-file-ignores register.py:E501 --per-file-ignores source_audit.py:E501 --per-file-ignores analyze.py:RUF001
+.venv/bin/ruff check research/crypto/nfi_blacklist_rules_20261109 --extend-per-file-ignores register.py:E501 --extend-per-file-ignores source_audit.py:E501
 ```
 
 The narrow lint exceptions preserve byte-frozen financial source strings and Chinese report punctuation. They do not skip execution, economic or input validation.
