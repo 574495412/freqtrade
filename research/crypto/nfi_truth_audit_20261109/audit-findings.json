@@ -1,0 +1,50 @@
+{
+  "research_gate": "RELEASED_BY_USER",
+  "overall_findings_resolved": false,
+  "findings": [
+    {
+      "item": "Six prior exit-time lookahead warnings",
+      "status": "RESOLVED_WITHIN_TESTED_SCOPE",
+      "cause": "Diagnostic cache carryover",
+      "scope": "2025Q1 ADA/ETH, native spot/futures,24factorial controls",
+      "reference": "cache-proof.json"
+    },
+    {
+      "item": "Retrospective named blacklist",
+      "status": "CONFIRMED_BIAS",
+      "new100USDT_no_named_blacklist_control": "COMPLETED",
+      "remaining_gap": "Conditional current/survivor selected markets, not full historical membership"
+    },
+    {
+      "item": "100USDT native reproduction",
+      "status": "COMPLETED_3_OF_3",
+      "completed": [
+        "author100_8bps",
+        "structural100_8bps",
+        "spot100_13bps-v002"
+      ],
+      "all_completed_native_exit_codes": 0
+    },
+    {
+      "item": "Independent out-of-sample evidence",
+      "status": "UNESTABLISHED",
+      "existing2026_selection_results_already_known": true
+    },
+    {
+      "item": "Live execution parity",
+      "status": "UNESTABLISHED",
+      "runtime_evidence": "runtime-readonly.json",
+      "note": "Local heartbeat/zero ledger fills at last observation do not certify order routing"
+    },
+    {
+      "item": "Live futures public API availability",
+      "status": "FAILED_RATE_LIMIT_OBSERVED",
+      "observed_local_time": "2026-11-10 01:15-01:16 Asia/Shanghai",
+      "latest_readonly_ledger_orders": 0,
+      "details": "Repeated new418/-1003 responses; heartbeat is not API availability. Research financial replays had outbound sockets blocked. Shared-egress traffic cause not attributed without caller-level evidence.",
+      "actions": "No live restart, stop, order, IP change or gate change performed by this audit"
+    }
+  ],
+  "orders_modified": false,
+  "completed_at_utc": "2026-11-09T17:15:37.939844+00:00"
+}

@@ -1,0 +1,259 @@
+{
+  "schema": "freqtrade.research.truth-audit-cap100.v1",
+  "registered_at": "2026-11-09T16:36:28.162128+00:00",
+  "economic_results_observed_at_registration": false,
+  "engine_source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_blacklist_rules_20261109_v001/engine",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_blacklist_rules_20261109/engine-manifest.json",
+    "sha256": "79a800d0a1ec55c502365995bcc201103d7d6454429507fa6c34eb7106f34089"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "start": "2026-01-01T00:00:00+00:00",
+  "end": "2026-11-09T05:05:00+00:00",
+  "comparison_end": "2026-11-09T05:00:00+00:00",
+  "pairs": [
+    "BTC/USDT",
+    "ETH/USDT",
+    "SOL/USDT",
+    "AVAX/USDT",
+    "DOGE/USDT",
+    "XRP/USDT",
+    "ADA/USDT",
+    "LINK/USDT",
+    "DOT/USDT",
+    "FIL/USDT",
+    "NEAR/USDT",
+    "ATOM/USDT",
+    "DYDX/USDT",
+    "LTC/USDT",
+    "BCH/USDT",
+    "ETC/USDT",
+    "GALA/USDT",
+    "SAND/USDT",
+    "UNI/USDT",
+    "IOTA/USDT",
+    "RUNE/USDT",
+    "AXS/USDT",
+    "EGLD/USDT",
+    "ALGO/USDT",
+    "SNX/USDT",
+    "CRV/USDT",
+    "MASK/USDT",
+    "SUSHI/USDT",
+    "KSM/USDT",
+    "IOTX/USDT",
+    "MANA/USDT",
+    "NEO/USDT",
+    "GRT/USDT",
+    "TRX/USDT",
+    "SKL/USDT",
+    "THETA/USDT"
+  ],
+  "initial_equity_usdt": 100,
+  "allowed_leverage": 1,
+  "total_cost_bps_per_side": [
+    13
+  ],
+  "cost_model": "10bps spot commission plus3bps execution proxy per side; no funding",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_truth_audit_20261109_v001/spot-candles-v002",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_truth_audit_20261109_v001/spot-data-receipts.json",
+    "sha256": "f4be5318210f9ad6caa0a102a9d13f7082cd30455e778a7806dd2ac54b1a267b"
+  },
+  "original_dataset_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_capacity_20261109_v002/data-receipts.json",
+    "sha256": "9f36100f405aceb86acc3796fd5be7253206b38091055ac4f3496026eae34629"
+  },
+  "marks": {},
+  "candidates": [
+    {
+      "name": "spot100",
+      "strategy": "FlatTopBoost",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/spot100-config.json",
+        "sha256": "725bbc31c989de027d420238ed090b793c79cb42beb881210a05f888be092399"
+      },
+      "source_files": {
+        "NostalgiaForInfinityX8.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+          "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+        },
+        "StrengthAllocation.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/StrengthAllocation.py",
+          "sha256": "eb9708702b628fbd5e1bd7a818b77162650590b27bd48d3d82c9a14a4c2290ef"
+        }
+      },
+      "original_source_files": {
+        "/Users/chrise/GitHub/CZ-Agent/vendor/nfi-x8/NostalgiaForInfinityX8.py": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+      },
+      "max_open_trades": 6,
+      "stake_amount": "unlimited",
+      "signal_timeframe": "5m",
+      "matching_timeframe": "5m",
+      "source_and_risk_behavior": "Existing local FlatTopBoost: pure Top Coins long initial stake x1.25; native entry/exit/DCA/leverage callbacks otherwise inherited unchanged."
+    }
+  ],
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_blacklist_rules_20261109/storage.py",
+    "sha256": "1ccf61313356409a023510138196e78609f0aeff0740a7c8f9e79978e30566b4"
+  },
+  "runner_sha256": "73bdc7df908482d4768a9265827dfd689f99e06c32209ff24bf872446d0165f5",
+  "memory_guard_bytes": 5905580032,
+  "wall_guard_seconds": 7200,
+  "maximum_financial_workers": 1,
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2026-01-01T00:00:00+00:00",
+      "end": "2026-11-09T05:00:00+00:00"
+    },
+    {
+      "name": "2026-H1",
+      "start": "2026-01-01T00:00:00+00:00",
+      "end": "2026-07-01T00:00:00Z"
+    },
+    {
+      "name": "2026-H2-to-cutoff",
+      "start": "2026-07-01T00:00:00Z",
+      "end": "2026-11-09T05:00:00+00:00"
+    }
+  ],
+  "selection_protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_blacklist_rules_20261109/PROTOCOL.md",
+    "sha256": "b127f3e97ebbb15bedcc650bb5c5525288784b8f0c1a00a4ca62e524da5a1dad"
+  },
+  "known_limitations": [
+    "Static current36spot assets, not point-in-time membership",
+    "Current metadata, not historical exchange rule proof",
+    "Five-minute OPEN fill/valuation model, no orderbook simulation",
+    "No independent OOS; inspected related outcomes are known"
+  ],
+  "new_factors": 0,
+  "parameter_optimization": false,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+    "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+  },
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/observer.py",
+    "sha256": "6fb8a1b13bd904c6025d7cdff0fb476990417415c0bf606ab04c3b1755b43564"
+  },
+  "registration_completed_at": "2026-11-05T11:52:17.586200+00:00",
+  "storage_policy": {
+    "codec": "pyarrow-zstd-default",
+    "lossless_indicator_map_lru": 1,
+    "lossless_trim_map_lru": 1,
+    "analyzed_provider_lru": 14,
+    "no_numeric_downcast": true,
+    "writeback_skip": "complete serialized SHA256 identity only"
+  },
+  "technical_revision": 2,
+  "revision_reason": "Explicit native datadir CLI option required; first attempt stopped before loading market candles or calculating economics. Frozen economic contract unchanged.",
+  "revision_at": "2026-11-05T11:53:52.025182+00:00",
+  "registration_note": "New comparison contract; prior failures remain failed",
+  "input_inventory": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/cz-comparison-data-inventory-20261105.json",
+    "sha256": "17338ca5b6cc3335e2c6ed6a8b5a9618eae522fe27bcd6eaf3f1188d3294efdb"
+  },
+  "original_full_market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+    "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+  },
+  "comparison_purpose": "Native fixed100USDT spot-cap reproduction, static36coins",
+  "prior_related_40_coin_economics_known": true,
+  "parent_plan": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_historical_universe_20261109/v003/flatboost-plan.json",
+    "sha256": "9d785803d8b888b07251233d140e8a43f4ee3e67cb5e98849bbe52e996955a7e"
+  },
+  "observation_frequency": "5min",
+  "parameter_experiment": "Previously frozen x1.25 initial stake; no new multiplier search",
+  "automatic_parameter_optimization": false,
+  "technical_only_revision": false,
+  "financial_hypothesis_unchanged": false,
+  "prior_native_plan": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/L3_S12-v002.json",
+    "sha256": "34d99c7105e1cc9d90250f2ae29c09c7daa127fa280c04be512b8d864d4d07a8"
+  },
+  "storage_validation": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/storage-validation.json",
+    "sha256": "10ee30c747bbc30c2f7968252595e94f181597f8d22426b8824bd0f100706761"
+  },
+  "original_control_economics_known": true,
+  "previous_flatboost_contract_economics_known": true,
+  "historical_schedule": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/spot-static-schedule.json",
+    "sha256": "478a969c2b5f9f0cfdd6bcf8777d9633fe5211187343f362445c4bd651cd3532"
+  },
+  "extension_patch": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_blacklist_rules_20261109/native.patch",
+    "sha256": "086241c3a9ba0b100e9f57bbca4f6aeff19262547edca8651df526be1f209bdc"
+  },
+  "row_storage": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_historical_universe_20261109/v003/row_storage.py",
+    "sha256": "b9ae9a87cf246263e5031d3a473f4547b2f0158c01802095ecd5696f3ac8a260"
+  },
+  "historical_universe_protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_historical_universe_20261109/v003/PROTOCOL.md",
+    "sha256": "552bd933102daaf23de113e83eb37d8aeb2d68a94327220df8e1e598faed91a1"
+  },
+  "research_drawdown_limit": 0.3,
+  "initial_basket_matches_legacy_control": true,
+  "legacy_static_results_known": true,
+  "local_extension_explicit": true,
+  "prior_technical_plan": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_historical_universe_20261109/v002/flatboost-plan.json",
+    "sha256": "7ffcf93da01a83d01c30dc4aa4c99e3d7f3e75e034d4639d419d8d17ae635632"
+  },
+  "technical_revision_reason": "Native pairlist schema registry required; first dynamic invocation failed before account replay; economics unchanged",
+  "dynamic_economic_results_observed": false,
+  "storage_consumption_only_revision": true,
+  "new_policy_economic_results_known": false,
+  "prior_related_results_known": true,
+  "policy_protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_blacklist_rules_20261109/PROTOCOL.md",
+    "sha256": "b127f3e97ebbb15bedcc650bb5c5525288784b8f0c1a00a4ca62e524da5a1dad"
+  },
+  "dynamic_universe": false,
+  "preflight_interface_repair": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_blacklist_rules_20261109/preflight-technical-attempt/structural-plan.json",
+    "sha256": "50b2ed258e557817c0524110169abb69f95c539843097a26379c9f3a33acdbea"
+  },
+  "capital_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/capital_snapshot.py",
+    "sha256": "ed1fcaf2084b94db88351cd7624e69205dd4a08bc9be95b6f69acfc5d78c2595"
+  },
+  "known_new_account_returns": false,
+  "prior1000USDT_returns_known": true,
+  "historical_name_blacklist_bias": false,
+  "complete_point_in_time_market_rules": false,
+  "independent_oos": false,
+  "risk_gate": 0.3,
+  "economic_protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/PROTOCOL.md",
+    "sha256": "fba114f74cc3c55ec431e58fcb3a27fe7ed5b8f7be190c1f15bff5ca4f936ba0"
+  },
+  "spot_input_admission": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/spot-input-admission.json",
+    "sha256": "0e9ecdfddb183af5e2102ebb2e4fbffbcef9bfca80057765118636a070b7cc65"
+  }
+}

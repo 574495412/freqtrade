@@ -1,0 +1,17 @@
+--- a/freqtrade/optimize/analysis/lookahead.py
++++ b/freqtrade/optimize/analysis/lookahead.py
+@@ -107,6 +107,14 @@
+                 shutil.rmtree(path_to_current_identifier)
+ 
+         prepare_data_config = deepcopy(self.local_config)
++        # Local diagnostic fix: each chronological replay owns its runtime state.
++        # Datadir, signals, matching, wallet and account assumptions are unchanged.
++        self._isolated_replay_seq = getattr(self, "_isolated_replay_seq", 0) + 1
++        isolated = Path(self.local_config["user_data_dir"]) / (
++            f"isolated-replay-{self._isolated_replay_seq:04d}"
++        )
++        isolated.mkdir(parents=True, exist_ok=False)
++        prepare_data_config["user_data_dir"] = isolated
+         prepare_data_config["timerange"] = (
+             str(self.dt_to_timestamp(varholder.from_dt))
+             + "-"

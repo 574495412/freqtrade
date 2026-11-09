@@ -1,0 +1,89 @@
+{
+  "registered_at_utc": "2026-11-09T16:32:42.778505+00:00",
+  "plans": [
+    {
+      "name": "author100",
+      "cost": 8,
+      "plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/author100-plan.json",
+        "sha256": "aeb74624f25844b6f9b3d7f312019a8a0c12e8e89405300e90f82799ebda6d34"
+      }
+    },
+    {
+      "name": "structural100",
+      "cost": 8,
+      "plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/structural100-plan.json",
+        "sha256": "fd58e6dcbba9427e393bef1227bc639bd2aca85e21a78b66ff4890fb7c0d40fe"
+      }
+    }
+  ],
+  "runner": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/native_cap_runner.py",
+    "sha256": "73bdc7df908482d4768a9265827dfd689f99e06c32209ff24bf872446d0165f5"
+  },
+  "capital": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/capital_snapshot.py",
+    "sha256": "ed1fcaf2084b94db88351cd7624e69205dd4a08bc9be95b6f69acfc5d78c2595"
+  },
+  "observer": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/observer.py",
+    "sha256": "6fb8a1b13bd904c6025d7cdff0fb476990417415c0bf606ab04c3b1755b43564"
+  },
+  "protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_truth_audit_20261109/PROTOCOL.md",
+    "sha256": "fba114f74cc3c55ec431e58fcb3a27fe7ed5b8f7be190c1f15bff5ca4f936ba0"
+  },
+  "additional_spot_case_frozen_contract": {
+    "market": "spot",
+    "capital": 100,
+    "stake_budget": 99,
+    "leverage": 1,
+    "slots": 6,
+    "cost_bps": 13,
+    "pairs": [
+      "BTC/USDT",
+      "ETH/USDT",
+      "SOL/USDT",
+      "AVAX/USDT",
+      "DOGE/USDT",
+      "XRP/USDT",
+      "ADA/USDT",
+      "LINK/USDT",
+      "DOT/USDT",
+      "FIL/USDT",
+      "NEAR/USDT",
+      "ATOM/USDT",
+      "DYDX/USDT",
+      "LTC/USDT",
+      "BCH/USDT",
+      "ETC/USDT",
+      "GALA/USDT",
+      "SAND/USDT",
+      "UNI/USDT",
+      "IOTA/USDT",
+      "RUNE/USDT",
+      "AXS/USDT",
+      "EGLD/USDT",
+      "ALGO/USDT",
+      "SNX/USDT",
+      "CRV/USDT",
+      "MASK/USDT",
+      "SUSHI/USDT",
+      "KSM/USDT",
+      "IOTX/USDT",
+      "MANA/USDT",
+      "NEO/USDT",
+      "GRT/USDT",
+      "TRX/USDT",
+      "SKL/USDT",
+      "THETA/USDT"
+    ],
+    "start": "2026-01-01T00:00:00+00:00",
+    "end": "2026-11-09T05:05:00+00:00",
+    "comparison_end": "2026-11-09T05:00:00+00:00",
+    "new_data_admission_required": true,
+    "do_not_drop_missing_assets": true
+  },
+  "orders_enabled": false
+}
