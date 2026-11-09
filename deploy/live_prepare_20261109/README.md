@@ -13,7 +13,7 @@
 
 ## 阻塞与人工接管
 
-账户当前 `dualSidePosition=true`，而当前原生 Binance 实现明确拒绝双向持仓模式，见 `freqtrade/exchange/binance.py` 的 `additional_exchange_init`。若用户决定后续启动，需本人先在交易所处理为兼容的单向模式，再重新核对账户、仓位、挂单及配置。离线 STOPPED 配置并不意味着运行交易进程没有初始化副作用，因此本次未运行交易 CLI。
+首次核验时账户 `dualSidePosition=true`，当前原生 Binance 实现明确拒绝双向持仓模式，见 `freqtrade/exchange/binance.py` 的 `additional_exchange_init`。用户随后自行改为单向；最新只读复核 `dualSidePosition=false`，可用 USDT 仍为 `497.74760163`，零持仓、零挂单，40 币白名单通过。复核时间及原生离线配置结果见 `one-way-recheck.json`；旧 `receipt.json` 保留首次核验事实。双向模式这一兼容性阻碍已解除，尚未实例化交易所客户端或验证真实成交。离线 STOPPED 配置并不意味着运行交易进程没有初始化副作用，因此本次未运行交易 CLI。
 
 真实资金交易必须由用户本人启动。本目录不提供自动启用交易脚本。
 

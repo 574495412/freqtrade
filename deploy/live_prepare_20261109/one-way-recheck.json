@@ -1,0 +1,66 @@
+{
+  "checked_at_utc": "2026-11-09T03:10:27.680813+00:00",
+  "account_mode": "one_way",
+  "dualSidePosition": false,
+  "authenticated_checks": {
+    "permissions": {
+      "http_status": 200,
+      "ok": true,
+      "permissions": {
+        "enableReading": true,
+        "enableSpotAndMarginTrading": false,
+        "enableFutures": true,
+        "enableWithdrawals": false,
+        "ipRestrict": true
+      }
+    },
+    "futures_account": {
+      "http_status": 200,
+      "ok": true,
+      "can_trade": null,
+      "available_usdt": "497.74760163",
+      "nonzero_positions": 0
+    },
+    "futures_open_orders": {
+      "http_status": 200,
+      "ok": true,
+      "open_orders": 0
+    },
+    "futures_config": {
+      "http_status": 200,
+      "ok": true,
+      "can_trade": true,
+      "hedge_mode": false,
+      "multi_assets_margin": false
+    },
+    "copytrading_status": {
+      "http_status": 200,
+      "ok": true,
+      "exchange_code": "000000",
+      "is_lead_trader": true
+    },
+    "lead_symbols": {
+      "http_status": 200,
+      "ok": true,
+      "exchange_code": "000000",
+      "symbol_count": 754
+    }
+  },
+  "offline_native_schema": {
+    "strategy": "NostalgiaForInfinityX8",
+    "stoploss": -0.99,
+    "position_adjustment_enable": true,
+    "futures_leverage": {
+      "regular": 1.0,
+      "rebuy": 1.0,
+      "grind": 1.0
+    }
+  },
+  "remaining_preparation_gates": [
+    "USER_MANUAL_ACTIVATION_REQUIRED",
+    "UNRESOLVED_EXIT_TIME_DIAGNOSTICS"
+  ],
+  "orders_submitted": 0,
+  "account_settings_changed_by_agent": false,
+  "live_worker_started": false
+}
