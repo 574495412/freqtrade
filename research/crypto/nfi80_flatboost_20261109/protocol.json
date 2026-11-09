@@ -1,0 +1,152 @@
+{
+  "registered_at_utc": "2026-11-09T07:15:53.429945+00:00",
+  "hypothesis": "Existing fixed x1.25 Top Coins initial stake may improve original net returns",
+  "variant": "FlatTopBoost, unchanged local allocation extension; not upstream NFI logic",
+  "owner_workflow": "Native Freqtrade Backtesting and supported custom_stake_amount callback",
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "upstream_nfi_commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+  "parent_protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/protocol.json",
+    "sha256": "9bf55ad518cc9cbdd3b75764ab95056bf02846915b39cd3d053c619fd650971b"
+  },
+  "baseline_comparison": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/comparison.json",
+    "sha256": "8d1737fde959cec1d070053a1000613de9403e4b13cf4f3746866e829f9a8ca4"
+  },
+  "previous_ranking_and_failure": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/selection_correction_20261109.json",
+    "sha256": "89798af6422cb2b3e62650fdfb2ac3e973003bc0b892232a0885d4492003a944"
+  },
+  "previous_best": "FlatTopBoost",
+  "old_2024_incremental_drawdown_failure_remains_failed": true,
+  "plans": {
+    "L3_S6": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_flatboost_20261109/L3_S6-plan.json",
+      "sha256": "c5390666a40697f4d9ea97c37d3129421a004cb8c7ae0292deaed7512861287b"
+    },
+    "L3_S12": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_flatboost_20261109/L3_S12-plan.json",
+      "sha256": "c1ae5c3c5d7c849d0973d98863600ad538d28ed9f8ab45a56229a39d86f03369"
+    }
+  },
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_flatboost_20261109/study.py",
+    "sha256": "10a58ef97655ed0cd9b7ee2ffe72e07d9d1aef588424fe2b7f63dba0909b7581"
+  },
+  "runner": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/native_runner.py",
+    "sha256": "87a47d353b38cce4b4ce5b0e3abe6d0c7a0bb6371d7794f6f874341fbdc6fd49"
+  },
+  "wrapper": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_strength_allocation_20261107/StrengthAllocation.py",
+    "sha256": "eb9708702b628fbd5e1bd7a818b77162650590b27bd48d3d82c9a14a4c2290ef"
+  },
+  "cases": [
+    "L3_S6",
+    "L3_S12"
+  ],
+  "costs_bps_per_side": [
+    15,
+    8
+  ],
+  "start": "2026-01-01T00:00:00+00:00",
+  "comparison_end": "2026-11-09T05:00:00+00:00",
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "ZEC/USDT:USDT",
+    "XRP/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "ADA/USDT:USDT",
+    "SUI/USDT:USDT",
+    "1000PEPE/USDT:USDT",
+    "CYBER/USDT:USDT",
+    "LINK/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "FIL/USDT:USDT",
+    "ENA/USDT:USDT",
+    "1000LUNC/USDT:USDT",
+    "BCH/USDT:USDT",
+    "POLYX/USDT:USDT",
+    "AUCTION/USDT:USDT",
+    "ZRX/USDT:USDT",
+    "LTC/USDT:USDT",
+    "AAVE/USDT:USDT",
+    "LUNA2/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "QTUM/USDT:USDT",
+    "UNI/USDT:USDT",
+    "FARTCOIN/USDT:USDT",
+    "WIF/USDT:USDT",
+    "WLD/USDT:USDT",
+    "DOT/USDT:USDT",
+    "TAO/USDT:USDT",
+    "1000SHIB/USDT:USDT",
+    "ICP/USDT:USDT",
+    "APT/USDT:USDT",
+    "XLM/USDT:USDT",
+    "HBAR/USDT:USDT",
+    "TIA/USDT:USDT",
+    "PENGU/USDT:USDT",
+    "CRV/USDT:USDT",
+    "ARB/USDT:USDT",
+    "ZEN/USDT:USDT",
+    "TRX/USDT:USDT",
+    "OP/USDT:USDT",
+    "REZ/USDT:USDT",
+    "ETC/USDT:USDT",
+    "ONT/USDT:USDT",
+    "INJ/USDT:USDT",
+    "FET/USDT:USDT",
+    "SEI/USDT:USDT",
+    "1000BONK/USDT:USDT",
+    "IOST/USDT:USDT",
+    "DASH/USDT:USDT",
+    "VIRTUAL/USDT:USDT",
+    "GALA/USDT:USDT",
+    "ONDO/USDT:USDT",
+    "XMR/USDT:USDT",
+    "LDO/USDT:USDT",
+    "EIGEN/USDT:USDT",
+    "PENDLE/USDT:USDT",
+    "XTZ/USDT:USDT",
+    "STRK/USDT:USDT",
+    "ID/USDT:USDT",
+    "NEO/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "XVG/USDT:USDT",
+    "POL/USDT:USDT",
+    "CAKE/USDT:USDT",
+    "GMT/USDT:USDT",
+    "ETHFI/USDT:USDT",
+    "COMP/USDT:USDT",
+    "TURBO/USDT:USDT",
+    "PEOPLE/USDT:USDT",
+    "SAND/USDT:USDT",
+    "1000FLOKI/USDT:USDT",
+    "GAS/USDT:USDT",
+    "JUP/USDT:USDT",
+    "ALGO/USDT:USDT",
+    "MANA/USDT:USDT",
+    "TRB/USDT:USDT",
+    "MOODENG/USDT:USDT",
+    "DYDX/USDT:USDT"
+  ],
+  "initial_equity_usdt": 1000,
+  "research_drawdown_limit": 0.5,
+  "selection_rule": "Report all outcomes; rank net returns per cost with <=50% 5m DD and zero modeled liquidations; no automatic production promotion",
+  "frozen_multiplier": 1.25,
+  "no_parameter_retuning": true,
+  "maximum_financial_workers": 1,
+  "limitations": [
+    "Retrospective source version and current market metadata; not independent OOS or PIT membership proof",
+    "Static prior-day 80-coin basket, not a dynamically refreshed year-long universe",
+    "15/8bps are fee+slippage proxies; funding and liquidation remain native model evidence",
+    "Five-minute mark observations omit intrabar worst-case risk"
+  ],
+  "baseline_economics_known": true,
+  "new_variant_results_known": false,
+  "orders_enabled": false,
+  "production_eligible": false
+}
