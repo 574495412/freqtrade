@@ -1,0 +1,77 @@
+{
+  "structural": {
+    "days": 313,
+    "selected_union": 262,
+    "membership_entries_including_initial": 2848,
+    "membership_exits": 2768,
+    "membership_reentries": 2586,
+    "risk_excluded_pair_days_by_first_failing_filter": {},
+    "risk_excluded_pair_days_by_threshold": {},
+    "major_coin_diagnostics": {
+      "BTC/USDT:USDT": {
+        "selected_days": 313,
+        "risk_excluded_days": 0
+      },
+      "ETH/USDT:USDT": {
+        "selected_days": 313,
+        "risk_excluded_days": 0
+      },
+      "BNB/USDT:USDT": {
+        "selected_days": 313,
+        "risk_excluded_days": 0
+      },
+      "SOL/USDT:USDT": {
+        "selected_days": 313,
+        "risk_excluded_days": 0
+      },
+      "BTCDOM/USDT:USDT": {
+        "selected_days": 5,
+        "risk_excluded_days": 0
+      }
+    },
+    "minimum_eligible": 265,
+    "maximum_eligible": 266,
+    "membership_change_is_not_actual_trade_turnover": true
+  },
+  "native_risk": {
+    "days": 313,
+    "selected_union": 265,
+    "membership_entries_including_initial": 3350,
+    "membership_exits": 3270,
+    "membership_reentries": 3085,
+    "risk_excluded_pair_days_by_first_failing_filter": {
+      "RangeStabilityFilter": 1641,
+      "VolatilityFilter": 3817
+    },
+    "risk_excluded_pair_days_by_threshold": {
+      "RangeStabilityFilter.above_maximum": 1641,
+      "VolatilityFilter.below_minimum": 3724,
+      "VolatilityFilter.above_maximum": 93
+    },
+    "major_coin_diagnostics": {
+      "BTC/USDT:USDT": {
+        "selected_days": 185,
+        "risk_excluded_days": 128
+      },
+      "ETH/USDT:USDT": {
+        "selected_days": 262,
+        "risk_excluded_days": 51
+      },
+      "BNB/USDT:USDT": {
+        "selected_days": 188,
+        "risk_excluded_days": 125
+      },
+      "SOL/USDT:USDT": {
+        "selected_days": 274,
+        "risk_excluded_days": 39
+      },
+      "BTCDOM/USDT:USDT": {
+        "selected_days": 2,
+        "risk_excluded_days": 299
+      }
+    },
+    "minimum_eligible": 178,
+    "maximum_eligible": 263,
+    "membership_change_is_not_actual_trade_turnover": true
+  }
+}
