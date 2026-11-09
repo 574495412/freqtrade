@@ -1,0 +1,422 @@
+{
+  "scope": "Actual local Freqtrade paper books, not real exchange account returns.",
+  "as_of_beijing": "2026-11-09T10:15:00+08:00",
+  "snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/snapshot.json",
+    "sha256": "b3fb3944c0abe31b38afd1ee92fc7e4d8b9638d11fb79396c9ba3b195b0525cc"
+  },
+  "accounts": {
+    "spot_original": {
+      "account_start_beijing": "2026-11-05T21:50:10.939932+08:00",
+      "initial_usdt": 1000,
+      "end_nav_usdt": 1003.61116326,
+      "realized_profit_usdt": 6.57666669,
+      "open_mark_profit_usdt": -2.96550343,
+      "net_profit_usdt": 3.611163260000012,
+      "net_return_pct": 0.36111632599999943,
+      "closed_trades": 2,
+      "open_positions": [
+        {
+          "pair": "RUNE/USDT",
+          "amount": 281.9,
+          "is_short": false,
+          "entry_fill_utc": "2026-11-06T11:20:04.124000+00:00",
+          "mark": 0.58,
+          "native_mark_profit_usdt": -2.96550343,
+          "public_accrued_funding_usdt": 0.0,
+          "stored_native_funding_usdt": 0.0,
+          "funding_difference_usdt": 0.0
+        }
+      ],
+      "actual_additions": 0,
+      "daily": [
+        {
+          "beijing_date": "2026-11-05",
+          "start_utc": "2026-11-05T13:50:10.939932+00:00",
+          "end_utc": "2026-11-05T16:00:00+00:00",
+          "pnl_usdt": -1.4260362600000462,
+          "net_return_pct": -0.1426036260000041
+        },
+        {
+          "beijing_date": "2026-11-06",
+          "start_utc": "2026-11-05T16:00:00+00:00",
+          "end_utc": "2026-11-06T16:00:00+00:00",
+          "pnl_usdt": 10.386336590000042,
+          "net_return_pct": 1.0401169034189195
+        },
+        {
+          "beijing_date": "2026-11-07",
+          "start_utc": "2026-11-06T16:00:00+00:00",
+          "end_utc": "2026-11-07T16:00:00+00:00",
+          "pnl_usdt": -1.970734709999988,
+          "net_return_pct": -0.195323315432272
+        },
+        {
+          "beijing_date": "2026-11-08",
+          "start_utc": "2026-11-07T16:00:00+00:00",
+          "end_utc": "2026-11-08T16:00:00+00:00",
+          "pnl_usdt": -2.815335300000015,
+          "net_return_pct": -0.2795793914971312
+        },
+        {
+          "beijing_date": "2026-11-09",
+          "start_utc": "2026-11-08T16:00:00+00:00",
+          "end_utc": "2026-11-09T02:15:00+00:00",
+          "pnl_usdt": -0.5630670599999803,
+          "net_return_pct": -0.056072645861515724
+        }
+      ],
+      "ledger": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/spot_original_ledger.json",
+        "sha256": "3d838862227acba0cf978b6fe3b29509bfb0424eb57d8be442f844cb9f00212f"
+      },
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/spot_original_config.json",
+        "sha256": "76fb25d38bedb18ee0c2296844b9034ebc097b56353aa5c89169395e57687d8b"
+      }
+    },
+    "spot_addcap": {
+      "account_start_beijing": "2026-11-07T00:59:48.786354+08:00",
+      "initial_usdt": 1000,
+      "end_nav_usdt": 1000.0,
+      "realized_profit_usdt": 0,
+      "open_mark_profit_usdt": 0,
+      "net_profit_usdt": 0.0,
+      "net_return_pct": 0.0,
+      "closed_trades": 0,
+      "open_positions": [],
+      "actual_additions": 0,
+      "daily": [
+        {
+          "beijing_date": "2026-11-07",
+          "start_utc": "2026-11-06T16:59:48.786354+00:00",
+          "end_utc": "2026-11-07T16:00:00+00:00",
+          "pnl_usdt": 0.0,
+          "net_return_pct": 0.0
+        },
+        {
+          "beijing_date": "2026-11-08",
+          "start_utc": "2026-11-07T16:00:00+00:00",
+          "end_utc": "2026-11-08T16:00:00+00:00",
+          "pnl_usdt": 0.0,
+          "net_return_pct": 0.0
+        },
+        {
+          "beijing_date": "2026-11-09",
+          "start_utc": "2026-11-08T16:00:00+00:00",
+          "end_utc": "2026-11-09T02:15:00+00:00",
+          "pnl_usdt": 0.0,
+          "net_return_pct": 0.0
+        }
+      ],
+      "ledger": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/spot_addcap_ledger.json",
+        "sha256": "b4df4002c570034426573f5197ce337f4899391c69daeee2a8853fc8f40dfe46"
+      },
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/spot_addcap_config.json",
+        "sha256": "d1f4d7f705c2d5fb660381c0cbb3f2b0c831f206af1cf477124e2d240b8b10a5"
+      }
+    },
+    "futures_original": {
+      "account_start_beijing": "2026-11-05T21:14:06.469566+08:00",
+      "initial_usdt": 1000,
+      "end_nav_usdt": 1006.15991585,
+      "realized_profit_usdt": 7.12064064,
+      "open_mark_profit_usdt": -0.96072479,
+      "net_profit_usdt": 6.159915849999948,
+      "net_return_pct": 0.6159915849999864,
+      "closed_trades": 6,
+      "open_positions": [
+        {
+          "pair": "RUNE/USDT:USDT",
+          "amount": 73.0,
+          "is_short": true,
+          "entry_fill_utc": "2026-11-08T21:58:50.686000+00:00",
+          "mark": 0.57925,
+          "native_mark_profit_usdt": -0.96072479,
+          "public_accrued_funding_usdt": -0.021416273876385,
+          "stored_native_funding_usdt": -0.021416273876385,
+          "funding_difference_usdt": 0.0
+        }
+      ],
+      "actual_additions": 0,
+      "daily": [
+        {
+          "beijing_date": "2026-11-05",
+          "start_utc": "2026-11-05T13:14:06.469566+00:00",
+          "end_utc": "2026-11-05T16:00:00+00:00",
+          "pnl_usdt": 1.3699298200000385,
+          "net_return_pct": 0.13699298200000598
+        },
+        {
+          "beijing_date": "2026-11-06",
+          "start_utc": "2026-11-05T16:00:00+00:00",
+          "end_utc": "2026-11-06T16:00:00+00:00",
+          "pnl_usdt": -5.8935738000001265,
+          "net_return_pct": -0.5885511062889148
+        },
+        {
+          "beijing_date": "2026-11-07",
+          "start_utc": "2026-11-06T16:00:00+00:00",
+          "end_utc": "2026-11-07T16:00:00+00:00",
+          "pnl_usdt": 4.192750240000123,
+          "net_return_pct": 0.42118029370010746
+        },
+        {
+          "beijing_date": "2026-11-08",
+          "start_utc": "2026-11-07T16:00:00+00:00",
+          "end_utc": "2026-11-08T16:00:00+00:00",
+          "pnl_usdt": 1.8993193300000257,
+          "net_return_pct": 0.18999480109032074
+        },
+        {
+          "beijing_date": "2026-11-09",
+          "start_utc": "2026-11-08T16:00:00+00:00",
+          "end_utc": "2026-11-09T02:15:00+00:00",
+          "pnl_usdt": 4.591490259999887,
+          "net_return_pct": 0.4584300126369456
+        }
+      ],
+      "ledger": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/futures_original_ledger.json",
+        "sha256": "d354dcd9948def8079c5b14e3a5ae06381d141630983827b6d4ded2545131f68"
+      },
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/futures_original_config.json",
+        "sha256": "ef6fbd88293b11973cc79a342f88bdccb8affd9adeee6595f83f4b0ef0a66c2a"
+      }
+    },
+    "futures_addcap": {
+      "account_start_beijing": "2026-11-07T00:59:48.803752+08:00",
+      "initial_usdt": 1000,
+      "end_nav_usdt": 1001.86585296,
+      "realized_profit_usdt": 1.86585296,
+      "open_mark_profit_usdt": 0,
+      "net_profit_usdt": 1.8658529599999838,
+      "net_return_pct": 0.18658529599999696,
+      "closed_trades": 2,
+      "open_positions": [],
+      "actual_additions": 0,
+      "daily": [
+        {
+          "beijing_date": "2026-11-07",
+          "start_utc": "2026-11-06T16:59:48.803752+00:00",
+          "end_utc": "2026-11-07T16:00:00+00:00",
+          "pnl_usdt": -0.786235099999999,
+          "net_return_pct": -0.07862350999999768
+        },
+        {
+          "beijing_date": "2026-11-08",
+          "start_utc": "2026-11-07T16:00:00+00:00",
+          "end_utc": "2026-11-08T16:00:00+00:00",
+          "pnl_usdt": 0.5133784600000126,
+          "net_return_pct": 0.05137824137675384
+        },
+        {
+          "beijing_date": "2026-11-09",
+          "start_utc": "2026-11-08T16:00:00+00:00",
+          "end_utc": "2026-11-09T02:15:00+00:00",
+          "pnl_usdt": 2.13870959999997,
+          "net_return_pct": 0.21392933203874254
+        }
+      ],
+      "ledger": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/futures_addcap_ledger.json",
+        "sha256": "e8aeef021f71c19fa9c497693ce0b4ad3e1e46cbecff12e0b5fbef9b74945f4c"
+      },
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/futures_addcap_config.json",
+        "sha256": "565b6a20bd08a33be038bca2248dbe716d1721bed59929362e3f896d9214d411"
+      }
+    }
+  },
+  "public_sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/spot_RUNEUSDT_0.json",
+      "sha256": "75382941721d4fe17b853194b6dcbaef2af1f55b63189492ff3ae38a60bc756e"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/spot_RUNEUSDT_1.json",
+      "sha256": "ee4e59a9af6b4471c11a5fd648deb16902bc6e66adae1e87c790e8bc9923e516"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/spot_RUNEUSDT_2.json",
+      "sha256": "9d8162d20f58a029fd7b9b3cc63f18477a9bc33c169a0b4855996b593c11cb7f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/spot_RUNEUSDT_3.json",
+      "sha256": "e591c4c5a93a09432b939c816b21a4fab4160cb7124702f3f1d6f4258e3e39b7"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_IOTXUSDT_0.json",
+      "sha256": "8ff19362d350d0cc5a54f6e074e5da1843052078b4ec868e43c38eb80ba62bcf"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_IOTXUSDT_1.json",
+      "sha256": "ba4ec273bf995c4050c4ad76706dd4f135ab6cb39c214e768ddf8150887ff4d2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_IOTXUSDT_2.json",
+      "sha256": "84b703d7fbe56fb71952a81d4d59db39d69c742c8e0c039fbca295a9dc683326"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_IOTXUSDT_3.json",
+      "sha256": "3149e9edd01d5cff417d4be139ae3c5237217d61896e963fc11a8e06453a7d28"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/funding_IOTXUSDT.json",
+      "sha256": "4e7eca68ba90fb61b1f590f72c3e068ca9f6bb04480380e998d6b13d7c2d6f9f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_AXSUSDT_0.json",
+      "sha256": "06cb2747390d4c0666b48fbfdcaa2100ae904416703e6f7a47b5bb2579e7b9a2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_AXSUSDT_1.json",
+      "sha256": "73d04d26b81a025ced8f8bbe068b8ccd93ed7fda7d17d6381940912125e7a106"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_AXSUSDT_2.json",
+      "sha256": "4f06e80ca240227db0adda197092b4df39380d9353358286f0a5de1e91c8d57a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_AXSUSDT_3.json",
+      "sha256": "4afe74a69de0428f97ca74fbbd8983c373bf3495652c7ac6b3f2d667a0162ab7"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/funding_AXSUSDT.json",
+      "sha256": "bf6dca83d6f248dcd1c40333aaa67da94545205177c7a6bab02e755108e7154b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_NEOUSDT_0.json",
+      "sha256": "08607d8c954b530a9aaf444d3105e0c942f7790239dfaea227f44613184e8376"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_NEOUSDT_1.json",
+      "sha256": "b84aa3eeb78628d5ff7e11bbfaf82292ba1a269b48d1ac34ba017429227a5cef"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_NEOUSDT_2.json",
+      "sha256": "b4d15ad10e6885d2c826a0c29e77d633a05fe37f95d64a50513c0afd7d5cd9a7"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_NEOUSDT_3.json",
+      "sha256": "9b895a7bb97264b05232e3b5bb3207b088137587b2fcf78ea12b48b3fcccfcb8"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/funding_NEOUSDT.json",
+      "sha256": "fb59e5c78ab77d51bf43a6f9c2d1cbad3fb8a6286285b5da4b88e54216a6ffb6"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_AVAXUSDT_0.json",
+      "sha256": "4b2a6d81a2c926ac00860f30b569e38e7bb40391e440d4b2c80a92bb19f981c3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_AVAXUSDT_1.json",
+      "sha256": "8c703a0ee11c468e7657921299572d22bce5c93fdd8613864954328cde6ba9ce"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_AVAXUSDT_2.json",
+      "sha256": "816690e9ed2db1312ebd3d3659ba458e2d2489d85f45f2c7a196a9960bfebd53"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_AVAXUSDT_3.json",
+      "sha256": "3e06d16658a1a4e3697d4b602418df4e43fe4f8068b767c67f3be659ebdfbb6f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/funding_AVAXUSDT.json",
+      "sha256": "dbf3be6fea9df235146a76f3eea41b6fd91a1ce621d08072d6f331d58d4c6472"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_RUNEUSDT_0.json",
+      "sha256": "c7a917863601361ac648c3669f527774e41f1a1b5fcb4c65cd882515dc0de7f2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_RUNEUSDT_1.json",
+      "sha256": "b5c4f5f5f2c7a004549d5e5447ddf62765c3ea3a25f55f6a0eb484856d45191e"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_RUNEUSDT_2.json",
+      "sha256": "bfb63f2e780dc3ea6ac31c42dd24d784689eb4dd6da29e64f20c83a8cf6ce8f2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/futures_RUNEUSDT_3.json",
+      "sha256": "3ed81becba2e2201c2d32b044174b9a48b4ec6f53bc5fbba96d16ab38f50ce00"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paper_followup_20261109_v001/funding_RUNEUSDT.json",
+      "sha256": "14f1943913fd0dfb3a047debfe5b88af132977ac490ade26dcc3d7b59e1f6c95"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/funding_CRVUSDT.json",
+      "sha256": "cf24d8df483d8b10cb2482448f78ac006b1011e109b1f22b37f70ea3ed822aae"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/funding_RUNEUSDT_latest.json",
+      "sha256": "db5dbd55eda608d55df353294d17fe41c8df7b807ea7f0844f7aaef4eebbcfa8"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/futures_AXSUSDT_2026-11-06.json",
+      "sha256": "a1888b01fcdba97c72a052a54d450bcc1c12cb210ff15f1b11a19df3c7dd3d34"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/futures_CRVUSDT_2026-11-05.json",
+      "sha256": "58e17dc43b692f461a6e39bb175ebc8b60539d060ab698ebde989ddb0d9c4bc3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/futures_IOTXUSDT_2026-11-06.json",
+      "sha256": "826f83d77cf24218a162280449a3efb186bdfa36e3e688c5215d2ec6a2a3d253"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/futures_NEOUSDT_2026-11-06.json",
+      "sha256": "a84333345cd961a051d55ac550f19df7594845cddfe839750b68ac1877cbecbe"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/futures_RUNEUSDT_latest.json",
+      "sha256": "23ede313d029f84477b4e8e66ac98b23de4d10ace5969fa6444ef24fdecfbd24"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/spot_CRVUSDT_2026-11-05.json",
+      "sha256": "d9d08be23f2f3ec408a55e7bd5461b183f9fe677a7537d4dc09d97f480866284"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/spot_RUNEUSDT_2026-11-06.json",
+      "sha256": "b2bcfb025f0042e113a89281b80e62aa93e9a32aaf5d7032abab4cb7b1dbdbee"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/spot_RUNEUSDT_latest.json",
+      "sha256": "a877eeaa1a1218a65ce54bf864c877560a25598b602333dc20c28f1540111570"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/spot_SANDUSDT_2026-11-05.json",
+      "sha256": "d211db7bda9788f71c2032243a002d925d3697fdd05cb26daef5a77f913e3d66"
+    }
+  ],
+  "maximum_independent_native_nav_error_usdt": 9.593691174814012e-09,
+  "maximum_observed_filled_order_delay_seconds": 121.847,
+  "valuation": "Native recorded closed profits plus native LocalTrade profit for actual open positions at completed minute closes/marks, with entry and estimated exit fees and actual public funding. Native closed funding remains the booked amount.",
+  "limitations": [
+    "Original beganNov5; AddCap beganNov7. Lifetime returns are not matched cohorts.",
+    "Heartbeat gaps and unresolved lookahead diagnostics remain qualification gaps.",
+    "Marked values and estimated fees are not executable liquidation proceeds."
+  ],
+  "observer_submits_orders": false,
+  "real_orders_enabled": false,
+  "new_backtests": 0,
+  "strategy_configuration_changed": false,
+  "implementation": {
+    "parity.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/runtime_backtest_parity_20261109/parity.py",
+      "sha256": "9f2ef97f74827e2bf52b71a1982a08e805346099ef7cf89dcf326fd17848c40a"
+    },
+    "returns.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/runtime_backtest_parity_20261109/returns.py",
+      "sha256": "a6f40283beec7542bbcc2ae9e4952e1d0866271ce12b745824f5c66c4cc9b0ff"
+    }
+  },
+  "native_trade_model": {
+    "path": "/Users/chrise/GitHub/freqtrade/freqtrade/persistence/trade_model.py",
+    "sha256": "a011ca8686a205fd279ef665a2a3d5a1a4e3fb8cec9cbbac7f429eed0da85c2d"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "parity": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/runtime_backtest_parity_20261109/parity.json",
+    "sha256": "c8fd20cbf8b97aded8d26a3456abd1c56776f0b9e970a7241f9a1c17f89a9509"
+  },
+  "returns": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/runtime_backtest_parity_20261109/returns.json",
+    "sha256": "34dc66c2ea637b9d5ca400559e61f5c31edec57623c74ac2c1857d494d8a2779"
+  },
+  "configuration_checks": {
+    "spot": {
+      "economic_fields": 21,
+      "effective_strategy_fields": 15,
+      "code_equal": true,
+      "all_compared_economic_parameters_equal": true,
+      "all_compared_resolved_parameters_equal": true
+    },
+    "futures": {
+      "economic_fields": 21,
+      "effective_strategy_fields": 15,
+      "code_equal": true,
+      "all_compared_economic_parameters_equal": true,
+      "all_compared_resolved_parameters_equal": true
+    }
+  },
+  "native_release_verifications": 4,
+  "public_source_files_checked": 40,
+  "native_nav_independent_max_error_usdt": 9.593691174814012e-09,
+  "daily_pnl_reconciles_to_cumulative": true,
+  "realized_plus_marked_open_profit_reconciles": true,
+  "actual_lookahead_diagnostic_records": {
+    "futures": {
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_x8_lookahead_check_20261105_v001/lookahead-result.csv",
+        "sha256": "0d89fa2f4c1f0fb352604b138d9cbb820fbf5a24da968e1034c2620835538f7a"
+      },
+      "native_csv_rows": [
+        {
+          "filename": "NostalgiaForInfinityX8.py",
+          "strategy": "NostalgiaForInfinityX8",
+          "has_bias": "True",
+          "total_signals": "12",
+          "biased_entry_signals": "0",
+          "biased_exit_signals": "3",
+          "biased_indicators": ""
+        }
+      ]
+    },
+    "spot": {
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_x8_spot_lookahead_check_20261105_v001/lookahead-result.csv",
+        "sha256": "556b09333db0423a05eda220d7ba82d00b2619a0a1f47ad0a57adb9ec0da2c38"
+      },
+      "native_csv_rows": [
+        {
+          "filename": "NostalgiaForInfinityX8.py",
+          "strategy": "NostalgiaForInfinityX8",
+          "has_bias": "True",
+          "total_signals": "11",
+          "biased_entry_signals": "0",
+          "biased_exit_signals": "3",
+          "biased_indicators": ""
+        }
+      ]
+    }
+  },
+  "same_window_trade_replay_completed": false,
+  "real_orders_enabled": false,
+  "strategy_or_service_configuration_changed": false,
+  "new_backtests": 0,
+  "ruff": "passed"
+}

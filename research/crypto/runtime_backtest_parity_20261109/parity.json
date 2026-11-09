@@ -1,0 +1,863 @@
+{
+  "scope": "The four local NFI accounts deployed in this task.",
+  "snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/runtime_backtest_parity_20261109_v001/snapshot.json",
+    "sha256": "b3fb3944c0abe31b38afd1ee92fc7e4d8b9638d11fb79396c9ba3b195b0525cc"
+  },
+  "market_checks": {
+    "spot": {
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/spot_baseline_long_run_20261105_v001/nfi-x8-spot-cost13/native_results/backtest-result-2026-11-05_14-10-44.zip",
+        "sha256": "f1d210ec06126d5193ec8891aebfb0b38d112f753527c2a601981cc14804b331"
+      },
+      "runtime_strategy": {
+        "path": "/Users/chrise/GitHub/freqtrade/deploy/strategy/nfi-x8/NostalgiaForInfinityX8.py",
+        "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+      },
+      "strategy_bytes_equal_to_archived_backtest": true,
+      "economic_config_checks": {
+        "dry_run_wallet": {
+          "backtest": 1000,
+          "runtime": 1000,
+          "equal": true
+        },
+        "grinding_enable": {
+          "backtest": true,
+          "runtime": true,
+          "equal": true
+        },
+        "max_open_trades": {
+          "backtest": 6,
+          "runtime": 6,
+          "equal": true
+        },
+        "stake_currency": {
+          "backtest": "USDT",
+          "runtime": "USDT",
+          "equal": true
+        },
+        "stake_amount": {
+          "backtest": "unlimited",
+          "runtime": "unlimited",
+          "equal": true
+        },
+        "tradable_balance_ratio": {
+          "backtest": 0.99,
+          "runtime": 0.99,
+          "equal": true
+        },
+        "timeframe": {
+          "backtest": "5m",
+          "runtime": "5m",
+          "equal": true
+        },
+        "unfilledtimeout": {
+          "backtest": {
+            "entry": 3,
+            "exit": 2,
+            "exit_timeout_count": 0,
+            "unit": "minutes"
+          },
+          "runtime": {
+            "entry": 3,
+            "exit": 2,
+            "exit_timeout_count": 0,
+            "unit": "minutes"
+          },
+          "equal": true
+        },
+        "order_types": {
+          "backtest": {
+            "entry": "limit",
+            "exit": "limit",
+            "emergency_exit": "limit",
+            "force_entry": "limit",
+            "force_exit": "limit",
+            "stoploss": "limit",
+            "stoploss_on_exchange": false,
+            "stoploss_on_exchange_interval": 60,
+            "stoploss_on_exchange_limit_ratio": 0.99
+          },
+          "runtime": {
+            "entry": "limit",
+            "exit": "limit",
+            "emergency_exit": "limit",
+            "force_entry": "limit",
+            "force_exit": "limit",
+            "stoploss": "limit",
+            "stoploss_on_exchange": false,
+            "stoploss_on_exchange_interval": 60,
+            "stoploss_on_exchange_limit_ratio": 0.99
+          },
+          "equal": true
+        },
+        "entry_pricing": {
+          "backtest": {
+            "price_side": "other",
+            "use_order_book": false,
+            "order_book_top": 1,
+            "price_last_balance": 0,
+            "check_depth_of_market": {
+              "enabled": false,
+              "bids_to_ask_delta": 1
+            }
+          },
+          "runtime": {
+            "price_side": "other",
+            "use_order_book": false,
+            "order_book_top": 1,
+            "price_last_balance": 0,
+            "check_depth_of_market": {
+              "enabled": false,
+              "bids_to_ask_delta": 1
+            }
+          },
+          "equal": true
+        },
+        "exit_pricing": {
+          "backtest": {
+            "price_side": "other",
+            "use_order_book": false,
+            "order_book_top": 1,
+            "price_last_balance": 0
+          },
+          "runtime": {
+            "price_side": "other",
+            "use_order_book": false,
+            "order_book_top": 1,
+            "price_last_balance": 0
+          },
+          "equal": true
+        },
+        "trading_mode": {
+          "backtest": "spot",
+          "runtime": "spot",
+          "equal": true
+        },
+        "margin_mode": {
+          "backtest": null,
+          "runtime": null,
+          "equal": true
+        },
+        "pairlists": {
+          "backtest": [
+            {
+              "method": "StaticPairList"
+            }
+          ],
+          "runtime": [
+            {
+              "method": "StaticPairList"
+            }
+          ],
+          "equal": true
+        },
+        "fee": {
+          "backtest": 0.0013,
+          "runtime": 0.0013,
+          "equal": true
+        },
+        "nfi_parameters": {
+          "backtest": null,
+          "runtime": null,
+          "equal": true
+        },
+        "force_entry_enable": {
+          "backtest": false,
+          "runtime": false,
+          "equal": true
+        },
+        "exchange.name": {
+          "backtest": "binance",
+          "runtime": "binance",
+          "equal": true
+        },
+        "exchange.pair_whitelist": {
+          "backtest": [
+            "BTC/USDT",
+            "ETH/USDT",
+            "SOL/USDT",
+            "AVAX/USDT",
+            "DOGE/USDT",
+            "XRP/USDT",
+            "ADA/USDT",
+            "LINK/USDT",
+            "DOT/USDT",
+            "FIL/USDT",
+            "NEAR/USDT",
+            "ATOM/USDT",
+            "DYDX/USDT",
+            "LTC/USDT",
+            "BCH/USDT",
+            "ETC/USDT",
+            "GALA/USDT",
+            "SAND/USDT",
+            "UNI/USDT",
+            "IOTA/USDT",
+            "RUNE/USDT",
+            "AXS/USDT",
+            "EGLD/USDT",
+            "ALGO/USDT",
+            "SNX/USDT",
+            "CRV/USDT",
+            "MASK/USDT",
+            "SUSHI/USDT",
+            "KSM/USDT",
+            "IOTX/USDT",
+            "MANA/USDT",
+            "NEO/USDT",
+            "GRT/USDT",
+            "TRX/USDT",
+            "SKL/USDT",
+            "THETA/USDT"
+          ],
+          "runtime": [
+            "BTC/USDT",
+            "ETH/USDT",
+            "SOL/USDT",
+            "AVAX/USDT",
+            "DOGE/USDT",
+            "XRP/USDT",
+            "ADA/USDT",
+            "LINK/USDT",
+            "DOT/USDT",
+            "FIL/USDT",
+            "NEAR/USDT",
+            "ATOM/USDT",
+            "DYDX/USDT",
+            "LTC/USDT",
+            "BCH/USDT",
+            "ETC/USDT",
+            "GALA/USDT",
+            "SAND/USDT",
+            "UNI/USDT",
+            "IOTA/USDT",
+            "RUNE/USDT",
+            "AXS/USDT",
+            "EGLD/USDT",
+            "ALGO/USDT",
+            "SNX/USDT",
+            "CRV/USDT",
+            "MASK/USDT",
+            "SUSHI/USDT",
+            "KSM/USDT",
+            "IOTX/USDT",
+            "MANA/USDT",
+            "NEO/USDT",
+            "GRT/USDT",
+            "TRX/USDT",
+            "SKL/USDT",
+            "THETA/USDT"
+          ],
+          "equal": true
+        },
+        "exchange.pair_blacklist": {
+          "backtest": [],
+          "runtime": [],
+          "equal": true
+        },
+        "exchange.enable_ws": {
+          "backtest": false,
+          "runtime": false,
+          "equal": true
+        }
+      },
+      "resolved_strategy_checks": {
+        "timeframe": {
+          "backtest": "5m",
+          "runtime": "5m",
+          "equal": true
+        },
+        "startup_candle_count": {
+          "backtest": 800,
+          "runtime": 800,
+          "equal": true
+        },
+        "process_only_new_candles": {
+          "backtest": true,
+          "runtime": true,
+          "equal": true
+        },
+        "can_short": {
+          "backtest": false,
+          "runtime": false,
+          "equal": true
+        },
+        "minimal_roi": {
+          "backtest": {},
+          "runtime": {},
+          "equal": true
+        },
+        "stoploss": {
+          "backtest": -0.99,
+          "runtime": -0.99,
+          "equal": true
+        },
+        "trailing_stop": {
+          "backtest": false,
+          "runtime": false,
+          "equal": true
+        },
+        "use_custom_stoploss": {
+          "backtest": false,
+          "runtime": false,
+          "equal": true
+        },
+        "position_adjustment_enable": {
+          "backtest": true,
+          "runtime": true,
+          "equal": true
+        },
+        "max_entry_position_adjustment": {
+          "backtest": -1,
+          "runtime": -1,
+          "equal": true
+        },
+        "use_exit_signal": {
+          "backtest": true,
+          "runtime": true,
+          "equal": true
+        },
+        "exit_profit_only": {
+          "backtest": false,
+          "runtime": false,
+          "equal": true
+        },
+        "ignore_roi_if_entry_signal": {
+          "backtest": true,
+          "runtime": true,
+          "equal": true
+        },
+        "order_types": {
+          "backtest": {
+            "entry": "limit",
+            "exit": "limit",
+            "emergency_exit": "limit",
+            "force_entry": "limit",
+            "force_exit": "limit",
+            "stoploss": "limit",
+            "stoploss_on_exchange": false,
+            "stoploss_on_exchange_interval": 60,
+            "stoploss_on_exchange_limit_ratio": 0.99
+          },
+          "runtime": {
+            "entry": "limit",
+            "exit": "limit",
+            "emergency_exit": "limit",
+            "force_entry": "limit",
+            "force_exit": "limit",
+            "stoploss": "limit",
+            "stoploss_on_exchange": false,
+            "stoploss_on_exchange_interval": 60,
+            "stoploss_on_exchange_limit_ratio": 0.99
+          },
+          "equal": true
+        },
+        "order_time_in_force": {
+          "backtest": {
+            "entry": "GTC",
+            "exit": "GTC"
+          },
+          "runtime": {
+            "entry": "GTC",
+            "exit": "GTC"
+          },
+          "equal": true
+        }
+      },
+      "all_compared_economic_config_equal": true,
+      "all_compared_resolved_strategy_equal": true,
+      "native_fill_fee_rates_match_backtest": true,
+      "actual_native_trade_leverage_all_one": true,
+      "transport_difference": {
+        "backtest_https_proxy": null,
+        "runtime_https_proxy": "http://127.0.0.1:7897"
+      }
+    },
+    "futures": {
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x8-1x-cost8/native_results/backtest-result-2026-11-05_12-46-45.zip",
+        "sha256": "80e731e8528e6c95a424e71ae8867b1fe48f914ecbb4569e34c8f131f9743c73"
+      },
+      "runtime_strategy": {
+        "path": "/Users/chrise/GitHub/freqtrade/deploy/strategy/nfi-x8/NostalgiaForInfinityX8.py",
+        "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+      },
+      "strategy_bytes_equal_to_archived_backtest": true,
+      "economic_config_checks": {
+        "dry_run_wallet": {
+          "backtest": 1000,
+          "runtime": 1000,
+          "equal": true
+        },
+        "grinding_enable": {
+          "backtest": true,
+          "runtime": true,
+          "equal": true
+        },
+        "max_open_trades": {
+          "backtest": 6,
+          "runtime": 6,
+          "equal": true
+        },
+        "stake_currency": {
+          "backtest": "USDT",
+          "runtime": "USDT",
+          "equal": true
+        },
+        "stake_amount": {
+          "backtest": "unlimited",
+          "runtime": "unlimited",
+          "equal": true
+        },
+        "tradable_balance_ratio": {
+          "backtest": 0.99,
+          "runtime": 0.99,
+          "equal": true
+        },
+        "timeframe": {
+          "backtest": "5m",
+          "runtime": "5m",
+          "equal": true
+        },
+        "unfilledtimeout": {
+          "backtest": {
+            "entry": 3,
+            "exit": 2,
+            "exit_timeout_count": 0,
+            "unit": "minutes"
+          },
+          "runtime": {
+            "entry": 3,
+            "exit": 2,
+            "exit_timeout_count": 0,
+            "unit": "minutes"
+          },
+          "equal": true
+        },
+        "order_types": {
+          "backtest": {
+            "entry": "limit",
+            "exit": "limit",
+            "emergency_exit": "limit",
+            "force_entry": "limit",
+            "force_exit": "limit",
+            "stoploss": "limit",
+            "stoploss_on_exchange": false,
+            "stoploss_on_exchange_interval": 60,
+            "stoploss_on_exchange_limit_ratio": 0.99
+          },
+          "runtime": {
+            "entry": "limit",
+            "exit": "limit",
+            "emergency_exit": "limit",
+            "force_entry": "limit",
+            "force_exit": "limit",
+            "stoploss": "limit",
+            "stoploss_on_exchange": false,
+            "stoploss_on_exchange_interval": 60,
+            "stoploss_on_exchange_limit_ratio": 0.99
+          },
+          "equal": true
+        },
+        "entry_pricing": {
+          "backtest": {
+            "price_side": "other",
+            "use_order_book": true,
+            "order_book_top": 1,
+            "price_last_balance": 0,
+            "check_depth_of_market": {
+              "enabled": false,
+              "bids_to_ask_delta": 1
+            }
+          },
+          "runtime": {
+            "price_side": "other",
+            "use_order_book": true,
+            "order_book_top": 1,
+            "price_last_balance": 0,
+            "check_depth_of_market": {
+              "enabled": false,
+              "bids_to_ask_delta": 1
+            }
+          },
+          "equal": true
+        },
+        "exit_pricing": {
+          "backtest": {
+            "price_side": "other",
+            "use_order_book": true,
+            "order_book_top": 1,
+            "price_last_balance": 0
+          },
+          "runtime": {
+            "price_side": "other",
+            "use_order_book": true,
+            "order_book_top": 1,
+            "price_last_balance": 0
+          },
+          "equal": true
+        },
+        "trading_mode": {
+          "backtest": "futures",
+          "runtime": "futures",
+          "equal": true
+        },
+        "margin_mode": {
+          "backtest": "isolated",
+          "runtime": "isolated",
+          "equal": true
+        },
+        "pairlists": {
+          "backtest": [
+            {
+              "method": "StaticPairList"
+            }
+          ],
+          "runtime": [
+            {
+              "method": "StaticPairList"
+            }
+          ],
+          "equal": true
+        },
+        "fee": {
+          "backtest": 0.0008,
+          "runtime": 0.0008,
+          "equal": true
+        },
+        "nfi_parameters": {
+          "backtest": {
+            "futures_mode_leverage": 1.0,
+            "futures_mode_leverage_rebuy_mode": 1.0,
+            "futures_mode_leverage_grind_mode": 1.0
+          },
+          "runtime": {
+            "futures_mode_leverage": 1.0,
+            "futures_mode_leverage_rebuy_mode": 1.0,
+            "futures_mode_leverage_grind_mode": 1.0
+          },
+          "equal": true
+        },
+        "force_entry_enable": {
+          "backtest": false,
+          "runtime": false,
+          "equal": true
+        },
+        "exchange.name": {
+          "backtest": "binance",
+          "runtime": "binance",
+          "equal": true
+        },
+        "exchange.pair_whitelist": {
+          "backtest": [
+            "BTC/USDT:USDT",
+            "ETH/USDT:USDT",
+            "SOL/USDT:USDT",
+            "AVAX/USDT:USDT",
+            "TRB/USDT:USDT",
+            "DOGE/USDT:USDT",
+            "XRP/USDT:USDT",
+            "ADA/USDT:USDT",
+            "BNB/USDT:USDT",
+            "LINK/USDT:USDT",
+            "DOT/USDT:USDT",
+            "FIL/USDT:USDT",
+            "NEAR/USDT:USDT",
+            "ATOM/USDT:USDT",
+            "DYDX/USDT:USDT",
+            "LTC/USDT:USDT",
+            "BCH/USDT:USDT",
+            "ETC/USDT:USDT",
+            "GALA/USDT:USDT",
+            "SAND/USDT:USDT",
+            "UNI/USDT:USDT",
+            "IOTA/USDT:USDT",
+            "RUNE/USDT:USDT",
+            "AXS/USDT:USDT",
+            "AAVE/USDT:USDT",
+            "EGLD/USDT:USDT",
+            "ALGO/USDT:USDT",
+            "SNX/USDT:USDT",
+            "CRV/USDT:USDT",
+            "MASK/USDT:USDT",
+            "SUSHI/USDT:USDT",
+            "KSM/USDT:USDT",
+            "IOTX/USDT:USDT",
+            "MANA/USDT:USDT",
+            "NEO/USDT:USDT",
+            "GRT/USDT:USDT",
+            "TRX/USDT:USDT",
+            "CELO/USDT:USDT",
+            "SKL/USDT:USDT",
+            "THETA/USDT:USDT"
+          ],
+          "runtime": [
+            "BTC/USDT:USDT",
+            "ETH/USDT:USDT",
+            "SOL/USDT:USDT",
+            "AVAX/USDT:USDT",
+            "TRB/USDT:USDT",
+            "DOGE/USDT:USDT",
+            "XRP/USDT:USDT",
+            "ADA/USDT:USDT",
+            "BNB/USDT:USDT",
+            "LINK/USDT:USDT",
+            "DOT/USDT:USDT",
+            "FIL/USDT:USDT",
+            "NEAR/USDT:USDT",
+            "ATOM/USDT:USDT",
+            "DYDX/USDT:USDT",
+            "LTC/USDT:USDT",
+            "BCH/USDT:USDT",
+            "ETC/USDT:USDT",
+            "GALA/USDT:USDT",
+            "SAND/USDT:USDT",
+            "UNI/USDT:USDT",
+            "IOTA/USDT:USDT",
+            "RUNE/USDT:USDT",
+            "AXS/USDT:USDT",
+            "AAVE/USDT:USDT",
+            "EGLD/USDT:USDT",
+            "ALGO/USDT:USDT",
+            "SNX/USDT:USDT",
+            "CRV/USDT:USDT",
+            "MASK/USDT:USDT",
+            "SUSHI/USDT:USDT",
+            "KSM/USDT:USDT",
+            "IOTX/USDT:USDT",
+            "MANA/USDT:USDT",
+            "NEO/USDT:USDT",
+            "GRT/USDT:USDT",
+            "TRX/USDT:USDT",
+            "CELO/USDT:USDT",
+            "SKL/USDT:USDT",
+            "THETA/USDT:USDT"
+          ],
+          "equal": true
+        },
+        "exchange.pair_blacklist": {
+          "backtest": [],
+          "runtime": [],
+          "equal": true
+        },
+        "exchange.enable_ws": {
+          "backtest": false,
+          "runtime": false,
+          "equal": true
+        }
+      },
+      "resolved_strategy_checks": {
+        "timeframe": {
+          "backtest": "5m",
+          "runtime": "5m",
+          "equal": true
+        },
+        "startup_candle_count": {
+          "backtest": 800,
+          "runtime": 800,
+          "equal": true
+        },
+        "process_only_new_candles": {
+          "backtest": true,
+          "runtime": true,
+          "equal": true
+        },
+        "can_short": {
+          "backtest": true,
+          "runtime": true,
+          "equal": true
+        },
+        "minimal_roi": {
+          "backtest": {},
+          "runtime": {},
+          "equal": true
+        },
+        "stoploss": {
+          "backtest": -0.99,
+          "runtime": -0.99,
+          "equal": true
+        },
+        "trailing_stop": {
+          "backtest": false,
+          "runtime": false,
+          "equal": true
+        },
+        "use_custom_stoploss": {
+          "backtest": false,
+          "runtime": false,
+          "equal": true
+        },
+        "position_adjustment_enable": {
+          "backtest": true,
+          "runtime": true,
+          "equal": true
+        },
+        "max_entry_position_adjustment": {
+          "backtest": -1,
+          "runtime": -1,
+          "equal": true
+        },
+        "use_exit_signal": {
+          "backtest": true,
+          "runtime": true,
+          "equal": true
+        },
+        "exit_profit_only": {
+          "backtest": false,
+          "runtime": false,
+          "equal": true
+        },
+        "ignore_roi_if_entry_signal": {
+          "backtest": true,
+          "runtime": true,
+          "equal": true
+        },
+        "order_types": {
+          "backtest": {
+            "entry": "limit",
+            "exit": "limit",
+            "emergency_exit": "limit",
+            "force_entry": "limit",
+            "force_exit": "limit",
+            "stoploss": "limit",
+            "stoploss_on_exchange": false,
+            "stoploss_on_exchange_interval": 60,
+            "stoploss_on_exchange_limit_ratio": 0.99
+          },
+          "runtime": {
+            "entry": "limit",
+            "exit": "limit",
+            "emergency_exit": "limit",
+            "force_entry": "limit",
+            "force_exit": "limit",
+            "stoploss": "limit",
+            "stoploss_on_exchange": false,
+            "stoploss_on_exchange_interval": 60,
+            "stoploss_on_exchange_limit_ratio": 0.99
+          },
+          "equal": true
+        },
+        "order_time_in_force": {
+          "backtest": {
+            "entry": "GTC",
+            "exit": "GTC"
+          },
+          "runtime": {
+            "entry": "GTC",
+            "exit": "GTC"
+          },
+          "equal": true
+        }
+      },
+      "all_compared_economic_config_equal": true,
+      "all_compared_resolved_strategy_equal": true,
+      "native_fill_fee_rates_match_backtest": true,
+      "actual_native_trade_leverage_all_one": true,
+      "transport_difference": {
+        "backtest_https_proxy": null,
+        "runtime_https_proxy": "http://127.0.0.1:7897"
+      }
+    }
+  },
+  "actual_processes": [
+    {
+      "account": "spot_original",
+      "pid": 14841,
+      "cli_dry_run": true,
+      "config_dry_run": true
+    },
+    {
+      "account": "spot_addcap",
+      "pid": 14807,
+      "cli_dry_run": true,
+      "config_dry_run": true
+    },
+    {
+      "account": "futures_original",
+      "pid": 14831,
+      "cli_dry_run": true,
+      "config_dry_run": true
+    },
+    {
+      "account": "futures_addcap",
+      "pid": 14814,
+      "cli_dry_run": true,
+      "config_dry_run": true
+    }
+  ],
+  "release_checks": [
+    {
+      "launcher": "deploy/launch.py",
+      "market": "spot",
+      "receipt": {
+        "verified": true,
+        "mode": "dry_run",
+        "upstream_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684"
+      }
+    },
+    {
+      "launcher": "deploy/launch.py",
+      "market": "futures",
+      "receipt": {
+        "verified": true,
+        "mode": "dry_run",
+        "upstream_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684"
+      }
+    },
+    {
+      "launcher": "deploy/nfi_x8_addcap/launch.py",
+      "market": "spot",
+      "receipt": {
+        "verified": true,
+        "mode": "dry_run",
+        "market": "spot",
+        "strategy": "NFIX8AddCapPaper",
+        "pairs": 36
+      }
+    },
+    {
+      "launcher": "deploy/nfi_x8_addcap/launch.py",
+      "market": "futures",
+      "receipt": {
+        "verified": true,
+        "mode": "dry_run",
+        "market": "futures",
+        "strategy": "NFIX8AddCapPaper",
+        "pairs": 40
+      }
+    }
+  ],
+  "running_mode": "dry_run",
+  "real_orders_enabled": false,
+  "full_execution_parity_verified": false,
+  "same_window_signal_order_replay_completed": false,
+  "optimized_wrapper_is_baseline_identical": false,
+  "optimized_wrapper": {
+    "path": "/Users/chrise/GitHub/freqtrade/deploy/nfi_x8_addcap/strategy/NFIX8AddCapPaper.py",
+    "sha256": "a0165a72bb8ef63eb6077667547cd29d6e3c3a0c995d1d13ba3e23086c5c1005"
+  },
+  "execution_differences": [
+    "Backtests use candle-based fills; dry-run uses ongoing market prices.",
+    "Actual fills can occur after submission and between candle boundaries.",
+    "Persistent positions, wallet and NFI cache differ from a fresh backtest.",
+    "Observed heartbeat gaps prevent claiming continuous forward validation.",
+    "AddCap deliberately changes positive position-adjustment decisions."
+  ],
+  "previous_maximum_observed_heartbeat_gap_seconds": 45072.0,
+  "unresolved_lookahead": {
+    "spot_exit_time_anomalies": 3,
+    "futures_exit_time_anomalies": 3,
+    "meaning": "Unexplained diagnostic failures; not proven future reads or cleared.",
+    "interpretation": {
+      "path": "/Users/chrise/GitHub/freqtrade/docs/research-20261105/crypto-wide-comparison-20261105/official-lookahead-interpretation-20261105.md",
+      "sha256": "b359d17e0e639acc6154dd7ff518e5cbb5dd0e55dff3ea74a85b37b67335bee2"
+    }
+  },
+  "official_references": [
+    "https://www.freqtrade.io/en/stable/backtesting/#assumptions-made-by-backtesting",
+    "https://www.freqtrade.io/en/stable/configuration/#using-dry-run-mode"
+  ],
+  "new_backtests": 0,
+  "native_strategy_configuration_changed": false
+}
