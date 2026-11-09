@@ -1,0 +1,119 @@
+{
+  "case": "L3_S6",
+  "leverage": 3,
+  "max_open_trades": 6,
+  "cost_bps_per_side": 15,
+  "net_return_pct": 157.72048181205344,
+  "net_profit_usdt": 1577.2048181205346,
+  "ending_marked_equity_usdt": 2577.2048181205346,
+  "maximum_5m_mark_drawdown_pct": 40.11795640096819,
+  "natural_completed_trades": 215,
+  "natural_campaign_win_rate_pct": 98.13953488372093,
+  "native_exported_trades_including_forced_terminal": 219,
+  "actual_entry_fills": 347,
+  "actual_addition_fills": 128,
+  "max_entries_per_trade": 48,
+  "observed_peak_open_positions": 6,
+  "observed_peak_margin_to_marked_equity_pct": 144.70372114124444,
+  "native_modeled_liquidations": 0,
+  "native_terminal_return_pct_separate": 157.67110141500004,
+  "native_model_funding_usdt_including_terminal": 24.22347953389577,
+  "research_risk_gate_passed": true,
+  "valuation_points": 89917,
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2026-01-01 00:00:00+00:00",
+      "end": "2026-11-09 05:00:00+00:00",
+      "net_return": 1.5772048181205345,
+      "initial_marked_equity": 1000.0,
+      "ending_marked_equity": 2577.2048181205346,
+      "five_minute_mark_drawdown": 0.4011795640096819,
+      "daily_nav_sharpe": 2.2499843821506325,
+      "completed_campaigns": 215,
+      "campaign_profit_factor": 2.99419026967629,
+      "campaign_profit_factor_status": "FINITE",
+      "campaign_gross_profit": 4161.43882662,
+      "campaign_gross_loss": 1389.83780315,
+      "open_campaigns_at_end": 4,
+      "equity_insolvent": false,
+      "valuation_points": 89917,
+      "elapsed_calendar_hours": 7493.0
+    },
+    {
+      "name": "2026-H1",
+      "start": "2026-01-01 00:00:00+00:00",
+      "end": "2026-07-01 00:00:00+00:00",
+      "net_return": 2.1385222545195806,
+      "initial_marked_equity": 1000.0,
+      "ending_marked_equity": 3138.5222545195807,
+      "five_minute_mark_drawdown": 0.09377194128772925,
+      "daily_nav_sharpe": 5.769819809069413,
+      "completed_campaigns": 144,
+      "campaign_profit_factor": 84.83731855957939,
+      "campaign_profit_factor_status": "FINITE",
+      "campaign_gross_profit": 2160.97973473,
+      "campaign_gross_loss": 25.47204192,
+      "open_campaigns_at_end": 2,
+      "equity_insolvent": false,
+      "valuation_points": 52129,
+      "elapsed_calendar_hours": 4344.0
+    },
+    {
+      "name": "2026-H2-to-cutoff",
+      "start": "2026-07-01 00:00:00+00:00",
+      "end": "2026-11-09 05:00:00+00:00",
+      "net_return": -0.17884768399864925,
+      "initial_marked_equity": 3138.5222545195807,
+      "ending_marked_equity": 2577.2048181205346,
+      "five_minute_mark_drawdown": 0.4011795640096819,
+      "daily_nav_sharpe": -0.39591397621539437,
+      "completed_campaigns": 71,
+      "campaign_profit_factor": 1.4662190658365326,
+      "campaign_profit_factor_status": "FINITE",
+      "campaign_gross_profit": 2000.45909189,
+      "campaign_gross_loss": 1364.3657612299999,
+      "open_campaigns_at_end": 4,
+      "equity_insolvent": false,
+      "valuation_points": 37789,
+      "elapsed_calendar_hours": 3149.0
+    }
+  ],
+  "comparison_valuation": "Common 5-minute mark OPEN before current bar processing; remaining close fee reserved; not intrabar worst case",
+  "native_archive": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_flatboost_20261109_v001/L3_S6_15bps/native_results/backtest-result-2026-11-09_07-23-11.zip",
+    "sha256": "efe998c5d9d0977cb2a1d888f2170919b9e6fcb57edc48fa785a03fe43a1b5f8"
+  },
+  "native_result": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_flatboost_20261109_v001/L3_S6_15bps/result.json",
+    "sha256": "1e972428c82540586bbf14e629cc2a06de2442b6526bbf00d9c53ba8b6766377"
+  },
+  "observed_equity": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_flatboost_20261109_v001/L3_S6_15bps/five_minute_equity.parquet",
+    "sha256": "84d489a1a66aba9a42ac1cebcc07ab22b86f9d786c8f26f3ecc2c70fcc3feb42"
+  },
+  "cash_audit": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_flatboost_20261109_v001/L3_S6_15bps/fill_cash_audit.json",
+    "sha256": "a887f619668855a09a97bf779f65ae7db0074e9e499e663b461d07ff8de5a005"
+  },
+  "completion": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_flatboost_20261109_v001/L3_S6_15bps/completion.json",
+    "sha256": "4cda9d43b89b3550fa3f7d1753e124549135511de5412aece1f63a91d0ee9a63"
+  },
+  "variant": "FlatTopBoost",
+  "independent_fill_cash": {
+    "archive_sha256": "efe998c5d9d0977cb2a1d888f2170919b9e6fcb57edc48fa785a03fe43a1b5f8",
+    "trades": 219,
+    "filled_orders": 655,
+    "maximum_cash_error_usdt": 2.2219066e-08,
+    "aggregate_cash_error_usdt": 5.40443060829e-09
+  },
+  "initial_stake_audit": {
+    "stake_trace_sha256": "ec34f09b7fa5f6d0bb87dc0e096c0cf4b98c1835292c205a89bbf1e2dc855339",
+    "attempted_stakes_by_multiplier": {
+      "1.25": 75
+    },
+    "matched_filled_top_coin_campaigns": 75,
+    "top_coin_native_pnl_usdt": 1365.47233782
+  }
+}
