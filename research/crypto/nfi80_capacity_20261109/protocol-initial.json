@@ -1,0 +1,151 @@
+{
+  "schema": "freqtrade.research.nfi80-capacity.v1",
+  "registered_at_utc": "2026-11-09T05:09:24.057958+00:00",
+  "request": "Original X8 signals, 80 coins, test 3x and 12 slots against leverage/slot controls, 2026 YTD",
+  "start": "2026-01-01T00:00:00+00:00",
+  "end": "2026-11-09T05:05:00+00:00",
+  "comparison_end": "2026-11-09T05:00:00+00:00",
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "ZEC/USDT:USDT",
+    "XRP/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "ADA/USDT:USDT",
+    "SUI/USDT:USDT",
+    "1000PEPE/USDT:USDT",
+    "CYBER/USDT:USDT",
+    "LINK/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "FIL/USDT:USDT",
+    "ENA/USDT:USDT",
+    "1000LUNC/USDT:USDT",
+    "BCH/USDT:USDT",
+    "POLYX/USDT:USDT",
+    "AUCTION/USDT:USDT",
+    "ZRX/USDT:USDT",
+    "LTC/USDT:USDT",
+    "AAVE/USDT:USDT",
+    "LUNA2/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "QTUM/USDT:USDT",
+    "UNI/USDT:USDT",
+    "FARTCOIN/USDT:USDT",
+    "WIF/USDT:USDT",
+    "WLD/USDT:USDT",
+    "DOT/USDT:USDT",
+    "TAO/USDT:USDT",
+    "1000SHIB/USDT:USDT",
+    "ICP/USDT:USDT",
+    "APT/USDT:USDT",
+    "XLM/USDT:USDT",
+    "HBAR/USDT:USDT",
+    "TIA/USDT:USDT",
+    "PENGU/USDT:USDT",
+    "CRV/USDT:USDT",
+    "ARB/USDT:USDT",
+    "ZEN/USDT:USDT",
+    "TRX/USDT:USDT",
+    "OP/USDT:USDT",
+    "REZ/USDT:USDT",
+    "ETC/USDT:USDT",
+    "ONT/USDT:USDT",
+    "INJ/USDT:USDT",
+    "FET/USDT:USDT",
+    "SEI/USDT:USDT",
+    "1000BONK/USDT:USDT",
+    "IOST/USDT:USDT",
+    "DASH/USDT:USDT",
+    "VIRTUAL/USDT:USDT",
+    "GALA/USDT:USDT",
+    "ONDO/USDT:USDT",
+    "XMR/USDT:USDT",
+    "LDO/USDT:USDT",
+    "EIGEN/USDT:USDT",
+    "PENDLE/USDT:USDT",
+    "XTZ/USDT:USDT",
+    "STRK/USDT:USDT",
+    "ID/USDT:USDT",
+    "NEO/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "XVG/USDT:USDT",
+    "POL/USDT:USDT",
+    "CAKE/USDT:USDT",
+    "GMT/USDT:USDT",
+    "ETHFI/USDT:USDT",
+    "COMP/USDT:USDT",
+    "TURBO/USDT:USDT",
+    "PEOPLE/USDT:USDT",
+    "SAND/USDT:USDT",
+    "1000FLOKI/USDT:USDT",
+    "GAS/USDT:USDT",
+    "JUP/USDT:USDT",
+    "ALGO/USDT:USDT",
+    "MANA/USDT:USDT",
+    "TRB/USDT:USDT",
+    "MOODENG/USDT:USDT",
+    "DYDX/USDT:USDT"
+  ],
+  "universe": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/universe.json",
+    "sha256": "1c7d7797ed479873e77b1531c6ee26906d913bc8e453ee008430343718f666e4"
+  },
+  "source_datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/market_data/data/binance",
+  "universe_rule": "Author backtest universe and blacklist, >=60d observed pre-start history; top80 prior-day typical-price*base-volume proxy (same candle quote-volume formula as VolumePairList). Freeze once before economics; StaticPairList during replay.",
+  "selection_is_not_native_dynamic_volume_pairlist": true,
+  "market_rules": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_capacity_20261109_v001/market-rules.json",
+    "sha256": "43b096b6630d32402c9f7b2db6899ef8f925cb1ef9b7fc293b1c2e6fad0044e1"
+  },
+  "cases": {
+    "L3_S12": [
+      3,
+      12
+    ],
+    "L1_S6": [
+      1,
+      6
+    ],
+    "L3_S6": [
+      3,
+      6
+    ],
+    "L1_S12": [
+      1,
+      12
+    ]
+  },
+  "costs_bps_per_side": [
+    15,
+    8
+  ],
+  "initial_usdt": 1000,
+  "research_drawdown_limit": 0.5,
+  "new_contract_not_a_revision_of_prior_failed_gates": true,
+  "data_policy": "Official checksummed archives; public GET tail; no synthetic candles or zero-filled funding. Keep raw funding millisecond clocks; native hourly model permits <1s floor only.",
+  "source_policy": "Unchanged pinned NFI and Freqtrade matching/wallet. Lossless compressed research storage and read-only 5m mark observations only.",
+  "source_code": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/study.py",
+    "sha256": "3c1aaf7efdc57a49a4832c196fd9db5a57e2a8505dfe07d86fbde22dd16146cf"
+  },
+  "strategy_commit": "1af55971d3a64703ec449078e09fdec257d0d3c6",
+  "financial_workers": 1,
+  "limitations": [
+    "Retrospective source version and current market metadata; not independent OOS or PIT membership proof",
+    "Static prior-day 80-coin basket, not a dynamically refreshed year-long universe",
+    "15/8bps are fee+slippage proxies; funding and liquidation remain native model evidence",
+    "Five-minute mark observations omit intrabar worst-case risk"
+  ],
+  "orders_enabled": false,
+  "production_eligible": false,
+  "implementation_revisions": [
+    {
+      "at_utc": "2026-11-09T05:10:26.093884+00:00",
+      "reason": "Lint-only annotation for complete contract strings, no behavioral or parameter changes",
+      "prior_sha256": "3c1aaf7efdc57a49a4832c196fd9db5a57e2a8505dfe07d86fbde22dd16146cf",
+      "new_sha256": "a4faecb36238f51d9e3e82a61ab1d8782df2780b9550faf3b6753bc7bd53b726",
+      "financial_accounts_run": 0
+    }
+  ]
+}

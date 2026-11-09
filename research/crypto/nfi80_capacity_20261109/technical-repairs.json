@@ -1,0 +1,12 @@
+{
+  "initial_freeze_failed": true,
+  "financial_accounts_run": 0,
+  "issue": "DatetimeIndex.equals treats equivalent ms/us dtypes as unequal",
+  "repair": "Compare canonical nanosecond clocks; retain exact timestamps, no price filling, no changed selection rule",
+  "input_directory_repair": {
+    "at_utc": "2026-11-09T05:11:40.445481+00:00",
+    "issue": "Native FeatherDataHandler requires an existing parent candles directory",
+    "action": "Created this experiment-owned candles/futures directory; no data or trading rule changes",
+    "prior_failure_retained": "user_data/crypto_quant/nfi80_capacity_20261109_v001/intake-failure.json"
+  }
+}

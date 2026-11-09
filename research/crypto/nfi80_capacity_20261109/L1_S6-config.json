@@ -1,0 +1,195 @@
+{
+  "dry_run_wallet": 1000,
+  "grinding_enable": true,
+  "max_open_trades": 6,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "",
+  "timeframe": "5m",
+  "unfilledtimeout": {
+    "entry": 3,
+    "exit": 2,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "emergency_exit": "limit",
+    "force_entry": "limit",
+    "force_exit": "limit",
+    "stoploss": "limit",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60,
+    "stoploss_on_exchange_limit_ratio": 0.99
+  },
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0
+  },
+  "trading_mode": "futures",
+  "margin_mode": "isolated",
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "bot_name": "cz-nfi-x8-v18-0-146-baseline",
+  "strategy": "NostalgiaForInfinityX8",
+  "dry_run": true,
+  "force_entry_enable": false,
+  "initial_state": "stopped",
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "username": "",
+    "password": ""
+  },
+  "telegram": {
+    "enabled": false,
+    "token": "",
+    "chat_id": ""
+  },
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "password": "",
+    "enable_ws": false,
+    "pair_whitelist": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "SOL/USDT:USDT",
+      "ZEC/USDT:USDT",
+      "XRP/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "ADA/USDT:USDT",
+      "SUI/USDT:USDT",
+      "1000PEPE/USDT:USDT",
+      "CYBER/USDT:USDT",
+      "LINK/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "FIL/USDT:USDT",
+      "ENA/USDT:USDT",
+      "1000LUNC/USDT:USDT",
+      "BCH/USDT:USDT",
+      "POLYX/USDT:USDT",
+      "AUCTION/USDT:USDT",
+      "ZRX/USDT:USDT",
+      "LTC/USDT:USDT",
+      "AAVE/USDT:USDT",
+      "LUNA2/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "QTUM/USDT:USDT",
+      "UNI/USDT:USDT",
+      "FARTCOIN/USDT:USDT",
+      "WIF/USDT:USDT",
+      "WLD/USDT:USDT",
+      "DOT/USDT:USDT",
+      "TAO/USDT:USDT",
+      "1000SHIB/USDT:USDT",
+      "ICP/USDT:USDT",
+      "APT/USDT:USDT",
+      "XLM/USDT:USDT",
+      "HBAR/USDT:USDT",
+      "TIA/USDT:USDT",
+      "PENGU/USDT:USDT",
+      "CRV/USDT:USDT",
+      "ARB/USDT:USDT",
+      "ZEN/USDT:USDT",
+      "TRX/USDT:USDT",
+      "OP/USDT:USDT",
+      "REZ/USDT:USDT",
+      "ETC/USDT:USDT",
+      "ONT/USDT:USDT",
+      "INJ/USDT:USDT",
+      "FET/USDT:USDT",
+      "SEI/USDT:USDT",
+      "1000BONK/USDT:USDT",
+      "IOST/USDT:USDT",
+      "DASH/USDT:USDT",
+      "VIRTUAL/USDT:USDT",
+      "GALA/USDT:USDT",
+      "ONDO/USDT:USDT",
+      "XMR/USDT:USDT",
+      "LDO/USDT:USDT",
+      "EIGEN/USDT:USDT",
+      "PENDLE/USDT:USDT",
+      "XTZ/USDT:USDT",
+      "STRK/USDT:USDT",
+      "ID/USDT:USDT",
+      "NEO/USDT:USDT",
+      "ATOM/USDT:USDT",
+      "XVG/USDT:USDT",
+      "POL/USDT:USDT",
+      "CAKE/USDT:USDT",
+      "GMT/USDT:USDT",
+      "ETHFI/USDT:USDT",
+      "COMP/USDT:USDT",
+      "TURBO/USDT:USDT",
+      "PEOPLE/USDT:USDT",
+      "SAND/USDT:USDT",
+      "1000FLOKI/USDT:USDT",
+      "GAS/USDT:USDT",
+      "JUP/USDT:USDT",
+      "ALGO/USDT:USDT",
+      "MANA/USDT:USDT",
+      "TRB/USDT:USDT",
+      "MOODENG/USDT:USDT",
+      "DYDX/USDT:USDT"
+    ],
+    "pair_blacklist": [],
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "timeout": 20000,
+      "options": {
+        "fetchMarkets": {
+          "types": [
+            "linear"
+          ]
+        },
+        "fetchCurrencies": false
+      }
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "timeout": 20000,
+      "options": {
+        "fetchMarkets": {
+          "types": [
+            "linear"
+          ]
+        },
+        "fetchCurrencies": false
+      }
+    }
+  },
+  "fee": 0.0008,
+  "export": "trades",
+  "backtest_cache": "none",
+  "recursive_strategy_search": false,
+  "nfi_parameters": {
+    "futures_mode_leverage": 1.0,
+    "futures_mode_leverage_rebuy_mode": 1.0,
+    "futures_mode_leverage_grind_mode": 1.0
+  }
+}
