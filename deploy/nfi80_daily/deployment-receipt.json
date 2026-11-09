@@ -1,0 +1,61 @@
+{
+  "accepted_at_utc": "2026-11-09T10:12:09.149466+00:00",
+  "common_forward_start_utc": "2026-11-09T10:10:00+00:00",
+  "common_start_has_passed": true,
+  "native_selection_completed": true,
+  "initial_snapshot_id": "20261109T095510Z",
+  "runtime_receipt_sha256": "1bdf23e3d6756bb1ee88acc2e816ed5d7b883eaca75fcb95b6ae0ccf24a51fcd",
+  "post_start_market_check_sha256": "4b7c4bf948b5159e39d6259f56544ac4a24fd0a6ab924b5ed76e2098e3264b5d",
+  "all_four_accounts_flat1000_usdt_at_common_start": true,
+  "natural_fills_at_acceptance": 0,
+  "scheduler_interval_seconds": 300,
+  "cross_day_refresh_not_yet_observed": true,
+  "services": {
+    "io.freqtrade.paper.nfi80.daily.optimized": {
+      "pid": "52327",
+      "last_exit_status": "0"
+    },
+    "io.freqtrade.paper.nfi80.optimized": {
+      "pid": "46912",
+      "last_exit_status": "0"
+    },
+    "io.freqtrade.paper.spot": {
+      "pid": "14841",
+      "last_exit_status": "2"
+    },
+    "io.freqtrade.paper.x8-addcap.spot": {
+      "pid": "14807",
+      "last_exit_status": "2"
+    },
+    "io.freqtrade.paper.nfi80.control": {
+      "pid": "46910",
+      "last_exit_status": "0"
+    },
+    "io.freqtrade.notifications": {
+      "pid": "26045",
+      "last_exit_status": "0"
+    },
+    "io.freqtrade.paper.nfi80.daily.selector": {
+      "pid": "-",
+      "last_exit_status": "0"
+    },
+    "io.freqtrade.paper.futures": {
+      "pid": "14831",
+      "last_exit_status": "2"
+    },
+    "io.freqtrade.paper.nfi80.daily.control": {
+      "pid": "52325",
+      "last_exit_status": "0"
+    },
+    "io.freqtrade.paper.x8-addcap.futures": {
+      "pid": "14814",
+      "last_exit_status": "2"
+    }
+  },
+  "real_orders_enabled": false,
+  "existing_fixed_paper_services_preserved": true,
+  "old_historical_performance_not_claimed_for_daily_pool": true,
+  "daily_snapshot_expiry_blocks_new_initial_entry_requests": true,
+  "research_drawdown_limit_is_not_a_hard_stop": true,
+  "production_eligible": false
+}
