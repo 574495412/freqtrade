@@ -1,0 +1,95 @@
+{
+  "completed_at_utc": "2026-11-10T07:29:10.787251+00:00",
+  "start_utc": "2026-11-10 05:00:00+00:00",
+  "end_exclusive_utc": "2026-11-10 07:00:00+00:00",
+  "start_shanghai": "2026-11-10 13:00:00+08:00",
+  "end_exclusive_shanghai": "2026-11-10 15:00:00+08:00",
+  "method": "Native Freqtrade Backtesting.start, pinned deployed financial callbacks",
+  "rows": [
+    {
+      "market": "spot",
+      "pairs": 36,
+      "initial_equity_usdt": 100,
+      "stake_budget_usdt": 99,
+      "leverage": 1,
+      "max_open_trades": 6,
+      "raw_entry_signals": 0,
+      "native_entry_attempts": 0,
+      "entry_confirmation_calls": 0,
+      "native_trades": 0,
+      "live_window_orders": 0,
+      "live_window_trades": 0,
+      "native_5m_execution_clocks_per_pair": 24,
+      "native_window_pair_candle_evaluations": 864,
+      "representative_indicators_nonmissing": true,
+      "native_wallet_first": "2026-11-10 05:00:00+00:00",
+      "native_wallet_last": "2026-11-10 06:55:00+00:00",
+      "native_wallet_ending_usdt": 100.0,
+      "live_pid": 21803,
+      "live_process_alive": true,
+      "live_config_unchanged": true,
+      "native_result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_live_window_20261110_v001/spot/native-run-verified/native-results/backtest-result-2026-11-10_07-23-57.zip",
+        "sha256": "6875bf5d0c3a8f8597cc7c2fcfaf9de355dbbf1019643721962d7d30f018766b"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_live_window_20261110_v001/spot/native-run-verified/result.json",
+        "sha256": "e52dd77bb65d85c33f826e79f957ab0b7fd24a950c5ad4c8cd01124021be5b10"
+      },
+      "registration": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_live_window_20261110_v001/spot/native-run-verified/registration.json",
+        "sha256": "6d1344e465cc9b70ed5f184fb002d929ab63e712525bb8a8d6c973df41280b19"
+      }
+    },
+    {
+      "market": "futures",
+      "pairs": 80,
+      "initial_equity_usdt": 100,
+      "stake_budget_usdt": 99,
+      "leverage": 3,
+      "max_open_trades": 12,
+      "raw_entry_signals": 0,
+      "native_entry_attempts": 0,
+      "entry_confirmation_calls": 0,
+      "native_trades": 0,
+      "live_window_orders": 0,
+      "live_window_trades": 0,
+      "native_5m_execution_clocks_per_pair": 24,
+      "native_window_pair_candle_evaluations": 1920,
+      "representative_indicators_nonmissing": true,
+      "native_wallet_first": "2026-11-10 05:00:00+00:00",
+      "native_wallet_last": "2026-11-10 06:55:00+00:00",
+      "native_wallet_ending_usdt": 100.0,
+      "live_pid": 21804,
+      "live_process_alive": true,
+      "live_config_unchanged": true,
+      "native_result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_live_window_20261110_v001/futures/native-run-verified/native-results/backtest-result-2026-11-10_07-25-05.zip",
+        "sha256": "d0e04567413c9e60c4d587a4c7b71761b88a5debe683687365732ec5fcdb4989"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_live_window_20261110_v001/futures/native-run-verified/result.json",
+        "sha256": "7680402f4e37aa55f48a7f9bf218cb9e095e637d1d7dc8325f90291ed2e7d8f3"
+      },
+      "registration": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_live_window_20261110_v001/futures/native-run-verified/registration.json",
+        "sha256": "4f922762c5fa5f0909912ababe8c58c2257a127cd2636dad10f2397bc75ef237"
+      }
+    }
+  ],
+  "conclusion": "Both native replays had zero entry signals and zero trades; live zero orders agrees",
+  "native_source_baseline": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "backtest_result_cache": "none",
+  "outbound_replay_sockets": "blocked",
+  "financial_callbacks_changed": false,
+  "local_adapter_scope": "Backtest-only startup admission; live financial methods inherited",
+  "model_limits": [
+    "Public OHLCV retrospective replay cannot prove identical intrabar ticks or order book",
+    "Costs use frozen13bps spot/8bps futures all-in models, not charged commission certification",
+    "Frozen existing leverage brackets reused with current public symbol rules",
+    "No signal in this window does not verify the first live order/fill path"
+  ],
+  "live_orders_forced": 0,
+  "live_workers_restarted": 0,
+  "paper_workers_started": 0
+}
