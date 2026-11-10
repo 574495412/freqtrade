@@ -134,8 +134,10 @@ def main():  # noqa: C901 -- Validate both native archives and their live-ledger
         "local_adapter_scope": "Backtest-only startup admission; live financial methods inherited",
         "model_limits": [
             "Public OHLCV retrospective replay cannot prove identical intrabar ticks or order book",
-            "Costs use frozen13bps spot/8bps futures all-in models, "
-            "not charged commission certification",
+            (
+                "Costs use frozen13bps spot/8bps futures all-in models, "
+                "not charged commission certification"
+            ),
             "Frozen existing leverage brackets reused with current public symbol rules",
             "No signal in this window does not verify the first live order/fill path",
         ],
