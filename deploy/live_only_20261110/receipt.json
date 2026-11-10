@@ -1,0 +1,202 @@
+{
+  "observed_at_utc": "2026-11-10T05:16:39.240902+00:00",
+  "status": "CRYPTO_LIVE_ONLY_PAPER_ALL_STOPPED",
+  "authorization": "User requested all crypto paper trading stopped and live crypto only",
+  "paper_processes_remaining": [],
+  "disabled_paper_launchagents": [
+    {
+      "label": "io.freqtrade.paper.nfi80.optimized",
+      "loaded": false,
+      "persistent_disabled": true
+    },
+    {
+      "label": "io.freqtrade.paper.nfi80.control",
+      "loaded": false,
+      "persistent_disabled": true
+    },
+    {
+      "label": "io.freqtrade.paper.nfi80.daily.control",
+      "loaded": false,
+      "persistent_disabled": true
+    },
+    {
+      "label": "io.freqtrade.paper.nfi80.selected.selector",
+      "loaded": false,
+      "persistent_disabled": true
+    },
+    {
+      "label": "io.freqtrade.paper.x8-addcap.futures",
+      "loaded": false,
+      "persistent_disabled": true
+    },
+    {
+      "label": "io.freqtrade.paper.nfi80.daily.optimized",
+      "loaded": false,
+      "persistent_disabled": true
+    },
+    {
+      "label": "io.freqtrade.paper.spot",
+      "loaded": false,
+      "persistent_disabled": true
+    },
+    {
+      "label": "io.freqtrade.paper.nfi80.daily.selector",
+      "loaded": false,
+      "persistent_disabled": true
+    },
+    {
+      "label": "io.freqtrade.paper.futures",
+      "loaded": false,
+      "persistent_disabled": true
+    },
+    {
+      "label": "io.freqtrade.paper.x8-addcap.spot",
+      "loaded": false,
+      "persistent_disabled": true
+    },
+    {
+      "label": "io.freqtrade.paper.nfi80.selected.optimized",
+      "loaded": false,
+      "persistent_disabled": true
+    }
+  ],
+  "paper_ledgers": [
+    {
+      "path": "user_data/deployment/nfi80-flatboost-20261109/optimized/trades.sqlite",
+      "shutdown_pid": 21809,
+      "integrity_ok": true,
+      "sql_equal_to_pre_stop_backup": true,
+      "counts": {
+        "trades": 0,
+        "orders": 0,
+        "open_trades": 0
+      },
+      "preserved": true
+    },
+    {
+      "path": "user_data/deployment/spot/trades.sqlite",
+      "shutdown_pid": 21812,
+      "integrity_ok": true,
+      "sql_equal_to_pre_stop_backup": true,
+      "counts": {
+        "trades": 3,
+        "orders": 6,
+        "open_trades": 0
+      },
+      "preserved": true
+    },
+    {
+      "path": "user_data/deployment/nfi-x8-addcap/spot/trades.sqlite",
+      "shutdown_pid": 21817,
+      "integrity_ok": true,
+      "sql_equal_to_pre_stop_backup": true,
+      "counts": {
+        "trades": 0,
+        "orders": 0,
+        "open_trades": 0
+      },
+      "preserved": true
+    },
+    {
+      "path": "user_data/deployment/nfi80-flatboost-20261109/control/trades.sqlite",
+      "shutdown_pid": 21820,
+      "integrity_ok": true,
+      "sql_equal_to_pre_stop_backup": true,
+      "counts": {
+        "trades": 0,
+        "orders": 0,
+        "open_trades": 0
+      },
+      "preserved": true
+    },
+    {
+      "path": "user_data/deployment/nfi80-selected-20261109/optimized/trades.sqlite",
+      "shutdown_pid": 21823,
+      "integrity_ok": true,
+      "sql_equal_to_pre_stop_backup": true,
+      "counts": {
+        "trades": 0,
+        "orders": 0,
+        "open_trades": 0
+      },
+      "preserved": true
+    },
+    {
+      "path": "user_data/deployment/futures/trades.sqlite",
+      "shutdown_pid": 21826,
+      "integrity_ok": true,
+      "sql_equal_to_pre_stop_backup": true,
+      "counts": {
+        "trades": 7,
+        "orders": 13,
+        "open_trades": 1
+      },
+      "preserved": true
+    },
+    {
+      "path": "user_data/deployment/nfi-x8-addcap/futures/trades.sqlite",
+      "shutdown_pid": 21829,
+      "integrity_ok": true,
+      "sql_equal_to_pre_stop_backup": true,
+      "counts": {
+        "trades": 2,
+        "orders": 4,
+        "open_trades": 0
+      },
+      "preserved": true
+    }
+  ],
+  "live_workers": {
+    "spot": {
+      "pid": 21803,
+      "pid_unchanged": true,
+      "config_sha256": "2da5543c9eef652ad4571b03477ab7494e932cf4a09c2f35dbcbb8dad4d78883",
+      "config_unchanged": true,
+      "latest_heartbeat": "2026-11-10 13:15:49,170 - freqtrade.worker - INFO - Bot heartbeat. PID=21803, version='2026.10-dev-bf3485ff1, strategy_version: v18.0.146-manual-flatboost-cap100', state='RUNNING'",
+      "ceiling_usdt": 100.0,
+      "budget_usdt": 99.0,
+      "max_open_trades": 6
+    },
+    "futures": {
+      "pid": 21804,
+      "pid_unchanged": true,
+      "config_sha256": "30d936a876f12466dcddf9d36f97ee093541a7d325073b414afd2da321c34735",
+      "config_unchanged": true,
+      "latest_heartbeat": "2026-11-10 13:16:21,862 - freqtrade.worker - INFO - Bot heartbeat. PID=21804, version='2026.10-dev-bf3485ff1, strategy_version: v18.0.146-manual-flatboost-cap100', state='RUNNING'",
+      "ceiling_usdt": 100.0,
+      "budget_usdt": 99.0,
+      "max_open_trades": 12
+    }
+  },
+  "live_selector": {
+    "label": "io.freqtrade.live.nfi80.selector",
+    "last_exit_code": 0,
+    "run_interval_seconds": 300,
+    "trading_worker": false,
+    "same_native_snapshot_producer": true,
+    "initial_run_stdout": "{\"skipped\": \"same completed UTC day remains valid\"}\n{\"updated\": false, \"pairs\": 80, \"valid_until_utc\": \"2026-11-11T00:00:00+00:00\"}"
+  },
+  "notification_receipt": {
+    "id": 84,
+    "state": "sent",
+    "result": "errcode:0",
+    "delivered": 1794287708.281363
+  },
+  "notification_health": {
+    "status": "running",
+    "version": "crypto-notifications-v2",
+    "outbox": {
+      "sent": 84
+    },
+    "monitor": {
+      "last_check": 1794287784.323833,
+      "error": null
+    }
+  },
+  "new_tests_passed": 7,
+  "ruff_passed": true,
+  "live_workers_restarted": 0,
+  "live_orders_forced": 0,
+  "paper_ledgers_deleted": 0,
+  "non_crypto_services_changed": false
+}

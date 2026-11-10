@@ -1,6 +1,13 @@
 # Standalone Freqtrade paper deployment
 
-The running project is `/Users/chrise/GitHub/freqtrade`. CZ-Agent is not imported
+**Current operations, 2026-11-10:** all crypto paper trading is stopped. Seven
+workers were stopped and eleven paper autostart/scheduled jobs were persistently
+disabled. Only the existing spot/futures live workers, notifications and a
+live-only daily-universe input publisher remain. See
+[live-only shutdown evidence](live_only_20261110/README.md). Do not automatically
+restart the historical paper services below without a new user request.
+
+The historical paper deployment project is `/Users/chrise/GitHub/freqtrade`. CZ-Agent is not imported
 and no CZ process executes these accounts. Both markets use the official
 `python -m freqtrade trade --dry-run` entry point, independently owned databases,
 and 1,000 USDT simulated starting wallets. This release does not enable live trading.
@@ -9,7 +16,10 @@ and 1,000 USDT simulated starting wallets. This release does not enable live tra
 
 - Official engine: `c051e9065c5b677f03817dd1f83cb980af1ed684`.
 - NFI X8: `1af55971d3a64703ec449078e09fdec257d0d3c6`, v18.0.146; original license retained.
-- Official executable files are unchanged. The existing repository additionally
+- At initial paper migration the official executable files were unchanged.
+  The current native Binance initializer has an explicitly recorded local shared
+  request-guard extension; see [transport repair](rate_limit_20261110/README.md).
+  The existing repository additionally
   contains research modules and research-only lint settings in `pyproject.toml`.
   `release.json` pins the allowed metadata file, strategy and both configs;
   `upstream-source.json` pins the original official files.
