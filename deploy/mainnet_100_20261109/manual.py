@@ -1,7 +1,8 @@
 """Manual user entrypoint. --check-only never constructs a trading worker.
 
-The assistant must not invoke the default command or --worker. They enable real
-financial activity and are reserved for the user's own terminal invocation.
+The default two-market initial launch is reserved for the user's manual invocation.
+Targeted maintenance of an existing spot worker uses spot_restart and requires
+explicit user authorization, identity/flat-state checks and ledger preservation.
 """
 
 import argparse

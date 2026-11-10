@@ -6,6 +6,7 @@ from pathlib import Path
 from deploy.live_prepare_20261109.preflight import private_env
 from deploy.live_prepare_20261109.prepare import webhook_config
 from deploy.mainnet_100_20261109.capital import CAPITAL, STAKE_BUDGET
+from deploy.mainnet_100_20261109.spot_transport import scoped_config
 from deploy.nfi80_selected.launch import verify
 from deploy.nfi80_selected.selector import read, save, sha
 
@@ -43,6 +44,8 @@ def main():
             bot_name=f"nfi-manual-cap100-{market}",
             db_url="sqlite:///" + str(folder / "trades.sqlite"),
         )
+        if market == "spot":
+            config = scoped_config(config)
         config["api_server"]["enabled"] = False
         config["exchange"].update(key="", secret="", password="")
         if market == "futures":
@@ -71,7 +74,17 @@ def main():
         save(folder / "credentials.json", credentials)
         for path in (folder / "config.json", folder / "credentials.json"):
             path.chmod(0o600)
-    files = ["capital.py", "prepare.py", "manual.py", "checks.py", "strategy/NFIManualFlatBoost.py"]
+    files = [
+        "capital.py",
+        "prepare.py",
+        "manual.py",
+        "checks.py",
+        "spot_status.py",
+        "spot_transport.py",
+        "spot_restart.py",
+        "spot_fills.py",
+        "strategy/NFIManualFlatBoost.py",
+    ]
     save(
         HERE / "release.json",
         {

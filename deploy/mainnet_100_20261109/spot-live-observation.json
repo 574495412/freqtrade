@@ -1,0 +1,72 @@
+{
+  "observed_at_shanghai": "2026-11-10T10:13:51.762685+08:00",
+  "observed_at_utc": "2026-11-10T02:13:51.762943+00:00",
+  "scope": "Authorized spot transport repair and current execution-readiness observation",
+  "status": "NATIVE_RUNNING_AWAITING_FIRST_NATURAL_ORDER",
+  "pid": 12231,
+  "old_pid": 73660,
+  "native_state": "RUNNING",
+  "last_heartbeat_utc": "2026-11-10T02:12:56.300000+00:00",
+  "heartbeat_count_after_restart": 23,
+  "errors_before_restart": 31,
+  "errors_after_restart": 0,
+  "rate_limit_messages_after_restart": 0,
+  "spot_market_scope_logged": true,
+  "local_ledger": {
+    "trades": 0,
+    "orders": 0,
+    "open_trades": 0
+  },
+  "account_observation": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/deployment/mainnet-100-20261109/spot-transport-20261110T015033351243Z/account-observation-summary.private.json",
+    "sha256": "e126ceba661c17c232d27caa028201c9b3e08ed65bffe0b99ccf59c317c607c0"
+  },
+  "public_route_probe": {
+    "path": "/Users/chrise/GitHub/freqtrade/deploy/mainnet_100_20261109/spot-transport-probe.json",
+    "sha256": "a376560ce84ddd9467527d32b0fe84a6a2e0dca903aae26f2b5ad84fb55394e3"
+  },
+  "ledger_backup_sql_dump_equal": true,
+  "strategy_and_capital_changed": false,
+  "capital_ceiling_usdt": 100,
+  "stake_budget_usdt": 99,
+  "spot_startup_notification_receipts": [
+    {
+      "id": 46,
+      "state": "sent",
+      "result": "errcode:0",
+      "created": 1794275439.513512,
+      "delivered": 1794275439.833376
+    },
+    {
+      "id": 47,
+      "state": "sent",
+      "result": "errcode:0",
+      "created": 1794275439.520728,
+      "delivered": 1794275444.444513
+    },
+    {
+      "id": 48,
+      "state": "sent",
+      "result": "errcode:0",
+      "created": 1794275439.53757,
+      "delivered": 1794275448.499551
+    }
+  ],
+  "notification_relay_health": {
+    "status": "running",
+    "outbox": {
+      "sent": 48
+    }
+  },
+  "tests_passed": 44,
+  "actual_fill_execution_verified": false,
+  "fill_reconciliation": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/deployment/mainnet-100-20261109/spot-transport-20261110T015033351243Z/fill-observation-summary.private.json",
+    "sha256": "22bf030dd7889f6a36c31ce6cbe8c736c6c700d49583dabd5a8584b90bbe9324"
+  },
+  "agent_maintenance_restarts": 1,
+  "orders_forced": 0,
+  "futures_service_modified": false,
+  "production_eligible": false,
+  "observation_seconds_since_restart": 1394.95499
+}

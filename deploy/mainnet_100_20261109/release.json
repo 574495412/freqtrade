@@ -1,15 +1,18 @@
 {
   "files": {
     "capital.py": "ed1fcaf2084b94db88351cd7624e69205dd4a08bc9be95b6f69acfc5d78c2595",
-    "prepare.py": "d9e68c3fdba4c0f7ff6ca587f090f706bbe68ba773be05a1cf0a7865bf9c09ee",
-    "manual.py": "ea49468cc07e17a2646fdc6034ea7d2186f184a5449e18a8be5667580d13f893",
+    "prepare.py": "e57bf50bc16468672025d74331c8c59f1a4b47cffdda8847ca0dadb4657a4f2c",
+    "manual.py": "69a9bc9df06e4268c4680435dca196c987d151ac89a84db3e2690d2576f8b30f",
     "checks.py": "7b6771f54b8fbf2510acb8196eee0ea8a7c5d8b5b2b5c48830a33359e3068861",
     "strategy/NFIManualFlatBoost.py": "aa311a07f3d683a5a8faba27cd9ac3e0267fde194d0ed38edd2e8e62879eb23d",
     "audit-hold.json": "c2d698cf319c58e2b80a1224916a024925fcdf1fd9e3842241f1c9c2be28e633",
-    "spot_status.py": "905060ef53e7334e8c867832823da82623d11e84a4151a809838a1c150879ba9"
+    "spot_status.py": "905060ef53e7334e8c867832823da82623d11e84a4151a809838a1c150879ba9",
+    "spot_transport.py": "688593bf00ab10b328449314228e0f3e10910175b6b555c141d1e819095b0793",
+    "spot_restart.py": "d49d1173b921a62ff7b0570a678a52c65bd2390c02c28e068e4be64eda3d0d8f",
+    "spot_fills.py": "9482b1ea4386fe7c4e891881c4d562667c4e8405f32f5c91720fab8f4f9fba9f"
   },
   "config_sha256": {
-    "spot": "ecf25715d89b02b56435c1a1f500a53c01a3ec6f93769b7fb28deae960e2d493",
+    "spot": "2da5543c9eef652ad4571b03477ab7494e932cf4a09c2f35dbcbb8dad4d78883",
     "futures": "30d936a876f12466dcddf9d36f97ee093541a7d325073b414afd2da321c34735"
   },
   "stake_budget_usdt_each": 99.0,
@@ -33,5 +36,13 @@
       "sha256": "c3a99456985320b5288de38bd3db1092992f5fa4e26241829cb9e24a4deaae8b"
     },
     "scope": "Historical fixed100USDT/99budget,36spot assets,6slots,13bps model; not live execution parity"
+  },
+  "spot_transport_scope_repair": {
+    "path": "/Users/chrise/GitHub/freqtrade/deploy/mainnet_100_20261109/spot-live-observation.json",
+    "sha256": "fc4d10b0ed16d4798ee5624a16e300bfa141953a5e3c6aedbff9eeb7c18653ff"
+  },
+  "agent_authorized_maintenance_restarts": {
+    "spot": 1,
+    "futures": 0
   }
 }
