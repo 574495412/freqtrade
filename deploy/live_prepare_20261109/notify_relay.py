@@ -9,6 +9,7 @@ import os
 import secrets
 import sqlite3
 import time
+from contextlib import contextmanager, nullcontext
 from datetime import datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from threading import Thread
@@ -17,6 +18,8 @@ from zoneinfo import ZoneInfo
 
 import requests
 
+from deploy.live_prepare_20261109.notification_design import VERSION, native_card, redact
+from deploy.live_prepare_20261109.notification_monitor import RuntimeMonitor
 from deploy.live_prepare_20261109.preflight import ROOT, STATE, private_env
 
 
@@ -44,33 +47,45 @@ class Outbox:
                 state TEXT NOT NULL DEFAULT 'pending', attempts INTEGER NOT NULL DEFAULT 0,
                 next_attempt REAL NOT NULL DEFAULT 0, last_attempt REAL,
                 result TEXT, delivered REAL)""")
+            conn.execute("""CREATE TABLE IF NOT EXISTS observations (
+                name TEXT PRIMARY KEY, snapshot TEXT NOT NULL, updated REAL NOT NULL)""")
         path.chmod(0o600)
 
+    @contextmanager
     def connect(self):
         conn = sqlite3.connect(self.path, timeout=5)
         conn.row_factory = sqlite3.Row
-        return conn
+        try:
+            with conn:
+                yield conn
+        finally:
+            conn.close()
 
-    def enqueue(self, payload, now=None):
+    def enqueue(self, payload, now=None, connection=None):
         now = time.time() if now is None else now
-        if (
-            not isinstance(payload, dict)
-            or payload.get("msgtype") != "text"
-            or not isinstance(payload.get("text"), dict)
-        ):
-            raise ValueError("Only native text notification payloads are admitted")
-        content = payload["text"].get("content")
+        if not isinstance(payload, dict) or payload.get("msgtype") not in ("text", "markdown"):
+            raise ValueError("Only text and markdown notification payloads are admitted")
+        kind = payload["msgtype"]
+        if not isinstance(payload.get(kind), dict):
+            raise ValueError("Invalid notification body")
+        content = payload[kind].get("content")
         if not isinstance(content, str) or not content.strip():
             raise ValueError("Notification text is empty")
+        if kind == "text":
+            payload = native_card(content)
+            kind = payload["msgtype"]
+            content = payload[kind]["content"]
+        content = redact(content)
         stamp = datetime.fromtimestamp(now, ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
         content += "\n事件接收时间：" + stamp
-        if len(content.encode()) > 1800:
-            content = content.encode()[:1720].decode(errors="ignore") + "\n[超长内容已截断]"
+        limit = 1800 if kind == "text" else 3800
+        if len(content.encode()) > limit:
+            content = content.encode()[: limit - 80].decode(errors="ignore") + "\n[超长内容已截断]"
         content = content.replace("仓位调整=True", "仓位调整=是").replace(
             "仓位调整=False", "仓位调整=否"
         )
-        safe = {"msgtype": "text", "text": {"content": content}}
-        with self.connect() as conn:
+        safe = {"msgtype": kind, kind: {"content": content}}
+        with nullcontext(connection) if connection is not None else self.connect() as conn:
             return conn.execute(
                 "INSERT INTO messages(payload,created) VALUES (?,?)",
                 (json.dumps(safe, ensure_ascii=False), now),
@@ -146,7 +161,7 @@ def upstream_sender():
     return send
 
 
-def handler(outbox, token):
+def handler(outbox, token, monitor=None):
     class Handler(BaseHTTPRequestHandler):
         def log_message(self, *args):
             return
@@ -156,10 +171,25 @@ def handler(outbox, token):
                 self.send_error(404)
                 return
             alive = self.server.dispatcher.is_alive()
+            monitored = monitor is None or (
+                monitor.last_check is not None
+                and time.time() - monitor.last_check < 90
+                and monitor.error is None
+            )
             body = json.dumps(
-                {"status": "running" if alive else "worker_failed", "outbox": outbox.status()}
+                {
+                    "status": "running" if alive and monitored else "worker_failed",
+                    "version": VERSION,
+                    "outbox": outbox.status(),
+                    "monitor": None
+                    if monitor is None
+                    else {
+                        "last_check": monitor.last_check,
+                        "error": monitor.error,
+                    },
+                }
             ).encode()
-            self.send_response(200 if alive else 503)
+            self.send_response(200 if alive and monitored else 503)
             self.end_headers()
             self.wfile.write(body)
 
@@ -191,6 +221,17 @@ def main():
     fcntl.flock(lock.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
     outbox = Outbox(STATE / "notification.sqlite")
     sender = upstream_sender()
+    monitor = RuntimeMonitor(outbox)
+
+    def observe_runtime():
+        while True:
+            try:
+                monitor.poll(time.time())
+            except Exception as exc:
+                # Type only: never log a private config or raw error payload.
+                monitor.error = type(exc).__name__
+                print("Notification observer failed: " + type(exc).__name__, flush=True)
+            time.sleep(30)
 
     def dispatch():
         while True:
@@ -200,9 +241,10 @@ def main():
                 print("Notification storage error; delivery will be retried", flush=True)
             time.sleep(0.5)
 
-    server = ThreadingHTTPServer(("127.0.0.1", PORT), handler(outbox, token))
+    server = ThreadingHTTPServer(("127.0.0.1", PORT), handler(outbox, token, monitor))
     server.dispatcher = Thread(target=dispatch, daemon=True)
     server.dispatcher.start()
+    Thread(target=observe_runtime, daemon=True).start()
     print("Native webhook notification relay listening on loopback", flush=True)
     server.serve_forever()
 

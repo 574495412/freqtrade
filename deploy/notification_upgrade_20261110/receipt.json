@@ -1,0 +1,133 @@
+{
+  "verified_at_utc": "2026-11-10T02:33:52.464473+00:00",
+  "native_upstream_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "workspace_design_source_commit": "15d58a35f307cc858ac5a93af5631435d9263f47",
+  "sources": {
+    "/Users/chrise/GitHub/freqtrade/freqtrade/rpc/webhook.py": "def543640117ba2cbe3d4d0736579d371f1996af0976a4920cbab14b7af89211",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/rpc/telegram.py": "138994ba50aab8f08adbaa1df677d033c17fd4862071f05cab48413dd84cfca9",
+    "/Users/chrise/GitHub/CZ-Agent/cz/trading/crypto/notifications/notifiers.py": "38752881dc827af73bc8ba7815eeae7e52e067145aa93f1f09eb39d2c61c41ce",
+    "/Users/chrise/GitHub/CZ-Agent/cz/trading/crypto/notifications/manager.py": "4a7f6cf8e194bfa2472eac75c790c9d73fd9c90d93c15439a9feb10070f2ff54"
+  },
+  "local_extension_files": {
+    "deploy/live_prepare_20261109/notification_design.py": "4e1e828a02f4702ab43a13d106d9912672fb22814787c06e0ced3317c8ffbeab",
+    "deploy/live_prepare_20261109/notification_monitor.py": "bf07e29d810f436e5cabcac6189d66c9d66bf2851b1f05d13d58af000000edb2",
+    "deploy/live_prepare_20261109/notify_relay.py": "c1996e735e4e4036d8b6ff69cf0b70ddc8ab4ec5c739aa5d7a3168be3acc3de7",
+    "deploy/live_prepare_20261109/test_notification_upgrade.py": "4e1c5eaff6b022a68bfea55c8b03ebf936a3a71fd824041c4dfbeeeb44830dc2"
+  },
+  "notification_service_only_restarted": true,
+  "trading_workers": {
+    "spot": {
+      "pid": 12231,
+      "config_sha256": "2da5543c9eef652ad4571b03477ab7494e932cf4a09c2f35dbcbb8dad4d78883",
+      "unchanged": true
+    },
+    "futures": {
+      "pid": 73661,
+      "config_sha256": "30d936a876f12466dcddf9d36f97ee093541a7d325073b414afd2da321c34735",
+      "unchanged": true
+    }
+  },
+  "old_48_messages_preserved": true,
+  "same_destination_as_workspace_migration": true,
+  "deliveries": [
+    {
+      "id": 49,
+      "state": "sent",
+      "result": "errcode:0",
+      "attempts": 1,
+      "created": 1794277714.754327,
+      "delivered": 1794277715.2567759
+    },
+    {
+      "id": 50,
+      "state": "sent",
+      "result": "errcode:0",
+      "attempts": 1,
+      "created": 1794277729.994347,
+      "delivered": 1794277730.410259
+    }
+  ],
+  "health": {
+    "status": "running",
+    "version": "crypto-notifications-v2",
+    "outbox": {
+      "sent": 50
+    },
+    "monitor": {
+      "last_check": 1794278015.919282,
+      "error": null
+    }
+  },
+  "monitor_observed_at_utc": "2026-11-10T02:33:35.919282+00:00",
+  "runtime_snapshots": {
+    "spot": {
+      "market": "spot",
+      "observed": 1794278015.919282,
+      "faults": {},
+      "ledger": {
+        "trades": 0,
+        "open_trades": 0,
+        "closed_trades": 0,
+        "wins": 0,
+        "closed_pnl": 0,
+        "orders": 0,
+        "filled_orders": 0,
+        "open_orders": 0,
+        "additions": 0,
+        "positions": []
+      },
+      "contract": {
+        "ceiling": 100.0,
+        "budget": 99.0,
+        "pairs": 36,
+        "slots": 6,
+        "leverage": "1"
+      },
+      "pid": 12231,
+      "heartbeat": 1794277996.432,
+      "native_state": "RUNNING",
+      "banned_until": null,
+      "heartbeat_age": 19.487282037734985
+    },
+    "futures": {
+      "market": "futures",
+      "observed": 1794278015.919282,
+      "faults": {
+        "rate_limit": "行情请求遭418限流，最近日志报告限制至 11-10 12:42:58；尚未确认恢复"
+      },
+      "ledger": {
+        "trades": 0,
+        "open_trades": 0,
+        "closed_trades": 0,
+        "wins": 0,
+        "closed_pnl": 0,
+        "orders": 0,
+        "filled_orders": 0,
+        "open_orders": 0,
+        "additions": 0,
+        "positions": []
+      },
+      "contract": {
+        "ceiling": 100.0,
+        "budget": 99.0,
+        "pairs": 80,
+        "slots": 12,
+        "leverage": "3"
+      },
+      "pid": 73661,
+      "heartbeat": 1794277937.263,
+      "native_state": "RUNNING",
+      "banned_until": 1794285778.792,
+      "heartbeat_age": 78.6562819480896
+    }
+  },
+  "tests_passed": 69,
+  "ruff_passed": true,
+  "trading_release_integrity_verified": true,
+  "exchange_requests_from_monitor": 0,
+  "test_orders": 0,
+  "trading_config_changed": false,
+  "actual_fill_notification_verified": false,
+  "user_read_verified": false,
+  "remaining_issue": "Futures market requests still show Binance418; notification patch does not repair trading transport."
+}
