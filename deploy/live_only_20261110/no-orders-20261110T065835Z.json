@@ -1,0 +1,80 @@
+{
+  "observed_at_shanghai": "2026-11-10T14:58:35.040915+08:00",
+  "assessment": "Short healthy observation without orders is compatible with historical entry frequency; no execution failure found in current logs, order path still unverified",
+  "runtime": {
+    "spot": {
+      "pid": 21803,
+      "latest_heartbeat_local": "2026-11-10 14:58:32,411",
+      "last_hour_warnings": 0,
+      "last_hour_errors": 0,
+      "logged_entry_rejections_last_hour": 0,
+      "active_whitelist_count": 36,
+      "ledger": {
+        "trades": 0,
+        "orders": 0,
+        "active_pairlocks": 0
+      },
+      "paper_start_gate_disabled": true,
+      "raw_signal_and_callback_rejection_counters_available": false
+    },
+    "futures": {
+      "pid": 21804,
+      "latest_heartbeat_local": "2026-11-10 14:57:57,165",
+      "last_hour_warnings": 0,
+      "last_hour_errors": 0,
+      "logged_entry_rejections_last_hour": 0,
+      "active_whitelist_count": 80,
+      "ledger": {
+        "trades": 0,
+        "orders": 0,
+        "active_pairlocks": 0
+      },
+      "paper_start_gate_disabled": true,
+      "raw_signal_and_callback_rejection_counters_available": false,
+      "actual_native_snapshot_gate_count": 80,
+      "snapshot_matches_logged_whitelist": true
+    }
+  },
+  "historical_native_archive_statistics": [
+    {
+      "account": "author100",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_truth_audit_20261109_v001/accounts/author100_8bps/native_results/backtest-result-2026-11-09_16-50-02.zip",
+        "sha256": "10f5c8db7c9feb9b792a42436257f5542ec65ce7a137e0f4631a404fc5de4251"
+      },
+      "campaign_starts": 312,
+      "calendar_days": 312.2083333333333,
+      "mean_starts_per_day": 0.9993327105298279,
+      "windows": 89893,
+      "flat_start_windows": 42337,
+      "no_entry_2h_flat_start_windows": 40151,
+      "no_entry_2h_flat_start_pct": 94.83666769020006,
+      "definition": "Overlapping2h windows every5min within native backtest Jan1-Nov9; initially no open campaign; counts campaign starts, excludes additions; descriptive, not independent samples or forecast"
+    },
+    {
+      "account": "spot100",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_truth_audit_20261109_v001/accounts/spot100_13bps-v002/native_results/backtest-result-2026-11-09_17-13-47.zip",
+        "sha256": "453566bfe54e3fcd3c8c84543e7c4d6e3892d3f09dd8cd22d78f3f981852c6a0"
+      },
+      "campaign_starts": 54,
+      "calendar_days": 312.2083333333333,
+      "mean_starts_per_day": 0.17296143066862407,
+      "windows": 89893,
+      "flat_start_windows": 66776,
+      "no_entry_2h_flat_start_windows": 66152,
+      "no_entry_2h_flat_start_pct": 99.06553252665628,
+      "definition": "Overlapping2h windows every5min within native backtest Jan1-Nov9; initially no open campaign; counts campaign starts, excludes additions; descriptive, not independent samples or forecast"
+    }
+  ],
+  "is_new_backtest": false,
+  "auxiliary_diagnostic_only": true,
+  "historical_limits": [
+    "Retrospective blacklist/PIT and OOS limitations retained",
+    "Overlapping calendar windows are descriptive, not independent Bernoulli observations",
+    "Absence of rejection logs cannot prove absence of raw or silently rejected signals"
+  ],
+  "orders_forced": 0,
+  "services_restarted": 0,
+  "strategy_changed": false
+}
