@@ -1,0 +1,208 @@
+{
+  "observed_at_utc": "2026-11-10T03:13:34.351336+00:00",
+  "status": "PROTECTION_DEPLOYED_COOLDOWN_ACTIVE_RECOVERY_NOT_YET_VALIDATED",
+  "authorization": "User explicitly requested repair to avoid rate limits; prior maintenance/restart authorization retained",
+  "suspended_at_utc": "2026-11-10T02:48:05.733237+00:00",
+  "final_revision_loaded_at_utc": "2026-11-10T03:10:36.827780+00:00",
+  "policy": {
+    "enabled": true,
+    "weight_per_minute": 900,
+    "requests_per_minute": 180,
+    "in_flight": 4
+  },
+  "shared_transport_state": {
+    "id": 1,
+    "next_at": 0.0,
+    "cooldown": 1794285538.063,
+    "reason": "SEEDED_EXISTING_HTTP_418",
+    "strikes": 0,
+    "transports": 0,
+    "responses": 0,
+    "cache_hits": 0
+  },
+  "cooldown_until_utc": "2026-11-10T04:38:58.063000+00:00",
+  "workers": [
+    {
+      "market_path": "user_data/deployment/nfi-x8-addcap/spot",
+      "old_pid": 14807,
+      "pid": 21817,
+      "paper": true,
+      "alive": true,
+      "guard_hooks_loaded": 2,
+      "ledger_sql_equal": true,
+      "financial_configs_unchanged": true,
+      "ledger_counts": {
+        "trades": 0,
+        "orders": 0
+      },
+      "errors_after_final_start": 0,
+      "server_418_events_after_final_start": 0,
+      "native_state": "WAITING_IN_SHARED_COOLDOWN_BEFORE_EXCHANGE_INITIALIZATION"
+    },
+    {
+      "market_path": "user_data/deployment/nfi-x8-addcap/futures",
+      "old_pid": 14814,
+      "pid": 21829,
+      "paper": true,
+      "alive": true,
+      "guard_hooks_loaded": 2,
+      "ledger_sql_equal": true,
+      "financial_configs_unchanged": true,
+      "ledger_counts": {
+        "trades": 2,
+        "orders": 4
+      },
+      "errors_after_final_start": 0,
+      "server_418_events_after_final_start": 0,
+      "native_state": "WAITING_IN_SHARED_COOLDOWN_BEFORE_EXCHANGE_INITIALIZATION"
+    },
+    {
+      "market_path": "user_data/deployment/futures",
+      "old_pid": 14831,
+      "pid": 21826,
+      "paper": true,
+      "alive": true,
+      "guard_hooks_loaded": 2,
+      "ledger_sql_equal": true,
+      "financial_configs_unchanged": true,
+      "ledger_counts": {
+        "trades": 7,
+        "orders": 13
+      },
+      "errors_after_final_start": 0,
+      "server_418_events_after_final_start": 0,
+      "native_state": "WAITING_IN_SHARED_COOLDOWN_BEFORE_EXCHANGE_INITIALIZATION"
+    },
+    {
+      "market_path": "user_data/deployment/spot",
+      "old_pid": 14841,
+      "pid": 21812,
+      "paper": true,
+      "alive": true,
+      "guard_hooks_loaded": 2,
+      "ledger_sql_equal": true,
+      "financial_configs_unchanged": true,
+      "ledger_counts": {
+        "trades": 3,
+        "orders": 6
+      },
+      "errors_after_final_start": 0,
+      "server_418_events_after_final_start": 0,
+      "native_state": "WAITING_IN_SHARED_COOLDOWN_BEFORE_EXCHANGE_INITIALIZATION"
+    },
+    {
+      "market_path": "user_data/deployment/nfi80-flatboost-20261109/control",
+      "old_pid": 46910,
+      "pid": 21820,
+      "paper": true,
+      "alive": true,
+      "guard_hooks_loaded": 2,
+      "ledger_sql_equal": true,
+      "financial_configs_unchanged": true,
+      "ledger_counts": {
+        "trades": 0,
+        "orders": 0
+      },
+      "errors_after_final_start": 0,
+      "server_418_events_after_final_start": 0,
+      "native_state": "WAITING_IN_SHARED_COOLDOWN_BEFORE_EXCHANGE_INITIALIZATION"
+    },
+    {
+      "market_path": "user_data/deployment/nfi80-flatboost-20261109/optimized",
+      "old_pid": 46912,
+      "pid": 21809,
+      "paper": true,
+      "alive": true,
+      "guard_hooks_loaded": 2,
+      "ledger_sql_equal": true,
+      "financial_configs_unchanged": true,
+      "ledger_counts": {
+        "trades": 0,
+        "orders": 0
+      },
+      "errors_after_final_start": 0,
+      "server_418_events_after_final_start": 0,
+      "native_state": "WAITING_IN_SHARED_COOLDOWN_BEFORE_EXCHANGE_INITIALIZATION"
+    },
+    {
+      "market_path": "user_data/deployment/nfi80-selected-20261109/optimized",
+      "old_pid": 70485,
+      "pid": 21823,
+      "paper": true,
+      "alive": true,
+      "guard_hooks_loaded": 2,
+      "ledger_sql_equal": true,
+      "financial_configs_unchanged": true,
+      "ledger_counts": {
+        "trades": 0,
+        "orders": 0
+      },
+      "errors_after_final_start": 0,
+      "server_418_events_after_final_start": 0,
+      "native_state": "WAITING_IN_SHARED_COOLDOWN_BEFORE_EXCHANGE_INITIALIZATION"
+    },
+    {
+      "market_path": "user_data/deployment/mainnet-100-20261109/futures",
+      "old_pid": 73661,
+      "pid": 21804,
+      "paper": false,
+      "alive": true,
+      "guard_hooks_loaded": 2,
+      "ledger_sql_equal": true,
+      "financial_configs_unchanged": true,
+      "ledger_counts": {
+        "trades": 0,
+        "orders": 0
+      },
+      "errors_after_final_start": 0,
+      "server_418_events_after_final_start": 0,
+      "native_state": "WAITING_IN_SHARED_COOLDOWN_BEFORE_EXCHANGE_INITIALIZATION"
+    },
+    {
+      "market_path": "user_data/deployment/mainnet-100-20261109/spot",
+      "old_pid": 12231,
+      "pid": 21803,
+      "paper": false,
+      "alive": true,
+      "guard_hooks_loaded": 2,
+      "ledger_sql_equal": true,
+      "financial_configs_unchanged": true,
+      "ledger_counts": {
+        "trades": 0,
+        "orders": 0
+      },
+      "errors_after_final_start": 0,
+      "server_418_events_after_final_start": 0,
+      "native_state": "WAITING_IN_SHARED_COOLDOWN_BEFORE_EXCHANGE_INITIALIZATION"
+    }
+  ],
+  "native_tests_passed": 20,
+  "guard_tests_passed": 17,
+  "existing_deployment_tests_passed": 69,
+  "ruff_passed": true,
+  "cooldown_notification_receipts": [
+    {
+      "id": 53,
+      "state": "sent",
+      "result": "errcode:0",
+      "created": 1794280037.209755,
+      "delivered": 1794280039.0294552
+    },
+    {
+      "id": 54,
+      "state": "sent",
+      "result": "errcode:0",
+      "created": 1794280247.9878001,
+      "delivered": 1794280248.603872
+    }
+  ],
+  "orders_forced": 0,
+  "transfers": 0,
+  "financial_configuration_changes": 0,
+  "restored_selector_service": true,
+  "rate_limit_recovery_verified": false,
+  "actual_live_fill_verified": false,
+  "local_extension_sha256": "cd33624253e02f212a5dfd07861eae80ee919954814f9f3cecc07079e5118e3e",
+  "upstream_reference": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "unresolved": "Cooldown is active; post-deadline initialization, live headers/cache hits and natural fills have not been observed."
+}

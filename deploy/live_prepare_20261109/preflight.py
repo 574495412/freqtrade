@@ -12,6 +12,8 @@ from urllib.parse import urlencode
 
 import requests
 
+from freqtrade.exchange.request_guard import GuardedSession
+
 
 ROOT = Path(__file__).resolve().parents[2]
 STATE = ROOT / "user_data/deployment/live-prepare-20261109"
@@ -56,7 +58,7 @@ def main():
         credential[name]
         for name in ("BINANCE_COPYTRADING_API_KEY", "BINANCE_COPYTRADING_API_SECRET")
     )
-    session = requests.Session()
+    session = GuardedSession()
     session.auth = lambda request: request
     session.proxies.update(http="http://127.0.0.1:7897", https="http://127.0.0.1:7897")
     results = {}

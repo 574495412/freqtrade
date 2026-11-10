@@ -190,6 +190,20 @@ def observe(market, now, prior=None, root=LIVE):
         result["ledger"] = ledger_snapshot(folder / "trades.sqlite")
     except (OSError, ValueError, sqlite3.Error):
         result["faults"]["ledger"] = "原生交易账本暂不可读，成交和持仓数量未知"
+    guard_db = root.parent / "binance-request-guard.sqlite"
+    if guard_db.exists():
+        try:
+            with closing(sqlite3.connect(guard_db.as_uri() + "?mode=ro", uri=True)) as conn:
+                until, reason = conn.execute(
+                    "SELECT cooldown,reason FROM budget WHERE id=1"
+                ).fetchone()
+            if until > now:
+                end = datetime.fromtimestamp(until, TZ).strftime("%m-%d %H:%M:%S")
+                result["faults"]["shared_cooldown"] = (
+                    f"共享请求冷却至 {end}（{reason}）；期间不发送Binance请求"
+                )
+        except (OSError, ValueError, TypeError, sqlite3.Error):
+            result["faults"]["shared_cooldown_unknown"] = "共享限流状态暂不可读"
     return result
 
 

@@ -15,9 +15,9 @@ from types import SimpleNamespace
 
 import pandas as pd
 import rapidjson
-import requests
 
 from freqtrade.enums import CandleType, RunMode
+from freqtrade.exchange.request_guard import GuardedSession
 from freqtrade.resolvers import ExchangeResolver
 
 
@@ -117,7 +117,7 @@ def main():
             record = seed["daily_inputs"][pair]
             frame = pd.read_parquet(checked(record))
             if frame.date.iloc[-1] != day - pd.Timedelta(days=1):
-                with requests.Session() as session:
+                with GuardedSession(max_wait=None) as session:
                     session.trust_env = False
                     response = session.get(
                         "https://fapi.binance.com/fapi/v1/klines",

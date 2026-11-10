@@ -6,8 +6,9 @@ import fcntl
 import hashlib
 import json
 import os
-from pathlib import Path
 import shlex
+from pathlib import Path
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -19,8 +20,20 @@ def verify() -> dict:
         raise ValueError("This deployment is paper-only")
     if upstream["commit"] != release["upstream_commit"]:
         raise ValueError("Upstream source identity mismatch")
+    if policy := release.get("request_guard_policy"):
+        path = Path(policy["private_path"])
+        if (path.is_symlink() or path.stat().st_mode & 0o077
+                or hashlib.sha256(path.read_bytes()).hexdigest() != policy["sha256"]):
+            raise ValueError("Shared request guard policy differs from release")
+    extensions = release.get("upstream_local_extensions", {})
+    for name, record in extensions.items():
+        if (record["upstream_sha256"] != upstream["files"].get(name)
+                or release["files"].get(name) != record["local_sha256"]
+                or not record.get("reason")):
+            raise ValueError("Native extension provenance mismatch")
     upstream_files = {k: v for k, v in upstream["files"].items()
-                      if k not in release.get("upstream_metadata_exceptions", [])}
+                      if k not in release.get("upstream_metadata_exceptions", [])
+                      and k not in extensions}
     for group in (upstream_files, release["files"]):
         for name, expected in group.items():
             path = ROOT / name
@@ -73,7 +86,7 @@ def main() -> None:
     os.chdir(ROOT)
     python = str(ROOT / ".venv-paper/bin/python")
     # No CZ imports or execution adapter: official CLI owns the entire lifecycle.
-    os.execve(python, [python, "-m", "freqtrade", "trade", "--dry-run",
+    os.execve(python, [python, "-m", "freqtrade", "trade", "--dry-run",  # noqa: S606 -- fixed native CLI
                       "--config", str(config_path),
                       "--strategy-path", str(ROOT / "deploy/strategy/nfi-x8"),
                       "--userdir", str(state),

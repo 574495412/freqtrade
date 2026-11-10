@@ -11,11 +11,10 @@ from datetime import UTC, datetime
 from decimal import Decimal
 from urllib.parse import urlencode
 
-import requests
-
 from deploy.mainnet_100_20261109.prepare import HERE, STATE
 from deploy.mainnet_100_20261109.spot_status import signed_read as account_read
 from deploy.nfi80_selected.selector import read, save, sha
+from freqtrade.exchange.request_guard import GuardedSession
 
 
 D = Decimal
@@ -214,7 +213,7 @@ def observe(after_id=0):
     folder.mkdir(mode=0o700)
     credentials = read(spot / "credentials.json")["exchange"]
     results = []
-    with requests.Session() as session:
+    with GuardedSession() as session:
         session.trust_env = False
         session.auth = lambda request: request
         proxy = config["exchange"]["ccxt_config"]["httpsProxy"]

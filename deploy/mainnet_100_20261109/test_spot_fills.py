@@ -98,7 +98,7 @@ def test_no_native_orders_does_not_query_broker_or_pass_execution(tmp_path, monk
     monkeypatch.setattr(audit, "sha", lambda p: "match")
     monkeypatch.setattr(audit, "read_ledger", lambda p: ([], []))
     monkeypatch.setattr(
-        audit.requests, "Session", lambda: pytest.fail("Zero orders must not fetch trades")
+        audit, "GuardedSession", lambda: pytest.fail("Zero orders must not fetch trades")
     )
     receipt = audit.observe()
     assert receipt["status"] == "WAITING_FOR_FIRST_NATURAL_ORDER"

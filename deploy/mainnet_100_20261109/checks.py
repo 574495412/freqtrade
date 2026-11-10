@@ -11,6 +11,7 @@ import requests
 
 from deploy.mainnet_100_20261109.prepare import HERE, STATE
 from deploy.nfi80_selected.selector import read, save
+from freqtrade.exchange.request_guard import GuardedSession
 
 
 def futures_compatible(permissions, account, orders, mode, leader):
@@ -34,7 +35,7 @@ def account_checks():  # noqa: C901 -- explicit, separate spot/futures admission
     for market in ("spot", "futures"):
         credential = read(STATE / market / "credentials.json")["exchange"]
         config = read(STATE / market / "config.json")
-        with requests.Session() as session:
+        with GuardedSession() as session:
             session.trust_env = False
             session.proxies.update(http="http://127.0.0.1:7897", https="http://127.0.0.1:7897")
 

@@ -460,6 +460,9 @@ class Exchange(LoggingMixin):
         if self.get_option("supports_demo_trading") and exchange_config.get("demo_trading", False):
             api.enable_demo_trading(True)
 
+        from freqtrade.exchange.request_guard import install
+
+        install(api, sync=sync)
         return api
 
     @property

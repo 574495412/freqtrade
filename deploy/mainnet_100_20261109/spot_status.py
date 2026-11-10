@@ -10,10 +10,9 @@ from decimal import Decimal
 from pathlib import Path
 from urllib.parse import urlencode
 
-import requests
-
 from deploy.mainnet_100_20261109.prepare import HERE, STATE
 from deploy.nfi80_selected.selector import read, save, sha
+from freqtrade.exchange.request_guard import GuardedSession
 
 
 READ_PATHS = {
@@ -96,7 +95,7 @@ def observe():
     credentials = read(spot / "credentials.json")["exchange"]
     folder = STATE / ("spot-observe-" + datetime.now(UTC).strftime("%Y%m%dT%H%M%S%fZ"))
     folder.mkdir(mode=0o700)
-    with requests.Session() as session:
+    with GuardedSession() as session:
         session.auth = lambda request: request
         session.trust_env = False
         proxy = config["exchange"]["ccxt_config"]["httpsProxy"]
