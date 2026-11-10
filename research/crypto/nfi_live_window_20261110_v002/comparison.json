@@ -1,0 +1,181 @@
+{
+  "completed_at_utc": "2026-11-10T10:01:42.772776+00:00",
+  "start_utc": "2026-11-10 07:50:00+00:00",
+  "end_exclusive_utc": "2026-11-10 09:50:00+00:00",
+  "start_shanghai": "2026-11-10 15:50:00+08:00",
+  "end_exclusive_shanghai": "2026-11-10 17:50:00+08:00",
+  "primary_engine": "freqtrade.optimize.backtesting.Backtesting.start",
+  "accounts": {
+    "spot": {
+      "pairs": 36,
+      "initial_usdt": 100,
+      "stake_budget_usdt": 99,
+      "max_open_trades": 6,
+      "leverage": 1,
+      "native": {
+        "raw_entry_signals": 1,
+        "signal_events": [
+          {
+            "pair": "DOT/USDT",
+            "side": "short",
+            "signal_candle": "2026-11-10 09:05:00+00:00",
+            "next_open": "2026-11-10 09:10:00+00:00",
+            "tag": "562 ",
+            "exit_long": 0,
+            "exit_short": 0
+          }
+        ],
+        "entry_attempts": 0,
+        "entry_confirmations": [],
+        "trades": [],
+        "trade_count": 0,
+        "native_net_return_pct": 0.0,
+        "native_execution_clocks_per_pair": 24,
+        "inspected_indicators_nonmissing": true,
+        "archive": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_live_window_20261110_v002/spot/native-run-verified/native-results/backtest-result-2026-11-10_09-58-11.zip",
+          "sha256": "c979a52881ad238b05e69010eb64b12759a33a6dc3846fc252e085aed51d996a"
+        },
+        "registration": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_live_window_20261110_v002/spot/native-run-verified/registration.json",
+          "sha256": "674a9648aa4c1ee3625f1e42b77e8c6b3d1361ae07625591a7463da16d641475"
+        },
+        "result": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_live_window_20261110_v002/spot/native-run-verified/result.json",
+          "sha256": "6017ecaf954cb3a5e0525354e61a156e02e730350cbaac4bddb6312e3b8b3257"
+        }
+      },
+      "live": {
+        "window_trades": [],
+        "window_orders": [],
+        "window_trade_count": 0,
+        "window_order_count": 0,
+        "window_filled_order_count": 0,
+        "pid": 21803,
+        "process_alive": true,
+        "config_unchanged": true,
+        "source": "GET-free read-only native SQLite ledger, not independent broker-fill audit"
+      }
+    },
+    "futures": {
+      "pairs": 80,
+      "initial_usdt": 100,
+      "stake_budget_usdt": 99,
+      "max_open_trades": 12,
+      "leverage": 3,
+      "native": {
+        "raw_entry_signals": 2,
+        "signal_events": [
+          {
+            "pair": "DOT/USDT:USDT",
+            "side": "short",
+            "signal_candle": "2026-11-10 09:00:00+00:00",
+            "next_open": "2026-11-10 09:05:00+00:00",
+            "tag": "562 ",
+            "exit_long": 0,
+            "exit_short": 0
+          },
+          {
+            "pair": "DOT/USDT:USDT",
+            "side": "short",
+            "signal_candle": "2026-11-10 09:05:00+00:00",
+            "next_open": "2026-11-10 09:10:00+00:00",
+            "tag": "562 ",
+            "exit_long": 0,
+            "exit_short": 0
+          }
+        ],
+        "entry_attempts": 1,
+        "entry_confirmations": [
+          {
+            "pair": "DOT/USDT:USDT",
+            "time": "2026-11-10 09:05:00+00:00",
+            "accepted": true,
+            "tag": "562 "
+          }
+        ],
+        "trades": [
+          {
+            "pair": "DOT/USDT:USDT",
+            "is_short": true,
+            "open_date": "2026-11-10 09:05:00+00:00",
+            "close_date": "2026-11-10 09:45:00+00:00",
+            "open_rate": 0.8501,
+            "close_rate": 0.8524,
+            "amount": 7.2,
+            "stake_amount": 2.04024,
+            "leverage": 3.0,
+            "enter_tag": "562 ",
+            "exit_reason": "force_exit",
+            "profit_abs": -0.0263664
+          }
+        ],
+        "trade_count": 1,
+        "native_net_return_pct": -0.026366400000000005,
+        "native_execution_clocks_per_pair": 24,
+        "inspected_indicators_nonmissing": true,
+        "archive": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_live_window_20261110_v002/futures/native-run-verified/native-results/backtest-result-2026-11-10_10-01-35.zip",
+          "sha256": "9518f912861df4f9cf1fda66b6c3005f3c028fae6e6fa69507375371aa48d01c"
+        },
+        "registration": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_live_window_20261110_v002/futures/native-run-verified/registration.json",
+          "sha256": "6c1ee9d54050cf6716fec81001b24b5919322b1dbf6b59dd38a534ede3b2d9b4"
+        },
+        "result": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_live_window_20261110_v002/futures/native-run-verified/result.json",
+          "sha256": "92b259e5e481581d1730a3aed601880d47339a93b9caa9cce940434bcb49e8ac"
+        }
+      },
+      "live": {
+        "window_trades": [
+          {
+            "id": 1,
+            "pair": "DOT/USDT:USDT",
+            "is_short": 1,
+            "is_open": 1,
+            "open_date": "2026-11-10 09:05:59.465975",
+            "close_date": null,
+            "open_rate": 0.8495,
+            "amount": 8.8,
+            "stake_amount": 2.4918666666666667,
+            "leverage": 3.0,
+            "enter_tag": "562 "
+          }
+        ],
+        "window_orders": [
+          {
+            "id": 1,
+            "ft_trade_id": 1,
+            "ft_pair": "DOT/USDT:USDT",
+            "ft_order_side": "sell",
+            "order_type": "limit",
+            "status": "closed",
+            "amount": 8.8,
+            "filled": 8.8,
+            "average": 0.8495,
+            "order_date": "2026-11-10 09:05:59.758000",
+            "order_filled_date": "2026-11-10 09:05:59.758000"
+          }
+        ],
+        "window_trade_count": 1,
+        "window_order_count": 1,
+        "window_filled_order_count": 1,
+        "pid": 21804,
+        "process_alive": true,
+        "config_unchanged": true,
+        "source": "GET-free read-only native SQLite ledger, not independent broker-fill audit"
+      }
+    }
+  },
+  "limits": [
+    "5m public OHLCV replay cannot reproduce intrabar execution time or order-book price",
+    "Modeled13bps spot/8bps futures per side are not certified live commission",
+    "Native force_exit at the window end is hypothetical, not a live exit",
+    "Live ledger/logs do not replace an authenticated broker fill reconciliation",
+    "This short window cannot establish profitability, drawdown robustness or win rate"
+  ],
+  "live_restarts": 0,
+  "orders_forced": 0,
+  "paper_workers_started": 0
+}

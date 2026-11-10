@@ -1,0 +1,19 @@
+{
+  "method": "Actual native Binance.get_min_pair_stake_amount, offline diagnostic only",
+  "backtest_initial_stoploss_argument": -0.05,
+  "live_initial_stoploss_argument": -0.99,
+  "backtest_min_stake_usdt": 1.842105263157895,
+  "live_min_stake_usdt": 2.5,
+  "market_min_notional_usdt": 5,
+  "leverage": 3,
+  "backtest_actual_stake_usdt": 2.04024,
+  "live_actual_stake_usdt": 2.4918666666666667,
+  "source_sha256": {
+    "freqtrade/optimize/backtesting.py": "1d45e0b34ddf30813bbdf51a20be6e8345a65b668f373f8ce2fbb6e93271b234",
+    "freqtrade/freqtradebot.py": "41b94e988989c773e02a00030a530866e4e5be0a31fd0096decc075ce4e91b74",
+    "freqtrade/exchange/exchange.py": "c57a33fe556ab061abeafefd38c6cd3810cf8f6064ab0852cc5e464cfdae40f1",
+    "research/crypto/nfi_live_window_20261110_v002/allocation_probe.py": "c88a402d91622b82ba927713ef8c5636d7617277c96d82a16f1a113774f9f797"
+  },
+  "conclusion": "Native initial minimum-stake reserve differs between backtest and live; no fix or parameter change applied",
+  "simulation_returns_recomputed": false
+}
