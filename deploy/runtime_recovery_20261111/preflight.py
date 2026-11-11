@@ -12,6 +12,12 @@ from deploy.nfi80_selected.selector import read, save
 from freqtrade.exchange.request_guard import GuardedSession
 
 
+def account_proxies(config):
+    """Use the same HTTPS transport as this account's native exchange client."""
+    proxy = config["exchange"].get("ccxt_config", {}).get("httpsProxy")
+    return {"http": proxy, "https": proxy} if proxy else {}
+
+
 def compare_positions(market, trades, account):
     expected = {}
     for trade in trades:
@@ -45,8 +51,7 @@ def observe(market, folder):
     with GuardedSession(max_wait=15) as session:
         session.trust_env = False
         session.auth = lambda request: request
-        proxy = config["exchange"]["ccxt_config"]["httpsProxy"]
-        session.proxies.update(http=proxy, https=proxy)
+        session.proxies.update(account_proxies(config))
 
         def get(path):
             # Each attempt gets a fresh server clock/signature and shared quota.

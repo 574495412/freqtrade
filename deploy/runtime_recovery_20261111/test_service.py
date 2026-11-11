@@ -3,7 +3,7 @@
 
 import pytest
 
-from deploy.runtime_recovery_20261111.preflight import compare_positions
+from deploy.runtime_recovery_20261111.preflight import account_proxies, compare_positions
 from deploy.runtime_recovery_20261111.service import definition
 
 
@@ -15,6 +15,16 @@ def test_live_definitions_restart_failed_workers_and_use_existing_native_entrypo
         assert value["ProgramArguments"][-1] == market
         assert "manual" not in value["ProgramArguments"]
         assert value["Label"] == "io.freqtrade.live." + market
+
+
+def test_account_reconciliation_uses_native_account_transport_on_both_hosts():
+    assert account_proxies({"exchange": {"ccxt_config": {}}}) == {}
+    assert account_proxies({"exchange": {}}) == {}
+    proxy = "http://127.0.0.1:7897"
+    assert account_proxies({"exchange": {"ccxt_config": {"httpsProxy": proxy}}}) == {
+        "http": proxy,
+        "https": proxy,
+    }
 
 
 def test_matching_live_short_reconciles_and_changed_position_blocks_restore():
