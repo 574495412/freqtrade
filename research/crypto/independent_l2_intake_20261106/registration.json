@@ -1,0 +1,50 @@
+{
+  "registered_at_utc": "2026-11-06T15:49:23.328843+00:00",
+  "base_commit": "2dc3dc3e1",
+  "question": "Can independent public archives establish causal BBO and complete two-sided 20 bps depth?",
+  "capture_script_sha256": "0a28204c6063fb4b280b86bca0a993d1fec4e5e7c140ed0711dbec2ce3e46869",
+  "candlefeed_sample": {
+    "symbol": "BTCUSDT",
+    "day": "2026-10-01",
+    "files": [
+      "snapshot.parquet",
+      "depth/00.parquet"
+    ],
+    "frozen_window": null
+  },
+  "huggingface_revision": "b705fcb01af082a65d59a8fcd5bcd335a9ca9813",
+  "huggingface_samples": [
+    {
+      "symbol": "DYDXUSDT",
+      "day": "2026-08-31",
+      "window": "L"
+    },
+    {
+      "symbol": "DYDXUSDT",
+      "day": "2026-11-01",
+      "window": "S"
+    },
+    {
+      "symbol": "DOTUSDT",
+      "day": "2026-11-01",
+      "window": "S"
+    }
+  ],
+  "cutoffs_utc": [
+    "00:05:00",
+    "00:10:00",
+    "00:15:00",
+    "00:20:00",
+    "00:25:00",
+    "00:30:00",
+    "00:35:00",
+    "00:40:00",
+    "00:45:00",
+    "00:50:00",
+    "00:55:00"
+  ],
+  "rule": "Match exact source SHA-256, preserve source clocks, require original snapshot or proven boundary, require Binance sequence evidence before admission.",
+  "scope": "No credentials, no private data, no trades, no account. Vendor bytes stay in isolated storage.",
+  "supersedes_sha256": "bbf1be6141be7622aa08e0bb61f10f70592dc19b2608fd4108beb60a3385b3f8",
+  "amendment": "Use publisher size field confirmed from anonymous listing. Preserve initial public probe files in v001."
+}
