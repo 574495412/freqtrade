@@ -1,6 +1,7 @@
 """Linux preparation preserves the live financial and single-worker contracts."""
 # ruff: noqa: S101
 
+import sqlite3
 from pathlib import Path
 
 import pytest
@@ -62,3 +63,53 @@ def test_systemd_uses_original_locked_worker_and_failure_restart():
     assert "User=freqtrade" in service and "Restart=on-failure" in service
     assert "UMask=0077" in service
     assert "ExecStartPost=" not in service
+
+
+@pytest.mark.parametrize("name", ["spot", "futures", "notifications", "selector"])
+def test_ecs_workload_is_bounded_and_restart_storms_stop(name):
+    service = unit(name, "example.module")
+    assert "MemoryMax=" in service and "MemorySwapMax=" in service
+    assert "CPUQuota=" in service and "TasksMax=64" in service
+    assert "StartLimitIntervalSec=900" in service and "StartLimitBurst=3" in service
+    assert "RestartSec=180" in service and "OOMPolicy=stop" in service
+    assert "Environment=OPENBLAS_NUM_THREADS=1" in service
+
+
+def test_online_protection_preserves_budget_and_never_starts_worker(tmp_path, monkeypatch):
+    from deploy.aliyun_20261111 import systemd
+
+    state = tmp_path / "user_data/deployment"
+    state.mkdir(parents=True)
+    units = tmp_path / "units"
+    units.mkdir()
+    monkeypatch.chdir(tmp_path)
+    monkeypatch.setattr(systemd, "REMOTE_ROOT", tmp_path)
+    monkeypatch.setattr(systemd, "SYSTEMD_DIRECTORY", units)
+    monkeypatch.setattr(systemd.os, "geteuid", lambda: 0)
+    calls = []
+    monkeypatch.setattr(systemd.subprocess, "run", lambda args, **kwargs: calls.append(args))
+    database = state / "binance-request-guard.sqlite"
+    with sqlite3.connect(database) as conn:
+        conn.executescript("""
+            CREATE TABLE budget(cooldown REAL,strikes INTEGER);
+            INSERT INTO budget VALUES(2000000000,7);
+            CREATE TABLE leases(ticket TEXT,expires REAL);
+            INSERT INTO leases VALUES('active',2000000000);
+            CREATE TABLE public_cache(key TEXT,value TEXT,expires REAL,owner TEXT,lease_until REAL);
+            INSERT INTO public_cache VALUES('keep','[]',2000000000,'active',2000000000);
+        """)
+    before = database.read_bytes()
+    old = units / "freqtrade-live-spot.service"
+    old.write_text("previous unit")
+    systemd.apply()
+    with sqlite3.connect(database) as conn:
+        assert conn.execute("SELECT * FROM budget").fetchall() == [(2000000000, 7)]
+        assert conn.execute("SELECT * FROM leases").fetchall() == [('active', 2000000000)]
+        assert conn.execute("SELECT * FROM public_cache").fetchall() == [
+            ('keep', '[]', 2000000000, 'active', 2000000000)
+        ]
+        assert conn.execute("PRAGMA integrity_check").fetchone()[0] == "ok"
+    assert database.read_bytes() != before  # An additive schema migration occurred.
+    assert all("start" not in c and "restart" not in c and "stop" not in c for c in calls)
+    assert any(c[:2] == ["systemd-analyze", "verify"] for c in calls)
+    assert next(state.glob("resource-protection-*/*.before")).read_text() == "previous unit"

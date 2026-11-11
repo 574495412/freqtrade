@@ -4,6 +4,7 @@ import copy
 import os
 from pathlib import Path
 
+from deploy.aliyun_20261111.systemd import unit
 from deploy.mainnet_100_20261109.capital import wallet_class
 from deploy.mainnet_100_20261109.manual import verify
 from deploy.mainnet_100_20261109.prepare import ROOT, STATE
@@ -39,38 +40,6 @@ def linux_config(config, source=ROOT, target=REMOTE_ROOT):
         for key in ("httpsProxy", "httpProxy", "socksProxy", "wsProxy", "wssProxy"):
             options.pop(key, None)
     return result
-
-
-def unit(name, module, args="", root=REMOTE_ROOT):
-    selector = name == "selector"
-    extra = f" {root}/deploy/nfi80_selected" if selector else ""
-    return f"""[Unit]
-Description=Existing Freqtrade live {name}
-Wants=network-online.target
-After=network-online.target
-
-[Service]
-Type=simple
-User=freqtrade
-Group=freqtrade
-WorkingDirectory={root}
-Environment=PYTHONUNBUFFERED=1
-Environment=PYTHONDONTWRITEBYTECODE=1
-Environment=TZ=Asia/Shanghai
-ExecStart={root}/.venv-paper/bin/python -B -m {module} {args}
-Restart={"no" if selector else "on-failure"}
-RestartSec=60
-TimeoutStopSec=60
-UMask=0077
-NoNewPrivileges=true
-PrivateTmp=true
-ProtectSystem=strict
-ProtectHome=true
-ReadWritePaths={root}/user_data{extra}
-
-[Install]
-WantedBy=multi-user.target
-"""
 
 
 def prepare(destination, remote_root=REMOTE_ROOT):

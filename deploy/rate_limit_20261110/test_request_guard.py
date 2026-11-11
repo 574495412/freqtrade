@@ -86,6 +86,31 @@ def test_public_cache_single_flight_and_no_private_price_or_order_cache(tmp_path
     assert cache_identity("klines", "fapiPublic", "GET", {"apiKey": "secret"}) == (None, 0)
 
 
+def test_cache_cleanup_uses_index_and_preserves_live_leases_and_ban(tmp_path):
+    guard = SharedRequestGuard(tmp_path / "g.sqlite")
+    now = time.time()
+    with guard.connect() as conn:
+        conn.execute("UPDATE budget SET cooldown=?,strikes=2 WHERE id=1", (now + 600,))
+        conn.executemany(
+            "INSERT INTO public_cache VALUES(?,?,?,?,?)",
+            [
+                ("expired", "[]", now - 7200, None, 0),
+                ("leased", "[]", now - 7200, "other", now + 600),
+                ("fresh", "[]", now + 600, None, 0),
+            ],
+        )
+        plan = conn.execute(
+            "EXPLAIN QUERY PLAN DELETE FROM public_cache WHERE expires<? AND lease_until<?",
+            (now - 3600, now),
+        ).fetchall()
+        assert any("USING INDEX" in row[3] for row in plan)
+    before = guard.status()
+    guard.cache_finish("absent", "unused", None, 0)
+    with guard.connect() as conn:
+        assert {r[0] for r in conn.execute("SELECT key FROM public_cache")} == {"leased", "fresh"}
+    assert guard.status() == before
+
+
 def test_sync_installed_ccxt_signs_after_shared_admission_and_uses_public_cache(tmp_path):
     guard = SharedRequestGuard(tmp_path / "g.sqlite")
     client = ccxt.binance({"enableRateLimit": True})

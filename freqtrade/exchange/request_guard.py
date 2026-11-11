@@ -121,6 +121,8 @@ class SharedRequestGuard:
                 CREATE TABLE IF NOT EXISTS public_cache(
                     key TEXT PRIMARY KEY,value TEXT,expires REAL NOT NULL DEFAULT 0,
                     owner TEXT,lease_until REAL NOT NULL DEFAULT 0);
+                CREATE INDEX IF NOT EXISTS public_cache_expiry
+                    ON public_cache(expires,lease_until);
             """)
 
     @contextmanager

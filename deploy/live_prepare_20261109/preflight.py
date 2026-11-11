@@ -12,8 +12,6 @@ from urllib.parse import urlencode
 
 import requests
 
-from freqtrade.exchange.request_guard import GuardedSession
-
 
 ROOT = Path(__file__).resolve().parents[2]
 STATE = ROOT / "user_data/deployment/live-prepare-20261109"
@@ -51,6 +49,10 @@ def save(path, value):
 
 
 def main():
+    # The relay imports only paths and private_env. Keep the exchange engine out
+    # of that long-running, read-only notification process.
+    from freqtrade.exchange.request_guard import GuardedSession
+
     os.umask(0o077)
     STATE.mkdir(exist_ok=True)
     credential = private_env(ROOT / "user_data/deployment/.env.mainnet")

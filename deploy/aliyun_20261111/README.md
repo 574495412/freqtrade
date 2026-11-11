@@ -1,6 +1,6 @@
 # Alibaba Cloud ECS migration preparation
 
-Status: **GIT SOURCE AND PYTHON ENVIRONMENT STAGED ON ECS; LIVE CUTOVER PENDING**.
+Status: **GIT SOURCE, CREDENTIALS AND FINAL LEDGERS MIGRATED; POST-REBOOT RESOURCE AND LIVE ACCEPTANCE PENDING**.
 
 The user requested migration of the existing Freqtrade live services to the ECS
 instance visible in Alibaba Cloud Client, `i-j6c21s3zs1jgm5rpgg5l`, public address
@@ -28,8 +28,12 @@ The locked requirements initially failed because the repository's rolling
 `exclude-newer` setting excluded an exact pinned release. Installation with
 `uv --no-config pip install -r deploy/requirements.lock` retained every runtime
 version pin and succeeded: 95 packages passed `uv pip check`, with CCXT4.5.89.
-Trading credentials and account ledgers have not yet been installed on ECS;
-local live workers remain running pending the authenticated cutover.
+Both authenticated account checks subsequently passed from ECS, and the final
+ledgers, credentials and persistent request-protection state were migrated with
+user authorization. Local live workers and notification/selector agents are
+unloaded and persistently disabled. Remote units started, but resource pressure
+interrupted acceptance; the user rebooted the instance. Fresh native heartbeats,
+current account reconciliation and notification acceptance remain required.
 
 ## Candidate
 
@@ -106,3 +110,37 @@ funding mode instead of a historical fixed cap.
 If staging fails, leave local execution running. If failure occurs after the
 cutover, stop remote workers and reconcile their latest ledgers before restoring
 local execution; never restart from a stale pre-cutover copy.
+
+## ECS resource protection
+
+The observed host has two vCPUs and 1608 MiB RAM plus 1024 MiB swap. Post-reboot
+checks showed substantial memory/I/O waiting, without a confirmed previous OOM
+record. CPU saturation and an OOM crash are not established.
+
+The shared native request guard now indexes `(expires, lease_until)` so public
+cache cleanup does not scan response payloads on every cache write. The index is
+additive: budget, cooldown, active leases and account ledgers remain intact. The
+notification daemon loads only its read-only dependencies; exchange/numerical
+imports are delayed until an authenticated preflight is explicitly invoked.
+
+`python3 -m deploy.aliyun_20261111.systemd --apply`, run as root in the existing
+Git checkout, verifies and backs up unit definitions, installs resource limits,
+and adds the index for running workers. It never starts or restarts a trader.
+Stop the old notification daemon before applying and restart it afterward so it
+uses the lower-memory import path. Units allow three starts per 15 minutes with
+180-second restart delay, single-threaded numerical libraries and bounded CPU,
+memory, swap and task counts. The selector has its own lower resource budget.
+
+| Service | MemoryHigh / MemoryMax | SwapMax | CPU quota |
+| --- | --- | --- | --- |
+| Spot | 600 / 650 MiB | 256 MiB | 60% of one CPU |
+| Futures | 550 / 600 MiB | 256 MiB | 60% of one CPU |
+| Notifications | 80 / 120 MiB | 64 MiB | 10% of one CPU |
+| Selector | 200 / 300 MiB | 128 MiB | 20% of one CPU |
+
+These are host-protection limits, not proof that both strategy workloads fit.
+If native cycles cannot finish within them, preserve/reconcile the latest account
+state and stop the affected service rather than entering an OOM/restart loop.
+Stagger any necessary worker restarts and verify fresh heartbeats and memory
+pressure before starting another heavy process. Do not silently shrink the
+strategy universe or change financial rules to fit the host.
