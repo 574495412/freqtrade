@@ -1,0 +1,116 @@
+{
+  "checked_at_utc": "2026-11-11T13:47:50.451976+00:00",
+  "code_commit": "4e59cced442ffabb9b4f1530bf0dbeda301c10b1",
+  "source_validation": "PASS",
+  "prior_validated_tests": 126,
+  "source_changes_since_validation": false,
+  "services": {
+    "spot": {
+      "pid": 66080,
+      "uptime_hours": 9.97,
+      "state": "RUNNING",
+      "heartbeat_age_seconds": 39.92,
+      "faults": {},
+      "ledger_integrity": "ok",
+      "ledger": {
+        "trades": 0,
+        "open_trades": 0,
+        "closed_trades": 0,
+        "wins": 0,
+        "closed_pnl": 0,
+        "orders": 0,
+        "filled_orders": 0,
+        "open_orders": 0,
+        "additions": 0,
+        "positions": []
+      },
+      "recent_native_trades": [],
+      "exchange": {
+        "checked_at_utc": "2026-11-11T13:48:05.275843+00:00",
+        "market": "spot",
+        "positions_reconciled": {},
+        "native_open_trade_count": 0,
+        "exchange_open_order_count": 1,
+        "unowned_spot_orders_preserved": 1,
+        "methods": [
+          "GET"
+        ],
+        "orders_submitted": 0,
+        "orders_cancelled": 0
+      },
+      "installed_launchd_definition_verified": true,
+      "capital_contract_config_unchanged": true
+    },
+    "futures": {
+      "pid": 66014,
+      "uptime_hours": 9.99,
+      "state": "RUNNING",
+      "heartbeat_age_seconds": 3.17,
+      "faults": {},
+      "ledger_integrity": "ok",
+      "ledger": {
+        "trades": 1,
+        "open_trades": 0,
+        "closed_trades": 1,
+        "wins": 1,
+        "closed_pnl": 0.01655153,
+        "orders": 2,
+        "filled_orders": 2,
+        "open_orders": 0,
+        "additions": 0,
+        "positions": []
+      },
+      "recent_native_trades": [
+        {
+          "id": 1,
+          "pair": "DOT/USDT:USDT",
+          "is_open": 0,
+          "close_date": "2026-11-11 04:32:16.316000",
+          "close_profit_abs": 0.01655153,
+          "exit_reason": "exit_profit_short_rebuy_t_0_1_m ( 562 )"
+        }
+      ],
+      "exchange": {
+        "checked_at_utc": "2026-11-11T13:48:16.735592+00:00",
+        "market": "futures",
+        "positions_reconciled": {},
+        "native_open_trade_count": 0,
+        "exchange_open_order_count": 0,
+        "unowned_spot_orders_preserved": 0,
+        "methods": [
+          "GET"
+        ],
+        "orders_submitted": 0,
+        "orders_cancelled": 0
+      },
+      "installed_launchd_definition_verified": true,
+      "capital_contract_config_unchanged": true
+    }
+  },
+  "workers_started": 0,
+  "workers_restarted": 0,
+  "orders_forced": 0,
+  "orders_cancelled": 0,
+  "transfers": 0,
+  "private_evidence": "/Users/chrise/GitHub/freqtrade/user_data/deployment/mainnet-100-20261109/release-readiness-20261111T134750Z",
+  "notifications": {
+    "status": "running",
+    "version": "crypto-notifications-v2",
+    "outbox": {
+      "sent": 132
+    },
+    "monitor": {
+      "last_check": 1794404894.093122,
+      "error": null
+    }
+  },
+  "shared_guard": {
+    "transports": 94412,
+    "responses": 94397,
+    "strikes": 1,
+    "cache_hits": 732
+  },
+  "cooldown_remaining_seconds": 0,
+  "status": "EXISTING_LIVE_RELEASE_VERIFIED",
+  "strategy_production_eligibility": "unchanged; operational readiness is not research promotion"
+}
