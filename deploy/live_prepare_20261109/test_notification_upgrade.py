@@ -167,6 +167,25 @@ def test_old_process_errors_are_not_replayed_as_current_faults(tmp_path):
     assert not result["faults"] and result["heartbeat"] == now - 10
 
 
+@pytest.mark.parametrize(
+    ("message", "failed"),
+    [
+        ("Using 2 calls to get OHLCV. This can result in slower operations for the bot.", False),
+        ("Could not fetch historical candle (OHLCV) data due to RequestTimeout", True),
+    ],
+)
+def test_startup_pagination_is_not_a_failed_candle_request(tmp_path, message, failed):
+    now = datetime(2026, 11, 10, 10, 30, tzinfo=TZ).timestamp()
+    path = tmp_path / "log"
+    path.write_text(
+        "2026-11-10 10:29:59,000 - worker - INFO - Bot heartbeat. PID=42, state='RUNNING'\n"
+        f"2026-11-10 10:29:59,001 - exchange - WARNING - {message}\n"
+    )
+    result = log_snapshot(path, now, 42, now - 100, {})
+    assert ("candles" in result["faults"]) is failed
+    assert result["native_state"] == "RUNNING"
+
+
 def test_unreadable_account_is_unknown_not_zero(tmp_path):
     result = observe("spot", 100, root=tmp_path)
     assert result["ledger"] is None

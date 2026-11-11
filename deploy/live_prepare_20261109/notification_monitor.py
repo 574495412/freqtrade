@@ -100,7 +100,9 @@ def log_snapshot(path, now, pid, started, prior):  # noqa: C901 -- Explicit log 
             faults["market_load"] = "交易所市场元数据加载失败"
         elif (" - WARNING - " in line or " - ERROR - " in line) and (
             "candle" in lower or "ohlcv" in lower
-        ):
+        ) and not re.search(r" - WARNING - Using [1-9]\d* calls to get OHLCV\. ", line):
+            # Upstream validates startup history with this performance warning;
+            # multiple pages are expected and do not establish a data failure.
             faults["candles"] = "近期K线请求失败或超时，不能确认全部币种行情新鲜"
         elif " - ERROR - " in line or " - CRITICAL - " in line:
             faults["engine_error"] = "引擎近期记录错误，需检查本地运行日志"
