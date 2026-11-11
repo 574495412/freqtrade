@@ -1,6 +1,6 @@
 # Alibaba Cloud ECS migration preparation
 
-Status: **GIT SOURCE, CREDENTIALS AND FINAL LEDGERS MIGRATED; POST-REBOOT RESOURCE AND LIVE ACCEPTANCE PENDING**.
+Status: **ECS LIVE RUNTIME ACCEPTED AT 2026-11-11 17:54 UTC**.
 
 The user requested migration of the existing Freqtrade live services to the ECS
 instance visible in Alibaba Cloud Client, `i-j6c21s3zs1jgm5rpgg5l`, public address
@@ -32,8 +32,9 @@ Both authenticated account checks subsequently passed from ECS, and the final
 ledgers, credentials and persistent request-protection state were migrated with
 user authorization. Local live workers and notification/selector agents are
 unloaded and persistently disabled. Remote units started, but resource pressure
-interrupted acceptance; the user rebooted the instance. Fresh native heartbeats,
-current account reconciliation and notification acceptance remain required.
+interrupted acceptance; the user rebooted the instance. The subsequent recovery passed fresh native heartbeats, authenticated account
+reconciliation, notification delivery and the daily-input timer checks. The
+private runtime receipt records the exact observation time and service state.
 
 ## Candidate
 
@@ -163,3 +164,21 @@ loads no exchange, pandas or NumPy modules. Changed policy, UTC day, expiry or
 pair count falls through to the existing fully verified native input publisher.
 The trading universe and source/data checks remain intact. This avoids loading
 the full trading dependency graph on every five-minute timer tick.
+
+## Accepted runtime observation
+
+Deployment code `ff3ed3ee778743c33168490f71e739cff4df9446` passed operational
+acceptance on 2026-11-11 at 17:54 UTC. Both native workers reported fresh RUNNING
+heartbeats with no current faults; the notification relay passed its health check
+and received successful upstream receipts for natural events. Exactly one worker
+owned each account, the daily-input timer completed successfully, and the local
+live LaunchAgents remained unloaded and persistently disabled.
+
+The final source/notification/cache/selector checks passed 74 offline tests and
+Ruff. Authenticated reconciliation and detailed runtime/resource evidence remain
+private under `user_data/deployment/`; they are not published in Git. The earlier
+resource-pressure acceptance attempt and its rejected review were retained.
+
+This is a point-in-time runtime observation. The small host still has limited RAM
+headroom. Resource limits do not resolve the existing research audit findings or
+establish future availability, strategy profitability or live/backtest parity.
