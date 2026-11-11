@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PYTHONDONTWRITEBYTECODE</key>
+		<string>1</string>
+		<key>PYTHONUNBUFFERED</key>
+		<string>1</string>
+	</dict>
+	<key>ExitTimeOut</key>
+	<integer>60</integer>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>Label</key>
+	<string>io.freqtrade.live.futures</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/Users/chrise/GitHub/freqtrade/.venv-paper/bin/python</string>
+		<string>-B</string>
+		<string>-m</string>
+		<string>deploy.runtime_recovery_20261111.service</string>
+		<string>futures</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/Users/chrise/GitHub/freqtrade/user_data/deployment/mainnet-100-20261109/futures/service.stderr.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/chrise/GitHub/freqtrade/user_data/deployment/mainnet-100-20261109/futures/service.stdout.log</string>
+	<key>ThrottleInterval</key>
+	<integer>60</integer>
+	<key>WorkingDirectory</key>
+	<string>/Users/chrise/GitHub/freqtrade</string>
+</dict>
+</plist>

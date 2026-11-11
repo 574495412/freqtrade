@@ -1,9 +1,11 @@
 # Standalone Freqtrade paper deployment
 
-**Current operations, 2026-11-10:** all crypto paper trading is stopped. Seven
+**Current operations, 2026-11-11:** all crypto paper trading is stopped. Seven
 workers were stopped and eleven paper autostart/scheduled jobs were persistently
 disabled. Only the existing spot/futures live workers, notifications and a
-live-only daily-universe input publisher remain. See
+live-only daily-universe input publisher remain. The two existing live workers
+now use launchd supervision and bounded storage/GET recovery; see
+[runtime recovery](runtime_recovery_20261111/README.md). See
 [live-only shutdown evidence](live_only_20261110/README.md). Do not automatically
 restart the historical paper services below without a new user request.
 

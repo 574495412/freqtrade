@@ -91,6 +91,7 @@ def worker(market):
     folder = STATE / market
     lock = os.open(folder / "worker.lock", os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW, 0o600)
     fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    save(folder / "worker.pid", {"pid": os.getpid()})
     native_bot.Wallets = CappedWallets
     overlay = folder / "running.private.json"
     save(overlay, {"initial_state": "running"})

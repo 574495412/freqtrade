@@ -245,7 +245,7 @@ def test_ccxt_internal_retries_cannot_bypass_shared_admission(tmp_path):
     install(client, sync=True, guard=guard)
     with pytest.raises(ccxt.RequestTimeout):
         client.fapiPublicGetTime({"maxRetriesOnFailure": 3})
-    assert len(calls) == 1 and guard.status()["transports"] == 1
+    assert len(calls) == 3 and guard.status()["transports"] == 3
 
 
 def test_auxiliary_418_response_updates_same_shared_cooldown(tmp_path, monkeypatch):

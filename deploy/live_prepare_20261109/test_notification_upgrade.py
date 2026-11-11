@@ -197,7 +197,14 @@ def test_remote_pairlist_is_read_from_native_snapshot_and_expiry_checked(tmp_pat
         pair_count(config, valid)
 
 
-def test_alive_worker_with_stale_heartbeat_is_not_healthy(tmp_path, monkeypatch):
+@pytest.mark.parametrize(
+    "command",
+    [
+        ["python", "--worker", "spot"],
+        ["python", "-B", "-m", "deploy.runtime_recovery_20261111.service", "spot"],
+    ],
+)
+def test_alive_worker_with_stale_heartbeat_is_not_healthy(tmp_path, monkeypatch, command):
     path = tmp_path / "spot"
     path.mkdir()
     (path / "worker.pid").write_text('{"pid":42}')
@@ -206,7 +213,7 @@ def test_alive_worker_with_stale_heartbeat_is_not_healthy(tmp_path, monkeypatch)
 
     class Process:
         def cmdline(self):
-            return ["python", "--worker", "spot"]
+            return command
 
         def cwd(self):
             return str(ROOT)

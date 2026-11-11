@@ -14,9 +14,14 @@
     "pyproject.toml": "37ed53892173ef61e35afd66fdc7f1b359cb0ba2cd81a3579183c08ccdc1c4a3",
     "deploy/local_proxy.py": "34833344f8d427f72af191e597119ee737b4ad910b6dc8a8eef9d2a40bbeb577",
     "freqtrade/exchange/exchange.py": "c57a33fe556ab061abeafefd38c6cd3810cf8f6064ab0852cc5e464cfdae40f1",
-    "freqtrade/exchange/request_guard.py": "cd33624253e02f212a5dfd07861eae80ee919954814f9f3cecc07079e5118e3e",
+    "freqtrade/exchange/request_guard.py": "9c5a28cc510defc06098e33d5c977f1cba6fe6249b77f7ada3913c3f214dd63f",
     "deploy/launch.py": "74552b67f32bdc70c10a8b0de4a5b229980467666962870eb9a94a1dd9582a6e",
-    "deploy/rate_limit_20261110/policy.json": "af19e5119989710cf787acc7cf9abf16a5ddb67969291654d10057dbba217e31"
+    "deploy/rate_limit_20261110/policy.json": "af19e5119989710cf787acc7cf9abf16a5ddb67969291654d10057dbba217e31",
+    "deploy/runtime_recovery_20261111/service.py": "6e46ec47107318e9db75657f0a3dd33e62d5a8f6a0747d379ab6b1bc42eb0afc",
+    "deploy/runtime_recovery_20261111/preflight.py": "79ddaad0f631eec4ebd9de7b468376d580d8ae409a05069a4e946ed89e542793",
+    "deploy/runtime_recovery_20261111/io.freqtrade.live.spot.plist": "4e6c2c0eca4507d8c55882a97f95d268fcac446d556d73b64ec4460439654f72",
+    "deploy/runtime_recovery_20261111/io.freqtrade.live.futures.plist": "78c6c26f564ec7fb87971ae32d86a4f9126b432c4e779952df52c42b50530b17",
+    "deploy/live_prepare_20261109/notification_monitor.py": "076932b63824c91007429b4a6064fc4608df20cd8bcf64ef088a028f67404645"
   },
   "capital_per_market_usdt": 1000,
   "markets": [
@@ -49,5 +54,13 @@
     "shared_requests_per_minute": 180,
     "max_in_flight": 4,
     "seeded_cooldown_until_utc": "2026-11-10T04:38:58.063000+00:00"
+  },
+  "runtime_recovery": {
+    "date_utc": "2026-11-11T03:48:10.800668+00:00",
+    "scope": "Bounded transactional storage retries and re-signed GET retries; existing live services supervised by launchd",
+    "revision": "recovery-v1",
+    "strategy_and_account_contract_unchanged": true,
+    "evidence_directory": "deploy/runtime_recovery_20261111",
+    "upstream_worker_unchanged": true
   }
 }

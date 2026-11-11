@@ -18,6 +18,7 @@ from contextlib import contextmanager
 from contextvars import ContextVar
 from datetime import UTC, datetime
 from email.utils import parsedate_to_datetime
+from functools import wraps
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -30,6 +31,65 @@ ROOT = Path(__file__).resolve().parents[2]
 POLICY = ROOT / "user_data/deployment/binance-request-guard.json"
 PUBLIC_FAMILIES = {"public", "fapiPublic", "fapiPublicV2", "dapiPublic"}
 CACHE_PATHS = {"exchangeInfo", "klines", "markPriceKlines", "indexPriceKlines"}
+STORAGE_RETRY_DELAYS = (0.25, 0.75)
+GET_RETRY_DELAYS = (0.5, 1.0)
+
+
+class GuardStorageUnavailable(ccxt.ExchangeNotAvailable):
+    """Transient local admission failure; native Freqtrade retries without sending."""
+
+
+def retry_storage(operation):
+    """Retry a complete, rolled-back SQLite transaction, never a transport."""
+
+    @wraps(operation)
+    def wrapped(*args, **kwargs):
+        for attempt in range(len(STORAGE_RETRY_DELAYS) + 1):
+            try:
+                return operation(*args, **kwargs)
+            except sqlite3.OperationalError as error:
+                code = getattr(error, "sqlite_errorcode", 0) & 255
+                transient = code in {
+                    sqlite3.SQLITE_BUSY,
+                    sqlite3.SQLITE_LOCKED,
+                    sqlite3.SQLITE_CANTOPEN,
+                    sqlite3.SQLITE_IOERR,
+                    sqlite3.SQLITE_FULL,
+                } or str(error) in {
+                    "unable to open database file",
+                    "database is locked",
+                    "database table is locked",
+                    "disk I/O error",
+                    "database or disk is full",
+                }
+                if not transient:
+                    raise
+                if attempt == len(STORAGE_RETRY_DELAYS):
+                    raise GuardStorageUnavailable(
+                        "Shared Binance storage temporarily unavailable; admission blocked "
+                        f"({getattr(error, 'sqlite_errorname', 'SQLITE_OPERATIONAL_ERROR')})"
+                    ) from None
+                logger.warning(
+                    "Shared Binance storage unavailable in %s; transaction retry %s/%s",
+                    operation.__name__,
+                    attempt + 1,
+                    len(STORAGE_RETRY_DELAYS),
+                )
+                time.sleep(STORAGE_RETRY_DELAYS[attempt])
+
+    return wrapped
+
+
+def retry_read(error, method, attempt):
+    # Orders/cancels may already have reached Binance. Only GETs can be replayed
+    # here; native order reconciliation remains responsible for ambiguous writes.
+    return (
+        method.upper() == "GET"
+        and attempt < len(GET_RETRY_DELAYS)
+        and not isinstance(
+            error, (ccxt.DDoSProtection, ccxt.RateLimitExceeded, GuardStorageUnavailable)
+        )
+    )
 
 
 class SharedRequestGuard:
@@ -38,11 +98,17 @@ class SharedRequestGuard:
         self.weight_rate = weight_per_minute / 60
         self.request_rate = requests_per_minute / 60
         self.in_flight = in_flight
+        self.local_cooldown = 0
         if min(self.weight_rate, self.request_rate, in_flight) <= 0:
             raise ValueError("Invalid shared request budget")
         self.path.parent.mkdir(parents=True, exist_ok=True, mode=0o700)
         if self.path.is_symlink():
             raise ValueError("Shared request database may not be a symlink")
+        self.initialize()
+        self.path.chmod(0o600)
+
+    @retry_storage
+    def initialize(self):
         with self.connect() as conn:
             conn.executescript("""
                 CREATE TABLE IF NOT EXISTS budget(
@@ -56,7 +122,6 @@ class SharedRequestGuard:
                     key TEXT PRIMARY KEY,value TEXT,expires REAL NOT NULL DEFAULT 0,
                     owner TEXT,lease_until REAL NOT NULL DEFAULT 0);
             """)
-        self.path.chmod(0o600)
 
     @contextmanager
     def connect(self):
@@ -68,6 +133,7 @@ class SharedRequestGuard:
         finally:
             conn.close()
 
+    @retry_storage
     def claim(self, weight, now=None):
         """Return a ticket or a local wait duration. Never reserve a future burst."""
         now = time.time() if now is None else now
@@ -76,7 +142,9 @@ class SharedRequestGuard:
         with self.connect() as conn:
             conn.execute("BEGIN IMMEDIATE")
             row = conn.execute("SELECT * FROM budget WHERE id=1").fetchone()
-            delay = max(row["cooldown"], row["next_at"]) - now
+            if self.local_cooldown > row["cooldown"]:
+                conn.execute("UPDATE budget SET cooldown=? WHERE id=1", (self.local_cooldown,))
+            delay = max(row["cooldown"], row["next_at"], self.local_cooldown) - now
             if delay > 0:
                 return None, delay
             conn.execute("DELETE FROM leases WHERE expires<=?", (now,))
@@ -88,6 +156,7 @@ class SharedRequestGuard:
             conn.execute("UPDATE budget SET next_at=? WHERE id=1", (now + gap,))
             return ticket, 0
 
+    @retry_storage
     def release(self, ticket):
         if ticket:
             with self.connect() as conn:
@@ -110,13 +179,16 @@ class SharedRequestGuard:
                 return ticket
             await asyncio.sleep(min(delay, 30))
 
+    @retry_storage
     def block_until(self, until, reason):
+        self.local_cooldown = max(self.local_cooldown, until)
         with self.connect() as conn:
             conn.execute(
                 "UPDATE budget SET cooldown=max(cooldown,?),reason=? WHERE id=1",
                 (until, reason),
             )
 
+    @retry_storage
     def response(self, code, headers, body, now=None):
         now = time.time() if now is None else now
         headers = {str(k).lower(): str(v) for k, v in (headers or {}).items()}
@@ -148,6 +220,7 @@ class SharedRequestGuard:
         if high_weight and until == 0:
             until = (int(now // 60) + 1) * 60 + 5
             reason = "SHARED_IP_WEIGHT_HEADROOM"
+        self.local_cooldown = max(self.local_cooldown, until)
         with self.connect() as conn:
             conn.execute("UPDATE budget SET responses=responses+1 WHERE id=1")
             if until:
@@ -163,18 +236,20 @@ class SharedRequestGuard:
                 reason,
             )
 
+    @retry_storage
     def before_transport(self):
         with self.connect() as conn:
             row = conn.execute("SELECT cooldown FROM budget WHERE id=1").fetchone()
-            if row[0] > time.time():
+            if max(row[0], self.local_cooldown) > time.time():
                 # A different in-flight request may have just reported a ban.
                 # Fail before transport; next attempt waits BEFORE signing.
                 raise ccxt.DDoSProtection("Shared Binance cooldown active; no request sent")
             conn.execute("UPDATE budget SET transports=transports+1 WHERE id=1")
 
     def cooldown_delay(self):
-        return max(0, self.status()["cooldown"] - time.time())
+        return max(0, max(self.status()["cooldown"], self.local_cooldown) - time.time())
 
+    @retry_storage
     def cache_claim(self, key, owner, now):
         with self.connect() as conn:
             conn.execute("BEGIN IMMEDIATE")
@@ -192,6 +267,7 @@ class SharedRequestGuard:
             )
             return "owner", None
 
+    @retry_storage
     def cache_finish(self, key, owner, value, ttl):
         serialized = json.dumps(value) if value is not None else None
         if serialized and len(serialized) > 8_000_000:
@@ -207,6 +283,7 @@ class SharedRequestGuard:
                 (time.time() - 3600, time.time()),
             )
 
+    @retry_storage
     def status(self):
         with self.connect() as conn:
             return dict(conn.execute("SELECT * FROM budget WHERE id=1").fetchone())
@@ -283,10 +360,32 @@ def install(api, *, sync, guard=None):  # noqa: C901 -- Matching sync/async CCXT
         return max(1.0, value)
 
     def on_response(code, reason, url, method, headers, body, request_headers, request_body):
-        guard.response(code, headers, body)
+        try:
+            guard.response(code, headers, body)
+        except (GuardStorageUnavailable, sqlite3.Error):
+            # The exchange may already have accepted an order. Preserve its
+            # response instead of turning bookkeeping failure into a write retry.
+            # Local ban deadlines survive; the next admission must access SQLite.
+            logger.error("Shared Binance response bookkeeping failed; preserving exchange response")
         return original_response(
             code, reason, url, method, headers, body, request_headers, request_body
         )
+
+    def release_ticket():
+        try:
+            guard.release(ticket.get())
+        except (GuardStorageUnavailable, sqlite3.Error):
+            # Leases expire after 45s. Cleanup must not replace a received order
+            # response or mask an ambiguous write timeout.
+            logger.error("Shared Binance lease cleanup failed; lease will expire")
+        finally:
+            ticket.set(None)
+
+    def finish_cache(key, owner, value, ttl):
+        try:
+            guard.cache_finish(key, owner, value, ttl)
+        except (GuardStorageUnavailable, sqlite3.Error):
+            logger.error("Shared Binance cache write failed; fresh response remains usable")
 
     if sync:
 
@@ -321,12 +420,25 @@ def install(api, *, sync, guard=None):  # noqa: C901 -- Matching sync/async CCXT
                 transport_params = (
                     {**params, "maxRetriesOnFailure": 0} if isinstance(params, dict) else params
                 )
-                value = original_fetch2(path, family, method, transport_params, config)
-                return value
+                for attempt in range(len(GET_RETRY_DELAYS) + 1):
+                    try:
+                        value = original_fetch2(path, family, method, transport_params, config)
+                        return value
+                    except ccxt.NetworkError as error:
+                        if not retry_read(error, method, attempt):
+                            raise
+                        logger.warning(
+                            "Binance GET transport failed (%s); retry %s/%s",
+                            type(error).__name__,
+                            attempt + 1,
+                            len(GET_RETRY_DELAYS),
+                        )
+                    finally:
+                        release_ticket()
+                    time.sleep(GET_RETRY_DELAYS[attempt])
             finally:
-                guard.release(ticket.get())
                 if claimed:
-                    guard.cache_finish(key, owner, value, ttl)
+                    finish_cache(key, owner, value, ttl)
                 ticket.reset(lease)
                 weight.reset(token)
     else:
@@ -363,12 +475,27 @@ def install(api, *, sync, guard=None):  # noqa: C901 -- Matching sync/async CCXT
                 transport_params = (
                     {**params, "maxRetriesOnFailure": 0} if isinstance(params, dict) else params
                 )
-                value = await original_fetch2(path, family, method, transport_params, config)
-                return value
+                for attempt in range(len(GET_RETRY_DELAYS) + 1):
+                    try:
+                        value = await original_fetch2(
+                            path, family, method, transport_params, config
+                        )
+                        return value
+                    except ccxt.NetworkError as error:
+                        if not retry_read(error, method, attempt):
+                            raise
+                        logger.warning(
+                            "Binance GET transport failed (%s); retry %s/%s",
+                            type(error).__name__,
+                            attempt + 1,
+                            len(GET_RETRY_DELAYS),
+                        )
+                    finally:
+                        release_ticket()
+                    await asyncio.sleep(GET_RETRY_DELAYS[attempt])
             finally:
-                guard.release(ticket.get())
                 if claimed:
-                    guard.cache_finish(key, owner, value, ttl)
+                    finish_cache(key, owner, value, ttl)
                 ticket.reset(lease)
                 weight.reset(token)
 
@@ -378,7 +505,8 @@ def install(api, *, sync, guard=None):  # noqa: C901 -- Matching sync/async CCXT
     api.on_rest_response = on_response
     api._shared_request_guard_installed = True
     logger.info(
-        "Shared Binance request guard enabled: persistent cooldown, shared budget/public cache"
+        "Shared Binance request guard enabled: persistent cooldown, shared budget/public cache; "
+        "recovery-v1 bounded storage/GET retries"
     )
 
 

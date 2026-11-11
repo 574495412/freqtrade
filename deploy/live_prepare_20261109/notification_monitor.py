@@ -146,6 +146,14 @@ def pair_count(config, now):
     return len(pairs), faults
 
 
+def worker_market(command):
+    if "--worker" in command:
+        return command[command.index("--worker") + 1]
+    if command[-3:-1] == ["-m", "deploy.runtime_recovery_20261111.service"]:
+        return command[-1]
+    raise ValueError("unrecognized worker entrypoint")
+
+
 def observe(market, now, prior=None, root=LIVE):
     prior = prior or {}
     folder = root / market
@@ -170,8 +178,7 @@ def observe(market, now, prior=None, root=LIVE):
         pid = int(json.loads((folder / "worker.pid").read_text())["pid"])
         process = psutil.Process(pid)
         command = process.cmdline()
-        index = command.index("--worker")
-        if command[index + 1] != market or process.cwd() != str(ROOT):
+        if worker_market(command) != market or process.cwd() != str(ROOT):
             raise ValueError("wrong worker")
         result["pid"] = pid
         logs = log_snapshot(folder / "freqtrade.log", now, pid, process.create_time(), prior)

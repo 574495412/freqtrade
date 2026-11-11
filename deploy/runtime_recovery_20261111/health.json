@@ -1,0 +1,185 @@
+{
+  "observed_at_utc": "2026-11-11T03:57:44.283502+00:00",
+  "status": "BOTH_LIVE_SERVICES_RUNNING",
+  "authorization": "User requested retry repair and deployment",
+  "markets": {
+    "futures": {
+      "pid": 66014,
+      "state": "RUNNING",
+      "heartbeat_count_since_restart": 3,
+      "latest_heartbeat": "2026-11-11 11:57:21,936 - freqtrade.worker - INFO - Bot heartbeat. PID=66014, version='2026.10-dev-edb0ebcd3, strategy_version: v18.0.146-manual-flatboost-cap100', state='RUNNING'",
+      "heartbeat_age_s": 14.91764783859253,
+      "monitor_faults": {},
+      "recovery_revision_loaded": true,
+      "runtime_errors_since_restart": [],
+      "get_transport_retry_events": 0,
+      "warmup_outdated_history_warning_count": 20,
+      "last_warmup_outdated_history_warning_at": "2026-11-11 11:55:19,980",
+      "launchd_running": true,
+      "launchd_runs": 1,
+      "config_sha256": "30d936a876f12466dcddf9d36f97ee093541a7d325073b414afd2da321c34735",
+      "config_unchanged": true,
+      "broker_reconciliation": {
+        "checked_at_utc": "2026-11-11T03:57:36.853576+00:00",
+        "market": "futures",
+        "positions_reconciled": {
+          "DOTUSDT": "-8.8"
+        },
+        "native_open_trade_count": 1,
+        "exchange_open_order_count": 0,
+        "unowned_spot_orders_preserved": 0,
+        "methods": [
+          "GET"
+        ],
+        "orders_submitted": 0,
+        "orders_cancelled": 0
+      },
+      "native_strategy_risk_rules_unchanged": true
+    },
+    "spot": {
+      "pid": 66080,
+      "state": "RUNNING",
+      "heartbeat_count_since_restart": 6,
+      "latest_heartbeat": "2026-11-11 11:57:27,568 - freqtrade.worker - INFO - Bot heartbeat. PID=66080, version='2026.10-dev-edb0ebcd3, strategy_version: v18.0.146-manual-flatboost-cap100', state='RUNNING'",
+      "heartbeat_age_s": 16.670560836791992,
+      "monitor_faults": {},
+      "recovery_revision_loaded": true,
+      "runtime_errors_since_restart": [],
+      "get_transport_retry_events": 1,
+      "warmup_outdated_history_warning_count": 0,
+      "last_warmup_outdated_history_warning_at": null,
+      "launchd_running": true,
+      "launchd_runs": 1,
+      "config_sha256": "2da5543c9eef652ad4571b03477ab7494e932cf4a09c2f35dbcbb8dad4d78883",
+      "config_unchanged": true,
+      "broker_reconciliation": {
+        "checked_at_utc": "2026-11-11T03:57:44.238407+00:00",
+        "market": "spot",
+        "positions_reconciled": {},
+        "native_open_trade_count": 0,
+        "exchange_open_order_count": 1,
+        "unowned_spot_orders_preserved": 1,
+        "methods": [
+          "GET"
+        ],
+        "orders_submitted": 0,
+        "orders_cancelled": 0
+      },
+      "native_strategy_risk_rules_unchanged": true
+    }
+  },
+  "notifications": {
+    "health_http": 200,
+    "health": {
+      "status": "running",
+      "version": "crypto-notifications-v2",
+      "outbox": {
+        "sent": 124
+      },
+      "monitor": {
+        "last_check": 1794369449.625393,
+        "error": null
+      }
+    },
+    "recent_deliveries": [
+      {
+        "id": 124,
+        "state": "sent",
+        "attempts": 1,
+        "result": "errcode:0"
+      },
+      {
+        "id": 123,
+        "state": "sent",
+        "attempts": 1,
+        "result": "errcode:0"
+      },
+      {
+        "id": 122,
+        "state": "sent",
+        "attempts": 1,
+        "result": "errcode:0"
+      },
+      {
+        "id": 121,
+        "state": "sent",
+        "attempts": 1,
+        "result": "errcode:0"
+      },
+      {
+        "id": 120,
+        "state": "sent",
+        "attempts": 1,
+        "result": "errcode:0"
+      },
+      {
+        "id": 119,
+        "state": "sent",
+        "attempts": 1,
+        "result": "errcode:0"
+      },
+      {
+        "id": 118,
+        "state": "sent",
+        "attempts": 1,
+        "result": "errcode:0"
+      },
+      {
+        "id": 117,
+        "state": "sent",
+        "attempts": 1,
+        "result": "errcode:0"
+      },
+      {
+        "id": 116,
+        "state": "sent",
+        "attempts": 1,
+        "result": "errcode:0"
+      },
+      {
+        "id": 115,
+        "state": "sent",
+        "attempts": 1,
+        "result": "errcode:0"
+      }
+    ],
+    "observed_markets": {
+      "spot": {
+        "pid": 66080,
+        "native_state": "RUNNING",
+        "heartbeat_age": 2.0573928356170654,
+        "faults": {}
+      },
+      "futures": {
+        "pid": 66014,
+        "native_state": "RUNNING",
+        "heartbeat_age": 7.689392805099487,
+        "faults": {}
+      }
+    }
+  },
+  "shared_guard": {
+    "transports": 73039,
+    "responses": 73026,
+    "cache_hits": 732,
+    "strikes": 1
+  },
+  "shared_cooldown_remaining_s": 0,
+  "tests_passed": 126,
+  "release_verify": "PASS",
+  "paper_workers_started": 0,
+  "forced_orders": 0,
+  "manual_orders_cancelled": 0,
+  "manual_positions_closed": 0,
+  "transfers": 0,
+  "exchange_stoploss_configuration": "Unchanged; stoploss_on_exchange remains false",
+  "full_universe_market_freshness_independently_audited": false,
+  "private_evidence": "/Users/chrise/GitHub/freqtrade/user_data/deployment/runtime-recovery-20261111T034714Z/post-start",
+  "source_sha256": {
+    "freqtrade/exchange/request_guard.py": "9c5a28cc510defc06098e33d5c977f1cba6fe6249b77f7ada3913c3f214dd63f",
+    "deploy/mainnet_100_20261109/manual.py": "c282d0cd29da811bb0cfd4c014868ab28200122ab92defb5799c2ba7fe56890e",
+    "deploy/runtime_recovery_20261111/service.py": "6e46ec47107318e9db75657f0a3dd33e62d5a8f6a0747d379ab6b1bc42eb0afc",
+    "deploy/runtime_recovery_20261111/preflight.py": "79ddaad0f631eec4ebd9de7b468376d580d8ae409a05069a4e946ed89e542793",
+    "deploy/live_prepare_20261109/notification_monitor.py": "076932b63824c91007429b4a6064fc4608df20cd8bcf64ef088a028f67404645"
+  }
+}
