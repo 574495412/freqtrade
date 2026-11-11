@@ -1,4 +1,43 @@
-# NFI X8 合约配置与通知准备
+# NFI X8 实盘配置与通知准备
+
+本目录保留2026-11-09的历史准备过程。当前现货、永续实盘使用各100U投入上限、99U预算的
+独立配置与托管服务，见[当前运行与上线核验](../runtime_recovery_20261111/README.md)。
+以下495U准备配置不属于当前部署；准备脚本仅用于独立停止状态的配置，不会启动交易。
+该脚本的认证GET现已接入共享请求保护。退出时间诊断的历史结论也应以当前发布审计为准。
+
+## 现货带单独立凭据接入（2026-11-09 更新）
+
+用户补充 `BINANCE_COPYTRADING_SPOT_API_KEY` / `BINANCE_COPYTRADING_SPOT_API_SECRET`
+为现货带单凭据。新增本地准备模块 `spot_prepare.py`，只读取这两个变量，缺失时直接失败，
+不会回退到原合约凭据。此前旧密钥的“现货交易权限关闭、USDT 为零”不适用于这组新密钥。
+
+认证 GET 已确认现货交易权限开启、账户 canTrade=true、可用 500 USDT、无挂单、
+无非 USDT 库存和锁定余额；提币权限关闭，已启用 IP 限制。原现货配置的 36 个交易对均通过
+USDT 报价、TRADING 状态、现货 LIMIT 支持及账户 permissionSets 交集检查。
+permissionSets 按组间 AND、组内 OR 判断，缺失权限集则拒绝。
+该检查不是现货带单专项交易对白名单或实际成交通道的完整验收，未用真实订单验证。
+
+独立私有目录为 `user_data/deployment/spot-live-prepare-20261109/`，配置和密钥覆盖文件
+权限均为 600，并被 Git 忽略。保留 NFI X8 原版、36 币、最多 6 仓及原有加减仓行为；
+使用全新数据库路径，没有复制模拟仓位。初始配置资金为余额的 99%，即 495 USDT，
+通过原生 `available_capital` 限定，不会随钱包追加充值自动扩大；后续已实现盈亏会改变
+原生可用预算。这是初始预算配置，不是亏损上限或永久资金上限。
+
+已通过原生 StrategyResolver / 配置 schema 的离线校验，复用现有通知模板和本地转发器。
+此步骤未发送外部通知，未启动交易进程、未下单、未划转；现货配置仍为
+`dry_run=false`、`initial_state=stopped`，没有安装实盘自启动任务。
+已有策略退出时间诊断仍未解决；API 接通不代表策略取得实盘上线资格。
+以下“仅合约”的说明是此前准备范围，合约配置、密钥、账本及模拟服务没有被本次接入改写。
+
+重复检查与离线配置准备（不会启动交易）：
+
+```sh
+.venv-paper/bin/python -B -m deploy.live_prepare_20261109.spot_prepare
+.venv/bin/python -m pytest deploy/live_prepare_20261109/test_spot_prepare.py deploy/live_prepare_20261109/test_notifications.py -q
+```
+
+每次 GET 原始响应保留在独立带时间戳的私有目录，脱敏汇总位于该私有根目录的
+`preparation.json`。若发现已存在实盘数据库，准备工具拒绝覆盖配置。
 
 2026-11-09：用户最新选择为**仅合约**，原版 NFI X8，沿用现有带单 API、合约钱包可用资金和企业微信。此目录是配置准备、只读诊断与通知传输的本地扩展，不是新的策略引擎，也不是实盘上线回执。
 
