@@ -1,4 +1,6 @@
-"""Local native-Wallets extension: profits/deposits cannot expand committed stake."""
+"""Explicit native free-balance funding and the preserved historical fixed-cap mode."""
+
+from copy import deepcopy
 
 from freqtrade.persistence import Trade
 from freqtrade.wallets import Wallets
@@ -6,6 +8,39 @@ from freqtrade.wallets import Wallets
 
 CAPITAL = 100.0
 STAKE_BUDGET = 99.0  # Leave one USDT outside trading stake for costs.
+
+
+def wallet_class(config):
+    """Validate explicit funding mode, retaining the historical fixed-budget path."""
+    mode = config.get("live_capital_mode", "fixed_100")
+    if mode == "available_balance":
+        if (
+            "available_capital" in config
+            or "capital_ceiling_usdt" in config
+            or config.get("stake_currency") != "USDT"
+            or config.get("stake_amount") != "unlimited"
+            or config.get("tradable_balance_ratio") != 0.99
+        ):
+            raise ValueError("Available-balance mode requires the native free-wallet contract")
+        return Wallets
+    if (
+        mode != "fixed_100"
+        or config.get("available_capital") != STAKE_BUDGET
+        or config.get("capital_ceiling_usdt") != CAPITAL
+    ):
+        raise ValueError("Unknown live funding contract")
+    return CappedWallets
+
+
+def use_available_balance(config):
+    """Derive the user-authorized native mode without changing strategy allocation."""
+    wallet_class(config)
+    result = deepcopy(config)
+    result.pop("available_capital", None)
+    result.pop("capital_ceiling_usdt", None)
+    result["live_capital_mode"] = "available_balance"
+    wallet_class(result)
+    return result
 
 
 def pending_reservations(trades):

@@ -5,7 +5,47 @@ from types import SimpleNamespace
 
 import pytest
 
-from deploy.mainnet_100_20261109.capital import CappedWallets, Trade, pending_reservations
+from deploy.mainnet_100_20261109.capital import (
+    CappedWallets,
+    Trade,
+    Wallets,
+    pending_reservations,
+    use_available_balance,
+    wallet_class,
+)
+
+
+def test_available_balance_uses_native_free_funds_and_excludes_external_locks(monkeypatch):
+    config = {
+        "available_capital": 99, "capital_ceiling_usdt": 100,
+        "stake_currency": "USDT", "stake_amount": "unlimited", "tradable_balance_ratio": 0.99,
+        "max_open_trades": 6,
+    }
+    updated = use_available_balance(config)
+    assert wallet_class(updated) is Wallets
+    assert "available_capital" not in updated and "capital_ceiling_usdt" not in updated
+    assert updated["max_open_trades"] == 6 and config["available_capital"] == 99
+    wallet = object.__new__(wallet_class(updated))
+    wallet._config, wallet._stake_currency = updated, "USDT"
+    monkeypatch.setattr(Trade, "total_open_trades_stakes", lambda: 0)
+    monkeypatch.setattr(Trade, "get_total_closed_profit", lambda: 50)
+    wallet._wallets = {"USDT": SimpleNamespace(free=115.07, used=384.93, total=500)}
+    assert wallet.get_available_stake_amount() == pytest.approx(115.07 * 0.99)
+    wallet._wallets["USDT"].free = 500
+    assert wallet.get_available_stake_amount() == 495  # No fixed 99/100 cap remains.
+
+
+@pytest.mark.parametrize("change", [
+    {"available_capital": 99}, {"capital_ceiling_usdt": 100},
+    {"live_capital_mode": "unknown"}, {"tradable_balance_ratio": 1.0},
+])
+def test_available_balance_rejects_mixed_or_unknown_contract(change):
+    config = {
+        "live_capital_mode": "available_balance", "stake_currency": "USDT",
+        "stake_amount": "unlimited", "tradable_balance_ratio": 0.99,
+    }
+    with pytest.raises(ValueError):
+        wallet_class({**config, **change})
 
 
 @pytest.mark.parametrize("profit,open_stake,expected", [(50, 80, 19), (-40, 50, 9), (-150, 0, 0)])

@@ -15,12 +15,12 @@ with PathModifier(ROOT / "deploy/nfi80_selected/strategy"):
 
 class NFIManualFlatBoost(NFIFlatTopBoostPaper):
     def bot_start(self, **kwargs):
-        from deploy.mainnet_100_20261109.capital import CappedWallets
+        from deploy.mainnet_100_20261109.capital import wallet_class
 
         if self.config.get("dry_run") is not False or self.config["runmode"].value != "live":
             raise ValueError("This adapter is for the user's explicit manual live invocation")
-        if not isinstance(self.wallets, CappedWallets):
-            raise ValueError("The native capital ceiling extension must be installed")
+        if type(self.wallets) is not wallet_class(self.config):
+            raise ValueError("The configured native funding mode must be installed")
         self.paper_entry_start = None
         self.stake_audit = Path(self.config["user_data_dir"]) / "stake-decisions.jsonl"
         if self.config["trading_mode"].value == "futures" and not self._pool(datetime.now(UTC)):
@@ -44,4 +44,6 @@ class NFIManualFlatBoost(NFIFlatTopBoostPaper):
         )
 
     def version(self):
-        return NostalgiaForInfinityX8.version(self) + "-manual-flatboost-cap100"
+        mode = self.config.get("live_capital_mode", "fixed_100")
+        suffix = "available-balance" if mode == "available_balance" else "cap100"
+        return NostalgiaForInfinityX8.version(self) + "-manual-flatboost-" + suffix

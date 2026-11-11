@@ -276,6 +276,17 @@ def test_observer_initial_changes_recovery_and_restart_dedup(tmp_path):
     assert len(messages(box)) == 3  # Same warning recurring after recovery is a new event.
 
 
+def test_runtime_card_reports_available_balance_without_historical_fixed_limit():
+    from deploy.live_prepare_20261109.notification_design import runtime_card
+
+    current = snapshot("spot", 100)
+    current["contract"].update(
+        capital_mode="available_balance", ceiling=None, budget=None, tradable_balance_ratio=0.99
+    )
+    content = runtime_card([current])["markdown"]["content"]
+    assert "99%" in content and "无固定上限" in content and "100U" not in content
+
+
 def test_state_and_notification_are_atomic_on_enqueue_failure(tmp_path, monkeypatch):
     box = Outbox(tmp_path / "queue.sqlite")
     monitor = RuntimeMonitor(box, lambda market, now, prior: snapshot(market, now))

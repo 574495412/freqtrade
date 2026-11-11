@@ -4,6 +4,7 @@ import copy
 import os
 from pathlib import Path
 
+from deploy.mainnet_100_20261109.capital import wallet_class
 from deploy.mainnet_100_20261109.manual import verify
 from deploy.mainnet_100_20261109.prepare import ROOT, STATE
 from deploy.nfi80_selected.selector import read, save, sha
@@ -23,11 +24,10 @@ def rebase(value, source, target):
 
 
 def linux_config(config, source=ROOT, target=REMOTE_ROOT):
+    wallet_class(config)
     if (
         config.get("dry_run") is not False
         or config.get("initial_state") != "stopped"
-        or config.get("available_capital") != 99
-        or config.get("capital_ceiling_usdt") != 100
         or config.get("strategy") != "NFIManualFlatBoost"
     ):
         raise ValueError("Unexpected existing live account contract")

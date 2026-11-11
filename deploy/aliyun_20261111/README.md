@@ -63,6 +63,22 @@ overrides, changed input bytes and paths outside the registered source root.
 
 ## Required cutover sequence
 
+On 2026-11-11 the user explicitly removed the 100-USDT cap on both live accounts.
+The active Linux configuration must therefore use `live_capital_mode=available_balance`,
+omit `available_capital` and `capital_ceiling_usdt`, and use the upstream native
+`Wallets` class. The existing 0.99 tradable-balance ratio, stake allocation,
+strategy, slots and isolated 3x futures leverage remain unchanged. Native wallet
+allocation uses free USDT plus strategy-owned tied stake; externally locked USDT
+is not available stake. Funding changes do not transfer funds or adopt/cancel
+external orders. Historical 100-USDT evidence remains a separate fixed-budget
+record and is not evidence for the expanded account contract.
+
+The fixed-cap wallet remains supported for historical/local rollback files.
+Unknown funding modes and mixed available-balance/fixed-cap configurations fail
+closed. Native wallet tests cover expansion beyond 100 USDT and exclusion of
+the observed external spot-order lock; notification cards report the dynamic
+funding mode instead of a historical fixed cap.
+
 1. Authenticate to this exact ECS instance and inspect resources, installed
    runtimes, existing services and public Binance/notification connectivity.
    Do not stop or replace unrelated services.

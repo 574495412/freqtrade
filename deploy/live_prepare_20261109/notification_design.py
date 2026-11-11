@@ -91,8 +91,13 @@ def runtime_card(snapshots, title="📊 加密实盘 · 运行与成交核对"):
         if snapshot.get("contract"):
             c = snapshot["contract"]
             capital = "现货本金" if snapshot["market"] == "spot" else "合约保证金"
+            funding = (
+                f"> {capital}：按可用余额的 {c['tradable_balance_ratio']:.0%} 动态分配，无固定上限"
+                if c.get("capital_mode") == "available_balance"
+                else f"> {capital}上限 {c['ceiling']:g}U｜交易预算 {c['budget']:g}U"
+            )
             lines += [
-                f"> {capital}上限 {c['ceiling']:g}U｜交易预算 {c['budget']:g}U",
+                funding,
                 f"> 配置币池 {c['pairs']} 币｜最多 {c['slots']} 仓｜{c['leverage']}×",
             ]
         heartbeat = snapshot.get("heartbeat_age")

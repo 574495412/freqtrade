@@ -166,8 +166,10 @@ def observe(market, now, prior=None, root=LIVE):
         pairs, faults = pair_count(config, now)
         result["faults"].update(faults)
         result["contract"] = {
-            "ceiling": config["capital_ceiling_usdt"],
-            "budget": config["available_capital"],
+            "capital_mode": config.get("live_capital_mode", "fixed_100"),
+            "ceiling": config.get("capital_ceiling_usdt"),
+            "budget": config.get("available_capital"),
+            "tradable_balance_ratio": config.get("tradable_balance_ratio"),
             "pairs": pairs,
             "slots": config["max_open_trades"],
             "leverage": f"{leverage:g}",

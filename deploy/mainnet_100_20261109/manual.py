@@ -11,6 +11,7 @@ import os
 import subprocess
 import sys
 
+from deploy.mainnet_100_20261109.capital import wallet_class
 from deploy.mainnet_100_20261109.prepare import HERE, ROOT, STATE, STRATEGY
 from deploy.nfi80_selected.launch import verify as verify_paper_source
 from deploy.nfi80_selected.selector import read, save, sha
@@ -60,13 +61,12 @@ def verify(*, allow_hold=False):
         if path.is_symlink() or path.stat().st_mode & 0o077 or sha(path) != digest:
             raise ValueError("Private100USDT configuration changed")
         config = read(path)
+        wallet_class(config)
         credential_path = STATE / market / "credentials.json"
         if credential_path.is_symlink() or credential_path.stat().st_mode & 0o077:
             raise ValueError("Credential overlay must remain private and local")
         if (
             config.get("dry_run") is not False
-            or config["available_capital"] != 99
-            or config["capital_ceiling_usdt"] != 100
             or config["initial_state"] != "stopped"
             or config["strategy"] != STRATEGY
             or config["force_entry_enable"] is not False
@@ -84,7 +84,6 @@ def verify(*, allow_hold=False):
 def worker(market):
     # Only reached by the user's manual invocation, never during checks/tests.
     import freqtrade.freqtradebot as native_bot
-    from deploy.mainnet_100_20261109.capital import CappedWallets
     from freqtrade.main import main as native_main
 
     verify()
@@ -92,7 +91,7 @@ def worker(market):
     lock = os.open(folder / "worker.lock", os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW, 0o600)
     fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
     save(folder / "worker.pid", {"pid": os.getpid()})
-    native_bot.Wallets = CappedWallets
+    native_bot.Wallets = wallet_class(read(folder / "config.json"))
     overlay = folder / "running.private.json"
     save(overlay, {"initial_state": "running"})
     native_main(
@@ -162,7 +161,10 @@ def main():
     print(
         {
             "manual_start_requested": started,
-            "capital_ceiling_each_usdt": 100,
+            "capital_mode_each": {
+                m: read(STATE / m / "config.json").get("live_capital_mode", "fixed_100")
+                for m in ("spot", "futures")
+            },
             "note": (
                 "Real orders may follow; startup request is not successful-fill "
                 "or ongoing-health verification"
