@@ -54,9 +54,9 @@ def unit(name, module, args="", root=REMOTE_ROOT):
     # leaves room for cache without forcing continuous reclaim at steady RSS.
     high, maximum, swap, cpu = {
         "spot": (600, 650, 256, 60),
-        "futures": (550, 600, 256, 60),
+        "futures": (575, 600, 256, 60),
         "notifications": (80, 120, 64, 10),
-        "selector": (200, 300, 128, 20),
+        "selector": (250, 300, 128, 20),
     }[name]
     return f"""[Unit]
 Description=Existing Freqtrade live {name}

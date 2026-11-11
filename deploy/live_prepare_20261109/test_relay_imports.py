@@ -3,14 +3,20 @@
 import subprocess
 import sys
 
+import pytest
 
-def test_relay_stays_independent_of_heavy_trading_imports():
+
+@pytest.mark.parametrize(
+    "module",
+    ["deploy.live_prepare_20261109.notify_relay", "deploy.mainnet_100_20261109.live_selector"],
+)
+def test_auxiliary_daemon_stays_independent_of_heavy_trading_imports(module):
     subprocess.run(
         [
             sys.executable,
             "-c",
             (
-                "import sys; import deploy.live_prepare_20261109.notify_relay; "
+                f"import sys; import {module}; "
                 "assert not {'ccxt', 'pandas', 'numpy', 'freqtrade.exchange'} & set(sys.modules)"
             ),
         ],

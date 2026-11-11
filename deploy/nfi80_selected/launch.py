@@ -3,6 +3,7 @@
 
 import argparse
 import fcntl
+import hashlib
 import json
 import os
 import sys
@@ -23,8 +24,6 @@ def verify():
     sys.path.insert(0, str(ROOT))
     try:
         from deploy.nfi80_flatboost.launch import verify as parent_verify
-        from deploy.nfi80_selected.selector import sha
-
         parent_verify()
     finally:
         sys.path.pop(0)
@@ -33,7 +32,11 @@ def verify():
         raise ValueError("This experiment is paper-only")
     for name, digest in release["files"].items():
         path = HERE / name
-        if path.is_symlink() or not path.resolve().is_relative_to(HERE) or sha(path) != digest:
+        if (
+            path.is_symlink()
+            or not path.resolve().is_relative_to(HERE)
+            or hashlib.sha256(path.read_bytes()).hexdigest() != digest
+        ):
             raise ValueError("Daily release source changed: " + name)
     return release
 

@@ -2,6 +2,7 @@
 
 # ruff: noqa: RUF001 -- Chinese notification copy.
 
+import hashlib
 import json
 import os
 from datetime import UTC, datetime
@@ -10,8 +11,42 @@ from urllib.parse import unquote, urlparse
 
 import requests
 
-from deploy.mainnet_100_20261109.prepare import STATE
-from deploy.nfi80_selected.selector import SNAPSHOT, read
+from deploy.nfi80_selected.launch import ROOT, read
+
+
+HERE = Path(__file__).resolve().parent
+STATE = ROOT / "user_data/deployment/mainnet-100-20261109"
+SNAPSHOT = ROOT / "user_data/deployment/nfi80-selected-20261109/current-pairs.json"
+POLICY = ROOT / "deploy/nfi80_selected/policy.json"
+
+
+def verify_cached_source():
+    """Verify pinned inputs and approved private config without loading a trader."""
+    from deploy.nfi80_selected.launch import verify
+
+    verify()
+    config = STATE / "futures/config.json"
+    release = read(HERE / "release.json")
+    if (
+        config.is_symlink()
+        or config.stat().st_mode & 0o077
+        or hashlib.sha256(config.read_bytes()).hexdigest() != release["config_sha256"]["futures"]
+        or read(HERE / "audit-hold.json")["status"] not in {"CLEARED", "RELEASED_BY_USER"}
+    ):
+        raise ValueError("Existing live selector configuration or source admission changed")
+
+
+def completed_today(snapshot):
+    now = datetime.now(UTC)
+    try:
+        return (
+            snapshot["policy_sha256"] == hashlib.sha256(POLICY.read_bytes()).hexdigest()
+            and snapshot["decision_day_utc"] == now.date().isoformat()
+            and now < datetime.fromisoformat(snapshot["valid_until_utc"])
+            and len(snapshot["pairs"]) == 80
+        )
+    except (KeyError, TypeError, ValueError):
+        return False
 
 
 def context():
@@ -48,11 +83,22 @@ def notify(url, message):
 
 
 def run(refresh=None, send=notify):
-    url = context()
     if refresh is None:
+        verify_cached_source()
+    url = context()
+    previous = read(SNAPSHOT) if SNAPSHOT.exists() else {}
+    if refresh is None:
+        # Identical same-day admission to the native input publisher. A valid
+        # snapshot needs no exchange/numerical imports or notification replay.
+        if completed_today(previous):
+            return {
+                "updated": False, "pairs": 80,
+                "valid_until_utc": previous["valid_until_utc"], "cached_inputs": True,
+            }
+        from deploy.mainnet_100_20261109.manual import verify
         from deploy.nfi80_selected.selector import main as refresh
 
-    previous = read(SNAPSHOT) if SNAPSHOT.exists() else {}
+        verify()
     try:
         # Existing pinned native input workflow, shared rate guard and publisher lock.
         # It creates no paper ledger/worker and loads no live exchange credentials.
@@ -75,9 +121,6 @@ def run(refresh=None, send=notify):
 if __name__ == "__main__":
     os.umask(0o077)
     try:
-        from deploy.mainnet_100_20261109.manual import verify
-
-        verify()
         print(json.dumps(run(), ensure_ascii=False))
     except Exception as exc:
         raise SystemExit("Live selector failed: " + type(exc).__name__) from None

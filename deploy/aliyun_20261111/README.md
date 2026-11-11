@@ -134,9 +134,9 @@ memory, swap and task counts. The selector has its own lower resource budget.
 | Service | MemoryHigh / MemoryMax | SwapMax | CPU quota |
 | --- | --- | --- | --- |
 | Spot | 600 / 650 MiB | 256 MiB | 60% of one CPU |
-| Futures | 550 / 600 MiB | 256 MiB | 60% of one CPU |
+| Futures | 575 / 600 MiB | 256 MiB | 60% of one CPU |
 | Notifications | 80 / 120 MiB | 64 MiB | 10% of one CPU |
-| Selector | 200 / 300 MiB | 128 MiB | 20% of one CPU |
+| Selector | 250 / 300 MiB | 128 MiB | 20% of one CPU |
 
 These are host-protection limits, not proof that both strategy workloads fit.
 If native cycles cannot finish within them, preserve/reconcile the latest account
@@ -156,3 +156,10 @@ During Git updates use a public-source umask (022); private runtime files remain
 0600. Check source readability as the `freqtrade` service account before restarting
 a daemon. A private umask inherited by Git can otherwise make newly checked-out
 Python files unreadable to that account.
+
+The live selector verifies the pinned source chain and private config hash before
+returning an unchanged, valid snapshot for the same completed UTC day. This path
+loads no exchange, pandas or NumPy modules. Changed policy, UTC day, expiry or
+pair count falls through to the existing fully verified native input publisher.
+The trading universe and source/data checks remain intact. This avoids loading
+the full trading dependency graph on every five-minute timer tick.
