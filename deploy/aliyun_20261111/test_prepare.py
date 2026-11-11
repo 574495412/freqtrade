@@ -113,3 +113,28 @@ def test_online_protection_preserves_budget_and_never_starts_worker(tmp_path, mo
     assert all("start" not in c and "restart" not in c and "stop" not in c for c in calls)
     assert any(c[:2] == ["systemd-analyze", "verify"] for c in calls)
     assert next(state.glob("resource-protection-*/*.before")).read_text() == "previous unit"
+
+
+def test_cache_compaction_preserves_exact_rows_and_backup(tmp_path):
+    from deploy.aliyun_20261111.systemd import compact_cache
+
+    path = tmp_path / "guard.sqlite"
+    with sqlite3.connect(path) as conn:
+        conn.executescript("""
+            CREATE TABLE budget(cooldown,strikes);
+            INSERT INTO budget VALUES(2000000000,7);
+            CREATE TABLE leases(ticket,expires);
+            INSERT INTO leases VALUES('active',2000000000);
+            CREATE TABLE public_cache(key,value,expires,owner,lease_until);
+            INSERT INTO public_cache VALUES('keep','[]',1,'active',2000000000);
+            CREATE TABLE disposable(value);
+            INSERT INTO disposable VALUES(zeroblob(1048576));
+            DROP TABLE disposable;
+        """)
+        before = list(conn.iterdump())
+    result = compact_cache(path)
+    assert result["after_bytes"] < result["before_bytes"]
+    for candidate in (path, Path(result["backup"])):
+        with sqlite3.connect(candidate) as conn:
+            assert list(conn.iterdump()) == before
+            assert conn.execute("PRAGMA integrity_check").fetchone()[0] == "ok"

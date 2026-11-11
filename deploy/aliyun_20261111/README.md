@@ -144,3 +144,15 @@ state and stop the affected service rather than entering an OOM/restart loop.
 Stagger any necessary worker restarts and verify fresh heartbeats and memory
 pressure before starting another heavy process. Do not silently shrink the
 strategy universe or change financial rules to fit the host.
+
+For a bloated cache file, stop both trading workers and the selector/timer, then
+run the same helper with `--apply --compact-cache`. It checks worker MainPIDs,
+backs up the complete cache database, vacuums free pages, and compares streaming
+SQL dump hashes before/after plus integrity checks. It retains every cache row,
+budget/cooldown counter and lease, including expired ones. Resume one worker at
+a time after authenticated ledger reconciliation.
+
+During Git updates use a public-source umask (022); private runtime files remain
+0600. Check source readability as the `freqtrade` service account before restarting
+a daemon. A private umask inherited by Git can otherwise make newly checked-out
+Python files unreadable to that account.

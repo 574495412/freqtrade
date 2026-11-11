@@ -1,6 +1,7 @@
 """Bounded systemd definitions; importing this module loads no trading engine."""
 
 import argparse
+import hashlib
 import json
 import os
 import sqlite3
@@ -11,6 +12,39 @@ from pathlib import Path
 
 REMOTE_ROOT = Path("/opt/freqtrade")
 SYSTEMD_DIRECTORY = Path("/etc/systemd/system")
+
+
+def compact_cache(path):
+    """Reclaim free SQLite pages while preserving every logical row and schema."""
+    path = Path(path)
+    if path.is_symlink():
+        raise ValueError("Cache database cannot be a symlink")
+    before_size = path.stat().st_size
+    backup = path.with_name(path.name + ".before-compact-" + str(time.time_ns()))
+
+    def digest(conn):
+        result = hashlib.sha256()
+        for line in conn.iterdump():
+            result.update(line.encode())
+            result.update(b"\n")
+        return result.hexdigest()
+
+    with sqlite3.connect(path, timeout=5) as conn:
+        if conn.execute("PRAGMA integrity_check").fetchone()[0] != "ok":
+            raise ValueError("Cache integrity check failed")
+        before = digest(conn)
+        with sqlite3.connect(backup) as saved:
+            conn.backup(saved)
+        backup.chmod(0o600)
+        conn.execute("VACUUM")
+        after = digest(conn)
+        if after != before or conn.execute("PRAGMA integrity_check").fetchone()[0] != "ok":
+            raise ValueError("Cache compaction changed logical data; preserve backup")
+    return {
+        "backup": str(backup), "before_bytes": before_size,
+        "after_bytes": path.stat().st_size, "logical_sha256": after,
+        "all_rows_and_schema_preserved": True,
+    }
 
 
 def unit(name, module, args="", root=REMOTE_ROOT):
@@ -132,6 +166,19 @@ def apply():
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true", required=True)
-    parser.parse_args()
+    parser.add_argument("--compact-cache", action="store_true")
+    args = parser.parse_args()
+    if os.geteuid() != 0 or Path.cwd().resolve() != REMOTE_ROOT:
+        raise ValueError("Run as root in the existing /opt/freqtrade Git checkout")
+    if args.compact_cache:
+        for name in ("spot", "futures", "selector"):
+            value = subprocess.check_output(
+                ["systemctl", "show", f"freqtrade-live-{name}.service", "-p", "MainPID", "--value"],
+                text=True, timeout=5,
+            ).strip()
+            if value != "0":
+                raise ValueError("Stop trading workers and selector before compaction")
+        cache = REMOTE_ROOT / "user_data/deployment/binance-request-guard.sqlite"
+        print(json.dumps(compact_cache(cache)))
     apply()
 
