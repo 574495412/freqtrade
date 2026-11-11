@@ -1,6 +1,6 @@
 # Alibaba Cloud ECS migration preparation
 
-Status: **PREPARED LOCALLY; NOT DEPLOYED TO ECS**.
+Status: **GIT SOURCE AND PYTHON ENVIRONMENT STAGED ON ECS; LIVE CUTOVER PENDING**.
 
 The user requested migration of the existing Freqtrade live services to the ECS
 instance visible in Alibaba Cloud Client, `i-j6c21s3zs1jgm5rpgg5l`, public address
@@ -15,9 +15,21 @@ also returned `noWindowsAvailable`. SSH to the observed address reached the
 server but failed public-key authentication; the local SSH agent had no identities.
 Existing Alibaba account login material was not modified or decrypted.
 
-No code, trading credentials or account ledgers have been installed on ECS.
-Local spot/futures services were not stopped. A usable existing SSH identity or
-an interactive client terminal is required to finish deployment and verification.
+The user subsequently opened a working SSH session in Alibaba Cloud Client.
+Both public Binance time endpoints responded from ECS. Python 3.12.16 and uv
+0.13.7 were installed outside protected home directories. At the user's request,
+the initial archive staging directory was retained separately and the deployment
+directory `/opt/freqtrade` was recreated with `git clone` from
+`https://github.com/574495412/freqtrade.git`, branch
+`codex/live-preflight-notifications-20261109`. Python/runtime directories were
+moved back without copying repository source. Origin and commit were verified.
+
+The locked requirements initially failed because the repository's rolling
+`exclude-newer` setting excluded an exact pinned release. Installation with
+`uv --no-config pip install -r deploy/requirements.lock` retained every runtime
+version pin and succeeded: 95 packages passed `uv pip check`, with CCXT4.5.89.
+Trading credentials and account ledgers have not yet been installed on ECS;
+local live workers remain running pending the authenticated cutover.
 
 ## Candidate
 
@@ -39,6 +51,15 @@ Five offline tests cover path relocation, financial-contract preservation,
 stopped configuration and native worker service definitions. The candidate
 includes derived manifests so original upstream provenance and strategy hashes
 remain checked after path relocation.
+
+The native daily-input selector additionally accepts an ignored
+`user_data/deployment/live-selector-runtime.json` containing only `source_root`
+and `https_proxy`. On Linux, registered absolute source paths are relocated
+inside the deployment root while retaining the original SHA-256 checks. Setting
+`https_proxy` to null removes only the macOS loopback route; candidate universe,
+rulebook, timestamps, weights and input hashes are unchanged. Without the runtime
+file, existing local behavior remains unchanged. Offline tests reject financial
+overrides, changed input bytes and paths outside the registered source root.
 
 ## Required cutover sequence
 

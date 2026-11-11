@@ -6,7 +6,7 @@
   "files": {
     "launch.py": "39c127f29561e6de7197112af50a12a57d134108510f6562aaec5200f0880e6a",
     "prepare.py": "06400a7437d3df6c79e4597a4a6b36e615100f79af2f4c684ddb11451f3695e4",
-    "selector.py": "e3e698ab398be35312c8656c7bb973148f3fdb7f10b3dfdd6f33f997f7eb9193",
+    "selector.py": "587a717284ff75ebe59072967fbcfd96703f36dee22a0573505906daa82e67f5",
     "selection-equivalence.json": "1b8a304e0c02a4397f1e395904bf62d47960a1b4583a2e2a7de998b49d81f7ba",
     "policy.json": "6d1454ebae72af4b9bf2f622f3008aeb8b22491b7022bdc626f593783f942161",
     "optimized-config.json": "3e5254069b39be066aedaaebdf8503bf314485f04cfa65298d1748efd3a64b70",
@@ -18,5 +18,9 @@
   "same_historical_rulebook_selection": true,
   "snapshot_expiry_seconds": 86400,
   "new_financial_backtest_run": false,
-  "technical_repair": "Unique selected namespace; initial install rejected existing stopped daily labels before mutation"
+  "technical_repair": "Unique selected namespace; initial install rejected existing stopped daily labels before mutation",
+  "runtime_portability": {
+    "scope": "Explicit filesystem and transport relocation only; pinned input bytes and selection rules unchanged",
+    "tests": "deploy/aliyun_20261111/test_selector_runtime.py"
+  }
 }

@@ -111,6 +111,13 @@ WantedBy=timers.target
     release["operational_mode"] = "linux_candidate_not_started"
     save(destination / "manual-release.candidate.json", release)
     save(
+        destination / "selector-runtime.private.json",
+        {
+            "source_root": str(ROOT),
+            "https_proxy": None,
+        },
+    )
+    save(
         destination / "preparation.json",
         {
             "target_root": str(remote_root),

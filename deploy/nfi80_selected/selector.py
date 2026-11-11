@@ -25,6 +25,7 @@ ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 STATE = ROOT / "user_data/deployment/nfi80-selected-20261109"
 SNAPSHOT = STATE / "current-pairs.json"
+RUNTIME = ROOT / "user_data/deployment/live-selector-runtime.json"
 
 
 def read(path):
@@ -44,10 +45,42 @@ def save(path, value):
     temporary.replace(path)
 
 
+def runtime_context():
+    value = read(RUNTIME) if RUNTIME.exists() else {}
+    if set(value) - {"source_root", "https_proxy"}:
+        raise ValueError("Selector runtime may only relocate paths and exchange transport")
+    if "source_root" in value and (
+        not isinstance(value["source_root"], str) or not Path(value["source_root"]).is_absolute()
+    ):
+        raise ValueError("Registered input source root must be absolute")
+    proxy = value.get("https_proxy")
+    if proxy is not None and (
+        not isinstance(proxy, str) or not proxy.startswith(("http://", "https://"))
+    ):
+        raise ValueError("Unsupported selector transport")
+    return value
+
+
 def checked(record):
-    if sha(record["path"]) != record["sha256"]:
+    path = Path(record["path"])
+    runtime = runtime_context()
+    if "source_root" in runtime:
+        path = ROOT / path.relative_to(runtime["source_root"])
+        if not path.resolve().is_relative_to(ROOT.resolve()):
+            raise ValueError("Registered input escapes deployment root")
+    if sha(path) != record["sha256"]:
         raise ValueError("Pinned research input/source changed")
-    return Path(record["path"])
+    return path
+
+
+def runtime_transport(config, runtime):
+    if "https_proxy" in runtime:
+        for name in ("ccxt_config", "ccxt_async_config"):
+            options = config["exchange"].setdefault(name, {})
+            options.pop("httpsProxy", None)
+            if runtime["https_proxy"] is not None:
+                options["httpsProxy"] = runtime["https_proxy"]
+    return config
 
 
 def rulebook(payload, exchange, config):
@@ -87,7 +120,8 @@ def main():
     identities = read(checked(policy["market_identity_source"]))["markets"]
     attempt = STATE / "selector" / now.strftime("%Y%m%dT%H%M%S%fZ")
     (attempt / "daily").mkdir(parents=True)
-    config = read(HERE / "optimized-config.json")
+    runtime = runtime_context()
+    config = runtime_transport(read(HERE / "optimized-config.json"), runtime)
     config.update(runmode=RunMode.DRY_RUN, candle_type_def=CandleType.FUTURES)
     exchange = ExchangeResolver.load_exchange(config, validate=False, load_leverage_tiers=False)
     try:
@@ -127,7 +161,7 @@ def main():
                             "endTime": int(day.timestamp() * 1000) - 1,
                             "limit": 65,
                         },
-                        proxies={"https": "http://127.0.0.1:7897"},
+                        proxies={"https": runtime.get("https_proxy", "http://127.0.0.1:7897")},
                         timeout=25,
                     )
                     response.raise_for_status()
