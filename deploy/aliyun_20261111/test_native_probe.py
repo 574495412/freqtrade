@@ -51,6 +51,18 @@ def test_profile_preserves_finance_but_isolates_all_mutable_account_state():
     assert config["exchange"]["pair_whitelist"] == ["BTC/USDT"]
 
 
+def test_disabled_probe_rpc_sections_pass_the_native_schema():
+    from freqtrade.config_schema import CONF_SCHEMA
+    from freqtrade.configuration.config_validation import FreqtradeValidator
+
+    config = profile_config(
+        {"dry_run": False, "live_capital_mode": "available_balance", "exchange": {}},
+        Path("/original"), Path("/probe"),
+    )
+    for key in ("api_server", "telegram", "webhook"):
+        FreqtradeValidator(CONF_SCHEMA["properties"][key]).validate(config[key])
+
+
 @pytest.mark.parametrize("change", [
     {"db_url": "sqlite:////original/trades.sqlite"},
     {"user_data_dir": "/original"}, {"initial_state": "running"},

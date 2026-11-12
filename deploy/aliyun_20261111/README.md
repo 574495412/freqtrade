@@ -2,6 +2,18 @@
 
 Status: **KERNEL AGGREGATE LIMIT VERIFIED; NATIVE CAPACITY ADMISSION PENDING**.
 
+The initial concurrent diagnostic was stopped at 14:48 UTC after sustained
+memory reclaim pressure; the shared peak was 813592576 bytes, with no additional
+OOM kill and unchanged live ledgers. This is a failed diagnostic, not capacity
+acceptance. On user instruction, admission testing now starts core workers
+sequentially and does not require daily selection or a synthetic notification
+reserve to initialize concurrently. A separate operational plan must still keep
+noncore work inside the aggregate budget before daily scheduling is released.
+The first sequential attempt stopped before native initialization completed:
+disabled probe RPC sections lacked schema-required fields. Those isolated
+diagnostic fields are corrected and checked against the native schema; that
+attempt establishes no workload-capacity result.
+
 The user reported another memory exhaustion/server outage after the historical
 acceptance below. After recovery, ECS code `ff62a1a12` installed the aggregate
 limit and startup hold. On 2026-11-12 at 13:58 UTC all four service MainPIDs were

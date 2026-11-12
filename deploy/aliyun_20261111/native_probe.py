@@ -87,6 +87,14 @@ def profile_config(live, original_directory, destination):
         config["exchange"].pop(name, None)
     for name in ("api_server", "telegram", "webhook", "external_message_consumer"):
         config[name] = {"enabled": False}
+    # The native schema requires these fields even when the RPC is disabled.
+    # Explicit inert values also prevent credential-overlay RPC settings leaking
+    # into this isolated, non-serving process through deep merge.
+    config["telegram"].update(token="", chat_id="")
+    config["api_server"].update(
+        listen_ip_address="127.0.0.1", listen_port=18799,
+        username="", password="", jwt_secret_key="disabled-probe-" + "0" * 32,
+    )
     config.update(
         initial_state="stopped", cancel_open_orders_on_exit=False,
         user_data_dir=str(destination), db_url="sqlite:///" + str(destination / "probe.sqlite"),
@@ -219,8 +227,10 @@ def run(market, folder, hold_seconds=300):
                     ), "user_data_dir": str(folder),
                 }, RunMode.LIVE).get_config()
                 validate_isolation(native, config, folder)
+                print(json.dumps({"phase": "native_initialization", "market": market}), flush=True)
                 bot = FreqtradeBot(native)
                 expected = 36 if market == "spot" else 80
+                print(json.dumps({"phase": "native_analysis", "market": market}), flush=True)
                 analyze_pipeline(bot, expected)
                 if counters["blocked_writes"]:
                     raise ProbeWriteBlocked("Unexpected write was attempted")
