@@ -23,7 +23,7 @@
     "deploy/runtime_recovery_20261111/io.freqtrade.live.futures.plist": "78c6c26f564ec7fb87971ae32d86a4f9126b432c4e779952df52c42b50530b17",
     "deploy/live_prepare_20261109/notification_monitor.py": "b7322afdbdeaedda2823c335c1ff52e1a98b26777cd4b830202b29ec162f01e5",
     "deploy/live_prepare_20261109/preflight.py": "80c36156dfd48d24be8d95450e3c1046992699c87e69a5931516deda41b598c9",
-    "deploy/aliyun_20261111/systemd.py": "0031d14bff8779f0bd880bbd360629eeaa1b7eb2a1e5349d388143a7c4a2e7b8",
+    "deploy/aliyun_20261111/systemd.py": "6686b84035d4f27bf5c869f8cf970e4e50c3fa2f73443aeae8960ea07784c8bc",
     "deploy/mainnet_100_20261109/live_selector.py": "1d5904c9de19652b7db7f226436163f9aac90f240808c6fabc36b71fc7bcb39f"
   },
   "capital_per_market_usdt": 1000,
@@ -67,10 +67,10 @@
     "upstream_worker_unchanged": true
   },
   "ecs_resource_protection": {
-    "date_utc": "2026-11-11",
+    "date_utc": "2026-11-12",
     "previous_release_sha256": "8719d82fecf72bd149a5a1bf48552b7d9710e9a5c3aee7e9af76cd0c97055cd3",
-    "scope": "Indexed cache expiry, lazy read-only notification imports, bounded systemd workload and restart rate",
+    "scope": "Incident hold, no automatic restart, aggregate cgroup budget; stopped-only installation",
     "strategy_and_account_contract_unchanged": true,
-    "runtime_acceptance": "pending"
+    "runtime_acceptance": "incident_reopened_remote_unreachable_not_deployed"
   }
 }

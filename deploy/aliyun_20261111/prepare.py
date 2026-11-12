@@ -4,7 +4,7 @@ import copy
 import os
 from pathlib import Path
 
-from deploy.aliyun_20261111.systemd import unit
+from deploy.aliyun_20261111.systemd import slice_unit, unit
 from deploy.mainnet_100_20261109.capital import wallet_class
 from deploy.mainnet_100_20261109.manual import verify
 from deploy.mainnet_100_20261109.prepare import ROOT, STATE
@@ -47,6 +47,7 @@ def prepare(destination, remote_root=REMOTE_ROOT):
     os.umask(0o077)
     destination = Path(destination)
     destination.mkdir(parents=True, exist_ok=False, mode=0o700)
+    (destination / "freqtrade-live.slice").write_text(slice_unit())
     configs = {}
     for market in ("spot", "futures"):
         configs[market] = linux_config(read(STATE / market / "config.json"), target=remote_root)

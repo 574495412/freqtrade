@@ -1,6 +1,12 @@
 # Alibaba Cloud ECS migration preparation
 
-Status: **ECS LIVE RUNTIME ACCEPTED AT 2026-11-11 17:54 UTC**.
+Status: **INCIDENT REOPENED 2026-11-12; SERVER UNREACHABLE, STOP NOT CONFIRMED**.
+
+The user reported another memory exhaustion/server outage after the historical
+acceptance below. SSH now times out during banner exchange and Cloud Assistant
+remote actions are unavailable. No new stop command or protection revision has
+been confirmed on ECS. Current exchange positions and orders are unknown.
+The previous observation does not establish current service health.
 
 The user requested migration of the existing Freqtrade live services to the ECS
 instance visible in Alibaba Cloud Client, `i-j6c21s3zs1jgm5rpgg5l`, public address
@@ -124,13 +130,34 @@ additive: budget, cooldown, active leases and account ledgers remain intact. The
 notification daemon loads only its read-only dependencies; exchange/numerical
 imports are delayed until an authenticated preflight is explicitly invoked.
 
-`python3 -m deploy.aliyun_20261111.systemd --apply`, run as root in the existing
-Git checkout, verifies and backs up unit definitions, installs resource limits,
-and adds the index for running workers. It never starts or restarts a trader.
-Stop the old notification daemon before applying and restart it afterward so it
-uses the lower-memory import path. Units allow three starts per 15 minutes with
-180-second restart delay, single-threaded numerical libraries and bounded CPU,
-memory, swap and task counts. The selector has its own lower resource budget.
+The old child hard limits total 1670 MiB, exceeding physical RAM before system
+and unrelated workloads. No aggregate slice constrained that sum. This is a
+confirmed configuration defect; the actual outage cause still requires kernel
+logs, cgroup memory events and resource evidence from the host.
+
+The incident revision is prepared locally, **not confirmed deployed**. First run
+`python3 -m deploy.aliyun_20261111.systemd --hold` as root in the existing Git
+checkout. It removes runtime admission, installs boot/restart blocking drop-ins,
+disables all four services and the selector timer, and requests a nonblocking
+graceful stop. This acknowledges a stop request only: verify every MainPID is
+zero and all units/timer are inactive before proceeding.
+
+`python3 -m deploy.aliyun_20261111.systemd --apply` refuses active, transitioning
+or unknown unit/timer states and an existing admission marker. It verifies and
+backs up definitions, installs a shared `freqtrade-live.slice`, and adds the cache
+index. Every service joins that slice and has `Restart=no` plus
+`ConditionPathExists=/run/freqtrade-live-admitted`. The marker is absent by
+default and disappears on reboot. The helper never grants admission or starts
+a worker. A stop is not an account liquidation; reconcile owned positions and
+exchange protection separately through authenticated reads.
+
+The aggregate ceiling is MemoryHigh=768 MiB, MemoryMax=900 MiB,
+MemorySwapMax=256 MiB, CPUQuota=100% of one CPU and TasksMax=192. This constrains
+the entire deployment even when child ceilings sum higher. It does not establish
+that both workers fit, nor protect against unrelated applications consuming the
+remaining host memory. Keep startup held until observed peak usage, other host
+workloads and a complete native daily selector recomputation fit a reviewed
+capacity budget. The same-day selector shortcut is insufficient capacity evidence.
 
 | Service | MemoryHigh / MemoryMax | SwapMax | CPU quota |
 | --- | --- | --- | --- |
@@ -139,7 +166,7 @@ memory, swap and task counts. The selector has its own lower resource budget.
 | Notifications | 80 / 120 MiB | 64 MiB | 10% of one CPU |
 | Selector | 250 / 300 MiB | 128 MiB | 20% of one CPU |
 
-These are host-protection limits, not proof that both strategy workloads fit.
+These are child ceilings, additionally constrained by the aggregate slice.
 If native cycles cannot finish within them, preserve/reconcile the latest account
 state and stop the affected service rather than entering an OOM/restart loop.
 Stagger any necessary worker restarts and verify fresh heartbeats and memory
@@ -151,7 +178,7 @@ run the same helper with `--apply --compact-cache`. It checks worker MainPIDs,
 backs up the complete cache database, vacuums free pages, and compares streaming
 SQL dump hashes before/after plus integrity checks. It retains every cache row,
 budget/cooldown counter and lease, including expired ones. Resume one worker at
-a time after authenticated ledger reconciliation.
+a time only after capacity admission and authenticated ledger reconciliation.
 
 During Git updates use a public-source umask (022); private runtime files remain
 0600. Check source readability as the `freqtrade` service account before restarting
@@ -165,7 +192,7 @@ pair count falls through to the existing fully verified native input publisher.
 The trading universe and source/data checks remain intact. This avoids loading
 the full trading dependency graph on every five-minute timer tick.
 
-## Accepted runtime observation
+## Historical runtime observation, superseded by incident
 
 Deployment code `ff3ed3ee778743c33168490f71e739cff4df9446` passed operational
 acceptance on 2026-11-11 at 17:54 UTC. Both native workers reported fresh RUNNING
