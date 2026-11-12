@@ -27,7 +27,9 @@
     "deploy/mainnet_100_20261109/live_selector.py": "1d5904c9de19652b7db7f226436163f9aac90f240808c6fabc36b71fc7bcb39f",
     "deploy/aliyun_20261111/native_probe.py": "3385817f57dae96f718e521826f5f682899d69c795e287c56b98af57bf23cbe7",
     "freqtrade/data/dataprovider.py": "3397ba37d934c8efbc0fec9a2d40891992f58ff9749ac4b2f23a3450a4fd10d4",
-    "deploy/aliyun_20261111/memory.py": "a8def499339530f56342050bbc823078c43b75df4a3e87ab1dd2419a77793792"
+    "deploy/aliyun_20261111/memory.py": "a8def499339530f56342050bbc823078c43b75df4a3e87ab1dd2419a77793792",
+    "freqtrade/data/metrics.py": "192b9b0547297b6f751f85321e83f47331ed2801b75ea0fbe76865f2726da361",
+    "deploy/aliyun_20261111/bytecode.py": "b487abc2c27f401403d1d9d30f61cd113a91ebd0b42475ae0c304aef6ee8010e"
   },
   "capital_per_market_usdt": 1000,
   "markets": [
@@ -55,6 +57,11 @@
       "upstream_sha256": "3222d862fea2ca9dd566063b83845f99c421ba4f5eb20773ba5e64be68b0ba0e",
       "local_sha256": "3397ba37d934c8efbc0fec9a2d40891992f58ff9749ac4b2f23a3450a4fd10d4",
       "reason": "Explicit audited live-only post-analysis cache retention; full raw history and numeric precision unchanged, default and historical storage unchanged."
+    },
+    "freqtrade/data/metrics.py": {
+      "upstream_sha256": "d5dfd23bcf556efc5faf23f6031d2b758f29feba0c2ace44080140da3de877ae",
+      "local_sha256": "192b9b0547297b6f751f85321e83f47331ed2801b75ea0fbe76865f2726da361",
+      "reason": "Load report-only SciPy statistics at the p-value call; live execution no longer preloads unused statistics. Numerical calculation unchanged."
     }
   },
   "request_guard_policy": {

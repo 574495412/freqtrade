@@ -5,7 +5,6 @@ from datetime import datetime
 
 import numpy as np
 import pandas as pd
-from scipy import stats
 
 
 logger = logging.getLogger(__name__)
@@ -656,5 +655,8 @@ def calculate_p_value(trades: pd.DataFrame, starting_balance: float) -> float:
     returns = trades["profit_abs"] / starting_balance
     if returns.std() == 0:
         return 1.0
+    # This report-only statistic is not needed by the live execution engine.
+    from scipy import stats
+
     _, p_value = stats.ttest_1samp(returns, popmean=0)
     return float(p_value)

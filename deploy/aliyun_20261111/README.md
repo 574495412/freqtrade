@@ -26,6 +26,15 @@ lifetime only; native indicator/entry/exit code remains inherited. See
 [Linux malloc_trim](https://www.man7.org/linux/man-pages/man3/malloc_trim.3.html).
 Its actual savings and dual-engine capacity are pending native verification.
 
+Another native extension moves SciPy statistics import into the report-only
+trade p-value calculation. The numerical implementation remains unchanged and
+all 43 native metrics tests pass. A fresh live-engine import test verifies that
+SciPy statistics is absent until requested. Checked-source Python bytecode is
+built once, under the aggregate limit with all workers held, to avoid repeatedly
+compiling the 3-MiB upstream strategy during live initialization. Caches retain
+Python's source-hash validation; changed source invalidates the cached bytecode.
+The `bytecode` helper forces conversion of pre-existing timestamp caches as well.
+
 At 15:03 UTC the 832-MiB soft / 900-MiB hard sequential diagnostic stopped
 automatically after sustained memory pressure. No selector or notification
 reserve ran. Spot completed two full 36-pair analysis cycles; futures had not
