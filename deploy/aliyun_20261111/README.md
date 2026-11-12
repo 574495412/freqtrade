@@ -1,6 +1,28 @@
 # Alibaba Cloud ECS migration preparation
 
-Status: **KERNEL AGGREGATE LIMIT VERIFIED; NATIVE CAPACITY ADMISSION PENDING**.
+Status: **KERNEL AGGREGATE LIMIT VERIFIED; CORE CAPACITY FAILED; STARTUP HELD**.
+
+At 15:03 UTC the 832-MiB soft / 900-MiB hard sequential diagnostic stopped
+automatically after sustained memory pressure. No selector or notification
+reserve ran. Spot completed two full 36-pair analysis cycles; futures had not
+finished initialization. Shared sampled peak was 883810304 bytes (about 843 MiB),
+minimum host available memory was 418447360 bytes, and the OOM-kill count did not
+increase. Original ledger hashes were unchanged. This rejects the tested
+workload under the current thresholds; it does not establish an absolute RAM
+minimum or justify increasing the hard cap.
+
+Final authenticated GETs at 15:05 UTC reconciled both accounts with zero
+positions/native open trades. The existing unowned spot order was preserved;
+futures had no open orders. At final inspection ECS code was `1bf86b6a6`, all
+four live MainPIDs were zero, all four services plus the selector timer remained
+disabled, and the runtime admission marker was absent. The selector retained
+its historical failed state; it was not restarted. Kernel values were
+memory.max=943718400, memory.high=872415232 and memory.swap.max=268435456.
+Host CPU sampled 1.8% and available memory was 1288248 KiB after diagnostics.
+No live worker or order mutation was started. Local trading agents also remained
+disabled and no matching local process was found. Further memory engineering
+and successful core admission are required before any trading restoration;
+noncore daily scheduling needs its own budget after that.
 
 The initial concurrent diagnostic was stopped at 14:48 UTC after sustained
 memory reclaim pressure; the shared peak was 813592576 bytes, with no additional
@@ -25,8 +47,8 @@ The user reported another memory exhaustion/server outage after the historical
 acceptance below. After recovery, ECS code `ff62a1a12` installed the aggregate
 limit and startup hold. On 2026-11-12 at 13:58 UTC all four service MainPIDs were
 zero, all four services and the selector timer were disabled, and Restart=no
-was confirmed. Current exchange positions still require authenticated reads;
-local native ledgers had zero open trades/orders at 14:06 UTC. The historical
+was confirmed. Local native ledgers had zero open trades/orders at 14:06 UTC;
+the later authenticated read is recorded above. The historical
 acceptance below does not establish current trading availability.
 
 An isolated test at 14:03 UTC confirmed kernel `memory.max=943718400` (900 MiB):
