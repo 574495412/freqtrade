@@ -91,6 +91,7 @@ def profile_config(live, original_directory, destination):
     # Explicit inert values also prevent credential-overlay RPC settings leaking
     # into this isolated, non-serving process through deep merge.
     config["telegram"].update(token="", chat_id="")
+    config["external_message_consumer"]["producers"] = []
     config["api_server"].update(
         listen_ip_address="127.0.0.1", listen_port=18799,
         username="", password="", jwt_secret_key="disabled-probe-" + "0" * 32,

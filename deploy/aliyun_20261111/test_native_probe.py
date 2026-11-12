@@ -59,8 +59,13 @@ def test_disabled_probe_rpc_sections_pass_the_native_schema():
         {"dry_run": False, "live_capital_mode": "available_balance", "exchange": {}},
         Path("/original"), Path("/probe"),
     )
-    for key in ("api_server", "telegram", "webhook"):
-        FreqtradeValidator(CONF_SCHEMA["properties"][key]).validate(config[key])
+    schema = {
+        "type": "object", "definitions": CONF_SCHEMA["definitions"],
+        "properties": {key: CONF_SCHEMA["properties"][key] for key in (
+            "api_server", "telegram", "webhook", "external_message_consumer",
+        )},
+    }
+    FreqtradeValidator(schema).validate(config)
 
 
 @pytest.mark.parametrize("change", [
