@@ -24,11 +24,11 @@ spec.loader.exec_module(module)
 print(module.VALUE)
 """
     valid = subprocess.run([sys.executable, "-B", "-c", script, str(source)],
-                           text=True, capture_output=True)
+                           check=False, text=True, capture_output=True)
     assert valid.returncode == 0 and valid.stdout.strip() == "7"
     source.write_text("VALUE = 8\n")
     invalid = subprocess.run([sys.executable, "-B", "-c", script, str(source)],
-                             text=True, capture_output=True)
+                             check=False, text=True, capture_output=True)
     assert invalid.returncode != 0 and "source recompilation required" in invalid.stderr
 
 
@@ -36,5 +36,5 @@ def test_live_engine_import_does_not_load_report_only_scipy_statistics():
     result = subprocess.run([
         sys.executable, "-B", "-c",
         "import sys; import freqtrade.freqtradebot; assert 'scipy.stats' not in sys.modules",
-    ], text=True, capture_output=True)
+    ], check=False, text=True, capture_output=True)
     assert result.returncode == 0, result.stderr
