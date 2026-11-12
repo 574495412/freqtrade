@@ -4,6 +4,7 @@
 
 import hashlib
 import json
+import shutil
 from datetime import UTC, datetime, timedelta
 
 import pytest
@@ -152,3 +153,39 @@ def test_cached_selector_rejects_changed_private_config(prepared, tmp_path, monk
     monkeypatch.setattr(selector, "HERE", tmp_path)
     with pytest.raises(ValueError, match="configuration or source"):
         selector.verify_cached_source()
+
+
+def test_released_sources_pass_new_day_manual_admission(tmp_path, monkeypatch):
+    """Exercise the real manual gate with shipped sources and isolated private files."""
+    from deploy.mainnet_100_20261109 import manual
+
+    shipped = selector.HERE
+    release = json.loads((shipped / "release.json").read_text())
+    here, state = tmp_path / "release", tmp_path / "private"
+    here.mkdir()
+    for name in release["files"]:
+        target = here / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(shipped / name, target)
+    config = {
+        "dry_run": False, "initial_state": "stopped", "strategy": "NFIManualFlatBoost",
+        "force_entry_enable": False, "live_capital_mode": "available_balance",
+        "stake_currency": "USDT", "stake_amount": "unlimited",
+        "tradable_balance_ratio": 0.99, "margin_mode": "isolated",
+        "nfi_parameters": {"leverage": 3.0},
+    }
+    for market in ("spot", "futures"):
+        folder = state / market
+        folder.mkdir(parents=True)
+        path = folder / "config.json"
+        path.write_text(json.dumps(config))
+        path.chmod(0o600)
+        credentials = folder / "credentials.json"
+        credentials.write_text("{}")
+        credentials.chmod(0o600)
+        release["config_sha256"][market] = hashlib.sha256(path.read_bytes()).hexdigest()
+    (here / "release.json").write_text(json.dumps(release))
+    monkeypatch.setattr(manual, "HERE", here)
+    monkeypatch.setattr(manual, "STATE", state)
+    monkeypatch.setattr(manual, "verify_paper_source", lambda: None)
+    assert manual.verify() == release

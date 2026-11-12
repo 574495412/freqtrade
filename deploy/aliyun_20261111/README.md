@@ -1,12 +1,31 @@
 # Alibaba Cloud ECS migration preparation
 
-Status: **INCIDENT REOPENED 2026-11-12; SERVER UNREACHABLE, STOP NOT CONFIRMED**.
+Status: **KERNEL AGGREGATE LIMIT VERIFIED; NATIVE CAPACITY ADMISSION PENDING**.
 
 The user reported another memory exhaustion/server outage after the historical
-acceptance below. SSH now times out during banner exchange and Cloud Assistant
-remote actions are unavailable. No new stop command or protection revision has
-been confirmed on ECS. Current exchange positions and orders are unknown.
-The previous observation does not establish current service health.
+acceptance below. After recovery, ECS code `ff62a1a12` installed the aggregate
+limit and startup hold. On 2026-11-12 at 13:58 UTC all four service MainPIDs were
+zero, all four services and the selector timer were disabled, and Restart=no
+was confirmed. Current exchange positions still require authenticated reads;
+local native ledgers had zero open trades/orders at 14:06 UTC. The historical
+acceptance below does not establish current trading availability.
+
+An isolated test at 14:03 UTC confirmed kernel `memory.max=943718400` (900 MiB):
+the test process was killed inside the shared slice, its oom_kill counter rose
+by one and the host remained accessible. The 768-MiB soft threshold was raised
+to 900 MiB only during this hard-limit test and restored afterward. The initial
+test reached the soft threshold and timed out without triggering the hard limit;
+that failed attempt is preserved. These are enforcement checks, not workload
+capacity acceptance. No trading workers started and no exchange orders were sent.
+
+The real daily selector check then failed in manual.py:58 because the manual
+release manifest still pinned the pre-optimization `live_selector.py` hash. The
+valid same-day shortcut had hidden this until a full new-day check was needed.
+The manifest correction registers the reviewed selector bytes; it changes no
+strategy rule, private configuration, research hold, input policy or account
+state. A regression exercises the shipped source manifest through the real
+manual gate using isolated private fixtures. Keep startup held until a full
+native daily recomputation and combined worker capacity checks pass.
 
 The user requested migration of the existing Freqtrade live services to the ECS
 instance visible in Alibaba Cloud Client, `i-j6c21s3zs1jgm5rpgg5l`, public address
@@ -135,7 +154,7 @@ and unrelated workloads. No aggregate slice constrained that sum. This is a
 confirmed configuration defect; the actual outage cause still requires kernel
 logs, cgroup memory events and resource evidence from the host.
 
-The incident revision is prepared locally, **not confirmed deployed**. First run
+The aggregate protection revision is installed on ECS. To apply an incident hold, run
 `python3 -m deploy.aliyun_20261111.systemd --hold` as root in the existing Git
 checkout. It removes runtime admission, installs boot/restart blocking drop-ins,
 disables all four services and the selector timer, and requests a nonblocking
