@@ -2,6 +2,19 @@
 
 Status: **KERNEL AGGREGATE LIMIT VERIFIED; CORE CAPACITY FAILED; STARTUP HELD**.
 
+The next memory candidate extends native DataProvider with an explicit live-only
+post-analysis cache limit. Default/historical storage is unchanged. The pinned
+manual NFI adapter retains the final two analyzed rows, while every raw OHLCV
+row still enters the original indicator and signal computation at float64
+precision. An AST contract checks all 16 upstream analyzed-frame consumers:
+they use only `iloc[-1]`, `iloc[-2]`, and length guards at one or two rows.
+Native long/short entry/exit parity, exact values/dtypes/index, independent tail
+storage and rejection of historical/API/external consumers are tested. The ECS
+read-only probe checks every computed frame's retained tail before publishing
+success and measures actual cache bytes. Runtime capacity is still pending.
+glibc allocation arenas and trim thresholds are bounded in the systemd
+environment; numeric types, strategy parameters and account settings do not change.
+
 At 15:03 UTC the 832-MiB soft / 900-MiB hard sequential diagnostic stopped
 automatically after sustained memory pressure. No selector or notification
 reserve ran. Spot completed two full 36-pair analysis cycles; futures had not

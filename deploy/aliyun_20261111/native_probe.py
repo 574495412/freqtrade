@@ -144,8 +144,10 @@ def analyze_pipeline(bot, expected):
         bot.strategy.analyze(bot.active_pair_whitelist)
         for pair in bot.active_pair_whitelist:
             frame, _ = bot.dataprovider.get_analyzed_dataframe(pair, bot.strategy.timeframe)
+            raw = bot.dataprovider.ohlcv(pair, bot.strategy.timeframe, copy=False)
             if (
-                len(frame) < bot.strategy.startup_candle_count
+                len(raw) < bot.strategy.startup_candle_count
+                or len(frame) != 2
                 or not {"enter_long", "exit_long"} <= set(frame.columns)
             ):
                 raise ValueError("Incomplete native candle/indicator analysis")
@@ -232,6 +234,25 @@ def run(market, folder, hold_seconds=300):
                 validate_isolation(native, config, folder)
                 print(json.dumps({"phase": "native_initialization", "market": market}), flush=True)
                 bot = FreqtradeBot(native)
+                cache_measurements = {}
+                original_cache = bot.dataprovider._set_cached_df
+
+                def measured_cache(pair, timeframe, dataframe, candle_type):
+                    original_cache(pair, timeframe, dataframe, candle_type)
+                    stored, _ = bot.dataprovider.get_analyzed_dataframe(pair, timeframe)
+                    expected_tail = dataframe.tail(2)
+                    if not stored.equals(expected_tail) or not stored.dtypes.equals(
+                        expected_tail.dtypes
+                    ):
+                        raise ValueError("Analyzed cache changed native tail values or precision")
+                    cache_measurements[pair] = {
+                        "full_bytes": int(dataframe.memory_usage(deep=True).sum()),
+                        "stored_bytes": int(stored.memory_usage(deep=True).sum()),
+                    }
+
+                stack.enter_context(patch.object(
+                    bot.dataprovider, "_set_cached_df", measured_cache,
+                ))
                 expected = 36 if market == "spot" else 80
                 print(json.dumps({"phase": "native_analysis", "market": market}), flush=True)
                 analyze_pipeline(bot, expected)
@@ -244,6 +265,11 @@ def run(market, folder, hold_seconds=300):
                     "transport": counters, "trade_loop_started": False,
                     "original_ledger_modified": False, "resource_pipeline_passed": True,
                     "scope": "Native initialization and analysis only; no execution-loop evidence",
+                    "analyzed_cache": {
+                        "full_bytes": sum(r["full_bytes"] for r in cache_measurements.values()),
+                        "stored_bytes": sum(r["stored_bytes"] for r in cache_measurements.values()),
+                        "exact_tail_values_and_dtypes": True,
+                    },
                 }
                 (folder / "ready.json").write_text(json.dumps(result, indent=2))
                 print(json.dumps(result), flush=True)

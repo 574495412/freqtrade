@@ -140,6 +140,8 @@ Environment=TZ=Asia/Shanghai
 Environment=OPENBLAS_NUM_THREADS=1
 Environment=OMP_NUM_THREADS=1
 Environment=MKL_NUM_THREADS=1
+Environment=MALLOC_ARENA_MAX=2
+Environment=MALLOC_TRIM_THRESHOLD_=131072
 ExecStart={root}/.venv-paper/bin/python -B -m {module} {args}
 Restart=no
 RestartSec=180

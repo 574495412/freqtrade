@@ -26,6 +26,9 @@ class NFIManualFlatBoost(NFIFlatTopBoostPaper):
         if self.config["trading_mode"].value == "futures" and not self._pool(datetime.now(UTC)):
             raise ValueError("A current closed-UTC daily pool is required")
         NostalgiaForInfinityX8.bot_start(self, **kwargs)
+        # Pinned upstream callbacks read only iloc[-1], iloc[-2] and len < 2.
+        # Full raw history still enters every indicator/signal calculation.
+        self.dp.set_analyzed_cache_limit(2)
 
     def _pool(self, now):
         return snapshot_pairs(

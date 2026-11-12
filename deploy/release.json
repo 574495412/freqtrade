@@ -23,9 +23,10 @@
     "deploy/runtime_recovery_20261111/io.freqtrade.live.futures.plist": "78c6c26f564ec7fb87971ae32d86a4f9126b432c4e779952df52c42b50530b17",
     "deploy/live_prepare_20261109/notification_monitor.py": "b7322afdbdeaedda2823c335c1ff52e1a98b26777cd4b830202b29ec162f01e5",
     "deploy/live_prepare_20261109/preflight.py": "80c36156dfd48d24be8d95450e3c1046992699c87e69a5931516deda41b598c9",
-    "deploy/aliyun_20261111/systemd.py": "5677cb5585bdc00eeedb49dc9e978a924fbae1e7d03ac479477533771ee8b0a1",
+    "deploy/aliyun_20261111/systemd.py": "6632efa50a32afebed652226d0cfb9f6360d02c2b4ab61042a53b813b0c5f092",
     "deploy/mainnet_100_20261109/live_selector.py": "1d5904c9de19652b7db7f226436163f9aac90f240808c6fabc36b71fc7bcb39f",
-    "deploy/aliyun_20261111/native_probe.py": "91773878bd1d3aebac6d77eb8cc6b4c4bd918a8e8590a18664e25063a7687854"
+    "deploy/aliyun_20261111/native_probe.py": "8e358f3fd822e4da2629f5dd0c6eb55b0240d496bb340b46710ade54da4f163d",
+    "freqtrade/data/dataprovider.py": "3397ba37d934c8efbc0fec9a2d40891992f58ff9749ac4b2f23a3450a4fd10d4"
   },
   "capital_per_market_usdt": 1000,
   "markets": [
@@ -48,6 +49,11 @@
       "upstream_sha256": "37c31dce2a4cd73f3f929c341d7ac3b848417657050cc563a881ad5db526f4b5",
       "local_sha256": "c57a33fe556ab061abeafefd38c6cd3810cf8f6064ab0852cc5e464cfdae40f1",
       "reason": "Native Binance initializer installs opt-in persistent shared request budget/cooldown/public cache; strategy/account semantics unchanged."
+    },
+    "freqtrade/data/dataprovider.py": {
+      "upstream_sha256": "3222d862fea2ca9dd566063b83845f99c421ba4f5eb20773ba5e64be68b0ba0e",
+      "local_sha256": "3397ba37d934c8efbc0fec9a2d40891992f58ff9749ac4b2f23a3450a4fd10d4",
+      "reason": "Explicit audited live-only post-analysis cache retention; full raw history and numeric precision unchanged, default and historical storage unchanged."
     }
   },
   "request_guard_policy": {

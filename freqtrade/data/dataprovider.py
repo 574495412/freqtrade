@@ -49,6 +49,7 @@ class DataProvider:
         self._pairlists = pairlists
         self.__rpc = rpc
         self.__cached_pairs: dict[PairWithTimeframe, tuple[DataFrame, datetime]] = {}
+        self.__analyzed_cache_limit: int | None = None
         self.__slice_index: dict[str, int] = {}
         self.__slice_date: datetime | None = None
 
@@ -98,8 +99,31 @@ class DataProvider:
         :param candle_type: Candle type to use (spot, futures, funding_rate, ...)
                             Must match the trading mode.
         """
+        if self.__analyzed_cache_limit is not None:
+            # A copy is essential: a tail view retains the complete indicator
+            # blocks. Raw OHLCV and indicator computation remain untouched.
+            dataframe = dataframe.tail(self.__analyzed_cache_limit).copy()
         pair_key = (pair, timeframe, candle_type)
         self.__cached_pairs[pair_key] = (dataframe, datetime.now(UTC))
+
+    def set_analyzed_cache_limit(self, candles: int) -> None:
+        """Opt in to bounded post-analysis storage for an audited live strategy.
+
+        The strategy must prove every callback's history requirement. Historical
+        evaluation and full-history API/producer consumers retain default behavior.
+        Set before the first analysis; this never truncates raw input candles.
+        """
+        if (
+            type(candles) is not int
+            or candles < 2
+            or self.runmode not in (RunMode.LIVE, RunMode.DRY_RUN)
+            or self.__cached_pairs
+            or self._config.get("api_server", {}).get("enabled")
+            or self._config.get("disable_dataframe_checks", False)
+            or self.external_data_enabled
+        ):
+            raise ValueError("Analyzed cache limit requires an isolated live consumer contract")
+        self.__analyzed_cache_limit = candles
 
     # For multiple producers we will want to merge the pairlists instead of overwriting
     def _set_producer_pairs(self, pairlist: list[str], producer_name: str = "default"):
@@ -401,7 +425,8 @@ class DataProvider:
 
     def get_analyzed_dataframe(self, pair: str, timeframe: str) -> tuple[DataFrame, datetime]:
         """
-        Retrieve the analyzed dataframe. Returns the full dataframe in trade mode (live / dry),
+        Retrieve the analyzed dataframe. Returns the stored dataframe in trade mode (live / dry),
+        full history by default, or the strategy's explicitly audited cache limit,
         and the last 1000 candles (up to the time evaluated at this moment) in all other modes.
         :param pair: pair to get the data for
         :param timeframe: timeframe to get data for
