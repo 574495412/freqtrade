@@ -93,7 +93,7 @@ def rulebook(payload, exchange, config):
     return module.RuleBook(payload, exchange, SimpleNamespace(), config)
 
 
-def main():
+def main(*, force_refresh=False):
     from deploy.nfi80_flatboost.launch import verify
 
     verify()
@@ -103,7 +103,9 @@ def main():
     fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
     now = datetime.now(UTC)
     day = pd.Timestamp(now).normalize()
-    if SNAPSHOT.exists():
+    # Explicit engineering recomputation still runs every source, identity and
+    # closed-UTC input gate. Scheduled callers retain the same-day shortcut.
+    if SNAPSHOT.exists() and not force_refresh:
         current = read(SNAPSHOT)
         if (
             current["policy_sha256"] == sha(HERE / "policy.json")

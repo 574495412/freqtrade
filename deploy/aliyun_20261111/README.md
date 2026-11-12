@@ -27,6 +27,28 @@ state. A regression exercises the shipped source manifest through the real
 manual gate using isolated private fixtures. Keep startup held until a full
 native daily recomputation and combined worker capacity checks pass.
 
+The corrected full daily recomputation passed at 14:26 UTC in an isolated
+600-MiB diagnostic child under the unchanged aggregate 900-MiB ceiling. Its
+sampled peak was 364716032 bytes (about 348 MiB), exceeding the previous selector
+300-MiB child ceiling. The 300-MiB attempt timed out after five minutes at its
+250-MiB soft threshold; that failure is retained. The revised selector candidate
+uses 400/450 MiB soft/hard bounds and 40% CPU, still under the same aggregate
+ceiling. Runtime validation of this revision and combined workloads is pending.
+
+`native_probe.py` measures native initialization and two full candle/indicator
+analysis cycles using a fresh database and private directory. It requires the
+held aggregate cgroup, blocks non-GET HTTP transport plus native order mutation,
+and never calls the native startup or trade loop. Original credentials are read
+through the existing configuration overlay, without copying them to the probe.
+RPC and notifications are disabled in the isolated process. Successful probes
+are analysis-pipeline capacity evidence only; actual live heartbeats, account
+reconciliation and order protection remain separate recovery requirements.
+The native publisher accepts an explicit `force_refresh=True` for resource
+recomputation of a valid same-day pool. Its default scheduled behavior still
+deduplicates completed UTC days; source/identity/closed-candle gates and selection
+rules remain identical. This allows combined resource tests without hiding the
+currently valid published snapshot from other readers.
+
 The user requested migration of the existing Freqtrade live services to the ECS
 instance visible in Alibaba Cloud Client, `i-j6c21s3zs1jgm5rpgg5l`, public address
 `47.239.218.211` (Hong Kong). No new instance was purchased or created.
@@ -183,7 +205,7 @@ capacity budget. The same-day selector shortcut is insufficient capacity evidenc
 | Spot | 600 / 650 MiB | 256 MiB | 60% of one CPU |
 | Futures | 575 / 600 MiB | 256 MiB | 60% of one CPU |
 | Notifications | 80 / 120 MiB | 64 MiB | 10% of one CPU |
-| Selector | 250 / 300 MiB | 128 MiB | 20% of one CPU |
+| Selector | 400 / 450 MiB | 128 MiB | 40% of one CPU |
 
 These are child ceilings, additionally constrained by the aggregate slice.
 If native cycles cannot finish within them, preserve/reconcile the latest account

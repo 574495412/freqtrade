@@ -116,7 +116,7 @@ def unit(name, module, args="", root=REMOTE_ROOT):
         "spot": (600, 650, 256, 60),
         "futures": (575, 600, 256, 60),
         "notifications": (80, 120, 64, 10),
-        "selector": (250, 300, 128, 20),
+        "selector": (400, 450, 128, 40),
     }[name]
     return f"""[Unit]
 Description=Existing Freqtrade live {name}

@@ -4,6 +4,8 @@
 import copy
 import hashlib
 import json
+import os
+from datetime import UTC, datetime, timedelta
 
 import pytest
 
@@ -54,3 +56,39 @@ def test_no_runtime_keeps_existing_transport_and_direct_override_is_narrow(tmp_p
     assert result["max_open_trades"] == 12
     assert result["exchange"]["ccxt_config"] == {"options": {"x": 1}}
     assert result["exchange"]["ccxt_async_config"] == {}
+
+
+@pytest.mark.parametrize("force_refresh", [False, True])
+def test_explicit_recompute_retains_pinned_input_gate_and_default_deduplication(
+    tmp_path, monkeypatch, force_refresh,
+):
+    from deploy.nfi80_flatboost import launch
+
+    now = datetime.now(UTC)
+    path = tmp_path / "pairs.json"
+    path.write_text(json.dumps({
+        "decision_day_utc": now.date().isoformat(),
+        "valid_until_utc": (now + timedelta(days=1)).isoformat(),
+        "policy_sha256": selector.sha(selector.HERE / "policy.json"),
+    }))
+    monkeypatch.setattr(selector, "STATE", tmp_path)
+    monkeypatch.setattr(selector, "SNAPSHOT", path)
+    monkeypatch.setattr(launch, "verify", lambda: None)
+    descriptors = []
+    monkeypatch.setattr(selector.fcntl, "flock", lambda fd, flags: descriptors.append(fd))
+
+    def checked(record):
+        raise RuntimeError("PINNED_INPUT_GATE_REACHED")
+
+    monkeypatch.setattr(selector, "checked", checked)
+    previous = os.umask(0o077)
+    try:
+        if force_refresh:
+            with pytest.raises(RuntimeError, match="PINNED_INPUT_GATE_REACHED"):
+                selector.main(force_refresh=True)
+        else:
+            selector.main()
+    finally:
+        os.umask(previous)
+        for descriptor in descriptors:
+            os.close(descriptor)
