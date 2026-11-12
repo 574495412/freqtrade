@@ -17,6 +17,8 @@ from datetime import UTC, datetime
 from pathlib import Path
 from unittest.mock import patch
 
+from deploy.aliyun_20261111.systemd import AGGREGATE_HIGH_MIB, AGGREGATE_MAX_MIB
+
 
 ROOT = Path(__file__).resolve().parents[2]
 STATE = ROOT / "user_data/deployment"
@@ -112,8 +114,8 @@ def require_cgroup():
     end = parts.index("freqtrade-live.slice") + 1
     group = Path("/sys/fs/cgroup").joinpath(*parts[1:end])
     if (
-        int((group / "memory.max").read_text()) != 900 * 1024**2
-        or int((group / "memory.high").read_text()) != 768 * 1024**2
+        int((group / "memory.max").read_text()) != AGGREGATE_MAX_MIB * 1024**2
+        or int((group / "memory.high").read_text()) != AGGREGATE_HIGH_MIB * 1024**2
     ):
         raise ValueError("Expected the reviewed aggregate cgroup budget")
 

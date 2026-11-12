@@ -14,6 +14,13 @@ disabled probe RPC sections lacked schema-required fields. Those isolated
 diagnostic fields are corrected and checked against the native schema; that
 attempt establishes no workload-capacity result.
 
+The corrected sequential diagnostic completed 36-pair spot analysis twice at
+14:56 UTC. Starting futures afterward triggered the pressure guard at 14:57 UTC
+with no noncore jobs, no additional OOM and unchanged live ledgers. The next
+candidate raises only the shared soft threshold from 768 to 832 MiB, retaining
+the kernel-tested 900-MiB hard ceiling. This tests whether early reclaim caused
+the initialization stall; it is not a capacity pass or trading admission.
+
 The user reported another memory exhaustion/server outage after the historical
 acceptance below. After recovery, ECS code `ff62a1a12` installed the aggregate
 limit and startup hold. On 2026-11-12 at 13:58 UTC all four service MainPIDs were
@@ -208,7 +215,7 @@ default and disappears on reboot. The helper never grants admission or starts
 a worker. A stop is not an account liquidation; reconcile owned positions and
 exchange protection separately through authenticated reads.
 
-The aggregate ceiling is MemoryHigh=768 MiB, MemoryMax=900 MiB,
+The candidate aggregate ceiling is MemoryHigh=832 MiB, MemoryMax=900 MiB,
 MemorySwapMax=256 MiB, CPUQuota=100% of one CPU and TasksMax=192. This constrains
 the entire deployment even when child ceilings sum higher. It does not establish
 that both workers fit, nor protect against unrelated applications consuming the

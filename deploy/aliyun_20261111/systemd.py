@@ -13,6 +13,8 @@ from pathlib import Path
 REMOTE_ROOT = Path("/opt/freqtrade")
 SYSTEMD_DIRECTORY = Path("/etc/systemd/system")
 ADMISSION = Path("/run/freqtrade-live-admitted")
+AGGREGATE_HIGH_MIB = 832
+AGGREGATE_MAX_MIB = 900
 SERVICES = tuple(f"freqtrade-live-{name}.service" for name in (
     "spot", "futures", "notifications", "selector",
 ))
@@ -20,13 +22,13 @@ SERVICES = tuple(f"freqtrade-live-{name}.service" for name in (
 
 def slice_unit():
     """An aggregate ceiling, independent of the sum of child ceilings."""
-    return """[Unit]
+    return f"""[Unit]
 Description=Aggregate Freqtrade host resource protection
 [Slice]
 MemoryAccounting=true
 CPUAccounting=true
-MemoryHigh=768M
-MemoryMax=900M
+MemoryHigh={AGGREGATE_HIGH_MIB}M
+MemoryMax={AGGREGATE_MAX_MIB}M
 MemorySwapMax=256M
 CPUQuota=100%
 TasksMax=192
