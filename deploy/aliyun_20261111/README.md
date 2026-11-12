@@ -15,6 +15,17 @@ success and measures actual cache bytes. Runtime capacity is still pending.
 glibc allocation arenas and trim thresholds are bounded in the systemd
 environment; numeric types, strategy parameters and account settings do not change.
 
+The first ECS cache revision reduced spot analyzed-cache bytes from 68000476 to
+140940 with exact tail values/dtypes, but sequential dual-engine initialization
+still hit the pressure guard at 15:20 UTC. No additional OOM or ledger mutation
+occurred. The next candidate explicitly collects unreachable temporaries and
+returns free glibc heap pages after initialization/full analysis, recording RSS
+before/after. Unchanged-candle loops skip this reclamation. This changes memory
+lifetime only; native indicator/entry/exit code remains inherited. See
+[Python GC](https://docs.python.org/3.12/library/gc.html) and
+[Linux malloc_trim](https://www.man7.org/linux/man-pages/man3/malloc_trim.3.html).
+Its actual savings and dual-engine capacity are pending native verification.
+
 At 15:03 UTC the 832-MiB soft / 900-MiB hard sequential diagnostic stopped
 automatically after sustained memory pressure. No selector or notification
 reserve ran. Spot completed two full 36-pair analysis cycles; futures had not

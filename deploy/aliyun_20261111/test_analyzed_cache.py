@@ -4,11 +4,13 @@
 import ast
 from datetime import UTC, datetime
 from pathlib import Path
+from types import SimpleNamespace
 
 import numpy as np
 import pandas as pd
 import pytest
 
+from deploy.aliyun_20261111.memory import analysis_required
 from freqtrade.data.dataprovider import DataProvider
 from freqtrade.enums import CandleType, RunMode, TradingMode
 from freqtrade.strategy import IStrategy
@@ -117,6 +119,27 @@ def test_every_pinned_nfi_callback_reads_only_the_last_two_analyzed_rows():
                 assert isinstance(parent, ast.Call) and ast.unparse(parent.func) == "len"
                 compare = parents[parent]
                 assert isinstance(compare, ast.Compare)
-                assert all(isinstance(v, ast.Constant) and v.value in (1, 2)
-                           for v in compare.comparators)
+                assert ast.unparse(compare) in (
+                    "len(df) < 2", "len(df) >= 1", "len(df) >= 2",
+                )
     assert callbacks == 16
+
+
+@pytest.mark.parametrize("new_candle,only_new,expected", [
+    (False, True, False), (True, True, True), (False, False, True),
+])
+def test_allocation_check_keeps_raw_history_and_recognizes_completed_analysis(
+    new_candle, only_new, expected,
+):
+    raw = pd.DataFrame({"date": pd.date_range("2026-11-01", periods=800, freq="5min")})
+    cached = raw.tail(2).copy()
+    if new_candle:
+        raw.loc[799, "date"] += pd.Timedelta(minutes=5)
+    dp = SimpleNamespace(
+        ohlcv=lambda *args, **kwargs: raw,
+        get_analyzed_dataframe=lambda *args: (cached, None),
+    )
+    strategy = SimpleNamespace(process_only_new_candles=only_new, dp=dp, timeframe="5m")
+    saved = raw.copy()
+    assert analysis_required(strategy, ["BTC/USDT"]) is expected
+    pd.testing.assert_frame_equal(raw, saved)

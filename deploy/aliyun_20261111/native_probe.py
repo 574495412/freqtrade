@@ -254,7 +254,10 @@ def run(market, folder, hold_seconds=300):
                     bot.dataprovider, "_set_cached_df", measured_cache,
                 ))
                 expected = 36 if market == "spot" else 80
-                print(json.dumps({"phase": "native_analysis", "market": market}), flush=True)
+                print(json.dumps({
+                    "phase": "native_analysis", "market": market,
+                    "heap_after_initialization": bot.strategy._last_memory_reclaim,
+                }), flush=True)
                 analyze_pipeline(bot, expected)
                 if counters["blocked_writes"]:
                     raise ProbeWriteBlocked("Unexpected write was attempted")
@@ -270,6 +273,7 @@ def run(market, folder, hold_seconds=300):
                         "stored_bytes": sum(r["stored_bytes"] for r in cache_measurements.values()),
                         "exact_tail_values_and_dtypes": True,
                     },
+                    "heap_after_analysis": bot.strategy._last_memory_reclaim,
                 }
                 (folder / "ready.json").write_text(json.dumps(result, indent=2))
                 print(json.dumps(result), flush=True)

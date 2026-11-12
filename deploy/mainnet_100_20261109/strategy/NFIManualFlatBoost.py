@@ -29,6 +29,19 @@ class NFIManualFlatBoost(NFIFlatTopBoostPaper):
         # Pinned upstream callbacks read only iloc[-1], iloc[-2] and len < 2.
         # Full raw history still enters every indicator/signal calculation.
         self.dp.set_analyzed_cache_limit(2)
+        from deploy.aliyun_20261111.memory import reclaim_heap
+
+        self._last_memory_reclaim = reclaim_heap()
+
+    def analyze(self, pairs):
+        from deploy.aliyun_20261111.memory import analysis_required, reclaim_heap
+
+        allocated = analysis_required(self, pairs)
+        try:
+            return super().analyze(pairs)
+        finally:
+            if allocated:
+                self._last_memory_reclaim = reclaim_heap()
 
     def _pool(self, now):
         return snapshot_pairs(
