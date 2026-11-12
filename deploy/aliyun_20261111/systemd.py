@@ -15,6 +15,10 @@ SYSTEMD_DIRECTORY = Path("/etc/systemd/system")
 ADMISSION = Path("/run/freqtrade-live-admitted")
 AGGREGATE_HIGH_MIB = 832
 AGGREGATE_MAX_MIB = 900
+RESOURCE_LIMITS = {
+    "spot": (600, 650, 256, 60), "futures": (575, 600, 256, 60),
+    "notifications": (80, 120, 64, 10), "selector": (400, 450, 128, 40),
+}
 SERVICES = tuple(f"freqtrade-live-{name}.service" for name in (
     "spot", "futures", "notifications", "selector",
 ))
@@ -114,12 +118,7 @@ def unit(name, module, args="", root=REMOTE_ROOT):
     extra = f" {root}/deploy/nfi80_selected" if selector else ""
     # Child limits alone do not protect a shared host. Every process must also
     # belong to the aggregate slice and remain held until reviewed admission.
-    high, maximum, swap, cpu = {
-        "spot": (600, 650, 256, 60),
-        "futures": (575, 600, 256, 60),
-        "notifications": (80, 120, 64, 10),
-        "selector": (400, 450, 128, 40),
-    }[name]
+    high, maximum, swap, cpu = RESOURCE_LIMITS[name]
     after = "network-online.target"
     startup = ""
     if name == "futures":

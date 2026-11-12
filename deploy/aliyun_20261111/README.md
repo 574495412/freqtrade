@@ -1,6 +1,24 @@
 # Alibaba Cloud ECS migration preparation
 
-Status: **KERNEL AGGREGATE LIMIT VERIFIED; CORE CAPACITY FAILED; STARTUP HELD**.
+Status: **KERNEL AGGREGATE LIMIT VERIFIED; MEMORY OPTIMIZATION CANDIDATE; STARTUP HELD**.
+
+The heap/checked-bytecode revision completed both native analysis pipelines
+(36 spot / 80 futures) twice, followed by both two-cycle rechecks at 15:37 UTC.
+It had no additional OOM, no original-ledger changes and pressure avg10=0 at the
+end, but reached the original 600-second deadline before its final continuous
+60-second stable observation completed. Its `passed=false, reason=deadline`
+record is preserved; it is not operational admission. This revision preceded
+the lazy SciPy and shared-compute-lock changes.
+
+The reproducible `capacity` controller runs under the pinned Python interpreter
+with every real service/timer held. It verifies source and kernel budgets,
+builds checked bytecode in a bounded transient unit, initializes spot then futures,
+performs full analysis rechecks, and requires 60 stable seconds. Only then does
+it add a 64-MiB notification reserve and execute the full native selector in the
+idle window, followed by another 60 stable seconds. A 1200-second deadline allows
+both observation windows. Sustained reclaim, host headroom, changed kernel limits,
+OOM, early core exit or changed original ledger hashes prevent success. Cleanup
+stops only its own transient units. It never creates the live admission marker.
 
 The next memory candidate extends native DataProvider with an explicit live-only
 post-analysis cache limit. Default/historical storage is unchanged. The pinned
