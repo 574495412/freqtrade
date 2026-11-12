@@ -140,6 +140,32 @@ def analyze_pipeline(bot, expected):
                 raise ValueError("Incomplete native candle/indicator analysis")
 
 
+def unchanged_ledger(original, before):
+    with (original / "trades.sqlite").open("rb") as ledger:
+        if hashlib.file_digest(ledger, "sha256").digest() != before:
+            raise ValueError("Original ledger changed during resource probe")
+
+
+def hold_and_recheck(bot, expected, folder, counters, original, before, seconds):
+    deadline = time.monotonic() + seconds
+    rechecked = False
+    while time.monotonic() < deadline:
+        if not rechecked and (folder.parent / "recheck").exists():
+            analyze_pipeline(bot, expected)
+            unchanged_ledger(original, before)
+            if counters["blocked_writes"]:
+                raise ProbeWriteBlocked("Unexpected write was attempted")
+            result = {
+                "at_utc": datetime.now(UTC).isoformat(), "market": folder.name,
+                "pairs_analyzed": expected, "full_analysis_cycles": 2,
+                "concurrent_recheck_passed": True, "transport": counters,
+            }
+            (folder / "rechecked.json").write_text(json.dumps(result, indent=2))
+            print(json.dumps(result), flush=True)
+            rechecked = True
+        time.sleep(0.5)
+
+
 def run(market, folder, hold_seconds=300):
     if Path.cwd().resolve() != ROOT or Path("/run/freqtrade-live-admitted").exists():
         raise ValueError("Run in the held ECS checkout")
@@ -198,9 +224,7 @@ def run(market, folder, hold_seconds=300):
                 analyze_pipeline(bot, expected)
                 if counters["blocked_writes"]:
                     raise ProbeWriteBlocked("Unexpected write was attempted")
-                with (original / "trades.sqlite").open("rb") as ledger:
-                    if hashlib.file_digest(ledger, "sha256").digest() != ledger_before:
-                        raise ValueError("Original ledger changed during resource probe")
+                unchanged_ledger(original, ledger_before)
                 result = {
                     "at_utc": datetime.now(UTC).isoformat(), "market": market,
                     "pairs_analyzed": expected, "full_analysis_cycles": 2,
@@ -210,7 +234,9 @@ def run(market, folder, hold_seconds=300):
                 }
                 (folder / "ready.json").write_text(json.dumps(result, indent=2))
                 print(json.dumps(result), flush=True)
-                time.sleep(hold_seconds)
+                hold_and_recheck(
+                    bot, expected, folder, counters, original, ledger_before, hold_seconds,
+                )
                 return result
             finally:
                 if bot is not None:

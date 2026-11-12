@@ -43,6 +43,10 @@ through the existing configuration overlay, without copying them to the probe.
 RPC and notifications are disabled in the isolated process. Successful probes
 are analysis-pipeline capacity evidence only; actual live heartbeats, account
 reconciliation and order protection remain separate recovery requirements.
+After initialization, an explicit private `recheck` marker triggers another two
+full analysis cycles while the daily publisher runs, so the combined test covers
+analysis allocation bursts as well as retained idle process memory. Original
+ledger hashes must still match before publishing either success marker.
 The native publisher accepts an explicit `force_refresh=True` for resource
 recomputation of a valid same-day pool. Its default scheduled behavior still
 deduplicates completed UTC days; source/identity/closed-candle gates and selection

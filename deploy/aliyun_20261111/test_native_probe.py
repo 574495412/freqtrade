@@ -2,8 +2,11 @@
 # ruff: noqa: S101
 
 import asyncio
+import hashlib
+import json
 from copy import deepcopy
 from pathlib import Path
+from types import SimpleNamespace
 
 import aiohttp
 import pytest
@@ -102,3 +105,41 @@ def test_every_http_transport_blocks_writes_before_original_is_called(monkeypatc
         assert counters["get_calls"] == 4
     assert requests.Session.request is sync
     assert AsyncExchange.fetch is asynchronous
+
+
+@pytest.mark.parametrize("ledger_changed", [False, True])
+def test_concurrent_recheck_cannot_publish_success_after_original_ledger_changes(
+    tmp_path, monkeypatch, ledger_changed,
+):
+    from deploy.aliyun_20261111 import native_probe
+
+    original = tmp_path / "original"
+    original.mkdir()
+    ledger = original / "trades.sqlite"
+    ledger.write_bytes(b"original ledger")
+    before = hashlib.sha256(ledger.read_bytes()).digest()
+    folder = tmp_path / "native-capacity-test/spot"
+    folder.mkdir(parents=True)
+    (folder.parent / "recheck").touch()
+    clock = {"now": 0}
+
+    def sleep(seconds):
+        clock["now"] += 2
+
+    monkeypatch.setattr(native_probe, "time", SimpleNamespace(
+        monotonic=lambda: clock["now"], sleep=sleep,
+    ))
+
+    def analyze(bot, expected):
+        if ledger_changed:
+            ledger.write_bytes(b"unexpected state modification")
+
+    monkeypatch.setattr(native_probe, "analyze_pipeline", analyze)
+    arguments = (object(), 36, folder, {"blocked_writes": 0}, original, before, 1)
+    if ledger_changed:
+        with pytest.raises(ValueError, match="Original ledger changed"):
+            native_probe.hold_and_recheck(*arguments)
+        assert not (folder / "rechecked.json").exists()
+    else:
+        native_probe.hold_and_recheck(*arguments)
+        assert json.loads((folder / "rechecked.json").read_text())["concurrent_recheck_passed"]
