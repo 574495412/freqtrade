@@ -95,10 +95,23 @@ def run(refresh=None, send=notify):
                 "updated": False, "pairs": 80,
                 "valid_until_utc": previous["valid_until_utc"], "cached_inputs": True,
             }
-        from deploy.mainnet_100_20261109.manual import verify
-        from deploy.nfi80_selected.selector import main as refresh
+        from deploy.aliyun_20261111.compute import selector_slot
 
-        verify()
+        with selector_slot() as deferred:
+            if deferred:
+                return {
+                    "updated": False, "deferred": deferred,
+                    "pairs": len(previous.get("pairs", [])),
+                }
+            from deploy.mainnet_100_20261109.manual import verify
+            from deploy.nfi80_selected.selector import main as refresh
+
+            verify()
+            return publish(refresh, send, url, previous)
+    return publish(refresh, send, url, previous)
+
+
+def publish(refresh, send, url, previous):
     try:
         # Existing pinned native input workflow, shared rate guard and publisher lock.
         # It creates no paper ledger/worker and loads no live exchange credentials.

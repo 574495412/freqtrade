@@ -4,7 +4,7 @@ import copy
 import os
 from pathlib import Path
 
-from deploy.aliyun_20261111.systemd import slice_unit, unit
+from deploy.aliyun_20261111.systemd import slice_unit, timer_unit, unit
 from deploy.mainnet_100_20261109.capital import wallet_class
 from deploy.mainnet_100_20261109.manual import verify
 from deploy.mainnet_100_20261109.prepare import ROOT, STATE
@@ -62,15 +62,7 @@ def prepare(destination, remote_root=REMOTE_ROOT):
         (destination / ("freqtrade-live-" + name + ".service")).write_text(
             unit(name, module, root=remote_root)
         )
-    (destination / "freqtrade-live-selector.timer").write_text("""[Unit]
-Description=Refresh existing live daily-universe inputs
-[Timer]
-OnBootSec=30
-OnUnitActiveSec=300
-Unit=freqtrade-live-selector.service
-[Install]
-WantedBy=timers.target
-""")
+    (destination / "freqtrade-live-selector.timer").write_text(timer_unit())
     base = read(ROOT / "deploy/release.json")
     base["request_guard_policy"]["private_path"] = str(
         remote_root / "user_data/deployment/binance-request-guard.json"

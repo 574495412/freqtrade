@@ -35,6 +35,19 @@ compiling the 3-MiB upstream strategy during live initialization. Caches retain
 Python's source-hash validation; changed source invalidates the cached bytecode.
 The `bytecode` helper forces conversion of pre-existing timestamp caches as well.
 
+The scheduling candidate uses one shared heavy-compute lock. Core workers take
+it only for actual indicator work; unchanged-candle trade-management loops stay
+available. Futures ExecStartPre waits for a fresh spot analysis marker matching
+both the current systemd MainPID and Linux process-start ticks. Stale PID files
+cannot admit futures initialization. The daily-input timer starts at second 75
+of each five-minute interval. Full selection additionally requires an idle lock,
+256 MiB effective group headroom, 656 MiB host availability and full-pressure
+avg10 below 1%. Only inactive file cache is discounted as reclaimable. Selection
+defers without notifications when admission is unavailable and has a 180-second
+runtime bound, ending before the next candle boundary if admitted in its
+75–105-second window. These are local operational extensions; native strategy
+and selection rules remain pinned. Runtime core/noncore validation is pending.
+
 At 15:03 UTC the 832-MiB soft / 900-MiB hard sequential diagnostic stopped
 automatically after sustained memory pressure. No selector or notification
 reserve ran. Spot completed two full 36-pair analysis cycles; futures had not

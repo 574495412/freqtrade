@@ -291,7 +291,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--market", choices=("spot", "futures"), required=True)
     parser.add_argument("--folder", type=Path, required=True)
-    parser.add_argument("--hold-seconds", type=int, default=300, choices=range(601))
+    parser.add_argument("--hold-seconds", type=int, default=300, choices=range(1801))
     args = parser.parse_args()
     try:
         run(args.market, args.folder, args.hold_seconds)

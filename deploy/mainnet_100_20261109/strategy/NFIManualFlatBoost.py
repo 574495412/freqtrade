@@ -34,14 +34,20 @@ class NFIManualFlatBoost(NFIFlatTopBoostPaper):
         self._last_memory_reclaim = reclaim_heap()
 
     def analyze(self, pairs):
+        from contextlib import nullcontext
+
+        from deploy.aliyun_20261111.compute import core_slot, publish_ready
         from deploy.aliyun_20261111.memory import analysis_required, reclaim_heap
 
         allocated = analysis_required(self, pairs)
-        try:
-            return super().analyze(pairs)
-        finally:
-            if allocated:
-                self._last_memory_reclaim = reclaim_heap()
+        with core_slot() if allocated else nullcontext():
+            try:
+                result = super().analyze(pairs)
+            finally:
+                if allocated:
+                    self._last_memory_reclaim = reclaim_heap()
+        publish_ready(self)
+        return result
 
     def _pool(self, now):
         return snapshot_pairs(

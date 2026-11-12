@@ -120,10 +120,19 @@ def unit(name, module, args="", root=REMOTE_ROOT):
         "notifications": (80, 120, 64, 10),
         "selector": (400, 450, 128, 40),
     }[name]
+    after = "network-online.target"
+    startup = ""
+    if name == "futures":
+        after += " freqtrade-live-spot.service"
+        startup = (
+            f"ExecStartPre={root}/.venv-paper/bin/python -B -m "
+            "deploy.aliyun_20261111.compute --wait-spot\nTimeoutStartSec=300\n"
+        )
+    runtime = "RuntimeMaxSec=180\n" if name == "selector" else ""
     return f"""[Unit]
 Description=Existing Freqtrade live {name}
 Wants=network-online.target
-After=network-online.target
+After={after}
 StartLimitIntervalSec=900
 StartLimitBurst=3
 ConditionPathExists={ADMISSION}
@@ -143,6 +152,7 @@ Environment=MKL_NUM_THREADS=1
 Environment=MALLOC_ARENA_MAX=2
 Environment=MALLOC_TRIM_THRESHOLD_=131072
 ExecStart={root}/.venv-paper/bin/python -B -m {module} {args}
+{startup}{runtime}\
 Restart=no
 RestartSec=180
 MemoryAccounting=true
@@ -166,6 +176,20 @@ WantedBy=multi-user.target
 """
 
 
+def timer_unit():
+    return f"""[Unit]
+Description=Daily input check outside native candle analysis window
+ConditionPathExists={ADMISSION}
+[Timer]
+OnCalendar=*-*-* *:01/5:15 UTC
+AccuracySec=1s
+Persistent=false
+Unit=freqtrade-live-selector.service
+[Install]
+WantedBy=timers.target
+"""
+
+
 def apply():
     """Install aggregate protection only while every live unit/timer is stopped."""
     if os.geteuid() != 0 or Path.cwd().resolve() != REMOTE_ROOT:
@@ -184,6 +208,9 @@ def apply():
     aggregate = receipt / "freqtrade-live.slice"
     aggregate.write_text(slice_unit())
     candidates = [aggregate]
+    timer = receipt / "freqtrade-live-selector.timer"
+    timer.write_text(timer_unit())
+    candidates.append(timer)
     for name, (module, args) in modules.items():
         candidate = receipt / f"freqtrade-live-{name}.service"
         candidate.write_text(unit(name, module, args))
