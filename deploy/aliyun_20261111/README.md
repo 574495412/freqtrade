@@ -1,6 +1,39 @@
 # Alibaba Cloud ECS migration preparation
 
-Status: **KERNEL AGGREGATE LIMIT VERIFIED; MEMORY OPTIMIZATION CANDIDATE; STARTUP HELD**.
+Status: **CORE LIVE RESTORED; NONCORE REFRESH RESOURCE GATED**.
+
+At 16:38 UTC on 2026-11-12 (00:38 Shanghai on November 13), both native live
+workers were RUNNING with fresh heartbeats and no observer faults. ECS execution
+source was `4061507eb`. The notification relay and selector timer were active.
+Observed group RAM was about 799 MiB, live-restoration peak about 832 MiB,
+host CPU 6.2% and host available memory about 583 MiB. The kernel retained
+900-MiB MemoryMax, 832-MiB MemoryHigh and 256-MiB MemorySwapMax. Automatic boot
+and automatic failure restart remain disabled. Private authenticated preflight,
+native heartbeat/ledger observations, delivery receipts and resource evidence
+are retained privately on ECS; they are not financial-return evidence.
+
+Restoration followed the user's explicit core-priority, noncore-staggering
+instruction: both native core pipelines/rechecks and the notification reserve
+stabilized; then all probes stopped and a full native selector recomputation ran
+independently before trading startup. That selector phase passed in 111 seconds
+with an approximately 404-MiB child peak and published the valid 80-pair pool.
+Source/config/account checks preceded notification, spot, then futures startup.
+Futures waited for the current spot process's completed native analysis. Fresh
+RUNNING heartbeats were observed for 90 stable seconds before timer release.
+The related 167 local tests and targeted Ruff checks passed.
+
+The earlier simultaneous-retention controller did **not** pass overall: its core
+phase passed, but full selection was deferred by memory admission until its
+deadline. That failure is preserved; it was not reclassified as a concurrent
+capacity pass. Current operational admission is phased core startup with
+noncore resource deferral. The daily timer may continue deferring a full new-day
+refresh while both engines retain their memory. If a snapshot expires before
+refresh completes, the existing NFI snapshot gate rejects new futures entries;
+existing trade management stays in the native worker. The observed snapshot
+expires at 00:00 UTC on November 13 (08:00 Shanghai). Continuous future refresh
+availability under both resident engines has **not** been established.
+
+Historical incident and rejected capacity observations follow.
 
 The heap/checked-bytecode revision completed both native analysis pipelines
 (36 spot / 80 futures) twice, followed by both two-cycle rechecks at 15:37 UTC.
