@@ -2,6 +2,35 @@
 
 Status: **CORE LIVE RESTORED; NONCORE REFRESH RESOURCE GATED**.
 
+Latest verification: **2026-11-13 10:11:46 Shanghai**. Both native workers were
+RUNNING without observer faults after more than 90 stable seconds. Spot PID
+3015 was retained; futures PID 5434 completed fresh 80-pair analysis. Current
+group RAM was 785.3 MiB, host CPU 3.5%, swap zero, and aggregate hard/soft limits
+remained 900/832 MiB. The historical synthetic OOM-kill counter stayed at one;
+this recovery added no OOM kill. Automatic boot/failure restart remain disabled.
+The futures ledger recorded one completed strategy trade, two filled orders and
+no remaining open trade/order; these observations are not return validation.
+
+The old snapshot expired at 08:00 Shanghai and blocked new futures entries.
+Fresh GET-only account reconciliation confirmed flat futures with no orders,
+flat spot and one unowned spot order, which was preserved. Futures alone was
+stopped while spot remained live. The existing pinned selector ran in its idle
+window, published decision day November 13 with closed inputs through November
+12, and futures then restarted. The pool expires **November 14 at 08:00
+Shanghai**. Private evidence is retained on ECS under
+`user_data/deployment/restore-today-20261113/`.
+
+ECS checkout is `da1184efc`; the retained spot process predates that checkout.
+This revision extracts the same SQLite admission state machine into a module
+without CCXT/pandas dependencies. Native clients retain their CCXT exception
+facade. The authenticated auxiliary preflight now uses the lightweight GET
+client, with the same persistent budgets, leases and cooldowns. Forty related
+tests and targeted Ruff/source-pin checks pass. This reduces preflight imports;
+it does **not** solve full-selector concurrency. The selector timer is active
+but remains resource gated, and reliable unattended new-day refresh alongside
+both resident engines is still unproven. A current restored pool must not be
+reported as completion of that outstanding scheduling/memory requirement.
+
 At 16:38 UTC on 2026-11-12 (00:38 Shanghai on November 13), both native live
 workers were RUNNING with fresh heartbeats and no observer faults. ECS execution
 source was `4061507eb`. The notification relay and selector timer were active.
