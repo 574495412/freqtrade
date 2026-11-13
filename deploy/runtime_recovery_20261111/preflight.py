@@ -2,14 +2,24 @@
 
 import hashlib
 import hmac
+import json
 import sqlite3
 from datetime import UTC, datetime
 from decimal import Decimal
+from pathlib import Path
 from urllib.parse import urlencode
 
-from deploy.mainnet_100_20261109.prepare import STATE
-from deploy.nfi80_selected.selector import read, save
-from freqtrade.exchange.request_guard import GuardedSession
+from deploy.nfi80_selected.launch import read
+from freqtrade.request_guard_http import GuardedSession
+
+
+STATE = Path(__file__).resolve().parents[2] / "user_data/deployment/mainnet-100-20261109"
+
+
+def save(path, value):
+    temporary = path.with_suffix(path.suffix + ".writing")
+    temporary.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n")
+    temporary.replace(path)
 
 
 def account_proxies(config):
