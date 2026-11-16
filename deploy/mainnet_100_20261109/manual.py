@@ -10,11 +10,17 @@ import fcntl
 import os
 import subprocess
 import sys
+from pathlib import Path
 
-from deploy.mainnet_100_20261109.capital import wallet_class
-from deploy.mainnet_100_20261109.prepare import HERE, ROOT, STATE, STRATEGY
+from deploy.mainnet_100_20261109.funding import validate_funding
 from deploy.nfi80_selected.launch import verify as verify_paper_source
 from deploy.nfi80_selected.selector import read, save, sha
+
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+STATE = ROOT / "user_data/deployment/mainnet-100-20261109"
+STRATEGY = "NFIManualFlatBoost"
 
 
 class ResearchAuditHold(RuntimeError):
@@ -61,7 +67,7 @@ def verify(*, allow_hold=False):
         if path.is_symlink() or path.stat().st_mode & 0o077 or sha(path) != digest:
             raise ValueError("Private100USDT configuration changed")
         config = read(path)
-        wallet_class(config)
+        validate_funding(config)
         credential_path = STATE / market / "credentials.json"
         if credential_path.is_symlink() or credential_path.stat().st_mode & 0o077:
             raise ValueError("Credential overlay must remain private and local")
@@ -84,6 +90,7 @@ def verify(*, allow_hold=False):
 def worker(market):
     # Only reached by the user's manual invocation, never during checks/tests.
     import freqtrade.freqtradebot as native_bot
+    from deploy.mainnet_100_20261109.capital import wallet_class
     from freqtrade.main import main as native_main
 
     verify()

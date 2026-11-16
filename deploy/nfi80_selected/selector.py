@@ -13,13 +13,6 @@ from datetime import UTC, datetime
 from pathlib import Path
 from types import SimpleNamespace
 
-import pandas as pd
-import rapidjson
-
-from freqtrade.enums import CandleType, RunMode
-from freqtrade.exchange.request_guard import GuardedSession
-from freqtrade.resolvers import ExchangeResolver
-
 
 ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
@@ -94,7 +87,13 @@ def rulebook(payload, exchange, config):
 
 
 def main(*, force_refresh=False):
+    import pandas as pd
+    import rapidjson
+
     from deploy.nfi80_flatboost.launch import verify
+    from freqtrade.enums import CandleType, RunMode
+    from freqtrade.exchange.request_guard import GuardedSession
+    from freqtrade.resolvers import ExchangeResolver
 
     verify()
     os.umask(0o077)
@@ -248,6 +247,13 @@ def main(*, force_refresh=False):
         )
     finally:
         exchange.close()
+
+
+def light_main(*, force_refresh=False, publish=True, now=None):
+    """Bounded live input backend; original pandas/CCXT path remains the reference."""
+    from deploy.nfi80_selected.light_selector import main as refresh
+
+    return refresh(force_refresh=force_refresh, publish=publish, now=now)
 
 
 if __name__ == "__main__":

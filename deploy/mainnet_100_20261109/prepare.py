@@ -76,6 +76,7 @@ def main():
             path.chmod(0o600)
     files = [
         "capital.py",
+        "funding.py",
         "prepare.py",
         "manual.py",
         "checks.py",

@@ -11,7 +11,8 @@ from deploy.aliyun_20261111 import compute, systemd
 
 @pytest.mark.parametrize("phase,capacity,reason", [
     (74, True, "outside_idle_window"), (75, True, None), (104, True, None),
-    (105, True, "outside_idle_window"), (80, False, "memory_or_pressure_admission"),
+    (164, True, None), (165, True, "outside_idle_window"),
+    (80, False, "memory_or_pressure_admission"),
 ])
 def test_selector_admits_only_an_idle_window_with_resource_headroom(
     tmp_path, monkeypatch, phase, capacity, reason,
@@ -35,6 +36,27 @@ def test_selector_never_queues_behind_core_analysis(tmp_path, monkeypatch):
         assert reason is None
 
 
+def test_selector_retries_within_window_without_holding_the_compute_lock(tmp_path, monkeypatch):
+    monkeypatch.setattr(compute, "ROOT", Path("/opt/freqtrade"))
+    monkeypatch.setattr(compute, "LOCK", tmp_path / "compute.lock")
+    monkeypatch.setattr(compute.time, "time", lambda: 80)
+    clock = {"now": 0}
+    monkeypatch.setattr(compute.time, "monotonic", lambda: clock["now"])
+    calls = []
+    monkeypatch.setattr(compute.fcntl, "flock", lambda fd, op: calls.append(op))
+    capacity = iter([False, True])
+    monkeypatch.setattr(compute, "selector_capacity", lambda: next(capacity))
+
+    def sleep(seconds):
+        assert calls[-1] == compute.fcntl.LOCK_UN
+        clock["now"] += seconds
+
+    monkeypatch.setattr(compute.time, "sleep", sleep)
+    with compute.selector_slot(wait_seconds=5) as reason:
+        assert reason is None
+    assert clock["now"] == 2
+
+
 @pytest.mark.parametrize("changed,expected", [
     ({}, True), ({"memory.max": str(950 * compute.MIB)}, False),
     ({"memory.current": str(950 * compute.MIB)}, False),
@@ -52,7 +74,7 @@ def test_kernel_headroom_excludes_only_inactive_file_cache(tmp_path, changed, ex
     info = tmp_path / "meminfo"
     info.write_text(f"MemAvailable: {800 * 1024} kB\n")
     assert compute.selector_capacity(tmp_path, info) is expected
-    info.write_text(f"MemAvailable: {640 * 1024} kB\n")
+    info.write_text(f"MemAvailable: {479 * 1024} kB\n")
     assert not compute.selector_capacity(tmp_path, info)
 
 
@@ -85,6 +107,6 @@ def test_futures_start_requires_matching_fresh_spot_process(
 def test_persistent_units_stagger_startup_and_bound_daily_selector_runtime():
     assert "compute --wait-spot" in systemd.unit("futures", "module")
     assert "freqtrade-live-spot.service" in systemd.unit("futures", "module")
-    assert "RuntimeMaxSec=180" in systemd.unit("selector", "module")
+    assert "RuntimeMaxSec=210" in systemd.unit("selector", "module")
     assert "OnCalendar=*-*-* *:01/5:15 UTC" in systemd.timer_unit()
     assert "OnBootSec=" not in systemd.timer_unit()

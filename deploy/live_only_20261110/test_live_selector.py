@@ -139,7 +139,7 @@ def test_new_day_still_uses_full_manual_gate_and_existing_publisher(prepared, mo
         calls.append("native_publisher")
         path.write_text(json.dumps({**data, "snapshot_id": "new"}))
 
-    monkeypatch.setattr(native_selector, "main", refresh)
+    monkeypatch.setattr(native_selector, "light_main", refresh)
     result = selector.run(send=lambda *args: calls.append("notify"))
     assert result["updated"]
     assert calls == ["source", "full_manual_gate", "native_publisher", "notify"]

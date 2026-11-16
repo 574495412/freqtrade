@@ -17,7 +17,7 @@ AGGREGATE_HIGH_MIB = 832
 AGGREGATE_MAX_MIB = 900
 RESOURCE_LIMITS = {
     "spot": (600, 650, 256, 60), "futures": (575, 600, 256, 60),
-    "notifications": (80, 120, 64, 10), "selector": (400, 450, 128, 40),
+    "notifications": (80, 120, 64, 10), "selector": (64, 80, 32, 40),
 }
 SERVICES = tuple(f"freqtrade-live-{name}.service" for name in (
     "spot", "futures", "notifications", "selector",
@@ -127,7 +127,7 @@ def unit(name, module, args="", root=REMOTE_ROOT):
             f"ExecStartPre={root}/.venv-paper/bin/python -B -m "
             "deploy.aliyun_20261111.compute --wait-spot\nTimeoutStartSec=300\n"
         )
-    runtime = "RuntimeMaxSec=180\n" if name == "selector" else ""
+    runtime = "RuntimeMaxSec=210\n" if name == "selector" else ""
     return f"""[Unit]
 Description=Existing Freqtrade live {name}
 Wants=network-online.target

@@ -97,14 +97,14 @@ def run(refresh=None, send=notify):
             }
         from deploy.aliyun_20261111.compute import selector_slot
 
-        with selector_slot() as deferred:
+        with selector_slot(wait_seconds=90) as deferred:
             if deferred:
                 return {
                     "updated": False, "deferred": deferred,
                     "pairs": len(previous.get("pairs", [])),
                 }
             from deploy.mainnet_100_20261109.manual import verify
-            from deploy.nfi80_selected.selector import main as refresh
+            from deploy.nfi80_selected.selector import light_main as refresh
 
             verify()
             return publish(refresh, send, url, previous)

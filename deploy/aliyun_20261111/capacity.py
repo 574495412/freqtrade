@@ -179,14 +179,14 @@ def main():  # noqa: C901 -- Keep the sequential admission state machine and cle
     selector_body = """
 import json,sys,traceback
 from deploy.aliyun_20261111.compute import selector_slot
-from deploy.aliyun_20261111.native_probe import readonly_transport
+from deploy.aliyun_20261111.selector_probe import readonly_public_transport
 try:
  with selector_slot() as reason:
   if reason:
    print(json.dumps({'deferred':reason}),flush=True);sys.exit(75)
-  with readonly_transport() as counters:
+  with readonly_public_transport() as counters:
    from deploy.mainnet_100_20261109.manual import verify
-   from deploy.nfi80_selected.selector import main
+   from deploy.nfi80_selected.selector import light_main as main
    verify();main(force_refresh=True)
    if counters['blocked_writes']:raise ValueError('Unexpected write attempt')
    print(json.dumps({'selector_pipeline_passed':True,'transport':counters}),flush=True)

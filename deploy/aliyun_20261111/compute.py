@@ -39,6 +39,8 @@ def selector_capacity(group=None, meminfo=Path("/proc/meminfo")):
     if int((group / "memory.max").read_text()) != 900 * MIB:
         return False
     current = int((group / "memory.current").read_text())
+    if current >= 900 * MIB:
+        return False
     stats = {key: int(value) for key, value in
              (row.split() for row in (group / "memory.stat").read_text().splitlines())}
     # Inactive file cache is reclaimable; do not count it as anonymous headroom use.
@@ -50,29 +52,42 @@ def selector_capacity(group=None, meminfo=Path("/proc/meminfo")):
                     if row.startswith("full "))
     full = float(next(item.split("=")[1] for item in pressure.split()
                       if item.startswith("avg10=")))
-    return high - used >= 256 * MIB and available >= 656 * MIB and full < 1
+    # The live backend uses public JSON and the shared lightweight admission
+    # module. Its 80-MiB hard child limit is additionally inside the 900-MiB
+    # aggregate; parity/capacity validation must precede installing this policy.
+    return high - used >= 80 * MIB and available >= 480 * MIB and full < 1
 
 
 @contextmanager
-def selector_slot():
+def selector_slot(wait_seconds=0):
     # Preserve existing local behavior; the ECS timer is the bounded deployment.
     if ROOT != Path("/opt/freqtrade"):
         yield None
         return
-    if not 75 <= time.time() % 300 < 105:
+    phase = time.time() % 300
+    if not 75 <= phase < 165:
         yield "outside_idle_window"
         return
     fd = lock_file()
     try:
-        try:
-            fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        except BlockingIOError:
-            yield "core_analysis_busy"
-            return
-        if not selector_capacity():
-            yield "memory_or_pressure_admission"
-            return
-        yield None
+        deadline = time.monotonic() + min(wait_seconds, 165 - phase)
+        while True:
+            reason = "core_analysis_busy"
+            try:
+                fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+            except BlockingIOError:
+                pass
+            else:
+                if selector_capacity():
+                    yield None
+                    return
+                reason = "memory_or_pressure_admission"
+                fcntl.flock(fd, fcntl.LOCK_UN)
+            if time.monotonic() >= deadline:
+                yield reason
+                return
+            # Do not queue on the core lock or keep it while waiting for RAM.
+            time.sleep(min(2, max(0, deadline - time.monotonic())))
     finally:
         os.close(fd)
 

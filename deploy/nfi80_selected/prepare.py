@@ -92,6 +92,8 @@ def main():
         "launch.py",
         "prepare.py",
         "selector.py",
+        "light_selector.py",
+        "input-projection.json",
         "selection-equivalence.json",
         "policy.json",
         "optimized-config.json",
