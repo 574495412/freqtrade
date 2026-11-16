@@ -246,7 +246,10 @@ def main(*, force_refresh=False, publish=True, now=None):
             remaining = deadline - time.monotonic()
             if remaining <= 3:
                 raise TimeoutError("Closed-input preparation deadline")
-            with GuardedSession(max_wait=min(10, remaining - 2)) as session:
+            # Public candles carry no expiring signature. Let an individual
+            # request wait within this bounded job's remaining budget; a short
+            # signed-diagnostic timeout can starve one of the four readers.
+            with GuardedSession(max_wait=max(0, remaining - 3)) as session:
                 session.trust_env = False
                 response = session.get(
                     "https://fapi.binance.com/fapi/v1/" + path,

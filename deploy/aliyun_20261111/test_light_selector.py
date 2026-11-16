@@ -203,7 +203,9 @@ def test_failed_attempt_retains_closed_inputs_and_never_replaces_pool(tmp_path, 
 
     class Session:
         def __init__(self, **kwargs):
-            pass
+            # This unsigned public reader must tolerate >10s contention without
+            # using an unbounded wait or changing the shared request policy.
+            assert 10 < kwargs["max_wait"] <= 135
 
         def __enter__(self):
             return self
