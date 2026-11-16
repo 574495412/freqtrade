@@ -241,6 +241,9 @@ def test_failed_attempt_retains_closed_inputs_and_never_replaces_pool(tmp_path, 
     snapshot = selector.read(Path(result["attempt"]) / "selected-snapshot.json")
     assert datetime.fromisoformat(snapshot["valid_until_utc"]) == day + timedelta(days=1)
     assert snapshot["decision_day_utc"] == day.date().isoformat()
+    replay = light.main(force_refresh=True, publish=False, now=day)
+    assert replay["attempt"] != result["attempt"]
+    assert selector.read(selector.SNAPSHOT) == {"snapshot_id": "previous"}
 
     # A job crossing UTC midnight must retry the new day, never stamp old inputs
     # with a fresh validity window or replace the active consumer snapshot.

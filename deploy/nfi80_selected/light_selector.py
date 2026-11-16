@@ -234,7 +234,9 @@ def main(*, force_refresh=False, publish=True, now=None):
                 return {"skipped": "same completed UTC day remains valid"}
         seed_inputs, blacklist, identities = pinned_inputs(policy)
         runtime = selector.runtime_context()
-        attempt = selector.STATE / "selector-light" / now.strftime("%Y%m%dT%H%M%S%fZ")
+        # Verification may replay the same decision clock more than once. Use
+        # the real invocation time for attempt identity, not the injected day.
+        attempt = selector.STATE / "selector-light" / datetime.now(UTC).strftime("%Y%m%dT%H%M%S%fZ")
         cache = selector.STATE / "closed-daily-cache" / day.date().isoformat()
         cache.mkdir(mode=0o700, parents=True, exist_ok=True)
         attempt.mkdir(mode=0o700, parents=True)
