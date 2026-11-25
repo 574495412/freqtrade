@@ -1,7 +1,5 @@
 """Local durable webhook transport for the native Freqtrade Webhook RPC handler."""
 
-# ruff: noqa: RUF001 -- Chinese notification copy uses native punctuation.
-
 import fcntl
 import hmac
 import json
@@ -10,11 +8,9 @@ import secrets
 import sqlite3
 import time
 from contextlib import contextmanager, nullcontext
-from datetime import datetime
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from threading import Thread
 from urllib.parse import parse_qs, urlparse
-from zoneinfo import ZoneInfo
 
 import requests
 
@@ -49,6 +45,15 @@ class Outbox:
                 result TEXT, delivered REAL)""")
             conn.execute("""CREATE TABLE IF NOT EXISTS observations (
                 name TEXT PRIMARY KEY, snapshot TEXT NOT NULL, updated REAL NOT NULL)""")
+            conn.execute("""CREATE TABLE IF NOT EXISTS order_progress (
+                market TEXT NOT NULL, pair TEXT NOT NULL, order_id TEXT NOT NULL,
+                quantity REAL NOT NULL, final INTEGER NOT NULL, decision TEXT,
+                PRIMARY KEY(market,pair,order_id))""")
+            if not any(
+                row["name"] == "decision"
+                for row in conn.execute("PRAGMA table_info(order_progress)")
+            ):
+                conn.execute("ALTER TABLE order_progress ADD COLUMN decision TEXT")
         path.chmod(0o600)
 
     @contextmanager
@@ -73,17 +78,14 @@ class Outbox:
             raise ValueError("Notification text is empty")
         if kind == "text":
             payload = native_card(content)
+            if payload is None:
+                return None
             kind = payload["msgtype"]
             content = payload[kind]["content"]
         content = redact(content)
-        stamp = datetime.fromtimestamp(now, ZoneInfo("Asia/Shanghai")).isoformat(timespec="seconds")
-        content += "\n事件接收时间：" + stamp
         limit = 1800 if kind == "text" else 3800
         if len(content.encode()) > limit:
             content = content.encode()[: limit - 80].decode(errors="ignore") + "\n[超长内容已截断]"
-        content = content.replace("仓位调整=True", "仓位调整=是").replace(
-            "仓位调整=False", "仓位调整=否"
-        )
         safe = {"msgtype": kind, kind: {"content": content}}
         with nullcontext(connection) if connection is not None else self.connect() as conn:
             return conn.execute(
@@ -98,9 +100,11 @@ class Outbox:
             if latest is not None and now - latest < 4:
                 return False
             row = conn.execute(
-                "SELECT * FROM messages WHERE state='pending' ORDER BY id LIMIT 1"
+                """SELECT * FROM messages WHERE state='pending'
+                   AND (next_attempt<=? OR created<?) ORDER BY id LIMIT 1""",
+                (now, now - 86400),
             ).fetchone()
-            if row is None or row["next_attempt"] > now:
+            if row is None:
                 return False
             if now - row["created"] > 86400:
                 conn.execute(
@@ -186,6 +190,7 @@ def handler(outbox, token, monitor=None):
                     else {
                         "last_check": monitor.last_check,
                         "error": monitor.error,
+                        "markets": monitor.markets,
                     },
                 }
             ).encode()

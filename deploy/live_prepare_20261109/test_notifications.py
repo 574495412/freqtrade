@@ -138,3 +138,56 @@ def test_all_native_event_templates_render_without_missing_fields(market):
         assert ("现货实盘" if market == "spot" else "永续实盘") in rendered["text"]["content"]
     content = native.recursive_format(config["webhook"]["exit_fill"], fields)["text"]["content"]
     assert "-0.2500 USDT (-2.50%)" in content
+
+
+def test_retry_backoff_does_not_block_new_alert(tmp_path):
+    box = Outbox(tmp_path / "queue.sqlite")
+    box.enqueue(payload("older"), now=100)
+    box.enqueue(payload("newer"), now=100)
+    assert box.deliver_one(lambda _: 45009, now=100)
+    delivered = []
+    assert box.deliver_one(lambda item: delivered.append(item["text"]["content"]) or 0, now=104)
+    assert delivered == ["newer"]
+    assert box.status() == {"pending": 1, "sent": 1}
+
+
+def test_legacy_rpc_http_receives_ack_without_creating_duplicate_message(tmp_path):
+    from http.server import ThreadingHTTPServer
+    from threading import Thread
+
+    from deploy.live_prepare_20261109.notify_relay import handler
+
+    box = Outbox(tmp_path / "queue.sqlite")
+    with ThreadingHTTPServer(("127.0.0.1", 0), handler(box, "fixture-token")) as server:
+        thread = Thread(target=server.serve_forever, daemon=True)
+        thread.start()
+        with requests.Session() as session:
+            session.trust_env = False
+            url = f"http://127.0.0.1:{server.server_port}/events/fixture-token"
+            try:
+                old_fill = payload("[NFI X8｜永续实盘] 开仓／加仓成交\n交易编号 5")
+                response = session.post(url, json=old_fill, timeout=2)
+                assert response.status_code == 202
+                assert not box.status()
+                locked = payload("[NFI X8｜永续实盘] 全局交易保护：long\n保护已触发")
+                response = session.post(url, json=locked, timeout=2)
+                assert response.status_code == 202 and box.status() == {"pending": 1}
+            finally:
+                server.shutdown()
+                thread.join()
+
+
+def test_outbox_upgrades_existing_order_progress_additively(tmp_path):
+    import sqlite3
+
+    path = tmp_path / "queue.sqlite"
+    with sqlite3.connect(path) as db:
+        db.execute("""CREATE TABLE order_progress (
+            market TEXT, pair TEXT, order_id TEXT, quantity REAL, final INTEGER,
+            PRIMARY KEY (market, pair, order_id)
+        )""")
+        db.execute("INSERT INTO order_progress VALUES ('spot','ADA/USDT','55',2,0)")
+    box = Outbox(path)
+    with box.connect() as db:
+        state = db.execute("SELECT quantity,final,decision FROM order_progress").fetchone()
+        assert tuple(state) == (2, 0, None)

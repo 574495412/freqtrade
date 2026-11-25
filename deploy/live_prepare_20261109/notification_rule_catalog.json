@@ -1,0 +1,509 @@
+{
+  "source_sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3",
+  "entries": {
+    "1": {
+      "side": "long",
+      "line": 7026,
+      "gate": "(ema_26 > ema_12) & (ema_26 - ema_12 > open_rate * 0.034) & (ema_26_shift_1 - ema_12_shift_1 > open_rate / 100.0) & (close < bbl_20_2_0 * 0.999)",
+      "label": "Normal mode (Long)."
+    },
+    "2": {
+      "side": "long",
+      "line": 7845,
+      "gate": "aroonu_14_lt_30 & stochrsi_k_lt_30 & aroonu_14_15m_lt_50 & (close < ema_20 * 0.948)",
+      "label": "Normal mode (Long)."
+    },
+    "3": {
+      "side": "long",
+      "line": 8594,
+      "gate": "(rsi_20 < rsi_20_shift_1) & (rsi_4 < 45.0) & (rsi_14 > 30.0) & (aroonu_14 < 20.0) & stochrsi_k_lt_20 & (close < sma_16 * 0.965) & (close < sma_16_1h * 0.985)",
+      "label": "Normal mode (Long)."
+    },
+    "4": {
+      "side": "long",
+      "line": 8981,
+      "gate": "aroonu_14_lt_25 & aroonu_14_15m_lt_25 & (close < ema_9 * 0.946) & (close < ema_20 * 0.96)",
+      "label": "Normal mode (Long)."
+    },
+    "5": {
+      "side": "long",
+      "line": 9408,
+      "gate": "rsi_3_lt_50 & aroonu_14_lt_25 & stochrsi_k_lt_30 & (ema_26 > ema_12) & (ema_26 - ema_12 > open_rate * 0.02) & (ema_26_shift_1 - ema_12_shift_1 > open_rate / 100.0)",
+      "label": "Normal mode (Long)."
+    },
+    "6": {
+      "side": "long",
+      "line": 10261,
+      "gate": "(rsi_20 < rsi_20_shift_1) & rsi_3_lt_46 & aroonu_14_lt_25 & stochrsi_k_lt_20 & aroonu_14_15m_lt_50 & (close < sma_16 * 0.96)",
+      "label": "Normal mode (Long)."
+    },
+    "7": {
+      "side": "long",
+      "line": 10663,
+      "gate": "(adx_14_4h > 20.0) & (np_shift(adx_14_4h, 48) <= 20.0) & (plus_di_14_4h > minus_di_14_4h) & (close > ema_200) & (ema_12_4h > ema_200_4h)",
+      "label": "ADX trend-birth (Long, experimental, RAW — 4h trend ignition; big-win lane)."
+    },
+    "8": {
+      "side": "long",
+      "line": 10682,
+      "gate": "(close > open_rate) & (np_shift(close, 1) <= dc_high_7d) & (close > dc_high_7d) & ((high_px - low_px) / close < 0.025) & (roc_9_4h < 20.0)",
+      "label": "Donchian 7-day breakout (Long, experimental — turtle-style; big-win lane)."
+    },
+    "9": {
+      "side": "long",
+      "line": 10747,
+      "gate": "willr_14 < -15.0",
+      "label": "Momentum Continuation (Long, experimental)."
+    },
+    "10": {
+      "side": "long",
+      "line": 10781,
+      "gate": "stochrsi_k < 30.0",
+      "label": "CCI Divergence + AROON Trend Birth (Long, experimental)."
+    },
+    "11": {
+      "side": "long",
+      "line": 10815,
+      "gate": "bbp_20_2_0_1h > 0.05",
+      "label": "MFI/CMF Double Divergence + BB Reversion (Long, experimental)."
+    },
+    "21": {
+      "side": "long",
+      "line": 11055,
+      "gate": "aroonu_14_lt_25 & stochrsi_k_lt_20 & aroonu_14_15m_lt_50 & (close < ema_16 * 0.96) & ((ema_50 - ema_200) / close * 100.0 > 6.0)",
+      "label": "Pump mode (Long)."
+    },
+    "41": {
+      "side": "long",
+      "line": 11755,
+      "gate": "rsi_3_gt_5 & (rsi_14 < 36.0) & aroonu_14_lt_25 & aroond_14_gt_75 & (ema_9 < ema_26 * 0.96)",
+      "label": "Quick mode (Long)."
+    },
+    "42": {
+      "side": "long",
+      "line": 12357,
+      "gate": "(willr_14 < -50.0) & stochrsi_k_lt_20 & (willr_84_1h < -70.0) & stochrsi_k_1h_lt_20 & (bbb_20_2_0_1h > 16.0) & (close_max_48 >= close * 1.1)",
+      "label": "Quick mode (Long)."
+    },
+    "43": {
+      "side": "long",
+      "line": 12942,
+      "gate": "(rsi_14 < 40.0) & (mfi_14 < 40.0) & aroonu_14_lt_25 & (ema_26 > ema_12) & (ema_26 - ema_12 > open_rate * 0.024) & (ema_26_shift_1 - ema_12_shift_1 > open_rate / 100.0) & (close < ema_20 * 0.96) & (close < bbl_20_2_0 * 0.999)",
+      "label": "Quick mode (Long)."
+    },
+    "44": {
+      "side": "long",
+      "line": 13331,
+      "gate": "rsi_3_lt_40 & rsi_3_15m_lt_50 & aroonu_14_15m_lt_25 & stochrsi_k_15m_lt_20 & (ema_26_15m > ema_12_15m) & (ema_26_15m - ema_12_15m > open_15m * 0.05) & (ema_26_15m_shift_1 - ema_12_15m_shift_1 > open_15m / 100.0)",
+      "label": "Quick mode (Long)."
+    },
+    "45": {
+      "side": "long",
+      "line": 13639,
+      "gate": "rsi_3_lt_50 & aroonu_14_15m_lt_25 & stochrsi_k_15m_lt_20 & (close_15m < ema_20_15m * 0.924)",
+      "label": "Quick mode (Long)."
+    },
+    "46": {
+      "side": "long",
+      "line": 13965,
+      "gate": "rsi_3_lt_40 & rsi_3_15m_lt_50 & (willr_14_15m < -50.0) & aroonu_14_15m_lt_25 & stochrsi_k_15m_lt_20 & (willr_84_1h < -70.0) & stochrsi_k_1h_lt_20 & (bbb_20_2_0_1h > 12.0) & (close_max_48 >= close * 1.1)",
+      "label": "Quick mode (Long)."
+    },
+    "47": {
+      "side": "long",
+      "line": 14178,
+      "gate": "(rsi_14 > 40.0) & (rsi_14 < 65.0) & (rsi_14_15m > 35.0) & (rsi_14_1h > 35.0) & (rsi_14_1h < 60.0) & (aroonu_14 > 50.0) & (aroonu_14_15m > 25.0) & (stochrsi_k > 20.0) & (stochrsi_k < 80.0) & (roc_9_1d > -25.0) & (obv_change_pct > 0.0) & (ema_12 > ema_26) & (np_shift(ema_12, 3) < np_shift(ema_26, 3)) & (ema_12_4h < ema_200_4h) & (close > close_min_48) & (close < close_max_48 * 0.97)",
+      "label": "Trend Reversal mode (Long)."
+    },
+    "48": {
+      "side": "long",
+      "line": 14422,
+      "gate": "(roc_9_1d > 0.0) & (stochrsi_k_1d > 50.0) & (rsi_14_1d > 50.0) & (ema_50_15m > ema_200_15m) & (close <= ema_50_15m * 1.002) & (close > ema_200_15m) & (volume > large_bubble_thr) & (cvd_buy_vol > cvd_sell_vol)",
+      "label": "Market-order bubble on a 15m trend pullback (Long, experimental)."
+    },
+    "61": {
+      "side": "long",
+      "line": 14846,
+      "gate": "rsi_3_lt_50 & aroonu_14_lt_25 & stochrsi_k_lt_30 & (ema_26 > ema_12) & (ema_26 - ema_12 > open_rate * 0.03) & (ema_26_shift_1 - ema_12_shift_1 > open_rate / 100.0)",
+      "label": "Rebuy mode (Long)."
+    },
+    "62": {
+      "side": "long",
+      "line": 15269,
+      "gate": "rsi_3_lt_40 & aroonu_14_lt_30 & stochrsi_k_lt_20 & stochrsi_k_15m_lt_70 & (willr_84_1h < -70.0) & stochrsi_k_1h_lt_30 & (bbb_20_2_0_1h > 12.0) & (close_max_48 >= close * 1.1)",
+      "label": "Rebuy mode (Long)."
+    },
+    "63": {
+      "side": "long",
+      "line": 15894,
+      "gate": "(rsi_3 > 0.0) & rsi_3_lt_50 & aroonu_14_lt_25 & (ema_26 > ema_12) & (ema_26 - ema_12 > open_rate * 0.022) & (ema_26_shift_1 - ema_12_shift_1 > open_rate / 100.0)",
+      "label": "Rebuy mode (Long)."
+    },
+    "64": {
+      "side": "long",
+      "line": 16299,
+      "gate": "rsi_3_gt_10 & rsi_3_15m_gt_20 & (rsi_14 < 45.0) & (willr_14 < -70.0) & stochrsi_k_lt_30 & aroonu_14_15m_lt_90 & stochrsi_k_15m_lt_80 & (close < ema_12) & (close > ema_200) & (close > bbl_20_2_0 * 1.01)",
+      "label": "Trend Pullback mode (Long)."
+    },
+    "65": {
+      "side": "long",
+      "line": 16528,
+      "gate": "(rsi_3 > 70.0) & (rsi_14 > 60.0) & (rsi_14 < 78.0) & (mfi_14 > 50.0) & (bbb_20_2_0 > 10.0) & (obv_change_pct_15m > 0.0) & (close > bbu_20_2_0) & (ema_12 > ema_26)",
+      "label": "Breakout mode (Long)."
+    },
+    "68": {
+      "side": "long",
+      "line": 16567,
+      "gate": "rsi_14_1h > 35.0",
+      "label": "Triple Oversold Flush + Volume Accumulation (Long)."
+    },
+    "101": {
+      "side": "long",
+      "line": 16904,
+      "gate": "rsi_3_gt_3 & (rsi_14 < 36.0) & aroonu_14_lt_25 & stochrsi_k_lt_20 & (close < sma_16 * 0.946) & aroonu_14_15m_lt_50",
+      "label": "Rapid mode (Long)."
+    },
+    "102": {
+      "side": "long",
+      "line": 17289,
+      "gate": "(willr_14 < -95.0) & (stochrsi_k < 10.0) & (close < bbl_20_2_0 * 0.999) & (close < ema_20 * 0.96)",
+      "label": "Rapid mode (Long)."
+    },
+    "103": {
+      "side": "long",
+      "line": 17530,
+      "gate": "(rsi_4 < 45.0) & (rsi_14 > 35.0) & (rsi_20 < rsi_20_shift_1) & aroonu_14_lt_25 & (close < sma_16 * 0.96)",
+      "label": "Rapid mode (Long)."
+    },
+    "104": {
+      "side": "long",
+      "line": 17790,
+      "gate": "rsi_3_lt_40 & aroonu_14_lt_25 & stochrsi_k_lt_20 & aroonu_14_15m_lt_25 & stochrsi_k_15m_lt_30 & (close < ema_16 * 0.975) & ((ema_50 - ema_200) / close * 100.0 < -5.5)",
+      "label": "Rapid mode (Long)."
+    },
+    "105": {
+      "side": "long",
+      "line": 18021,
+      "gate": "(cmf_20_1h > -0.02) & (rsi_14_4h > 45.0) & (willr_14_1h < -90.0) & (np_shift(willr_14_1h, 12) >= -90.0) & (change_pct_1d > 0.0) & (close > ema_200_1d)",
+      "label": "Williams %R snapback (Long, experimental — Goodwin mean-reversion port)."
+    },
+    "120": {
+      "side": "long",
+      "line": 18058,
+      "gate": "stochrsi_k_lt_20 & (willr_14 < -80.0) & aroonu_14_lt_25 & (close < ema_20 * 0.978)",
+      "label": "Grind mode (Long)."
+    },
+    "141": {
+      "side": "long",
+      "line": 18597,
+      "gate": "(rsi_20 < rsi_20_shift_1) & (rsi_3 < 30.0) & aroonu_14_lt_25 & (close < sma_16 * 0.96)",
+      "label": "Top Coins mode (Long)."
+    },
+    "142": {
+      "side": "long",
+      "line": 19120,
+      "gate": "rsi_3_gt_5 & (rsi_4 < 46.0) & (rsi_20 < rsi_20_shift_1) & (close < sma_16 * 0.96)",
+      "label": "Top Coins mode (Long)."
+    },
+    "143": {
+      "side": "long",
+      "line": 19437,
+      "gate": "rsi_3_lt_40 & stochrsi_k_lt_20 & (ema_26 > ema_12) & (ema_26 - ema_12 > open_rate * 0.02) & (ema_26_shift_1 - ema_12_shift_1 > open_rate / 100.0)",
+      "label": "Top Coins mode (Long)."
+    },
+    "144": {
+      "side": "long",
+      "line": 19786,
+      "gate": "(willr_14 < -50.0) & stochrsi_k_lt_30 & stochrsi_k_1h_lt_40 & (bbb_20_2_0_1h > 12.0) & (close_max_48 >= close * 1.1)",
+      "label": "Top Coins mode (Long)."
+    },
+    "145": {
+      "side": "long",
+      "line": 20080,
+      "gate": "(rsi_14 < 36.0) & (bbd_40_2_0 > close * 0.02) & (close_delta > close * 0.02) & (bbt_40_2_0 < bbd_40_2_0 * 0.3) & (close < bbl_40_2_0_shift_1) & (close <= close_shift_1)",
+      "label": "Top Coins mode (Long)."
+    },
+    "161": {
+      "side": "long",
+      "line": 20323,
+      "gate": "(rsi_14 < 50.0) & aroonu_14_15m_lt_90 & (stochrsi_k_15m < 90.0) & (sma_21_shift_1 < sma_200_shift_1) & ~np.isnan(sma_200_shift_1) & (sma_21 > sma_200) & ~np.isnan(sma_200) & (close > ema_200_1h) & ~np.isnan(ema_200_1h) & (close > ema_200_4h) & ~np.isnan(ema_200_4h) & (bbb_20_2_0 > 1.5) & (bbb_20_2_0_1h > 6.0)",
+      "label": "Scalp mode (Long)."
+    },
+    "162": {
+      "side": "long",
+      "line": 20557,
+      "gate": "aroonu_14_lt_25 & aroond_14_gt_75 & stochrsi_k_lt_30 & (ema_26 > ema_12) & (ema_26 - ema_12 > open_rate * 0.03) & (ema_26_shift_1 - ema_12_shift_1 > open_rate / 100.0) & (close < sma_9)",
+      "label": "Scalp mode (Long)."
+    },
+    "163": {
+      "side": "long",
+      "line": 20989,
+      "gate": "(rsi_14 < 30.0) & aroonu_14_lt_25 & aroond_14_gt_75 & stochrsi_k_lt_20 & (ema_9 < ema_26 * 0.982) & (close < sma_9)",
+      "label": "Scalp mode (Long)."
+    },
+    "164": {
+      "side": "long",
+      "line": 21005,
+      "gate": "((willr_14_4h < -70.0) | (stoch_k_4h < 40.0)) & (np_shift(close, 1) < orange_l) & (close > orange_l) & (close < orange_h)",
+      "label": "4h opening-range fakeout (Long, experimental)."
+    },
+    "165": {
+      "side": "long",
+      "line": 21026,
+      "gate": "(ema_12_4h > ema_200_4h) & (rsi_14_4h > 55.0) & (aroonu_14_4h > 70.0) & (roc_9_1d < 30.0) & (close_max_48 - close_min_48 > close_min_48 * 0.04) & (np_shift(_fib_retr_165, 1) < 0.5) & (_fib_retr_165 >= 0.5) & (_fib_retr_165 <= 0.618)",
+      "label": "Fib golden-pocket continuation (Long, experimental, RAW — The Moving Average port)."
+    },
+    "166": {
+      "side": "long",
+      "line": 21584,
+      "gate": "(np_shift(sqz_on, 1) > 0.5) & (sqz_on < 0.5) & (np_shift(sqz_cnt_24, 1) >= 12.0) & (close > bbu_20_2_0) & (roc_9_1d > 0.0) & (close > ema_200_1d) & (ema_12_4h > ema_200_4h)",
+      "label": "Squeeze Momentum release (Long, experimental, RAW — LazyBear port)."
+    },
+    "167": {
+      "side": "long",
+      "line": 22301,
+      "gate": "(stochrsi_k_1d > 50.0) & (rsi_3_1h > 55.0) & (close > ema_200_1d) & (ema_12_4h > ema_200_4h) & (close > ema_200) & (rsi_14 > 50.0) & (engulf_bull > 0.5)",
+      "label": "Engulfing continuation (Long, experimental, RAW — TradingLab port)."
+    },
+    "168": {
+      "side": "long",
+      "line": 22325,
+      "gate": "sfp_bull > 0.5",
+      "label": "Swing-failure pattern (Long, experimental, RAW — liquidity-sweep reclaim)."
+    },
+    "169": {
+      "side": "long",
+      "line": 22782,
+      "gate": "(close > ema_200) & (aroonu_14_4h > 50.0) & (stochrsi_k_4h > 55.0) & (ib_ready > 0.5) & (np_shift(close, 1) <= ib_mother_h) & (close > ib_mother_h) & (stochrsi_k_1d > 30.0)",
+      "label": "1h inside-bar breakout (Long, experimental, RAW — TradingLab port)."
+    },
+    "170": {
+      "side": "long",
+      "line": 22883,
+      "gate": "(roc_288 < -15.0) & (roc_288 > -30.0) & (rsi_3_1d < 15.0) & (roc_9_1h < -5.0) & (vol_rel > 1.3) & (close < close_min_48 * 1.08) & (close > open_rate) & (close > np_shift(high_px, 1))",
+      "label": "Crash-bounce hunter (Long, experimental — capitulation relief rally)."
+    },
+    "171": {
+      "side": "long",
+      "line": 23212,
+      "gate": "(roc_288 < 8.0) & (close > open_rate * 1.002) & (close > (high_px + low_px) / 2.0) & (np_shift(close, 1) <= np_shift(close_max_48, 1)) & (close > np_shift(close_max_48, 1)) & (vol_rel > 4.0)",
+      "label": "Pump hunter (Long, experimental, RAW — ignition candle rider)."
+    },
+    "172": {
+      "side": "long",
+      "line": 23977,
+      "gate": "(close > ema_200) & (rsi_14 > 50.0) & (cmf_20_1h > 0.02) & (ema_12_4h > ema_200_4h) & (mrb_bull > 0.5) & (close > ema_200_1d)",
+      "label": "Marubozu momentum (Long, experimental — full-body ignition)."
+    },
+    "173": {
+      "side": "long",
+      "line": 24153,
+      "gate": "(close < close_min_48 * 1.03) & (rsi_3 < 40.0) & (pb_hammer > 0.5) & (ema_12_4h > ema_200_4h) & (close > ema_200_1d)",
+      "label": "Hammer pin-bar (Long, experimental, RAW — rejection wick at a dip)."
+    },
+    "174": {
+      "side": "long",
+      "line": 24381,
+      "gate": "s174_hour_closed & (s174_event_1h > 0.5) & (ema_12_1h > ema_200_1h) & (ema_12_4h > ema_200_4h) & np.isfinite(volume) & (volume > 0) & (adx_14_4h > 15.0) & (rsi_3_1d > 25.0)",
+      "label": "Closed-hour NR4 breakout, scalp mode (Long)."
+    },
+    "192": {
+      "side": "long",
+      "line": 24449,
+      "gate": "(stoch_60_10 > 80.0) & (stoch_9_3 < 20.0) & (stoch_14_3 < 20.0) & (stoch_4_4 < 20.0) & (close < np_shift(close, 5)) & (stoch_9_3 > np_shift(stoch_9_3, 5))",
+      "label": "Quad-rotation stochastic pullback (Long, experimental)."
+    },
+    "193": {
+      "side": "long",
+      "line": 24476,
+      "gate": "(stoch_60_10 > 80.0) & (stoch_9_3 < 20.0) & (stoch_14_3 < 20.0) & (stoch_4_4 < 20.0) & (quad_low_min_12 < np_shift(quad_low_min_12, 12)) & (quad_s93_min_12 > np_shift(quad_s93_min_12, 12))",
+      "label": "Quad-rotation TRUE pivot divergence (Long, experimental)."
+    },
+    "501": {
+      "side": "short",
+      "line": 24782,
+      "gate": "(ema_12 > ema_26) & (ema_12 - ema_26 > open_rate * 0.03) & (ema_12_shift_1 - ema_26_shift_1 > open_rate / 100.0) & (close > bbu_20_2_0 * 1.004)",
+      "label": "Normal mode (Short)."
+    },
+    "502": {
+      "side": "short",
+      "line": 24981,
+      "gate": "aroond_14_lt_25 & stochrsi_k_gt_80 & (close > ema_20 * 1.06) & (close > bbu_20_2_0 * 0.995) & aroond_14_15m_lt_25",
+      "label": "Normal mode (Short)."
+    },
+    "503": {
+      "side": "short",
+      "line": 25132,
+      "gate": "close > sma_16 * 1.058",
+      "label": "Normal mode (Short)."
+    },
+    "504": {
+      "side": "short",
+      "line": 25170,
+      "gate": "close > ema_20 * 1.04",
+      "label": "Normal mode (Short)."
+    },
+    "505": {
+      "side": "short",
+      "line": 25795,
+      "gate": "(adx_14_4h > 20.0) & (np_shift(adx_14_4h, 48) <= 20.0) & (minus_di_14_4h > plus_di_14_4h) & (close < ema_200)",
+      "label": "ADX trend-birth (Short, experimental, RAW — mirror)."
+    },
+    "506": {
+      "side": "short",
+      "line": 26915,
+      "gate": "(close < open_rate) & (np_shift(close, 1) >= dc_low_7d) & (close < dc_low_7d) & (roc_288 > -15.0)",
+      "label": "Donchian 7-day breakdown (Short, experimental, RAW — mirror)."
+    },
+    "541": {
+      "side": "short",
+      "line": 27029,
+      "gate": "ema_9 > ema_26 * 1.04",
+      "label": "Quick mode (Short)."
+    },
+    "542": {
+      "side": "short",
+      "line": 27177,
+      "gate": "(willr_14 > -50.0) & aroonu_14_gt_75 & aroond_14_lt_25 & stochrsi_k_gt_80 & (willr_84_1h > -30.0) & stochrsi_k_1h_gt_80 & (bbb_20_2_0_1h > 20.0) & (close_min_48 <= close * 0.9)",
+      "label": "Quick mode (Short)."
+    },
+    "543": {
+      "side": "short",
+      "line": 27230,
+      "gate": "(roc_9_4h < 0.0) & (close > close_max_48 * 0.99) & (close > bbu_20_2_0 * 1.005) & (rsi_3 > 85.0) & (rsi_14 > 72.0) & (stochrsi_k > 85.0) & (willr_14 > -10.0) & (cmf_20 < 0.25) & (mfi_14 < 65.0) & (cci_20_change_pct_1h < 0.0)",
+      "label": "# running (mid-band 4h ROC / extreme multi-TF momentum = squeeze). 2022 + 2021: 100% WR."
+    },
+    "544": {
+      "side": "short",
+      "line": 27709,
+      "gate": "(rsi_14_1h > 55.0) & (aroonu_14_1h > 60.0) & (cmf_20_1h < 0.0) & (mfi_14_1h < 50.0) & (rsi_3 < 30.0) & (ema_12 < ema_26) & (roc_9_1h > -8.0) & (close > ema_26 * 0.97)",
+      "label": "# squeeze). Robust in both regimes — 2022 + 2021: 100% WR / 0 loss."
+    },
+    "545": {
+      "side": "short",
+      "line": 27769,
+      "gate": "(bbb_20_2_0 > 4.0) & (bbb_20_2_0_1h > 8.0) & (close > bbu_20_2_0 * 1.002) & (rsi_14 > 75.0) & (stochrsi_k_1h > 30.0) & (willr_14_1h > -20.0) & (aroonu_14_1h > 70.0) & (rsi_14_4h < 60.0) & (cci_20_4h < 120.0) & (obv_change_pct < 0.0)",
+      "label": "# strong-uptrend pullbacks. 2022 + 2021 both 100% WR / 0 loss after guards."
+    },
+    "546": {
+      "side": "short",
+      "line": 27838,
+      "gate": "(roc_9_4h < 0.0) & (bbp_20_2_0 > 0.92) & (bbb_20_2_0 > 4.0) & (close > close_max_48 * 0.98) & (roc_2 < 0.0) & (stochrsi_k > 85.0) & (rsi_14 > 68.0) & (stochrsi_k_1h > 70.0) & (willr_14_1h > -15.0) & (obv_change_pct < 0.0)",
+      "label": "# tops that keep ripping (high-CCI squeeze). 2022 + 2021: 100% WR / 0 loss."
+    },
+    "548": {
+      "side": "short",
+      "line": 28041,
+      "gate": "(stochrsi_k_1d < 50.0) & (stochrsi_k_1h < 80.0) & (aroonu_14_4h < 50.0) & (aroonu_14_1d < 50.0) & (ema_50_15m < ema_200_15m) & (close >= ema_50_15m * 0.998) & (close < ema_200_15m) & (volume > large_bubble_thr) & (cvd_sell_vol > cvd_buy_vol)",
+      "label": "Market-order bubble on a 15m trend pullback (Short, experimental)."
+    },
+    "561": {
+      "side": "short",
+      "line": 28186,
+      "gate": "(roc_9_1d < 0.0) & (rsi_3 < 90.0) & rsi_3_15m_lt_80 & (rsi_14 > 55.0) & (willr_14 > -30.0) & (willr_14 < -15.0) & (stochrsi_k > 70.0) & (aroond_14_15m < 90.0) & stochrsi_k_15m_gt_20 & (close > ema_12) & (close < ema_200) & (close < bbu_20_2_0 * 0.99)",
+      "label": "Downtrend Pullback / Continuation mode (Short). Mirror of code-64."
+    },
+    "562": {
+      "side": "short",
+      "line": 28916,
+      "gate": "(rsi_3 < 20.0) & (rsi_3_15m < 35.0) & (rsi_14 > 15.0) & (rsi_14 < 32.0) & (cmf_20 < -0.08) & (obv_change_pct_15m < 0.0) & (ema_12 < ema_26) & (close < bbl_20_2_0)",
+      "label": "Trend Breakdown mode (Short)."
+    },
+    "563": {
+      "side": "short",
+      "line": 29004,
+      "gate": "(ema_12_4h < ema_200_4h) & (rsi_14 > 55.0) & (rsi_14 < 68.0) & (close < ema_200) & (close > ema_12) & (rsi_3 < 35.0) & (cci_20_change_pct_1h < 0.0) & (mfi_14_1h < 45.0)",
+      "label": "Dead Cat Bounce mode (Short)."
+    },
+    "592": {
+      "side": "short",
+      "line": 29057,
+      "gate": "(stoch_60_10 < 20.0) & (stoch_9_3 > 80.0) & (stoch_14_3 > 80.0) & (stoch_4_4 > 80.0) & (close > np_shift(close, 5)) & (stoch_9_3 < np_shift(stoch_9_3, 5))",
+      "label": ""
+    },
+    "593": {
+      "side": "short",
+      "line": 29082,
+      "gate": "(stoch_60_10 < 20.0) & (stoch_9_3 > 80.0) & (stoch_14_3 > 80.0) & (stoch_4_4 > 80.0) & (quad_high_max_12 > np_shift(quad_high_max_12, 12)) & (quad_s93_max_12 < np_shift(quad_s93_max_12, 12))",
+      "label": "Quad-rotation TRUE pivot divergence (Short, experimental)."
+    },
+    "605": {
+      "side": "short",
+      "line": 29166,
+      "gate": "(change_pct_1d < -5.0) & (rsi_3_1d > 20.0) & (willr_14_1h > -10.0) & (np_shift(willr_14_1h, 12) <= -10.0) & (ema_12_4h < ema_200_4h) & (close < ema_200_1d)",
+      "label": "Williams %R snapback (Short, experimental — mirror)."
+    },
+    "641": {
+      "side": "short",
+      "line": 29253,
+      "gate": "close > sma_16 * 1.044",
+      "label": "Top Coins mode (Short)."
+    },
+    "642": {
+      "side": "short",
+      "line": 29368,
+      "gate": "close > sma_16 * 1.042",
+      "label": "Top Coins mode (Short)."
+    },
+    "661": {
+      "side": "short",
+      "line": 29518,
+      "gate": "bbb_20_2_0_1h > 4.0",
+      "label": "Scalp mode (Short)."
+    },
+    "662": {
+      "side": "short",
+      "line": 29527,
+      "gate": "((stochrsi_k_4h > 50.0) | (cmf_20_4h > -0.05)) & (np_shift(close, 1) > orange_h) & (close < orange_h) & (close > orange_l)",
+      "label": "4h opening-range fakeout (Short, experimental)."
+    },
+    "663": {
+      "side": "short",
+      "line": 29564,
+      "gate": "(ema_12_4h < ema_200_4h) & (rsi_14_4h < 45.0) & (aroond_14_4h > 70.0) & (roc_9_1d > -30.0) & (_fib_rng_663 > _fib_low_wick_663 * 0.04) & (_fib_ordered_663 > 0.5) & (_fib_retr_prev_663 >= 0.618) & (_fib_retr_prev_663 <= 0.786) & (_fib_retr_663 >= 0.5) & (_fib_retr_663 < 0.618) & (engulf_bear > 0.5)",
+      "label": "Fib golden-pocket continuation (Short, experimental, protected)."
+    },
+    "664": {
+      "side": "short",
+      "line": 30126,
+      "gate": "(np_shift(sqz_on, 1) > 0.5) & (sqz_on < 0.5) & (np_shift(sqz_cnt_24, 1) >= 12.0) & (close < bbl_20_2_0) & (roc_9_4h < 0.0)",
+      "label": "Squeeze Momentum release (Short, experimental, RAW — mirror)."
+    },
+    "665": {
+      "side": "short",
+      "line": 30995,
+      "gate": "(willr_14 < -50.0) & (rsi_3_15m < 45.0) & (close < ema_200) & (rsi_14 < 50.0) & (engulf_bear > 0.5) & (aroonu_14_4h < 50.0) & (stochrsi_k_1d < 50.0)",
+      "label": "Engulfing continuation (Short, experimental, RAW — mirror)."
+    },
+    "666": {
+      "side": "short",
+      "line": 31018,
+      "gate": "sfp_bear > 0.5",
+      "label": "Swing-failure pattern (Short, experimental, RAW — mirror)."
+    },
+    "667": {
+      "side": "short",
+      "line": 31464,
+      "gate": "(close < ema_200) & (stochrsi_k_1d < 45.0) & aroonu_14_4h_lt_40 & (ib_ready > 0.5) & (np_shift(close, 1) >= ib_mother_l) & (close < ib_mother_l)",
+      "label": "1h inside-bar breakout (Short, experimental, RAW — mirror)."
+    },
+    "669": {
+      "side": "short",
+      "line": 32057,
+      "gate": "(roc_288 > -10.0) & (roc_9_1d < -5.0) & (vol_rel > 3.0) & (close < open_rate * 0.997) & (close < dh_prev_min) & (np_shift(close, 1) >= dh_prev_min)",
+      "label": "Dump hunter (Short, experimental, RAW — crash ignition, mirror of 171)."
+    },
+    "670": {
+      "side": "short",
+      "line": 32868,
+      "gate": "(close < ema_200) & (rsi_14 < 50.0) & (ema_12_4h < ema_200_4h) & (mrb_bear > 0.5) & (close < ema_200_1d) & (roc_288 > -15.0)",
+      "label": "Marubozu momentum (Short, experimental, RAW — mirror)."
+    },
+    "671": {
+      "side": "short",
+      "line": 33200,
+      "gate": "(close > close_max_48 * 0.97) & (rsi_3 > 60.0) & (pb_star > 0.5) & (close < close_max_48) & (ema_12_4h < ema_200_4h) & (close < ema_200_1d) & (roc_288 > -15.0)",
+      "label": "Shooting-star pin-bar (Short, experimental, RAW — mirror at a top)."
+    }
+  }
+}
