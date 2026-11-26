@@ -1,0 +1,26 @@
+--- research/crypto/trendcore_source_native_20261117_v1/native_runner.py
++++ research/crypto/wavelet_financial_native_20261117_v4/native_runner.py
+@@ -5,7 +5,7 @@
+ """
+ from __future__ import annotations
+ 
+-from research.crypto.trendcore_source_native_20261117_v1.CaptureRules import signal_receipt
++from research.crypto.wavelet_financial_native_20261117_v4.CaptureRules import signal_receipt
+ 
+ import argparse
+ import copy
+@@ -232,9 +232,12 @@
+             rss = process.memory_info().rss
+             maximum = max(maximum, rss)
+             state = {"pid": os.getpid(), "elapsed_seconds": time.monotonic()-started,
+-                     "rss_bytes": rss, "maximum_rss_bytes": maximum}
++                     "rss_bytes": rss, "maximum_rss_bytes": maximum,
++                     "free_disk_bytes": shutil.disk_usage(output).free}
+             save(output / "progress.json", state)
+-            if rss > plan["memory_guard_bytes"] or state["elapsed_seconds"] > plan["wall_guard_seconds"]:
++            if (rss > plan["memory_guard_bytes"]
++                    or state["elapsed_seconds"] > plan["wall_guard_seconds"]
++                    or state["free_disk_bytes"] < plan["minimum_free_disk_bytes"]):
+                 save(output / "resource_guard.json", state)
+                 os._exit(73)
+     threading.Thread(target=monitor, daemon=True).start()

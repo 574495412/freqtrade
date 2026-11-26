@@ -1,0 +1,26 @@
+{
+  "frozen_at": "2026-11-16T20:43:40.748062+00:00",
+  "hypothesis": "Replicate the previouslyunadmittedsource-defaultBTCfuturesOIcrowdingreduction,notretunenoOIcandidate",
+  "source_commit": "d62416ea52620c2e9f53584dd5347ddf6718efd2",
+  "formula": "logdailyUSDopeninterest,365rowrollingmean/std,shift1day,clipz0..2,multiplier1-.5*z/2;sourceapplybeforehardgrosscap",
+  "initial_admission": "Verify exactdailyaggregation from author code/data against official rawarchives,contiguouscalendar,units,duplicates,missingness,lastsampletiming;do not silentlyfillgaps",
+  "comparison_if_admitted": "samepinnednativeBTCETHspot1000andactual500wallets,20/13bpeachside,2025Jan1through2026Aug31T23UTC;samefixed500+500NFIspotandCRPcombinations;nooptimization",
+  "financial_gate": "sameasnoOIpriorfreezebothfees/allperiodspositive,DD<=.30,Sharpe>.5,beatsmatchedcontrols;portfoliosnoDDworsening",
+  "selection_bias": "authorheadlinesandlocalnoOIresultsalreadyseen;notindependentOOSorblindsourcechoice",
+  "inputs": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/artifact_manifest.json": "21b148e72c52e2fa6ae209ac830954077721c5cf3f6bf55c40b7ebeb5d8b5d22"
+  },
+  "connector_attempt": {
+    "tool": "Binanceget_futures_usds_open_interest_statistics",
+    "symbol": "BTCUSDT",
+    "period": "1d",
+    "startTime": 1735603200000,
+    "endTime": 1735689600000,
+    "limit": 2,
+    "result": "HTTP400InvalidstartTime;notacceptedashistory;noauthused"
+  },
+  "new_native_wallets": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

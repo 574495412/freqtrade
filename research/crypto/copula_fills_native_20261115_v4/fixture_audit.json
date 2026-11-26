@@ -1,0 +1,163 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "normal1000",
+      "attempt": "observed1",
+      "technical_audit_passed": true,
+      "native_start_completed": true,
+      "native_trades": 10,
+      "native_orders": 20,
+      "hourly_points": 50,
+      "independently_checked_nav_scalars": 200,
+      "maximum_cash_error_usdt": "3.365880E-14",
+      "maximum_funding_error_usdt": "1.084E-16",
+      "maximum_nav_error_usdt": "1.6634960E-13",
+      "weekly_budget_error_usdt": "0",
+      "weekly_quantity_cells": 4,
+      "paired_holding_valid": true,
+      "missing_funding_events": [],
+      "fixture_account_admitted": true,
+      "denial_reasons": [],
+      "source20_funded_accounts": 0,
+      "source_strategy_returns": null
+    },
+    {
+      "case": "normal500",
+      "attempt": "observed1",
+      "technical_audit_passed": true,
+      "native_start_completed": true,
+      "native_trades": 10,
+      "native_orders": 20,
+      "hourly_points": 50,
+      "independently_checked_nav_scalars": 200,
+      "maximum_cash_error_usdt": "1.682940E-14",
+      "maximum_funding_error_usdt": "7.42E-17",
+      "maximum_nav_error_usdt": "8.317480E-14",
+      "weekly_budget_error_usdt": "0",
+      "weekly_quantity_cells": 4,
+      "paired_holding_valid": true,
+      "missing_funding_events": [],
+      "fixture_account_admitted": true,
+      "denial_reasons": [],
+      "source20_funded_accounts": 0,
+      "source_strategy_returns": null
+    },
+    {
+      "case": "under_minimum",
+      "attempt": "observed1",
+      "technical_audit_passed": true,
+      "native_start_completed": true,
+      "native_trades": 0,
+      "native_orders": 0,
+      "hourly_points": 50,
+      "independently_checked_nav_scalars": 200,
+      "maximum_cash_error_usdt": "0",
+      "maximum_funding_error_usdt": "0",
+      "maximum_nav_error_usdt": "0",
+      "weekly_budget_error_usdt": "0",
+      "weekly_quantity_cells": 4,
+      "paired_holding_valid": true,
+      "missing_funding_events": [],
+      "fixture_account_admitted": true,
+      "denial_reasons": [],
+      "source20_funded_accounts": 0,
+      "source_strategy_returns": null
+    },
+    {
+      "case": "one_leg_rejected",
+      "attempt": "observed1",
+      "technical_audit_passed": true,
+      "native_start_completed": true,
+      "native_trades": 1,
+      "native_orders": 2,
+      "hourly_points": 50,
+      "independently_checked_nav_scalars": 200,
+      "maximum_cash_error_usdt": "0",
+      "maximum_funding_error_usdt": "0",
+      "maximum_nav_error_usdt": "1E-13",
+      "weekly_budget_error_usdt": "0",
+      "weekly_quantity_cells": 2,
+      "paired_holding_valid": false,
+      "missing_funding_events": [],
+      "fixture_account_admitted": false,
+      "denial_reasons": [
+        "native_paired_holding_failure"
+      ],
+      "source20_funded_accounts": 0,
+      "source_strategy_returns": null
+    },
+    {
+      "case": "missing_funding_exposed",
+      "attempt": "observed1",
+      "technical_audit_passed": true,
+      "native_start_completed": true,
+      "native_trades": 10,
+      "native_orders": 20,
+      "hourly_points": 50,
+      "independently_checked_nav_scalars": 200,
+      "maximum_cash_error_usdt": "3.365880E-14",
+      "maximum_funding_error_usdt": "2E-16",
+      "maximum_nav_error_usdt": "1.6634960E-13",
+      "weekly_budget_error_usdt": "0",
+      "weekly_quantity_cells": 4,
+      "paired_holding_valid": true,
+      "missing_funding_events": [
+        {
+          "pair": "FAKEONE/USDT:USDT",
+          "at": "2025-01-03 11:00:00+00:00",
+          "held_before_event": "4.2",
+          "exposed": true,
+          "observed_rate": null
+        }
+      ],
+      "fixture_account_admitted": false,
+      "denial_reasons": [
+        "missing_funding_while_held"
+      ],
+      "source20_funded_accounts": 0,
+      "source_strategy_returns": null
+    },
+    {
+      "case": "missing_funding_flat",
+      "attempt": "observed1",
+      "technical_audit_passed": true,
+      "native_start_completed": true,
+      "native_trades": 10,
+      "native_orders": 20,
+      "hourly_points": 50,
+      "independently_checked_nav_scalars": 200,
+      "maximum_cash_error_usdt": "3.365880E-14",
+      "maximum_funding_error_usdt": "1.084E-16",
+      "maximum_nav_error_usdt": "1.6634960E-13",
+      "weekly_budget_error_usdt": "0",
+      "weekly_quantity_cells": 4,
+      "paired_holding_valid": true,
+      "missing_funding_events": [
+        {
+          "pair": "FAKEONE/USDT:USDT",
+          "at": "2025-01-02 07:00:00+00:00",
+          "held_before_event": "0.0",
+          "exposed": false,
+          "observed_rate": null
+        }
+      ],
+      "fixture_account_admitted": true,
+      "denial_reasons": [],
+      "source20_funded_accounts": 0,
+      "source_strategy_returns": null
+    }
+  ],
+  "native_runs": 6,
+  "hourly_points": 300,
+  "independent_nav_scalars": 1200,
+  "filled_orders": 82,
+  "negative_cases_correctly_denied": [
+    "one_leg_rejected",
+    "missing_funding_exposed"
+  ],
+  "cash_sizes_actually_separate": true,
+  "half_account_is_scaled_curve": false,
+  "source20_funded_accounts": 0,
+  "source_strategy_returns": null
+}

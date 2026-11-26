@@ -1,0 +1,35 @@
+"""Plot complete native model NAVs on the frozen common hourly calendar."""
+import json
+from pathlib import Path
+
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import pandas as pd
+
+HERE=Path(__file__).absolute().parent
+
+
+def main():
+    plan=json.loads((HERE/'plan_v2.json').read_text());result=json.loads((HERE/'results.json').read_text())
+    fig,axes=plt.subplots(1,2,figsize=(12,4.4),sharey=True,constrained_layout=True)
+    sources=[]
+    for ax,scenario,bps in zip(axes,['conservative','lower'],[20,13],strict=True):
+        names=[('reversion_1000_'+scenario,'BB + RSI (source)', '#c43c39'),('trendcore_1000_'+scenario,'TrendCore noOI (sealed)', '#2474b5'),('nfi_spot_1000_'+scenario,'NFI spot (sealed)', '#30905c')]
+        for name,label,color in names:
+            row=next(r for r in result['accounts']if r['account']==name)
+            if name.startswith('reversion'):
+                candidate=next(c for c in plan['candidates']if c['name']==name);path=Path(plan['output_root'])/(name+f"_{candidate['cost_bps']}bps")/'hourly_equity.parquet'
+            else:path=Path(row['source_curve']['path'])
+            frame=pd.read_parquet(path);nav=frame.set_index('date').hourly_mark_equity;assert nav.iloc[0]==1000
+            ax.plot(nav.index,nav,label=label,color=color,linewidth=1.2);sources.append(str(path))
+        path=HERE/('reversion_trendcore_1000_'+scenario+'.parquet');frame=pd.read_parquet(path);nav=frame.set_index('date').hourly_mark_equity
+        assert nav.iloc[0]==1000;ax.plot(nav.index,nav,label='Actual 500 + 500 combination',color='#cb8730',linewidth=1.2);sources.append(str(path))
+        ax.axhline(1000,color='#777777',linestyle=':',linewidth=.8);ax.set_title(f'{bps} bp per side');ax.grid(alpha=.16);ax.tick_params(axis='x',rotation=25);ax.set_xlabel('UTC, continuous 2025-01 through 2026-08')
+    axes[0].set_ylabel('Native hourly marked NAV (USDT)');axes[1].legend(loc='lower left',fontsize=8)
+    fig.suptitle('Frozen BTC/ETH spot model: source mean reversion rejected',fontsize=13)
+    fig.savefig(HERE/'account_curves.png',dpi=160);plt.close(fig)
+    (HERE/'figure_sources.json').write_text(json.dumps(dict(actual_nav_sources=sources,no_rescaled_1000_curves=True,rule_contract='frozensnapshotmodel,nothistoricalvenuerulecertification'),indent=2)+'\n')
+
+
+if __name__=='__main__':main()

@@ -1,0 +1,131 @@
+{
+  "registered_at": "2026-11-17T15:38:28.515028+00:00",
+  "new_hs_financial_results_observed": false,
+  "known_prior_research": "Original NFI1000 returns and v1/v2 source/interface diagnostics known; repeated historical window is not independent OOS",
+  "wallets": [
+    {
+      "capital": 1000,
+      "cost_bps_per_side": 15
+    },
+    {
+      "capital": 1000,
+      "cost_bps_per_side": 8
+    },
+    {
+      "capital": 500,
+      "cost_bps_per_side": 15
+    },
+    {
+      "capital": 500,
+      "cost_bps_per_side": 8
+    }
+  ],
+  "pool": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "TRB/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "XRP/USDT:USDT",
+    "ADA/USDT:USDT",
+    "BNB/USDT:USDT",
+    "LINK/USDT:USDT",
+    "DOT/USDT:USDT",
+    "FIL/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "DYDX/USDT:USDT",
+    "LTC/USDT:USDT",
+    "BCH/USDT:USDT",
+    "ETC/USDT:USDT",
+    "GALA/USDT:USDT",
+    "SAND/USDT:USDT",
+    "UNI/USDT:USDT",
+    "IOTA/USDT:USDT",
+    "RUNE/USDT:USDT",
+    "AXS/USDT:USDT",
+    "AAVE/USDT:USDT",
+    "EGLD/USDT:USDT",
+    "ALGO/USDT:USDT",
+    "SNX/USDT:USDT",
+    "CRV/USDT:USDT",
+    "MASK/USDT:USDT",
+    "SUSHI/USDT:USDT",
+    "KSM/USDT:USDT",
+    "IOTX/USDT:USDT",
+    "MANA/USDT:USDT",
+    "NEO/USDT:USDT",
+    "GRT/USDT:USDT",
+    "TRX/USDT:USDT",
+    "CELO/USDT:USDT",
+    "SKL/USDT:USDT",
+    "THETA/USDT:USDT"
+  ],
+  "leverage": 1,
+  "slots_per_wallet": 6,
+  "tradable_balance_ratio": 0.99,
+  "source_timeframe": "1h",
+  "matching_detail": "5m",
+  "entry_exit_order_type": "market",
+  "window_start": "2025-01-01T00:00:00Z",
+  "window_end_common_mark": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "standalone_admission": {
+    "both_costs_required_for_each_capital": true,
+    "each_declared_period_net_return_strictly_positive": true,
+    "each_declared_period_hourly_mark_drawdown_max": 0.15,
+    "each_declared_period_complete_24h_sharpe_strictly_greater_than": 0.5,
+    "missing_or_nonfinite_metric_rejected": true,
+    "all_native_cash_fill_nav_and_funding_audits_required": true
+  },
+  "fixed_combo": {
+    "total_initial_capital": 1000,
+    "hs_actual_wallet": 500,
+    "nfi_x8_actual_wallet": 500,
+    "no_linear_scaling_of1000_wallets": true,
+    "no_dynamic_rebalancing_or_weight_search": true,
+    "wallets_are_separate_fixed_sleeves": true,
+    "max_positions_per_sleeve": 6,
+    "combined_possible_position_slots": 12,
+    "same_asset_opposite_directions_not_netted_for_funding_or_gross_risk": true,
+    "nav": "sum the two complete actual500 hourly equity levels on identical clocks",
+    "both_costs_required": true,
+    "full_window_net_return_strictly_above_same_cost_NFI1000": true,
+    "full_window_hourly_drawdown_no_higher_than_same_cost_NFI1000": true,
+    "each_declared_period_net_return_strictly_positive": true,
+    "both_actual_sleeves_independently_audited_required": true
+  },
+  "precision_route": "supported get_pair_precision returns exact originalNFI5m whole-month table/asof",
+  "default_hs1h_route_mismatch_preserved": {
+    "monthly_rows": 10,
+    "common_hourly_decisions": 6648
+  },
+  "historical_rules_or_native_lookahead_corrected": false,
+  "funding_model": "official native default inclusive funding; no alternative ownership extension",
+  "funding_gate": "independent reconstruction of every boundary fill and hourly accrued amount; no admission from native total alone",
+  "missing_funding_gate": "AXS/TRB2026-06-24T04Z remain UNKNOWN if any actual gross exposure; never impute0 or net opposing positions",
+  "source_policy_gate": "unchanged v2 callback byte copies; any callback_error aborts run; bind actual enter_tag and distinguish source/risk/force exits",
+  "model_contract": "Conditional old execution model with explicitly shared legacy5m inferred precision; no independent OOS, historical rule certification or live evidence",
+  "no_post_result_retuning": true,
+  "all_failures_retained": true,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

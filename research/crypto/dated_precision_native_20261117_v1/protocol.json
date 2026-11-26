@@ -1,0 +1,34 @@
+{
+  "frozen_at": "2026-11-16T17:06:09.712324+00:00",
+  "scope": "Post-outcome execution-input repair under unchanged original crypto goal;not a new alpha preregistration",
+  "starting_evidence": "44 old order observations at precision disagreement;RUNE notice located publishedNov5/effectiveNov7 while old3-4Nov orders used finer grid;profits not rerun",
+  "owners": {
+    "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "interfaces": [
+      "Backtesting.get_pair_precision",
+      "Backtesting._enter_trade",
+      "Backtesting._exit_trade"
+    ],
+    "local_extension": "Dated rule intervals and native price-precision subclass;never a separate wallet or matching engine"
+  },
+  "required": [
+    "Retain raw dated original notices,publication/effective/retrieval clocks and amendments",
+    "Do not infer pre-notice validity or complete40pair history from search silence/current snapshot",
+    "Price-rule gaps/overlaps and unknown knowledge clocks fail closed;no future fallback",
+    "New orders use effective admitted rule;existing pending price remains original as official notice states",
+    "Test through actual native order construction with prefix invariance and unknown-rule rejection",
+    "No financial ranking until unchanged40pair full native account and independent cash/NAV audit complete"
+  ],
+  "inputs": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/artifact_manifest.json": "99b5d09e67470d17484b250868f23d92cff23b242428b9997d147c41d11a3726",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/precision_findings_linked.json": "c918582779ed9323a659c3e5af28ab2711138fdd1343665473b4cab8525b85f6",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/matched_price_precision.py": "651d8e731c0a85649fb547ff27f5381eebb086e905537c27f8aee5b578aec9bb",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/causal_precision_account.py": "0aefc8138433767a034fffdf5276b2fb9e3c8fb49ca0d5af91d5a17183f3be56",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/optimize/backtesting.py": "1d45e0b34ddf30813bbdf51a20be6e8345a65b668f373f8ce2fbb6e93271b234",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/data/btanalysis/historic_precision.py": "eb8c134741bf4de3fd855d9b727cd9b8a9856490f0fb4485d216f2156b32226f"
+  },
+  "new_financial_accounts": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

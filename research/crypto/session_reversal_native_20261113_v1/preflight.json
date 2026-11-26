@@ -1,0 +1,128 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "candidate": "SourceSessions_BTC",
+      "native_rows": 176256,
+      "actual_source_boundary_checks": 1216,
+      "hourly_close_matches": 14688,
+      "causal_checks": [
+        {
+          "edge": "2025-07-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        },
+        {
+          "edge": "2026-01-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        },
+        {
+          "edge": "2026-08-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        }
+      ]
+    },
+    {
+      "candidate": "SourceSessions_ETH",
+      "native_rows": 176256,
+      "actual_source_boundary_checks": 1216,
+      "hourly_close_matches": 14688,
+      "causal_checks": [
+        {
+          "edge": "2025-07-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        },
+        {
+          "edge": "2026-01-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        },
+        {
+          "edge": "2026-08-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        }
+      ]
+    },
+    {
+      "candidate": "TimedLongSessions_BTC",
+      "native_rows": 176256,
+      "actual_source_boundary_checks": 1216,
+      "hourly_close_matches": 14688,
+      "causal_checks": [
+        {
+          "edge": "2025-07-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        },
+        {
+          "edge": "2026-01-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        },
+        {
+          "edge": "2026-08-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        }
+      ]
+    },
+    {
+      "candidate": "TimedLongSessions_ETH",
+      "native_rows": 176256,
+      "actual_source_boundary_checks": 1216,
+      "hourly_close_matches": 14688,
+      "causal_checks": [
+        {
+          "edge": "2025-07-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        },
+        {
+          "edge": "2026-01-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        },
+        {
+          "edge": "2026-08-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        }
+      ]
+    },
+    {
+      "candidate": "PassiveLong_BTC",
+      "native_rows": 176256,
+      "actual_source_boundary_checks": 1216,
+      "hourly_close_matches": 14688,
+      "causal_checks": [
+        {
+          "edge": "2025-07-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        },
+        {
+          "edge": "2026-01-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        },
+        {
+          "edge": "2026-08-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        }
+      ]
+    },
+    {
+      "candidate": "PassiveLong_ETH",
+      "native_rows": 176256,
+      "actual_source_boundary_checks": 1216,
+      "hourly_close_matches": 14688,
+      "causal_checks": [
+        {
+          "edge": "2025-07-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        },
+        {
+          "edge": "2026-01-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        },
+        {
+          "edge": "2026-08-01T00:00Z",
+          "prefix_and_future_price_perturbation_exact": true
+        }
+      ]
+    }
+  ],
+  "native_strategy_interface": true,
+  "source_pure_functions_not_account_engine": true,
+  "independent_oos_certified": false
+}

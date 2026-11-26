@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "source_train_pair_count": 45,
+  "source_numeric_max_error": 1.2212453270876722e-15,
+  "source_state_machine_exact": true,
+  "actual_native_strategies": [
+    {
+      "strategy": "SourceNaivePairs",
+      "actual_native_strategy": true,
+      "weights_cells": 6080,
+      "native_indicator_rows": 146640,
+      "prefix_refits": [
+        {
+          "cutoff": "2025-06-01 00:00:00+00:00",
+          "operation": "perturb",
+          "exact_cells": 1520
+        },
+        {
+          "cutoff": "2025-06-01 00:00:00+00:00",
+          "operation": "truncate",
+          "exact_cells": 1520
+        },
+        {
+          "cutoff": "2026-02-01 00:00:00+00:00",
+          "operation": "perturb",
+          "exact_cells": 3970
+        },
+        {
+          "cutoff": "2026-02-01 00:00:00+00:00",
+          "operation": "truncate",
+          "exact_cells": 3970
+        }
+      ]
+    },
+    {
+      "strategy": "AdjustedEGPairs",
+      "actual_native_strategy": true,
+      "weights_cells": 6080,
+      "native_indicator_rows": 146640,
+      "prefix_refits": [
+        {
+          "cutoff": "2025-06-01 00:00:00+00:00",
+          "operation": "perturb",
+          "exact_cells": 1520
+        },
+        {
+          "cutoff": "2025-06-01 00:00:00+00:00",
+          "operation": "truncate",
+          "exact_cells": 1520
+        },
+        {
+          "cutoff": "2026-02-01 00:00:00+00:00",
+          "operation": "perturb",
+          "exact_cells": 3970
+        },
+        {
+          "cutoff": "2026-02-01 00:00:00+00:00",
+          "operation": "truncate",
+          "exact_cells": 3970
+        }
+      ]
+    },
+    {
+      "strategy": "TrendGrossOne",
+      "actual_native_strategy": true,
+      "weights_cells": 6080,
+      "native_indicator_rows": 146640,
+      "prefix_refits": []
+    }
+  ],
+  "financial_accounts_executed": 0,
+  "upstream_files_verified": 595
+}

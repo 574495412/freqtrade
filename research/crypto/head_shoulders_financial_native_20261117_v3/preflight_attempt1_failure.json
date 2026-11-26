@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-17T15:39:33.711952+00:00",
+  "observed_process_session": 68155,
+  "exit_code": 1,
+  "stage": "bounded_preflight_calendar_assertion",
+  "actual_official_loader_calendar": {
+    "1h": {
+      "rows": 26,
+      "first": "2024-12-31 23:00:00+00:00",
+      "last": "2025-01-02 00:00:00+00:00"
+    },
+    "5m": {
+      "rows": 301,
+      "first": "2024-12-31 23:00:00+00:00",
+      "last": "2025-01-02 00:00:00+00:00"
+    }
+  },
+  "reason": "Native loader includes a candle at the exact stop timestamp; bounded probe expected an exclusive endpoint",
+  "repair": "Use stop timestamp one second before Jan2; preserve economic full-window plan unchanged",
+  "financial_start_called": false,
+  "native_financial_accounts": 0
+}

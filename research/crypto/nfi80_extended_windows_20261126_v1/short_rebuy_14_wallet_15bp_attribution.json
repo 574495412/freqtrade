@@ -1,0 +1,458 @@
+{
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/short_rebuy_cap_attribution.py",
+    "sha256": "a8350407b6384a3398ae9dbfc96cbf3b5ba80d1f0d6a2f90a508ebfb6272eb71"
+  },
+  "comparison": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/short_rebuy_14_wallet_15bp_verified.json",
+    "sha256": "5f7df796b69a5f7ecf529cb4b004bcdf3e423a9315388ab8a4d9c97202789cf2"
+  },
+  "marks_and_fills": {
+    "start": "2025-01-01T00:00:00+00:00",
+    "comparison_end": "2026-11-25T23:55:00+00:00",
+    "marks": 199872,
+    "ending_equity_gain_usdt": 4186.805859716122,
+    "pnl_components_usdt": {
+      "entry_size_same_fills": 1783.9458765539348,
+      "same_fill_residual": 1.6606509234406985e-07,
+      "other_matched_natural_trades": 3630.0348672699997,
+      "unmatched_natural_trades_net": 148.38359601,
+      "terminal_positions": -1375.7281985600002,
+      "execution_to_mark": 0.1697183200813015
+    },
+    "reconciliation_error_usdt": -4.395860742079094e-08,
+    "tails": {
+      "12": {
+        "natural_closes": 889,
+        "wins_at_least_25_usdt": 395,
+        "wins_at_least_50_usdt": 248,
+        "trades_with_prior_equity": 889,
+        "wins_at_least_1pct_of_equity": 146,
+        "losses_at_least_1pct_of_equity": 5,
+        "best_profit_fraction_of_prior_equity": 0.07769957461460067,
+        "worst_profit_fraction_of_prior_equity": -0.2045515240893171,
+        "single_entry_count": 787,
+        "single_entry_wins_at_least_10pct_of_margin": 265,
+        "median_opening_margin_usdt": 383.9168666666667
+      },
+      "14": {
+        "natural_closes": 890,
+        "wins_at_least_25_usdt": 397,
+        "wins_at_least_50_usdt": 249,
+        "trades_with_prior_equity": 890,
+        "wins_at_least_1pct_of_equity": 146,
+        "losses_at_least_1pct_of_equity": 6,
+        "best_profit_fraction_of_prior_equity": 0.07769956094111216,
+        "worst_profit_fraction_of_prior_equity": -0.2045515240893171,
+        "single_entry_count": 788,
+        "single_entry_wins_at_least_10pct_of_margin": 266,
+        "median_opening_margin_usdt": 379.58506666666665
+      }
+    },
+    "matched_natural_trades": {
+      "matched_first_entries": 889,
+      "original_only_entries": 0,
+      "candidate_only_entries": 1,
+      "control_only_net_realized_usdt": 0.0,
+      "candidate_only_net_realized_usdt": 148.38359601,
+      "single_entries_with_same_fill_prices_and_clocks": 787,
+      "single_entry_matched_net_pnl_change_usdt": 1783.94587672,
+      "same_price_and_clock_opening_margin_component_usdt": 1783.9458765539348,
+      "remaining_net_pnl_change_usdt": 1.6606509234406985e-07
+    },
+    "trade_changes": {
+      "fixed_fill_size_ratio_median": 1.0006077635183341,
+      "matched_other_natural_pnl_change_usdt": 3630.0348672699997,
+      "cross_above_1pct_matched_same_fills": 0,
+      "cross_below_1pct_matched_same_fills": 0,
+      "cross_above_1pct_other_matched": 0,
+      "cross_below_1pct_other_matched": 0,
+      "native_entries_only_14": [
+        {
+          "pair": "NEAR/USDT:USDT",
+          "side": "long",
+          "first_fill": "2026-09-14T21:30:00+00:00",
+          "profit_usdt": 148.38359601,
+          "over_1pct_of_prior_equity": false,
+          "other_account_positions_on_prior_mark": 2
+        }
+      ],
+      "native_entries_only_12": []
+    },
+    "native_receipts": {
+      "12": {
+        ".zip": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_14_15bp/account/native_results/backtest-result-2026-11-26_09-28-44.zip",
+          "sha256": "6c14fb781e56b4e37ad2590346ee06c10932f3d0d4117dfdd7462eed7cc86978"
+        },
+        ".parquet": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_14_15bp/account/five_minute_equity.parquet",
+          "sha256": "4b4343b67371fb1007f4a9bd52310e77637228a6741361582327466f36a4d746"
+        }
+      },
+      "14": {
+        ".zip": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/short_rebuy_cap_14/15bp/account/native_results/backtest-result-2026-11-26_12-08-31.zip",
+          "sha256": "593ef2a554d7eaf9e0027651fd5a54077ce97cd95e68678a4e986cab067f5724"
+        },
+        ".parquet": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/short_rebuy_cap_14/15bp/account/five_minute_equity.parquet",
+          "sha256": "b5ee405b9f8ef172e245b6ae895bd82707c96bfb0f86b441ea6ffcef63cf1310"
+        }
+      }
+    }
+  },
+  "large_wins_and_losses": {
+    "accounts": {
+      "12": {
+        "all_natural_closes": {
+          "large_win": {
+            "natural_closes": 146,
+            "pnl_usdt": 28897.57458986
+          },
+          "large_loss": {
+            "natural_closes": 5,
+            "pnl_usdt": -7580.464437680001
+          },
+          "other": {
+            "natural_closes": 738,
+            "pnl_usdt": 26514.0405856
+          },
+          "missing_prior_mark": {
+            "natural_closes": 0,
+            "pnl_usdt": 0.0
+          }
+        },
+        "matched_first_fills": {
+          "large_win": {
+            "natural_closes": 146,
+            "pnl_usdt": 28897.57458986
+          },
+          "large_loss": {
+            "natural_closes": 5,
+            "pnl_usdt": -7580.464437680001
+          },
+          "other": {
+            "natural_closes": 738,
+            "pnl_usdt": 26514.0405856
+          },
+          "missing_prior_mark": {
+            "natural_closes": 0,
+            "pnl_usdt": 0.0
+          }
+        },
+        "unmatched_first_fills": {
+          "large_win": {
+            "natural_closes": 0,
+            "pnl_usdt": 0.0
+          },
+          "large_loss": {
+            "natural_closes": 0,
+            "pnl_usdt": 0.0
+          },
+          "other": {
+            "natural_closes": 0,
+            "pnl_usdt": 0.0
+          },
+          "missing_prior_mark": {
+            "natural_closes": 0,
+            "pnl_usdt": 0.0
+          }
+        },
+        "native_sources": {
+          ".zip": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_14_15bp/account/native_results/backtest-result-2026-11-26_09-28-44.zip",
+            "sha256": "6c14fb781e56b4e37ad2590346ee06c10932f3d0d4117dfdd7462eed7cc86978"
+          },
+          ".parquet": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_14_15bp/account/five_minute_equity.parquet",
+            "sha256": "4b4343b67371fb1007f4a9bd52310e77637228a6741361582327466f36a4d746"
+          }
+        }
+      },
+      "14": {
+        "all_natural_closes": {
+          "large_win": {
+            "natural_closes": 146,
+            "pnl_usdt": 29854.70495419
+          },
+          "large_loss": {
+            "natural_closes": 6,
+            "pnl_usdt": -3916.7582393899997
+          },
+          "other": {
+            "natural_closes": 738,
+            "pnl_usdt": 27455.56836298
+          },
+          "missing_prior_mark": {
+            "natural_closes": 0,
+            "pnl_usdt": 0.0
+          }
+        },
+        "matched_first_fills": {
+          "large_win": {
+            "natural_closes": 146,
+            "pnl_usdt": 29854.70495419
+          },
+          "large_loss": {
+            "natural_closes": 6,
+            "pnl_usdt": -3916.7582393899997
+          },
+          "other": {
+            "natural_closes": 737,
+            "pnl_usdt": 27307.18476697
+          },
+          "missing_prior_mark": {
+            "natural_closes": 0,
+            "pnl_usdt": 0.0
+          }
+        },
+        "unmatched_first_fills": {
+          "large_win": {
+            "natural_closes": 0,
+            "pnl_usdt": 0.0
+          },
+          "large_loss": {
+            "natural_closes": 0,
+            "pnl_usdt": 0.0
+          },
+          "other": {
+            "natural_closes": 1,
+            "pnl_usdt": 148.38359601
+          },
+          "missing_prior_mark": {
+            "natural_closes": 0,
+            "pnl_usdt": 0.0
+          }
+        },
+        "native_sources": {
+          ".zip": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/short_rebuy_cap_14/15bp/account/native_results/backtest-result-2026-11-26_12-08-31.zip",
+            "sha256": "593ef2a554d7eaf9e0027651fd5a54077ce97cd95e68678a4e986cab067f5724"
+          },
+          ".parquet": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/short_rebuy_cap_14/15bp/account/five_minute_equity.parquet",
+            "sha256": "b5ee405b9f8ef172e245b6ae895bd82707c96bfb0f86b441ea6ffcef63cf1310"
+          }
+        }
+      }
+    },
+    "difference_14_minus_12": {
+      "all_natural_closes": {
+        "natural_close_count_change": {
+          "large_win": 0,
+          "large_loss": 1,
+          "other": 0,
+          "missing_prior_mark": 0
+        },
+        "pnl_change_usdt": {
+          "large_win": 957.1303643300016,
+          "large_loss": 3663.706198290001,
+          "other": 941.5277773800008,
+          "missing_prior_mark": 0.0
+        },
+        "combined_large_trade_pnl_change_usdt": 4620.836562620003,
+        "total_natural_pnl_change_usdt": 5562.364340000004
+      },
+      "matched_first_fills": {
+        "natural_close_count_change": {
+          "large_win": 0,
+          "large_loss": 1,
+          "other": -1,
+          "missing_prior_mark": 0
+        },
+        "pnl_change_usdt": {
+          "large_win": 957.1303643300016,
+          "large_loss": 3663.706198290001,
+          "other": 793.1441813700003,
+          "missing_prior_mark": 0.0
+        },
+        "combined_large_trade_pnl_change_usdt": 4620.836562620003,
+        "total_natural_pnl_change_usdt": 5413.980743990003
+      },
+      "unmatched_first_fills": {
+        "natural_close_count_change": {
+          "large_win": 0,
+          "large_loss": 0,
+          "other": 1,
+          "missing_prior_mark": 0
+        },
+        "pnl_change_usdt": {
+          "large_win": 0.0,
+          "large_loss": 0.0,
+          "other": 148.38359601,
+          "missing_prior_mark": 0.0
+        },
+        "combined_large_trade_pnl_change_usdt": 0.0,
+        "total_natural_pnl_change_usdt": 148.38359601
+      }
+    },
+    "end_adjustments_usdt": {
+      "terminal_positions": -1375.7281985600002,
+      "execution_to_mark": 0.1697183200813015
+    },
+    "ending_marked_nav_difference_usdt": 4186.805859716122
+  },
+  "natural_pnl_by_direction": {
+    "uncapped": {
+      "long": {
+        "trades": 702,
+        "net_realized_usdt": 48834.68446785,
+        "large_wins": 144,
+        "large_losses": 3,
+        "missing_prior_mark": 0
+      },
+      "short": {
+        "trades": 187,
+        "net_realized_usdt": -1003.5337300699999,
+        "large_wins": 2,
+        "large_losses": 2,
+        "missing_prior_mark": 0
+      }
+    },
+    "capped": {
+      "long": {
+        "trades": 703,
+        "net_realized_usdt": 50831.273580299996,
+        "large_wins": 144,
+        "large_losses": 3,
+        "missing_prior_mark": 0
+      },
+      "short": {
+        "trades": 187,
+        "net_realized_usdt": 2562.2414974800004,
+        "large_wins": 2,
+        "large_losses": 3,
+        "missing_prior_mark": 0
+      }
+    }
+  },
+  "blocked_order_campaigns": [
+    {
+      "pair": "AAVE/USDT:USDT",
+      "first_filled_clock": "2025-11-05T01:25:00+00:00",
+      "capped": {
+        "opened": "2025-11-05T01:25:00+00:00",
+        "closed": "2025-11-14T05:05:00+00:00",
+        "added_fills": 1,
+        "first_margin_usdt": 212.15833333333333,
+        "cumulative_margin_usdt": 423.593,
+        "net_usdt": 6.1425646,
+        "exit_reason": "exit_profit_short_rebuy_t_0_1_m ( 562 )"
+      },
+      "uncapped": {
+        "opened": "2025-11-05T01:25:00+00:00",
+        "closed": "2025-11-21T07:35:00+00:00",
+        "added_fills": 29,
+        "first_margin_usdt": 212.15833333333333,
+        "cumulative_margin_usdt": 3105.6276666666668,
+        "net_usdt": 21.153795680000044,
+        "exit_reason": "exit_short_rebuy_1_1_1 ( 562 )"
+      },
+      "rejected_requests": 32,
+      "first_rejection": "2025-11-10T11:30:00+00:00",
+      "last_rejection": "2025-11-11T02:00:00+00:00"
+    },
+    {
+      "pair": "DYDX/USDT:USDT",
+      "first_filled_clock": "2025-09-04T23:55:00+00:00",
+      "capped": {
+        "opened": "2025-09-04T23:55:00+00:00",
+        "closed": "2025-09-18T23:55:00+00:00",
+        "added_fills": 1,
+        "first_margin_usdt": 114.8175,
+        "cumulative_margin_usdt": 229.6175,
+        "net_usdt": -116.38777989,
+        "exit_reason": "exit_bad_trade_abandon_14d ( 562 )"
+      },
+      "uncapped": {
+        "opened": "2025-09-04T23:55:00+00:00",
+        "closed": "2025-09-18T23:55:00+00:00",
+        "added_fills": 2,
+        "first_margin_usdt": 114.79859999999998,
+        "cumulative_margin_usdt": 344.36549999999994,
+        "net_usdt": -117.90167095,
+        "exit_reason": "exit_bad_trade_abandon_14d ( 562 )"
+      },
+      "rejected_requests": 2,
+      "first_rejection": "2025-09-18T22:20:00+00:00",
+      "last_rejection": "2025-09-18T22:25:00+00:00"
+    },
+    {
+      "pair": "FARTCOIN/USDT:USDT",
+      "first_filled_clock": "2026-09-16T01:40:00+00:00",
+      "capped": {
+        "opened": "2026-09-16T01:40:00+00:00",
+        "closed": "2026-09-21T13:05:00+00:00",
+        "added_fills": 1,
+        "first_margin_usdt": 783.9208666666667,
+        "cumulative_margin_usdt": 1567.8399333333334,
+        "net_usdt": -1103.3351397499998,
+        "exit_reason": "stop_loss"
+      },
+      "uncapped": {
+        "opened": "2026-09-16T01:40:00+00:00",
+        "closed": "2026-10-18T19:45:00+00:00",
+        "added_fills": 33,
+        "first_margin_usdt": 756.8679466666666,
+        "cumulative_margin_usdt": 12624.457426666668,
+        "net_usdt": 224.41156520000038,
+        "exit_reason": "exit_short_rebuy_1_1_1 ( 562 )"
+      },
+      "rejected_requests": 125,
+      "first_rejection": "2026-09-18T19:45:00+00:00",
+      "last_rejection": "2026-09-21T13:05:00+00:00"
+    },
+    {
+      "pair": "NEAR/USDT:USDT",
+      "first_filled_clock": "2026-08-14T07:45:00+00:00",
+      "capped": {
+        "opened": "2026-08-14T07:45:00+00:00",
+        "closed": "2026-09-04T19:50:00+00:00",
+        "added_fills": 1,
+        "first_margin_usdt": 700.8000000000001,
+        "cumulative_margin_usdt": 1401.0373333333334,
+        "net_usdt": -999.87634434,
+        "exit_reason": "stop_loss"
+      },
+      "uncapped": {
+        "opened": "2026-08-14T07:45:00+00:00",
+        "closed": "2026-09-28T00:00:00+00:00",
+        "added_fills": 47,
+        "first_margin_usdt": 700.2666666666668,
+        "cumulative_margin_usdt": 13477.831666666667,
+        "net_usdt": -5766.02531195,
+        "exit_reason": "exit_bad_trade_broken_237pct ( 562 )"
+      },
+      "rejected_requests": 1351,
+      "first_rejection": "2026-08-21T23:15:00+00:00",
+      "last_rejection": "2026-09-04T19:50:00+00:00"
+    },
+    {
+      "pair": "USUAL/USDT:USDT",
+      "first_filled_clock": "2025-08-05T22:05:00+00:00",
+      "capped": {
+        "opened": "2025-08-05T22:05:00+00:00",
+        "closed": "2025-08-15T16:35:00+00:00",
+        "added_fills": 1,
+        "first_margin_usdt": 107.66802666666668,
+        "cumulative_margin_usdt": 215.32429333333334,
+        "net_usdt": 16.2359197,
+        "exit_reason": "exit_profit_short_rebuy_t_5_1_m ( 562 )"
+      },
+      "uncapped": {
+        "opened": "2025-08-05T22:05:00+00:00",
+        "closed": "2025-08-12T10:25:00+00:00",
+        "added_fills": 2,
+        "first_margin_usdt": 107.66802666666668,
+        "cumulative_margin_usdt": 322.97529000000003,
+        "net_usdt": 8.1761775,
+        "exit_reason": "exit_profit_short_rebuy_t_2_1_m ( 562 )"
+      },
+      "rejected_requests": 16,
+      "first_rejection": "2025-08-09T20:30:00+00:00",
+      "last_rejection": "2025-08-14T03:55:00+00:00"
+    }
+  ],
+  "orders_enabled": false
+}

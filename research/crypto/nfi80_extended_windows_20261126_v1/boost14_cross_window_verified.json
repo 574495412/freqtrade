@@ -1,0 +1,365 @@
+{
+  "online_alignment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/baseline_alignment.json",
+    "sha256": "59eb6aedf68e69c4cccab520d70f30d02290266598f1b0a41408fdcd63402841"
+  },
+  "comparisons": {
+    "2026_jan_nov_15bp": {
+      "window": [
+        "2026-01-01 00:00:00+00:00",
+        "2026-11-09 05:00:00+00:00"
+      ],
+      "cost_per_side_bp": 15,
+      "accounts": {
+        "online_archive_12": {
+          "net_return": 1.4555668532165904,
+          "drawdown": 0.1683228894097153,
+          "marks": 89917,
+          "tail": {
+            "natural_closes": 304,
+            "wins_at_least_25_usdt": 24,
+            "wins_at_least_50_usdt": 2,
+            "trades_with_prior_equity": 304,
+            "wins_at_least_1pct_of_equity": 44,
+            "losses_at_least_1pct_of_equity": 1,
+            "best_profit_fraction_of_prior_equity": 0.026498713693037,
+            "worst_profit_fraction_of_prior_equity": -0.18708518882176875,
+            "single_entry_count": 271,
+            "single_entry_wins_at_least_10pct_of_margin": 101,
+            "median_opening_margin_usdt": 55.35779916666667
+          },
+          "source_nav": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/five_minute_equity.parquet",
+            "sha256": "ccfa92f02e0bf5109869bf1a17462bb523db061464ccea2a762ca05fdf28d068"
+          }
+        },
+        "boost_14": {
+          "net_return": 1.5475942428228966,
+          "drawdown": 0.16100634370563172,
+          "marks": 89917,
+          "tail": {
+            "natural_closes": 308,
+            "wins_at_least_25_usdt": 27,
+            "wins_at_least_50_usdt": 2,
+            "trades_with_prior_equity": 308,
+            "wins_at_least_1pct_of_equity": 45,
+            "losses_at_least_1pct_of_equity": 1,
+            "best_profit_fraction_of_prior_equity": 0.026482237148347645,
+            "worst_profit_fraction_of_prior_equity": -0.1777225640124311,
+            "single_entry_count": 275,
+            "single_entry_wins_at_least_10pct_of_margin": 104,
+            "median_opening_margin_usdt": 57.9005715
+          },
+          "source_nav": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_15bp/five_minute_equity.parquet",
+            "sha256": "33155f67fc938ec146e4bcdb76bd9767b8d513fa1ff25d14b2f209579718c8cb"
+          }
+        }
+      },
+      "net_return_difference": 0.09202738960630619,
+      "drawdown_difference": -0.007316545704083577,
+      "paired_natural_entries": {
+        "matched_first_entries": 304,
+        "original_only_entries": 0,
+        "candidate_only_entries": 4,
+        "control_only_net_realized_usdt": 0.0,
+        "candidate_only_net_realized_usdt": 46.94810192,
+        "single_entries_with_same_fill_prices_and_clocks": 271,
+        "single_entry_matched_net_pnl_change_usdt": 44.998806039999984,
+        "same_price_and_clock_opening_margin_component_usdt": 44.99880598559433,
+        "remaining_net_pnl_change_usdt": 5.4405653315825475e-08
+      },
+      "recorded_comparison": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/comparison_15bp.json",
+        "sha256": "f800f33c85aa3f36da1c9169c74da48d75d3bc941b66e33c34c0074088c153a8"
+      }
+    },
+    "2026_recent_16_days_15bp": {
+      "window": [
+        "2026-11-10 00:00:00+00:00",
+        "2026-11-25 23:55:00+00:00"
+      ],
+      "cost_per_side_bp": 15,
+      "accounts": {
+        "online_archive_12": {
+          "net_return": 0.01658629917821175,
+          "drawdown": 0.05736826297890085,
+          "marks": 4608,
+          "tail": {
+            "natural_closes": 13,
+            "wins_at_least_25_usdt": 0,
+            "wins_at_least_50_usdt": 0,
+            "trades_with_prior_equity": 13,
+            "wins_at_least_1pct_of_equity": 2,
+            "losses_at_least_1pct_of_equity": 0,
+            "best_profit_fraction_of_prior_equity": 0.019178026563612872,
+            "worst_profit_fraction_of_prior_equity": null,
+            "single_entry_count": 12,
+            "single_entry_wins_at_least_10pct_of_margin": 3,
+            "median_opening_margin_usdt": 21.259706666666666
+          },
+          "source_nav": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/fixed_boost_12_15bp/five_minute_equity.parquet",
+            "sha256": "27ce74f3bb53103e1b3ffdf2ea2365f1e77162653ffd5636992188f011e19864"
+          }
+        },
+        "boost_14": {
+          "net_return": 0.01658629917821175,
+          "drawdown": 0.05736826297890085,
+          "marks": 4608,
+          "tail": {
+            "natural_closes": 13,
+            "wins_at_least_25_usdt": 0,
+            "wins_at_least_50_usdt": 0,
+            "trades_with_prior_equity": 13,
+            "wins_at_least_1pct_of_equity": 2,
+            "losses_at_least_1pct_of_equity": 0,
+            "best_profit_fraction_of_prior_equity": 0.019178026563612872,
+            "worst_profit_fraction_of_prior_equity": null,
+            "single_entry_count": 12,
+            "single_entry_wins_at_least_10pct_of_margin": 3,
+            "median_opening_margin_usdt": 21.259706666666666
+          },
+          "source_nav": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/boost_14_15bp/five_minute_equity.parquet",
+            "sha256": "27ce74f3bb53103e1b3ffdf2ea2365f1e77162653ffd5636992188f011e19864"
+          }
+        }
+      },
+      "net_return_difference": 0.0,
+      "drawdown_difference": 0.0,
+      "paired_natural_entries": {
+        "matched_first_entries": 13,
+        "original_only_entries": 0,
+        "candidate_only_entries": 0,
+        "control_only_net_realized_usdt": 0.0,
+        "candidate_only_net_realized_usdt": 0.0,
+        "single_entries_with_same_fill_prices_and_clocks": 12,
+        "single_entry_matched_net_pnl_change_usdt": 0.0,
+        "same_price_and_clock_opening_margin_component_usdt": 0.0,
+        "remaining_net_pnl_change_usdt": 0.0
+      },
+      "recorded_comparison": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_window_15bp_controls.json",
+        "sha256": "dff0a4289ff0718ce6f33eb05617a79fbfb7475aaa8d593a4af7097fc8521fe1"
+      },
+      "exact_all_five_minute_net_values": true
+    },
+    "2026_jan_nov_8bp": {
+      "window": [
+        "2026-01-01 00:00:00+00:00",
+        "2026-11-09 05:00:00+00:00"
+      ],
+      "cost_per_side_bp": 8,
+      "accounts": {
+        "online_archive_12": {
+          "net_return": 2.012353900815678,
+          "drawdown": 0.1565733310783125,
+          "marks": 89917,
+          "tail": {
+            "natural_closes": 306,
+            "wins_at_least_25_usdt": 31,
+            "wins_at_least_50_usdt": 3,
+            "trades_with_prior_equity": 306,
+            "wins_at_least_1pct_of_equity": 43,
+            "losses_at_least_1pct_of_equity": 0,
+            "best_profit_fraction_of_prior_equity": 0.026845653937155173,
+            "worst_profit_fraction_of_prior_equity": -0.0044085173249198695,
+            "single_entry_count": 275,
+            "single_entry_wins_at_least_10pct_of_margin": 101,
+            "median_opening_margin_usdt": 68.0475
+          },
+          "source_nav": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_8bps/five_minute_equity.parquet",
+            "sha256": "ea4c30a4a757fcd5d1eeb51286c9b3451fa4dade4781353fc319dd9b8c973de1"
+          }
+        },
+        "boost_14": {
+          "net_return": 2.1010654880574022,
+          "drawdown": 0.15563836585043345,
+          "marks": 89917,
+          "tail": {
+            "natural_closes": 310,
+            "wins_at_least_25_usdt": 32,
+            "wins_at_least_50_usdt": 5,
+            "trades_with_prior_equity": 310,
+            "wins_at_least_1pct_of_equity": 44,
+            "losses_at_least_1pct_of_equity": 0,
+            "best_profit_fraction_of_prior_equity": 0.02683477310653199,
+            "worst_profit_fraction_of_prior_equity": -0.0044085173249198695,
+            "single_entry_count": 279,
+            "single_entry_wins_at_least_10pct_of_margin": 104,
+            "median_opening_margin_usdt": 70.10130000000001
+          },
+          "source_nav": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_8bp/five_minute_equity.parquet",
+            "sha256": "da58bb9b0908124675a9cbe956ed93359303388039de4ab7288953235579ae4f"
+          }
+        }
+      },
+      "net_return_difference": 0.08871158724172412,
+      "drawdown_difference": -0.0009349652278790588,
+      "paired_natural_entries": {
+        "matched_first_entries": 306,
+        "original_only_entries": 0,
+        "candidate_only_entries": 4,
+        "control_only_net_realized_usdt": 0.0,
+        "candidate_only_net_realized_usdt": 51.47806388,
+        "single_entries_with_same_fill_prices_and_clocks": 275,
+        "single_entry_matched_net_pnl_change_usdt": 46.720039649999975,
+        "same_price_and_clock_opening_margin_component_usdt": 46.72003958891636,
+        "remaining_net_pnl_change_usdt": 6.10836181635932e-08
+      },
+      "recorded_comparison": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/comparison_8bp.json",
+        "sha256": "7ec32cc862787da7cb4b99ebf0850828790fd0df30959799849aaf4bf674943c"
+      }
+    },
+    "2026_recent_16_days_8bp": {
+      "window": [
+        "2026-11-10 00:00:00+00:00",
+        "2026-11-25 23:55:00+00:00"
+      ],
+      "cost_per_side_bp": 8,
+      "accounts": {
+        "online_archive_12": {
+          "net_return": 0.02014792638222307,
+          "drawdown": 0.055761446551437444,
+          "marks": 4608,
+          "tail": {
+            "natural_closes": 13,
+            "wins_at_least_25_usdt": 0,
+            "wins_at_least_50_usdt": 0,
+            "trades_with_prior_equity": 13,
+            "wins_at_least_1pct_of_equity": 2,
+            "losses_at_least_1pct_of_equity": 0,
+            "best_profit_fraction_of_prior_equity": 0.019614923881915394,
+            "worst_profit_fraction_of_prior_equity": null,
+            "single_entry_count": 12,
+            "single_entry_wins_at_least_10pct_of_margin": 3,
+            "median_opening_margin_usdt": 21.288320000000002
+          },
+          "source_nav": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/fixed_boost_12_8bp/five_minute_equity.parquet",
+            "sha256": "f2663175f9e995827b86cef382a407689642a35b6a6504cb158fc48db04a06db"
+          }
+        },
+        "boost_14": {
+          "net_return": 0.02014792638222307,
+          "drawdown": 0.055761446551437444,
+          "marks": 4608,
+          "tail": {
+            "natural_closes": 13,
+            "wins_at_least_25_usdt": 0,
+            "wins_at_least_50_usdt": 0,
+            "trades_with_prior_equity": 13,
+            "wins_at_least_1pct_of_equity": 2,
+            "losses_at_least_1pct_of_equity": 0,
+            "best_profit_fraction_of_prior_equity": 0.019614923881915394,
+            "worst_profit_fraction_of_prior_equity": null,
+            "single_entry_count": 12,
+            "single_entry_wins_at_least_10pct_of_margin": 3,
+            "median_opening_margin_usdt": 21.288320000000002
+          },
+          "source_nav": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/boost_14_8bp/five_minute_equity.parquet",
+            "sha256": "f2663175f9e995827b86cef382a407689642a35b6a6504cb158fc48db04a06db"
+          }
+        }
+      },
+      "net_return_difference": 0.0,
+      "drawdown_difference": 0.0,
+      "paired_natural_entries": {
+        "matched_first_entries": 13,
+        "original_only_entries": 0,
+        "candidate_only_entries": 0,
+        "control_only_net_realized_usdt": 0.0,
+        "candidate_only_net_realized_usdt": 0.0,
+        "single_entries_with_same_fill_prices_and_clocks": 12,
+        "single_entry_matched_net_pnl_change_usdt": 0.0,
+        "same_price_and_clock_opening_margin_component_usdt": 0.0,
+        "remaining_net_pnl_change_usdt": 0.0
+      },
+      "recorded_comparison": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_window_8bp_controls.json",
+        "sha256": "3032e339448f48c1c3c081e0c8c2e5af020577b2ba937741785906d8c77c5216"
+      },
+      "exact_all_five_minute_net_values": true
+    },
+    "2025_full_year_15bp": {
+      "window": [
+        "2025-01-01 00:00:00+00:00",
+        "2025-12-31 23:55:00+00:00"
+      ],
+      "cost_per_side_bp": 15,
+      "accounts": {
+        "online_archive_12": {
+          "net_return": 13.85952581122067,
+          "drawdown": 0.21253912190816493,
+          "marks": 105120,
+          "tail": {
+            "natural_closes": 563,
+            "wins_at_least_25_usdt": 160,
+            "wins_at_least_50_usdt": 75,
+            "trades_with_prior_equity": 563,
+            "wins_at_least_1pct_of_equity": 96,
+            "losses_at_least_1pct_of_equity": 3,
+            "best_profit_fraction_of_prior_equity": 0.07769913866041324,
+            "worst_profit_fraction_of_prior_equity": -0.2046535312185307,
+            "single_entry_count": 498,
+            "single_entry_wins_at_least_10pct_of_margin": 155,
+            "median_opening_margin_usdt": 188.36895
+          },
+          "source_nav": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_15bp/account/five_minute_equity.parquet",
+            "sha256": "306593cbb7350d4ea6a629a6c4a7a2d8206aa5952ddaa2744e9564aa6a600b93"
+          }
+        },
+        "boost_14": {
+          "net_return": 14.768854646567247,
+          "drawdown": 0.22723721029167765,
+          "marks": 105120,
+          "tail": {
+            "natural_closes": 570,
+            "wins_at_least_25_usdt": 170,
+            "wins_at_least_50_usdt": 78,
+            "trades_with_prior_equity": 570,
+            "wins_at_least_1pct_of_equity": 100,
+            "losses_at_least_1pct_of_equity": 3,
+            "best_profit_fraction_of_prior_equity": 0.07769957461460067,
+            "worst_profit_fraction_of_prior_equity": -0.2045515240893171,
+            "single_entry_count": 505,
+            "single_entry_wins_at_least_10pct_of_margin": 160,
+            "median_opening_margin_usdt": 193.24580666666665
+          },
+          "source_nav": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_15bp/account/five_minute_equity.parquet",
+            "sha256": "6641530ab64384ba4cd694290e165134b24cc3180c656db07220f07374cf8d4d"
+          }
+        }
+      },
+      "net_return_difference": 0.9093288353465763,
+      "drawdown_difference": 0.01469808838351272,
+      "paired_natural_entries": {
+        "matched_first_entries": 563,
+        "original_only_entries": 0,
+        "candidate_only_entries": 7,
+        "control_only_net_realized_usdt": 0.0,
+        "candidate_only_net_realized_usdt": 104.79500359,
+        "single_entries_with_same_fill_prices_and_clocks": 498,
+        "single_entry_matched_net_pnl_change_usdt": 828.7350221700001,
+        "same_price_and_clock_opening_margin_component_usdt": 828.7350222582246,
+        "remaining_net_pnl_change_usdt": -8.822451036394341e-08
+      },
+      "recorded_comparison": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/annual_verified_progress.json",
+        "sha256": "a9c905ce53fb35512189036322299c72f3424f4c369702cedf279eed79858f50"
+      },
+      "stable_annual_comparison": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/boost14_2025_15bp_frozen_basis.json",
+        "sha256": "227215bbd5372e898e5e17f99b1d5f2e9d2519d03f0cdc6df2d49211bc6fc15e"
+      }
+    }
+  },
+  "orders_enabled": false
+}

@@ -1,0 +1,171 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+    "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "schema": "freqtrade.native.oi-confirmation.v1",
+  "registered_at": "2026-11-13T15:06:45.500717+00:00",
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/oi_cascade_source_native_20261113_v1",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/oi_cascade_source_native_20261113_v1/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/oi_cascade_source_native_20261113_v1/data_receipts.json",
+    "sha256": "e85fb2d3683c01247f52483ab2bd51d43cc8a3247b96763efa2ba9877e3823eb"
+  },
+  "pairs": [
+    "BTC/USDT:USDT"
+  ],
+  "candidates": [
+    {
+      "name": "OIConfirmedBreakout",
+      "strategy": "OIConfirmedBreakout",
+      "capital": 1000,
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/oi_cascade_source_native_20261113_v1/OIConfirmedBreakout.json",
+        "sha256": "1e41d2e0b638fcffaaa1f08df43b2555db050324b547157da8537a2fcdbf6687"
+      },
+      "source_files": {
+        "OpenInterestReference.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/oi_cascade_source_native_20261113_v1/OpenInterestReference.py",
+          "sha256": "1a8b680d090acddbe98a02a70c0f4ec1c828ecb32eed25b854ca68992ab047c8"
+        },
+        "OIConfirmation.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/oi_cascade_source_native_20261113_v1/OIConfirmation.py",
+          "sha256": "08f685cb816f9c1ea89aac2e3790013f35ff16291d7a1c5540d4f11401168eda"
+        }
+      }
+    },
+    {
+      "name": "PriceBreakoutAvailable",
+      "strategy": "PriceBreakoutAvailable",
+      "capital": 1000,
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/oi_cascade_source_native_20261113_v1/PriceBreakoutAvailable.json",
+        "sha256": "c6f7fa46a5553d05e14a9c7512d90faa12fd06ae6b5f3d7a576c4b026b55c298"
+      },
+      "source_files": {
+        "OpenInterestReference.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/oi_cascade_source_native_20261113_v1/OpenInterestReference.py",
+          "sha256": "1a8b680d090acddbe98a02a70c0f4ec1c828ecb32eed25b854ca68992ab047c8"
+        },
+        "OIConfirmation.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/oi_cascade_source_native_20261113_v1/OIConfirmation.py",
+          "sha256": "08f685cb816f9c1ea89aac2e3790013f35ff16291d7a1c5540d4f11401168eda"
+        }
+      }
+    },
+    {
+      "name": "PriceBreakoutFull",
+      "strategy": "PriceBreakoutFull",
+      "capital": 1000,
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/oi_cascade_source_native_20261113_v1/PriceBreakoutFull.json",
+        "sha256": "72a5ac7c6eda333560cb730b34bdd443cec37bcaea237f88501ac7f8b857e4a3"
+      },
+      "source_files": {
+        "OpenInterestReference.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/oi_cascade_source_native_20261113_v1/OpenInterestReference.py",
+          "sha256": "1a8b680d090acddbe98a02a70c0f4ec1c828ecb32eed25b854ca68992ab047c8"
+        },
+        "OIConfirmation.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/oi_cascade_source_native_20261113_v1/OIConfirmation.py",
+          "sha256": "08f685cb816f9c1ea89aac2e3790013f35ff16291d7a1c5540d4f11401168eda"
+        }
+      }
+    }
+  ],
+  "marks": {
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    }
+  },
+  "initial_equity_usdt": 1000,
+  "allowed_leverage": 1.0,
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "runner_sha256": "c153d694ce9b624e415ba9e95b23484daca238f549f5bcc6c44cbd177b16f058",
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/band_trend_native_20261113_v1/observe_clock.py",
+      "sha256": "f2bb297fca1ec753d9a010c39ff45506dccc0aadadf067f069de2e8a8d7b638d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/skew_vol_native_20261113_v1/clock_fix.py",
+      "sha256": "3569781b7f1e30319cb0f2aed0a2c12587f0448de154f5575415b6f1684df8ce"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/oi_cascade_source_native_20261113_v1/protocol.json",
+      "sha256": "c7f747049ca00e3aa730b4334500b081e65e1aedc44256e1ae473fbda48a9236"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/oi_cascade_source_native_20261113_v1/input_admission.json",
+      "sha256": "d6e18568b79006d9474975e0b36201c8a6249e61257a4b764aa54eeb66e54a54"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/oi_cascade_source_native_20261113_v1/run.py",
+      "sha256": "8de14552b602af933630255bd51377bdd9d8a35987d2f140be7dea412ebe6c97"
+    }
+  ],
+  "source_commit": "37a8ed8682b79ba29b6bfbc67fff2a696e388826",
+  "economic_parameter_changes_to_reference": false,
+  "missingness_adaptation": "ffill=False; six consecutive actual hourly base-OI values required. Controls isolate mask and OI effect.",
+  "new_effective_alpha_claim": false,
+  "orders_enabled": false,
+  "production_eligible": false
+}

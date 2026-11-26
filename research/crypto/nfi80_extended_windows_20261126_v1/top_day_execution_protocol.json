@@ -1,0 +1,17 @@
+{
+  "purpose": "Use official transaction prints to check participation and timestamp/price sensitivity of the four observed initial buy limits behind the early February 2025 slot divergence and the June 4 2026 advantage.",
+  "targets": [
+    {"pair": "1MBABYDOGE/USDT:USDT", "clock": "2025-02-02T19:00:00Z"},
+    {"pair": "NOT/USDT:USDT", "clock": "2025-02-02T19:00:00Z"},
+    {"pair": "INJ/USDT:USDT", "clock": "2026-06-04T02:05:00Z"},
+    {"pair": "DOT/USDT:USDT", "clock": "2026-06-04T02:05:00Z"}
+  ],
+  "source": "Checksum-verified Binance USD-M Futures daily aggTrades, millisecond UTC clock and reported buyer-maker direction. Reuse independently reconciled 14-slot 8/15 bp positions, requiring original native limit instructions. Only measure targets actually filled in those wallets.",
+  "measurements": [
+    "Original amount divided by aggregate executed base quantity in the five-minute entry candle.",
+    "Count aggressive sales at or below the native buy limit in the first 1, 5, 30 and 300 seconds, and time when cumulative eligible observed prints first meet the original amount.",
+    "From delays of 0, 1, 5 and 15 seconds, measure the price of the original quantity using aggressive buy prints over the following five seconds as an observational notional-weighted price proxy. Keep missing coverage. Report entry-only price differences in basis points and USDT."
+  ],
+  "limitations": "Aggregate trades are matched prints and contain no resting depth or queue priority for a newly submitted order. The price proxy leaves stops, later fills, wallet state, fees and funding unchanged and is used only as a diagnostic. These are selected historical buys, not a portfolio or fill confirmation.",
+  "orders_enabled": false
+}

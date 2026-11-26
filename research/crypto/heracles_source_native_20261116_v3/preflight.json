@@ -1,0 +1,33 @@
+{
+  "passed": true,
+  "native_constructor": true,
+  "native_strategy_init": true,
+  "actual_buy_params": {
+    "buy_crossed_indicator_shift": 9,
+    "buy_div_max": 0.75,
+    "buy_div_min": 0.16,
+    "buy_indicator_shift": 15
+  },
+  "output_directory": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/heracles_source_native_20261116_v2/preflight_v2",
+  "startup": 100,
+  "source_timeframe": "4h",
+  "checks": [
+    {
+      "pair": "BTC/USDT",
+      "source_rows": 3749,
+      "target_rows": 3648,
+      "finite_source_indicator_cells": 7470,
+      "source_flags_after_native_delay_exact": true
+    },
+    {
+      "pair": "ETH/USDT",
+      "source_rows": 3749,
+      "target_rows": 3648,
+      "finite_source_indicator_cells": 7470,
+      "source_flags_after_native_delay_exact": true
+    }
+  ],
+  "actual_prefix_cells_including_repeated_prefixes": 71316,
+  "financial_start": false,
+  "funded_accounts": 0
+}

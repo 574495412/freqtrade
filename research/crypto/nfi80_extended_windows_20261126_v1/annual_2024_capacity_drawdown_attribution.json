@@ -1,0 +1,256 @@
+{
+  "account_comparison": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/annual_2024_boost14_15bp_verified.json",
+    "sha256": "057f181afee7d65d0032fcd7fcbbe2d1a00861fb6a49e554547ad6193a8d9b60"
+  },
+  "account_sources": {
+    "fixed_boost_12": {
+      "account_proof": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_fixed_boost_12_15bp/account_reconciled.json",
+        "sha256": "a6eb9c4d4a81e48000e975dce0a536b4eec42e4bdeafda157d7b349bfe1f2bc7"
+      },
+      "native_exit": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_fixed_boost_12_15bp/completion.json",
+        "sha256": "0a7c7511bffa3d8b1694e6e8e764084603ab9324d3b60d1d9c6911706645b984"
+      },
+      "native_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_fixed_boost_12_15bp/account/registered_plan.json",
+        "sha256": "4586aa41ea5426eb820027b80c5e555d05b5bb397c71ec19e4a4f1306b8436d8"
+      },
+      "nav": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_fixed_boost_12_15bp/account/five_minute_equity.parquet",
+        "sha256": "c0e5ebcf81d2f0f5fa1dfb0263a17878b7d1483cfd4718527db13d53f8731dab"
+      },
+      "native_trades": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_fixed_boost_12_15bp/account/native_results/backtest-result-2026-11-26_05-52-56.zip",
+        "sha256": "d68d164e9dbd9d23a17510c05517770151d07d222c626dca277167888ba5601d"
+      }
+    },
+    "boost_14": {
+      "account_proof": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_boost_14_15bp/account_reconciled.json",
+        "sha256": "c3d1dce9731bb687920a3149cd30adc33ed5ca01ed247e7967f2ad57ad7760d9"
+      },
+      "native_exit": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_boost_14_15bp/completion.json",
+        "sha256": "9a797703b725df0154c3121b327fce31d0a44abc9bf95125196e619695f7e399"
+      },
+      "native_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_boost_14_15bp/account/registered_plan.json",
+        "sha256": "063d23c9439f80f837149a958aac052eb0b737368ba1597d15b847767b1455b4"
+      },
+      "nav": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_boost_14_15bp/account/five_minute_equity.parquet",
+        "sha256": "fc2a9ce1a9271c29ec0ca1b25fc4897ded9009c15b43188b6cbeb2b389cd82d7"
+      },
+      "native_trades": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_boost_14_15bp/account/native_results/backtest-result-2026-11-26_06-45-06.zip",
+        "sha256": "408e889d9f96b24dc8239816700f1b5dbc6aef5176e394a6fbf5faaab3ac4511"
+      }
+    }
+  },
+  "windows": {
+    "fixed_boost_12": {
+      "start": "2024-04-09T05:50:00+00:00",
+      "end": "2024-04-13T21:30:00+00:00",
+      "portfolio_drawdown": 0.4593594925799107,
+      "same_interval": {
+        "fixed_boost_12": {
+          "snapshots": [
+            {
+              "clock": "2024-04-09T05:50:00+00:00",
+              "nav_usdt": 1919.9548117648444,
+              "long_positions": 3,
+              "short_positions": 2,
+              "mark_gross_notional_to_equity_reconstructed": 0.39820595345326293
+            },
+            {
+              "clock": "2024-04-13T21:30:00+00:00",
+              "nav_usdt": 1038.0053436561875,
+              "long_positions": 12,
+              "short_positions": 0,
+              "mark_gross_notional_to_equity_reconstructed": 1.7441967087216428
+            }
+          ],
+          "interval_return": -0.4593594925799107,
+          "summed_change_usdt": -881.9494681086569,
+          "reconciliation_error_usdt": -2.4113319341267925e-08,
+          "overlapping_native_campaigns": 29,
+          "pnl_change_by_pair_usdt": {
+            "NEO/USDT:USDT": -134.21545713436427,
+            "DOGE/USDT:USDT": -121.86402913014504,
+            "ALT/USDT:USDT": -121.11307335148518,
+            "FIL/USDT:USDT": -99.67456421613139,
+            "ZRX/USDT:USDT": -89.33060505003613,
+            "GALA/USDT:USDT": -84.99191759464424,
+            "1000RATS/USDT:USDT": -68.55312252189114,
+            "1000SATS/USDT:USDT": -62.30304806535266,
+            "ONDO/USDT:USDT": -49.275228577822496,
+            "LDO/USDT:USDT": -44.24700232364466,
+            "XVG/USDT:USDT": -35.60925445674997,
+            "ORDI/USDT:USDT": -34.853185788715706,
+            "MANA/USDT:USDT": -17.02431311250002,
+            "TIA/USDT:USDT": 0.6738246481298301,
+            "HBAR/USDT:USDT": 0.8034960018309278,
+            "LINK/USDT:USDT": 0.9008485781708304,
+            "ARB/USDT:USDT": 1.0606926495283064,
+            "GRT/USDT:USDT": 1.0630650449999943,
+            "JASMY/USDT:USDT": 2.414739127499992,
+            "UNI/USDT:USDT": 6.232958157056707,
+            "WIF/USDT:USDT": 7.42740857999995,
+            "AVAX/USDT:USDT": 9.29464203939731,
+            "SUI/USDT:USDT": 9.61824214000001,
+            "RUNE/USDT:USDT": 10.430146468000897,
+            "ONG/USDT:USDT": 11.494779117784997,
+            "PYTH/USDT:USDT": 19.690490638312983
+          }
+        },
+        "boost_14": {
+          "snapshots": [
+            {
+              "clock": "2024-04-09T05:50:00+00:00",
+              "nav_usdt": 1967.786149266789,
+              "long_positions": 2,
+              "short_positions": 2,
+              "mark_gross_notional_to_equity_reconstructed": 0.27415077764268764
+            },
+            {
+              "clock": "2024-04-13T21:30:00+00:00",
+              "nav_usdt": 967.2703776829073,
+              "long_positions": 14,
+              "short_positions": 0,
+              "mark_gross_notional_to_equity_reconstructed": 3.2627496568183894
+            }
+          ],
+          "interval_return": -0.5084474102822001,
+          "summed_change_usdt": -1000.5157715838816,
+          "reconciliation_error_usdt": -1.2691430129052605e-08,
+          "overlapping_native_campaigns": 37,
+          "pnl_change_by_pair_usdt": {
+            "NEO/USDT:USDT": -138.90240842583975,
+            "ALT/USDT:USDT": -127.61003042508435,
+            "DOGE/USDT:USDT": -126.10618897195003,
+            "GALA/USDT:USDT": -115.04286392314488,
+            "FIL/USDT:USDT": -103.09694862364636,
+            "ZRX/USDT:USDT": -86.07046984662782,
+            "1000RATS/USDT:USDT": -69.91946336196857,
+            "1000SATS/USDT:USDT": -63.40039736921538,
+            "ONDO/USDT:USDT": -52.9905410217753,
+            "ONG/USDT:USDT": -47.81117393716295,
+            "ETH/USDT:USDT": -40.91829945697874,
+            "XVG/USDT:USDT": -38.286849927354986,
+            "ORDI/USDT:USDT": -38.047140682879096,
+            "MANTA/USDT:USDT": -35.55705456382047,
+            "MANA/USDT:USDT": -18.172603180350013,
+            "TIA/USDT:USDT": 0.6738246481298301,
+            "HBAR/USDT:USDT": 0.8245667011796278,
+            "JUP/USDT:USDT": 0.849235800000008,
+            "LINK/USDT:USDT": 0.9244172909718207,
+            "GRT/USDT:USDT": 1.0891347599999937,
+            "ARB/USDT:USDT": 1.0975506952648046,
+            "APT/USDT:USDT": 1.1732437499999944,
+            "JASMY/USDT:USDT": 2.4782397300000425,
+            "GMT/USDT:USDT": 5.9464820275639605,
+            "UNI/USDT:USDT": 6.448188132762327,
+            "WIF/USDT:USDT": 7.685486969999993,
+            "AVAX/USDT:USDT": 9.29464203939731,
+            "SUI/USDT:USDT": 9.950917860000008,
+            "RUNE/USDT:USDT": 10.430146468000897,
+            "PYTH/USDT:USDT": 20.821537097954995,
+            "INJ/USDT:USDT": 21.729048150000004
+          }
+        }
+      }
+    },
+    "boost_14": {
+      "start": "2024-04-13T11:10:00+00:00",
+      "end": "2024-04-13T21:30:00+00:00",
+      "portfolio_drawdown": 0.5173871092584758,
+      "same_interval": {
+        "fixed_boost_12": {
+          "snapshots": [
+            {
+              "clock": "2024-04-13T11:10:00+00:00",
+              "nav_usdt": 1865.7839421878707,
+              "long_positions": 9,
+              "short_positions": 0,
+              "mark_gross_notional_to_equity_reconstructed": 1.508164993756635
+            },
+            {
+              "clock": "2024-04-13T21:30:00+00:00",
+              "nav_usdt": 1038.0053436561875,
+              "long_positions": 12,
+              "short_positions": 0,
+              "mark_gross_notional_to_equity_reconstructed": 1.7441967087216428
+            }
+          ],
+          "interval_return": -0.4436626234230565,
+          "summed_change_usdt": -827.7785985316832,
+          "reconciliation_error_usdt": -1.4849774743197486e-09,
+          "overlapping_native_campaigns": 14,
+          "pnl_change_by_pair_usdt": {
+            "NEO/USDT:USDT": -138.36687560644722,
+            "DOGE/USDT:USDT": -126.72718187876399,
+            "ALT/USDT:USDT": -117.14602816383716,
+            "FIL/USDT:USDT": -109.00703795405968,
+            "1000SATS/USDT:USDT": -52.13349615690822,
+            "ONDO/USDT:USDT": -49.275228577822496,
+            "GALA/USDT:USDT": -45.75923948213986,
+            "1000RATS/USDT:USDT": -43.93764203019497,
+            "XVG/USDT:USDT": -35.60925445674997,
+            "ORDI/USDT:USDT": -34.853185788715706,
+            "LDO/USDT:USDT": -32.329900580998,
+            "ZRX/USDT:USDT": -25.60921474403088,
+            "MANA/USDT:USDT": -17.02431311250002
+          }
+        },
+        "boost_14": {
+          "snapshots": [
+            {
+              "clock": "2024-04-13T11:10:00+00:00",
+              "nav_usdt": 2004.236513858379,
+              "long_positions": 7,
+              "short_positions": 0,
+              "mark_gross_notional_to_equity_reconstructed": 1.373482475030147
+            },
+            {
+              "clock": "2024-04-13T21:30:00+00:00",
+              "nav_usdt": 967.2703776829073,
+              "long_positions": 14,
+              "short_positions": 0,
+              "mark_gross_notional_to_equity_reconstructed": 3.2627496568183894
+            }
+          ],
+          "interval_return": -0.5173871092584758,
+          "summed_change_usdt": -1036.9661361754718,
+          "reconciliation_error_usdt": 4.9151367420563474e-09,
+          "overlapping_native_campaigns": 16,
+          "pnl_change_by_pair_usdt": {
+            "NEO/USDT:USDT": -143.20592276383093,
+            "GALA/USDT:USDT": -131.45179409499994,
+            "DOGE/USDT:USDT": -131.13801417090008,
+            "ALT/USDT:USDT": -121.18448361116835,
+            "FIL/USDT:USDT": -112.75391727596715,
+            "ONG/USDT:USDT": -59.72335320499998,
+            "1000SATS/USDT:USDT": -54.195031313378564,
+            "ONDO/USDT:USDT": -52.9905410217753,
+            "1000RATS/USDT:USDT": -45.54656966633003,
+            "ETH/USDT:USDT": -40.91829945697874,
+            "XVG/USDT:USDT": -38.286849927354986,
+            "ORDI/USDT:USDT": -38.047140682879096,
+            "MANTA/USDT:USDT": -35.55705456382047,
+            "MANA/USDT:USDT": -18.172603180350013,
+            "ZRX/USDT:USDT": -13.794561235823124
+          }
+        }
+      }
+    }
+  },
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/capacity_2024_drawdown_attribution.py",
+    "sha256": "3d73b795315929855fe9b78da9501f791093a4492894d5d7579a0b757e43f644"
+  },
+  "cost_per_side_bp": 15,
+  "new_native_accounts": 0,
+  "orders_enabled": false
+}

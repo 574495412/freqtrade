@@ -1,0 +1,26 @@
+--- research/crypto/wavelet_financial_native_20261117_v4/native_runner.py
++++ research/crypto/hawkes_source_native_20261117_v1/native_runner.py
+@@ -258,9 +258,13 @@
+     account = None
+     try:
+         precision = load_module('explicit_frozen_ticks', checked(plan['price_precision_source']))
+-        class FixedSnapshotBacktesting(precision.MatchedPricePrecisionMixin, native.Backtesting):
++        funding_module = load_module("frozen_native_funding_extension", checked(plan["funding_extension"]))
++        class FixedSnapshotBacktesting(precision.MatchedPricePrecisionMixin, funding_module.FundingOwnershipBacktesting):
+             pass
+-        account = FixedSnapshotBacktesting(config, exchange=exchange)
++        account = FixedSnapshotBacktesting(config, exchange=exchange,
++                    funding_ownership=candidate["funding_ownership"])
++        save(output / "funding_policy.json", {"mode": candidate["funding_ownership"],
++             "implementation": plan["funding_extension"], "local_native_subclass": True})
+         account.setup_frozen_price_precision(pairs=tuple(candidate['pairs']))
+         save(output / 'price_precision_receipt.json', {'policy': 'fixed registered snapshot; not future inferred monthly decimals', 'ticks': account._frozen_price_ticks, 'source': plan['price_precision_source']})
+         account.progress = None
+@@ -318,6 +322,7 @@
+         save(output / 'native_signal_receipts.json', signal_receipts)
+         with gzip.open(output / 'strategy_trace.json.gz', 'wt') as trace:
+             json.dump(getattr(account.strategy, 'research_trace', {}), trace, default=str)
++        funding_module.write_audit(account, output)
+         stats = account.results["strategy"][candidate["strategy"]]
+         if any(t["leverage"] != plan["allowed_leverage"] for t in stats["trades"]):
+             raise ValueError("Strategy used unregistered leverage")

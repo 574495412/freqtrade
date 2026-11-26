@@ -1,0 +1,9 @@
+{
+  "session_id": 46335,
+  "exit_code": 1,
+  "observed_failure": "BTC/USDT:USDT hourly daily-close reconciliation assertion, count != 24",
+  "root_cause": "Frozen daily BTC data start in October 2021 and hourly BTC data start in August 2023. Reindexing hourly data onto the earlier daily dates introduces missing hourly counts.",
+  "technical_change": "Reconcile on the period both raw calendars cover. Keep the original daily warmup and every account date.",
+  "financial_outputs": 0,
+  "frozen_hypothesis_changed": false
+}

@@ -1,0 +1,545 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "entry_funding_slot_long",
+      "passed": true,
+      "entry_minute": 0,
+      "exit_minute": 125,
+      "force_tail": false,
+      "native_final_funding": -4.0,
+      "manual_expected": -4.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 60,
+          "native": -2.0,
+          "expected": -2.0
+        },
+        {
+          "minute": 120,
+          "native": 2.0,
+          "expected": 2.0
+        },
+        {
+          "minute": 180,
+          "native": -4.0,
+          "expected": -4.0
+        },
+        {
+          "minute": 240,
+          "native": -4.0,
+          "expected": -4.0
+        }
+      ]
+    },
+    {
+      "case": "entry_funding_slot_short",
+      "passed": true,
+      "entry_minute": 0,
+      "exit_minute": 125,
+      "force_tail": false,
+      "native_final_funding": 4.0,
+      "manual_expected": 4.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 60,
+          "native": 2.0,
+          "expected": 2.0
+        },
+        {
+          "minute": 120,
+          "native": -2.0,
+          "expected": -2.0
+        },
+        {
+          "minute": 180,
+          "native": 4.0,
+          "expected": 4.0
+        },
+        {
+          "minute": 240,
+          "native": 4.0,
+          "expected": 4.0
+        }
+      ]
+    },
+    {
+      "case": "exit_funding_slot_long",
+      "passed": true,
+      "entry_minute": 30,
+      "exit_minute": 120,
+      "force_tail": false,
+      "native_final_funding": -2.0,
+      "manual_expected": -2.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 60,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 120,
+          "native": 4.0,
+          "expected": 4.0
+        },
+        {
+          "minute": 180,
+          "native": -2.0,
+          "expected": -2.0
+        }
+      ]
+    },
+    {
+      "case": "exit_funding_slot_short",
+      "passed": true,
+      "entry_minute": 30,
+      "exit_minute": 120,
+      "force_tail": false,
+      "native_final_funding": 2.0,
+      "manual_expected": 2.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 60,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 120,
+          "native": -4.0,
+          "expected": -4.0
+        },
+        {
+          "minute": 180,
+          "native": 2.0,
+          "expected": 2.0
+        }
+      ]
+    },
+    {
+      "case": "entry_equals_exit_funding_slot_long",
+      "passed": true,
+      "entry_minute": 60,
+      "exit_minute": 60,
+      "force_tail": false,
+      "native_final_funding": 4.0,
+      "manual_expected": 4.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 60,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 120,
+          "native": 4.0,
+          "expected": 4.0
+        }
+      ]
+    },
+    {
+      "case": "entry_equals_exit_funding_slot_short",
+      "passed": true,
+      "entry_minute": 60,
+      "exit_minute": 60,
+      "force_tail": false,
+      "native_final_funding": -4.0,
+      "manual_expected": -4.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 60,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 120,
+          "native": -4.0,
+          "expected": -4.0
+        }
+      ]
+    },
+    {
+      "case": "no_funding_slot_long",
+      "passed": true,
+      "entry_minute": 5,
+      "exit_minute": 55,
+      "force_tail": false,
+      "native_final_funding": 0.0,
+      "manual_expected": 0.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 60,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 120,
+          "native": 0.0,
+          "expected": -0.0
+        }
+      ]
+    },
+    {
+      "case": "no_funding_slot_short",
+      "passed": true,
+      "entry_minute": 5,
+      "exit_minute": 55,
+      "force_tail": false,
+      "native_final_funding": 0.0,
+      "manual_expected": -0.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 60,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 120,
+          "native": 0.0,
+          "expected": 0.0
+        }
+      ]
+    },
+    {
+      "case": "five_minute_after_hour_exit_long",
+      "passed": true,
+      "entry_minute": 60,
+      "exit_minute": 125,
+      "force_tail": false,
+      "native_final_funding": -2.0,
+      "manual_expected": -2.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 60,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 120,
+          "native": 4.0,
+          "expected": 4.0
+        },
+        {
+          "minute": 180,
+          "native": -2.0,
+          "expected": -2.0
+        },
+        {
+          "minute": 240,
+          "native": -2.0,
+          "expected": -2.0
+        }
+      ]
+    },
+    {
+      "case": "five_minute_after_hour_exit_short",
+      "passed": true,
+      "entry_minute": 60,
+      "exit_minute": 125,
+      "force_tail": false,
+      "native_final_funding": 2.0,
+      "manual_expected": 2.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 60,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 120,
+          "native": -4.0,
+          "expected": -4.0
+        },
+        {
+          "minute": 180,
+          "native": 2.0,
+          "expected": 2.0
+        },
+        {
+          "minute": 240,
+          "native": 2.0,
+          "expected": 2.0
+        }
+      ]
+    },
+    {
+      "case": "signed_rates_both_boundaries_long",
+      "passed": true,
+      "entry_minute": 0,
+      "exit_minute": 240,
+      "force_tail": false,
+      "native_final_funding": -12.0,
+      "manual_expected": -12.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 60,
+          "native": -2.0,
+          "expected": -2.0
+        },
+        {
+          "minute": 120,
+          "native": 2.0,
+          "expected": 2.0
+        },
+        {
+          "minute": 180,
+          "native": -4.0,
+          "expected": -4.0
+        },
+        {
+          "minute": 240,
+          "native": -4.0,
+          "expected": -4.0
+        },
+        {
+          "minute": 300,
+          "native": -12.0,
+          "expected": -12.0
+        }
+      ]
+    },
+    {
+      "case": "signed_rates_both_boundaries_short",
+      "passed": true,
+      "entry_minute": 0,
+      "exit_minute": 240,
+      "force_tail": false,
+      "native_final_funding": 12.0,
+      "manual_expected": 12.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 60,
+          "native": 2.0,
+          "expected": 2.0
+        },
+        {
+          "minute": 120,
+          "native": -2.0,
+          "expected": -2.0
+        },
+        {
+          "minute": 180,
+          "native": 4.0,
+          "expected": 4.0
+        },
+        {
+          "minute": 240,
+          "native": 4.0,
+          "expected": 4.0
+        },
+        {
+          "minute": 300,
+          "native": 12.0,
+          "expected": 12.0
+        }
+      ]
+    },
+    {
+      "case": "force_last_base_after_full_detail_long",
+      "passed": true,
+      "entry_minute": 60,
+      "exit_minute": 240,
+      "force_tail": true,
+      "native_final_funding": -10.0,
+      "manual_expected": -10.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 60,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 120,
+          "native": 4.0,
+          "expected": 4.0
+        },
+        {
+          "minute": 180,
+          "native": -2.0,
+          "expected": -2.0
+        },
+        {
+          "minute": 240,
+          "native": -2.0,
+          "expected": -2.0
+        }
+      ]
+    },
+    {
+      "case": "force_last_base_after_full_detail_short",
+      "passed": true,
+      "entry_minute": 60,
+      "exit_minute": 240,
+      "force_tail": true,
+      "native_final_funding": 10.0,
+      "manual_expected": 10.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 60,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 120,
+          "native": -4.0,
+          "expected": -4.0
+        },
+        {
+          "minute": 180,
+          "native": 2.0,
+          "expected": 2.0
+        },
+        {
+          "minute": 240,
+          "native": 2.0,
+          "expected": 2.0
+        }
+      ]
+    },
+    {
+      "case": "entry_equals_exit_no_slot_long",
+      "passed": true,
+      "entry_minute": 30,
+      "exit_minute": 30,
+      "force_tail": false,
+      "native_final_funding": 0.0,
+      "manual_expected": 0.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 60,
+          "native": 0.0,
+          "expected": -0.0
+        },
+        {
+          "minute": 120,
+          "native": 0.0,
+          "expected": -0.0
+        }
+      ]
+    },
+    {
+      "case": "entry_equals_exit_no_slot_short",
+      "passed": true,
+      "entry_minute": 30,
+      "exit_minute": 30,
+      "force_tail": false,
+      "native_final_funding": 0.0,
+      "manual_expected": -0.0,
+      "hourly_snapshots": [
+        {
+          "minute": 0,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 60,
+          "native": 0.0,
+          "expected": 0.0
+        },
+        {
+          "minute": 120,
+          "native": 0.0,
+          "expected": 0.0
+        }
+      ]
+    }
+  ],
+  "case_count": 16,
+  "hourly_snapshot_assertions": 68,
+  "object_counts": {
+    "detached_LocalTrade": 16,
+    "detached_Order": 32
+  },
+  "native_method_calls": {
+    "Backtesting._run_funding_fees": 370,
+    "Order.close_bt_order": 32,
+    "LocalTrade.recalc_trade_from_orders_explicit": 16,
+    "LocalTrade.close": 16
+  },
+  "official_files_verified": 595,
+  "peak_rss_bytes_macos": 277905408,
+  "Backtesting_instances": 0,
+  "Backtesting_start_calls": 0,
+  "Wallet_instances": 0,
+  "Exchange_instances": 0,
+  "account_global_state_unchanged": true,
+  "full_native_backtest_or_matching_trajectory": false,
+  "market_data_used": false,
+  "financial_accounts_run": 0,
+  "proof_scope": "Detached real native object funding mechanics only, with registered caller sequence; no matching/wallet/liquidation/callback/market execution proof",
+  "freeze_sha256": "5ac34bef400821e07b7349689873c05d5a6251c09fec15a254136c0399524fd7"
+}

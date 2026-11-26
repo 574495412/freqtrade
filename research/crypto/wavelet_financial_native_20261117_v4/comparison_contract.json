@@ -1,0 +1,295 @@
+{
+  "frozen_at": "2026-11-17T00:50:53.293353+00:00",
+  "new_returns_seen": false,
+  "financial_gate": "Both costs: continuous and each annual subperiod positive, hourly NAV DD <=15%, daily NAV Sharpe>.5, fullwindow return beats all frozen matched1000spot controls. Fixed500+500wavelet+NFI and wavelet+Trend portfolios use actual native500 wallets and must beat best matched1000spot control without worse DD. Retain every failed outcome; no retuning.",
+  "window": {
+    "start": "2025-01-01T00:00:00Z",
+    "end_exclusive": "2026-09-01T00:00:00Z",
+    "comparison_end": "2026-08-31T23:00:00Z"
+  },
+  "controls": [
+    {
+      "name": "trendcore_1000_conservative",
+      "capital": 1000,
+      "cost_bps": 20,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/plan.json",
+        "sha256": "45d01166ecc2031b67dc785a39ddb421de5c5b35e409798a2face15061268337"
+      },
+      "source_manifest": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/artifact_manifest.json",
+        "sha256": "21b148e72c52e2fa6ae209ac830954077721c5cf3f6bf55c40b7ebeb5d8b5d22"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/trendcore_1000_conservative_20bps/result.json",
+        "sha256": "7212d8129389de40ee2a7e304312453f117a8b7fb17095eace6103c5e2ac0875"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/trendcore_1000_conservative_20bps/hourly_equity.parquet",
+        "sha256": "bdc7d5d492992240e1fb826061291232e2bbc6777d93293e0163253058edaa29"
+      }
+    },
+    {
+      "name": "trendcore_1000_lower",
+      "capital": 1000,
+      "cost_bps": 13,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/plan.json",
+        "sha256": "45d01166ecc2031b67dc785a39ddb421de5c5b35e409798a2face15061268337"
+      },
+      "source_manifest": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/artifact_manifest.json",
+        "sha256": "21b148e72c52e2fa6ae209ac830954077721c5cf3f6bf55c40b7ebeb5d8b5d22"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/trendcore_1000_lower_13bps/result.json",
+        "sha256": "2ac606ce458b2f99c3deb4fed55e224e81dbce4c0176b38dc7db0c74a71d4aab"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/trendcore_1000_lower_13bps/hourly_equity.parquet",
+        "sha256": "a037c1b6f1d4f236c52559abfe98cbd26fddff7fc492bd2ca3fda617d587d73c"
+      }
+    },
+    {
+      "name": "trendcore_500_conservative",
+      "capital": 500,
+      "cost_bps": 20,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/plan.json",
+        "sha256": "45d01166ecc2031b67dc785a39ddb421de5c5b35e409798a2face15061268337"
+      },
+      "source_manifest": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/artifact_manifest.json",
+        "sha256": "21b148e72c52e2fa6ae209ac830954077721c5cf3f6bf55c40b7ebeb5d8b5d22"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/trendcore_500_conservative_20bps/result.json",
+        "sha256": "011454a50f7b937fe7054b8c172f8245fa38134f8b295b4010a2bcb64179d8d1"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/trendcore_500_conservative_20bps/hourly_equity.parquet",
+        "sha256": "9af2db5e2ec8e73a2e704e94bede5f3d6ac18adb2decc80a5b133248a0d6b041"
+      }
+    },
+    {
+      "name": "trendcore_500_lower",
+      "capital": 500,
+      "cost_bps": 13,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/plan.json",
+        "sha256": "45d01166ecc2031b67dc785a39ddb421de5c5b35e409798a2face15061268337"
+      },
+      "source_manifest": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/artifact_manifest.json",
+        "sha256": "21b148e72c52e2fa6ae209ac830954077721c5cf3f6bf55c40b7ebeb5d8b5d22"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/trendcore_500_lower_13bps/result.json",
+        "sha256": "fc22da9534602f8145f5d80dd979076bdbabf9faa9b7552bf0d907aafa72b9d7"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/trendcore_500_lower_13bps/hourly_equity.parquet",
+        "sha256": "cb19eac0468f12514842f74f6f3d00a078a4142c59aa6cdf75ed967eb089ef0f"
+      }
+    },
+    {
+      "name": "crp_1000_conservative",
+      "capital": 1000,
+      "cost_bps": 20,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/plan.json",
+        "sha256": "d8541b0c706766432fdb93af59576384c61ede9e37c5013b8067d3148a7c7948"
+      },
+      "source_manifest": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/artifact_manifest.json",
+        "sha256": "317c7ef2a9c4987bbda1e87d82d84d316d3f68b7f3b3097452cfa3497c8e1f66"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/crp_1000_conservative_20bps/result.json",
+        "sha256": "74c8f19907e118eb3b13a6958977cd7c54ea1c4ecf79c752cb8d483a674cfe1a"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/crp_1000_conservative_20bps/hourly_equity.parquet",
+        "sha256": "f1cc21ac306076585a7b3ce29991c69ce148a56b66980616d13c970fd2111a93"
+      }
+    },
+    {
+      "name": "crp_1000_lower",
+      "capital": 1000,
+      "cost_bps": 13,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/plan.json",
+        "sha256": "d8541b0c706766432fdb93af59576384c61ede9e37c5013b8067d3148a7c7948"
+      },
+      "source_manifest": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/artifact_manifest.json",
+        "sha256": "317c7ef2a9c4987bbda1e87d82d84d316d3f68b7f3b3097452cfa3497c8e1f66"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/crp_1000_lower_13bps/result.json",
+        "sha256": "d42e0360403753b22be8431f543530c91de33b39a5cf712f4967d6b186ab701d"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/crp_1000_lower_13bps/hourly_equity.parquet",
+        "sha256": "6eda0f00cbfce6cf4fd169fb8daa1e8429fa454100ca575a21693fc01c3ac38c"
+      }
+    },
+    {
+      "name": "crp_500_conservative",
+      "capital": 500,
+      "cost_bps": 20,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/plan.json",
+        "sha256": "d8541b0c706766432fdb93af59576384c61ede9e37c5013b8067d3148a7c7948"
+      },
+      "source_manifest": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/artifact_manifest.json",
+        "sha256": "317c7ef2a9c4987bbda1e87d82d84d316d3f68b7f3b3097452cfa3497c8e1f66"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/crp_500_conservative_20bps/result.json",
+        "sha256": "c2a25faf6665a130f350751b65ea5288ce90e712e85383ef29f707d8d5756d37"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/crp_500_conservative_20bps/hourly_equity.parquet",
+        "sha256": "533af164c79a262e3e577b2b9f5878f31922110da91d828b2c5ccb1d566a7f62"
+      }
+    },
+    {
+      "name": "crp_500_lower",
+      "capital": 500,
+      "cost_bps": 13,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/plan.json",
+        "sha256": "d8541b0c706766432fdb93af59576384c61ede9e37c5013b8067d3148a7c7948"
+      },
+      "source_manifest": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/artifact_manifest.json",
+        "sha256": "317c7ef2a9c4987bbda1e87d82d84d316d3f68b7f3b3097452cfa3497c8e1f66"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/crp_500_lower_13bps/result.json",
+        "sha256": "50c29b3586ff8a3a1e787aa04a22fc6ea9f30bbfe77ef5b8f2dafcda4ddcd7a5"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/crp_500_lower_13bps/hourly_equity.parquet",
+        "sha256": "314d7362df9e74c768c55f84de42f811f8f3a8556bab07aeb012348be0f90a14"
+      }
+    },
+    {
+      "name": "nfi_spot_1000_conservative",
+      "capital": 1000,
+      "cost_bps": 20,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/plan.json",
+        "sha256": "71c4ca773254877d8196db4701ff743c39d685715c6abc4c87bdbb930dfea211"
+      },
+      "source_manifest": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/artifact_manifest.json",
+        "sha256": "cde13b4e5666c7663de749ff1004e21677bb0f37e076ae07dc0624097492c6f7"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/nfi_spot_1000_conservative_20bps/result.json",
+        "sha256": "3f737e61900ad6d202d280f890c94431e6fa56e10dc713dddda9f6a5a9cd8d69"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/nfi_spot_1000_conservative_20bps/hourly_equity.parquet",
+        "sha256": "cc147c4a73cc8bdfb6f0c2d4b7196cab4e2a77cb43475b16e9e3a9dd80ef78dd"
+      }
+    },
+    {
+      "name": "nfi_spot_1000_lower",
+      "capital": 1000,
+      "cost_bps": 13,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/plan.json",
+        "sha256": "71c4ca773254877d8196db4701ff743c39d685715c6abc4c87bdbb930dfea211"
+      },
+      "source_manifest": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/artifact_manifest.json",
+        "sha256": "cde13b4e5666c7663de749ff1004e21677bb0f37e076ae07dc0624097492c6f7"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/nfi_spot_1000_lower_13bps/result.json",
+        "sha256": "a950588fed56339e141903c5f7cd588cda57aaf34b8bf2c32b39a1c2ad1b91e4"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/nfi_spot_1000_lower_13bps/hourly_equity.parquet",
+        "sha256": "daa4069e4b0df01321a29cc1107d2bd3825642a86d4624cea285ab6e5f8d318b"
+      }
+    },
+    {
+      "name": "nfi_spot_500_conservative",
+      "capital": 500,
+      "cost_bps": 20,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/plan.json",
+        "sha256": "71c4ca773254877d8196db4701ff743c39d685715c6abc4c87bdbb930dfea211"
+      },
+      "source_manifest": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/artifact_manifest.json",
+        "sha256": "cde13b4e5666c7663de749ff1004e21677bb0f37e076ae07dc0624097492c6f7"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/nfi_spot_500_conservative_20bps/result.json",
+        "sha256": "70a05c702dcb734cfecd7b464617d2d1ab2fe922fe0a1897e4bad6e319ab532c"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/nfi_spot_500_conservative_20bps/hourly_equity.parquet",
+        "sha256": "d9c388d9c47fa41974f1434a2f643bbc4c23f8da07f66ba8a162dc4dc1c26c00"
+      }
+    },
+    {
+      "name": "nfi_spot_500_lower",
+      "capital": 500,
+      "cost_bps": 13,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/plan.json",
+        "sha256": "71c4ca773254877d8196db4701ff743c39d685715c6abc4c87bdbb930dfea211"
+      },
+      "source_manifest": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/artifact_manifest.json",
+        "sha256": "cde13b4e5666c7663de749ff1004e21677bb0f37e076ae07dc0624097492c6f7"
+      },
+      "result": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/nfi_spot_500_lower_13bps/result.json",
+        "sha256": "e668f89b172fe88e46fc4129bc627f110fed85bf8f4a49ac15863e1e76882a9d"
+      },
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/nfi_spot_500_lower_13bps/hourly_equity.parquet",
+        "sha256": "3b22d9a940f7e4fe2fd99f58e8f4f384e7d03f640d910e23c2933328d4bf1780"
+      }
+    },
+    {
+      "name": "benchmark_1000_conservative",
+      "capital": 1000,
+      "cost_bps": 20,
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_1000_conservative.parquet",
+        "sha256": "cf6c0efe8184c4096070695f4444b106fdbc482a54c7fbe994bffb2ba048eedf"
+      }
+    },
+    {
+      "name": "benchmark_1000_lower",
+      "capital": 1000,
+      "cost_bps": 13,
+      "hourly_equity": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_1000_lower.parquet",
+        "sha256": "fbe13db9f2f95ed075ee5a2f1a398a99900603a3b8ed2341de4e743d3802ac8a"
+      }
+    }
+  ],
+  "portfolios": [
+    {
+      "wavelet": 500,
+      "nfi_spot": 500
+    },
+    {
+      "wavelet": 500,
+      "trendcore": 500
+    }
+  ],
+  "no_global_40perp_comparison": true,
+  "initial_cash_ramp_preserved": true,
+  "selection_not_independent_oos": true
+}

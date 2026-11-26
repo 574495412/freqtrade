@@ -1,0 +1,36 @@
+{
+  "frozen_at": "2026-11-16T19:49:27.270266+00:00",
+  "scope": "Local native dated amount/notional extension and full lifecycle fixtures;not source40 financial run or new alpha",
+  "inputs": {
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/backtesting.py": "a5fa1efa624d0bcfef81be3f0d3a51dd50003986927dd0756da1ec6370e320ce",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/dated_price_precision.py": "4631bdb5ec9f1cfcef7d82eba750f591bb30663ce5b9d46e01abe67daaf46507",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/order_operations.py": "7c7cb2c163f12cac53a694d66d2179b927b35d43465b7abfd23a2543599514f3",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/rule_coverage_native_20261117_v1/artifact_manifest.json": "93f6af405d00565b739a3ff3e0a23db97494742134f9b57b92a072c6f641bd71"
+  },
+  "owners": {
+    "native_ancestor": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "local_native": "freqtrade/optimize/backtesting.py",
+    "prior_price": "freqtrade/optimize/dated_price_precision.py",
+    "new_amount": "freqtrade/optimize/dated_amount_rules.py"
+  },
+  "requirements": [
+    "Default native paths and prior trade factory unchanged unless explicitly opted in",
+    "Date-aware quantity step and min/max amount plus minimum notional before creating initial/DCA/partial/full-exit Orders",
+    "Validate final rounded quantity and notional,not only pre-rounding stake",
+    "Use current rule for new orders;do not retroactively invalidate already accepted pending orders",
+    "Preserve exact native position quantity when DCA/partial exits cross a finer rule,using only observed order grids;no futurebookminprecision",
+    "Reject nonzero affine-grid offsets and unsupported close dust,not silently round away holdings",
+    "Keep source uncertainty and missing full40 history;fixtures do not count as financial improvement"
+  ],
+  "fixture_hypotheses": [
+    "finer-step DCA then partial/full exit retains all fills and independently matches cash",
+    "minimum notional falls:before-date small entry rejected,after-date same proposal admitted",
+    "post-round notional failure creates no orders",
+    "reduce-only exit below minnotional works only under explicit exemption",
+    "coarser-step close dust or unknown rule rejects the incomplete account"
+  ],
+  "new_historical_strategy_accounts": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

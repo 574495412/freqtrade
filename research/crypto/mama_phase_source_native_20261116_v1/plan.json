@@ -1,0 +1,285 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "schema": "matched-nfi-carry-native-v1",
+  "registered_at": "2026-11-15T18:18:07.682105+00:00",
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/mama_phase_source_native_20261116_v1",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/mama_phase_source_native_20261116_v1/candles",
+  "pairs": [
+    "BTC/USDT",
+    "ETH/USDT"
+  ],
+  "candidates": [
+    {
+      "name": "mama_1000_conservative",
+      "strategy": "PhaseMAMA",
+      "capital": 1000,
+      "mode": "spot",
+      "scenario": "conservative",
+      "cost_bps": 20,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/mama_1000_conservative.json",
+        "sha256": "6433f50f1d451620519361ee7fda523dc79bad395ca28d8d0e552242741e3ca3"
+      },
+      "source_files": {
+        "PhaseMAMA.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/PhaseMAMA.py",
+          "sha256": "ecbc3a420691b71a1577a497def12a9cf65bf6adff3ac1d2d629f064efa6c24a"
+        },
+        "MAMAInputs.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/MAMAInputs.py",
+          "sha256": "f2350057e8269ceacd013f1339e29914984a1b2850cf2ac179f83052afd36e97"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    },
+    {
+      "name": "mama_1000_lower",
+      "strategy": "PhaseMAMA",
+      "capital": 1000,
+      "mode": "spot",
+      "scenario": "lower",
+      "cost_bps": 13,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/mama_1000_lower.json",
+        "sha256": "88a431815e27db8a6ba7c3ae1ce08acd0a4a49e80ad6872c78a4e003c57a3d74"
+      },
+      "source_files": {
+        "PhaseMAMA.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/PhaseMAMA.py",
+          "sha256": "ecbc3a420691b71a1577a497def12a9cf65bf6adff3ac1d2d629f064efa6c24a"
+        },
+        "MAMAInputs.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/MAMAInputs.py",
+          "sha256": "f2350057e8269ceacd013f1339e29914984a1b2850cf2ac179f83052afd36e97"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    },
+    {
+      "name": "mama_500_conservative",
+      "strategy": "PhaseMAMA",
+      "capital": 500,
+      "mode": "spot",
+      "scenario": "conservative",
+      "cost_bps": 20,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/mama_500_conservative.json",
+        "sha256": "16e60145241c8fda6c89cd75d71caf9f0b1a32e49aeed80cccd99b22fe1ea1fe"
+      },
+      "source_files": {
+        "PhaseMAMA.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/PhaseMAMA.py",
+          "sha256": "ecbc3a420691b71a1577a497def12a9cf65bf6adff3ac1d2d629f064efa6c24a"
+        },
+        "MAMAInputs.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/MAMAInputs.py",
+          "sha256": "f2350057e8269ceacd013f1339e29914984a1b2850cf2ac179f83052afd36e97"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    },
+    {
+      "name": "mama_500_lower",
+      "strategy": "PhaseMAMA",
+      "capital": 500,
+      "mode": "spot",
+      "scenario": "lower",
+      "cost_bps": 13,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/mama_500_lower.json",
+        "sha256": "f6854f1434188b88101fb10e671deb45f41626d1faf3cc2526a095b8dedb10db"
+      },
+      "source_files": {
+        "PhaseMAMA.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/PhaseMAMA.py",
+          "sha256": "ecbc3a420691b71a1577a497def12a9cf65bf6adff3ac1d2d629f064efa6c24a"
+        },
+        "MAMAInputs.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/MAMAInputs.py",
+          "sha256": "f2350057e8269ceacd013f1339e29914984a1b2850cf2ac179f83052afd36e97"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    }
+  ],
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+    "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+  },
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/data_receipts.json",
+    "sha256": "28c08681f0390f409c0eff52834225db3fe87c91c5d68f0314cfe2517b8b6060"
+  },
+  "marks": {
+    "BTC/USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/BTC_USDT-1h.feather",
+      "sha256": "beed6bde8f88040b0af3457543d9d9a6cd0d15716b521cec1614ebe9e14a3a76"
+    },
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    "ETH/USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/ETH_USDT-1h.feather",
+      "sha256": "1a7e97e71696dc76472fb89c5c474824085f0a4601fc6a4007c1911780d51957"
+    },
+    "ETH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+    }
+  },
+  "allowed_leverage": 1,
+  "initial_equity_usdt": 1000,
+  "total_cost_bps_per_side": [
+    20,
+    13
+  ],
+  "runner_sha256": "9d6e3052635f02386fa063a6d5811778ae0a21d3251b84e85d6950a01997f208",
+  "runner_module": "research.crypto.mama_phase_source_native_20261116_v1.native_runner",
+  "price_precision_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/matched_price_precision.py",
+    "sha256": "651d8e731c0a85649fb547ff27f5381eebb086e905537c27f8aee5b578aec9bb"
+  },
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/protocol.json",
+      "sha256": "c5abba1922378aaeb201dddbe32863fb1f2ec3072d3090508627e59126b3d059"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/protocol_freeze.json",
+      "sha256": "8beb51b9f2c0b3d92c3b257449c3ba1b839a3065a1f439b2e5bdc4074ca846f8"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/PhaseMAMA.py",
+      "sha256": "ecbc3a420691b71a1577a497def12a9cf65bf6adff3ac1d2d629f064efa6c24a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/run.py",
+      "sha256": "a4c05a1723bf2070a6bb78ca2a1786f1e73bfc6753eee33b53014dedab838766"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/CaptureRules.py",
+      "sha256": "519ae02c22ab37138cfe0ee6410e4a8e694c7714d74a1f13011e592846eaed46"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/MAMAInputs.py",
+      "sha256": "f2350057e8269ceacd013f1339e29914984a1b2850cf2ac179f83052afd36e97"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/band_trend_native_20261113_v1/observe_clock.py",
+      "sha256": "f2bb297fca1ec753d9a010c39ff45506dccc0aadadf067f069de2e8a8d7b638d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/skew_vol_native_20261113_v1/clock_fix.py",
+      "sha256": "3569781b7f1e30319cb0f2aed0a2c12587f0448de154f5575415b6f1684df8ce"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mama_phase_source_native_20261116_v1/talib_environment.json",
+      "sha256": "3340342d1efc7dae6e0bc8dbcae8a77fbe10d0c4e0ee3298f057faf2e3402f16"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/.venv-paper/lib/python3.12/site-packages/talib/_ta_lib.cpython-312-darwin.so",
+      "sha256": "7ab318dae5edb3c07fa8a3a31c67360a3c14d9ddfa4b58d4ccb7267f9e7965da"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false,
+  "native_start": "2024-12-31T23:00:00Z"
+}

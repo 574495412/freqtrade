@@ -1,0 +1,1699 @@
+{
+  "audited_at": "2026-11-16T19:40:47.836101+00:00",
+  "passed_source_and_arithmetic_checks": true,
+  "original_ordered_pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "TRB/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "XRP/USDT:USDT",
+    "ADA/USDT:USDT",
+    "BNB/USDT:USDT",
+    "LINK/USDT:USDT",
+    "DOT/USDT:USDT",
+    "FIL/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "DYDX/USDT:USDT",
+    "LTC/USDT:USDT",
+    "BCH/USDT:USDT",
+    "ETC/USDT:USDT",
+    "GALA/USDT:USDT",
+    "SAND/USDT:USDT",
+    "UNI/USDT:USDT",
+    "IOTA/USDT:USDT",
+    "RUNE/USDT:USDT",
+    "AXS/USDT:USDT",
+    "AAVE/USDT:USDT",
+    "EGLD/USDT:USDT",
+    "ALGO/USDT:USDT",
+    "SNX/USDT:USDT",
+    "CRV/USDT:USDT",
+    "MASK/USDT:USDT",
+    "SUSHI/USDT:USDT",
+    "KSM/USDT:USDT",
+    "IOTX/USDT:USDT",
+    "MANA/USDT:USDT",
+    "NEO/USDT:USDT",
+    "GRT/USDT:USDT",
+    "TRX/USDT:USDT",
+    "CELO/USDT:USDT",
+    "SKL/USDT:USDT",
+    "THETA/USDT:USDT"
+  ],
+  "source_points": [
+    {
+      "captured_at": "2023-11-02T09:32:09+00:00",
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/rule_coverage_native_20261117_v1/sources/baseline_20231102093209.raw",
+      "sha256": "594f7ec2a1c1c4ea8b115ff9c049fc9cb91c2db20322b8d4af75dd1cc32c1cb3",
+      "rules": {
+        "BTC/USDT:USDT": {
+          "tickSize": "0.10",
+          "minPrice": "556.80",
+          "maxPrice": "4529764",
+          "stepSize": "0.001",
+          "minQty": "0.001",
+          "maxQty": "1000",
+          "minNotional": "100",
+          "status": "TRADING"
+        },
+        "ETH/USDT:USDT": {
+          "tickSize": "0.01",
+          "minPrice": "39.86",
+          "maxPrice": "306177",
+          "stepSize": "0.001",
+          "minQty": "0.001",
+          "maxQty": "10000",
+          "minNotional": "20",
+          "status": "TRADING"
+        },
+        "SOL/USDT:USDT": {
+          "tickSize": "0.0010",
+          "minPrice": "0.4200",
+          "maxPrice": "6857",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "AVAX/USDT:USDT": {
+          "tickSize": "0.0010",
+          "minPrice": "0.3500",
+          "maxPrice": "2403",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "100000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "TRB/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "1.230",
+          "maxPrice": "5138",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "DOGE/USDT:USDT": {
+          "tickSize": "0.000010",
+          "minPrice": "0.002440",
+          "maxPrice": "30",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "50000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "XRP/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0143",
+          "maxPrice": "100000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "ADA/USDT:USDT": {
+          "tickSize": "0.00010",
+          "minPrice": "0.01740",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "2000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "BNB/USDT:USDT": {
+          "tickSize": "0.010",
+          "minPrice": "6.600",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "100000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "LINK/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.464",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "200000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "DOT/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.373",
+          "maxPrice": "2398",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "FIL/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "1.381",
+          "maxPrice": "10000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "NEAR/USDT:USDT": {
+          "tickSize": "0.0010",
+          "minPrice": "0.0480",
+          "maxPrice": "1000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "ATOM/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.251",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "100000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "DYDX/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.010",
+          "maxPrice": "100000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "LTC/USDT:USDT": {
+          "tickSize": "0.01",
+          "minPrice": "3.61",
+          "maxPrice": "100000",
+          "stepSize": "0.001",
+          "minQty": "0.001",
+          "maxQty": "10000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "BCH/USDT:USDT": {
+          "tickSize": "0.01",
+          "minPrice": "13.93",
+          "maxPrice": "100000",
+          "stepSize": "0.001",
+          "minQty": "0.001",
+          "maxQty": "10000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "ETC/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "1.051",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "100000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "GALA/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00050",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "SAND/USDT:USDT": {
+          "tickSize": "0.00010",
+          "minPrice": "0.00500",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "UNI/USDT:USDT": {
+          "tickSize": "0.0010",
+          "minPrice": "0.3730",
+          "maxPrice": "2684",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "IOTA/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0205",
+          "maxPrice": "100000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "RUNE/USDT:USDT": {
+          "tickSize": "0.0010",
+          "minPrice": "0.1720",
+          "maxPrice": "839",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "AXS/USDT:USDT": {
+          "tickSize": "0.00100",
+          "minPrice": "0.08000",
+          "maxPrice": "6989",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "AAVE/USDT:USDT": {
+          "tickSize": "0.010",
+          "minPrice": "4.340",
+          "maxPrice": "38702",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "EGLD/USDT:USDT": {
+          "tickSize": "0.010",
+          "minPrice": "1.770",
+          "maxPrice": "14295",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "ALGO/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0141",
+          "maxPrice": "1000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "SNX/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.164",
+          "maxPrice": "1144",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "CRV/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.031",
+          "maxPrice": "1000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "MASK/USDT:USDT": {
+          "tickSize": "0.0010",
+          "minPrice": "0.0040",
+          "maxPrice": "100000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "5000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "SUSHI/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.1430",
+          "maxPrice": "1301",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "KSM/USDT:USDT": {
+          "tickSize": "0.010",
+          "minPrice": "4.060",
+          "maxPrice": "28450",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "IOTX/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00050",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "MANA/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0136",
+          "maxPrice": "100000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "NEO/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "1.093",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "100000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "GRT/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.01398",
+          "maxPrice": "100",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "TRX/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00132",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "CELO/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.010",
+          "maxPrice": "100000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "SKL/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00544",
+          "maxPrice": "100",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "THETA/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.1070",
+          "maxPrice": "1000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        }
+      },
+      "scope": "Real pre-window point,not a validity interval extending into2025"
+    },
+    {
+      "captured_at": "2026-02-17T04:13:28+00:00",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/rd_program_20261105_v1/exchangeinfo_archive_probe_v001/futures-20260217041328-exchangeInfo.raw",
+      "sha256": "05a693a97701f29ad1a7abab59a62d9fdf2f63add2eaae913f26bed7d470ffeb",
+      "rules": {
+        "BTC/USDT:USDT": {
+          "tickSize": "0.10",
+          "minPrice": "556.80",
+          "maxPrice": "4529764",
+          "stepSize": "0.001",
+          "minQty": "0.001",
+          "maxQty": "1000",
+          "minNotional": "100",
+          "status": "TRADING"
+        },
+        "ETH/USDT:USDT": {
+          "tickSize": "0.01",
+          "minPrice": "39.86",
+          "maxPrice": "306177",
+          "stepSize": "0.001",
+          "minQty": "0.001",
+          "maxQty": "10000",
+          "minNotional": "20",
+          "status": "TRADING"
+        },
+        "SOL/USDT:USDT": {
+          "tickSize": "0.0100",
+          "minPrice": "0.4200",
+          "maxPrice": "6857",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "AVAX/USDT:USDT": {
+          "tickSize": "0.0010",
+          "minPrice": "0.3500",
+          "maxPrice": "2403",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "100000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "TRB/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "5138",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "DOGE/USDT:USDT": {
+          "tickSize": "0.000010",
+          "minPrice": "0.002440",
+          "maxPrice": "30",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "50000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "XRP/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0143",
+          "maxPrice": "100000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "ADA/USDT:USDT": {
+          "tickSize": "0.00010",
+          "minPrice": "0.00010",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "6000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "BNB/USDT:USDT": {
+          "tickSize": "0.010",
+          "minPrice": "6.600",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "100000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "LINK/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "200000",
+          "minNotional": "20",
+          "status": "TRADING"
+        },
+        "DOT/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "2398",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "2000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "FIL/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "10000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "NEAR/USDT:USDT": {
+          "tickSize": "0.0010",
+          "minPrice": "0.0480",
+          "maxPrice": "1000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "ATOM/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "DYDX/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "100000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "7000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "LTC/USDT:USDT": {
+          "tickSize": "0.01",
+          "minPrice": "0.01",
+          "maxPrice": "100000",
+          "stepSize": "0.001",
+          "minQty": "0.001",
+          "maxQty": "20000",
+          "minNotional": "20",
+          "status": "TRADING"
+        },
+        "BCH/USDT:USDT": {
+          "tickSize": "0.01",
+          "minPrice": "13.93",
+          "maxPrice": "100000",
+          "stepSize": "0.001",
+          "minQty": "0.001",
+          "maxQty": "10000",
+          "minNotional": "20",
+          "status": "TRADING"
+        },
+        "ETC/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "300000",
+          "minNotional": "20",
+          "status": "TRADING"
+        },
+        "GALA/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00001",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "200000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "SAND/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00001",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "UNI/USDT:USDT": {
+          "tickSize": "0.0010",
+          "minPrice": "0.0010",
+          "maxPrice": "2684",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "IOTA/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0001",
+          "maxPrice": "100000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "20000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "RUNE/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0001",
+          "maxPrice": "839",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "AXS/USDT:USDT": {
+          "tickSize": "0.00100",
+          "minPrice": "0.00100",
+          "maxPrice": "2000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "AAVE/USDT:USDT": {
+          "tickSize": "0.010",
+          "minPrice": "4.340",
+          "maxPrice": "38702",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "EGLD/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "14295",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "ALGO/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0001",
+          "maxPrice": "1000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "5000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "SNX/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "1144",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "3000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "CRV/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "1000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "4000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "MASK/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0040",
+          "maxPrice": "100000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "5000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "SUSHI/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0001",
+          "maxPrice": "1301",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "KSM/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "28450",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "2000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "IOTX/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00001",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "90000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "MANA/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0001",
+          "maxPrice": "100000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "8000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "NEO/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "300000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "GRT/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00001",
+          "maxPrice": "100",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "30000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "TRX/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00132",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "CELO/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "100000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "7000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "SKL/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00001",
+          "maxPrice": "100",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "80000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "THETA/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0001",
+          "maxPrice": "1000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "4000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        }
+      },
+      "scope": "Captured point only;no continuous effective interval"
+    },
+    {
+      "captured_at": "2026-05-10T10:30:16+00:00",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/rd_program_20261105_v1/exchangeinfo_archive_probe_v001/futures-20260510103016-exchangeInfo.raw",
+      "sha256": "ec512411d39a06342ba50c704fd404df4665a374482956780506b2a26c780bc3",
+      "rules": {
+        "BTC/USDT:USDT": {
+          "tickSize": "0.10",
+          "minPrice": "556.80",
+          "maxPrice": "4529764",
+          "stepSize": "0.001",
+          "minQty": "0.001",
+          "maxQty": "1000",
+          "minNotional": "50",
+          "status": "TRADING"
+        },
+        "ETH/USDT:USDT": {
+          "tickSize": "0.01",
+          "minPrice": "39.86",
+          "maxPrice": "306177",
+          "stepSize": "0.001",
+          "minQty": "0.001",
+          "maxQty": "10000",
+          "minNotional": "20",
+          "status": "TRADING"
+        },
+        "SOL/USDT:USDT": {
+          "tickSize": "0.0100",
+          "minPrice": "0.4200",
+          "maxPrice": "6857",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "AVAX/USDT:USDT": {
+          "tickSize": "0.0010",
+          "minPrice": "0.3500",
+          "maxPrice": "2403",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "100000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "TRB/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "5138",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "DOGE/USDT:USDT": {
+          "tickSize": "0.000010",
+          "minPrice": "0.002440",
+          "maxPrice": "30",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "50000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "XRP/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0143",
+          "maxPrice": "100000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "ADA/USDT:USDT": {
+          "tickSize": "0.00010",
+          "minPrice": "0.00010",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "6000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "BNB/USDT:USDT": {
+          "tickSize": "0.010",
+          "minPrice": "6.600",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "100000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "LINK/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "200000",
+          "minNotional": "20",
+          "status": "TRADING"
+        },
+        "DOT/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "2398",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "2000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "FIL/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "10000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "NEAR/USDT:USDT": {
+          "tickSize": "0.0010",
+          "minPrice": "0.0480",
+          "maxPrice": "1000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "ATOM/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "DYDX/USDT:USDT": {
+          "tickSize": "0.000100",
+          "minPrice": "0.000100",
+          "maxPrice": "200",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "7000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "LTC/USDT:USDT": {
+          "tickSize": "0.01",
+          "minPrice": "0.01",
+          "maxPrice": "100000",
+          "stepSize": "0.001",
+          "minQty": "0.001",
+          "maxQty": "20000",
+          "minNotional": "20",
+          "status": "TRADING"
+        },
+        "BCH/USDT:USDT": {
+          "tickSize": "0.01",
+          "minPrice": "13.93",
+          "maxPrice": "100000",
+          "stepSize": "0.001",
+          "minQty": "0.001",
+          "maxQty": "10000",
+          "minNotional": "20",
+          "status": "TRADING"
+        },
+        "ETC/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "300000",
+          "minNotional": "20",
+          "status": "TRADING"
+        },
+        "GALA/USDT:USDT": {
+          "tickSize": "0.0000010",
+          "minPrice": "0.0000010",
+          "maxPrice": "200",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "200000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "SAND/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00001",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "UNI/USDT:USDT": {
+          "tickSize": "0.0010",
+          "minPrice": "0.0010",
+          "maxPrice": "2684",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "IOTA/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0001",
+          "maxPrice": "100000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "20000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "RUNE/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0001",
+          "maxPrice": "839",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "AXS/USDT:USDT": {
+          "tickSize": "0.00100",
+          "minPrice": "0.00100",
+          "maxPrice": "2000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "AAVE/USDT:USDT": {
+          "tickSize": "0.010",
+          "minPrice": "4.340",
+          "maxPrice": "38702",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "EGLD/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "14295",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "1000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "ALGO/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0001",
+          "maxPrice": "1000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "5000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "SNX/USDT:USDT": {
+          "tickSize": "0.000100",
+          "minPrice": "0.000100",
+          "maxPrice": "200",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "3000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "CRV/USDT:USDT": {
+          "tickSize": "0.000100",
+          "minPrice": "0.000100",
+          "maxPrice": "200",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "4000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "MASK/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0040",
+          "maxPrice": "100000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "5000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "SUSHI/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0001",
+          "maxPrice": "1301",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "KSM/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "28450",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "2000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "IOTX/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00001",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "90000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "MANA/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0001",
+          "maxPrice": "100000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "8000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "NEO/USDT:USDT": {
+          "tickSize": "0.001",
+          "minPrice": "0.001",
+          "maxPrice": "100000",
+          "stepSize": "0.01",
+          "minQty": "0.01",
+          "maxQty": "300000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "GRT/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00001",
+          "maxPrice": "100",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "30000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "TRX/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00132",
+          "maxPrice": "20000",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "10000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "CELO/USDT:USDT": {
+          "tickSize": "0.000010",
+          "minPrice": "0.000010",
+          "maxPrice": "200",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "7000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "SKL/USDT:USDT": {
+          "tickSize": "0.00001",
+          "minPrice": "0.00001",
+          "maxPrice": "100",
+          "stepSize": "1",
+          "minQty": "1",
+          "maxQty": "80000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        },
+        "THETA/USDT:USDT": {
+          "tickSize": "0.0001",
+          "minPrice": "0.0001",
+          "maxPrice": "1000",
+          "stepSize": "0.1",
+          "minQty": "0.1",
+          "maxQty": "4000000",
+          "minNotional": "5",
+          "status": "TRADING"
+        }
+      },
+      "scope": "Captured point only;no continuous effective interval"
+    }
+  ],
+  "symbol_point_observations": 120,
+  "point_to_point_differences": [
+    {
+      "before": "2023-11-02T09:32:09+00:00",
+      "after": "2026-02-17T04:13:28+00:00",
+      "changes": {
+        "SOL/USDT:USDT": {
+          "tickSize": [
+            "0.0010",
+            "0.0100"
+          ],
+          "stepSize": [
+            "1",
+            "0.01"
+          ],
+          "minQty": [
+            "1",
+            "0.01"
+          ]
+        },
+        "TRB/USDT:USDT": {
+          "minPrice": [
+            "1.230",
+            "0.001"
+          ]
+        },
+        "ADA/USDT:USDT": {
+          "minPrice": [
+            "0.01740",
+            "0.00010"
+          ],
+          "maxQty": [
+            "2000000",
+            "6000000"
+          ]
+        },
+        "LINK/USDT:USDT": {
+          "minPrice": [
+            "0.464",
+            "0.001"
+          ],
+          "minNotional": [
+            "5",
+            "20"
+          ]
+        },
+        "DOT/USDT:USDT": {
+          "minPrice": [
+            "0.373",
+            "0.001"
+          ],
+          "maxQty": [
+            "1000000",
+            "2000000"
+          ]
+        },
+        "FIL/USDT:USDT": {
+          "minPrice": [
+            "1.381",
+            "0.001"
+          ]
+        },
+        "ATOM/USDT:USDT": {
+          "minPrice": [
+            "0.251",
+            "0.001"
+          ],
+          "maxQty": [
+            "100000",
+            "1000000"
+          ]
+        },
+        "DYDX/USDT:USDT": {
+          "minPrice": [
+            "0.010",
+            "0.001"
+          ],
+          "maxQty": [
+            "1000000",
+            "7000000"
+          ]
+        },
+        "LTC/USDT:USDT": {
+          "minPrice": [
+            "3.61",
+            "0.01"
+          ],
+          "maxQty": [
+            "10000",
+            "20000"
+          ],
+          "minNotional": [
+            "5",
+            "20"
+          ]
+        },
+        "BCH/USDT:USDT": {
+          "minNotional": [
+            "5",
+            "20"
+          ]
+        },
+        "ETC/USDT:USDT": {
+          "minPrice": [
+            "1.051",
+            "0.001"
+          ],
+          "maxQty": [
+            "100000",
+            "300000"
+          ],
+          "minNotional": [
+            "5",
+            "20"
+          ]
+        },
+        "GALA/USDT:USDT": {
+          "minPrice": [
+            "0.00050",
+            "0.00001"
+          ],
+          "maxQty": [
+            "10000000",
+            "200000000"
+          ]
+        },
+        "SAND/USDT:USDT": {
+          "tickSize": [
+            "0.00010",
+            "0.00001"
+          ],
+          "minPrice": [
+            "0.00500",
+            "0.00001"
+          ]
+        },
+        "UNI/USDT:USDT": {
+          "minPrice": [
+            "0.3730",
+            "0.0010"
+          ]
+        },
+        "IOTA/USDT:USDT": {
+          "minPrice": [
+            "0.0205",
+            "0.0001"
+          ],
+          "maxQty": [
+            "1000000",
+            "20000000"
+          ]
+        },
+        "RUNE/USDT:USDT": {
+          "tickSize": [
+            "0.0010",
+            "0.0001"
+          ],
+          "minPrice": [
+            "0.1720",
+            "0.0001"
+          ]
+        },
+        "AXS/USDT:USDT": {
+          "minPrice": [
+            "0.08000",
+            "0.00100"
+          ],
+          "maxPrice": [
+            "6989",
+            "2000"
+          ]
+        },
+        "EGLD/USDT:USDT": {
+          "tickSize": [
+            "0.010",
+            "0.001"
+          ],
+          "minPrice": [
+            "1.770",
+            "0.001"
+          ]
+        },
+        "ALGO/USDT:USDT": {
+          "minPrice": [
+            "0.0141",
+            "0.0001"
+          ],
+          "maxQty": [
+            "1000000",
+            "5000000"
+          ]
+        },
+        "SNX/USDT:USDT": {
+          "minPrice": [
+            "0.164",
+            "0.001"
+          ],
+          "maxQty": [
+            "1000000",
+            "3000000"
+          ]
+        },
+        "CRV/USDT:USDT": {
+          "minPrice": [
+            "0.031",
+            "0.001"
+          ],
+          "maxQty": [
+            "1000000",
+            "4000000"
+          ]
+        },
+        "MASK/USDT:USDT": {
+          "tickSize": [
+            "0.0010",
+            "0.0001"
+          ]
+        },
+        "SUSHI/USDT:USDT": {
+          "minPrice": [
+            "0.1430",
+            "0.0001"
+          ]
+        },
+        "KSM/USDT:USDT": {
+          "tickSize": [
+            "0.010",
+            "0.001"
+          ],
+          "minPrice": [
+            "4.060",
+            "0.001"
+          ],
+          "maxQty": [
+            "1000000",
+            "2000000"
+          ]
+        },
+        "IOTX/USDT:USDT": {
+          "minPrice": [
+            "0.00050",
+            "0.00001"
+          ],
+          "maxQty": [
+            "10000000",
+            "90000000"
+          ]
+        },
+        "MANA/USDT:USDT": {
+          "minPrice": [
+            "0.0136",
+            "0.0001"
+          ],
+          "maxQty": [
+            "1000000",
+            "8000000"
+          ]
+        },
+        "NEO/USDT:USDT": {
+          "minPrice": [
+            "1.093",
+            "0.001"
+          ],
+          "maxQty": [
+            "100000",
+            "300000"
+          ]
+        },
+        "GRT/USDT:USDT": {
+          "minPrice": [
+            "0.01398",
+            "0.00001"
+          ],
+          "maxQty": [
+            "1000000",
+            "30000000"
+          ]
+        },
+        "CELO/USDT:USDT": {
+          "minPrice": [
+            "0.010",
+            "0.001"
+          ],
+          "maxQty": [
+            "1000000",
+            "7000000"
+          ]
+        },
+        "SKL/USDT:USDT": {
+          "minPrice": [
+            "0.00544",
+            "0.00001"
+          ],
+          "maxQty": [
+            "10000000",
+            "80000000"
+          ]
+        },
+        "THETA/USDT:USDT": {
+          "minPrice": [
+            "0.1070",
+            "0.0001"
+          ],
+          "maxQty": [
+            "1000000",
+            "4000000"
+          ]
+        }
+      },
+      "precise_activation_unknown": true
+    },
+    {
+      "before": "2026-02-17T04:13:28+00:00",
+      "after": "2026-05-10T10:30:16+00:00",
+      "changes": {
+        "BTC/USDT:USDT": {
+          "minNotional": [
+            "100",
+            "50"
+          ]
+        },
+        "DYDX/USDT:USDT": {
+          "tickSize": [
+            "0.001",
+            "0.000100"
+          ],
+          "minPrice": [
+            "0.001",
+            "0.000100"
+          ],
+          "maxPrice": [
+            "100000",
+            "200"
+          ]
+        },
+        "GALA/USDT:USDT": {
+          "tickSize": [
+            "0.00001",
+            "0.0000010"
+          ],
+          "minPrice": [
+            "0.00001",
+            "0.0000010"
+          ],
+          "maxPrice": [
+            "20000",
+            "200"
+          ]
+        },
+        "SNX/USDT:USDT": {
+          "tickSize": [
+            "0.001",
+            "0.000100"
+          ],
+          "minPrice": [
+            "0.001",
+            "0.000100"
+          ],
+          "maxPrice": [
+            "1144",
+            "200"
+          ]
+        },
+        "CRV/USDT:USDT": {
+          "tickSize": [
+            "0.001",
+            "0.000100"
+          ],
+          "minPrice": [
+            "0.001",
+            "0.000100"
+          ],
+          "maxPrice": [
+            "1000",
+            "200"
+          ]
+        },
+        "CELO/USDT:USDT": {
+          "tickSize": [
+            "0.001",
+            "0.000010"
+          ],
+          "minPrice": [
+            "0.001",
+            "0.000010"
+          ],
+          "maxPrice": [
+            "100000",
+            "200"
+          ]
+        }
+      },
+      "precise_activation_unknown": true
+    }
+  ],
+  "index_queries": [
+    {
+      "receipt": "cdx_receipt.json",
+      "rows": 2,
+      "resume_key_observed": false,
+      "query_limit": 1000,
+      "scope": "Returned CDX prefix index;not proof that no other source exists"
+    },
+    {
+      "receipt": "cdx_prewindow_receipt.json",
+      "rows": 20,
+      "resume_key_observed": false,
+      "query_limit": 1000,
+      "scope": "Returned CDX prefix index;not proof that no other source exists"
+    }
+  ],
+  "certified_continuous_rule_intervals": 0,
+  "full_window_native_account_admission": false,
+  "narrow_initial_order_below_old_limit_count": 0,
+  "broad_initial_SOL_sensitivity_count": 14,
+  "DCA_fill_only_SOL_sensitivity_count": 2,
+  "no_relabel_as_rule_violations": true,
+  "old_snapshot_source_hashes": {
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/rd_program_20261105_v1/exchangeinfo_archive_probe_v001/futures-20260217041328-exchangeInfo.raw": "05a693a97701f29ad1a7abab59a62d9fdf2f63add2eaae913f26bed7d470ffeb",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/rd_program_20261105_v1/exchangeinfo_archive_probe_v001/futures-20260510103016-exchangeInfo.raw": "ec512411d39a06342ba50c704fd404df4665a374482956780506b2a26c780bc3"
+  },
+  "Tardis_API_retried": false,
+  "new_historical_strategy_accounts": 0,
+  "corrected_returns": null,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

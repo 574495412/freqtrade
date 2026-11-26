@@ -1,0 +1,21 @@
+{
+  "scope": "Synthetic full inherited start validation only;not new strategy/account performance",
+  "original_protocol_sha256": "d5de018d3126e177995a0078df8d360412eb9343852522626ae6770dd9433b1f",
+  "currencies": [
+    "BTC",
+    "ETH"
+  ],
+  "entry_signal": "2026-11-15T20:00:00Z",
+  "first_fill": "2026-11-15T21:00:00Z",
+  "exit_signal": "2026-11-16T03:00:00Z",
+  "terminal_fill": "2026-11-16T04:00:00Z",
+  "data_warmup_first": "2026-11-15T20:00:00Z",
+  "bar_count_per_pair": 9,
+  "capital_boundaries": 16,
+  "quantity": "2times original minimum per call/put,both short",
+  "synthetic_prices": "0.05 until final0.04;volume100;mark equals current open,index=strike",
+  "allocation": "Native custom_stake_quantity_notional;actual fills gated by coin cash/IM/fees",
+  "raw_native_zip_metrics_not_strategy_performance": true,
+  "new_historical_accounts": 0,
+  "goal_complete": false
+}

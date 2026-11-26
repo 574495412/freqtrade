@@ -1,0 +1,8 @@
+{
+  "frozen_before_financial": "2026-11-16T13:56:09.489726+00:00",
+  "known_native_4h_boundary": "Raw terminal force exits may be timestamped at last4h bar20UTC using final close;they are generated after the historical detail loop",
+  "primary_rule": "Exclude only proven post-loop terminal force exit orders from every common-hour account reconstruction regardless of their synthetic assigned timestamp. Other fills use actual native timestamps strictly before mark boundary.",
+  "native_unchanged": true,
+  "evidence": "Read-only terminal_phase receipt captures last yielded native detail clock and actual open Trade identities before invoking original handle_left_open",
+  "scope": "Primary hourly NAV still2025Jan1to2026Aug31 23UTC,no financial window extension or fabricated native fill"
+}

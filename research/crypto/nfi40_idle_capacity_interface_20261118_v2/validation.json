@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "case": "all_callback_function_objects_inherited",
+      "callbacks": 26
+    },
+    {
+      "case": "real_strategy_resolver_and_original_constructor",
+      "IStrategy": true,
+      "timeframe": "5m",
+      "entry_exit": "limit",
+      "startup": 800,
+      "strategy_name_different": true
+    },
+    {
+      "case": "four_unadmitted_modes_rejected"
+    },
+    {
+      "case": "original_numeric_whitespace_tags_and_entry_stake_leverage",
+      "tags": [
+        "1 2 ",
+        "61 ",
+        "501 502 "
+      ]
+    },
+    {
+      "case": "original_exit_vector_preserves_tag_bytes"
+    },
+    {
+      "case": "real_NFI_order_filled_custom_data_dispatch",
+      "argument_fixture_cases": 3,
+      "native_order_execution": false
+    },
+    {
+      "case": "original_timeout_and_backtest_loop_delegation"
+    },
+    {
+      "case": "actual_native_shift_and_start_boundary",
+      "first_executable_clock": "2025-01-01 00:05:00+00:00",
+      "00:00_event_inherited_unexecutable_boundary": true,
+      "01:00_projection_correct": true
+    },
+    {
+      "case": "real_DP_per_pair_slice_is_not_global_current_intent_view"
+    },
+    {
+      "case": "full40_completed_intent_calendar_future_shock",
+      "pairs": 40,
+      "future_rows_read_by_snapshot": false
+    },
+    {
+      "case": "missing_pair_or_exact_clock_never_uses_stale_fallback"
+    },
+    {
+      "case": "direction_conflicts_match_actual_native_method",
+      "flag_combinations": 16
+    }
+  ],
+  "case_count": 12,
+  "official_files_verified": 595,
+  "NFI_version": "v18.0.146",
+  "callback_identity_count": 26,
+  "full_native_account_parity": "UNKNOWN",
+  "aux_enabled_implementation": "NOT_IMPLEMENTED_HARD_REJECTED",
+  "Backtesting_instances": 0,
+  "Backtesting_start_calls": 0,
+  "Wallet_instances": 0,
+  "financial_accounts_run": 0,
+  "native_matching_proven": false,
+  "peak_rss_bytes_macos": 420020224,
+  "freeze_sha256": "67e5ef317011fe50b31c793780aa8848c1944900af5892dec02c0a02c1e6dd89"
+}

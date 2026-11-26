@@ -1,0 +1,132 @@
+{
+  "frozen_at": "2026-11-15T06:31:43.038161+00:00",
+  "scope": "New local crypto price-path/formation-return interaction; no Kim PPC14 replication or claim of novel equity FIP",
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "source_repo": "business-science/pytimetk",
+  "source_commit": "246299cdd1d76b454cbccd0a614978eeb3cfbbae",
+  "source_kernel": "_compute_fip_series, original and modified methods; full return windows, skip_window=0",
+  "windows_completed_daily_returns": [
+    63,
+    252
+  ],
+  "source_examples": "Default252 and documented multiwindow[63,252]; crypto calendar-day adaptation, not trading-session rescaling",
+  "hypothesis": "Momentum is more predictive when price formation is continuous rather than discrete. Score PRET*(-ID)=abs(PRET)*(p_pos-p_neg), positive score predicts positive return. Raw ID is not unconditional alpha. Do not flip sign after outcomes.",
+  "algebra": {
+    "pret": "product(1+r)-1",
+    "id": "sign(pret)*(p_neg-p_pos), zero pret mapped to0 locally",
+    "source_original": "pret*(p_neg-p_pos)",
+    "source_modified": "sign(pret)*(p_pos-p_neg)=-ID",
+    "signed_path": "sign(pret)*source_modified*abs(pret) = pret*source_modified = abs(pret)*(p_pos-p_neg)"
+  },
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "TRB/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "XRP/USDT:USDT",
+    "ADA/USDT:USDT",
+    "BNB/USDT:USDT",
+    "LINK/USDT:USDT",
+    "DOT/USDT:USDT",
+    "FIL/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "DYDX/USDT:USDT",
+    "LTC/USDT:USDT",
+    "BCH/USDT:USDT",
+    "ETC/USDT:USDT",
+    "GALA/USDT:USDT",
+    "SAND/USDT:USDT",
+    "UNI/USDT:USDT",
+    "IOTA/USDT:USDT",
+    "RUNE/USDT:USDT",
+    "AXS/USDT:USDT",
+    "AAVE/USDT:USDT",
+    "EGLD/USDT:USDT",
+    "ALGO/USDT:USDT",
+    "SNX/USDT:USDT",
+    "CRV/USDT:USDT",
+    "MASK/USDT:USDT",
+    "SUSHI/USDT:USDT",
+    "KSM/USDT:USDT",
+    "IOTX/USDT:USDT",
+    "MANA/USDT:USDT",
+    "NEO/USDT:USDT",
+    "GRT/USDT:USDT",
+    "TRX/USDT:USDT",
+    "CELO/USDT:USDT",
+    "SKL/USDT:USDT",
+    "THETA/USDT:USDT"
+  ],
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles",
+  "parent_pool": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/max_lottery_source_native_20261115_v1/protocol.json",
+    "sha256": "f0409bd42e1ddb344120f802a8a0616809ae0eb2f0a0d07e3bdce60a83452f1d"
+  },
+  "account_start": "2025-01-01T00:00:00Z",
+  "account_end": "2026-08-31T23:00:00Z",
+  "decisions": "2025-01-01T00:00Z plus multiples of168hours; no calendar-year phase resets",
+  "information": "At D00 use all63/252daily returns ending D-1 daily bar, completed at D00; no current-day daily extrema or close",
+  "native_execution": "Input-only IStrategy timeframe1h exposes scores on D00 hourly row; native one-bar lag would execute at D01; predictive labels D01OPEN to D+168h01OPEN",
+  "label": "Gross quote simple return with complete endpoints only; not net portfolio or funding return",
+  "forecast_horizon_days": 7,
+  "factor_diagnostics": {
+    "scores": [
+      "signed_path63",
+      "signed_path252"
+    ],
+    "controls": [
+      "pret63",
+      "pret252",
+      "sign_balance63",
+      "sign_balance252",
+      "lowvol63"
+    ],
+    "raw_id_views": "id63/id252 are descriptive only, not tested as unconditional positive alpha",
+    "groups": 10,
+    "splits": [
+      "all",
+      "calendar2025",
+      "calendar2026_through_aug"
+    ],
+    "gate": {
+      "ic_mean_gt": 0.03,
+      "ir_gt": 0.5,
+      "positive_ratio_gt": 0.55,
+      "all_three_splits": true,
+      "beats_same_window_pret_ic_all_splits": true,
+      "scoped_mean_abs_pearson_lt": 0.99
+    },
+    "no_direction_or_window_search_after_results": true,
+    "multiple_testing": "Two predeclared horizons, overlapping reused full/year splits; no independent OOS or new-alpha proof from passing nominal gates"
+  },
+  "financial_if_pass": {
+    "primary": "Actual native Configuration/IStrategy/Backtesting.start/Trade/Order/Wallet/ZIP",
+    "capital_usdt": [
+      1000,
+      500
+    ],
+    "per_side_cost_bps": [
+      15,
+      8
+    ],
+    "leverage": 1,
+    "long_and_short": "Top4/bottom4 once weekly, full close then entry one hour later after flat validation; do not upsize to minimum",
+    "controls": "Same-window PRET strategy, Hold40 and existing lowvol63 under the identical native contract",
+    "portfolio": "Only after predictive and full-account input admission: two real500wallets signed_path plus lowvol63; no curve rescaling. Same mechanism horizons do not establish mechanism diversification.",
+    "gate": "Positive full and both continuous annual slices, <=30percent hourly mark DD, Sharpe>.5, beats same-capital controls at both costs; static500+500 compared honestly to same-size sleeves",
+    "funding_and_rules": "Existing AXS/TRBJune24missing funding and uncertified history of rules remain explicit; complete public funding coverage before financial admission, exposure-dependent unknown results are not promoted"
+  },
+  "source_limitations": [
+    "PyTimeTK metrics, not a provided account strategy or return curve",
+    "Kim SSRN6889877 only abstract/index readable; PDF403, exact rank-weighted PPC definition not obtained or adopted",
+    "Current fixed40perpetuals are not paper historical spot sample or survivorship-free universe",
+    "63/252calendar days and weekly labels are local, not original stock FIP12calendar-month/six-month hold",
+    "No social promotional return used"
+  ],
+  "orders_enabled": false,
+  "services_changed": false,
+  "new_accepted_alphas": 0
+}

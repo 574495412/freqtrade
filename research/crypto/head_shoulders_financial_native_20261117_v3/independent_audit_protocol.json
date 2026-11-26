@@ -1,0 +1,111 @@
+{
+  "schema": "hs40-independent-account-audit.v1",
+  "frozen_at": "2026-11-17T15:56:51.096998+00:00",
+  "new_hs_financial_outputs_observed": false,
+  "synthetic_tests_run_before_freeze": false,
+  "native_financial_start_authorized": false,
+  "primary_result_owner": "Pinned official Freqtrade matching/wallets/funding; this is a read-only independent auditor, never a substitute account engine",
+  "execution_extension": "LegacyFiveMinutePrecisionMixin is a local research override of supported get_pair_precision, preserving original NFI5m inferred whole-month table/asof. It is not upstream functionality, historical-rule certification or a lookahead repair.",
+  "official_vendor_files_unmodified": 595,
+  "source_catalog": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/head_shoulders_policy_native_20261117_v2/native_probe/policy_event_catalog.parquet",
+    "sha256": "92192539203c9f431ffdc9472ebdbed5c81a833348939f479e598dac6ad12fb4"
+  },
+  "input_validation": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/head_shoulders_financial_native_20261117_v3/input_validation.json",
+    "sha256": "a49a757b51bd36afec92c923479c2bf6d7993b0e80b9740b2a5c583fe465ce03"
+  },
+  "precision_validation": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/head_shoulders_financial_native_20261117_v3/preflight_attempt2.json",
+    "sha256": "bccd8f72cf7e20f6af3ba333f986c8f74929ff9abef99b4e9d078e6c53ac5350"
+  },
+  "source_event_proof": "Compare all 1891 IDs and full immutable metadata to sealed pre-financial v2 catalog; independently calculate source exits only from source closes available by each actual exit clock. Catalog is identity evidence, not a signal cache for the native account.",
+  "source_exit_rules": {
+    "inputs": "log(close), right-shoulder stop, neck_end +/- head_height target",
+    "crossing": "strict >/<; equality is not a crossing; target then stop then expiry",
+    "expiry": "break_i+head_width-1 source bar; available at its open+1h",
+    "entry": "one event only, exact confirmation+1h; self-terminal known flat; no later reentry",
+    "exit_clock": "first source terminal available time equals actual source close_timestamp on native5m grid",
+    "risk_priority": "Pinned IStrategy custom source exit is appended before stop_loss/liquidation. Risk at or after a visible source exit is rejected under this fixed no-pending source path.",
+    "force_exit": "Separate native terminal type, exact final base-row2026-08-31T23Z, no previously available source terminal",
+    "native_stop_liquidation_price_certified_by_this_auditor": false
+  },
+  "funding_model": {
+    "route": "Unchanged original native inclusive open<=event<=close, hourly refresh and close_bt_order transfer; not venue ownership or Hawkes before/after-fill branches",
+    "replay": "AST-preserved independent NFI500 hourly and order-transfer replay; every terminal campaign funding and every before-clock NAV reconciled",
+    "strict_hs_oracle": "Exactly2 exported orders, one entry then equal full exit, closed native trade, initial fill==open_timestamp==source availability, no DCA, complete fixed1h/5m clocks, integer-hour funding. Terminal sign*q*sum(E<=F<=C); snapshot sign*q*sum(E<=F<T) before fill/refresh at T.",
+    "minified_schema": "BT_DATA_COLUMNS drops open_fill_timestamp/nr_success/has_open_orders; validate if present, do not fabricate. Closed native trade plus exactly2 equal entry/exit orders and owner lifecycle proves fills; pending open orders are included by owner exporter and would break the2-order path.",
+    "boundary_unknown": "Outside strict H&S proof, missing/deferred boundary order creation timestamps => UNKNOWN regardless of matching aggregate NAV/funding. NFI DCA is not presumed unambiguous.",
+    "force_tail_scope": "Only this fixed final whole-hour base row after complete5m traversal; no generalization to arbitrary tails",
+    "missing_slot": "AXS and TRB2026-06-24T04Z: gross quantity before/after every same-slot fill per campaign; any nonzero exposure UNKNOWN; never impute zero or net opposite campaigns/sleeves"
+  },
+  "account_contract": {
+    "capitals": [
+      1000,
+      500
+    ],
+    "cost_bps_each_side": [
+      15,
+      8
+    ],
+    "pool_size": 40,
+    "leverage": 1,
+    "slots_per_wallet": 6,
+    "balance_ratio": 0.99,
+    "full_window_points": 14592,
+    "2025_points": 8761,
+    "2026_through_august_points": 5832,
+    "window": [
+      "2025-01-01T00:00:00Z",
+      "2026-08-31T23:00:00Z"
+    ],
+    "nav": "capital + closed fill cash + open mark-open value - both filled commissions - remaining exit fee reserve + native accrued funding; observe before fills and funding refresh at each hourlyclock",
+    "periods": [
+      {
+        "name": "continuous",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-08-31T23:00:00Z"
+      },
+      {
+        "name": "calendar-2025",
+        "start": "2025-01-01T00:00:00Z",
+        "end": "2026-01-01T00:00:00Z"
+      },
+      {
+        "name": "calendar-2026-through-august",
+        "start": "2026-01-01T00:00:00Z",
+        "end": "2026-08-31T23:00:00Z"
+      }
+    ],
+    "slices_reset_capital": false,
+    "terminal_force_balance_used_for_ranking": false
+  },
+  "tolerances_usdt": {
+    "hourly_nav": 3e-05,
+    "campaign_cash": 1e-05,
+    "aggregate_cash": 0.0001,
+    "funding": 1e-07
+  },
+  "combo": "Actual HS500 + independently reaudited actual NFI500 levels =1000; no linear scaling, no rebalance/weight search. Both costs, all complete periods, same-cost frozen originalNFI1000 benchmark; both sleeves VERIFIED required.",
+  "gates_owner": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/head_shoulders_financial_native_20261117_v3/economic_protocol.json",
+    "sha256": "7df648af8aa90f74210bc644063efba61d0b6052a20a58905572f5c9012a5c08"
+  },
+  "unknown_policy": "Preserve numerical conditional metrics and UNKNOWN; never upgrade from aggregate equality. Invalid source/cash/schema checks fail, retained for diagnosis without retuning.",
+  "preflight_scope": "v3 preparation probe entry_masks all0; v2 38callback cases synthetic. Neither establishes actual market matching trajectories.",
+  "independent_OOS": false,
+  "historical_rules_certified": false,
+  "orders_enabled": false,
+  "preserved_NFI500_AST_functions": {
+    "metrics": "f67682ff09adae78d18aca9a5eccebe7454e7ae22f6af43fda4d44514f712926",
+    "funding_history": "78e254b730016c1e380c76cf0f14f853f445852bbf965b34bfe86eb6767f56f2"
+  },
+  "NFI500_audit_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/audit_actual500.py",
+    "sha256": "d4179546fee15098cd7e922327fb0a4f50a26e6b9c5f333e33775ef352befde1"
+  },
+  "cash_equation_reference": {
+    "path": "/Users/chrise/GitHub/TradingAgents/research_tools/nfi_reproduction/audit_original.py",
+    "sha256": "30fed01717f5bc2c96fb036fbf8a8817e6fe713dd5afa05058dcaf1746823512"
+  }
+}

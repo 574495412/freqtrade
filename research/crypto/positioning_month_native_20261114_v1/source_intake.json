@@ -1,0 +1,70 @@
+{
+  "source_article": {
+    "url": "https://tradewize.io/blog/how-to-read-the-long-short-ratio",
+    "author": "Pavel Penev, TradeWize",
+    "method_and_limit_sections_read": true,
+    "source_scope": "BTC/ETH/SOL; last5minute snapshot; trailing365days/bottom10%/future30day gross event outcomes",
+    "not_a_funded_strategy": "source explicitly says no fees/funding/slippage and no attempt to trade it",
+    "local_contract": "current excluded365prior-days midrank; threshold<=.10; next-dayD00signal/D01nativefill;30dayopportunityunion/no pyramiding;fixed1/3coin slots",
+    "not_source_performance_reproduction": true
+  },
+  "github_example": {
+    "repo": "Coinversaa/coinversaa-freqtrade-example",
+    "commit": "c6d9845330bf98ea9ba414a968faadbd9804735f",
+    "read_scope": "strategy core and helper/source current-signal path; README backtesting and source input sections; source client captured not claimed fully read",
+    "rejected_as_historical_strategy": true,
+    "reason": "live cohort/whale APIs in vectorized indicator function; no admitted historical asof cohort membership/positions; Binance ratios are not a replacement for Hyperliquid PnL cohorts",
+    "documentation_code_difference": "whale short notional computed but not referenced by actual three entry conditions; do not count claimed whale filter as implemented",
+    "api_client_executed": false,
+    "keys_read_or_used": false,
+    "paper_workers_started": false
+  },
+  "official_data": {
+    "source": "Binance public archive with official SHA256; current REST definitions read through web tool",
+    "direct_document_status": "HTTP202empty, not a successful saved documentation body",
+    "field_distinction": "all-account headcount, top-account headcount, top-position size and taker buy/sell ratio kept separate; no daily ratio averaging or cross-venue aggregate",
+    "publication": "archive checksums do not certify original release/first-seen; create_time+5minutes is local availability proxy"
+  },
+  "counterevidence": {
+    "url": "https://janorium.com/articles/long-short-ratio-open-interest-backtest",
+    "read_scope": "setup, scan and funded-fade sections",
+    "lesson": "event scan can have retrospective thresholds and overlapping observations; its90day/7day funded rule differs from the source365day/30day observation",
+    "seen_after_local_protocol_written": true,
+    "no_parameter_change": true,
+    "published_results_not_adopted_as_own": true
+  },
+  "youtube": {
+    "url": "https://www.youtube.com/watch?v=qrBeuJm0fD4",
+    "author": "Bitcoin Trading Challenge",
+    "title": "Binance Long/Short Ratio! (Best Indicator of all time?)",
+    "metadata_and_description_read": true,
+    "caption_request": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/captions.json",
+      "status": 200,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "video_watched": false,
+    "full_transcript_read": false,
+    "complete_trade_rules_or_returns_adopted": false
+  },
+  "x": {
+    "url": "https://x.com/RuujSs/status/2074503360208884204",
+    "reused_regime_method_lead": true,
+    "not_new_positioning_strategy": true,
+    "targeted_ratio_search_did_not_supply_complete_verified_new_X_rule": true,
+    "no_performance_adopted": true
+  },
+  "douyin": {
+    "url": "https://www.douyin.com/video/7603647454390603035",
+    "rechecked_prior_lead": true,
+    "direct_response": "HTTP2004XXriskblock",
+    "video_watched": false,
+    "complete_rules_read": false,
+    "returns_adopted": false
+  },
+  "native_owning_implementation": "Freqtrade pinned c051e9065c5b677f03817dd1f83cb980af1ed684; original595files; local positioning loader plus nativeIStrategycallbacks",
+  "new_registry_definitions": 0,
+  "factor_analysis_calls": 0,
+  "source_or_external_account_engine_executed": false
+}

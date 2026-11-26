@@ -1,0 +1,3170 @@
+{
+  "scope": "Post-execution v2 complete native carry and failed static mixtures; not a pre-result freeze",
+  "files": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/carry_reservation.py",
+      "sha256": "490d4f4c69295949eba951b9dd4c4303558ecd72fe12d7801611e863ac5ed8c9",
+      "bytes": 1817
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/CaptureRules.py",
+      "sha256": "519ae02c22ab37138cfe0ee6410e4a8e694c7714d74a1f13011e592846eaed46",
+      "bytes": 705
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/README.md",
+      "sha256": "3c46d92ed897f377a404f2089fbbefc3503da2ec2b38abc4aef87616bd4cfdd5",
+      "bytes": 6900
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/analysis_initial.log",
+      "sha256": "da06db27328affec6620bdcc55e557ee40cbdaf9934f36fb59a5d4f1f91503e8",
+      "bytes": 2122
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/analyze.py",
+      "sha256": "7d2e203fa6ea88198f6d86e09fb832d2c1c7ab6e306e97edcfb35315069391cb",
+      "bytes": 13648
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_1000_conservative.parquet",
+      "sha256": "cf6c0efe8184c4096070695f4444b106fdbc482a54c7fbe994bffb2ba048eedf",
+      "bytes": 269695
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_1000_lower.parquet",
+      "sha256": "fbe13db9f2f95ed075ee5a2f1a398a99900603a3b8ed2341de4e743d3802ac8a",
+      "bytes": 269695
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_500_conservative.parquet",
+      "sha256": "3b1b450a6484cd76afe2c8fed437cbbf5467ada6e2557ab974c7aba35e87ac16",
+      "bytes": 269695
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_500_lower.parquet",
+      "sha256": "52ffa82b3565ef6e1392c7a12ada47c6a413cba5ef92de362767b84a5dc1acc8",
+      "bytes": 269695
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative.json",
+      "sha256": "0c599644e2edd9d281aa36e1d3c59f1009176b9faf8320e3e1f6df344f5629b9",
+      "bytes": 1866
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower.json",
+      "sha256": "0c599644e2edd9d281aa36e1d3c59f1009176b9faf8320e3e1f6df344f5629b9",
+      "bytes": 1866
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative.json",
+      "sha256": "b477c3ffd69a10582b049fd53ef39c7e68eb53f395974733524c62263b12fbdf",
+      "bytes": 1866
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower.json",
+      "sha256": "b477c3ffd69a10582b049fd53ef39c7e68eb53f395974733524c62263b12fbdf",
+      "bytes": 1866
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative.json",
+      "sha256": "ba4e58eb17cf34e3aaacd1262d1644578132c4f57047b84dbffc30cf14de1942",
+      "bytes": 1864
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower.json",
+      "sha256": "9705cbfa5b6e3d871df8d39b3b8511799de98cc855933fc08db531dec1d2f0b8",
+      "bytes": 1865
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative.json",
+      "sha256": "e1b8469fb441366e4e0e400fb945d84aec6e81a48b0165682963f15a4884ed33",
+      "bytes": 1864
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower.json",
+      "sha256": "e1b8469fb441366e4e0e400fb945d84aec6e81a48b0165682963f15a4884ed33",
+      "bytes": 1864
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_1000_conservative.parquet",
+      "sha256": "96034985f244f0dfbc743b6a2386417caf702310b6dfa57ad824eb569e87b6c9",
+      "bytes": 269696
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_1000_lower.parquet",
+      "sha256": "c99e8af11fe07e64c0b41585a47e3ce0e3dd9eb25c5bd9a41561435eb7a5f4a9",
+      "bytes": 269695
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_500_conservative.parquet",
+      "sha256": "825b768e3469d696f02d7167ffb9738987d228d317e937d03d6e3d2589444db3",
+      "bytes": 269696
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_500_lower.parquet",
+      "sha256": "43290a53201ff49927d485a5441c1f13587111b202ef4739ca10a144a97d2a7d",
+      "bytes": 269696
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative.json",
+      "sha256": "1c655af158ab5793c8532b0d49386922f4739097ed9378363849cc7657d53f53",
+      "bytes": 1759
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower.json",
+      "sha256": "1c655af158ab5793c8532b0d49386922f4739097ed9378363849cc7657d53f53",
+      "bytes": 1759
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative.json",
+      "sha256": "934d17c8487940509fbf40001b34be1b9f79998e389e259c1ac073b8a5f60707",
+      "bytes": 1759
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower.json",
+      "sha256": "934d17c8487940509fbf40001b34be1b9f79998e389e259c1ac073b8a5f60707",
+      "bytes": 1759
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative.json",
+      "sha256": "803c3d142211b3a27d1c8bb7225ef1edabb081a467ef88ca487b1eca6408d1d8",
+      "bytes": 1864
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower.json",
+      "sha256": "803c3d142211b3a27d1c8bb7225ef1edabb081a467ef88ca487b1eca6408d1d8",
+      "bytes": 1864
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative.json",
+      "sha256": "709daa71673f34100934cfa328350ceb920eff2dcabbc680284528d36986312b",
+      "bytes": 1864
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower.json",
+      "sha256": "709daa71673f34100934cfa328350ceb920eff2dcabbc680284528d36986312b",
+      "bytes": 1864
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative.json",
+      "sha256": "b2f85fa919fb18f2d1f3420b2b6ebdcd3b9a228da4c9fd638ab51b58445c6f8f",
+      "bytes": 1759
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower.json",
+      "sha256": "b2f85fa919fb18f2d1f3420b2b6ebdcd3b9a228da4c9fd638ab51b58445c6f8f",
+      "bytes": 1759
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative.json",
+      "sha256": "c38eeb2480657b99445d28910712366e79c342f99e0d0f90af9a4daead916ab5",
+      "bytes": 1759
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower.json",
+      "sha256": "c38eeb2480657b99445d28910712366e79c342f99e0d0f90af9a4daead916ab5",
+      "bytes": 1759
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative.json",
+      "sha256": "e1b8469fb441366e4e0e400fb945d84aec6e81a48b0165682963f15a4884ed33",
+      "bytes": 1864
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower.json",
+      "sha256": "e1b8469fb441366e4e0e400fb945d84aec6e81a48b0165682963f15a4884ed33",
+      "bytes": 1864
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative.json",
+      "sha256": "16b16e634dfc1a684cea8846cae66a867899a255fb82ab76e10e17332948478c",
+      "bytes": 1864
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower.json",
+      "sha256": "16b16e634dfc1a684cea8846cae66a867899a255fb82ab76e10e17332948478c",
+      "bytes": 1864
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/entry_precision_probes.json",
+      "sha256": "1375dcb8dbe3a18aa45ef1adee8f6cccc6ba3535324b9ec1445c2fd91daf1629",
+      "bytes": 5870
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/execution_complete.json",
+      "sha256": "f07f0ab57e60d109eee3570e245685bf999a4330f2988f5556f6628d1c57b49f",
+      "bytes": 101
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/execution_initial.log",
+      "sha256": "533fdedcf96b0572f90e094867c6efd702aa610764da47e34c99fccfb5e14313",
+      "bytes": 18276
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/finalize.py",
+      "sha256": "b7f6e5287b2db8c11c422acd4a565297903522a716be3a1bffc72882c995f7a7",
+      "bytes": 15499
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/financial_worker.lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/followup_source_receipts.json",
+      "sha256": "9b8a7c15b91b9b346a5171dc905965ea2b1b44e6ddf3a7bd767ef6d495ab552e",
+      "bytes": 1362
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/format_final.log",
+      "sha256": "413a709001976657cb743636fd34e48fc41d8d302d665460d3f874b3313da127",
+      "bytes": 19
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/full_parent_parity.json",
+      "sha256": "2afd3b28d5058c277c552f1aabf8a00d502cdb1aae343e67287c5b5cbae33adc",
+      "bytes": 3183
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/full_parent_parity.log",
+      "sha256": "21de077918b461df8d56e77bb670354f16393038dc0983f978c8966bc6b7c0da",
+      "bytes": 8
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/goal_audit.json",
+      "sha256": "73cc0407a2ae0de11ced5223fc7fb2632e6dac147aca423c41a67a702b3917c3",
+      "bytes": 657
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/lint_final.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/lint_initial.log",
+      "sha256": "c63b2e82910e48e978e496d70bc930eb236120fda0ad8ed6cebde91d317a7173",
+      "bytes": 576
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/mixture_1000_conservative.parquet",
+      "sha256": "45bc859f8a0626ce456a4e4e303b6f5d6eb95544c8496d6b07c0e61e7934422e",
+      "bytes": 269695
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/mixture_1000_lower.parquet",
+      "sha256": "efbcd9d004004cb126056c10ada6397ab10acde760c9963fa0e8bd56472a4b05",
+      "bytes": 269695
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/native_runner.py",
+      "sha256": "aee60832e8edb7c2775d80d5127da4b1b6e37472c7c94ddcdfc3bf4e4db76520",
+      "bytes": 21068
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/parity.py",
+      "sha256": "28d96fcb3c15917fc90bfa541d52f54eccb532415a99de5417ea9105a61754c8",
+      "bytes": 2373
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/plan.json",
+      "sha256": "8a18d14a8c1ed38eed7b1e1bf58c1a06b931bb74643215cd343538b0bc389e93",
+      "bytes": 39040
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/plan_before_style.json",
+      "sha256": "5ab50b459f3a1e4c0b53db3b46757fdac5f902300ea4918891978b02406521cb",
+      "bytes": 39040
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/pre500_parity.json",
+      "sha256": "770474a90c378b3fa73369e15c407712af2f93edae16f20b7a03afc496cf8cb3",
+      "bytes": 2296
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/preflight.json",
+      "sha256": "4666e75b6ed8a9a5e0dabdb9f74d8e54e8be7cc81be53daddd1656b83c3c0913",
+      "bytes": 8125
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/preflight.py",
+      "sha256": "66925ef235218834ddeab4e7b80b616415369e3c295064924c42046199e716f8",
+      "bytes": 4144
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/preflight_before_callback_check.json",
+      "sha256": "cd89bc7b3abaa745d20f2484a9c687960b8a4895615fb9aff3827b5b9898f690",
+      "bytes": 8125
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/preflight_final.log",
+      "sha256": "68c8284e28355b3dcd26ea01651c5c866885daee29a6828eb16b689c205d5e54",
+      "bytes": 91
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/preflight_initial.log",
+      "sha256": "68c8284e28355b3dcd26ea01651c5c866885daee29a6828eb16b689c205d5e54",
+      "bytes": 91
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/preflight_signal_receipts.json",
+      "sha256": "b7f390c0b6ee9d3cfe3e62ebe69bb41e0bf8e6dbe41f38e557ceacc6ccccd3de",
+      "bytes": 8347
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/protocol.json",
+      "sha256": "ece91af96fded8c602de5646c96f8736b3ac14432709be0eac71533133793177",
+      "bytes": 1815
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/protocol_freeze.json",
+      "sha256": "3586ab16d05c1aa17012d831d99f76a5f88f4964bec9391082274d17a217d79b",
+      "bytes": 201
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/quantity_intents.json",
+      "sha256": "452ddb64a89b905b903f036f8040e0afb4958d7f55c6d764927f5a93822cd56c",
+      "bytes": 5483
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/results.json",
+      "sha256": "a5f47f47670ef1593b91cf2a96e0482f144d5e0d786db027f47490eae1e2c24b",
+      "bytes": 39457
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/review_native_limits.py",
+      "sha256": "e7784d16268fbe3bf9c225377f43e730160cfc8f7aa6dfecfac3babe127a3ad3",
+      "bytes": 2769
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/run.py",
+      "sha256": "ce5cbf6dae3b8e8b61a5b582a7aacba658728b148287c9838b9a4669466999f0",
+      "bytes": 3674
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/semantic_lint_final.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+      "bytes": 19
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/source_intake.json",
+      "sha256": "da440e7f6e5ce19b125e66c9b5ed85c24154fd9d58a505577800142587fd448f",
+      "bytes": 3873
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/sources/hummingbot_caption.xml",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/sources/hummingbot_youtube.html",
+      "sha256": "2e973a4fccf25cdb696110e1cff1b7e5c89a6086a0e430eb89b679b9b1bc6479",
+      "bytes": 1482391
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/sources/idrees_data_pull.py",
+      "sha256": "2192e42a9da333c2bb7268d73d30d62210d00d1994478eb86e65361fbd6e5b9b",
+      "bytes": 8602
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/test_reservation.py",
+      "sha256": "77d686ed61ac129e1cb6e85c03671986216b0ab2b33ac2852fc0a9f68f10e3ab",
+      "bytes": 1781
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/tests_final.log",
+      "sha256": "7b9f81754d8638071367e1ebc1fba18202f804a1728009771fc2625ab8844ba8",
+      "bytes": 98
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/tests_initial.log",
+      "sha256": "7d11cf415414c639cbd80321ec4f49cdb5900fe72320a0d3d9d4d8c19acc5883",
+      "bytes": 98
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/verification.json",
+      "sha256": "ab65b0c79dfb37183ea6260b9bfe0ae8f08382eeeff1644b9e33e3528ff22315",
+      "bytes": 1942
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/youtube_metadata.json",
+      "sha256": "ae796b78e7ad09a3fc3076ee66ffdf14cfea1a805ef373ed2bc716d19d66f877",
+      "bytes": 1171
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/source_intake.json",
+      "sha256": "2e34788a15854645f1cfc38fcb678c7d0fa7c8a82132e53611b3b61c0692778f",
+      "bytes": 444
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/active_process.json",
+      "sha256": "142cd0ac5e536a9d2e6961cedaad162e187f692ffd789cf447c2371ecf4184c8",
+      "bytes": 664
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/config.json",
+      "sha256": "1f4410ed309f04e6c409493f97c1a2f754e8fb8fdc712d62b8cf2623df28409b",
+      "bytes": 2564
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/effective_config.json",
+      "sha256": "7e743f4e220eab3deec854b2879f504b2a32652261429469086d92ff45e017bf",
+      "bytes": 7411
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/fill_cash_audit.json",
+      "sha256": "59deb59d8805ef6d45ce8a874f14e5faac715270eeb36d6045c1eebef5ef81d1",
+      "bytes": 387
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/generated_cache_inventory.json",
+      "sha256": "401eb8441283e416e01cc87d737f05b13fa729ec835eedd38b22732d316e1fa9",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/hourly_equity.parquet",
+      "sha256": "aaa9023100c1c22503040b71a36b96b7046abe989e41617f8521e88b78811fd1",
+      "bytes": 981794
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/independent_account_audit.json",
+      "sha256": "fae953a0544401334ae008f072937132f7dc3c1c6652c954d5c18721d66471fe",
+      "bytes": 792
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/legacy_main_clock_equity.parquet",
+      "sha256": "0e2f74bda68a11cd97fc83b74b3f25ffa1582956984f291f4c68c60428c70ff9",
+      "bytes": 981748
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/native_results/.last_result.json",
+      "sha256": "5b8acedbb8fa9cc6e896f37d8a4148875dd8de69971bba396029e39a17298fd9",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/native_results/backtest-result-2026-11-15_14-47-25.meta.json",
+      "sha256": "e15b4c3bb01b2a79db8cad279e6fb5e029f2bc76f55a0826f8cad981da737476",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/native_results/backtest-result-2026-11-15_14-47-25.zip",
+      "sha256": "563dc1a4d806c03cbb0ddee456fdd52cdc0e8949802d7d7b4a7963d8aa284fd9",
+      "bytes": 4705165
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/native_signal_receipts.json",
+      "sha256": "2b068dcce49ac837a5a60861674baeb122bdb3b21ec9c6f758418af5b7184d47",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/observation_clock.json",
+      "sha256": "481f303d631b70341235c93f4122bf6ef2e1afeeb97404e6fe5031926e05c048",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/price_precision_receipt.json",
+      "sha256": "10d56d0c147cc91bbe79dfd10a471ba3da154d81e95ce99f23ced61fddd21338",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/process_receipt.json",
+      "sha256": "ffe2229cb2728d1d4ec6b1bff83346017e876cf4889608e983f7996040871783",
+      "bytes": 788
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/progress.json",
+      "sha256": "041ebeee10188f29ded4da0b27bfd2922b7ec536405f940cd1cbbda1182b7af5",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/result.json",
+      "sha256": "3852b094575e3ec275ba16092ae19abce847c28460f3fb1dc97a333c114083ce",
+      "bytes": 3770
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/strategy_trace.json.gz",
+      "sha256": "4446fcf4f6d69b754d1824ec9f93802fd281c4cf9e44a95527b11bfd5bb59d9c",
+      "bytes": 249
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_conservative_20bps.log",
+      "sha256": "be4879e90029cd5873726d5fc4bf3e02e1f9199c196016e5ba6330103887a18f",
+      "bytes": 26152
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/config.json",
+      "sha256": "aa5fa1abddb8956e78a214576de4f244ac6745c3ae3314d6b67ff4386b022230",
+      "bytes": 2544
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/effective_config.json",
+      "sha256": "09288794af91ed349c3c60512839bf8929699fe0a6f6d91f406d619de36879b4",
+      "bytes": 7357
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/fill_cash_audit.json",
+      "sha256": "3a5f6d46f0c69501a227f6b56976833cc711bf2a1c7da59eadd824599a18104f",
+      "bytes": 390
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/generated_cache_inventory.json",
+      "sha256": "229752c9e7f398d07c3ba2e510d9972ffdaa81cb470a86469ef89a71432ef3e6",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/hourly_equity.parquet",
+      "sha256": "c76a95dce97a492f956c5bb40b335a52c4816f9ad3f4811448bd7ce7fa7337a9",
+      "bytes": 981794
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/independent_account_audit.json",
+      "sha256": "5eb6950727ef32fd443bed85a84ee5471128daa65d8c8bdde2944b2fe7c337f2",
+      "bytes": 792
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/legacy_main_clock_equity.parquet",
+      "sha256": "62a5f98405f53eb57bca6cd2471876f263fc53969bce7457bcf980be455a671a",
+      "bytes": 981748
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/native_results/.last_result.json",
+      "sha256": "d30904b0d0a011315352f93209745518edb6c7d9566dda95c55b8e873c49ccde",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/native_results/backtest-result-2026-11-15_14-48-21.meta.json",
+      "sha256": "466e4bf31f03c94008d3a04e28b2c2087a4cbda1f097fb7b246932e4839bcbfa",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/native_results/backtest-result-2026-11-15_14-48-21.zip",
+      "sha256": "6bf62633df2a959ddf30fe406a39ff0261a7c92f79343d9a92f75231dfa9d168",
+      "bytes": 4705174
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/native_signal_receipts.json",
+      "sha256": "2b068dcce49ac837a5a60861674baeb122bdb3b21ec9c6f758418af5b7184d47",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/observation_clock.json",
+      "sha256": "481f303d631b70341235c93f4122bf6ef2e1afeeb97404e6fe5031926e05c048",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/price_precision_receipt.json",
+      "sha256": "10d56d0c147cc91bbe79dfd10a471ba3da154d81e95ce99f23ced61fddd21338",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/process_receipt.json",
+      "sha256": "47d6ce5220e08f3a8a94aec4b5abd2c0ee55294ec87f49fe08316cb67d3fbd72",
+      "bytes": 774
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/progress.json",
+      "sha256": "e2dba28e344f81e1cf33e4248bef415d1128ff0b6ead7194e6f6ad3a418ad402",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/result.json",
+      "sha256": "0b58c235859a1409ae8962f8f8f6320f63b21c84d0dfc7e93a96412b62230170",
+      "bytes": 3756
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/strategy_trace.json.gz",
+      "sha256": "302795e8469fe9a8b9205d5a43e899eea21b581e401ecd659df727ebe56952d6",
+      "bytes": 249
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_1000_lower_13bps.log",
+      "sha256": "ec4dee4fa7f87e816ee07f26e160ee36d4f1906471da57832c7aa923b12935d1",
+      "bytes": 26115
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/config.json",
+      "sha256": "ca84dca56f480d719204d0918315022cffda64dc3bfec6ffcd43216ee6435f01",
+      "bytes": 2561
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/effective_config.json",
+      "sha256": "042846ae82bc51d0f0c4785d10e0c868d3ac5a66f33fbb559dc51c7295a38e6d",
+      "bytes": 7403
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/fill_cash_audit.json",
+      "sha256": "fcde9d8b61fb02f2e3d5a9a380d4320e84c5f26a65119e42a9a989dbab2c4e3f",
+      "bytes": 387
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/generated_cache_inventory.json",
+      "sha256": "37a778919fd79e7306ef66efbd94ebe1f3844eecec2a79a64d22ecda5eb976c3",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/hourly_equity.parquet",
+      "sha256": "1b4a43cd7ff364667d3318d536728fdc6121cfd88306a58017f10f2b17e3bb02",
+      "bytes": 981794
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/independent_account_audit.json",
+      "sha256": "dd1fa1830e17e434a643aa5c182eb07e4f6ac8fb3cbd205ea2d1edd2193a01f7",
+      "bytes": 791
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/legacy_main_clock_equity.parquet",
+      "sha256": "c1810b66cda52ce46d943061ddecaad6ad8c85bb2a4648042f725caaec7a986a",
+      "bytes": 981748
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/native_results/.last_result.json",
+      "sha256": "1100ef2f941be724eb7a31802f2bb010f5fb4793236779ca4b5cc62661761270",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/native_results/backtest-result-2026-11-15_14-49-17.meta.json",
+      "sha256": "8383a2f8e9663c56714c47ad20d5852186757df35189530c9c913ce3331af8d9",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/native_results/backtest-result-2026-11-15_14-49-17.zip",
+      "sha256": "b58e5918ae31890f6aa09f6b055dc1f57a630c49bdb9c1185f9d256e1af81351",
+      "bytes": 4705072
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/native_signal_receipts.json",
+      "sha256": "2b068dcce49ac837a5a60861674baeb122bdb3b21ec9c6f758418af5b7184d47",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/observation_clock.json",
+      "sha256": "1f8518f693ba7a3661eb78aed5a6c68f245158e1057697802d32716e94a2b245",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/price_precision_receipt.json",
+      "sha256": "10d56d0c147cc91bbe79dfd10a471ba3da154d81e95ce99f23ced61fddd21338",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/process_receipt.json",
+      "sha256": "b152467c7d7afca826f931a2d26fea199eeaf6ab7f5b403e3063c9b06e5f3afc",
+      "bytes": 786
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/progress.json",
+      "sha256": "c436196e7443f0ac4f3ff77181dd51b2ee34dc7dae5e6789d1026f7e3f9db67d",
+      "bytes": 120
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/result.json",
+      "sha256": "b966233ca44b77160201fe02b5edfccc4eea98a2d8cc97d8bab97b676129bb81",
+      "bytes": 3764
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/strategy_trace.json.gz",
+      "sha256": "4f6864b1ca81aa9a460900b5eef5b0c5a014e5f5ed6cda83fa6869b0a9ab20d5",
+      "bytes": 249
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_conservative_20bps.log",
+      "sha256": "a74e186d945f84728352c3b42b1f062caa4067c6cc60fe2e54a40bc72cb9b7f2",
+      "bytes": 26148
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/config.json",
+      "sha256": "d9b32596b6bbf4c0c17229704020ffb17323f2cf1c1aeb87ea10fa6470a80c6a",
+      "bytes": 2541
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/effective_config.json",
+      "sha256": "11221a133dbce9cbc78f58703f9af9aa5ab96f33b01726b67d35e7ed3c717558",
+      "bytes": 7349
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/fill_cash_audit.json",
+      "sha256": "7a2fdf7cad0e1b8fa36ac946e305d7b49eb25fe6bc6fc58ba4294a1cddee87c6",
+      "bytes": 390
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/generated_cache_inventory.json",
+      "sha256": "a40091ed9cb55dddc462c2b7d7ab34ac46c98d72fd52581f0a839a8fc227fc27",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/hourly_equity.parquet",
+      "sha256": "1682037f93e25fb2a9da8104b7ad82f40c9c4cca9c13be82298d67d729e6a66c",
+      "bytes": 981794
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/independent_account_audit.json",
+      "sha256": "000b64597dd58693ffb0fe1ca1a577fb34238a127988c193148250b14ae1579c",
+      "bytes": 791
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/legacy_main_clock_equity.parquet",
+      "sha256": "9e2f6eda3685a25db0df22df68bc5b1690a866482627376a045783c6b6346dcf",
+      "bytes": 981748
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/native_results/.last_result.json",
+      "sha256": "81afe5291dd5353823fc64f65c6e18a86a0cfd60b9325e2ee4f40c8b057e46b1",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/native_results/backtest-result-2026-11-15_14-50-13.meta.json",
+      "sha256": "e2240fea3b5e365643a4cde6cfc43c23ccb2aa7c2fda41f2f11b4987162e86d9",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/native_results/backtest-result-2026-11-15_14-50-13.zip",
+      "sha256": "36de7aaca527ad427353c12da2f215031c4a2ac41388ed99b51a0dd98eef0d4e",
+      "bytes": 4705083
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/native_signal_receipts.json",
+      "sha256": "2b068dcce49ac837a5a60861674baeb122bdb3b21ec9c6f758418af5b7184d47",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/observation_clock.json",
+      "sha256": "1f8518f693ba7a3661eb78aed5a6c68f245158e1057697802d32716e94a2b245",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/price_precision_receipt.json",
+      "sha256": "10d56d0c147cc91bbe79dfd10a471ba3da154d81e95ce99f23ced61fddd21338",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/process_receipt.json",
+      "sha256": "ed456574b7b48dc77aa8416bf909ed632da110333e80a023d6b40b230a338cee",
+      "bytes": 772
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/progress.json",
+      "sha256": "048dc493b191bf4bb43fa0b88c4a5c1625b388a41bb15ad892946caea165ebcb",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/result.json",
+      "sha256": "f2009370800c21a0717a1cd6e94a2369995f3555b99263a0e9e7fa71a2a874f0",
+      "bytes": 3761
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/strategy_trace.json.gz",
+      "sha256": "311385232ccee36f8175c6ee10e1300d2c4ee4182be62f51bc9599b001bf8fd0",
+      "bytes": 249
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_BTC_spot_500_lower_13bps.log",
+      "sha256": "8defdf9890f4b6141ed3203c97cb5b81087cf4e0c662a19acb776bbcd2184661",
+      "bytes": 26110
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/config.json",
+      "sha256": "d32f0a20eb8562ec2146e198692764175320906b0b5541d65cfcaa0393eb1e2b",
+      "bytes": 2562
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/effective_config.json",
+      "sha256": "06782c30e80609b95e16cfe2c199ecbb8be9be8b06474859f3beb665095c6c08",
+      "bytes": 7407
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/fill_cash_audit.json",
+      "sha256": "d7a736b008f0963933c930dc3e0f73033ab4c11abd117f8ad9dd5a69dca87310",
+      "bytes": 378
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/generated_cache_inventory.json",
+      "sha256": "da446fe95faf1d8f940d15d6c1b7eaed1fffd0dbf549a689b04b72cc2575dfa5",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/hourly_equity.parquet",
+      "sha256": "5a8749ebfc3c1eb31f89a3b2f0908c6b5645bcb9831afc82197b361a373b1dd1",
+      "bytes": 962502
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/independent_account_audit.json",
+      "sha256": "2355cfcb5482a1a887a7588ff6e6537d47962ad13dd4ebf1753106939d0b7638",
+      "bytes": 788
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/legacy_main_clock_equity.parquet",
+      "sha256": "7df8d2baad81abdb86270b380fcc74f7019720cae1e4f75b231402333e6011e3",
+      "bytes": 962452
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/native_results/.last_result.json",
+      "sha256": "a5aeb3fc48325cde54320b357134513d52d6ad6f0ca0c43531ec050f35bdd596",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/native_results/backtest-result-2026-11-15_14-47-34.meta.json",
+      "sha256": "378b75d2e37aaed0c74c98ba2f5712f5fa2ff642a47b41f81fa1ca29adabe02b",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/native_results/backtest-result-2026-11-15_14-47-34.zip",
+      "sha256": "fc3a38cde79f61cbe51692857337b291b32df962be57be9abb213c1e743bcbd6",
+      "bytes": 4063293
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/native_signal_receipts.json",
+      "sha256": "7b549cfc86f6b73906df6ab182b7383a92db291137b84b2bbcac8a5d784beb10",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/observation_clock.json",
+      "sha256": "481f303d631b70341235c93f4122bf6ef2e1afeeb97404e6fe5031926e05c048",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/price_precision_receipt.json",
+      "sha256": "ed19db58f500bfc7c8b22691c32960265e63e96921000008adf7bbae4c43a89e",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/process_receipt.json",
+      "sha256": "460579e3422c8bbe3bbd9053f80df65c5646a82e733a304e975d40786d0b2e97",
+      "bytes": 788
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/progress.json",
+      "sha256": "24ba02a3e3d95d5e4fe83ac42cb08f8257425774f217df25e8a861a65b0b7c04",
+      "bytes": 118
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/result.json",
+      "sha256": "9d01aa3eb1e917c4db46f64c90e6736b333daf2722aebc927ea4e332b6b86b09",
+      "bytes": 3743
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/strategy_trace.json.gz",
+      "sha256": "8f8f435499f3f543424d085487642cd087fe2a18bd8dfa4163f446f9da7ab513",
+      "bytes": 247
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_conservative_20bps.log",
+      "sha256": "efe4e86d1a9693db9c9ad867a5d01783dfcd5489be6f89920163003bb44ac2a2",
+      "bytes": 26136
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/config.json",
+      "sha256": "02deda2230909e8cc2a79e230c78824687e384f96294c8e548ccc0910b018f24",
+      "bytes": 2543
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/effective_config.json",
+      "sha256": "03cdaabc6118dc19d148ef639e52ba7216533cf089e34ef8c2ba3fe4b05695a5",
+      "bytes": 7355
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/fill_cash_audit.json",
+      "sha256": "9d439d77168c93ac51713e47ada592747434a375207767744ff358ee851c1c41",
+      "bytes": 388
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/generated_cache_inventory.json",
+      "sha256": "c32d438f832f8794bab6cb914e9c2eee9459160884762460f2a1a91ed9276750",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/hourly_equity.parquet",
+      "sha256": "593239953d29a1e71cff3f99ec4100f371ab86da4cf04c0fc8d93ae6c4739ec7",
+      "bytes": 964485
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/independent_account_audit.json",
+      "sha256": "56698b53842ebfa10c9bf3af75afa6d51bbfc9b115431067d3cdd38070ab18d4",
+      "bytes": 791
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/legacy_main_clock_equity.parquet",
+      "sha256": "bd589e1788d0c214d4ecda841bc61690e03bb730ceab9584331be9cb0c21b624",
+      "bytes": 964437
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/native_results/.last_result.json",
+      "sha256": "900a503ce62c1ddab15e45699e388c292125a580eb323c858a1cfa13f9c9bfd2",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/native_results/backtest-result-2026-11-15_14-48-30.meta.json",
+      "sha256": "0de927b0cf52cd2a901500f869d97269db8a9f3dd3f0623146d996c5bcc09a78",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/native_results/backtest-result-2026-11-15_14-48-30.zip",
+      "sha256": "a2f907fb51ef1034af508752853391f1e4ab596cfd3289fdae8c77ff0a5bac2b",
+      "bytes": 4374868
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/native_signal_receipts.json",
+      "sha256": "7b549cfc86f6b73906df6ab182b7383a92db291137b84b2bbcac8a5d784beb10",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/observation_clock.json",
+      "sha256": "481f303d631b70341235c93f4122bf6ef2e1afeeb97404e6fe5031926e05c048",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/price_precision_receipt.json",
+      "sha256": "ed19db58f500bfc7c8b22691c32960265e63e96921000008adf7bbae4c43a89e",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/process_receipt.json",
+      "sha256": "1428e9f57d59d0059dc5ab9f0f075505bb3ce94684fb134864af9454f7b4be05",
+      "bytes": 774
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/progress.json",
+      "sha256": "6d1657c34d607b9a76ff133919b1991af25d1eca807f780dc2effc48524c0512",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/result.json",
+      "sha256": "103af38733c5abb2fbec6cf0d555b9d193b81a2141f4a12f9dbd961b0143cb0f",
+      "bytes": 3753
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/strategy_trace.json.gz",
+      "sha256": "e184e869ac531551b2fcd575e90f40268b8f8ccb377c38b4e39ce05c65a508a9",
+      "bytes": 250
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_1000_lower_13bps.log",
+      "sha256": "029f3a76cedd9e03ad39cd51045f046921417cd512a09582bed8e158771f8ba1",
+      "bytes": 26124
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/config.json",
+      "sha256": "d49e056ffe018ffc8116c45ff117872316985a9f4d88a775f51aebbf2040e618",
+      "bytes": 2559
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/effective_config.json",
+      "sha256": "a12d4a3b2e1dc700d29298b8749992b624c61a48a549f1b6d089bb8d119486fc",
+      "bytes": 7399
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/fill_cash_audit.json",
+      "sha256": "a6b59a40a9623cdfa4f307d3c83ba792804ab2c1a4c6aa5b4f347a891e82b7e0",
+      "bytes": 377
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/generated_cache_inventory.json",
+      "sha256": "52eed92974577d440432dcdfb77707c3f92b22087c906fa8c66b4ae6d71702f6",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/hourly_equity.parquet",
+      "sha256": "bf11d67a3c405439d323d6acfa51f39b834055e937c534fb386dfe7ded538856",
+      "bytes": 962517
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/independent_account_audit.json",
+      "sha256": "327814420a243629b66602867a64825cf13ce0200096ceddd854d7d3ac8842a6",
+      "bytes": 787
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/legacy_main_clock_equity.parquet",
+      "sha256": "f43ad9fcc3c8627a18b9e9426ccf8b719755ae3893792d6f6e34a04f54311b43",
+      "bytes": 962467
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/native_results/.last_result.json",
+      "sha256": "9c2464437620fb9ea1b37efb6ac3673ff71407fb5cfb2185dea767fb97d8350d",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/native_results/backtest-result-2026-11-15_14-49-26.meta.json",
+      "sha256": "ca0c84af54d3778526850d444aa8e0fc049de1f6c8d330bfeb318eb40bf73bca",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/native_results/backtest-result-2026-11-15_14-49-26.zip",
+      "sha256": "ea38c759c2b3d4ecd6b9687a875d07ea3bb40b3cebff4560dcb010719a8eca49",
+      "bytes": 4063286
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/native_signal_receipts.json",
+      "sha256": "7b549cfc86f6b73906df6ab182b7383a92db291137b84b2bbcac8a5d784beb10",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/observation_clock.json",
+      "sha256": "1f8518f693ba7a3661eb78aed5a6c68f245158e1057697802d32716e94a2b245",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/price_precision_receipt.json",
+      "sha256": "ed19db58f500bfc7c8b22691c32960265e63e96921000008adf7bbae4c43a89e",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/process_receipt.json",
+      "sha256": "6d091a1951e2b9fd9a018f15defd4b29021ee3235ca1902d5eb6318b907167f7",
+      "bytes": 786
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/progress.json",
+      "sha256": "8bd4890f3e82a427db288622018fa165bf4a545eda9fa9c428dda7c5c46c19e9",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/result.json",
+      "sha256": "752dfd743789b40d33f93e3fcd589a24de45c690d8519c3eefe990a7667e24a2",
+      "bytes": 3741
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/strategy_trace.json.gz",
+      "sha256": "d38014adb28a871a47f7704f0a65ff896cde8f1e2ffad2f98bb63d3f809948b9",
+      "bytes": 247
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_conservative_20bps.log",
+      "sha256": "b8ecb54772db0d1db286cb23beb6dd43beaefab9d6ccaa70de33eb34e5c5c11b",
+      "bytes": 26119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/config.json",
+      "sha256": "68306a1bad04e42731b0df769811764be9a25b83b5f0a20d65490cdbaf4deaba",
+      "bytes": 2539
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/effective_config.json",
+      "sha256": "c7003be7387ac31fd31e40cafdb4ca659a413d1f9acf13c3fbeb7893393f7c61",
+      "bytes": 7345
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/fill_cash_audit.json",
+      "sha256": "68c361a6969d4ee218271faceb626e7ae4de7ab9c80af9e55cde02d3dbdf70f1",
+      "bytes": 382
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/generated_cache_inventory.json",
+      "sha256": "3d0303661a5735253aecc121b87987343f096d390ee74330942c0cd5b0349f31",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/hourly_equity.parquet",
+      "sha256": "ef08d855e2739d53f360ac48509c1c547813667b2be59725d933ce7ece5d0a41",
+      "bytes": 962516
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/independent_account_audit.json",
+      "sha256": "832784454f3edd869a9317a0f32180e22ebf5712c6c0c5f27e8ce4c8be8a6839",
+      "bytes": 787
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/legacy_main_clock_equity.parquet",
+      "sha256": "30f4fb9aecc1926d07bf65b15960ae9bc309c352dba89d5d343d737f093d3307",
+      "bytes": 962466
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/native_results/.last_result.json",
+      "sha256": "cdb4483c8c874124e0dc721478d492352cb8624664830021004d32e31a4a1359",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/native_results/backtest-result-2026-11-15_14-50-22.meta.json",
+      "sha256": "419cf3d4ff46448a578ae5f4db97a0772307c284fc5389400d859ffa4fcaa0e7",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/native_results/backtest-result-2026-11-15_14-50-22.zip",
+      "sha256": "57fa61b50e4f2f00939101ad0fcb73f0c86cc587c6c986fa14b5aaf3358f09c7",
+      "bytes": 4063279
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/native_signal_receipts.json",
+      "sha256": "7b549cfc86f6b73906df6ab182b7383a92db291137b84b2bbcac8a5d784beb10",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/observation_clock.json",
+      "sha256": "1f8518f693ba7a3661eb78aed5a6c68f245158e1057697802d32716e94a2b245",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/price_precision_receipt.json",
+      "sha256": "ed19db58f500bfc7c8b22691c32960265e63e96921000008adf7bbae4c43a89e",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/process_receipt.json",
+      "sha256": "36fad55afa47bdfb868b1b7458beb5c8861eb0f5255465832b6ce87451824db5",
+      "bytes": 772
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/progress.json",
+      "sha256": "584fbf0bcad1227eb2718ca708aef59680bd33767ef62292469820e049fdf47c",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/result.json",
+      "sha256": "70059e2bf871b01bf8d02f9cbbe39768bb39db92528ab9b4f1fa2e4e1646eaea",
+      "bytes": 3734
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/strategy_trace.json.gz",
+      "sha256": "8aca5f91a3f90bb19d69dd9288c104ac41236e20d653b0e7863a587cbd75843a",
+      "bytes": 247
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/benchmark_ETH_spot_500_lower_13bps.log",
+      "sha256": "9986daaad0915577a64fa1a391323cc432db97fff93cb0b92c52f5ebe04628ce",
+      "bytes": 26089
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/config.json",
+      "sha256": "2e6f09126e12eb88d9517317434669994076af79983ae635d577951c2d9c2bbb",
+      "bytes": 2485
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/effective_config.json",
+      "sha256": "3c948e9d33d5e3393719d48f7add6183a6273d59766a0937ee8be5e5913c1c95",
+      "bytes": 7246
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/fill_cash_audit.json",
+      "sha256": "83f66ed8c2917b475cb71f9ffe749f59fbf380f6c6379523914aa2c21295951c",
+      "bytes": 405
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/generated_cache_inventory.json",
+      "sha256": "62ac4d2c74718bc72912a0b8b0efb0cb49f2bbf9b88a0686003e101618500fa9",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/hourly_equity.parquet",
+      "sha256": "83ec570ffcaee9a7d5e550c3d1a6c94f76265701188c452fcfca5cb2095a05eb",
+      "bytes": 964665
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/independent_account_audit.json",
+      "sha256": "0586d2936e8097c4d8d4a80f7bae356abe38a274ae4354bd0987d0f37e81f8d4",
+      "bytes": 804
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/legacy_main_clock_equity.parquet",
+      "sha256": "4c2faf476967bfa53bf5fbfcd3c62205f66096908a503072a4a41c96f2a1732f",
+      "bytes": 954142
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/native_results/.last_result.json",
+      "sha256": "22b08eabcd4d684330713a19f3808e17bb886609613a3cff72e1fe030b3f4fe3",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/native_results/backtest-result-2026-11-15_14-46-57.meta.json",
+      "sha256": "300126dd903169a2684cbb380fd88019243b73ee498e1513a367083fc3d6e951",
+      "bytes": 200
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/native_results/backtest-result-2026-11-15_14-46-57.zip",
+      "sha256": "f9383cdbe08914b254e67ac027d8fcdfabb6c7a61925ebad22ec24f53fc2dbee",
+      "bytes": 2700576
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/native_signal_receipts.json",
+      "sha256": "a9118cf8bb112a6e38539cad0e0b1a387b79e466a03e9937c2f0fabe328a3b34",
+      "bytes": 345
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/observation_clock.json",
+      "sha256": "1f8518f693ba7a3661eb78aed5a6c68f245158e1057697802d32716e94a2b245",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/price_precision_receipt.json",
+      "sha256": "bb509319dd2ce2d4b3ea6304effe0a687065ac4dcf263f25024b211376afb82a",
+      "bytes": 309
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/process_receipt.json",
+      "sha256": "e5ec3800a4081c782e669dd5674fe647163c6126f746f80c573326ae10ee6a6e",
+      "bytes": 786
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/progress.json",
+      "sha256": "38038b62c0bfbb11948a0d6811b1bbd2d18b98d13b0c14e02f65e5aecd053cfa",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/registered_plan.json",
+      "sha256": "8a18d14a8c1ed38eed7b1e1bf58c1a06b931bb74643215cd343538b0bc389e93",
+      "bytes": 39040
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/result.json",
+      "sha256": "094ec8975e1e785a2e92a1eff46b7e301bbf518bd3e022d6a15e8837273475c9",
+      "bytes": 3775
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/strategy_trace.json.gz",
+      "sha256": "b7c5b312e1dafa430cb0b84b047033daaf3ddc16d137515bdc390f0bb69c7c58",
+      "bytes": 244
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_conservative_15bps.log",
+      "sha256": "9747e40959f8b9c02ccebec87f96c82c6f28237fe2564730de13f46e73b9c5af",
+      "bytes": 27112
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/config.json",
+      "sha256": "e839d997db0e6cb6bf8cd50095c9f43aa010f766baa54cde6fcf8daf839bb559",
+      "bytes": 2461
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/effective_config.json",
+      "sha256": "6f314404606c9832a0466dfddceae1dba68b6f96e05b29c81f8a01a98acdac86",
+      "bytes": 7182
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/fill_cash_audit.json",
+      "sha256": "c2b6f2ca3e09905c4699d4fd5bbda162a8752082f672b1b2e41d9ce51820e33d",
+      "bytes": 405
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/generated_cache_inventory.json",
+      "sha256": "a9dea07a10623c87583cdf08752ef45c413d92bc0d2e6205863ec4f194a20857",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/hourly_equity.parquet",
+      "sha256": "3d5f384b5550f74cceb6a6ec45fee1f3984f33b8f7d83d7fb2b074d0f26fe3e3",
+      "bytes": 964674
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/independent_account_audit.json",
+      "sha256": "6308518b34ad0a2fa3556acebcd5b7d6b565151ab620dc745c9feff6b91a6e28",
+      "bytes": 804
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/legacy_main_clock_equity.parquet",
+      "sha256": "eb1d99252617610351892d43a661ca7effc7e66c82daec1f5ea821ad571e4548",
+      "bytes": 954151
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/native_results/.last_result.json",
+      "sha256": "fcb5bcf467e5a5dfa4b3a98aec2c7f75e06eba0290b0be14d112da036bc66908",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/native_results/backtest-result-2026-11-15_14-47-53.meta.json",
+      "sha256": "1f191b713cd02db7fe478bd4be432970eeaec9a08c39f90622fc27370ba8471d",
+      "bytes": 200
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/native_results/backtest-result-2026-11-15_14-47-53.zip",
+      "sha256": "2d7775c9308645b90beca8efdd6fd55c07be2472a0bd6ce83dd7e94d725ca1df",
+      "bytes": 2700561
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/native_signal_receipts.json",
+      "sha256": "a9118cf8bb112a6e38539cad0e0b1a387b79e466a03e9937c2f0fabe328a3b34",
+      "bytes": 345
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/observation_clock.json",
+      "sha256": "1f8518f693ba7a3661eb78aed5a6c68f245158e1057697802d32716e94a2b245",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/price_precision_receipt.json",
+      "sha256": "bb509319dd2ce2d4b3ea6304effe0a687065ac4dcf263f25024b211376afb82a",
+      "bytes": 309
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/process_receipt.json",
+      "sha256": "9909448fcc4f0fad54cb5ff6d9fd3541630e961a5e3bd76a917151a9df263031",
+      "bytes": 770
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/progress.json",
+      "sha256": "1713f20e5467ade2bbb0c092a6dd7bf788a4d3eb75f9df3094e3ca2085dc646a",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/registered_plan.json",
+      "sha256": "8a18d14a8c1ed38eed7b1e1bf58c1a06b931bb74643215cd343538b0bc389e93",
+      "bytes": 39040
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/result.json",
+      "sha256": "6240503cde6d94bc0ef5486b2ed86bdd54a81428536615dba081a7143fcfd9b3",
+      "bytes": 3762
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/strategy_trace.json.gz",
+      "sha256": "1c8e307a499ecaa129e2c5ace50550eab0b319941f300e0891488972011acffb",
+      "bytes": 244
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_1000_lower_8bps.log",
+      "sha256": "3272fdb19ad587f01fc2ca5158241758127aa5429cd68d089b60ecbd342981f3",
+      "bytes": 27068
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/config.json",
+      "sha256": "2a1c4c897593ff11c3f14b1d9c65062a5d8663cf0d708bca7400adc4a493986b",
+      "bytes": 2482
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/effective_config.json",
+      "sha256": "56299db6f45db9f8fec5c8b14ced0f7a2ea4a05f2032fd91b52ad32063f7d3db",
+      "bytes": 7238
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/fill_cash_audit.json",
+      "sha256": "f8954c59d57d3f8e91499c8f1da3e9fb7c224b07ebd32b434eb51490b9ea8822",
+      "bytes": 404
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/generated_cache_inventory.json",
+      "sha256": "5a4cea3de23029d534cf2926dd21858124287f67e71130f15e70d6f86ddc7697",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/hourly_equity.parquet",
+      "sha256": "90da16b5080bcea860cd400012b8012ac8419f3a6545b8a5e4efdcf3b1d32d81",
+      "bytes": 964697
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/independent_account_audit.json",
+      "sha256": "f17c16c26ee8b91daa497b7104f6e31349ba73260adcab85d2fc4c9e5e758da3",
+      "bytes": 810
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/legacy_main_clock_equity.parquet",
+      "sha256": "702d51f67d4d0cfd4b5ca3b92c9b76af585e91d39eaa271c702781cbe0cd67af",
+      "bytes": 954252
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/native_results/.last_result.json",
+      "sha256": "62eee91c5b6cb51dabe0855d24e293a459ca9a8605e839605b350a48163fd2a1",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/native_results/backtest-result-2026-11-15_14-48-49.meta.json",
+      "sha256": "bcd7cdba1853999e83baf31fff6cad0585d004d40bf046bbd730b62f9bb127d2",
+      "bytes": 200
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/native_results/backtest-result-2026-11-15_14-48-49.zip",
+      "sha256": "663d4a0c3e5348de9bc5fa6b76d1856588dbd27791cf7ac58206785cf995298b",
+      "bytes": 2700576
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/native_signal_receipts.json",
+      "sha256": "a9118cf8bb112a6e38539cad0e0b1a387b79e466a03e9937c2f0fabe328a3b34",
+      "bytes": 345
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/observation_clock.json",
+      "sha256": "a635046f4290ef7d0f4508c4792aef6e0b911434027e163be072903c5348136c",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/price_precision_receipt.json",
+      "sha256": "bb509319dd2ce2d4b3ea6304effe0a687065ac4dcf263f25024b211376afb82a",
+      "bytes": 309
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/process_receipt.json",
+      "sha256": "c08f5c4a24d925e2ab7a1e19b6a5335793ac76def4a6fdae4dcdce7055b2f004",
+      "bytes": 784
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/progress.json",
+      "sha256": "9542a7e0a35b37a8d45d19c410ea9c78be1754e72c19c762017edd9f3c35dc79",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/registered_plan.json",
+      "sha256": "8a18d14a8c1ed38eed7b1e1bf58c1a06b931bb74643215cd343538b0bc389e93",
+      "bytes": 39040
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/result.json",
+      "sha256": "1c50091e1280ade00e536dd73a3d29fe71afb52cb2cd5ffc44869ce490ce63da",
+      "bytes": 3774
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/strategy_trace.json.gz",
+      "sha256": "bbb939b6c05cd5b133147be21ce7d564f87b9739a7ffd665e1175afee1c12bc3",
+      "bytes": 243
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_conservative_15bps.log",
+      "sha256": "ea27bd0abab51f44adf2489515a0d4dcc10755674257a5832f9ccd22ee73535a",
+      "bytes": 27108
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/config.json",
+      "sha256": "fc6d2dec3c3c5011d0f5ed6795a4d671adecf0c787b2b75689a12a6191e946c8",
+      "bytes": 2458
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/effective_config.json",
+      "sha256": "84fdac6ef4c0a3b9f75675842daeb60a66485afacfc8ed07c6502934e788af82",
+      "bytes": 7174
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/fill_cash_audit.json",
+      "sha256": "bb5e960af9194a575e27a3e09f4798ed87eafbb02b5fe0693fdd9fdb57ce5d80",
+      "bytes": 403
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/generated_cache_inventory.json",
+      "sha256": "9839b1c0febc42e1f5532286926ad7f321cb975403c5dcdd3b66eabe505fd854",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/hourly_equity.parquet",
+      "sha256": "e6364cff7601fc7478a85a3b8ad63f08482bbffa29c85d6b5800087155351a44",
+      "bytes": 964706
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/independent_account_audit.json",
+      "sha256": "d4db325ca48b0941cad9a2720bbbb6cdd8dd70d9504623ff07480c362f417f46",
+      "bytes": 810
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/legacy_main_clock_equity.parquet",
+      "sha256": "c1ab2232a82a343a493538bcddb6b2374919a1e2989859afc21f9a3c84f75064",
+      "bytes": 954261
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/native_results/.last_result.json",
+      "sha256": "ed6c1c6dcf0b62e4fb255e8ce7a696b6d586d4d01ac6f038c131bbf4536ed7e3",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/native_results/backtest-result-2026-11-15_14-49-45.meta.json",
+      "sha256": "46cbf7e15596657ad58acf29f9f65498941cf447a9ef7c95127f2e91c40a93d4",
+      "bytes": 200
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/native_results/backtest-result-2026-11-15_14-49-45.zip",
+      "sha256": "5380412e873632a58d8ad4156f4f94d43d435d67065764cf0b4275ad08ea78f1",
+      "bytes": 2700564
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/native_signal_receipts.json",
+      "sha256": "a9118cf8bb112a6e38539cad0e0b1a387b79e466a03e9937c2f0fabe328a3b34",
+      "bytes": 345
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/observation_clock.json",
+      "sha256": "a635046f4290ef7d0f4508c4792aef6e0b911434027e163be072903c5348136c",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/price_precision_receipt.json",
+      "sha256": "bb509319dd2ce2d4b3ea6304effe0a687065ac4dcf263f25024b211376afb82a",
+      "bytes": 309
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/process_receipt.json",
+      "sha256": "b7a96f4cf8f46ef2b4f0139561c5e3efca8a4d14623002cb6bd94d3bb951bb60",
+      "bytes": 768
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/progress.json",
+      "sha256": "74fcc6be8c9bcd3601e9005c5cab16648f2bcd1d2ed8bbd0a1c505042372d22a",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/registered_plan.json",
+      "sha256": "8a18d14a8c1ed38eed7b1e1bf58c1a06b931bb74643215cd343538b0bc389e93",
+      "bytes": 39040
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/result.json",
+      "sha256": "c342c12025718a1519f3c16db5afa5384ee3f354b403ce389c19523ebde48458",
+      "bytes": 3764
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/strategy_trace.json.gz",
+      "sha256": "51313e6f0c70137fe873305f053148f4111544874cb78130fb1681fecdc71979",
+      "bytes": 243
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_futures_500_lower_8bps.log",
+      "sha256": "d1591335f5264040d1013f96e78c232eebad974ffe31da5d1b8ae2298f6175b0",
+      "bytes": 27066
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/config.json",
+      "sha256": "299a41c8e42a08ffe744f2b91405882c2c864f35bf4cdfe2ae644398caef8381",
+      "bytes": 2550
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/effective_config.json",
+      "sha256": "5527a0730bb95daf1f177c17ea7f1297f2ee4586c3c68e236250ae29cb38eca6",
+      "bytes": 7375
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/fill_cash_audit.json",
+      "sha256": "6c1952d973f3a7228b6eb64cd6da0ec12e4d83c1032d1d8585266d1cd835d0b9",
+      "bytes": 377
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/generated_cache_inventory.json",
+      "sha256": "66f902b5294b8636e4467de9c0ad5eb202d0f6e65947509aa76e8c93468de77c",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/hourly_equity.parquet",
+      "sha256": "c03a7faa4e3f1695a5a8ad6d8aca1ceb2a5c83d16707c5fb24f18ed5d6192291",
+      "bytes": 969326
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/independent_account_audit.json",
+      "sha256": "cd8883cde0062399499e01246924320cba6171f1f9af60ce5e3ab5de4f3acba8",
+      "bytes": 785
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/legacy_main_clock_equity.parquet",
+      "sha256": "c22ee4a4cb0aee1f785879b239230812efc699d9f9b83c9b437833b9ef7cccfe",
+      "bytes": 974244
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/native_results/.last_result.json",
+      "sha256": "26ddedb05459f16cbd5d7fbb10f258145ebfbad5a8b661534519a4bef369e163",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/native_results/backtest-result-2026-11-15_14-46-47.meta.json",
+      "sha256": "bea19bc275b68cd71c7c5d501e5326273fb2419ed941ac0367ad40ae068d8f88",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/native_results/backtest-result-2026-11-15_14-46-47.zip",
+      "sha256": "f5cd4fe1e345427876f794ef59f86f07829a90aad731f9c7ee61295d2107b765",
+      "bytes": 4278166
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/native_signal_receipts.json",
+      "sha256": "2b068dcce49ac837a5a60861674baeb122bdb3b21ec9c6f758418af5b7184d47",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/observation_clock.json",
+      "sha256": "1f8518f693ba7a3661eb78aed5a6c68f245158e1057697802d32716e94a2b245",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/price_precision_receipt.json",
+      "sha256": "10d56d0c147cc91bbe79dfd10a471ba3da154d81e95ce99f23ced61fddd21338",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/process_receipt.json",
+      "sha256": "409feae70645f96d462700bbe08b05aa0852e6f0692145902bb29a7ef360d582",
+      "bytes": 780
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/progress.json",
+      "sha256": "6d3c2dd8fdfc44687dff3a900f21b2630be6a996eb34cd20f0fd209bfdef2684",
+      "bytes": 120
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/result.json",
+      "sha256": "3bfb9dbf60bffdb06fb5b3babb4d4735faa47ec8218cb28124a0f723478e3b20",
+      "bytes": 3764
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/strategy_trace.json.gz",
+      "sha256": "f0d4a8886adf9419cfbd50331f6f0132f3e79a8af73eedd11693f6cd2c5d6a38",
+      "bytes": 247
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_conservative_20bps.log",
+      "sha256": "fdf504e46cce0ac2a9309aaf7fd4e45ddf3a59d11b4a363e54d8d7ae836c15f4",
+      "bytes": 26129
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/config.json",
+      "sha256": "f300d30cd32f0ea991991b4870f5546f510213114c6503aff25cd3a397836792",
+      "bytes": 2530
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/effective_config.json",
+      "sha256": "a8966d0a742c06a43e5b68636e572194adf502a807e688c0d39eb4ae9fa00081",
+      "bytes": 7321
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/fill_cash_audit.json",
+      "sha256": "dada4f10ac620ea65883172f3f14c246ebbdc4131ff712020221f6a57ecb2e08",
+      "bytes": 382
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/generated_cache_inventory.json",
+      "sha256": "32690c8bc96c8907800755ca4072c0a081dc2e7f81d87800c535a8097cbbfe79",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/hourly_equity.parquet",
+      "sha256": "840f62415ec0fd567cc83ff100fdb9b04b0e6c000bbbe4614fe7096c5b8b7627",
+      "bytes": 969327
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/independent_account_audit.json",
+      "sha256": "4d5a965947b8d623e3a4092ac18538e1527be3fb3477963db8e0377968f1617b",
+      "bytes": 785
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/legacy_main_clock_equity.parquet",
+      "sha256": "70b61afc36d5f80fc545a66d278a6c39c88ab8fe029d2fe704fa32f8adbc578b",
+      "bytes": 974245
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/native_results/.last_result.json",
+      "sha256": "a9af0a83822f224cd51ccd1303f14c289b926107531ba57d6a25ac15da111cdc",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/native_results/backtest-result-2026-11-15_14-47-43.meta.json",
+      "sha256": "20d4302b3dcceb5888c68bf8d949962a4198084e7e1b907c10b0872fd37bbd01",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/native_results/backtest-result-2026-11-15_14-47-43.zip",
+      "sha256": "580d660fd18b65910dfaf7911082ec698ecc3f96421790e9c1f243029fe53f86",
+      "bytes": 4278171
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/native_signal_receipts.json",
+      "sha256": "2b068dcce49ac837a5a60861674baeb122bdb3b21ec9c6f758418af5b7184d47",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/observation_clock.json",
+      "sha256": "1f8518f693ba7a3661eb78aed5a6c68f245158e1057697802d32716e94a2b245",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/price_precision_receipt.json",
+      "sha256": "10d56d0c147cc91bbe79dfd10a471ba3da154d81e95ce99f23ced61fddd21338",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/process_receipt.json",
+      "sha256": "29222b0bbddf31c2fba2561efcf01acb0aef3dddcfe29829b1532c85f8ab0e3b",
+      "bytes": 766
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/progress.json",
+      "sha256": "6616fc81a2005f3cba429ec7f48de347531a6b51690d3361cea2cc92ecc820fc",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/result.json",
+      "sha256": "7517bdd64d91d3865b8e1196fc406343c8d406ff5c01c79d912ed0c4321cbddf",
+      "bytes": 3746
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/strategy_trace.json.gz",
+      "sha256": "06bedda02c0281d85df7643cd226e1a47fdc6a4b04e8df5ffd0480551497700b",
+      "bytes": 247
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_1000_lower_13bps.log",
+      "sha256": "c89ef12f5a1f0ffad11a0285561403435072f86a6df284d0e9025c0ce976ae1f",
+      "bytes": 26089
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/config.json",
+      "sha256": "0cf7d8de5b286143f0bc99c2e54c65519da39aef8c7006ae724fbb4f485fe5f7",
+      "bytes": 2547
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/effective_config.json",
+      "sha256": "8f6b3d47475904b2640c6f8eed23d963caa23021f93a79fb9c6381ecd202552f",
+      "bytes": 7367
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/fill_cash_audit.json",
+      "sha256": "6ec72726bc83f47f7fe7b39ffdbbb6c61270f14cec4a15689c9100dd4c480028",
+      "bytes": 377
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/generated_cache_inventory.json",
+      "sha256": "6a424db86684ee6d0be44bc64528dc0d0629177c0be6c20fe20156a02bd87ab8",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/hourly_equity.parquet",
+      "sha256": "2f338af55c2be3d6f7a798a43d8a4c3fd3c481053c00f83387b6bc156554c9ed",
+      "bytes": 969342
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/independent_account_audit.json",
+      "sha256": "c0cc20d751080256fbf9581af19816a997d9a7e0c3211ba1f837f21f3dd31f0b",
+      "bytes": 783
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/legacy_main_clock_equity.parquet",
+      "sha256": "5a56a35f737fb0244b27ac0857c26b6f35844342608e6ae1adfd8ba34ab1ed45",
+      "bytes": 974197
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/native_results/.last_result.json",
+      "sha256": "e9b476fe0a6ffbf5ce5bbf9f2f453f7d8346511ddb1f7d52a742350ed554dbe9",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/native_results/backtest-result-2026-11-15_14-48-39.meta.json",
+      "sha256": "81fbb87f811dbad2eaa9039af91237a087be86880e90f856d098f819b31a3504",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/native_results/backtest-result-2026-11-15_14-48-39.zip",
+      "sha256": "5059ff6eed43f4c9d63c8b318959aceee7370b01446c8b3124d2ed2c35dbe0f4",
+      "bytes": 4278225
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/native_signal_receipts.json",
+      "sha256": "2b068dcce49ac837a5a60861674baeb122bdb3b21ec9c6f758418af5b7184d47",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/observation_clock.json",
+      "sha256": "a635046f4290ef7d0f4508c4792aef6e0b911434027e163be072903c5348136c",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/price_precision_receipt.json",
+      "sha256": "10d56d0c147cc91bbe79dfd10a471ba3da154d81e95ce99f23ced61fddd21338",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/process_receipt.json",
+      "sha256": "1a8414d7974063e05ff2ac2a698933d947f16953a8f4454707e11cc3c30a143f",
+      "bytes": 778
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/progress.json",
+      "sha256": "bde9409147d79be2b5bfa337ce3ecd581fa7a2c1e87cbc0f2518df9abe4714cd",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/result.json",
+      "sha256": "33e9725e7497e1bfc27d3f617d073abf37365220f9af653f04c8d56de37c7e2e",
+      "bytes": 3764
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/strategy_trace.json.gz",
+      "sha256": "33832fbb3f6b9e7bd20f2438a1dcc2893a4c4f0f60585c40c471c2860a8d00fe",
+      "bytes": 246
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_conservative_20bps.log",
+      "sha256": "9a61dc640f38502f72abe987aa9a23d14984cac7ed2d31cfaa510104ccbf646c",
+      "bytes": 26124
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/config.json",
+      "sha256": "3c105b1c5888ecf80cf77d5f925dd984bc6cb7b1d9693df46622185eb915ada0",
+      "bytes": 2527
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/effective_config.json",
+      "sha256": "6599178cce29b739c4a534cd8dc7b4f31d2829af98dd5809269cd079ec720c7b",
+      "bytes": 7313
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/fill_cash_audit.json",
+      "sha256": "9d8046ec8316cddf9ca1bffed376453b46cdec3d608291b1423b7fd1fb92e967",
+      "bytes": 382
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/generated_cache_inventory.json",
+      "sha256": "2c429dd9f47d11baf2433aaa96886c10f4a19a228adf254ff6764e95672da9ef",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/hourly_equity.parquet",
+      "sha256": "e99fa3678b09d76c66ffc49284f3a2372f2216a4166bf19cdb1010acfe475e60",
+      "bytes": 969343
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/independent_account_audit.json",
+      "sha256": "d2559e0274fef1f14b58cbcbccf1e2adff90b362557efea54c3e8e4da80b077b",
+      "bytes": 783
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/legacy_main_clock_equity.parquet",
+      "sha256": "e4c2e710edda39a7372ad1695be0795e0a7d1fa64b4d2924685a6cf26d96ecde",
+      "bytes": 974198
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/native_results/.last_result.json",
+      "sha256": "d25ac14765b0683baf2d52f095149752e2bda5e1fd49de3a4aa80e1ae82a7055",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/native_results/backtest-result-2026-11-15_14-49-35.meta.json",
+      "sha256": "be0c433cf9366cba82b5958be4363ef8b9ea74c39658942e7384fc6b0d3a67fc",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/native_results/backtest-result-2026-11-15_14-49-35.zip",
+      "sha256": "e51273036fb0a2bfa9806350f05f3fc4df1f7e19d8a97fc79c7a1dac5519ad1f",
+      "bytes": 4278228
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/native_signal_receipts.json",
+      "sha256": "2b068dcce49ac837a5a60861674baeb122bdb3b21ec9c6f758418af5b7184d47",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/observation_clock.json",
+      "sha256": "a635046f4290ef7d0f4508c4792aef6e0b911434027e163be072903c5348136c",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/price_precision_receipt.json",
+      "sha256": "10d56d0c147cc91bbe79dfd10a471ba3da154d81e95ce99f23ced61fddd21338",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/process_receipt.json",
+      "sha256": "8ebb267540a5c72b97af34f2db35a0cffd2b5e6408114d928112ec5a7498b112",
+      "bytes": 764
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/progress.json",
+      "sha256": "ab6b8c5ff1db0f466cc5502393649449c484ea4abee6b286e74aad58d86d7e9b",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/result.json",
+      "sha256": "119a99a75d0e0b0e8275e04c73950121c89f6dfdad929074ff52b0304553421e",
+      "bytes": 3746
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/strategy_trace.json.gz",
+      "sha256": "2baedec72044229fdf4db8c17bb259488bbc4dc48fcd24f7a3c204337c560405",
+      "bytes": 246
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_BTC_spot_500_lower_13bps.log",
+      "sha256": "701ed25154d7b9ef3904c724ed2058c776e37a7c0e49ee00cbd2c93b22ed115e",
+      "bytes": 26085
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/config.json",
+      "sha256": "1744c61a04753a73ca5eced661cd7f4b6970e0a96006b6a23af633f5d6254c89",
+      "bytes": 2485
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/effective_config.json",
+      "sha256": "dae926c1be670034d425196d1176e42b31619700df971826a8759db64ba9c73e",
+      "bytes": 7246
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/fill_cash_audit.json",
+      "sha256": "722b9c06f140a087768ab2221e6586e92a4292d229c9e08275f09ea5afd14049",
+      "bytes": 405
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/generated_cache_inventory.json",
+      "sha256": "84006eda6a2143b58b48f3bbb2cbb74b5e3d364267b532852c893c690e5c2996",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/hourly_equity.parquet",
+      "sha256": "77e15a3a0e2d3d65768320a4b3710d19ac930973f4276a96f75ab632c20a0321",
+      "bytes": 982255
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/independent_account_audit.json",
+      "sha256": "db14130e9c1d32af05e1414cae88c7206b48861291481d9d8ed8116a7a0c4c47",
+      "bytes": 815
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/legacy_main_clock_equity.parquet",
+      "sha256": "07e2cc40bab2fc3477b7e0cf64250102e9eb064a47c50d4d13cf1df0f8db1b0e",
+      "bytes": 980752
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/native_results/.last_result.json",
+      "sha256": "2ea3974dbbd4bda6c037ea79c9cc6878f583e738f0b54ba1f98766fa28d7b30f",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/native_results/backtest-result-2026-11-15_14-47-16.meta.json",
+      "sha256": "10ac8393b9edf56d684f9f830a99944650717dcc7dc0a384c0ea27fbad2ff6af",
+      "bytes": 200
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/native_results/backtest-result-2026-11-15_14-47-16.zip",
+      "sha256": "57562c515f9bb094772f779ff2187f5d4a3750d833296ad02d988f6e8e8d856c",
+      "bytes": 2664881
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/native_signal_receipts.json",
+      "sha256": "7ffded965a1af83a70284d741cb894c090f176ca761615ce05883b9947b8133c",
+      "bytes": 345
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/observation_clock.json",
+      "sha256": "1f8518f693ba7a3661eb78aed5a6c68f245158e1057697802d32716e94a2b245",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/price_precision_receipt.json",
+      "sha256": "33f862a39c03d7c7326669870aee2aeb690ce39021cfd495fa0ef081eb19e7db",
+      "bytes": 310
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/process_receipt.json",
+      "sha256": "a6ab389d6ab9155ea7f8b051343e19f8ab23ba2b9b2eed729c41701492981b26",
+      "bytes": 786
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/progress.json",
+      "sha256": "77a072121d9bb83da03a350b2f02431f6fe630aea167426e383d81c6633c6c36",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/registered_plan.json",
+      "sha256": "8a18d14a8c1ed38eed7b1e1bf58c1a06b931bb74643215cd343538b0bc389e93",
+      "bytes": 39040
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/result.json",
+      "sha256": "870f8216a3e235ae5846fab01c56dede2a216eeb638b3ff8310e9e229cbc5396",
+      "bytes": 3793
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/strategy_trace.json.gz",
+      "sha256": "e78d47b2353b87aef3ea93ffe4d243ebf6986992db17cdb5bb58bab74ccdb14c",
+      "bytes": 253
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_conservative_15bps.log",
+      "sha256": "d0f847f27660242644180d63e44e4bc9850d7d92daa2bab6912798e0196f3f6d",
+      "bytes": 27110
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/config.json",
+      "sha256": "b0570973295754d164b9316536685e5b0ec884fbd77f85c18c2585a55b7496ba",
+      "bytes": 2461
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/effective_config.json",
+      "sha256": "229d72b0f223743831ca832ccf7b71624a414bc57a31e0654e39a60df5d738b4",
+      "bytes": 7182
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/fill_cash_audit.json",
+      "sha256": "8d4bf458491203d4a3dfdae6890372467ee0a53ea5ba21036da1a9960741f43a",
+      "bytes": 405
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/generated_cache_inventory.json",
+      "sha256": "54df4d85539ff6f9a6dbbdeef686f090611e0566e0b299354a4b052bae4359fb",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/hourly_equity.parquet",
+      "sha256": "585d31b3ede3038bcb67805fa811554d37af7e19c372984a05ee8cbb5c2d6936",
+      "bytes": 982262
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/independent_account_audit.json",
+      "sha256": "c47507146d5dab41ac0ebccb32a16f28b284e96fbd13eacd9c4d7cf49c671d2e",
+      "bytes": 815
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/legacy_main_clock_equity.parquet",
+      "sha256": "1a17ae83faf5f4a660f252610d57d5f430308620383948ed124aaf5aa67d2d0d",
+      "bytes": 980759
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/native_results/.last_result.json",
+      "sha256": "7b1056d6df76b788e0d8954bf30f8c1f8211fccac06c027ee0b86d155e607242",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/native_results/backtest-result-2026-11-15_14-48-12.meta.json",
+      "sha256": "b68dede170842fe8cbd72f7dc341190aa3495d905f67f1f18f878691ab006980",
+      "bytes": 200
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/native_results/backtest-result-2026-11-15_14-48-12.zip",
+      "sha256": "e47ecfa84dcbbf02c99fb14931c305b6e368ac3eeeac1c4da462a395ef10b53d",
+      "bytes": 2664886
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/native_signal_receipts.json",
+      "sha256": "7ffded965a1af83a70284d741cb894c090f176ca761615ce05883b9947b8133c",
+      "bytes": 345
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/observation_clock.json",
+      "sha256": "1f8518f693ba7a3661eb78aed5a6c68f245158e1057697802d32716e94a2b245",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/price_precision_receipt.json",
+      "sha256": "33f862a39c03d7c7326669870aee2aeb690ce39021cfd495fa0ef081eb19e7db",
+      "bytes": 310
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/process_receipt.json",
+      "sha256": "f67fc7818d50d53c4334b555780cc8de24fb6e394e7276dd75f6650731e856a1",
+      "bytes": 770
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/progress.json",
+      "sha256": "4eef10c987600a43305109161e879a755c318de8c6bbed026d40a93b892adea5",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/registered_plan.json",
+      "sha256": "8a18d14a8c1ed38eed7b1e1bf58c1a06b931bb74643215cd343538b0bc389e93",
+      "bytes": 39040
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/result.json",
+      "sha256": "dbfae26ea51224a2b7642d06aeda245a31e03a2b9dab2868984ce818dee9a9a3",
+      "bytes": 3781
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/strategy_trace.json.gz",
+      "sha256": "62c3938bbff657816e603cd991fde1e32ad0e0237715551b4fc7df8b3a0b0332",
+      "bytes": 253
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_1000_lower_8bps.log",
+      "sha256": "9c1e89b22a27a24de01378b39b21acf43a2e19d33b2b7ac95e19032b3be7e322",
+      "bytes": 27066
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/config.json",
+      "sha256": "637d4a02a60635711abc10f93545e564728fa5b55dfc0d7bfbdd41621477efb6",
+      "bytes": 2482
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/effective_config.json",
+      "sha256": "04d513a36e98cd93bbeab5a9e17d1e98c4f6830356af0d3850b7e2eb68ea4db9",
+      "bytes": 7238
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/fill_cash_audit.json",
+      "sha256": "a525b7147eda347dd4e4989076c31f76f0d25e72184a5e4b251e7f9a6305b34b",
+      "bytes": 403
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/generated_cache_inventory.json",
+      "sha256": "d86a7bd3eeca25dd4ca522271e8418c62058b97989753652f213fb82983f3ab0",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/hourly_equity.parquet",
+      "sha256": "899d773673362b173e426763ebacc4f7fd31fcc1cad0be6aade799e87d4a8b00",
+      "bytes": 955087
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/independent_account_audit.json",
+      "sha256": "ee56d4789b9f7b409322a82d3c4d12f0a921f84254b5a944493a05c8bab15b73",
+      "bytes": 804
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/legacy_main_clock_equity.parquet",
+      "sha256": "24f669e45210cb8bfe323e770bf9b687984c5f7bb9bdf7f2a5efa4b160f6ea20",
+      "bytes": 954930
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/native_results/.last_result.json",
+      "sha256": "e5686e696286b377b309200e4fb5427115e0e93b5b458042487a5714f2aa31a7",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/native_results/backtest-result-2026-11-15_14-49-08.meta.json",
+      "sha256": "95ab347b617b10ec88c8ceb94dd8ea273b0914c717106a4af878fc969436372c",
+      "bytes": 200
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/native_results/backtest-result-2026-11-15_14-49-08.zip",
+      "sha256": "9d128f7a62fb9722ff84c8dc9c502ca0d41a15019b4771e2d61f1d6610bdbf7b",
+      "bytes": 2664882
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/native_signal_receipts.json",
+      "sha256": "7ffded965a1af83a70284d741cb894c090f176ca761615ce05883b9947b8133c",
+      "bytes": 345
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/observation_clock.json",
+      "sha256": "a635046f4290ef7d0f4508c4792aef6e0b911434027e163be072903c5348136c",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/price_precision_receipt.json",
+      "sha256": "33f862a39c03d7c7326669870aee2aeb690ce39021cfd495fa0ef081eb19e7db",
+      "bytes": 310
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/process_receipt.json",
+      "sha256": "9200fdbe8c74368e9350f36849179fed87e8e0f1715875d9921bd4fb78d63a98",
+      "bytes": 784
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/progress.json",
+      "sha256": "3f515f741a0ecc097462bd579a399e2e0d4b45bb3e2be39f38e920a75129f3c7",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/registered_plan.json",
+      "sha256": "8a18d14a8c1ed38eed7b1e1bf58c1a06b931bb74643215cd343538b0bc389e93",
+      "bytes": 39040
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/result.json",
+      "sha256": "151fb1b99a37290fce308e7f6ee12509f95670ac88079dc8820d8528bf1993a9",
+      "bytes": 3779
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/strategy_trace.json.gz",
+      "sha256": "b9223f9d07558e1fefc3257021bd6f99bcb046acd225d47e65e61ce39e12f65c",
+      "bytes": 251
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_conservative_15bps.log",
+      "sha256": "84db12542a36283fab61e06b8af80550babc7cda3452c9157333e7c604b5a90e",
+      "bytes": 27107
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/config.json",
+      "sha256": "c4b57abbe28401873075cea6b47523ed1137b64bf36e5912aaba9248aabd5bb4",
+      "bytes": 2458
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/effective_config.json",
+      "sha256": "87825903aa9fe1b5594c01e6e212bd2e2dd371e993d859585b9b9fce8481f786",
+      "bytes": 7174
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/fill_cash_audit.json",
+      "sha256": "4398ab790c217c9367b0164d2e534c5215f7c4430c7e2eaa0b18e0e851bb5b20",
+      "bytes": 405
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/generated_cache_inventory.json",
+      "sha256": "3d263d23dfde8e961cfecb6eda4158a75d9771feb8cdd80bf19604656b2a5ba7",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/hourly_equity.parquet",
+      "sha256": "6a67ca9a72c76430978b909c3479658f58370fc1a5a645243bee079572d3da58",
+      "bytes": 955094
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/independent_account_audit.json",
+      "sha256": "206ffba742d11462f18db485cef2af8b1939ec186d732ab9a5c5dbc422a99a4a",
+      "bytes": 804
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/legacy_main_clock_equity.parquet",
+      "sha256": "f4f44abe4864e4901e1b245c1d1ffbb73ac0989ae63ad09857e8f5d4087dad5e",
+      "bytes": 954937
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/native_results/.last_result.json",
+      "sha256": "e7621198ea9fc782c345520f9f528678167dab78410428182b611823d8057043",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/native_results/backtest-result-2026-11-15_14-50-04.meta.json",
+      "sha256": "4adad36f69363603dc17e104b7cb83c816b2ef4d03df3a6db390e595f3e3552a",
+      "bytes": 200
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/native_results/backtest-result-2026-11-15_14-50-04.zip",
+      "sha256": "1b0ea70f798f01d1e6075b2470c6bd47467a7b1cd3f14b679554f53a73e957ff",
+      "bytes": 2664875
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/native_signal_receipts.json",
+      "sha256": "7ffded965a1af83a70284d741cb894c090f176ca761615ce05883b9947b8133c",
+      "bytes": 345
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/observation_clock.json",
+      "sha256": "a635046f4290ef7d0f4508c4792aef6e0b911434027e163be072903c5348136c",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/price_precision_receipt.json",
+      "sha256": "33f862a39c03d7c7326669870aee2aeb690ce39021cfd495fa0ef081eb19e7db",
+      "bytes": 310
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/process_receipt.json",
+      "sha256": "0ea376ee856395d4a8a055fcf8c7f2a001aeccb27dc70b286e73ca51900b87ae",
+      "bytes": 768
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/progress.json",
+      "sha256": "dafd43ea8eddc6f917a384574933afc974e21ed046ede89e97aa4722b697ecc5",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/registered_plan.json",
+      "sha256": "8a18d14a8c1ed38eed7b1e1bf58c1a06b931bb74643215cd343538b0bc389e93",
+      "bytes": 39040
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/result.json",
+      "sha256": "cbb46e06df20cce7097987c74b1412df500bbff9d33d8687ae60644a80f27955",
+      "bytes": 3766
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/strategy_trace.json.gz",
+      "sha256": "a941477bd591a0452b9d35c7d6548bab2bd59cbcc8cf2aa1d1deb1c01e63f325",
+      "bytes": 251
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_futures_500_lower_8bps.log",
+      "sha256": "3b336b92bd60090b568d871c208bb4db45c5fee66a03eae21adb4d945ea96c9d",
+      "bytes": 27067
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/config.json",
+      "sha256": "227a545b1239ee1417f8bbcdadbf9e1e0473727341eb5aaa2f4974d71dbe11a0",
+      "bytes": 2550
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/effective_config.json",
+      "sha256": "d87511429937bf6c0cd23f7e6dcfc5efb1cd3e6a06d4a5a5d9017caba4b5db36",
+      "bytes": 7375
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/fill_cash_audit.json",
+      "sha256": "a6b59a40a9623cdfa4f307d3c83ba792804ab2c1a4c6aa5b4f347a891e82b7e0",
+      "bytes": 377
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/generated_cache_inventory.json",
+      "sha256": "e8dd8d18c150eb21954e0547036610b8db24fac807b84049d397a2c4e2ae63f7",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/hourly_equity.parquet",
+      "sha256": "bf11d67a3c405439d323d6acfa51f39b834055e937c534fb386dfe7ded538856",
+      "bytes": 962517
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/independent_account_audit.json",
+      "sha256": "97b4c0e36670c0638a05b4b9a5331a988588614c22d44a5ac73a6eb4547163da",
+      "bytes": 787
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/legacy_main_clock_equity.parquet",
+      "sha256": "f43ad9fcc3c8627a18b9e9426ccf8b719755ae3893792d6f6e34a04f54311b43",
+      "bytes": 962467
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/native_results/.last_result.json",
+      "sha256": "91fb90b4326c2e3f4df8acd1088a5ccc2decb5650c89794b0b92f10123da9cbc",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/native_results/backtest-result-2026-11-15_14-47-06.meta.json",
+      "sha256": "45fe3e5782d8b6c0679868723b654ee047e7e700f36bd358588952b182d2d369",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/native_results/backtest-result-2026-11-15_14-47-06.zip",
+      "sha256": "b8fff3da3cb746b00d542adcead4cff65ee0e80003e97df354fd6d41c025f4d5",
+      "bytes": 4063280
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/native_signal_receipts.json",
+      "sha256": "7b549cfc86f6b73906df6ab182b7383a92db291137b84b2bbcac8a5d784beb10",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/observation_clock.json",
+      "sha256": "1f8518f693ba7a3661eb78aed5a6c68f245158e1057697802d32716e94a2b245",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/price_precision_receipt.json",
+      "sha256": "ed19db58f500bfc7c8b22691c32960265e63e96921000008adf7bbae4c43a89e",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/process_receipt.json",
+      "sha256": "7670a9c09ee7828846d47a69ed0523a1560fb31b5bf60529e42e549928d78ab4",
+      "bytes": 780
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/progress.json",
+      "sha256": "841e013bcfadc1c001d9312c23f0d3953faf97f177e191c1fd843a99ca4b46e8",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/result.json",
+      "sha256": "44b3f7cecd0585bce05716aa6a2c2d871747de7ef57553efc1d021b13f505d6c",
+      "bytes": 3739
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/strategy_trace.json.gz",
+      "sha256": "547fd068db79019dc8e5d71028e3af979d944033783046fff97c0902d6d104fc",
+      "bytes": 247
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_conservative_20bps.log",
+      "sha256": "3577db0aaa55b7217c1c466d6a45fedaa6b9687f146117516c131709fe911b87",
+      "bytes": 26104
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/config.json",
+      "sha256": "9b9ce6ad1d91147d533d71cf8886a212a607a7c7341d8ded285e3610df1f6de9",
+      "bytes": 2530
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/effective_config.json",
+      "sha256": "399b2705147824e4a31535883b89fa64c57657b0c4d6029bb337defb184a3c63",
+      "bytes": 7321
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/fill_cash_audit.json",
+      "sha256": "68c361a6969d4ee218271faceb626e7ae4de7ab9c80af9e55cde02d3dbdf70f1",
+      "bytes": 382
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/generated_cache_inventory.json",
+      "sha256": "570ed808fd5d9aafde9566517b18178eacc203a42cdc479ce883681225bf0c6f",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/hourly_equity.parquet",
+      "sha256": "ef08d855e2739d53f360ac48509c1c547813667b2be59725d933ce7ece5d0a41",
+      "bytes": 962516
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/independent_account_audit.json",
+      "sha256": "1ed57ae94b6e69437bb32364d8924fdc3535a8f9bfd94dbb16f38ba928e6dfe4",
+      "bytes": 787
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/legacy_main_clock_equity.parquet",
+      "sha256": "30f4fb9aecc1926d07bf65b15960ae9bc309c352dba89d5d343d737f093d3307",
+      "bytes": 962466
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/native_results/.last_result.json",
+      "sha256": "ac3d6abc8e0805c1ce9786c7d390be375feb0aca36131b218f94c96b56f56ac2",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/native_results/backtest-result-2026-11-15_14-48-02.meta.json",
+      "sha256": "783599f82ff3f56cfac71895d2e72f44a1966897865ad7c5e5c6118cf91d5fba",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/native_results/backtest-result-2026-11-15_14-48-02.zip",
+      "sha256": "4441e9c8fe8c151074f84d6736e61b39c2f0cde3caf325347565047f7264af0a",
+      "bytes": 4063274
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/native_signal_receipts.json",
+      "sha256": "7b549cfc86f6b73906df6ab182b7383a92db291137b84b2bbcac8a5d784beb10",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/observation_clock.json",
+      "sha256": "1f8518f693ba7a3661eb78aed5a6c68f245158e1057697802d32716e94a2b245",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/price_precision_receipt.json",
+      "sha256": "ed19db58f500bfc7c8b22691c32960265e63e96921000008adf7bbae4c43a89e",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/process_receipt.json",
+      "sha256": "475b6f32531a6a5e68271455d060d53deade7b19ed7c6e1dd23a9d5bb9a1550b",
+      "bytes": 766
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/progress.json",
+      "sha256": "d2bd78f150d1980cddfea09fef0b39be23a7ed391930985ee998fc96cb689b40",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/result.json",
+      "sha256": "b8d0ea8915e0fee37fbb05445dadb7680da4e5eb24a73cb38d3e557df638aa62",
+      "bytes": 3730
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/strategy_trace.json.gz",
+      "sha256": "84df862bfa07213c61c4b41fa7a5d31696785b6b5a00ec390828b7812db8853e",
+      "bytes": 247
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_1000_lower_13bps.log",
+      "sha256": "2374313082fdfe3a2d4c32e3b154b336bb24b5ee627fcc36cf8e379deff37a6c",
+      "bytes": 26073
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/config.json",
+      "sha256": "ffde5e13feef42b80515d01642f225589010816458e7c6bf2554d7c2882ad01a",
+      "bytes": 2547
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/effective_config.json",
+      "sha256": "caef751b450b794d0a43ca060f63aa8d73fc262ee88514c70579fd3166e0a950",
+      "bytes": 7367
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/fill_cash_audit.json",
+      "sha256": "416b610c288bb4e1a2730648c96378660f1cd6cf1114a85f219d9bedc37ad061",
+      "bytes": 376
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/generated_cache_inventory.json",
+      "sha256": "e1cd7e5d934f847e84b0e093151e2b5a66fc09d2cf717a4fed5c6da2a4117009",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/hourly_equity.parquet",
+      "sha256": "1e8fd605b52d0ba28024e86f1bfee2f12c7e75ee419b05e8044692ae7e4591c3",
+      "bytes": 934999
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/independent_account_audit.json",
+      "sha256": "7924e7088ac9bb00f9d8bdfcc324b48e4d7c8df8a2a63f675bf0c8d9c8a4e484",
+      "bytes": 795
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/legacy_main_clock_equity.parquet",
+      "sha256": "3dc4f1b05ecb8ff16ef337b1075c9518709ca500aab81544f951687526137c30",
+      "bytes": 935509
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/native_results/.last_result.json",
+      "sha256": "8c06cde1d4b63068738f398460dc0e63ce2051b6792430db6f6c9569ea6a053b",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/native_results/backtest-result-2026-11-15_14-48-58.meta.json",
+      "sha256": "766023c785a5e38b7c014775f1138bb23b0def14f0d87df58c93c6884fc2761a",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/native_results/backtest-result-2026-11-15_14-48-58.zip",
+      "sha256": "e3cbe70418939e64700b95dfe70df943a7ac4ce17b4591f92375b64efa815c0f",
+      "bytes": 3856787
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/native_signal_receipts.json",
+      "sha256": "7b549cfc86f6b73906df6ab182b7383a92db291137b84b2bbcac8a5d784beb10",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/observation_clock.json",
+      "sha256": "a635046f4290ef7d0f4508c4792aef6e0b911434027e163be072903c5348136c",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/price_precision_receipt.json",
+      "sha256": "ed19db58f500bfc7c8b22691c32960265e63e96921000008adf7bbae4c43a89e",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/process_receipt.json",
+      "sha256": "1819dcf48ad834aea594565b776dcb44045e37100583fbe543bbb3a7132e4b26",
+      "bytes": 778
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/progress.json",
+      "sha256": "912de5ab669f07b1fb736124787acda08cbda9ffd28dd3ba86a55ffefd5a7b75",
+      "bytes": 119
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/result.json",
+      "sha256": "ac307d2732bbb5a34c90021fb54981e67b4fac0c42cf174b2fc127006193258a",
+      "bytes": 3774
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/strategy_trace.json.gz",
+      "sha256": "67f4ef83c621387d7830a5c5013f7f943bb3a0a31f1e2f485f60b81952d4eadf",
+      "bytes": 249
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_conservative_20bps.log",
+      "sha256": "b48f8417af1d1d92365cd72e9d1c9019651f1a8d890a9301cb5cee4564e458f4",
+      "bytes": 26125
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/config.json",
+      "sha256": "1a915cf751d1f41b6c7a18268ff04f7f60fa52bd36160fa4abaa439510ab45e3",
+      "bytes": 2527
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/effective_config.json",
+      "sha256": "c707b7ffdf9c5ccd3dbd5cafa6215f792238ef86b2c61f349c4a4d260c34e5bf",
+      "bytes": 7313
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/fill_cash_audit.json",
+      "sha256": "a100258a11d1793f249aa5d4cf24b323102ad9c4c873d545aff984b0dbc6e85b",
+      "bytes": 377
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/generated_cache_inventory.json",
+      "sha256": "875a1f83b205ae8b74a5e969adb07cb670edbd2b9f19d0443bd6061a329580e9",
+      "bytes": 587
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/hourly_equity.parquet",
+      "sha256": "e898a2a98b183f0c2d96323350a8d6c80b02a406cf246156498ccb4faaedc180",
+      "bytes": 935000
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/independent_account_audit.json",
+      "sha256": "cffe8e458e5851b6444e2430e8bf926dd50fd066aa982f0e070e1449b6e74ffc",
+      "bytes": 795
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/legacy_main_clock_equity.parquet",
+      "sha256": "0b45915d2ceba946207bfe83db8efc544aa9bc4eff9988b14e2a836ad69bb8da",
+      "bytes": 935510
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/native_results/.last_result.json",
+      "sha256": "b337a6a8480cc4e60f01d9d92bfe451ef98899b8bc4b6394e285569a6add1626",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/native_results/backtest-result-2026-11-15_14-49-54.meta.json",
+      "sha256": "b1daca19e19b457b5c405433cef5dfecb95fa188fa1be337d99b4f42aad25aa6",
+      "bytes": 199
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/native_results/backtest-result-2026-11-15_14-49-54.zip",
+      "sha256": "a07bcdd4e22251c3f42c82ce3eda6ae04e0f6137430df6ae636c8451901837a0",
+      "bytes": 3856803
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/native_signal_receipts.json",
+      "sha256": "7b549cfc86f6b73906df6ab182b7383a92db291137b84b2bbcac8a5d784beb10",
+      "bytes": 338
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/observation_clock.json",
+      "sha256": "a635046f4290ef7d0f4508c4792aef6e0b911434027e163be072903c5348136c",
+      "bytes": 202
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/price_precision_receipt.json",
+      "sha256": "ed19db58f500bfc7c8b22691c32960265e63e96921000008adf7bbae4c43a89e",
+      "bytes": 305
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/process_receipt.json",
+      "sha256": "44f0bbbcbbf5a9f972e273b1dbb49c365107f9e50cbce395d8c6339b16f7d284",
+      "bytes": 764
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/progress.json",
+      "sha256": "04441baa2e4b80413d1182db9ccc15b67d5ea7cb8a59a4535c06bf47a3f14df1",
+      "bytes": 118
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/registered_plan.json",
+      "sha256": "3251d2538023b2f547d5b0f7b958ecc1beb8ed5a0353a34791979d0fe51c77f4",
+      "bytes": 38968
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/result.json",
+      "sha256": "67ca13440b04aa928db22466c07961b6043a348a4025866765d46835424dbe24",
+      "bytes": 3767
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/strategies/CarryLeg.py",
+      "sha256": "9cc788be815109b0cf1847fe7bde9f0a71e2a978bf1786c5b0d8c1a404968fcc",
+      "bytes": 3640
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/strategy_trace.json.gz",
+      "sha256": "37292e0165fd8ebd3e3bcb8f46ed9a1f9272036fde43ab1a13e1e8cb18a3f9ae",
+      "bytes": 249
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/support/research/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+      "bytes": 89
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/support/research/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+      "bytes": 10592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps/support/research/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+      "bytes": 4521
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_reservation_native_20261115_v2/carry_ETH_spot_500_lower_13bps.log",
+      "sha256": "bd15242ed3c7a5507ac82bd9c8cb5184b7e870cdb41c38397e45a17d5cf4fe7f",
+      "bytes": 26082
+    }
+  ]
+}

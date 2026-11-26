@@ -1,0 +1,54 @@
+{
+  "protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/market_stress_15_8_protocol.json",
+    "sha256": "7c483b6ce66b2434d4cf5765af8856bc07fe560d8eb61c81ea20833781cf57a9"
+  },
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_trade_attribution.json",
+    "sha256": "1ad2bcbe02ecb8cd7e0085187f1c32b747d896cdcd276e80bb1f86cd315510af"
+  },
+  "implementation": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/market_stress_audit.py",
+    "sha256": "18a6b0e58b03b2bd1eeadf7585c0579a81eebc4e4976ee5e221c6353dc791a56"
+  },
+  "windows": {
+    "2025": {
+      "start": "2025-10-10T00:00:00+00:00",
+      "stop": "2025-10-12T00:00:00+00:00",
+      "native_btc_mark_tape": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/annual_2025/candles/futures/BTC_USDT_USDT-5m-mark.feather",
+        "sha256": "fa7315df36e4bed9fc35d642692b0e79f204b20e5ed363bdcbdb74d44e32c0c1"
+      },
+      "registered_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_15bp/account/registered_plan.json",
+        "sha256": "ab0693bf193725cba720a247a963e6ad7c11fa5d4db4142f3cda7c8f9c355d32"
+      },
+      "event_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/annual_original_15bp_october_event.json",
+        "sha256": "418678b7775bf9d62d5cd5b9e260a08efd32c6700b2446d4e8811a95760c0bea"
+      },
+      "btc_end_to_end_return": -0.09050368817485632,
+      "btc_local_peak_to_trough_drawdown": 0.14906827835644143,
+      "btc_peak": "2025-10-10T13:40:00+00:00",
+      "btc_trough": "2025-10-10T21:20:00+00:00"
+    },
+    "2026_to_nov09": {
+      "start": "2026-02-05T00:00:00+00:00",
+      "stop": "2026-02-07T00:00:00+00:00",
+      "native_btc_mark_tape": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/candles/futures/BTC_USDT_USDT-5m-mark.feather",
+        "sha256": "3b6098273730dd0abd012765804e17945c4e6af4193afcee98464fee438e90cf"
+      },
+      "registered_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/registered_plan.json",
+        "sha256": "9d785803d8b888b07251233d140e8a43f4ee3e67cb5e98849bbe52e996955a7e"
+      },
+      "selection_days": 311,
+      "largest_intraday_mark_drawdown": 0.14574508238061445,
+      "btc_end_to_end_return": -0.03567137227133477,
+      "btc_local_peak_to_trough_drawdown": 0.18064308177579147,
+      "btc_peak": "2026-02-05T00:30:00+00:00",
+      "btc_trough": "2026-02-06T00:20:00+00:00"
+    }
+  }
+}

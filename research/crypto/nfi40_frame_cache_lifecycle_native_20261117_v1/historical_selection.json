@@ -1,0 +1,61 @@
+{
+  "selected_at": "2026-11-17T16:01:50.077643+00:00",
+  "scope": "Known legacy lifecycle inventory only; no return fields used",
+  "archive": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15/native_results/backtest-result-2026-11-05_13-13-57.zip",
+    "sha256": "e2ff3c9a7de5960375b63270e2ce1ee35a4eca47a43a28ad1ad2cc3a08624fb3"
+  },
+  "zip_member": "backtest-result-2026-11-05_13-13-57.json",
+  "rule": "Earliest open_timestamp then pair among campaigns with>=2 entry and>=2 exit fills, duration<=30days; freeze first16days of its calendar month",
+  "eligible_campaigns": 10,
+  "selected": {
+    "pair": "XRP/USDT:USDT",
+    "enter_tag": "145 ",
+    "open_date": "2025-03-03 19:55:00+00:00",
+    "close_date": "2025-03-04 14:40:00+00:00",
+    "open_timestamp": 1741031700000,
+    "close_timestamp": 1741099200000,
+    "orders": [
+      {
+        "amount": 88.9,
+        "safe_price": 2.3805,
+        "ft_order_side": "buy",
+        "order_filled_timestamp": 1741031700000,
+        "ft_is_entry": true,
+        "ft_order_tag": "145 ",
+        "cost": 211.943889675
+      },
+      {
+        "amount": 18.8,
+        "safe_price": 2.2414,
+        "ft_order_side": "buy",
+        "order_filled_timestamp": 1741054200000,
+        "ft_is_entry": true,
+        "ft_order_tag": "grind_1_entry",
+        "cost": 42.20152748
+      },
+      {
+        "amount": 18.8,
+        "safe_price": 2.3662,
+        "ft_order_side": "sell",
+        "order_filled_timestamp": 1741067100000,
+        "ft_is_entry": false,
+        "ft_order_tag": "grind_1_exit 147",
+        "cost": 44.55128684
+      },
+      {
+        "amount": 88.9,
+        "safe_price": 2.4877,
+        "ft_order_side": "sell",
+        "order_filled_timestamp": 1741099200000,
+        "ft_is_entry": false,
+        "ft_order_tag": "exit_long_tc_d_5_1 ( 145 )",
+        "cost": 221.48826479500002
+      }
+    ]
+  },
+  "fixed_start": "2025-03-01T00:00:00Z",
+  "fixed_end_exclusive": "2025-03-17T00:00:00Z",
+  "new_short_flat_account_coverage": "UNKNOWN",
+  "no_window_search_after_new_results": true
+}

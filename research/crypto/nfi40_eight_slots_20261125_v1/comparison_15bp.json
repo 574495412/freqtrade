@@ -1,0 +1,128 @@
+{
+  "cost_bps_per_side": 15,
+  "control_periods": [
+    {
+      "name": "continuous",
+      "net_return": 1.356564040788781,
+      "initial_marked_equity": 1000.0,
+      "ending_marked_equity": 2356.564040788781,
+      "hourly_mark_drawdown": 0.045153827500363786,
+      "cagr_365day": 0.6730361502323292,
+      "complete_24h_daily_nav_sharpe": 2.901834881192922,
+      "complete_24h_returns": 607,
+      "calendar_hours": 14592
+    },
+    {
+      "name": "calendar-2025",
+      "net_return": 1.0000483008926202,
+      "initial_marked_equity": 1000.0,
+      "ending_marked_equity": 2000.04830089262,
+      "hourly_mark_drawdown": 0.045153827500363786,
+      "cagr_365day": 1.0000483008926202,
+      "complete_24h_daily_nav_sharpe": 3.110362371404533,
+      "complete_24h_returns": 365,
+      "calendar_hours": 8761
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "net_return": 0.17825356504492817,
+      "initial_marked_equity": 2000.04830089262,
+      "ending_marked_equity": 2356.564040788781,
+      "hourly_mark_drawdown": 0.026807650417686846,
+      "cagr_365day": 0.2794492867894589,
+      "complete_24h_daily_nav_sharpe": 3.7518555129987603,
+      "complete_24h_returns": 242,
+      "calendar_hours": 5832
+    }
+  ],
+  "candidate_periods": [
+    {
+      "name": "continuous",
+      "net_return": 1.4136944552546757,
+      "initial_marked_equity": 1000.0,
+      "ending_marked_equity": 2413.6944552546756,
+      "hourly_mark_drawdown": 0.046507680628775194,
+      "cagr_365day": 0.6972702659561456,
+      "complete_24h_daily_nav_sharpe": 2.911041642159298,
+      "complete_24h_returns": 607,
+      "calendar_hours": 14592
+    },
+    {
+      "name": "calendar-2025",
+      "net_return": 1.0318913660094409,
+      "initial_marked_equity": 1000.0,
+      "ending_marked_equity": 2031.8913660094408,
+      "hourly_mark_drawdown": 0.046507680628775194,
+      "cagr_365day": 1.0318913660094409,
+      "complete_24h_daily_nav_sharpe": 3.1201755413908216,
+      "complete_24h_returns": 365,
+      "calendar_hours": 8761
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "net_return": 0.18790526680325526,
+      "initial_marked_equity": 2031.8913660094408,
+      "ending_marked_equity": 2413.6944552546756,
+      "hourly_mark_drawdown": 0.026636357996677962,
+      "cagr_365day": 0.29522687616438703,
+      "complete_24h_daily_nav_sharpe": 3.560527833176445,
+      "complete_24h_returns": 242,
+      "calendar_hours": 5832
+    }
+  ],
+  "counts": {
+    "control_independent_campaigns": 282,
+    "candidate_independent_campaigns": 292,
+    "control_natural_closes": 281,
+    "candidate_natural_closes": 291,
+    "control_additional_entry_fills": 79,
+    "candidate_additional_entry_fills": 79,
+    "control_native_rejected_signal_counter": 91,
+    "candidate_native_rejected_signal_counter": 0,
+    "matched_by_pair_direction_first_fill": 281,
+    "only_control_at_exact_first_fill_key": 1,
+    "only_candidate_at_exact_first_fill_key": 11,
+    "candidate_only_tags": {
+      "142": 1,
+      "562": 2,
+      "144": 3,
+      "63": 3,
+      "141": 1,
+      "145": 1
+    }
+  },
+  "modeled_economics": {
+    "passed": true,
+    "maximum_nav_error_usdt": 3.671539161587134e-08,
+    "maximum_campaign_cash_error_usdt": 1.889631628e-08,
+    "maximum_native_funding_error_usdt": 0.0,
+    "maximum_hourly_count_error": 0,
+    "maximum_hourly_gross_to_nav": 0.9931028025218585,
+    "missing_rate_exposure": [
+      {
+        "pair": "AXS/USDT:USDT",
+        "slot_ms": 1782273600000,
+        "campaigns": [],
+        "status": "NO_GROSS_EXPOSURE",
+        "rate_imputed": false
+      },
+      {
+        "pair": "TRB/USDT:USDT",
+        "slot_ms": 1782273600000,
+        "campaigns": [],
+        "status": "NO_GROSS_EXPOSURE",
+        "rate_imputed": false
+      }
+    ]
+  },
+  "checks": {
+    "higher_full_net_return": true,
+    "more_independent_campaigns": true,
+    "no_higher_marked_drawdown": false,
+    "modeled_cash_and_funding_reconciled": true
+  },
+  "passes_prefrozen_screen": false,
+  "candidate_archive_sha256": "d2c3bee7ab22e2b55d350aa33e176748c93e1ae9b84c68031f74d1deaaf2ce75",
+  "candidate_curve_sha256": "e3c6f224213b01dfc35678de742bb673eceab0748b90ac1398fcf2b5e5ca86f5",
+  "orders_enabled": false
+}

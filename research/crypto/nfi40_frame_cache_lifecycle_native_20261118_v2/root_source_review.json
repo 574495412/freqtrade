@@ -1,0 +1,33 @@
+{
+  "reviewed_at": "2026-11-17T17:01:08.198875+00:00",
+  "producer_freeze_sha256": "17b5bf971aa2fab63eeecd20b24523207f4aa817c2db59a71d2d217c61e5df9b",
+  "manifest_sha256": "5d82e599f6c32d3b2c13180e0a8e48cf2c464afb5e5eb07e0a5ec7f8c5ce82c6",
+  "sealed_files_verified": 22,
+  "root_read": [
+    "Resources.sample/begin/finish",
+    "technical_contract.resource_failures/verify_terminal_resources/observed_storage_coverage",
+    "execute_pair.run/terminal_copy",
+    "native_producer construct/run/cleanup",
+    "capture_native.typed/provider"
+  ],
+  "v1_terminal_resource_failure_fixed_in_source": true,
+  "controller_checks_observed_terminal_code_pid_sha_and_resource_bounds": true,
+  "observed_tests_only": {
+    "resource_groups": 7,
+    "provider_object_groups": 6,
+    "actual_lifecycle_accounts": 0
+  },
+  "scope": "SOURCE_REVIEW_AND_OBJECT_EVIDENCE_ONLY_NO_EXECUTION_RELEASE",
+  "remaining": [
+    "real native short-window callbacks and orders parity unexecuted",
+    "actual cross-block/eviction coverage unexecuted",
+    "8192 matching fixture and full-window replay unexecuted",
+    "source-frame alias benchmark is not full40 performance evidence",
+    "sampled resource guards are not hard OS allocation limits"
+  ],
+  "complete_cache_lifecycle_certified": false,
+  "execution_replacement_admitted": false,
+  "release_created": false,
+  "orders_enabled": false,
+  "goal_complete": false
+}

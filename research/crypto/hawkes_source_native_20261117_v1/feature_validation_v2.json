@@ -1,0 +1,95 @@
+{
+  "verified_at": "2026-11-17T14:07:53.427496+00:00",
+  "passed": true,
+  "scope": "Source feature and causality validation only; no account economics",
+  "source_commit": "51c8557eb078f1be368e1ff82c53c9118685e7de",
+  "source_sha256": "004d1a46777fa7d70a3fa97484fdc9329fd369fc61660a913bb1980991e47cdf",
+  "dependencies": {
+    "versions": {
+      "pandas_ta": "0.3.16",
+      "talib": "0.8.2",
+      "pandas": "3.0.6",
+      "numpy": "2.5.4"
+    },
+    "pandas_ta_default_atr_branch": "TA-Lib ATR",
+    "talib_available": true,
+    "author_original_environment_reproduced": false
+  },
+  "records": [
+    {
+      "asset": "BTC",
+      "input": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+      "input_sha256": "7fddcb56cfb30c9274ac9fbf7219be4254c7f4e393966104bb2de47ef9729a20",
+      "rows": 27048,
+      "source_outputs_exact": true,
+      "independent_max_errors": {
+        "atr": 2.6020852139652106e-17,
+        "norm_range": 4.263256414560601e-14,
+        "v_hawk": 1.021405182655144e-14
+      },
+      "independent_signed_states_exact": true,
+      "prefix_and_future_shock_rows": 26048,
+      "prefix_and_future_shock_exact": true,
+      "input_unchanged": true,
+      "signed_state_counts": {
+        "0.0": 12080,
+        "-1.0": 8223,
+        "1.0": 6745
+      }
+    },
+    {
+      "asset": "ETH",
+      "input": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/candles/futures/ETH_USDT_USDT-1h-futures.feather",
+      "input_sha256": "52e2e1aa2dd8697e1cf7f203177997bd1b0bbf303521779c9ea9d399e66447d4",
+      "rows": 27048,
+      "source_outputs_exact": true,
+      "independent_max_errors": {
+        "atr": 3.2959746043559335e-17,
+        "norm_range": 2.842170943040401e-14,
+        "v_hawk": 7.105427357601002e-15
+      },
+      "independent_signed_states_exact": true,
+      "prefix_and_future_shock_rows": 26048,
+      "prefix_and_future_shock_exact": true,
+      "input_unchanged": true,
+      "signed_state_counts": {
+        "0.0": 12263,
+        "-1.0": 8318,
+        "1.0": 6467
+      }
+    }
+  ],
+  "flat_zero_atr_preserves_source_nan_and_zero_entry_state": true,
+  "invalid_inputs_and_integrity_changes_rejected": [
+    "missing_field",
+    "non_utc",
+    "naive_clock",
+    "gap",
+    "reversed_clock",
+    "negative_price",
+    "invalid_bounds",
+    "short_history",
+    "off_hour",
+    "nan_price",
+    "source_hash",
+    "atr_dependency_branch"
+  ],
+  "native_flattened_path_check": {
+    "only_helper_and_adjacent_text_source_required": true,
+    "features_exact": true,
+    "source_subdirectory_present": false
+  },
+  "revision": "Only source-file location adapted; source calculations unchanged",
+  "prior_validation_preserved": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/feature_validation.json",
+    "sha256": "97bd990936ec22bd50d8f3860f4028234fd7f5a4d7c77b7ccaae80f108e68f3c",
+    "previous_helper_sha256": "876d709fcdbb4c8b3683dc2baf334c34c2950fc269ff7aab745750898f0f8b29",
+    "previous_test_sha256": "3bdd19a3b6392af74ac6b515d00dcc7b67c0f069c31040b09640b232327df70d"
+  },
+  "code_sha256": {
+    "HawkesInputs.py": "17575afeffbf50cda6c602d61dfdf8d4fcf1c579da7640b81e5438d5ebf4883c",
+    "test_inputs.py": "996807d30511b55b662ef894dfe9cbf0105da8571a9f68c0c27c33513cc52447"
+  },
+  "financial_account_completed": false,
+  "higher_return_proven": false
+}

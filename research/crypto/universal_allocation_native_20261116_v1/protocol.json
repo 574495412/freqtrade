@@ -1,0 +1,63 @@
+{
+  "frozen_at": "2026-11-15T16:48:00.601087+00:00",
+  "hypothesis": "Cover Eq1.3 uniform-simplex wealth-weighted online allocation plus explicit cash;test actual costed crypto account,not asymptotic theorem",
+  "source_primary": "Cover1991UniversalPortfolios,pages1-4,Eq1.1-1.6 visually read",
+  "github": "Marigold00af0d4ce30c184a212203c3dcb2cb76a820f925 reviewed only;FMIT not plain MIT;not executed/transplanted",
+  "local_quadrature": {
+    "assets": [
+      "BTC/USDT",
+      "ETH/USDT",
+      "CASH"
+    ],
+    "grid_resolution": 100,
+    "points": 5151,
+    "prior": "equal mass on full triangular lattice;finite approximation,not exact continuous integral",
+    "initial_weights": [
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333
+    ]
+  },
+  "fixed_control": "Explicit1/3BTC+1/3ETH+1/3cash constant rebalanced;not source CRPdefault which excludesCASH",
+  "signal_clock": "Jan1 equal initial;subsequent dayD consumes observed closeD-1/closeD-2 only;no prewindow fitted wealth;execute D01:00UTC through native signal lag;onehourdelay localadaptation",
+  "window": [
+    "2025-01-01T00:00:00Z",
+    "2026-08-31T23:00:00Z"
+  ],
+  "capital": [
+    1000,
+    500
+  ],
+  "mode": "spot sharedwallet,longonly,1x,2slots",
+  "cost_bps": {
+    "conservative": 20,
+    "lower": 13
+  },
+  "cost_model": "native quote fee includes10bps commission plus10/3bps slippageproxy;not orderbookfills",
+  "allocation": "0.99*actual native markedNAV including remainingexitfee;rounded native quantities;real partial reductions/increases;minimum deltas not forced;no free resets",
+  "new_wallets": 8,
+  "fixed_portfolios": [
+    "actual500UP+actual500CRP",
+    "actual500UP+sealedactual500NFIspot",
+    "actual500UP+sealedactual500carry"
+  ],
+  "portfolio_contract": "sum same timestamps actual500wallets,no1000rescale,transfers orcrossmargin;UP/CRP sameallocationfamily notindependentalphas",
+  "known_before_freeze": [
+    "PriorBTCETHholdnegative;NFIspot/futuresandcarry outcomes viewed",
+    "Windowalreadyused;notindependentOOS",
+    "NoUP/CRP localtargetwalletreturn viewed"
+  ],
+  "financial_gate": "Bothfees full+bothcontinuousannuals positive,DD<=30pct,dailyNAVSharpe>.5,UPbeatsmatchedCRP+spotHold+NFIspot+zero-interestcash;portfoliosbeatbestavailablematched1000 withnoDDworsening;crossmarketcarry/NFIfutures are explicit broadercapital controls not same exposure",
+  "no_retuning": true,
+  "predictive_factor_claim": false,
+  "new_factor_analysis": 0,
+  "new_vibe_bench": 0,
+  "resource_policy": {
+    "max_children": 1,
+    "rss_bytes": 3221225472,
+    "min_free_bytes": 2147483648,
+    "wall_seconds": 3600
+  },
+  "orders_enabled": false,
+  "services_changed": false
+}

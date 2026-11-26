@@ -1,0 +1,14 @@
+{
+  "objective": "Prioritize the latest available two calendar years and shorten the time to the first complete comparison.",
+  "window": {
+    "start_utc": "2025-01-01T00:00:00+00:00",
+    "end_exclusive_utc": "2026-11-26T00:00:00+00:00",
+    "last_mark_utc": "2026-11-25T23:55:00+00:00",
+    "pairlist_days": 694,
+    "five_minute_marks": 199872
+  },
+  "primary_cost_bps_per_side": 15,
+  "secondary_cost_bps_per_side": 8,
+  "comparison": "Run the 12- and 14-slot accounts at 15 bp first with no resets between calendar years. Keep both 8 bp registration files for the later sensitivity run. Preserve underlying archived price/funding inputs and warmup, 1000 USDT initial capital, 3x isolated mode and the same candle-by-candle accounting.",
+  "orders_enabled": false
+}

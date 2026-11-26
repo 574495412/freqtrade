@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "verified_at": "2026-11-17T01:14:25.727819+00:00",
+  "scope": "One captured live matrix",
+  "plan_sha256": "2992fb72fa2dc839fec37c127c3ad91f0cf9a4fc74777686e75586a016a2ec20",
+  "records": [
+    {
+      "asset": "BTC",
+      "input": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wavelet_financial_native_20261117_v4/candles/BTC_USDT-15m.feather",
+      "input_sha256": "1c84173c6cef49044c82e7a687d1c986e6be7ff86aa2bb6e21360328b3d510bb",
+      "native_source_beginning": "2024-12-30 16:00:00+00:00",
+      "matrix_cases": [
+        {
+          "asset": "BTC",
+          "rows": 28494,
+          "columns": 101,
+          "x_sha256": "36704237f50e8de007e069854058d5f89937403935bf3f3f0d153ccd7da72848",
+          "y_sha256": "927dff9ff9919261ecafe11a461257c1ef62588ffe9641a1ef59df0d35b8624e",
+          "source_matrices_exactly_equal": true,
+          "latest_label_open": "2025-10-23 12:45:00+00:00",
+          "latest_label_complete": "2025-10-23 13:00:00+00:00",
+          "first_prediction_bar_complete": "2025-10-23 13:15:00+00:00"
+        }
+      ],
+      "warnings": [
+        "Level value of 2 is too high: all coefficients will experience boundary effects."
+      ]
+    }
+  ],
+  "candidate_calculator_scaler_or_model_imported": false,
+  "financial_account_profitability_proven": false
+}

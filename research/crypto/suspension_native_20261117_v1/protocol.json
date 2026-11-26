@@ -1,0 +1,35 @@
+{
+  "frozen_at": "2026-11-16T19:13:23.395135+00:00",
+  "scope": "Crypto native suspension/detail lifecycle engineering,not a new alpha or higher-return result",
+  "inputs": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/dated_precision_native_20261117_v1/artifact_manifest.json": "4711156c74b7139b80aeaff65a6c7954ba68a393a43eac4e3f1208083d2a52d1",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/backtesting.py": "a5fa1efa624d0bcfef81be3f0d3a51dd50003986927dd0756da1ec6370e320ce",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/dated_price_precision.py": "4631bdb5ec9f1cfcef7d82eba750f591bb30663ce5b9d46e01abe67daaf46507"
+  },
+  "requirements": [
+    "Separate order-operation prohibition from unknown matching policy;do not infer matching rules solely from an enum",
+    "Inspect original1m market observations around CRV/GALA Apr29 transitions using connected Binance public route",
+    "Keep native5m strategy decisions and actual1m detail clocks for interval boundaries;reject insufficient detail",
+    "Preserve pending-order prices across price-grid changes,keep funding/cash/marks separate from permission to trade",
+    "Run actual Configuration->Backtesting.start->nativeZIP on frozen synthetic cases;do not count fixtures as historical strategy returns",
+    "Preserve old failures and complete40pair historical rule gap"
+  ],
+  "public_queries": [
+    {
+      "symbol": "CRVUSDT",
+      "interval": "1m",
+      "start": "2026-04-29T06:28:00+00:00",
+      "end": "2026-04-29T06:34:00+00:00"
+    },
+    {
+      "symbol": "GALAUSDT",
+      "interval": "1m",
+      "start": "2026-04-29T06:38:00+00:00",
+      "end": "2026-04-29T06:44:00+00:00"
+    }
+  ],
+  "new_historical_financial_accounts": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

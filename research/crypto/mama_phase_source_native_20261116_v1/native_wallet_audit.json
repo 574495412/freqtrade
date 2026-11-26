@@ -1,0 +1,51 @@
+{
+  "passed": true,
+  "source": "native ZIP _wallet.feather and actual orders",
+  "actual_native_balance_rows": 117152,
+  "complete_target_quote_cash_clocks": 58368,
+  "quote_convention": "native quote cash minus remaining entry fee reserve equals economic cash,within realized-PnL rounding",
+  "private_exchange_cash_certified": false,
+  "candidate_calculator_imported": false,
+  "accounts": [
+    {
+      "account": "mama_1000_conservative",
+      "actual_wallet_rows": 29288,
+      "actual_wallet_clocks": 14592,
+      "maximum_native_balance_error": 5.00007502068911e-08,
+      "maximum_entry_fee_reserve_identity_error_usdt": 7.459902917617e-08,
+      "minimum_independently_reconstructed_economic_cash": 1.5645412154008085,
+      "omitted_zero_base_balances_proven_from_fills": 14488,
+      "passed": true
+    },
+    {
+      "account": "mama_1000_lower",
+      "actual_wallet_rows": 29288,
+      "actual_wallet_clocks": 14592,
+      "maximum_native_balance_error": 2.000044219130359e-08,
+      "maximum_entry_fee_reserve_identity_error_usdt": 7.847984306863509e-08,
+      "minimum_independently_reconstructed_economic_cash": 2.506785329910258,
+      "omitted_zero_base_balances_proven_from_fills": 14488,
+      "passed": true
+    },
+    {
+      "account": "mama_500_conservative",
+      "actual_wallet_rows": 29288,
+      "actual_wallet_clocks": 14592,
+      "maximum_native_balance_error": 2.000038534788473e-08,
+      "maximum_entry_fee_reserve_identity_error_usdt": 1.4900045641752513e-07,
+      "minimum_independently_reconstructed_economic_cash": 0.7950907530002951,
+      "omitted_zero_base_balances_proven_from_fills": 14488,
+      "passed": true
+    },
+    {
+      "account": "mama_500_lower",
+      "actual_wallet_rows": 29288,
+      "actual_wallet_clocks": 14592,
+      "maximum_native_balance_error": 1.0001045325225277e-08,
+      "maximum_entry_fee_reserve_identity_error_usdt": 7.506113774979895e-08,
+      "minimum_independently_reconstructed_economic_cash": 1.3290781321302205,
+      "omitted_zero_base_balances_proven_from_fills": 14488,
+      "passed": true
+    }
+  ]
+}

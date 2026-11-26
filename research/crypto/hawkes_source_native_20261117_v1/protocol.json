@@ -1,0 +1,42 @@
+{
+  "registered_at": "2026-11-17T14:07:58.108004+00:00",
+  "scope": "Pinned author signed Hawkes candle-range strategy through fixed native Freqtrade; no long-only substitution",
+  "source_commit": "51c8557eb078f1be368e1ff82c53c9118685e7de",
+  "source_parameters": {
+    "atr_log_OHLC": 336,
+    "kappa": 0.1,
+    "rolling_quantile": 168,
+    "low": 0.05,
+    "high": 0.95
+  },
+  "mechanism": "Exponentially decaying range intensity activation and exhaustion; a discrete source proxy, not a fitted point-process likelihood or calibrated event intensity",
+  "source_unchanged": "AST original hawkes_process/vol_signal; current pandas_ta default TA-Lib ATR branch fixed. No heatmap/hyperoptimization or source signal-return simulator",
+  "source_environment_not_reproduced": true,
+  "market_adaptation": "Source BTC hourly sign returns/no funded wallet become BTC+ETH USDT perpetual isolated1x, 2slots,99percent balance, native unlimited stake, next completed-hour market execution with5m detail. Both signs retained. Source did not define this capital/venue contract. Native -99percent catastrophe stop and liquidation remain; any such exit separately reported",
+  "data_origin": "2023-08-01T00:00:00Z",
+  "native_start": "2024-12-31T23:00:00Z",
+  "window": [
+    "2025-01-01T00:00:00Z",
+    "2026-08-31T23:00:00Z"
+  ],
+  "capital": [
+    1000,
+    500
+  ],
+  "cost_bps_per_side": [
+    15,
+    8
+  ],
+  "funding_policies": [
+    "before_orders",
+    "after_orders"
+  ],
+  "funding_contract": "Before:open<T<=close;after:open<=T<close. Native private-callback extension from sealed session_funding v3; both policies frozen before results, neither is certified private exchange settlement. Existing NFI references have no boundary fills. Single-entry/full-exit only",
+  "native_account_count": 8,
+  "portfolios": "Actual Hawkes500+same-cost NFI_futures500; independent wallets,no transfers/rebalancing,no scaling1000curves",
+  "financial_gate": "All two costs AND two funding conventions: fullwindow andeach annualslice positive, hourlyDD<=15percent,dailyNAVSharpe>.5, return above matchedNFI1000. Fixedcombo additionally must beat matchedNFI1000 without worseDD. No retuning/rescue. Funds/fees/openlosses fully included",
+  "selection_not_independent_oos": true,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

@@ -1,0 +1,16 @@
+{
+  "scope": "Concrete missing inputs for original40pair2025Jan1-2026Sep1 native account,not authorization to buy data",
+  "required": [
+    "OriginalsymbolandUSD-Mperpetualidentity",
+    "PRICE_FILTERtick/min/max and LOT_SIZEstep/min/max,minimum notional and their exact effective bounds",
+    "Published/observed/known clocks distinct from effective clock,rawsourceversions and hashes",
+    "Operation restrictions and unknown pending-order matching policy retained rather than zero-filled",
+    "Coverage gaps explicit;current snapshot or best-effort vendor changes do not by themselves close them"
+  ],
+  "current_native_price_interface": "freqtrade/optimize/dated_price_precision.py",
+  "current_native_operation_interface": "freqtrade/optimize/order_operations.py",
+  "remaining_native_extensions": "Dated amount/notional filters and preflight;not implemented by a separate account simulator",
+  "existing_whole_window_research_contract": "Same original40pairs,1000USDT,1x,max6,5m,8/15bp each side;no borrowed returns or summed labels",
+  "user_data_availability_question": "Optional async question pending;continue only already-authorized public research",
+  "orders_enabled": false
+}

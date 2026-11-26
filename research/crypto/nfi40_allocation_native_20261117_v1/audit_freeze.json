@@ -1,0 +1,28 @@
+{
+  "frozen_at": "2026-11-17T15:17:57.175037+00:00",
+  "actual500_economic_outputs_read": false,
+  "financial_job_continues_without_code_changes": true,
+  "cash_oracle_path": "/Users/chrise/GitHub/TradingAgents/research_tools/nfi_reproduction/audit_original.py",
+  "exposure_oracle_path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/account_audit.py",
+  "files": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/audit_actual500.py": "d4179546fee15098cd7e922327fb0a4f50a26e6b9c5f333e33775ef352befde1",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/test_audit_funding.py": "f818c52e0c3544c392c11b8bae1063c24065289afc37b30d39d50093a3347d50",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/plan.json": "7811964619044565a3927f2a4a03a43fdc8e04565b29d619d87593968650aaec",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/metadata_addendum.json": "156e480eba877516dbb7f2dabc77ceaa52acad606edf7dec7465eae72669464b",
+    "/Users/chrise/GitHub/TradingAgents/research_tools/nfi_reproduction/audit_original.py": "30fed01717f5bc2c96fb036fbf8a8817e6fe713dd5afa05058dcaf1746823512",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/account_audit.py": "f688a54bf80a275233e6e1aab1c0c20abffffa274cd2641306a25e1aa0340e78",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/exchange/exchange.py": "37c31dce2a4cd73f3f929c341d7ac3b848417657050cc563a881ad5db526f4b5",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/exchange/binance.py": "07184118e8a5ad1da42c7a322532039530e3df054516f616e4b3f5755298f8ad",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/persistence/trade_model.py": "a011ca8686a205fd279ef665a2a3d5a1a4e3fb8cec9cbbac7f429eed0da85c2d",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/optimize/backtesting.py": "1d45e0b34ddf30813bbdf51a20be6e8345a65b668f373f8ce2fbb6e93271b234"
+  },
+  "validation": "Ruff passed; six hand-calculated funding direction/DCA/partial-exit cases passed",
+  "strict_numeric_tolerances_usdt": {
+    "full_hourly_nav": 3e-05,
+    "campaign_cash": 1e-05,
+    "aggregate_cash": 0.0001,
+    "funding": 1e-07
+  },
+  "failure_retention": "No economic reruns or tuning to repair audit failure; retain originals and diagnose separately",
+  "limitation": "Minified native ZIP omits order creation times; funding state assumes source immediate entry fills and checks every hourly NAV plus terminal per-trade funding. Any disagreement fails admission."
+}

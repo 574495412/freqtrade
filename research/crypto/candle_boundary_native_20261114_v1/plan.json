@@ -1,0 +1,189 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+    "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "schema": "freqtrade.native.candle-boundary.v1",
+  "registered_at": "2026-11-14T15:41:10.299730+00:00",
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/candle_boundary_native_20261114_v1",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/candle_boundary_native_20261114_v1/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/candle_boundary_native_20261114_v1/data_receipts.json",
+    "sha256": "f5e5b36081efe87213dbf9ddf1e2d45fffce7c4a70a2f9c85e03aeb179c20a18"
+  },
+  "pairs": [
+    "BTC/USDT:USDT"
+  ],
+  "candidates": [
+    {
+      "name": "BoundaryStartMinute",
+      "strategy": "BoundaryStartMinute",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/BoundaryStartMinute.json",
+        "sha256": "20c08df45ac41a858c34409b1d26fb2648a17b68729d51657deae10afc45c1c9"
+      },
+      "source_files": {
+        "BoundaryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/BoundaryRules.py",
+          "sha256": "29dc7db8fdd493831456316c28e47dd888339e5a1841320f7161cf2e4e37512c"
+        }
+      }
+    },
+    {
+      "name": "BoundaryEndMinute",
+      "strategy": "BoundaryEndMinute",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/BoundaryEndMinute.json",
+        "sha256": "51f9a809797174b223d502e23d9e017d9ce3d56c9848aa3ac5b4618e1840813c"
+      },
+      "source_files": {
+        "BoundaryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/BoundaryRules.py",
+          "sha256": "29dc7db8fdd493831456316c28e47dd888339e5a1841320f7161cf2e4e37512c"
+        }
+      }
+    },
+    {
+      "name": "ConstantMinuteControl",
+      "strategy": "ConstantMinuteControl",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/ConstantMinuteControl.json",
+        "sha256": "e29d5eea81d2df7c44148b365a98aee29a9bb234de415e1b4bd4213961e9321b"
+      },
+      "source_files": {
+        "BoundaryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/BoundaryRules.py",
+          "sha256": "29dc7db8fdd493831456316c28e47dd888339e5a1841320f7161cf2e4e37512c"
+        }
+      }
+    }
+  ],
+  "marks": {
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    }
+  },
+  "initial_equity_usdt": 1000,
+  "allowed_leverage": 1.0,
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "runner_sha256": "8bf3b9a4d2d8f161e7bb18a2a6f1a6c7a74ff969d2c6ee07c8a157d6d0006b52",
+  "runner_module": "research.crypto.candle_boundary_native_20261114_v1.native_runner",
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/protocol.json",
+      "sha256": "a98109e1179c14a89cdf8ffbcceab2104db98d6895ba5ba6e9c6e33b150dc4ca"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/input_admission.json",
+      "sha256": "3a0d9c232ede563b0b6cc99afbe76ae21fb7d3e680a7bf74c42bed5cbc58089c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/source_intake.json",
+      "sha256": "f23b43bdcbbefc2cb3b596b364f40f91f7b14d841d43e0beb1dcb5e59ae6f213"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/preflight.json",
+      "sha256": "92f68f07cd534a0e6870ef13547d4c6099533f61488eb5b0ffd0a856ad809461"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/prepare.py",
+      "sha256": "d22e4a015fe9c4824f23039910b2d52347cf5a25267df4ee2dbbe4318404c39b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/register.py",
+      "sha256": "44abb63f00d404debfde0ccbf804e6295becb9afa30a8d1d714c9ab9728ecaac"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/preflight.py",
+      "sha256": "1ea72c90682ded6382d01c56d20eb2605dd428db4902c95d00e8de0d1f2e9495"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/run.py",
+      "sha256": "9537cb6dae4bc81ca182736820e21f95076a270827added964720c99444b1d6f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/candle_boundary_native_20261114_v1/sources/paper.pdf",
+      "sha256": "0fcd3a8634664800dd3898f790e83678a2638c27ca3fd6072c1ecc35a142aa99"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/band_trend_native_20261113_v1/observe_clock.py",
+      "sha256": "f2bb297fca1ec753d9a010c39ff45506dccc0aadadf067f069de2e8a8d7b638d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/skew_vol_native_20261113_v1/clock_fix.py",
+      "sha256": "3569781b7f1e30319cb0f2aed0a2c12587f0448de154f5575415b6f1684df8ce"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false
+}

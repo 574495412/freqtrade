@@ -1,0 +1,158 @@
+"""Actual native inputs/IStrategy custody, independent scalar feature audit."""
+import hashlib
+import json
+import math
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+from bootstrap import HERE, ROOT, boot
+
+native = boot()
+from freqtrade.data.dataprovider import DataProvider
+from freqtrade.data.history.datahandlers import get_datahandler
+from freqtrade.data.fip_path import daily_fip_components
+from freqtrade.enums import CandleType, RunMode
+from freqtrade.resolvers import StrategyResolver
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def save(name, value):
+    (HERE / name).write_text(json.dumps(value, indent=2, default=str, allow_nan=False)+'\n')
+
+
+def scalar(prices, end):
+    result = {}
+    for window in (63, 252):
+        returns = [prices[i]/prices[i-1]-1 for i in range(end-window+1, end+1)]
+        pret = math.prod(1+r for r in returns)-1
+        balance = (sum(r>0 for r in returns)-sum(r<0 for r in returns))/window
+        sign = 1 if pret>0 else -1 if pret<0 else 0
+        result.update({name+str(window): value for name,value in {
+            'pret':pret, 'sign_balance':balance, 'source_original':-pret*balance,
+            'source_modified':sign*balance, 'id':-sign*balance,
+            'signed_path':abs(pret)*balance}.items()})
+        if window==63:
+            mean=math.fsum(returns)/window
+            result['lowvol63']=-math.sqrt(math.fsum((r-mean)**2 for r in returns)/(window-1))
+    return result
+
+
+def main():
+    assert not (HERE / 'native_preflight.json').exists()
+    protocol = json.loads((HERE / 'protocol.json').read_text())
+    datadir = Path(protocol['datadir'])
+    records, raw = [], {}
+    for pair in protocol['pairs']:
+        stem = pair.replace('/', '_').replace(':', '_')
+        for timeframe, frequency in [('1d','1D'), ('1h','1h')]:
+            path = datadir / 'futures' / f'{stem}-{timeframe}-futures.feather'
+            frame = pd.read_feather(path)
+            index = pd.DatetimeIndex(frame.date)
+            assert index.is_unique and index.equals(pd.date_range(index[0],index[-1],freq=frequency))
+            assert str(index.tz) == 'UTC' and index.equals(index.floor(frequency))
+            assert np.isfinite(frame[['open','high','low','close','volume']].to_numpy()).all()
+            assert (frame[['open','high','low','close']].to_numpy()>0).all()
+            records.append(dict(pair=pair,timeframe=timeframe,path=str(path),sha256=sha(path),
+                rows=len(frame),first=str(index[0]),last=str(index[-1])))
+            if timeframe == '1d': raw[pair] = frame.set_index('date').close
+    admission = dict(protocol_sha256=sha(HERE/'protocol.json'), datadir=str(datadir),
+        pairs=protocol['pairs'], native_inputs=records, financial_stage_admitted=False)
+    save('input_admission.json', admission)
+    config = json.loads((HERE.parent/'residual_momentum_source_native_20261114_v1/input_config.json').read_text())
+    config.update(strategy='FipInputs', strategy_path=str(HERE), runmode=RunMode.BACKTEST,
+        dry_run=True, timeframe='1h', startup_candle_count=0, timerange=None,
+        datadir=datadir, user_data_dir=ROOT/'user_data', candle_type_def=CandleType.FUTURES,
+        research_admission=str(HERE/'input_admission.json'),
+        research_admission_sha256=sha(HERE/'input_admission.json'), research_diagnostic_only=True)
+    config['exchange']['pair_whitelist'] = protocol['pairs']
+    save('input_config.json',config)
+    strategy = StrategyResolver.load_strategy(config)
+    strategy.dp = DataProvider(config, None)
+    strategy.bot_start()
+    close, parts = strategy.research_close, strategy.research_components
+    reference = pd.DataFrame(raw)
+    raw_timestamp_unit = reference.index.unit
+    reference.index = reference.index.as_unit(close.index.unit)
+    pd.testing.assert_frame_equal(close, reference, check_exact=True)
+    decisions = pd.date_range(protocol['account_start'],protocol['account_end'],freq='168h')
+    complete = decisions[decisions+pd.Timedelta(hours=169)<=pd.Timestamp(protocol['account_end'])]
+    assert len(complete) == 86 and len(protocol['pairs']) == 40
+    daily = complete - pd.Timedelta(days=1)
+    maximum, scalars = 0., 0
+    for label in daily:
+        end = close.index.get_loc(label)
+        for pair in close:
+            expected = scalar(close[pair].tolist(),end)
+            for name, value in expected.items():
+                error = abs(value-parts[name].at[label,pair])
+                assert error < 1e-10,(label,pair,name,error)
+                maximum = max(maximum,error)
+                scalars += 1
+    import ast
+    source = HERE/'sources/src/pytimetk/finance/fip_momentum.py'
+    node = next(n for n in ast.parse(source.read_text()).body if isinstance(n,ast.FunctionDef) and n.name=='_compute_fip_series')
+    namespace={'np':np}
+    exec(compile(ast.Module(body=[node],type_ignores=[]),str(source),'exec'),namespace)
+    source_cells=0
+    for pair in close:
+        r=close[pair].pct_change(fill_method=None).to_numpy()
+        for window in (63,252):
+            for method in ['original','modified']:
+                expected=namespace['_compute_fip_series'](r,window,method,0)
+                actual=parts['source_'+method+str(window)][pair].to_numpy()
+                np.testing.assert_allclose(actual,expected,rtol=1e-12,atol=1e-12,equal_nan=True)
+                source_cells+=len(actual)
+    mapped, labels = {name:pd.DataFrame(index=complete,columns=close.columns,dtype=float) for name in parts}, pd.DataFrame(index=complete,columns=close.columns,dtype=float)
+    indicator_cells = 0
+    for pair in protocol['pairs']:
+        frame = strategy.dp.get_pair_dataframe(pair,'1h','futures')
+        observed = strategy.populate_indicators(frame.copy(),{'pair':pair}).set_index('date')
+        old = get_datahandler(datadir,'feather').ohlcv_load(pair,'1h',candle_type=CandleType.FUTURES,
+            fill_missing=False,drop_incomplete=False)
+        pd.testing.assert_frame_equal(frame,old,check_exact=True)
+        previous = observed.index.normalize()-pd.Timedelta(days=1)
+        for name in parts:
+            np.testing.assert_array_equal(observed[name],parts[name][pair].reindex(previous))
+            mapped[name][pair] = observed[name].reindex(complete).to_numpy()
+            indicator_cells += len(observed)
+        starts, ends = complete+pd.Timedelta(hours=1), complete+pd.Timedelta(hours=169)
+        labels[pair] = observed.open.reindex(ends).to_numpy()/observed.open.reindex(starts).to_numpy()-1
+    assert np.isfinite(labels.to_numpy()).all() and all(np.isfinite(f.to_numpy()).all() for f in mapped.values())
+    prefixes = []
+    for text in ['2025-07-01T00:00Z','2026-01-01T00:00Z','2026-08-01T00:00Z']:
+        boundary = pd.Timestamp(text)
+        past = close.index < boundary
+        changed = close.copy()
+        changed.loc[~past] *= 2.71828
+        changed_parts, prefix = daily_fip_components(changed), daily_fip_components(close.loc[past])
+        count = 0
+        for name in parts:
+            pd.testing.assert_frame_equal(parts[name].loc[past],changed_parts[name].loc[past],check_exact=True)
+            pd.testing.assert_frame_equal(parts[name].loc[past],prefix[name],check_exact=True)
+            count += parts[name].loc[past].size
+        prefixes.append(dict(boundary=str(boundary),actual_feature_cells=count,passed=True))
+    out = ROOT/'user_data/crypto_quant/fip_path_source_native_20261115_v1'
+    out.mkdir(parents=True,exist_ok=False)
+    close.to_parquet(out/'native_daily_close.parquet')
+    labels.to_parquet(out/'native_weekly_labels.parquet')
+    for name,frame in mapped.items(): frame.to_parquet(out/f'native_{name}.parquet')
+    files = [ROOT/'freqtrade/data/fip_path.py', *HERE.glob('*.py'),HERE/'protocol.json',HERE/'input_admission.json',HERE/'input_config.json']
+    save('implementation_freeze.json',{str(p):sha(p) for p in files})
+    save('native_preflight.json',dict(passed=True,native_commit=native['commit'],native_files=len(native['files']),
+        input_files=len(records),daily_observations=len(close),assets=len(close.columns),
+        raw_timestamp_unit=raw_timestamp_unit,native_timestamp_unit=close.index.unit,
+        exact_source_prices_and_observation_instants=True,
+        independent_feature_scalars=scalars,maximum_scalar_error=maximum,source_exact_kernel_cells=source_cells,
+        actual_indicator_mapping_cells=indicator_cells,prefix_checks=prefixes,
+        complete_nonoverlapping_weeks=len(complete),first_decision=str(complete[0]),last_complete_decision=str(complete[-1]),
+        incomplete_tail_decisions=[str(d)for d in decisions if d not in complete],
+        factor_output=str(out),financial_accounts=0,factor_analysis_calls=0,accepted_alphas=0))
+    print('NATIVE PREFLIGHT',len(records),'files;',scalars,'independent feature scalars;',indicator_cells,'mapping cells;0funded accounts')
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,285 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "schema": "freqtrade.native.volume-profile.v1",
+  "registered_at": "2026-11-14T09:18:43.788435+00:00",
+  "source_strategy_allocation_study": true,
+  "not_new_factor_screen": true,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+    "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+  },
+  "pairs": [
+    "BTC/USDT:USDT"
+  ],
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/volume_profile_native_20261114_v1",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/volume_profile_native_20261114_v1/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/volume_profile_native_20261114_v1/data_receipts.json",
+    "sha256": "6d8e2b5a01313abdfcd6f570e909efa37e4a1c11d23a3991cec1133094b692fa"
+  },
+  "marks": {
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/volume_profile_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    }
+  },
+  "candidates": [
+    {
+      "name": "ProfileBreakout_1000",
+      "strategy": "ProfileBreakout",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfileBreakout_1000.json",
+        "sha256": "7932481ad03a602dc0ca715ec861d2ea865e417d33e26c3c0c6afff40b89aa81"
+      },
+      "source_files": {
+        "ProfilePortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfilePortfolio.py",
+          "sha256": "476660082d405ab3ef2377d5509dd9c683da095304adbcb6a6f6dadd34eaa490"
+        },
+        "ProfileRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfileRules.py",
+          "sha256": "433e73bc9434510fa85a00d4ca24ffde84a875ba967a229aa50253f045e28de5"
+        }
+      }
+    },
+    {
+      "name": "ProfileBreakout_500",
+      "strategy": "ProfileBreakout",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfileBreakout_500.json",
+        "sha256": "ba3108dec35290c9c647f38cb8c90f5107b297f76760f7c87aa32585fb81a15a"
+      },
+      "source_files": {
+        "ProfilePortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfilePortfolio.py",
+          "sha256": "476660082d405ab3ef2377d5509dd9c683da095304adbcb6a6f6dadd34eaa490"
+        },
+        "ProfileRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfileRules.py",
+          "sha256": "433e73bc9434510fa85a00d4ca24ffde84a875ba967a229aa50253f045e28de5"
+        }
+      }
+    },
+    {
+      "name": "ProfileFade_1000",
+      "strategy": "ProfileFade",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfileFade_1000.json",
+        "sha256": "d5041716ae126ab963a1ffa39fa852ffb059f3b056058a12d8f9683d0f8ac15b"
+      },
+      "source_files": {
+        "ProfilePortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfilePortfolio.py",
+          "sha256": "476660082d405ab3ef2377d5509dd9c683da095304adbcb6a6f6dadd34eaa490"
+        },
+        "ProfileRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfileRules.py",
+          "sha256": "433e73bc9434510fa85a00d4ca24ffde84a875ba967a229aa50253f045e28de5"
+        }
+      }
+    },
+    {
+      "name": "ProfileFade_500",
+      "strategy": "ProfileFade",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfileFade_500.json",
+        "sha256": "154da6ef0f727ca3020951b513924696e99ce5d5b69dc733fcec6e26a0c7f927"
+      },
+      "source_files": {
+        "ProfilePortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfilePortfolio.py",
+          "sha256": "476660082d405ab3ef2377d5509dd9c683da095304adbcb6a6f6dadd34eaa490"
+        },
+        "ProfileRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfileRules.py",
+          "sha256": "433e73bc9434510fa85a00d4ca24ffde84a875ba967a229aa50253f045e28de5"
+        }
+      }
+    },
+    {
+      "name": "ProfileNoVolume_1000",
+      "strategy": "ProfileNoVolume",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfileNoVolume_1000.json",
+        "sha256": "4a5c9a9b17b8d291c0002e6aea44ede8895fb5b521ccc2fe4bb119570ff9e0b0"
+      },
+      "source_files": {
+        "ProfilePortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfilePortfolio.py",
+          "sha256": "476660082d405ab3ef2377d5509dd9c683da095304adbcb6a6f6dadd34eaa490"
+        },
+        "ProfileRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfileRules.py",
+          "sha256": "433e73bc9434510fa85a00d4ca24ffde84a875ba967a229aa50253f045e28de5"
+        }
+      }
+    },
+    {
+      "name": "ProfileNoVolume_500",
+      "strategy": "ProfileNoVolume",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfileNoVolume_500.json",
+        "sha256": "3ed01b3d13e75615972e0f7f47ba891c4e2791a209348ee7be35cd5e1241c67f"
+      },
+      "source_files": {
+        "ProfilePortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfilePortfolio.py",
+          "sha256": "476660082d405ab3ef2377d5509dd9c683da095304adbcb6a6f6dadd34eaa490"
+        },
+        "ProfileRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfileRules.py",
+          "sha256": "433e73bc9434510fa85a00d4ca24ffde84a875ba967a229aa50253f045e28de5"
+        }
+      }
+    }
+  ],
+  "allowed_leverage": 3,
+  "initial_equity_usdt": 1000,
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "runner_sha256": "474a145adb67bb14eac25b525b730eb036523f641142300e47d865aed856e1a8",
+  "runner_module": "research.crypto.volume_profile_native_20261114_v1.worker",
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfilePortfolio.py",
+      "sha256": "476660082d405ab3ef2377d5509dd9c683da095304adbcb6a6f6dadd34eaa490"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/ProfileRules.py",
+      "sha256": "433e73bc9434510fa85a00d4ca24ffde84a875ba967a229aa50253f045e28de5"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/worker.py",
+      "sha256": "c15abec0e29a2ba8bb0858f15cf73b51fe74539d4cee2a818e619f4b016afec2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/bootstrap.py",
+      "sha256": "c2a53eb19832010877f5118b37570c09e408c7a1761606182eac7cd7df9a406c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/volume_profile.py",
+      "sha256": "26461ca740df242b088194d22a2f10636ff72284c19234b57e2467f5535da0fb"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/protocol.json",
+      "sha256": "55b08ad1bfc7d114246fa5be93813316246a74b718db11d6f580102a8a9cf3fc"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/protocol_freeze.json",
+      "sha256": "af3724d9dd38bcaabc49cff3655005dcc07cac7a7557a068648fe8001c265261"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/preflight.json",
+      "sha256": "90b0809f8a5318dc38e066f2ffb6f4f6ebfdf49d04e36fb1faf7a203a5fc09c0"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/volume_profile_native_20261114_v1/tests_final.log",
+      "sha256": "da1e733cdd5a54ad8d6932472b3bb0f14ba8012541f0172caaebed44e60c0efd"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mechanism_source_intake_20261114_v1/source_receipts.json",
+      "sha256": "a76adae6d13c1adeae4fcfc658fc4d6391503dd2a11b9f3ca32dd7a03a70ce97"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mechanism_source_intake_20261114_v1/sources/profile/README.md",
+      "sha256": "e29809549acf0098ad3ab0acc4ab7df7c564532fbbdfb09a4b2e300fb398790f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mechanism_source_intake_20261114_v1/sources/profile/config.py",
+      "sha256": "041827e8928e9a792dab5bcbb08c7888ef0f31c20c49ee925c552aaead9d5531"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mechanism_source_intake_20261114_v1/sources/profile/indicadores.py",
+      "sha256": "ee4e07267dabf385c93fe9c4fbaddc8360d49a545ebf136683618bda39c5c1f7"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mechanism_source_intake_20261114_v1/sources/profile/strategy.py",
+      "sha256": "94e90caab7eafdc69d72179aee0dc98d8714214e29134a92c66f4653152079c7"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mechanism_source_intake_20261114_v1/sources/profile/backtester.py",
+      "sha256": "899d9aa53ff81f2d7a001754e255e82c4f11d4639e73a2212d898c49ea6be10b"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false
+}

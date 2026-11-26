@@ -1,0 +1,188 @@
+{
+  "passed": true,
+  "source_original_native_files": 595,
+  "official_archives": 2922,
+  "daily_rows": 2922,
+  "raw_rows": 841146,
+  "unknown_daily_fields": {
+    "BTCUSDT": {
+      "count_long_short_ratio": 1,
+      "count_toptrader_long_short_ratio": 1,
+      "sum_toptrader_long_short_ratio": 1,
+      "sum_taker_long_short_vol_ratio": 1
+    },
+    "ETHUSDT": {
+      "count_long_short_ratio": 1,
+      "count_toptrader_long_short_ratio": 1,
+      "sum_toptrader_long_short_ratio": 1,
+      "sum_taker_long_short_vol_ratio": 1
+    },
+    "SOLUSDT": {
+      "count_long_short_ratio": 1,
+      "count_toptrader_long_short_ratio": 1,
+      "sum_toptrader_long_short_ratio": 1,
+      "sum_taker_long_short_vol_ratio": 1
+    }
+  },
+  "independent_rank_cells": 3654,
+  "independent_expiry_cells": 5472,
+  "actual_prefix_checks": [
+    {
+      "symbol": "BTCUSDT",
+      "column": "count_long_short_ratio",
+      "cutoff": "2025-07-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "BTCUSDT",
+      "column": "count_long_short_ratio",
+      "cutoff": "2026-01-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "BTCUSDT",
+      "column": "count_long_short_ratio",
+      "cutoff": "2026-07-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "BTCUSDT",
+      "column": "sum_toptrader_long_short_ratio",
+      "cutoff": "2025-07-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "BTCUSDT",
+      "column": "sum_toptrader_long_short_ratio",
+      "cutoff": "2026-01-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "BTCUSDT",
+      "column": "sum_toptrader_long_short_ratio",
+      "cutoff": "2026-07-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "column": "count_long_short_ratio",
+      "cutoff": "2025-07-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "column": "count_long_short_ratio",
+      "cutoff": "2026-01-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "column": "count_long_short_ratio",
+      "cutoff": "2026-07-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "column": "sum_toptrader_long_short_ratio",
+      "cutoff": "2025-07-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "column": "sum_toptrader_long_short_ratio",
+      "cutoff": "2026-01-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "column": "sum_toptrader_long_short_ratio",
+      "cutoff": "2026-07-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "SOLUSDT",
+      "column": "count_long_short_ratio",
+      "cutoff": "2025-07-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "SOLUSDT",
+      "column": "count_long_short_ratio",
+      "cutoff": "2026-01-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "SOLUSDT",
+      "column": "count_long_short_ratio",
+      "cutoff": "2026-07-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "SOLUSDT",
+      "column": "sum_toptrader_long_short_ratio",
+      "cutoff": "2025-07-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "SOLUSDT",
+      "column": "sum_toptrader_long_short_ratio",
+      "cutoff": "2026-01-01",
+      "actual_prefix_and_future_perturbation": true
+    },
+    {
+      "symbol": "SOLUSDT",
+      "column": "sum_toptrader_long_short_ratio",
+      "cutoff": "2026-07-01",
+      "actual_prefix_and_future_perturbation": true
+    }
+  ],
+  "native_strategies": [
+    {
+      "strategy": "LowCrowdMonth",
+      "decision_weight_cells": 1824,
+      "unknown_rank_decisions": {
+        "BTC/USDT:USDT": 47,
+        "ETH/USDT:USDT": 47,
+        "SOL/USDT:USDT": 47
+      },
+      "new_opportunities": {
+        "BTC/USDT:USDT": 65,
+        "ETH/USDT:USDT": 103,
+        "SOL/USDT:USDT": 42
+      },
+      "active_coin_days": 907
+    },
+    {
+      "strategy": "LowPositionMonth",
+      "decision_weight_cells": 1824,
+      "unknown_rank_decisions": {
+        "BTC/USDT:USDT": 47,
+        "ETH/USDT:USDT": 47,
+        "SOL/USDT:USDT": 47
+      },
+      "new_opportunities": {
+        "BTC/USDT:USDT": 111,
+        "ETH/USDT:USDT": 97,
+        "SOL/USDT:USDT": 74
+      },
+      "active_coin_days": 555
+    },
+    {
+      "strategy": "ConstantPositioningControl",
+      "decision_weight_cells": 1824,
+      "unknown_rank_decisions": {
+        "BTC/USDT:USDT": 47,
+        "ETH/USDT:USDT": 47,
+        "SOL/USDT:USDT": 47
+      },
+      "new_opportunities": {
+        "BTC/USDT:USDT": 65,
+        "ETH/USDT:USDT": 103,
+        "SOL/USDT:USDT": 42
+      },
+      "active_coin_days": 1824
+    }
+  ],
+  "native_accounts": 0,
+  "historical_transmission_certified": false
+}

@@ -1,0 +1,131 @@
+{
+  "same_window_40_pair_1x_6_slots_first_stake_comparison": {
+    "15": {
+      "old_net_return": 1.356564040788781,
+      "boost_net_return": 1.6183603993983366,
+      "old_hourly_drawdown": 0.045153827500363786,
+      "boost_hourly_drawdown": 0.042603859285099244,
+      "counts": {
+        "control_independent_campaigns": 282,
+        "candidate_independent_campaigns": 279,
+        "control_natural_closes": 281,
+        "candidate_natural_closes": 278,
+        "control_additional_entry_fills": 79,
+        "candidate_additional_entry_fills": 78,
+        "control_native_rejected_signal_counter": 91,
+        "candidate_native_rejected_signal_counter": 58,
+        "matched_by_pair_direction_first_fill": 278,
+        "only_control_at_exact_first_fill_key": 4,
+        "only_candidate_at_exact_first_fill_key": 1,
+        "candidate_only_tags": {
+          "145": 1
+        }
+      }
+    },
+    "8": {
+      "old_net_return": 1.4120919597300001,
+      "boost_net_return": 1.6967981473099996,
+      "old_hourly_drawdown": 0.038209224790953566,
+      "boost_hourly_drawdown": 0.041821360166734434,
+      "counts": {
+        "control_independent_campaigns": 286,
+        "candidate_independent_campaigns": 283,
+        "control_natural_closes": 286,
+        "candidate_natural_closes": 283,
+        "control_additional_entry_fills": 74,
+        "candidate_additional_entry_fills": 73,
+        "control_native_rejected_signal_counter": 89,
+        "candidate_native_rejected_signal_counter": 62,
+        "matched_by_pair_direction_first_fill": 281,
+        "only_control_at_exact_first_fill_key": 5,
+        "only_candidate_at_exact_first_fill_key": 2,
+        "candidate_only_tags": {
+          "145": 2
+        }
+      }
+    }
+  },
+  "separate_80_pair_3x_2026_period_comparison": [
+    {
+      "case": "L3_S6",
+      "variant": "Original",
+      "leverage": 3,
+      "max_open_trades": 6,
+      "cost_bps_per_side": 15,
+      "net_return_pct": 118.22787158221853,
+      "natural_completed_trades": 215,
+      "maximum_5m_mark_drawdown_pct": 36.17920306792828
+    },
+    {
+      "case": "L3_S6",
+      "variant": "FlatTopBoost",
+      "leverage": 3,
+      "max_open_trades": 6,
+      "cost_bps_per_side": 15,
+      "net_return_pct": 157.72048181205344,
+      "natural_completed_trades": 215,
+      "maximum_5m_mark_drawdown_pct": 40.11795640096819
+    },
+    {
+      "case": "L3_S12",
+      "variant": "Original",
+      "leverage": 3,
+      "max_open_trades": 12,
+      "cost_bps_per_side": 15,
+      "net_return_pct": 77.95630668414563,
+      "natural_completed_trades": 240,
+      "maximum_5m_mark_drawdown_pct": 19.148962221503872
+    },
+    {
+      "case": "L3_S12",
+      "variant": "FlatTopBoost",
+      "leverage": 3,
+      "max_open_trades": 12,
+      "cost_bps_per_side": 15,
+      "net_return_pct": 90.70785964956379,
+      "natural_completed_trades": 240,
+      "maximum_5m_mark_drawdown_pct": 20.919979897930617
+    },
+    {
+      "case": "L3_S6",
+      "variant": "Original",
+      "leverage": 3,
+      "max_open_trades": 6,
+      "cost_bps_per_side": 8,
+      "net_return_pct": 278.76460465068294,
+      "natural_completed_trades": 220,
+      "maximum_5m_mark_drawdown_pct": 35.2182048299454
+    },
+    {
+      "case": "L3_S6",
+      "variant": "FlatTopBoost",
+      "leverage": 3,
+      "max_open_trades": 6,
+      "cost_bps_per_side": 8,
+      "net_return_pct": 329.7334591151877,
+      "natural_completed_trades": 220,
+      "maximum_5m_mark_drawdown_pct": 39.79106282311912
+    },
+    {
+      "case": "L3_S12",
+      "variant": "Original",
+      "leverage": 3,
+      "max_open_trades": 12,
+      "cost_bps_per_side": 8,
+      "net_return_pct": 132.98604992683343,
+      "natural_completed_trades": 245,
+      "maximum_5m_mark_drawdown_pct": 17.57543475033623
+    },
+    {
+      "case": "L3_S12",
+      "variant": "FlatTopBoost",
+      "leverage": 3,
+      "max_open_trades": 12,
+      "cost_bps_per_side": 8,
+      "net_return_pct": 149.91525795830628,
+      "natural_completed_trades": 244,
+      "maximum_5m_mark_drawdown_pct": 20.76407197080791
+    }
+  ],
+  "method": "Verify saved source receipts, count first fills before the common cutoff and distinguish additions. Separate different periods, leverage and universe."
+}

@@ -1,0 +1,9 @@
+{
+  "stage": "compare the completed 15 bp reserve account after native cash and sizing reconciliation",
+  "status": "report assertion failed",
+  "reason": "The prior controls-only report deliberately sets all_roles_complete false because the separate cap diagnostic lies outside the controls report. Original and fixed_boost_12 both have 4608 marks with independent cash and NAV reconciliation.",
+  "repair": "Compare and reconcile the two required roles directly. Reuse the completed native run and its existing receipts.",
+  "native_result_reused": true,
+  "strategy_changes": false,
+  "orders_enabled": false
+}

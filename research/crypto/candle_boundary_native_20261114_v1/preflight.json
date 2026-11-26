@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "unmodified_engine_files": 595,
+  "actual_native_strategy_classes": 3,
+  "records": [
+    {
+      "strategy": "BoundaryStartMinute",
+      "rows": 920160,
+      "phase": 0,
+      "prefix_checks": [
+        {
+          "cutoff": "2025-07-01T00:00Z",
+          "prefix_exact": true,
+          "future_perturbation_exact": true
+        },
+        {
+          "cutoff": "2026-01-01T00:00Z",
+          "prefix_exact": true,
+          "future_perturbation_exact": true
+        },
+        {
+          "cutoff": "2026-08-01T00:00Z",
+          "prefix_exact": true,
+          "future_perturbation_exact": true
+        }
+      ],
+      "native_dataprovider": true
+    },
+    {
+      "strategy": "BoundaryEndMinute",
+      "rows": 920160,
+      "phase": 14,
+      "prefix_checks": [
+        {
+          "cutoff": "2025-07-01T00:00Z",
+          "prefix_exact": true,
+          "future_perturbation_exact": true
+        },
+        {
+          "cutoff": "2026-01-01T00:00Z",
+          "prefix_exact": true,
+          "future_perturbation_exact": true
+        },
+        {
+          "cutoff": "2026-08-01T00:00Z",
+          "prefix_exact": true,
+          "future_perturbation_exact": true
+        }
+      ],
+      "native_dataprovider": true
+    },
+    {
+      "strategy": "ConstantMinuteControl",
+      "rows": 920160,
+      "phase": null,
+      "prefix_checks": [
+        {
+          "cutoff": "2025-07-01T00:00Z",
+          "prefix_exact": true,
+          "future_perturbation_exact": true
+        },
+        {
+          "cutoff": "2026-01-01T00:00Z",
+          "prefix_exact": true,
+          "future_perturbation_exact": true
+        },
+        {
+          "cutoff": "2026-08-01T00:00Z",
+          "prefix_exact": true,
+          "future_perturbation_exact": true
+        }
+      ],
+      "native_dataprovider": true
+    }
+  ],
+  "all_source_minute_labels_resolved": false,
+  "financial_accounts": 0
+}

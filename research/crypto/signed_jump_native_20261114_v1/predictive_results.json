@@ -1,0 +1,479 @@
+{
+  "actual_registry_views": 5,
+  "global_registry_modified": false,
+  "actual_factor_analysis_calls": 15,
+  "unique_known_input_label_dates": 605,
+  "original_complete_label_dates": 607,
+  "unknown_dates_preserved": 2,
+  "ic_rows_including_full_split_overlap": 6050,
+  "independent_group_nav_cells": 30250,
+  "maximum_group_nav_error": 1.687538997430238e-14,
+  "scoped_dedup_comparisons": 24,
+  "candidate_status": [
+    {
+      "factor": "rsj",
+      "predictive_numeric_gate": false,
+      "scoped_duplicate": false,
+      "full_input_admitted": false,
+      "financial_stage_admitted": false
+    },
+    {
+      "factor": "rsk",
+      "predictive_numeric_gate": false,
+      "scoped_duplicate": false,
+      "full_input_admitted": false,
+      "financial_stage_admitted": false
+    },
+    {
+      "factor": "rkt",
+      "predictive_numeric_gate": false,
+      "scoped_duplicate": false,
+      "full_input_admitted": false,
+      "financial_stage_admitted": false
+    }
+  ],
+  "receipts": [
+    {
+      "factor": "rsj",
+      "split": "all_known",
+      "observations": 605,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.022196,
+        "ic_std": 0.378615,
+        "ir": 0.0586,
+        "ic_positive_ratio": 0.5124,
+        "ic_count": 605,
+        "n_groups": 5,
+        "long_short_spread": -0.1782,
+        "group_final_equity": {
+          "Group_1": 0.7143,
+          "Group_2": 0.3312,
+          "Group_3": 0.4448,
+          "Group_4": 0.5993,
+          "Group_5": 0.5361
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/rsj/all_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "rsj",
+      "split": "calendar2025_known",
+      "observations": 363,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.034435,
+        "ic_std": 0.373697,
+        "ir": 0.0921,
+        "ic_positive_ratio": 0.5207,
+        "ic_count": 363,
+        "n_groups": 5,
+        "long_short_spread": -0.0372,
+        "group_final_equity": {
+          "Group_1": 0.8186,
+          "Group_2": 0.5086,
+          "Group_3": 0.5977,
+          "Group_4": 0.727,
+          "Group_5": 0.7815
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/rsj/calendar2025_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "rsj",
+      "split": "calendar2026_known",
+      "observations": 242,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.003837,
+        "ic_std": 0.385924,
+        "ir": 0.0099,
+        "ic_positive_ratio": 0.5,
+        "ic_count": 242,
+        "n_groups": 5,
+        "long_short_spread": -0.1866,
+        "group_final_equity": {
+          "Group_1": 0.8726,
+          "Group_2": 0.6511,
+          "Group_3": 0.7442,
+          "Group_4": 0.8244,
+          "Group_5": 0.6861
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/rsj/calendar2026_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "rsk",
+      "split": "all_known",
+      "observations": 605,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.018654,
+        "ic_std": 0.385426,
+        "ir": 0.0484,
+        "ic_positive_ratio": 0.5008,
+        "ic_count": 605,
+        "n_groups": 5,
+        "long_short_spread": 0.2592,
+        "group_final_equity": {
+          "Group_1": 0.4904,
+          "Group_2": 0.3817,
+          "Group_3": 0.3967,
+          "Group_4": 0.6964,
+          "Group_5": 0.7496
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/rsk/all_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "rsk",
+      "split": "calendar2025_known",
+      "observations": 363,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.027942,
+        "ic_std": 0.374936,
+        "ir": 0.0745,
+        "ic_positive_ratio": 0.5289,
+        "ic_count": 363,
+        "n_groups": 5,
+        "long_short_spread": 0.3415,
+        "group_final_equity": {
+          "Group_1": 0.6454,
+          "Group_2": 0.4569,
+          "Group_3": 0.5615,
+          "Group_4": 0.908,
+          "Group_5": 0.9869
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/rsk/calendar2025_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "rsk",
+      "split": "calendar2026_known",
+      "observations": 242,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.004723,
+        "ic_std": 0.40103,
+        "ir": 0.0118,
+        "ic_positive_ratio": 0.4587,
+        "ic_count": 242,
+        "n_groups": 5,
+        "long_short_spread": -0.0004,
+        "group_final_equity": {
+          "Group_1": 0.7599,
+          "Group_2": 0.8352,
+          "Group_3": 0.7065,
+          "Group_4": 0.767,
+          "Group_5": 0.7596
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/rsk/calendar2026_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "rkt",
+      "split": "all_known",
+      "observations": 605,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.001063,
+        "ic_std": 0.405167,
+        "ir": 0.0026,
+        "ic_positive_ratio": 0.5091,
+        "ic_count": 605,
+        "n_groups": 5,
+        "long_short_spread": 0.1934,
+        "group_final_equity": {
+          "Group_1": 0.4075,
+          "Group_2": 0.4158,
+          "Group_3": 0.6951,
+          "Group_4": 0.4447,
+          "Group_5": 0.6009
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/rkt/all_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "rkt",
+      "split": "calendar2025_known",
+      "observations": 363,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.01056,
+        "ic_std": 0.395089,
+        "ir": 0.0267,
+        "ic_positive_ratio": 0.5207,
+        "ic_count": 363,
+        "n_groups": 5,
+        "long_short_spread": 0.2676,
+        "group_final_equity": {
+          "Group_1": 0.5626,
+          "Group_2": 0.6313,
+          "Group_3": 0.7811,
+          "Group_4": 0.604,
+          "Group_5": 0.8303
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/rkt/calendar2025_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "rkt",
+      "split": "calendar2026_known",
+      "observations": 242,
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.013184,
+        "ic_std": 0.420257,
+        "ir": -0.0314,
+        "ic_positive_ratio": 0.4917,
+        "ic_count": 242,
+        "n_groups": 5,
+        "long_short_spread": -0.0006,
+        "group_final_equity": {
+          "Group_1": 0.7243,
+          "Group_2": 0.6587,
+          "Group_3": 0.8899,
+          "Group_4": 0.7364,
+          "Group_5": 0.7237
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/rkt/calendar2026_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "day_return",
+      "split": "all_known",
+      "observations": 605,
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.001338,
+        "ic_std": 0.426895,
+        "ir": -0.0031,
+        "ic_positive_ratio": 0.4645,
+        "ic_count": 605,
+        "n_groups": 5,
+        "long_short_spread": -0.2135,
+        "group_final_equity": {
+          "Group_1": 0.5184,
+          "Group_2": 1.2445,
+          "Group_3": 0.4807,
+          "Group_4": 0.7744,
+          "Group_5": 0.3049
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/day_return/all_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "day_return",
+      "split": "calendar2025_known",
+      "observations": 363,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.014102,
+        "ic_std": 0.427506,
+        "ir": 0.033,
+        "ic_positive_ratio": 0.4793,
+        "ic_count": 363,
+        "n_groups": 5,
+        "long_short_spread": -0.1409,
+        "group_final_equity": {
+          "Group_1": 0.6341,
+          "Group_2": 0.9946,
+          "Group_3": 0.7052,
+          "Group_4": 1.0879,
+          "Group_5": 0.4933
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/day_return/calendar2025_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "day_return",
+      "split": "calendar2026_known",
+      "observations": 242,
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.024498,
+        "ic_std": 0.425809,
+        "ir": -0.0575,
+        "ic_positive_ratio": 0.4421,
+        "ic_count": 242,
+        "n_groups": 5,
+        "long_short_spread": -0.1994,
+        "group_final_equity": {
+          "Group_1": 0.8175,
+          "Group_2": 1.2512,
+          "Group_3": 0.6816,
+          "Group_4": 0.7118,
+          "Group_5": 0.6181
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/day_return/calendar2026_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "rv",
+      "split": "all_known",
+      "observations": 605,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.083707,
+        "ic_std": 0.505941,
+        "ir": 0.1654,
+        "ic_positive_ratio": 0.5653,
+        "ic_count": 605,
+        "n_groups": 5,
+        "long_short_spread": 0.5116,
+        "group_final_equity": {
+          "Group_1": 0.3731,
+          "Group_2": 0.4385,
+          "Group_3": 0.5681,
+          "Group_4": 0.3393,
+          "Group_5": 0.8847
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/rv/all_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "rv",
+      "split": "calendar2025_known",
+      "observations": 363,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.094582,
+        "ic_std": 0.513144,
+        "ir": 0.1843,
+        "ic_positive_ratio": 0.5868,
+        "ic_count": 363,
+        "n_groups": 5,
+        "long_short_spread": 0.5572,
+        "group_final_equity": {
+          "Group_1": 0.5196,
+          "Group_2": 0.5928,
+          "Group_3": 0.6856,
+          "Group_4": 0.5695,
+          "Group_5": 1.0769
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/rv/calendar2025_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "rv",
+      "split": "calendar2026_known",
+      "observations": 242,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.067395,
+        "ic_std": 0.495546,
+        "ir": 0.136,
+        "ic_positive_ratio": 0.5331,
+        "ic_count": 242,
+        "n_groups": 5,
+        "long_short_spread": 0.1036,
+        "group_final_equity": {
+          "Group_1": 0.718,
+          "Group_2": 0.7398,
+          "Group_3": 0.8287,
+          "Group_4": 0.5958,
+          "Group_5": 0.8215
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/predictive/rv/calendar2026_known/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    }
+  ],
+  "source_candidate_family_count": 1,
+  "new_accepted_alphas": 0,
+  "financial_accounts": 0,
+  "new_combinations": 0,
+  "conditional_diagnostics_are_not_full_account_returns": true,
+  "net_account_returns": null,
+  "independent_oos_certified": false
+}

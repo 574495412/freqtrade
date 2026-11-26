@@ -1,0 +1,55 @@
+{
+  "review_date": "2026-11-25",
+  "discovery_sources": [
+    {
+      "platform": "X",
+      "url": "https://x.com/i/web/status/1587591552691765251",
+      "evidence": "Direct request returned 403. The pinned OctopusTakopi source documents its interpretation and local parameter choices."
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=TjkdsSHW6oQ",
+      "transcript": "https://mebfaber.com/2017/01/04/episode-35-just-boiled-one-question-will-big-winners-pay-small-losses/",
+      "evidence": "Original Turtle trader Jerry Parker discusses testing whether large winners cover losses. The show transcript is qualitative context."
+    },
+    {
+      "platform": "Douyin",
+      "url": "https://www.douyin.com/shipin/7305318023555581963",
+      "evidence": "Related video's accessible transcript describes the 55/20 rule, 0.5N additions, and 2N stop. Position-sizing convention differs from the primary rules; use the primary rules for the adaptation."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Original Turtle Rules, System 2",
+      "url": "https://www.tradingblox.com/originalturtles/originalturtlerules.pdf",
+      "sha256": "cfd448f2061379b7813eecec7d1a12d9ab6fbd9eaa396a771da4db0b7be593d4",
+      "decision": "Admitted to a daily-close historical Freqtrade adaptation. Exact adaptation differences documented in protocol.json."
+    },
+    {
+      "name": "Price Transmission from Bitcoin to Altcoins",
+      "url": "https://link.springer.com/article/10.1007/s10690-026-09589-z",
+      "mechanism": "One-minute BTC and altcoin log returns feed separate entry and hold classifiers to trade delayed response.",
+      "decision": "Source hypothesis retained. No account admitted. None of the five traded paper coins is in the frozen 40-perpetual cohort. Its 1-minute signal is outside the pinned data resolution; source reports that most effects were very small or absent at 2–3 minutes. A 5-minute interpretation would be a different hypothesis."
+    },
+    {
+      "name": "Systematic Cryptocurrency Research",
+      "url": "https://github.com/PeterLP123/systematic-crypto-research",
+      "mechanism": "Compare volatility-normalized trend with reversals following extreme BTC quote-volume share.",
+      "decision": "Source review only. Cost-restated 263-day results were +9.54% for trend and -6.96% for the reversal rule. Trend allocated approximately 77.5% of mean gross exposure to BTC. The source's accounts are separate from the frozen Binance 40-perpetual comparison."
+    },
+    {
+      "name": "CTA components in crypto perpetuals",
+      "url": "https://github.com/OctopusTakopi/crypto-trend-following",
+      "repository_commit": "804eb428705c913988371c28a57ca051bb3a7f9c",
+      "mechanism": "Volatility-normalized EMA trends, inverse volatility weights, correlation grouping and a no-rebalance band.",
+      "decision": "Use as an implementation reference. Published inverse-volatility ablation supported a risk-sizing contribution. Source model draws on a wider universe and permits 2x gross; its performance is outside the current 1x account comparison."
+    },
+    {
+      "name": "CTREND and the 2026 reproduction audit",
+      "original_url": "https://doi.org/10.1017/S0022109024000747",
+      "audit_url": "https://arxiv.org/html/2611.01951v1",
+      "public_repository_commit": "c31860f7f479b8da0d0a8488aa4133c5ff5f7fe8",
+      "decision": "Original result depends on portfolio definitions and signal timing. Published corrected full-universe low-cost mean is -0.87% per week with no ex-post asset removal. Restricted asset-level inputs and economic settlement required for a full replication. Keep public summary verification separate from Freqtrade performance."
+    }
+  ]
+}

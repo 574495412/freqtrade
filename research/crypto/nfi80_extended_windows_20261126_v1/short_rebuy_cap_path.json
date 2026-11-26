@@ -1,0 +1,313 @@
+{
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/short_rebuy_cap_path.py",
+    "sha256": "fd84e7a3f982e1c131d479e59e739be973419383bd918e1c89ec8e63fb575866"
+  },
+  "budget_screen": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/short_rebuy_transfer_audit.json",
+    "sha256": "49f83f7ebd066036a9c852c72228279558763c8e430eb9a7c9950acd9cd7287d"
+  },
+  "by_14_slot_account": {
+    "2024_15bp": {
+      "native_book": {
+        ".zip": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_boost_14_15bp/account/native_results/backtest-result-2026-11-26_06-45-06.zip",
+          "sha256": "408e889d9f96b24dc8239816700f1b5dbc6aef5176e394a6fbf5faaab3ac4511"
+        },
+        ".parquet": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_boost_14_15bp/account/five_minute_equity.parquet",
+          "sha256": "fc2a9ce1a9271c29ec0ca1b25fc4897ded9009c15b43188b6cbeb2b389cd82d7"
+        }
+      },
+      "native_registered_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_boost_14_15bp/account/registered_plan.json",
+        "sha256": "063d23c9439f80f837149a958aac052eb0b737368ba1597d15b847767b1455b4"
+      },
+      "short_natural_closes": 79,
+      "short_net_realized_usdt": 226.21276838,
+      "budget_crossing_natural_closes": 2,
+      "budget_crossing_net_realized_usdt": -133.41223648,
+      "other_shorts_net_realized_usdt": 359.62500486,
+      "crossing_campaigns": [
+        {
+          "pair": "TIA/USDT:USDT",
+          "tag": "562",
+          "first_fill": "2024-07-19T01:15:00+00:00",
+          "first_filled_budget_exceedance": "2024-07-22T01:20:00+00:00",
+          "first_crossing_addition_number": 2,
+          "addition_count": 2,
+          "first_margin_usdt": 58.695033333333335,
+          "lifetime_margin_usdt": 172.0071,
+          "lifetime_margin_over_first": 2.930522230444257,
+          "natural_close_net_usdt": 7.48523893,
+          "natural_close_net_to_prior_nav": 0.0025662429753781,
+          "outside_discovery_window": true,
+          "natural_close": "2024-07-23T20:05:00+00:00",
+          "pre_entry_nav_usdt": 2916.8083466052763,
+          "marked_pnl_at_budget_crossing_before_fill_usdt": -59.55712213092718,
+          "minimum_marked_pnl_before_crossing_as_fraction_of_prior_nav": -0.024497566856814472,
+          "minimum_marked_pnl_after_crossing_as_fraction_of_prior_nav": -0.02619065022982947,
+          "first_mark_loss_reaching_1pct_of_prior_nav": "2024-07-21T23:30:00+00:00",
+          "max_marked_gross_notional_over_account_nav_before_crossing": 0.14696904405296976,
+          "max_marked_gross_notional_over_account_nav_after_crossing": 0.2072246541278432,
+          "checked_held_marks": 1378
+        },
+        {
+          "pair": "GMT/USDT:USDT",
+          "tag": "562",
+          "first_fill": "2024-09-06T20:55:00+00:00",
+          "first_filled_budget_exceedance": "2024-09-09T18:20:00+00:00",
+          "first_crossing_addition_number": 2,
+          "addition_count": 12,
+          "first_margin_usdt": 67.9484,
+          "lifetime_margin_usdt": 459.11599666666666,
+          "lifetime_margin_over_first": 6.756833077256663,
+          "natural_close_net_usdt": -140.89747541,
+          "natural_close_net_to_prior_nav": -0.04250279461844569,
+          "outside_discovery_window": true,
+          "natural_close": "2024-09-28T00:00:00+00:00",
+          "pre_entry_nav_usdt": 3315.0167341902793,
+          "marked_pnl_at_budget_crossing_before_fill_usdt": -70.12053162654988,
+          "minimum_marked_pnl_before_crossing_as_fraction_of_prior_nav": -0.022248273224021828,
+          "minimum_marked_pnl_after_crossing_as_fraction_of_prior_nav": -0.044249351549614464,
+          "first_mark_loss_reaching_1pct_of_prior_nav": "2024-09-09T08:15:00+00:00",
+          "max_marked_gross_notional_over_account_nav_before_crossing": 0.14805955870030324,
+          "max_marked_gross_notional_over_account_nav_after_crossing": 0.21901448873573484,
+          "checked_held_marks": 6085
+        }
+      ]
+    },
+    "continuous_15bp": {
+      "native_book": {
+        ".zip": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_14_15bp/account/native_results/backtest-result-2026-11-26_09-28-44.zip",
+          "sha256": "6c14fb781e56b4e37ad2590346ee06c10932f3d0d4117dfdd7462eed7cc86978"
+        },
+        ".parquet": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_14_15bp/account/five_minute_equity.parquet",
+          "sha256": "4b4343b67371fb1007f4a9bd52310e77637228a6741361582327466f36a4d746"
+        }
+      },
+      "native_registered_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_14_15bp/registration/plan.json",
+        "sha256": "cfc8240d91f44fec442f3b842f8f9e469b8050ee0dd425921d6af40bcc9ca620"
+      },
+      "short_natural_closes": 187,
+      "short_net_realized_usdt": -1003.5337300699999,
+      "budget_crossing_natural_closes": 5,
+      "budget_crossing_net_realized_usdt": -5630.18544452,
+      "other_shorts_net_realized_usdt": 4626.651714449999,
+      "crossing_campaigns": [
+        {
+          "pair": "USUAL/USDT:USDT",
+          "tag": "562",
+          "first_fill": "2025-08-05T22:05:00+00:00",
+          "first_filled_budget_exceedance": "2025-08-09T20:30:00+00:00",
+          "first_crossing_addition_number": 2,
+          "addition_count": 2,
+          "first_margin_usdt": 107.66802666666666,
+          "lifetime_margin_usdt": 322.97529,
+          "lifetime_margin_over_first": 2.999732603996829,
+          "natural_close_net_usdt": 8.1761775,
+          "natural_close_net_to_prior_nav": 0.0016214362776891386,
+          "outside_discovery_window": true,
+          "natural_close": "2025-08-12T10:25:00+00:00",
+          "pre_entry_nav_usdt": 5042.552465677307,
+          "marked_pnl_at_budget_crossing_before_fill_usdt": -134.44906531231248,
+          "minimum_marked_pnl_before_crossing_as_fraction_of_prior_nav": -0.02979420341861781,
+          "minimum_marked_pnl_after_crossing_as_fraction_of_prior_nav": -0.028955255704508746,
+          "first_mark_loss_reaching_1pct_of_prior_nav": "2025-08-08T08:10:00+00:00",
+          "max_marked_gross_notional_over_account_nav_before_crossing": 0.15185678829407548,
+          "max_marked_gross_notional_over_account_nav_after_crossing": 0.21223654596997985,
+          "checked_held_marks": 1876
+        },
+        {
+          "pair": "DYDX/USDT:USDT",
+          "tag": "562",
+          "first_fill": "2025-09-04T23:55:00+00:00",
+          "first_filled_budget_exceedance": "2025-09-18T22:20:00+00:00",
+          "first_crossing_addition_number": 2,
+          "addition_count": 2,
+          "first_margin_usdt": 114.7986,
+          "lifetime_margin_usdt": 344.3655,
+          "lifetime_margin_over_first": 2.9997360594989835,
+          "natural_close_net_usdt": -117.90167095,
+          "natural_close_net_to_prior_nav": -0.021665478624954677,
+          "outside_discovery_window": true,
+          "natural_close": "2025-09-18T23:55:00+00:00",
+          "pre_entry_nav_usdt": 5441.913977113748,
+          "marked_pnl_at_budget_crossing_before_fill_usdt": -115.85858562913056,
+          "minimum_marked_pnl_before_crossing_as_fraction_of_prior_nav": -0.021303903972755008,
+          "minimum_marked_pnl_after_crossing_as_fraction_of_prior_nav": -0.021972282565469528,
+          "first_mark_loss_reaching_1pct_of_prior_nav": "2025-09-09T07:05:00+00:00",
+          "max_marked_gross_notional_over_account_nav_before_crossing": 0.14438106247284888,
+          "max_marked_gross_notional_over_account_nav_after_crossing": 0.206810732767172,
+          "checked_held_marks": 4032
+        },
+        {
+          "pair": "AAVE/USDT:USDT",
+          "tag": "562",
+          "first_fill": "2025-11-05T01:25:00+00:00",
+          "first_filled_budget_exceedance": "2025-11-10T11:30:00+00:00",
+          "first_crossing_addition_number": 2,
+          "addition_count": 29,
+          "first_margin_usdt": 212.15833333333333,
+          "lifetime_margin_usdt": 3105.6276666666668,
+          "lifetime_margin_over_first": 14.638254448328686,
+          "natural_close_net_usdt": 21.153795680000044,
+          "natural_close_net_to_prior_nav": 0.0020185948573745605,
+          "outside_discovery_window": true,
+          "natural_close": "2025-11-21T07:35:00+00:00",
+          "pre_entry_nav_usdt": 10479.46575446707,
+          "marked_pnl_at_budget_crossing_before_fill_usdt": -235.03111857964447,
+          "minimum_marked_pnl_before_crossing_as_fraction_of_prior_nav": -0.022976524470794485,
+          "minimum_marked_pnl_after_crossing_as_fraction_of_prior_nav": -0.03515318405388252,
+          "first_mark_loss_reaching_1pct_of_prior_nav": "2025-11-05T18:50:00+00:00",
+          "max_marked_gross_notional_over_account_nav_before_crossing": 0.1379073068966443,
+          "max_marked_gross_notional_over_account_nav_after_crossing": 0.2013095831219146,
+          "checked_held_marks": 4682
+        },
+        {
+          "pair": "NEAR/USDT:USDT",
+          "tag": "562",
+          "first_fill": "2026-08-14T07:45:00+00:00",
+          "first_filled_budget_exceedance": "2026-08-21T23:15:00+00:00",
+          "first_crossing_addition_number": 2,
+          "addition_count": 47,
+          "first_margin_usdt": 700.2666666666667,
+          "lifetime_margin_usdt": 13477.831666666667,
+          "lifetime_margin_over_first": 19.246713156892614,
+          "natural_close_net_usdt": -5766.02531195,
+          "natural_close_net_to_prior_nav": -0.1701197764664523,
+          "outside_discovery_window": false,
+          "natural_close": "2026-09-28T00:00:00+00:00",
+          "pre_entry_nav_usdt": 33893.915403110484,
+          "marked_pnl_at_budget_crossing_before_fill_usdt": -783.9332071879662,
+          "minimum_marked_pnl_before_crossing_as_fraction_of_prior_nav": -0.023975346343100622,
+          "minimum_marked_pnl_after_crossing_as_fraction_of_prior_nav": -0.17793368558714742,
+          "first_mark_loss_reaching_1pct_of_prior_nav": "2026-08-21T03:40:00+00:00",
+          "max_marked_gross_notional_over_account_nav_before_crossing": 0.14597697907445942,
+          "max_marked_gross_notional_over_account_nav_after_crossing": 0.22569540269533003,
+          "checked_held_marks": 12867
+        },
+        {
+          "pair": "FARTCOIN/USDT:USDT",
+          "tag": "562",
+          "first_fill": "2026-09-16T01:40:00+00:00",
+          "first_filled_budget_exceedance": "2026-09-18T19:45:00+00:00",
+          "first_crossing_addition_number": 2,
+          "addition_count": 33,
+          "first_margin_usdt": 756.8679466666666,
+          "lifetime_margin_usdt": 12624.457426666666,
+          "lifetime_margin_over_first": 16.679867977321837,
+          "natural_close_net_usdt": 224.41156520000038,
+          "natural_close_net_to_prior_nav": 0.006152753726360463,
+          "outside_discovery_window": false,
+          "natural_close": "2026-10-18T19:45:00+00:00",
+          "pre_entry_nav_usdt": 36473.35407535424,
+          "marked_pnl_at_budget_crossing_before_fill_usdt": -787.6264106667927,
+          "minimum_marked_pnl_before_crossing_as_fraction_of_prior_nav": -0.022835758480598774,
+          "minimum_marked_pnl_after_crossing_as_fraction_of_prior_nav": -0.03572394457048146,
+          "first_mark_loss_reaching_1pct_of_prior_nav": "2026-09-18T03:30:00+00:00",
+          "max_marked_gross_notional_over_account_nav_before_crossing": 0.15545686563594896,
+          "max_marked_gross_notional_over_account_nav_after_crossing": 0.2291016633191061,
+          "checked_held_marks": 9433
+        }
+      ]
+    },
+    "2025_8bp": {
+      "native_book": {
+        ".zip": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_8bp/account/native_results/backtest-result-2026-11-26_07-11-19.zip",
+          "sha256": "c9b99bb62402da28263181c3d4cbc096fd161d476779f50a852d32836c2378b4"
+        },
+        ".parquet": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_8bp/account/five_minute_equity.parquet",
+          "sha256": "81cc68f2c68dd108fb09d2a85e163c676a220f69f9ab177796ff61a101ffadb6"
+        }
+      },
+      "native_registered_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_8bp/account/registered_plan.json",
+        "sha256": "7dbe14aae44334c781921089a2b626895367ecfb9b5aa896afdd530a6f8a0681"
+      },
+      "short_natural_closes": 111,
+      "short_net_realized_usdt": 1214.03896534,
+      "budget_crossing_natural_closes": 3,
+      "budget_crossing_net_realized_usdt": -72.71309768999998,
+      "other_shorts_net_realized_usdt": 1286.75206303,
+      "crossing_campaigns": [
+        {
+          "pair": "USUAL/USDT:USDT",
+          "tag": "562",
+          "first_fill": "2025-08-05T22:05:00+00:00",
+          "first_filled_budget_exceedance": "2025-08-09T20:30:00+00:00",
+          "first_crossing_addition_number": 2,
+          "addition_count": 2,
+          "first_margin_usdt": 115.39826666666667,
+          "lifetime_margin_usdt": 346.18110666666666,
+          "lifetime_margin_over_first": 2.99988133848342,
+          "natural_close_net_usdt": 10.21257338,
+          "natural_close_net_to_prior_nav": 0.0018633008793676412,
+          "outside_discovery_window": true,
+          "natural_close": "2025-08-12T10:25:00+00:00",
+          "pre_entry_nav_usdt": 5480.904073563202,
+          "marked_pnl_at_budget_crossing_before_fill_usdt": -143.03731931842435,
+          "minimum_marked_pnl_before_crossing_as_fraction_of_prior_nav": -0.029183073387454336,
+          "minimum_marked_pnl_after_crossing_as_fraction_of_prior_nav": -0.028268076304094017,
+          "first_mark_loss_reaching_1pct_of_prior_nav": "2025-08-08T08:10:00+00:00",
+          "max_marked_gross_notional_over_account_nav_before_crossing": 0.15293747145099057,
+          "max_marked_gross_notional_over_account_nav_after_crossing": 0.213729340174896,
+          "checked_held_marks": 1876
+        },
+        {
+          "pair": "DYDX/USDT:USDT",
+          "tag": "562",
+          "first_fill": "2025-09-04T23:55:00+00:00",
+          "first_filled_budget_exceedance": "2025-09-18T22:20:00+00:00",
+          "first_crossing_addition_number": 2,
+          "addition_count": 2,
+          "first_margin_usdt": 124.7022,
+          "lifetime_margin_usdt": 374.08973333333336,
+          "lifetime_margin_over_first": 2.999864744433806,
+          "natural_close_net_usdt": -126.41995465,
+          "natural_close_net_to_prior_nav": -0.021368268416460556,
+          "outside_discovery_window": true,
+          "natural_close": "2025-09-18T23:55:00+00:00",
+          "pre_entry_nav_usdt": 5916.247034439874,
+          "marked_pnl_at_budget_crossing_before_fill_usdt": -124.72507266061996,
+          "minimum_marked_pnl_before_crossing_as_fraction_of_prior_nav": -0.021095629577388954,
+          "minimum_marked_pnl_after_crossing_as_fraction_of_prior_nav": -0.02167461951846215,
+          "first_mark_loss_reaching_1pct_of_prior_nav": "2025-09-09T07:05:00+00:00",
+          "max_marked_gross_notional_over_account_nav_before_crossing": 0.14434357644801196,
+          "max_marked_gross_notional_over_account_nav_after_crossing": 0.2067306090515294,
+          "checked_held_marks": 4032
+        },
+        {
+          "pair": "AAVE/USDT:USDT",
+          "tag": "562",
+          "first_fill": "2025-11-05T01:25:00+00:00",
+          "first_filled_budget_exceedance": "2025-11-10T11:30:00+00:00",
+          "first_crossing_addition_number": 2,
+          "addition_count": 31,
+          "first_margin_usdt": 236.405,
+          "lifetime_margin_usdt": 3544.896333333333,
+          "lifetime_margin_over_first": 14.995014205847308,
+          "natural_close_net_usdt": 43.49428358000001,
+          "natural_close_net_to_prior_nav": 0.0037782558299836646,
+          "outside_discovery_window": true,
+          "natural_close": "2025-11-21T07:35:00+00:00",
+          "pre_entry_nav_usdt": 11511.73598008795,
+          "marked_pnl_at_budget_crossing_before_fill_usdt": -258.00318757154764,
+          "minimum_marked_pnl_before_crossing_as_fraction_of_prior_nav": -0.022963533791817772,
+          "minimum_marked_pnl_after_crossing_as_fraction_of_prior_nav": -0.03487990472805927,
+          "first_mark_loss_reaching_1pct_of_prior_nav": "2025-11-06T03:45:00+00:00",
+          "max_marked_gross_notional_over_account_nav_before_crossing": 0.13817608130009393,
+          "max_marked_gross_notional_over_account_nav_after_crossing": 0.20166818532570838,
+          "checked_held_marks": 4682
+        }
+      ]
+    }
+  },
+  "scope": "Observed short paths. Marks at a recorded crossing are valued before fills at that candle. The terminal post-close observation verifies cash only. No orders or wallet paths are modified.",
+  "orders_enabled": false
+}

@@ -1,0 +1,110 @@
+{
+  "scope": "Same completed native account: calendar slices without resetting wallet or rerunning models",
+  "cost_bps_per_side": 15,
+  "quarters": {
+    "Q1": {
+      "start": "2025-01-01T00:00:00+00:00",
+      "end": "2025-04-01T00:00:00+00:00",
+      "starting_equity_usdt": 1000.0,
+      "ending_equity_usdt": 2978.8574629443888,
+      "net_return": 1.9788574629443887,
+      "drawdown_since_quarter_start": 0.20864941761495048
+    },
+    "Q2": {
+      "start": "2025-04-01T00:00:00+00:00",
+      "end": "2025-07-01T00:00:00+00:00",
+      "starting_equity_usdt": 2978.8574629443888,
+      "ending_equity_usdt": 4035.2048430019486,
+      "net_return": 0.35461494656862014,
+      "drawdown_since_quarter_start": 0.07312774358411378
+    },
+    "Q3": {
+      "start": "2025-07-01T00:00:00+00:00",
+      "end": "2025-10-01T00:00:00+00:00",
+      "starting_equity_usdt": 4035.2048430019486,
+      "ending_equity_usdt": 4540.5681763547145,
+      "net_return": 0.12523858218231276,
+      "drawdown_since_quarter_start": 0.08697381367631996
+    },
+    "Q4": {
+      "start": "2025-10-01T00:00:00+00:00",
+      "end": "2025-12-31T23:55:00+00:00",
+      "starting_equity_usdt": 4540.5681763547145,
+      "ending_equity_usdt": 10799.513748459443,
+      "net_return": 1.3784498611205906,
+      "drawdown_since_quarter_start": 0.11210822558933964
+    }
+  },
+  "largest_natural_winner": {
+    "mode": "top_coins_long",
+    "pair": "ONDO/USDT:USDT",
+    "tags": [
+      "145"
+    ],
+    "open": "2025-10-10 21:40:00+00:00",
+    "close": "2025-10-10 21:45:00+00:00",
+    "exit_reason": "exit_long_tc_d_12_1 ( 145 )",
+    "net_profit_usdt": 283.24386624,
+    "initial_margin_usdt": 380.7690666666667,
+    "entry_fills": 1,
+    "one_entry_net_profit_on_margin": 0.7438731006160164
+  },
+  "winner_execution_in_native_candles": {
+    "open_rate": 0.487,
+    "close_rate": 0.6094,
+    "simulated_leverage": 3.0,
+    "exchange_5m_ohlcv_receipt": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/annual_2025/candles/futures/ONDO_USDT_USDT-5m-futures.feather",
+      "sha256": "6c1f6786ecf2b06bc087e079323e025231823de00e36f292531b847a6994eb14"
+    },
+    "rows": [
+      {
+        "clock": "2025-10-10T21:40:00+00:00",
+        "open": 0.487,
+        "high": 0.6682,
+        "low": 0.4864,
+        "close": 0.6094,
+        "volume": 16900522.7
+      },
+      {
+        "clock": "2025-10-10T21:45:00+00:00",
+        "open": 0.6094,
+        "high": 0.6096,
+        "low": 0.575,
+        "close": 0.6029,
+        "volume": 11981897.0
+      }
+    ]
+  },
+  "largest_natural_loss": {
+    "mode": "other_long",
+    "pair": "PENGU/USDT:USDT",
+    "tags": [
+      "161"
+    ],
+    "open": "2025-07-29 07:25:00+00:00",
+    "close": "2025-10-10 21:20:00+00:00",
+    "exit_reason": "stop_loss",
+    "net_profit_usdt": -986.5653578600001,
+    "initial_margin_usdt": 364.03205533333335,
+    "entry_fills": 90,
+    "one_entry_net_profit_on_margin": null
+  },
+  "account_receipt": {
+    "path": "user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_15bp/account_reconciled.json",
+    "sha256": "1f9dc0b2a3fd1850cfe12f82a0648a4c05801ca829de21a6f1de283be96d5e32"
+  },
+  "plan_receipt": {
+    "path": "user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_15bp/account/registered_plan.json",
+    "sha256": "68f7e08617ee44ad67113b4efe98d4aa80a628e3d946b1c3c51a28e26b640dc7"
+  },
+  "curve_receipt": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_15bp/account/five_minute_equity.parquet",
+    "sha256": "20c229d0fe6bfd4042e184952e37cb2e4dc5185f91c4890c46a48febd9989979"
+  },
+  "trade_receipt": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_15bp/account/native_results/backtest-result-2026-11-26_03-13-52.zip",
+    "sha256": "0094e3baa1597af02b5bd1a9ab86d8b4689a271d7340a50b8c8143e8b86d0212"
+  },
+  "orders_enabled": false
+}

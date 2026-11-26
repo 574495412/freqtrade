@@ -1,0 +1,9 @@
+{
+  "hypothesis": "A cap on projected gross marked notional for the 13th or 14th fresh long can address the principal observed 2024 extension losses without blocking the new large winners in the longer main window.",
+  "policy": "At a fresh long confirmation attempting to use the 13th or 14th slot, reject if projected gross marked notional would exceed 3.0 times the pre-candle marked NAV. Use the registered contract leverage of 3.0 as the portfolio notional threshold. Count both long and short inventory in gross notional. Retain original earlier slots, shorts, position adjustments and exits.",
+  "clock": "Five-minute mark OPEN and wallet NAV at the replay candle before applying orders at that clock. Value existing inventory from orders filled strictly earlier. Use the proposed entry rate times amount as the notional proxy from the archived first fill, including preceding confirmed initial fills in the same five-minute interval. Leave cases with same-clock adjustments or exits unresolved.",
+  "historical_screen": "Compare four documented 2024 stress entries and all extra 14-slot first fills that close naturally in the independently reconciled two-year 15 bp and 8 bp comparisons. Preserve exact earlier-slot outcomes and unknown slot rank. This screen does not replay replacements or recalculate profits.",
+  "advance": "Identify at least one of the two extra-slot stress losers, ETH and ONG, with a definite block. Preserve every extra large winner in either cost, with no unknown slots or exposure for those winners. Large win means natural net profit of at least 1% of pre-entry marked NAV. Require native account replays under both costs following a pass.",
+  "owner": "Pinned Freqtrade strategy interface confirm_trade_entry. The diagnostic threshold and point-in-time exposure snapshot are local research logic.",
+  "orders_enabled": false
+}

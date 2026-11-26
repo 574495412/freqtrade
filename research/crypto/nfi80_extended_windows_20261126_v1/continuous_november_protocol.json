@@ -1,0 +1,15 @@
+{
+  "objective": "Extend the continuous fixed-boost 12- and 14-slot NFI comparison through the already observed November 25 UTC close with the same engine, cash, entry rules, position caps and costs.",
+  "window": {
+    "start_utc": "2024-01-01T00:00:00+00:00",
+    "end_exclusive_utc": "2026-11-26T00:00:00+00:00",
+    "last_mark_utc": "2026-11-25T23:55:00+00:00",
+    "pairlist_days": 1060,
+    "five_minute_marks": 305280
+  },
+  "seam_utc": "2026-11-09T00:00:00+00:00",
+  "market_contract": "Unchanged 222-symbol snapshot. Keep the archived top-80 selection for November 9 and use the existing daily schedules beginning November 10. Keep data for all 222 assets so holdings can continue even when a symbol is ineligible for new entries.",
+  "supplemental_rules": "Reuse the 112 existing late-window market tapes. For every remaining symbol collect public Binance USD-M 5m trade and mark candles and actual funding events, verify completed exchange 1d candles from the frozen late-window daily sources and aggregate 15m, 1h, 4h and 1h mark candles through the existing native-input aggregation. Keep physical files small by capturing only the supplement and a 24-hour overlap. At crossing compare the previously frozen old rows and source settlements. Represent the observed price, funding and asset availability gaps explicitly.",
+  "financial_checks": "Use existing Freqtrade registration, unchanged native calculation and reconstructed five-minute valuation. One complete wallet per slot count and cost. Compare returns, drawdown, natural campaign counts and carry positions. Archived older and separate restarted late-window accounts are references, not the extended result.",
+  "orders_enabled": false
+}

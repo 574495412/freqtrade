@@ -1,0 +1,66 @@
+"""Meaningful feature input, prefix and source-convention component checks."""
+import numpy as np
+import pandas as pd
+import pytest
+from bootstrap import boot
+
+boot()
+from freqtrade.data.residual_momentum import source_residual_momentum
+
+def prices():
+    rng=np.random.default_rng(991)
+    dates=pd.date_range('2024-11-01',periods=1600,freq='h',tz='UTC')
+    return pd.DataFrame(100*np.exp(np.cumsum(rng.normal(0,.002,(1600,8)),axis=0)),index=dates,columns=list('ABCDEFGH'))
+
+@pytest.mark.parametrize('fault',['naive','duplicate_hour','missing_hour','unordered','nonhour','missing_price','zero','negative','infinity','seven','duplicate_asset'])
+def test_input_admission_rejects(fault):
+    p=prices()
+    if fault=='naive':p.index=p.index.tz_localize(None)
+    elif fault=='duplicate_hour':p.index=pd.DatetimeIndex([p.index[0],*p.index[:-1]])
+    elif fault=='missing_hour':p=p.drop(p.index[400])
+    elif fault=='unordered':p=p.iloc[::-1]
+    elif fault=='nonhour':p.index=p.index+pd.Timedelta(minutes=1)
+    elif fault=='seven':p=p.iloc[:,:7]
+    elif fault=='duplicate_asset':p.columns=list('ABCDEFGG')
+    else:p.iloc[400,0]={'missing_price':np.nan,'zero':0,'negative':-1,'infinity':np.inf}[fault]
+    with pytest.raises(ValueError):source_residual_momentum(p)
+
+def test_source_warmup_and_beta_only_subtraction():
+    p=prices();r=source_residual_momentum(p)
+    assert r['beta'].first_valid_index()==p.index[684]
+    assert r['signal'].first_valid_index()==p.index[1002]
+    pd.testing.assert_frame_equal(r['residual'],r['returns']-r['beta'].mul(r['market'],axis=0),check_exact=True)
+    assert not r['signal'].iloc[1001].notna().any()
+    assert r['signal'].iloc[1055:].notna().all().all()
+
+def test_future_changes_and_truncation_do_not_change_prior_features():
+    p=prices();base=source_residual_momentum(p)
+    for n in [1100,1250,1450]:
+        changed=p.copy();changed.iloc[n:]*=3.14
+        altered=source_residual_momentum(changed);short=source_residual_momentum(p.iloc[:n])
+        for key in ['beta','residual','signal','raw']:
+            pd.testing.assert_frame_equal(base[key].iloc[:n],altered[key].iloc[:n],check_exact=True)
+            pd.testing.assert_frame_equal(base[key].iloc[:n],short[key],check_exact=True)
+
+def test_price_scale_invariance_and_degenerate_market_unknown():
+    p=prices();a=source_residual_momentum(p);b=source_residual_momentum(p*10)
+    np.testing.assert_allclose(a['signal'],b['signal'],rtol=1e-9,atol=1e-12,equal_nan=True)
+    p[:]=100.;c=source_residual_momentum(p)
+    assert c['signal'].isna().all().all()
+    assert not np.isinf(c['beta'].to_numpy()).any()
+
+
+@pytest.mark.parametrize('runmode,diagnostic',[('live',True),('dry_run',True),('backtest',False)])
+def test_input_only_strategy_rejects_services_and_financial_mode(runmode,diagnostic):
+    from ResidualInputs import ResidualInputs
+    from freqtrade.enums import RunMode
+    owner=object.__new__(ResidualInputs)
+    owner.config={'runmode':RunMode(runmode),'research_diagnostic_only':diagnostic}
+    with pytest.raises(ValueError):owner.bot_start()
+
+
+def test_input_only_loop_cannot_be_recorded_as_all_cash_backtest():
+    from ResidualInputs import ResidualInputs
+    owner=object.__new__(ResidualInputs)
+    assert owner.confirm_trade_entry() is False
+    with pytest.raises(ValueError):owner.bot_loop_start()

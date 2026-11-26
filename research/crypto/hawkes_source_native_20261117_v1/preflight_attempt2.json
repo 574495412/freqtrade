@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "funding_policy": "before_orders",
+      "cases": [
+        {
+          "pair": "BTC/USDT:USDT",
+          "rows": 25,
+          "source_features_and_native_signals_exact": true
+        },
+        {
+          "pair": "ETH/USDT:USDT",
+          "rows": 25,
+          "source_features_and_native_signals_exact": true
+        }
+      ],
+      "missing_flag_rejected": true,
+      "financial_start_called": false
+    },
+    {
+      "funding_policy": "after_orders",
+      "cases": [
+        {
+          "pair": "BTC/USDT:USDT",
+          "rows": 25,
+          "source_features_and_native_signals_exact": true
+        },
+        {
+          "pair": "ETH/USDT:USDT",
+          "rows": 25,
+          "source_features_and_native_signals_exact": true
+        }
+      ],
+      "missing_flag_rejected": true,
+      "financial_start_called": false
+    }
+  ],
+  "new_financial_accounts": 0
+}

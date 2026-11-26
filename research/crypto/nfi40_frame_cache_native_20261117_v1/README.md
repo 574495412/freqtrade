@@ -1,0 +1,22 @@
+# Bounded analyzed-frame storage prototype
+
+The fifth frozen probe completed with exit code 0. Exact native DataProvider slice and synthetic NFI callback checks passed. The tested small repeated frame was slower with the block prototype; this is a retained negative performance result. This prototype is not admitted to replace the running original NFI account controller.
+
+The input was regenerated through the pinned native configuration, exchange/strategy resolution, history loading, historical-precision count-column side effect, and NFI indicator method. The 4,000 × 231 indicator frame serialized to SHA256 `74ee21b7f8d726b3e2ac264b6cb8c57c471b4ad39361f6ada171a46f3be1d690`, matching the prior preflight reference without loading its pickle. The actual native signal method then produced 4,000 × 237 analyzed columns. The five loader count columns and six signal columns are separate native stages. Reproducing those columns does not correct the inherited monthly precision or historical rules gaps.
+
+`frame_storage_v3.py` changes only this prototype's private analyzed-cache mapping. Native DataProvider `_set_cached_df` and `get_analyzed_dataframe` remain unmodified. The wrapper uses 4,096-row process-generated Pickle/Zstd blocks and a 32-block LRU. It verifies compressed and decompressed hashes before unpickling, rejects unsupported APIs, and rejects semantic mutation during eviction/flush instead of rewriting a changed block. The supported scope is the backtest cache assignment before native trim/copy/signal shift; it is not every DataProvider API.
+
+`probe_result_v5.json` records 300 random native slices across the source, actual analyzed, and enriched 9,003-row frames, plus boundaries, empty/no-index/missing-key/clear behavior, index classes, dtype/category/UTC/object/NaN and bit-level numeric checks. Assertions use exact Pandas frame equality, index/column classes, attributes, flags and calendar frequency. Serialized chunks roundtrip byte-exactly; no claim is made that a concatenated whole frame has identical pickle layout. Read-only slice results are detached, including mutable object cells. Real mutation and corrupted block tests fail closed. Actual pinned NFI confirmation, custom-exit, and profit-target state match using synthetic detached trade/order descriptors; these are not matching or financial account tests.
+
+| 100-query small-frame probe | Legacy full frame | 32-block prototype |
+| --- | ---: | ---: |
+| Forced cold elapsed | 0.727 s | 5.408 s |
+| Resident LRU elapsed | 0.011 s | 0.145 s |
+| Forced cold decoder bytes | 1,589,744,400 | 864,014,816 |
+| Resident decoder bytes | 15,897,444 | 15,913,741 |
+
+These are bounded probe timings, not a production replacement estimate. The repeated synthetic frame gives whole-frame Zstd more cross-repetition compression. Forced-cold legacy clearing bypasses legacy eviction/writeback checks, while the block clear validates immutability, so those timing paths have different guards. The receipt's legacy compressed-read counter measures decoder payload only; its pre-unpickle SHA guard separately reads the same compressed bytes, doubling the issued legacy file-read bytes. Block compressed bytes are read once and hashed in memory. Resident timings also showed overhead. Peak probe RSS was 651,706,368 bytes. No full-history or 40-asset working-set speedup has been established.
+
+The four unsuccessful attempts, protocols, code, logs and failure receipts remain intact. Attempts 1–2 exposed the native loader/signal stage mismatch (226/232 versus 231/237 columns). Attempts 3–4 exposed physical pickle-layout fingerprints changing after Pandas populated internal read caches. Version 3 storage fingerprints exact logical values/schema instead, while maintaining disk SHA checks and the true mutation rejection test.
+
+Each attempt was frozen before its probe. `small_probe_artifact_manifest.json` seals the completed small-frame stage, including its retained failures and generated artifacts. A later full-width benchmark, if feasible under separately frozen resource limits, is a distinct technical stage. There were zero native financial accounts, no Backtesting or Wallets construction, no exchange orders, and no change or restart of the running original controller. Full native replay parity, execution replacement, historical correctness, financial improvement, and the overall research goal remain unproven.

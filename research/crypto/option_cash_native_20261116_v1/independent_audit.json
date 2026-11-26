@@ -1,0 +1,131 @@
+{
+  "status": "passed",
+  "independent_candidate_imports": false,
+  "arithmetic": "Exact rational from actual native quantities/prices and external marks",
+  "results": [
+    {
+      "case": "short",
+      "currency": "BTC",
+      "boundaries": 6,
+      "exact_coin_scalars": 66,
+      "actual_fills": 5,
+      "checks": {
+        "short_premium_credit_not_equity_profit_and_partial_close_counted_once": true
+      }
+    },
+    {
+      "case": "long",
+      "currency": "BTC",
+      "boundaries": 5,
+      "exact_coin_scalars": 55,
+      "actual_fills": 3,
+      "checks": {
+        "long_mark_gain_adds_no_cash_or_buying_power": true
+      }
+    },
+    {
+      "case": "breach",
+      "currency": "BTC",
+      "boundaries": 3,
+      "exact_coin_scalars": 33,
+      "actual_fills": 1,
+      "checks": {
+        "margin_breach_retained_without_invented_liquidation": true
+      }
+    },
+    {
+      "case": "pending",
+      "currency": "BTC",
+      "boundaries": 3,
+      "exact_coin_scalars": 33,
+      "actual_fills": 0,
+      "checks": {
+        "unfilled_premium_not_credited_native_cancel_releases_reserve": true
+      }
+    },
+    {
+      "case": "full_start",
+      "currency": "BTC",
+      "boundaries": 16,
+      "exact_coin_scalars": 176,
+      "actual_fills": 4,
+      "checks": {
+        "actual_zip": {
+          "closed_trades": 2,
+          "zip_fills": 4,
+          "gross_trade_profit": "0.004",
+          "net_coin_cash_change": "0.00376",
+          "zip_final_balance_is_net_cash_but_trade_profit_is_gross": true,
+          "raw_zip_warmup_start": "2026-11-15 20:00:00",
+          "actual_first_capital_boundary": "2026-11-15T21:00:00+00:00",
+          "strategy_return": null
+        }
+      }
+    },
+    {
+      "case": "short",
+      "currency": "ETH",
+      "boundaries": 6,
+      "exact_coin_scalars": 66,
+      "actual_fills": 5,
+      "checks": {
+        "short_premium_credit_not_equity_profit_and_partial_close_counted_once": true
+      }
+    },
+    {
+      "case": "long",
+      "currency": "ETH",
+      "boundaries": 5,
+      "exact_coin_scalars": 55,
+      "actual_fills": 3,
+      "checks": {
+        "long_mark_gain_adds_no_cash_or_buying_power": true
+      }
+    },
+    {
+      "case": "breach",
+      "currency": "ETH",
+      "boundaries": 3,
+      "exact_coin_scalars": 33,
+      "actual_fills": 1,
+      "checks": {
+        "margin_breach_retained_without_invented_liquidation": true
+      }
+    },
+    {
+      "case": "pending",
+      "currency": "ETH",
+      "boundaries": 3,
+      "exact_coin_scalars": 33,
+      "actual_fills": 0,
+      "checks": {
+        "unfilled_premium_not_credited_native_cancel_releases_reserve": true
+      }
+    },
+    {
+      "case": "full_start",
+      "currency": "ETH",
+      "boundaries": 16,
+      "exact_coin_scalars": 176,
+      "actual_fills": 4,
+      "checks": {
+        "actual_zip": {
+          "closed_trades": 2,
+          "zip_fills": 4,
+          "gross_trade_profit": "0.04",
+          "net_coin_cash_change": "0.0376",
+          "zip_final_balance_is_net_cash_but_trade_profit_is_gross": true,
+          "raw_zip_warmup_start": "2026-11-15 20:00:00",
+          "actual_first_capital_boundary": "2026-11-15T21:00:00+00:00",
+          "strategy_return": null
+        }
+      }
+    }
+  ],
+  "boundaries": 66,
+  "exact_coin_scalars": 726,
+  "actual_fills": 26,
+  "full_start_zips": 2,
+  "historical_option_accounts": 0,
+  "strategy_net_return": null
+}

@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "pair": "BTC",
+      "exact_prefix_and_future_shock_equal": true,
+      "exact_training_matrices_equal": true,
+      "real_model_fit_calls": 6,
+      "full_prediction_rows": 5000,
+      "comparison_fields": [
+        "source_gain",
+        "normalized_gain",
+        "source_predicted_gain"
+      ]
+    },
+    {
+      "pair": "ETH",
+      "exact_prefix_and_future_shock_equal": true,
+      "exact_training_matrices_equal": true,
+      "real_model_fit_calls": 6,
+      "full_prediction_rows": 5000,
+      "comparison_fields": [
+        "source_gain",
+        "normalized_gain",
+        "source_predicted_gain"
+      ]
+    }
+  ],
+  "native_financial_accounts": 0,
+  "profit_proven": false,
+  "full_signal_risk_and_wallet_integration_complete": false
+}

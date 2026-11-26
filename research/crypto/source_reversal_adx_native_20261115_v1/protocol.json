@@ -1,0 +1,80 @@
+{
+  "frozen_utc": "2026-11-15T05:43:34.615421+00:00",
+  "scope": "New local eight-coin source strategy and multi-timeframe interaction cohort; not source spot-account reproduction",
+  "source_repository": "freqtrade/freqtrade-strategies",
+  "source_commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+  "source_license": "GPL-3.0",
+  "source_files": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/Strategy002.py",
+      "sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/ADXMomentum.py",
+      "sha256": "7ed9c2306f337a1cc49cb2e11ddf6b66397853b9c4155faa13e5cf1ea61a651a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/README.md",
+      "sha256": "50df38eb1b1ed410b5e41f55d8dd95e2a834cf89750781e38faa1b24a796b835"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/LICENSE",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    }
+  ],
+  "original_source_startup_candles": {
+    "Strategy002": 0,
+    "ADXMomentum": 20
+  },
+  "local_warmup": "Explicit1000previous candles per requested timeframe, supplied through supported native configuration before account start; no indicator periods/thresholds/ROI/stops changed",
+  "universe_parent": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1/input_admission.json",
+    "sha256": "d6a9646cb571ac9866a1ebc2da0ad93a93b260e39131ea282683512c335d8dd4"
+  },
+  "pairs": [
+    "ADA/USDT:USDT",
+    "BNB/USDT:USDT",
+    "BTC/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "ETH/USDT:USDT",
+    "LINK/USDT:USDT",
+    "LTC/USDT:USDT",
+    "XRP/USDT:USDT"
+  ],
+  "pair_priority": "Unchanged order of the older frozen eight-coin cohort; source repository does not prescribe this universe",
+  "main_strategies": [
+    "SourceReversal",
+    "SourceADX",
+    "ReversalInADXTrend"
+  ],
+  "benchmark": "HoldEight",
+  "capital_usdt": [
+    1000,
+    500
+  ],
+  "benchmark_capital_usdt": [
+    1000
+  ],
+  "per_side_cost_bps": [
+    15,
+    8
+  ],
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "account": "Native1x isolated USDT perpetual, long-only, max8positions, unlimited native per-slot stake,99percent tradable balance, no DCA",
+  "allocation_extension": "Reject minimum exceeding native proposed slot budget; never upsize to a market minimum. Native rounding/fees/margin/fills retained",
+  "combo_rule": "SourceReversal5minute entry AND actual sourceADXMomentum long flag of last completed1hour bar via native merge_informative_pair. SourceReversal exits/ROI/profit-only/stop retained; no discretionary trend exit",
+  "static_portfolios": "Actual500+500 SourceReversal/SourceADX and SourceReversal/ReversalInADXTrend; no curve scaling, cash transfers or capital resets. Fixed two-sleeve terminal return has a convex ceiling relative to same-size component returns; not presumed to beat the best leg",
+  "benchmark_rule": "HoldEight one entry intention per member at first target5minute opening; failed minimum remains cash, no later entry retry; normal native catastrophe/liquidation/terminal handling",
+  "native_primary": "Configuration/StrategyResolver/IStrategy/DataProvider/Backtesting.start/Trade/Order/Wallet/ZIP; no external simulator or registration-only result",
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "common_valuation": "14592hourly markOPEN points before all current-clock events/fills, includes floating PnL/accrued native funding/remaining exit-fee reserve; native terminal forced close separately",
+  "funding": "Full source8expected8hour calendar must be independently checked before workers. Native inclusive lifecycle event convention retained; same-clock entry/exit sensitivities separately reported, not private settlement certification",
+  "promotion_gate": "Signal-interaction1000wallet must be profitable in all3continuous/calendar slices, outperform both1000source parents and1000HoldEight in fullwindow, <=30percent hourly mark drawdown, daily NAV Sharpe>.5, both15/8bps. Static portfolios assessed separately, not promoted by low correlation alone",
+  "no_post_result_changes": true,
+  "orders_enabled": false,
+  "services_changed": false,
+  "independent_oos": false,
+  "upstream_profitability_endorsement": false
+}

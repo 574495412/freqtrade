@@ -1,0 +1,723 @@
+{
+  "source_universe": [
+    "BTC",
+    "ETH",
+    "BCH",
+    "XRP",
+    "EOS",
+    "LTC",
+    "TRX",
+    "ETC",
+    "LINK",
+    "XLM",
+    "ADA",
+    "XMR",
+    "DASH",
+    "ZEC",
+    "XTZ",
+    "ATOM",
+    "BNB",
+    "ONT",
+    "IOTA",
+    "BAT"
+  ],
+  "window": [
+    "2024-12-01 00:00:00+00:00",
+    "2026-09-01 00:00:00+00:00"
+  ],
+  "terminal_EOS": "2025-05-21 09:00:00+00:00",
+  "EOS_known_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/copula_reference_native_20261114_v1/sources/eos_notice_web_capture.txt",
+    "sha256": "2051ead3ae148e0990c73bda98dda1a7bb007a2cb342103842e7f6b1097997b9"
+  },
+  "reused": [
+    {
+      "symbol": "BTC",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+        "sha256": "7fddcb56cfb30c9274ac9fbf7219be4254c7f4e393966104bb2de47ef9729a20"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+        "sha256": "c0485b869bb316b94962d666285990b890af51c1cad7b050068d1b1fc5b6f7ce"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "ETH",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ETH_USDT_USDT-1h-futures.feather",
+        "sha256": "52e2e1aa2dd8697e1cf7f203177997bd1b0bbf303521779c9ea9d399e66447d4"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/ETH_USDT_USDT-1h-futures.feather",
+        "sha256": "8ef7938df02a514be72363a0e224a95d13e7dd7b53157ddaac6bdd0db0b9b7cf"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "BCH",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BCH_USDT_USDT-1h-futures.feather",
+        "sha256": "3e7e9bbe4c35f313ef7bcef27d1838c11d01268051c6113790cad35b41bd3361"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/BCH_USDT_USDT-1h-futures.feather",
+        "sha256": "d0aeebcdb9de77c371612ab2dc0912ee3cab204206d2170ce057ff0d66d0ffa6"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "XRP",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/XRP_USDT_USDT-1h-futures.feather",
+        "sha256": "aab39f3d5d22c96eed95d0120a3209e3f3f1441f6cf9ff343314d214e7a4f52b"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/XRP_USDT_USDT-1h-futures.feather",
+        "sha256": "47393e8c9cb287a6403fe8d76a95a162702030b1f1e74d60a8bf1903171a72dd"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "LTC",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/LTC_USDT_USDT-1h-futures.feather",
+        "sha256": "9df00cbe2f9e3355b6cda22c7513ec499852b123ec0b95711de3b012e12d290e"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/LTC_USDT_USDT-1h-futures.feather",
+        "sha256": "44eecde357ed95d1ce963589213d760d8862ffec5e16ac02d21cd2e477320a96"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "TRX",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/TRX_USDT_USDT-1h-futures.feather",
+        "sha256": "73aaf9f4ce76bc096acb44f26f288e9c89307f17ce0f6d975976902765d6959f"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/TRX_USDT_USDT-1h-futures.feather",
+        "sha256": "a890337533f135177b46e44eda365dccbbf21ed82c670c32b5aa219b57faf5fa"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "ETC",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ETC_USDT_USDT-1h-futures.feather",
+        "sha256": "aa4d56e832f9b75bc06bbdeadbdacdbec37d11f1f1ae109e1ad1d6200b40e5b4"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/ETC_USDT_USDT-1h-futures.feather",
+        "sha256": "3f9af1aeb2e40cfde2ca1e74f91ede04c8589bfbdbcb070c9c59d919d26d4f07"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "LINK",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/LINK_USDT_USDT-1h-futures.feather",
+        "sha256": "1a43cb1f843cb08f035c09d2832aa13a8de51b8ae6f747946608e332027ab52c"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/LINK_USDT_USDT-1h-futures.feather",
+        "sha256": "b009fe0d53ececbe62efd423d2fb4fb6bf81cf4100cedf187451fa40889d86ab"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "XLM",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/XLM_USDT_USDT-1h-futures.feather",
+        "sha256": "6bd9803f767563d8461e21828f06d13779f1fb8241cc9aeffa452cec2f2c2782"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/XLM_USDT_USDT-1h-futures.feather",
+        "sha256": "da4af2762fe6d676797ff968cf65029e979fb0381641903b2cf6b362adea64ed"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "ADA",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ADA_USDT_USDT-1h-futures.feather",
+        "sha256": "dd5d172ec001c8dc88a7229861af80dcc929f6197cca7435dec528e3d2b73034"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/ADA_USDT_USDT-1h-futures.feather",
+        "sha256": "d5b8d0437ff084f0c3b708e32da1b807721ab156f8c32cd1ef347fdb30d98d3c"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "ATOM",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ATOM_USDT_USDT-1h-futures.feather",
+        "sha256": "8d92e119fd25b0a411d89198d52db53061271c54ea20fcca2bba61ddb1a1acb9"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/ATOM_USDT_USDT-1h-futures.feather",
+        "sha256": "970b107725361e708f542398eb38e3acb763fd9aad9cfe39042bfe544314ed11"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "BNB",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BNB_USDT_USDT-1h-futures.feather",
+        "sha256": "655c6bb14c6e8606f51d9a18848c81a6041156aac703a516e09388902cab7fed"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/BNB_USDT_USDT-1h-futures.feather",
+        "sha256": "20c00908eaac9737114e2944b02b537468c9018963a1cd0238ddf3192e083f54"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "IOTA",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/IOTA_USDT_USDT-1h-futures.feather",
+        "sha256": "885eb561e1ad06b32758c8120b8d1b31ab45d8278b05e082edbef7af76a082d4"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/IOTA_USDT_USDT-1h-futures.feather",
+        "sha256": "766dcb57232e4cb4afb55aa735d7d2654beff8084706f279d93f78d4e2b94b78"
+      },
+      "rows": 15336
+    }
+  ],
+  "new_archive_tasks": [
+    [
+      "EOS",
+      "2024-12"
+    ],
+    [
+      "EOS",
+      "2025-01"
+    ],
+    [
+      "EOS",
+      "2025-02"
+    ],
+    [
+      "EOS",
+      "2025-03"
+    ],
+    [
+      "EOS",
+      "2025-04"
+    ],
+    [
+      "EOS",
+      "2025-05"
+    ],
+    [
+      "XMR",
+      "2024-12"
+    ],
+    [
+      "XMR",
+      "2025-01"
+    ],
+    [
+      "XMR",
+      "2025-02"
+    ],
+    [
+      "XMR",
+      "2025-03"
+    ],
+    [
+      "XMR",
+      "2025-04"
+    ],
+    [
+      "XMR",
+      "2025-05"
+    ],
+    [
+      "XMR",
+      "2025-06"
+    ],
+    [
+      "XMR",
+      "2025-07"
+    ],
+    [
+      "XMR",
+      "2025-08"
+    ],
+    [
+      "XMR",
+      "2025-09"
+    ],
+    [
+      "XMR",
+      "2025-10"
+    ],
+    [
+      "XMR",
+      "2025-11"
+    ],
+    [
+      "XMR",
+      "2025-12"
+    ],
+    [
+      "XMR",
+      "2026-01"
+    ],
+    [
+      "XMR",
+      "2026-02"
+    ],
+    [
+      "XMR",
+      "2026-03"
+    ],
+    [
+      "XMR",
+      "2026-04"
+    ],
+    [
+      "XMR",
+      "2026-05"
+    ],
+    [
+      "XMR",
+      "2026-06"
+    ],
+    [
+      "XMR",
+      "2026-07"
+    ],
+    [
+      "XMR",
+      "2026-08"
+    ],
+    [
+      "DASH",
+      "2024-12"
+    ],
+    [
+      "DASH",
+      "2025-01"
+    ],
+    [
+      "DASH",
+      "2025-02"
+    ],
+    [
+      "DASH",
+      "2025-03"
+    ],
+    [
+      "DASH",
+      "2025-04"
+    ],
+    [
+      "DASH",
+      "2025-05"
+    ],
+    [
+      "DASH",
+      "2025-06"
+    ],
+    [
+      "DASH",
+      "2025-07"
+    ],
+    [
+      "DASH",
+      "2025-08"
+    ],
+    [
+      "DASH",
+      "2025-09"
+    ],
+    [
+      "DASH",
+      "2025-10"
+    ],
+    [
+      "DASH",
+      "2025-11"
+    ],
+    [
+      "DASH",
+      "2025-12"
+    ],
+    [
+      "DASH",
+      "2026-01"
+    ],
+    [
+      "DASH",
+      "2026-02"
+    ],
+    [
+      "DASH",
+      "2026-03"
+    ],
+    [
+      "DASH",
+      "2026-04"
+    ],
+    [
+      "DASH",
+      "2026-05"
+    ],
+    [
+      "DASH",
+      "2026-06"
+    ],
+    [
+      "DASH",
+      "2026-07"
+    ],
+    [
+      "DASH",
+      "2026-08"
+    ],
+    [
+      "ZEC",
+      "2024-12"
+    ],
+    [
+      "ZEC",
+      "2025-01"
+    ],
+    [
+      "ZEC",
+      "2025-02"
+    ],
+    [
+      "ZEC",
+      "2025-03"
+    ],
+    [
+      "ZEC",
+      "2025-04"
+    ],
+    [
+      "ZEC",
+      "2025-05"
+    ],
+    [
+      "ZEC",
+      "2025-06"
+    ],
+    [
+      "ZEC",
+      "2025-07"
+    ],
+    [
+      "ZEC",
+      "2025-08"
+    ],
+    [
+      "ZEC",
+      "2025-09"
+    ],
+    [
+      "ZEC",
+      "2025-10"
+    ],
+    [
+      "ZEC",
+      "2025-11"
+    ],
+    [
+      "ZEC",
+      "2025-12"
+    ],
+    [
+      "ZEC",
+      "2026-01"
+    ],
+    [
+      "ZEC",
+      "2026-02"
+    ],
+    [
+      "ZEC",
+      "2026-03"
+    ],
+    [
+      "ZEC",
+      "2026-04"
+    ],
+    [
+      "ZEC",
+      "2026-05"
+    ],
+    [
+      "ZEC",
+      "2026-06"
+    ],
+    [
+      "ZEC",
+      "2026-07"
+    ],
+    [
+      "ZEC",
+      "2026-08"
+    ],
+    [
+      "XTZ",
+      "2024-12"
+    ],
+    [
+      "XTZ",
+      "2025-01"
+    ],
+    [
+      "XTZ",
+      "2025-02"
+    ],
+    [
+      "XTZ",
+      "2025-03"
+    ],
+    [
+      "XTZ",
+      "2025-04"
+    ],
+    [
+      "XTZ",
+      "2025-05"
+    ],
+    [
+      "XTZ",
+      "2025-06"
+    ],
+    [
+      "XTZ",
+      "2025-07"
+    ],
+    [
+      "XTZ",
+      "2025-08"
+    ],
+    [
+      "XTZ",
+      "2025-09"
+    ],
+    [
+      "XTZ",
+      "2025-10"
+    ],
+    [
+      "XTZ",
+      "2025-11"
+    ],
+    [
+      "XTZ",
+      "2025-12"
+    ],
+    [
+      "XTZ",
+      "2026-01"
+    ],
+    [
+      "XTZ",
+      "2026-02"
+    ],
+    [
+      "XTZ",
+      "2026-03"
+    ],
+    [
+      "XTZ",
+      "2026-04"
+    ],
+    [
+      "XTZ",
+      "2026-05"
+    ],
+    [
+      "XTZ",
+      "2026-06"
+    ],
+    [
+      "XTZ",
+      "2026-07"
+    ],
+    [
+      "XTZ",
+      "2026-08"
+    ],
+    [
+      "ONT",
+      "2024-12"
+    ],
+    [
+      "ONT",
+      "2025-01"
+    ],
+    [
+      "ONT",
+      "2025-02"
+    ],
+    [
+      "ONT",
+      "2025-03"
+    ],
+    [
+      "ONT",
+      "2025-04"
+    ],
+    [
+      "ONT",
+      "2025-05"
+    ],
+    [
+      "ONT",
+      "2025-06"
+    ],
+    [
+      "ONT",
+      "2025-07"
+    ],
+    [
+      "ONT",
+      "2025-08"
+    ],
+    [
+      "ONT",
+      "2025-09"
+    ],
+    [
+      "ONT",
+      "2025-10"
+    ],
+    [
+      "ONT",
+      "2025-11"
+    ],
+    [
+      "ONT",
+      "2025-12"
+    ],
+    [
+      "ONT",
+      "2026-01"
+    ],
+    [
+      "ONT",
+      "2026-02"
+    ],
+    [
+      "ONT",
+      "2026-03"
+    ],
+    [
+      "ONT",
+      "2026-04"
+    ],
+    [
+      "ONT",
+      "2026-05"
+    ],
+    [
+      "ONT",
+      "2026-06"
+    ],
+    [
+      "ONT",
+      "2026-07"
+    ],
+    [
+      "ONT",
+      "2026-08"
+    ],
+    [
+      "BAT",
+      "2024-12"
+    ],
+    [
+      "BAT",
+      "2025-01"
+    ],
+    [
+      "BAT",
+      "2025-02"
+    ],
+    [
+      "BAT",
+      "2025-03"
+    ],
+    [
+      "BAT",
+      "2025-04"
+    ],
+    [
+      "BAT",
+      "2025-05"
+    ],
+    [
+      "BAT",
+      "2025-06"
+    ],
+    [
+      "BAT",
+      "2025-07"
+    ],
+    [
+      "BAT",
+      "2025-08"
+    ],
+    [
+      "BAT",
+      "2025-09"
+    ],
+    [
+      "BAT",
+      "2025-10"
+    ],
+    [
+      "BAT",
+      "2025-11"
+    ],
+    [
+      "BAT",
+      "2025-12"
+    ],
+    [
+      "BAT",
+      "2026-01"
+    ],
+    [
+      "BAT",
+      "2026-02"
+    ],
+    [
+      "BAT",
+      "2026-03"
+    ],
+    [
+      "BAT",
+      "2026-04"
+    ],
+    [
+      "BAT",
+      "2026-05"
+    ],
+    [
+      "BAT",
+      "2026-06"
+    ],
+    [
+      "BAT",
+      "2026-07"
+    ],
+    [
+      "BAT",
+      "2026-08"
+    ]
+  ],
+  "financial_accounts": 0,
+  "no_universe_subset": true
+}

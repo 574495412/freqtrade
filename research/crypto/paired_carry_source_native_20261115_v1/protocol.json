@@ -1,0 +1,115 @@
+{
+  "frozen_at": "2026-11-15T06:55:02.083215+00:00",
+  "scope": "Local native segregated-wallet unconditional equal-base BTC/ETH cash-and-carry baseline;not source threshold strategy replication or new factor alpha",
+  "source_references": [
+    {
+      "repo": "idrees",
+      "commit": "06d05d08a88c107dc84b69dc21009864dbd9b878",
+      "upstream_path": "README.md",
+      "sha256": "e58c78bfddf94aefdfd0a83a69f95d62f2dbbb31b238ca06826a39f97d280c74"
+    },
+    {
+      "repo": "idrees",
+      "commit": "06d05d08a88c107dc84b69dc21009864dbd9b878",
+      "upstream_path": "WRITEUP.md",
+      "sha256": "16d4d7a111197fe40801008bd9deeffa62394b9982d904cfd40f9ce40fef790e"
+    },
+    {
+      "repo": "idrees",
+      "commit": "06d05d08a88c107dc84b69dc21009864dbd9b878",
+      "upstream_path": "src/2_signal.py",
+      "sha256": "ff025074f26c0a7b6462399234d0505d96657ae3d03f5a69eb535433425c1666"
+    },
+    {
+      "repo": "idrees",
+      "commit": "06d05d08a88c107dc84b69dc21009864dbd9b878",
+      "upstream_path": "src/3_portfolio.py",
+      "sha256": "12a21840ad58c5acbff21a0e96d2e17093950c817f8b512e856368cbdabd6a2b"
+    },
+    {
+      "repo": "idrees",
+      "commit": "06d05d08a88c107dc84b69dc21009864dbd9b878",
+      "upstream_path": "src/4_backtest.py",
+      "sha256": "6083c3bec2c17ffe91e89ff62ce21988376c68b0d0728ff459a43edafb541299"
+    },
+    {
+      "repo": "zwmjj",
+      "commit": "b06dc3ac3453b08edfb430b527a1e0a408d42a63",
+      "upstream_path": "README.md",
+      "sha256": "02455028412126d0b3df1e9343260e9901cd70b74cbe3fb97093fbc2db0c44a9"
+    },
+    {
+      "repo": "zwmjj",
+      "commit": "b06dc3ac3453b08edfb430b527a1e0a408d42a63",
+      "upstream_path": "src/backtest.py",
+      "sha256": "ffb1323b7692d5668760089d3faee01ca8a8412645e1c810d705bd2c2a7ad9a3"
+    },
+    {
+      "repo": "zwmjj",
+      "commit": "b06dc3ac3453b08edfb430b527a1e0a408d42a63",
+      "upstream_path": "src/basis_trade.py",
+      "sha256": "69669a338e5d69589dbf0019e942f60b83d688eb1d2d346cf1c51a07f131d86c"
+    },
+    {
+      "repo": "zwmjj",
+      "commit": "b06dc3ac3453b08edfb430b527a1e0a408d42a63",
+      "upstream_path": "src/data_fetcher.py",
+      "sha256": "be62dc261a799e96c9d846686ef94554ed2e7abc592b51393c4d87f8e2a73dbf"
+    }
+  ],
+  "source_limitations": [
+    "Both trees lack an explicit LICENSE;read source only,no external portfolio code copied or executed",
+    "idrees same-settlement funding drives current weight and current funding entitlement;historical settled rate is not proof of pre-settlement indicative value",
+    "zwmjj has explicit no margin/liquidation account and fixed-notional PnL normalization;not funded account CAGR",
+    "Prior local hedged_hold_v002 is auxiliary historical independent simulator,not retroactively native"
+  ],
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "symbols": [
+    "BTC",
+    "ETH"
+  ],
+  "capital_usdt": [
+    1000,
+    500
+  ],
+  "capital_allocation": "Each asset half total capital;carry asset capital half spot-wallet/half USDT-futures-wallet,1x isolated per native account;no external collateral,borrowing,transfers,interest or yield on cash",
+  "quantity": "At Jan1 00UTC use prior completed5minute close in both markets and native registered amount ticks. Common quantity grid=Lcm(spot_step,perp_step). Floor95percent of each leg wallet divided by max(spot_close*(1+spotcost),perp_close*(1+perpcost)). Both legs exact same base q. Never upsize to minimum;infeasible common pair rejects qualification",
+  "entry": "One5minute signal row Jan1 00:00, native market fill expected Jan1 00:05;causal static quantity fixed before either fill. Both legs confirmed and actual quantities/timestamps must match",
+  "holding": "No funding-timing,forecast,vol targeting,rebalance,DCA or discretionary exits. Native catastrophic99percent stop,margin and liquidation still run. Any one-leg failure/early risk exit rejects full carry qualification;remaining actual path retained,not silently hedged later",
+  "terminal": "Common hourly pre-event mark at Aug31 23;native forced liquidation at final5minute23:55 separately diagnostic. No terminal cash substituted in ranking",
+  "cost_scenarios": [
+    {
+      "name": "conservative",
+      "spot_bps_per_side": 20,
+      "perp_bps_per_side": 15
+    },
+    {
+      "name": "lower",
+      "spot_bps_per_side": 13,
+      "perp_bps_per_side": 8
+    }
+  ],
+  "cost_model": "Spot10bps+slip10/3bps;perp5bps+slip10/3bps,represented as native quote fee proxy. No claim of exact orderbook execution or actual commission asset",
+  "benchmark": "Separate actual native spot HoldBTC/HoldETH wallets using total capital half each,95percent stake,costs and window identical. Unleveraged directional market beta,not independent alpha",
+  "static_portfolio": "Actual500carry+actual500spot-hold summed on exact14592hourly grid;no scaled1000curves/transfers/rebalance;terminalreturn bounded by same-size component returns. No independent-alpha claim for beta sleeve",
+  "accounts_planned": 24,
+  "accounts_structure": "4carry-legwallets*2capitals*2costs +2spotbenchmarkwallets*2capitals*2costs",
+  "financial_gate": "Full carry and both continuous2025/2026slices positive,fullcarry beats same-total-capital spotbenchmark and zero-interestUSDTcash,DD<=10percent,alllegs complete/equal-base,allnativeprice/funding/capital/precision tieouts pass,bothcosts. Not OOS or deployment proof. Static mixes reported separately without requiring impossible best-leg outperformance",
+  "native_primary": "Configuration/StrategyResolver/IStrategy/Backtesting.start/Trade/Order/Wallet/ZIP. Actual serialized single-leg native accounts;static independent precommitted quantity and no transfers allow serial replay,not a multi-engine shared-margin simulator",
+  "resource": "Single financial child,>=2GiB free before launch,3GiB RSS and1hour guard;lossless generatedcache cleanup only",
+  "unknowns": [
+    "Frozen current market specs are a declared historical scenario,not full historical-rule certification",
+    "Public markOPEN funding base and native event convention are not authenticated private settlement",
+    "Simultaneous bar-open fills are historical execution model,not proof of atomic two-leg live execution",
+    "Different risk/beta from directional benchmark;not globally comparable to leveraged NFI accounts"
+  ],
+  "new_factor_analysis_planned": 0,
+  "new_vibe_bench_planned": 0,
+  "independent_oos": false,
+  "orders_enabled": false,
+  "services_changed": false,
+  "no_post_result_parameter_changes": true
+}

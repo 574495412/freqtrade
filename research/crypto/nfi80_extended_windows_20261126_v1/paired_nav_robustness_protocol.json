@@ -1,0 +1,10 @@
+{
+  "question": "How sensitive is the observed marked return advantage of the 14-slot wallet over 12 slots to a few days, the time split, and fee-sensitive changes?",
+  "accounts": "Use independently verified native marks. Compare 15 and 8 bp over the identical 2025–2026 uninterrupted wallet window and 15 bp in the separate 2024 annual window. Treat 2025 and 2026 main-window subsets as slices of the same three-times isolated account.",
+  "calendar": "Use complete UTC midnight-to-midnight days only. Drop the calendar date whose final mark is at 23:55. Pair account dates and use log growth of 14-slot NAV less log growth of 12-slot NAV. A difference with magnitude at most 1e-12 counts as a tie.",
+  "sensitivity": "Report total relative growth, division by year, and the historical return concentration after omitting the largest one and five paired days for arithmetic sensitivity. Report the fraction of growing rolling 30-day windows and each calendar month's contribution. These are properties of completed wallets, including marked open inventory.",
+  "resampling": "Stationary bootstrap draws both fee series with identical daily indices. Use 20000 draws, fixed seed 860312, independent restart probability 1/14 and 1/28 in two specified passes, circular boundary, percentile intervals on exp(sum of log differences)-1. Report the share of simultaneous positive 15/8 bp resamples. Analyze 2024 separately because the account resets and only one matched fee is available.",
+  "interpretation": "Approximate within-history sensitivity for paired daily changes under locally stationary dependence. It is not an extrapolation, a return claim for a different entry path, or an account promotion gate. Variant selection and differing regimes limit inference. Full wallet net returns and drawdowns use the original unabridged artifacts.",
+  "source": "https://doi.org/10.1080/01621459.1994.10476870",
+  "orders_enabled": false
+}

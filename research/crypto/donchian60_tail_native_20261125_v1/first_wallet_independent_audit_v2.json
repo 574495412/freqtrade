@@ -1,0 +1,152 @@
+{
+  "status": "VERIFIED",
+  "cost_bps_per_side": 15,
+  "initial_equity_usdt": 1000,
+  "maximum_nav_error_usdt": 1.5271098163793795e-08,
+  "maximum_funding_error_usdt": 0.0,
+  "maximum_cash_error_usdt": 4.99688434e-09,
+  "missing_funding": [
+    {
+      "pair": "AXS/USDT:USDT",
+      "slot_ms": 1782273600000,
+      "campaigns": [],
+      "status": "NO_GROSS_EXPOSURE",
+      "rate_imputed": false
+    },
+    {
+      "pair": "TRB/USDT:USDT",
+      "slot_ms": 1782273600000,
+      "campaigns": [],
+      "status": "NO_GROSS_EXPOSURE",
+      "rate_imputed": false
+    }
+  ],
+  "independent_exit_reason_counts": {
+    "dc60_trail": 69,
+    "dc60_opposite": 1,
+    "force_exit": 6
+  },
+  "periods": [
+    {
+      "name": "continuous",
+      "net_return": 0.14339575416672545,
+      "initial_marked_equity": 1000.0,
+      "ending_marked_equity": 1143.3957541667255,
+      "hourly_mark_drawdown": 0.11765756410886874,
+      "cagr_365day": 0.083775884542026,
+      "complete_24h_daily_nav_sharpe": 0.6240268756782826,
+      "complete_24h_returns": 607,
+      "calendar_hours": 14592
+    },
+    {
+      "name": "calendar-2025",
+      "net_return": 0.13491507493427912,
+      "initial_marked_equity": 1000.0,
+      "ending_marked_equity": 1134.9150749342791,
+      "hourly_mark_drawdown": 0.11765756410886874,
+      "cagr_365day": 0.13491507493427912,
+      "complete_24h_daily_nav_sharpe": 0.9829226306373408,
+      "complete_24h_returns": 365,
+      "calendar_hours": 8761
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "net_return": 0.0074725232043793,
+      "initial_marked_equity": 1134.9150749342791,
+      "ending_marked_equity": 1143.3957541667255,
+      "hourly_mark_drawdown": 0.07505316382480309,
+      "cagr_365day": 0.011247128139104445,
+      "complete_24h_daily_nav_sharpe": 0.08034945293363982,
+      "complete_24h_returns": 242,
+      "calendar_hours": 5832
+    }
+  ],
+  "profit_distribution": {
+    "starting_usdt": 1000,
+    "cost_bps_per_side": 15,
+    "marked_ending_usdt": 1143.3957541567352,
+    "marked_cumulative_return": 0.14339575415673522,
+    "maximum_hourly_drawdown": 0.1176575641172527,
+    "continuous_2025_return": 0.13491507493415344,
+    "continuous_2026_through_august_return": 0.007472523195688252,
+    "natural_campaigns_closed_before_endpoint": 70,
+    "profitable_campaigns": 29,
+    "losing_campaigns": 41,
+    "worst_natural_campaign_usdt": -18.02167972,
+    "gross_losing_campaign_pnl_usdt": -311.37379901,
+    "gross_winner_pnl_usdt": 444.7162129299999,
+    "winner_median_usdt": 12.72790148,
+    "winner_p90_usdt": 25.57317033599999,
+    "win_duration_median_minutes": 125280.0,
+    "winners_above_fraction_of_starting_capital": {
+      "0.01": {
+        "count": 17,
+        "gross_winner_pnl_share": 0.8502210927927548
+      },
+      "0.02": {
+        "count": 7,
+        "gross_winner_pnl_share": 0.515162420795442
+      },
+      "0.05": {
+        "count": 1,
+        "gross_winner_pnl_share": 0.14434052547147377
+      }
+    },
+    "top_10_gross_winner_pnl_share": 0.6344347041478573,
+    "top_5_campaigns": [
+      {
+        "pair": "BNB/USDT:USDT",
+        "is_short": false,
+        "close": "2025-10-22T00:00:00.000Z",
+        "profit_abs": 64.19057186,
+        "minutes": 144000.0,
+        "enter_tag": "dc60_long"
+      },
+      {
+        "pair": "BCH/USDT:USDT",
+        "is_short": true,
+        "close": "2026-08-21T00:00:00.000Z",
+        "profit_abs": 43.05569376,
+        "minutes": 138240.0,
+        "enter_tag": "dc60_short"
+      },
+      {
+        "pair": "EGLD/USDT:USDT",
+        "is_short": true,
+        "close": "2026-04-18T00:00:00.000Z",
+        "profit_abs": 35.02620784,
+        "minutes": 321120.0,
+        "enter_tag": "dc60_short"
+      },
+      {
+        "pair": "IOTX/USDT:USDT",
+        "is_short": true,
+        "close": "2026-08-10T00:00:00.000Z",
+        "profit_abs": 23.20991096,
+        "minutes": 113760.0,
+        "enter_tag": "dc60_short"
+      },
+      {
+        "pair": "RUNE/USDT:USDT",
+        "is_short": true,
+        "close": "2025-04-23T00:00:00.000Z",
+        "profit_abs": 21.64451043,
+        "minutes": 151200.0,
+        "enter_tag": "dc60_short"
+      }
+    ],
+    "completed_24h_marked_days": 607,
+    "largest_marked_day_ending_utc": "2026-02-06T00:00:00+00:00",
+    "largest_marked_day_gain_usdt": 41.784838935702055,
+    "top_5_days_share_of_positive_24h_cash_changes": 0.09418298685713931,
+    "last_partial_day_change_usdt": 7.270804146995488,
+    "open_campaigns_at_marked_endpoint": 6,
+    "native_terminal_trade_count_including_force": 76,
+    "archive_sha256": "50e9cf0cec0fbb4873793aa2fe705b72987dedc45b34fb283d165315a288977d",
+    "curve_sha256": "565c21429e4a254736e733fdf5a02003f786afbb74f623d1d100b362f7678db1"
+  },
+  "conditional_old_execution_model": true,
+  "historical_rules_certified": false,
+  "native_risk_exit_prices_independently_certified": false,
+  "orders_enabled": false
+}

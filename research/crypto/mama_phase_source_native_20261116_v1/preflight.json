@@ -1,0 +1,58 @@
+{
+  "passed": true,
+  "original_native_files": 595,
+  "native_input_files": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/mama_phase_source_native_20261116_v1/candles/BTC_USDT-1h.feather",
+      "sha256": "beed6bde8f88040b0af3457543d9d9a6cd0d15716b521cec1614ebe9e14a3a76",
+      "complete_native_input_rows": 15105
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/mama_phase_source_native_20261116_v1/candles/BTC_USDT-5m.feather",
+      "sha256": "366afbdd6214d8d5b502c9c12bb3794aac31581b83f97d15730f6f359062e638",
+      "complete_native_input_rows": 181260
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/mama_phase_source_native_20261116_v1/candles/ETH_USDT-1h.feather",
+      "sha256": "1a7e97e71696dc76472fb89c5c474824085f0a4601fc6a4007c1911780d51957",
+      "complete_native_input_rows": 15105
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/mama_phase_source_native_20261116_v1/candles/ETH_USDT-5m.feather",
+      "sha256": "407c6748bed2d85fa9739f5e6ef7eba174f6b1ab7b8db84ffb71a65f6248793c",
+      "complete_native_input_rows": 181260
+    }
+  ],
+  "pinned_source_files": 4,
+  "source_git_blob_audit": false,
+  "actual_native_admissions": 1,
+  "native_converted_hour_rows": 29184,
+  "native_flag_admissions": [
+    {
+      "passed": true,
+      "native_constructor": true,
+      "native_strategy_init": true,
+      "native_conversion": true,
+      "checks": [
+        {
+          "pair": "BTC/USDT",
+          "rows": 14592,
+          "source_c_crossings_exact_after_native_lag": true,
+          "first_execution_clock": "2025-01-01 00:00:00+00:00"
+        },
+        {
+          "pair": "ETH/USDT",
+          "rows": 14592,
+          "source_c_crossings_exact_after_native_lag": true,
+          "first_execution_clock": "2025-01-01 00:00:00+00:00"
+        }
+      ],
+      "funded_accounts": 0,
+      "financial_start": false
+    }
+  ],
+  "source_phase_tests": 15,
+  "funded_native_accounts": 0,
+  "missing_rows_not_filled": true,
+  "all_target_hourly_and5min_opens_exact": true
+}

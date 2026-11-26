@@ -1,0 +1,14 @@
+{
+  "scope": "Add read-only complete fixture hourly pre-event mark observations; no state/fees/clock/sizing modification",
+  "observer": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "clock": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/band_trend_native_20261113_v1/observe_clock.py",
+    "sha256": "f2bb297fca1ec753d9a010c39ff45506dccc0aadadf067f069de2e8a8d7b638d"
+  },
+  "observation_contract": "Before all fills and funding events at the current hour; native force-exit balance separate; includes all open quantity, entry costs, accrued native funding, remaining exit cost",
+  "grid": "50 hourly clocks2025Jan2 00UTC through2025Jan4 01UTC; known initial flat00 row only,49 actual native clock captures",
+  "financial_admission": false
+}

@@ -1,0 +1,83 @@
+{
+  "frozen_at": "2026-11-16T19:31:38.030041+00:00",
+  "scope": "Post-result source coverage review for unchanged NFI40 original window,not new alpha preregistration",
+  "window": [
+    "2025-01-01T00:00:00+00:00",
+    "2026-09-01T00:00:00+00:00"
+  ],
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "TRB/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "XRP/USDT:USDT",
+    "ADA/USDT:USDT",
+    "BNB/USDT:USDT",
+    "LINK/USDT:USDT",
+    "DOT/USDT:USDT",
+    "FIL/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "DYDX/USDT:USDT",
+    "LTC/USDT:USDT",
+    "BCH/USDT:USDT",
+    "ETC/USDT:USDT",
+    "GALA/USDT:USDT",
+    "SAND/USDT:USDT",
+    "UNI/USDT:USDT",
+    "IOTA/USDT:USDT",
+    "RUNE/USDT:USDT",
+    "AXS/USDT:USDT",
+    "AAVE/USDT:USDT",
+    "EGLD/USDT:USDT",
+    "ALGO/USDT:USDT",
+    "SNX/USDT:USDT",
+    "CRV/USDT:USDT",
+    "MASK/USDT:USDT",
+    "SUSHI/USDT:USDT",
+    "KSM/USDT:USDT",
+    "IOTX/USDT:USDT",
+    "MANA/USDT:USDT",
+    "NEO/USDT:USDT",
+    "GRT/USDT:USDT",
+    "TRX/USDT:USDT",
+    "CELO/USDT:USDT",
+    "SKL/USDT:USDT",
+    "THETA/USDT:USDT"
+  ],
+  "requirements": [
+    "Reuse verified old40pair snapshots before new acquisition;compare actual ordered NFI universe rather than earlier count40 alone",
+    "Bounded InternetArchive CDX prefix query including querystring variations;retain querylimits,failures and rawresponse bytes",
+    "Replay only newly indexed HTTP200 snapshots with exact Memento/CDXdigest identity;do not follow nearby snapshot redirect",
+    "Separate point observations from continuously valid rule intervals and published/effective/known clocks",
+    "Do not retry credential-rejected Tardis or buy data;provider explicitly describes non-multiplier changes as best-effort",
+    "Audit full40pair event/knowledge coverage;do not synthesize missing rules from static snapshot or future OHLC"
+  ],
+  "cdx_query": {
+    "url": "https://web.archive.org/cdx/search/cdx",
+    "params": {
+      "url": "fapi.binance.com/fapi/v1/exchangeInfo",
+      "matchType": "prefix",
+      "from": "20241201",
+      "to": "20260901",
+      "output": "json",
+      "fl": "timestamp,original,statuscode,mimetype,digest",
+      "filter": "statuscode:200",
+      "limit": "1000",
+      "showResumeKey": "true"
+    }
+  },
+  "inputs": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/suspension_native_20261117_v1/artifact_manifest.json": "02be92524df82bb26b382b7c67012e8d8c18cfce67dd8b7d6c0e06de34413c9e",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/plan.json": "1b0fea99e5d5809e8b0f24c028ebb6adc1be163eea840775d96892db40d5edc6",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/historical_rule_archive_20261106/snapshot_result.json": "f6c4c629b92d3f3664709d0beda39bae89111238ed5b1f4d09051f5a02be620e",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/historical_rule_archive_20261106/verification.json": "9bf966fe05de855a085f3df7d1a69b65d3c4171f527748a687469319b33b1448",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/copula_reference_native_20261114_v1/retired_metadata_probe.json": "9a5de741b750f30882df1b3b06c810771e5431cfc434ddcfbfb85e7a5ad336a1"
+  },
+  "new_historical_strategy_accounts": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

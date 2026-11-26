@@ -1,0 +1,29 @@
+{
+  "observed_terminal": true,
+  "recorded_after_observation": "2026-11-15T06:41:00.878505+00:00",
+  "os_pid_not_captured": true,
+  "no_inferred_start_or_end_times": true,
+  "processes": [
+    {
+      "stage": "tests",
+      "tool_session": 73664,
+      "observed_exit_code": 0,
+      "log": "tests_initial.log",
+      "log_sha256": "68b4c10f6fc4f8716cdf44a337976e69f441cdacf3dce5df0bfbc4316eb18cdd"
+    },
+    {
+      "stage": "native_preflight",
+      "tool_session": 53241,
+      "observed_exit_code": 0,
+      "log": "preflight_initial.log",
+      "log_sha256": "fede1524ed533dae1969c2ea90d1a47679b7554f0713380de9f7b00c54b1c4e5"
+    },
+    {
+      "stage": "native_factor_analysis",
+      "tool_session": 37651,
+      "observed_exit_code": 0,
+      "log": "predictive_initial.log",
+      "log_sha256": "054c12250ca6fc2e773e834461a7b06128546768f8d0d26122e66d5ef0b5682e"
+    }
+  ]
+}

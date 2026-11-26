@@ -1,0 +1,18 @@
+{
+  "registered_at": "2026-11-16T19:34:44.542173+00:00",
+  "reason": "Find a real pre-window baseline;not retrying same query or inferring continuous validity",
+  "url": "https://web.archive.org/cdx/search/cdx",
+  "params": {
+    "url": "fapi.binance.com/fapi/v1/exchangeInfo",
+    "matchType": "prefix",
+    "from": "20190901",
+    "to": "20241231",
+    "output": "json",
+    "fl": "timestamp,original,statuscode,mimetype,digest",
+    "filter": "statuscode:200",
+    "limit": "1000",
+    "showResumeKey": "true"
+  },
+  "requests": 1,
+  "retries": 0
+}

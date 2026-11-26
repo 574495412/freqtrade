@@ -1,0 +1,412 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "schema": "freqtrade.native.source-reversal-adx.v1",
+  "registered_at": "2026-11-15T05:47:32.257553+00:00",
+  "source_strategy_allocation_study": true,
+  "not_new_factor_screen": true,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+    "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+  },
+  "pairs": [
+    "ADA/USDT:USDT",
+    "BNB/USDT:USDT",
+    "BTC/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "ETH/USDT:USDT",
+    "LINK/USDT:USDT",
+    "LTC/USDT:USDT",
+    "XRP/USDT:USDT"
+  ],
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/source_reversal_adx_native_20261115_v1",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/source_reversal_adx_native_20261115_v1/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/source_reversal_adx_native_20261115_v1/data_receipts.json",
+    "sha256": "c46313c8c3fc6521df8a20458ab05ac69c062e4c89599ef83f234ed6662483f0"
+  },
+  "marks": {
+    "ADA/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/source_reversal_adx_native_20261115_v1/candles/futures/ADA_USDT_USDT-1h-mark.feather",
+      "sha256": "dc3b578e04fa23c3c58e64b64916eb17c7471aee910d7334b279840bd58dd7be"
+    },
+    "BNB/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/source_reversal_adx_native_20261115_v1/candles/futures/BNB_USDT_USDT-1h-mark.feather",
+      "sha256": "aa19bfe19bc1b7ffe90e9d6a5bb5da1f806f8f5aa3f67e6a6405e62a91a392be"
+    },
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/source_reversal_adx_native_20261115_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    "DOGE/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/source_reversal_adx_native_20261115_v1/candles/futures/DOGE_USDT_USDT-1h-mark.feather",
+      "sha256": "1acea3fba1b5f6035dc9ec3d3e1d814ff43081cd2439106433a52bb2ddccbb25"
+    },
+    "ETH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/source_reversal_adx_native_20261115_v1/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+    },
+    "LINK/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/source_reversal_adx_native_20261115_v1/candles/futures/LINK_USDT_USDT-1h-mark.feather",
+      "sha256": "1a982092bca60cba7b74254c4c63254493565badf87bdd1913a86785f56549cd"
+    },
+    "LTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/source_reversal_adx_native_20261115_v1/candles/futures/LTC_USDT_USDT-1h-mark.feather",
+      "sha256": "05e04be247cc13f8127c7a809f8b1032e974586e60bdfddd07ba6d5a8ae581e1"
+    },
+    "XRP/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/source_reversal_adx_native_20261115_v1/candles/futures/XRP_USDT_USDT-1h-mark.feather",
+      "sha256": "e821b1b0b56da2a98337e49c605661aa8d62e4a383550c64c94edc060d41c89a"
+    }
+  },
+  "candidates": [
+    {
+      "name": "SourceReversal_1000",
+      "strategy": "SourceReversal",
+      "capital": 1000,
+      "pairs": [
+        "ADA/USDT:USDT",
+        "BNB/USDT:USDT",
+        "BTC/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "ETH/USDT:USDT",
+        "LINK/USDT:USDT",
+        "LTC/USDT:USDT",
+        "XRP/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/SourceReversal_1000.json",
+        "sha256": "cc65bcbc5c59a56b3aed385b6294229a356dde4127f430f20f0499647a7f7266"
+      },
+      "source_files": {
+        "Strategy002.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/Strategy002.py",
+          "sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90"
+        },
+        "ADXMomentum.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/ADXMomentum.py",
+          "sha256": "7ed9c2306f337a1cc49cb2e11ddf6b66397853b9c4155faa13e5cf1ea61a651a"
+        },
+        "LICENSE": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/LICENSE",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        "SourcePortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/SourcePortfolio.py",
+          "sha256": "5898ea938857f5d3a62918f5e3da0c82f732c78f966bf972d3ae1aa2f472eaa7"
+        }
+      }
+    },
+    {
+      "name": "SourceReversal_500",
+      "strategy": "SourceReversal",
+      "capital": 500,
+      "pairs": [
+        "ADA/USDT:USDT",
+        "BNB/USDT:USDT",
+        "BTC/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "ETH/USDT:USDT",
+        "LINK/USDT:USDT",
+        "LTC/USDT:USDT",
+        "XRP/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/SourceReversal_500.json",
+        "sha256": "df88b599afb97b569eb49a00dddb4bb91eea917620ef0110303070db9953f809"
+      },
+      "source_files": {
+        "Strategy002.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/Strategy002.py",
+          "sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90"
+        },
+        "ADXMomentum.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/ADXMomentum.py",
+          "sha256": "7ed9c2306f337a1cc49cb2e11ddf6b66397853b9c4155faa13e5cf1ea61a651a"
+        },
+        "LICENSE": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/LICENSE",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        "SourcePortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/SourcePortfolio.py",
+          "sha256": "5898ea938857f5d3a62918f5e3da0c82f732c78f966bf972d3ae1aa2f472eaa7"
+        }
+      }
+    },
+    {
+      "name": "SourceADX_1000",
+      "strategy": "SourceADX",
+      "capital": 1000,
+      "pairs": [
+        "ADA/USDT:USDT",
+        "BNB/USDT:USDT",
+        "BTC/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "ETH/USDT:USDT",
+        "LINK/USDT:USDT",
+        "LTC/USDT:USDT",
+        "XRP/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/SourceADX_1000.json",
+        "sha256": "dd69c5817820250801dd6cdaa111bda333f256fc90aa01c0f59e6ee016120095"
+      },
+      "source_files": {
+        "Strategy002.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/Strategy002.py",
+          "sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90"
+        },
+        "ADXMomentum.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/ADXMomentum.py",
+          "sha256": "7ed9c2306f337a1cc49cb2e11ddf6b66397853b9c4155faa13e5cf1ea61a651a"
+        },
+        "LICENSE": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/LICENSE",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        "SourcePortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/SourcePortfolio.py",
+          "sha256": "5898ea938857f5d3a62918f5e3da0c82f732c78f966bf972d3ae1aa2f472eaa7"
+        }
+      }
+    },
+    {
+      "name": "SourceADX_500",
+      "strategy": "SourceADX",
+      "capital": 500,
+      "pairs": [
+        "ADA/USDT:USDT",
+        "BNB/USDT:USDT",
+        "BTC/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "ETH/USDT:USDT",
+        "LINK/USDT:USDT",
+        "LTC/USDT:USDT",
+        "XRP/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/SourceADX_500.json",
+        "sha256": "0f2bd1ac485c40c227b9e36960d2d817baf6fdb1ff78f1511bb54815a68f2522"
+      },
+      "source_files": {
+        "Strategy002.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/Strategy002.py",
+          "sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90"
+        },
+        "ADXMomentum.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/ADXMomentum.py",
+          "sha256": "7ed9c2306f337a1cc49cb2e11ddf6b66397853b9c4155faa13e5cf1ea61a651a"
+        },
+        "LICENSE": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/LICENSE",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        "SourcePortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/SourcePortfolio.py",
+          "sha256": "5898ea938857f5d3a62918f5e3da0c82f732c78f966bf972d3ae1aa2f472eaa7"
+        }
+      }
+    },
+    {
+      "name": "ReversalInADXTrend_1000",
+      "strategy": "ReversalInADXTrend",
+      "capital": 1000,
+      "pairs": [
+        "ADA/USDT:USDT",
+        "BNB/USDT:USDT",
+        "BTC/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "ETH/USDT:USDT",
+        "LINK/USDT:USDT",
+        "LTC/USDT:USDT",
+        "XRP/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/ReversalInADXTrend_1000.json",
+        "sha256": "9046790498896bf35c8daa5c655df2d5389bc5cb3ba0e5ab8d54daf90b906d9e"
+      },
+      "source_files": {
+        "Strategy002.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/Strategy002.py",
+          "sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90"
+        },
+        "ADXMomentum.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/ADXMomentum.py",
+          "sha256": "7ed9c2306f337a1cc49cb2e11ddf6b66397853b9c4155faa13e5cf1ea61a651a"
+        },
+        "LICENSE": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/LICENSE",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        "SourcePortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/SourcePortfolio.py",
+          "sha256": "5898ea938857f5d3a62918f5e3da0c82f732c78f966bf972d3ae1aa2f472eaa7"
+        }
+      }
+    },
+    {
+      "name": "ReversalInADXTrend_500",
+      "strategy": "ReversalInADXTrend",
+      "capital": 500,
+      "pairs": [
+        "ADA/USDT:USDT",
+        "BNB/USDT:USDT",
+        "BTC/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "ETH/USDT:USDT",
+        "LINK/USDT:USDT",
+        "LTC/USDT:USDT",
+        "XRP/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/ReversalInADXTrend_500.json",
+        "sha256": "ae080fe70cfa3648fde8a1d24cb6094300ae5e050119dd0d8a702ff1ebb43637"
+      },
+      "source_files": {
+        "Strategy002.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/Strategy002.py",
+          "sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90"
+        },
+        "ADXMomentum.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/ADXMomentum.py",
+          "sha256": "7ed9c2306f337a1cc49cb2e11ddf6b66397853b9c4155faa13e5cf1ea61a651a"
+        },
+        "LICENSE": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/LICENSE",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        "SourcePortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/SourcePortfolio.py",
+          "sha256": "5898ea938857f5d3a62918f5e3da0c82f732c78f966bf972d3ae1aa2f472eaa7"
+        }
+      }
+    },
+    {
+      "name": "HoldEight_1000",
+      "strategy": "HoldEight",
+      "capital": 1000,
+      "pairs": [
+        "ADA/USDT:USDT",
+        "BNB/USDT:USDT",
+        "BTC/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "ETH/USDT:USDT",
+        "LINK/USDT:USDT",
+        "LTC/USDT:USDT",
+        "XRP/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/HoldEight_1000.json",
+        "sha256": "211f265f36b5b49d714e6782fbac5d339e7e093db9b932de06554665a1744298"
+      },
+      "source_files": {
+        "Strategy002.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/Strategy002.py",
+          "sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90"
+        },
+        "ADXMomentum.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/ADXMomentum.py",
+          "sha256": "7ed9c2306f337a1cc49cb2e11ddf6b66397853b9c4155faa13e5cf1ea61a651a"
+        },
+        "LICENSE": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/LICENSE",
+          "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        "SourcePortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/SourcePortfolio.py",
+          "sha256": "5898ea938857f5d3a62918f5e3da0c82f732c78f966bf972d3ae1aa2f472eaa7"
+        }
+      }
+    }
+  ],
+  "allowed_leverage": 1.0,
+  "initial_equity_usdt": 1000,
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "runner_sha256": "44c554994265823259213eb665fb4bea1ef08ffaba19c114350e8684854856e0",
+  "runner_module": "research.crypto.source_reversal_adx_native_20261115_v1.native_runner",
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/protocol.json",
+      "sha256": "ef0b4a7b5ab74b9ec103bf183b9c2b8004753cb43a016e74b0641ec27c072107"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/CaptureRules.py",
+      "sha256": "e258d8b9b221f66676adbfacad7bcc80b13038ddbcf4fe25a5725397f556fe4f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/Strategy002.py",
+      "sha256": "d1ca86a4ceb68ef828b35490ce1112330dad209cc3bb1e1b6c303c21ab3d8a90"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/ADXMomentum.py",
+      "sha256": "7ed9c2306f337a1cc49cb2e11ddf6b66397853b9c4155faa13e5cf1ea61a651a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/README.md",
+      "sha256": "50df38eb1b1ed410b5e41f55d8dd95e2a834cf89750781e38faa1b24a796b835"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/sources/LICENSE",
+      "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false,
+  "native_start": "2025-01-01T00:00:00Z"
+}

@@ -1,0 +1,61 @@
+{
+  "frozen_at": "2026-11-16T21:02:52.660123+00:00",
+  "hypothesis": "Sourcepriceextreme+simpleRSIoversoldmeanreversionmaycomplementfixedtrendweights;notprovenindependentfromNFIreversion",
+  "source_commit": "16aa652f9db446e3738fea030e33ecc76be1e3ce",
+  "source_repository": "https://github.com/zodboy/freqtrade-simple-mean-reversion",
+  "source_code_unchanged": true,
+  "maturity": "Publicminimalbaseline,noverifiedtrackrecord;nativecodecompatibilityisnotmaturity",
+  "actual_rules": {
+    "bollinger": "20rollingmean,sample20std(ddof1),close<lower2sigma",
+    "rsi": "14barrollingaveragegain/loss,NOTWilderEWMA despiteauthorcomment;threshold35",
+    "roi_minutes": {
+      "0": 0.05,
+      "720": 0.03,
+      "1440": 0.01,
+      "2880": -0.01
+    },
+    "roi_semantics": "12h/24h/48hthresholddecay;48hnotforcedexitifprofit<-1pct",
+    "stoploss": -0.15,
+    "startup_candles": 150,
+    "use_exit_signal": false
+  },
+  "account_contract": {
+    "pairs": [
+      "BTC/USDT",
+      "ETH/USDT"
+    ],
+    "mode": "spot,longonly,1x,2slots",
+    "capital": [
+      1000,
+      500
+    ],
+    "cost_each_side_bps": [
+      20,
+      13
+    ],
+    "start": "2025-01-01T00:00:00Z",
+    "end": "2026-08-31T23:00:00Z",
+    "details": "1hmain+5mdetail,continuousnoannualreset,actualwallets,zeroexternalflows/cashinterest",
+    "local_execution_adaptation": "Binancefrommatchedcohort,marketentries/exitsand2slotsversussourceexampleOKXlimit3slots;unmodifiedsignal/ROI/stoplogic,notauthorexampleaccountreproduction",
+    "historical_rules": "samefrozenresearchsnapshot;notcertifiedhistoricalvenuerules"
+  },
+  "fixed_combinations": [
+    "actual500reversion+sealedactual500TrendCoreNoOI",
+    "actual500reversion+sealedactual500NFIspot"
+  ],
+  "combination_contract": "sumactualsameclockNAV,no1000scaling,crosstransfersorpostoutcomeweights",
+  "financial_gate": "Bothcosts:all3continuousperiodspositive,DD<=30pct,dailyNAVSharpe>.5,beatsmatchedTrendCoreNoOI+NFIspot+CRP+buyhold+cash;fixedportfoliosmustbeatbest1000matchedspotcontrolwithoutDDworsening",
+  "selection_bias": "PriorNFI/TrendCore/UPoutcomesalreadyseen;newsourceeconomicsnotseen;windowisreused,notindependentOOS",
+  "dedup": "RSI2existingduelhorizonfoundandexcluded;exactnewrepository/classnotfoundinlocalsourceintakes",
+  "no_retune": true,
+  "inputs": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/artifact_manifest.json": "21b148e72c52e2fa6ae209ac830954077721c5cf3f6bf55c40b7ebeb5d8b5d22",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/artifact_manifest.json": "317c7ef2a9c4987bbda1e87d82d84d316d3f68b7f3b3097452cfa3497c8e1f66",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/artifact_manifest.json": "cde13b4e5666c7663de749ff1004e21677bb0f37e076ae07dc0624097492c6f7"
+  },
+  "new_native_wallets": 0,
+  "orders_enabled": false,
+  "services_changed": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

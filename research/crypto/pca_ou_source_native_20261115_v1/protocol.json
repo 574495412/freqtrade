@@ -1,0 +1,126 @@
+{
+  "frozen_at": "2026-11-15T15:22:58.354510+00:00",
+  "source_repo": "sophie-lan/crypto-pca-statarb",
+  "source_commit": "cdc7a5a19bb84269ad5b441b9c6319c0d3cdea3b",
+  "scope": "Source mathematical diagnostic on local fixed40 Binance perpetuals,not original dynamicmarketcap universe or source account replication",
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "TRB/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "XRP/USDT:USDT",
+    "ADA/USDT:USDT",
+    "BNB/USDT:USDT",
+    "LINK/USDT:USDT",
+    "DOT/USDT:USDT",
+    "FIL/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "DYDX/USDT:USDT",
+    "LTC/USDT:USDT",
+    "BCH/USDT:USDT",
+    "ETC/USDT:USDT",
+    "GALA/USDT:USDT",
+    "SAND/USDT:USDT",
+    "UNI/USDT:USDT",
+    "IOTA/USDT:USDT",
+    "RUNE/USDT:USDT",
+    "AXS/USDT:USDT",
+    "AAVE/USDT:USDT",
+    "EGLD/USDT:USDT",
+    "ALGO/USDT:USDT",
+    "SNX/USDT:USDT",
+    "CRV/USDT:USDT",
+    "MASK/USDT:USDT",
+    "SUSHI/USDT:USDT",
+    "KSM/USDT:USDT",
+    "IOTX/USDT:USDT",
+    "MANA/USDT:USDT",
+    "NEO/USDT:USDT",
+    "GRT/USDT:USDT",
+    "TRX/USDT:USDT",
+    "CELO/USDT:USDT",
+    "SKL/USDT:USDT",
+    "THETA/USDT:USDT"
+  ],
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles",
+  "parent_pool": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/fip_path_source_native_20261115_v1/protocol.json",
+    "sha256": "3ad934d4bbed5219ddf011dfffef2db86d02486665c951eefc989df2d58b4874"
+  },
+  "account_start": "2025-01-01T00:00:00Z",
+  "account_end": "2026-08-31T23:00:00Z",
+  "source_math": {
+    "prices": 240,
+    "log_returns": 239,
+    "pca_components": 2,
+    "sample_sd_ddof": 1,
+    "portfolio": "eigenvector/sampleSD,L1normalized",
+    "ridge": 1e-05,
+    "ridge_intercept": true,
+    "residual": "recenter after regression",
+    "ou": "cum residual,intercept AR1;0<b<1;innovation sample variance",
+    "direction": "negative s_score;higher predicts higher future return",
+    "terminal_cumulative_residual": "near0 by source centering;preserve,do not repair"
+  },
+  "information": "AtD use completed hourly closesD-240h..D-1h;actual native1h delay would executeD+1OPEN",
+  "factor_diagnostics": {
+    "scores": [
+      "pca_ou_reversal"
+    ],
+    "controls": [
+      "reversal1",
+      "reversal239",
+      "lowvol239"
+    ],
+    "horizons_hours": [
+      1,
+      24
+    ],
+    "decision_phase": "account_start;every horizon hours;complete labels only",
+    "label": "D+1 nativeOPEN toD+1+horizon OPEN simple return",
+    "groups": 5,
+    "splits": [
+      "all",
+      "calendar2025",
+      "calendar2026_through_aug"
+    ],
+    "coverage": "Every declared decision has >=20valid OU assets;invalid OU staysNaN,never0. Same admissibility mask for all4 factor views.",
+    "gate": {
+      "ic_mean_gt": 0.03,
+      "ir_gt": 0.5,
+      "positive_ratio_gt": 0.55,
+      "all_three_splits": true,
+      "beats_both_reversal_controls_all_splits": true,
+      "scoped_mean_abs_pearson_lt": 0.99
+    },
+    "multiple_testing": "One score,two labels,shared full/year observations;not independentOOS"
+  },
+  "financial_if_pass": {
+    "native": "Configuration/IStrategy/Backtesting.start/Trade/Order/Wallet/ZIP",
+    "capital": [
+      1000,
+      500
+    ],
+    "per_side_cost_bps": [
+      15,
+      8
+    ],
+    "leverage": 1,
+    "allocation": "Top4/bottom4 at admitted horizon,close then entry after actualflat check,0.99wallet budget equally8slots,no upsize to minimum",
+    "source_thresholds": "Original1.25/.75/1.0 hysteresis is separately recorded;rank portfolio is local adaptation,not source strategy reproduction",
+    "portfolio": "Only after complete funding/rules admission:actual500newstrategy plusactual500samepool reversalcontrol;never scale1000curves",
+    "gate": "Positive full+bothannuals,DD<=30percent,Sharpe>.5,beatsmatchedcontrols at bothcosts;combination mustbeatbestmatched1000. No order/deployment authorization",
+    "historical_funding_and_rules": "Keep oldgaps;no source40 fullaccount admission inferred from predictiveprices"
+  },
+  "source_limitations": [
+    "No LICENSE in17path tree;sourceonlyread/puremathwitness,notexternalfinancialenginecopy",
+    "Original hourlytop40marketcap data2021-2022 not distributed;localfixed40not survivorship-free",
+    "Reference historicalprice filling and normalized activegross returns are not funded account",
+    "PCA factor extraction alone does not make actual trades factor-neutral"
+  ],
+  "orders_enabled": false,
+  "services_changed": false
+}

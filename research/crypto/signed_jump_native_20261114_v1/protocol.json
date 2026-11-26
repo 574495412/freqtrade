@@ -1,0 +1,61 @@
+{
+  "frozen_utc": "2026-11-14T13:02:41.484250+00:00",
+  "before_local_factor_or_financial_results": true,
+  "primary_source": "CIRF2022GoodVolatilityBadVolatilityPDF,actualpages7-8formula,13-14dailyportfolios",
+  "symbols": [
+    "ADA",
+    "BNB",
+    "BTC",
+    "DOGE",
+    "ETH",
+    "LINK",
+    "LTC",
+    "XRP"
+  ],
+  "universe_status": "local prior fixed8nativecrypto majors;not source51USDspot;no claims allmarketPIT",
+  "window": [
+    "2025-01-01T00:00:00Z",
+    "2026-08-31T23:00:00Z"
+  ],
+  "input": "officialBinanceUSD-M1mquote/baseVWAP,lastcomplete1minutein each5minute interval;one-minuteVWAPpath,not5mVWAPorclose",
+  "sampling_phase": "sampleminuteopen00:04completes00:05 labellednative5mbar00:00;paper exactminutephase unavailable;declared localphase",
+  "source_formulas": {
+    "RV": "sum288r^2",
+    "SJ": "sum(r^2 whenr>0)-sum(r^2 whenr<0)",
+    "RSJ": "SJ/RV",
+    "RSK": "sqrt288*sumr^3/RV^1.5",
+    "RKT": "288*sumr^4/RV^2",
+    "returns": "5minlogsampleVWAPdifferences;daily288complete valuesinclpriorUTCendprice",
+    "direction": "negative RSJ,RSK,RKT as3source-conditioned candidateviews;one family not3independentacceptedalphas"
+  },
+  "controls": [
+    "negative previous completeddaylogreturn",
+    "negativeRV"
+  ],
+  "clock": "D00signalfrompreviouscompleteUTCday;native1hdelayD01entry/label to nextD01;607complete24hourlabels,nolabeltailzero",
+  "missing": "incomplete288returns,zeroRVorzero1minbasevolume produceunknown,not0;preserve8pool. Financialcandidate needs full608dayknowninputgrid before execution;diagnostic commonmask disclosed",
+  "groups": 5,
+  "positive_gate": {
+    "ic_mean_gt": 0.03,
+    "ir_gt": 0.5,
+    "positive_ratio_gt": 0.55,
+    "requires": "candidate all/2025/2026continuoussplits simultaneously;scopedmeanabsPearson>.99duplicate reject"
+  },
+  "financial_followup_if_admitted": {
+    "native_engine": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "capital": [
+      1000,
+      500
+    ],
+    "cost_bps_per_side": [
+      15,
+      8
+    ],
+    "allocation": "lowestsource2longhighest2short;gross1 target99%budget,actualnativequantity/cash/minimums,funding",
+    "combos": "actual500selectedsource+500negativeRVwallets,noscaled1000curves",
+    "gate": "positivefullandbothcalendarslices,DD<=30%,combo exceedsbest1000component atbothcosts;data/OOS limitsremain"
+  },
+  "if_rejected": "stop beforefundedaccount;no sign/period/pool/cost/weight rescue",
+  "source_performance_reproduced": false,
+  "orders_deployment_services": false
+}

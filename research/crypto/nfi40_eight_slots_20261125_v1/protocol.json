@@ -1,0 +1,10 @@
+{
+  "hypothesis": "Two additional concurrent slots can admit some original signals without mechanically diluting initial stake per campaign.",
+  "control": "Frozen original NFI X8 v18.0.146 with six slots; 40 ordered Binance USDT perpetuals, 1x isolated, 1000 USDT, 99% tradable balance, original five-minute engine, original market and data inputs, same clock.",
+  "change": "Set eight native maximum concurrent trades. In the stake callback pass the native six-slot wallet proposal to unchanged X8 custom_stake_amount. All original signal predicates, financial limits, adjustments, exits and fees remain in native execution. X8 confirmation logic that reads free slots will see the actual eight-slot setting. No leverage change, per-pair stacking, reserve borrowing or additional strategy tags.",
+  "window": ["2025-01-01T00:00:00Z", "2026-08-31T23:00:00Z"],
+  "costs": "Use single-side 15bp first; 8bp confirmation only if first run increases both net marked total return and entry campaigns before the cutoff, without increasing marked drawdown, with independently reconciled economics.",
+  "counting": "An independent entry campaign is one position with at least one filled opening order before the common mark cutoff. Separately count naturally closed positions and distinguish subsequent additions and terminal forced closures.",
+  "known_limits": "Old native execution and precision model retained to match the control. Verify new account's gross exposure at the known AXS/TRB funding gap. No new out-of-sample or evidence of actual exchange execution. Existing original and 80-pair capacity results known; no result for this policy observed prior to freeze.",
+  "orders_enabled": false
+}

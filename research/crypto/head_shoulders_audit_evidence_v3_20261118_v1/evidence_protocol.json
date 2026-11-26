@@ -1,0 +1,57 @@
+{
+  "schema": "hs-audit-v3-conditional-boundary-evidence-only.v1",
+  "prepared_at": "2026-11-17T17:05:05.161515+00:00",
+  "before_audit_fixture_execution": true,
+  "original_auditor": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/head_shoulders_financial_native_20261117_v3/independent_account_audit_v2.py",
+    "sha256": "f841934ed845ea9d7ec0a3c6da05f595e2e93c008ff2cc113e93294828575654"
+  },
+  "application_gate": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_boundary_exit_clock_proof_20261118_v2/application_gate.py",
+    "sha256": "f2f2c9db08e0c35cd835db25e3ae237b4bcccee0d2b6228a218c62c8765a2a2f"
+  },
+  "application_scope_receipt": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_boundary_exit_clock_proof_20261118_v2/application_scope_receipt.json",
+    "sha256": "8249c4076c65c3b787aae73f4d3373062e62db984c886535dcb44a75178ee8fe"
+  },
+  "expected_actual_output_directory": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost15",
+  "actual_archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost15/native_results/backtest-result-2026-11-17_16-14-24.zip",
+  "only_registered_candidate": "nfi40_x8_500_cost15",
+  "strict_event_count": 5,
+  "boundary_classification": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT",
+  "created_ms_remains": null,
+  "raw_metadata_status_remains": "UNKNOWN",
+  "eight_bps_original1000_force_risk_inheritance": false,
+  "strict_HS_two_fill_sequence_changed": false,
+  "numeric_function_AST_required_identical": [
+    "cash_from_orders",
+    "funding_history",
+    "two_fill_funding",
+    "trade_path",
+    "metrics",
+    "periods_for",
+    "standalone_gate",
+    "fixed_combo",
+    "boundary_evidence",
+    "source_terminal",
+    "source_trade_check",
+    "missing_exposure"
+  ],
+  "account_allowed_changes": [
+    "load exact supplementary evidence for known candidate",
+    "supplement boundary classification preserving raw fields",
+    "assert exactly five bound events applied",
+    "add explicit conditional/raw metadata result fields"
+  ],
+  "main_allowed_changes": [
+    "new freeze file",
+    "explicit base study for original protocol/plan/execution complete",
+    "new output directory only"
+  ],
+  "all_original_cash_NAV_funding_tolerances_and_economic_gates_unchanged": true,
+  "financial_or_completed_account_audit_permitted_this_stage": false,
+  "fixtures_only": true,
+  "pending_8bp_returns_must_not_be_read": true,
+  "old_UNKNOWN_files_must_not_be_edited": true,
+  "conditional_VERIFIED_scope": "Only after all original numeric checks and other unknown-evidence gates pass, existingstatus may becomeVERIFIED within the explicitly bound native model. Missing metadata staysUNKNOWN and venue/historical-rule/production certification staysfalse."
+}

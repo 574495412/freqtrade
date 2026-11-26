@@ -1,0 +1,180 @@
+{
+  "status": "LEGACY_SOURCE_CHRONOLOGY_REJECTED",
+  "passed_diagnostic": true,
+  "kind": "Source-AST row-clock audit with stand-ins, not model numerical replication or native backtest",
+  "source_sha256": "f6d1b3ecea9f1eb4609c2b0d0a7a543a6a476df01ae2257d09f1830cc5dbf0e4",
+  "data_receipt": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/candles/BTC_USDT-5m.feather",
+    "sha256": "366afbdd6214d8d5b502c9c12bb3794aac31581b83f97d15730f6f359062e638",
+    "subset_start": "2025-01-01 00:00:00+00:00",
+    "subset_last": "2025-01-11 09:55:00+00:00",
+    "rows": 3000
+  },
+  "stand_ins": [
+    "wavelet returns input solely to trace source slices",
+    "scaler is identity solely to preserve row IDs",
+    "regressor emits watermarks solely to expose assignment and aliasing"
+  ],
+  "full": {
+    "rows": 3000,
+    "fits": [
+      {
+        "first_feature_id": 0,
+        "last_feature_id": 967,
+        "latest_label_id": 973,
+        "training_rows": 968,
+        "labels_changed_from_original_closes": 0
+      },
+      {
+        "first_feature_id": 973,
+        "last_feature_id": 1940,
+        "latest_label_id": 1946,
+        "training_rows": 968,
+        "labels_changed_from_original_closes": 0
+      },
+      {
+        "first_feature_id": 1946,
+        "last_feature_id": 2913,
+        "latest_label_id": 2919,
+        "training_rows": 968,
+        "labels_changed_from_original_closes": 0
+      },
+      {
+        "first_feature_id": 2026,
+        "last_feature_id": 2993,
+        "latest_label_id": 2999,
+        "training_rows": 968,
+        "labels_changed_from_original_closes": 888
+      }
+    ],
+    "assignments": [
+      {
+        "first_output_id": 0,
+        "last_output_id": 973,
+        "fit_call": 0,
+        "latest_training_label_id": 973,
+        "output_rows": 974
+      },
+      {
+        "first_output_id": 973,
+        "last_output_id": 1946,
+        "fit_call": 1,
+        "latest_training_label_id": 1946,
+        "output_rows": 974
+      },
+      {
+        "first_output_id": 1946,
+        "last_output_id": 2919,
+        "fit_call": 2,
+        "latest_training_label_id": 2919,
+        "output_rows": 974
+      },
+      {
+        "first_output_id": 2026,
+        "last_output_id": 2999,
+        "fit_call": 3,
+        "latest_training_label_id": 2999,
+        "output_rows": 974
+      }
+    ],
+    "normalization_fits": [
+      {
+        "rows": 3000,
+        "first_id": 0,
+        "last_id": 2999
+      }
+    ],
+    "assigned_rows": 3000,
+    "rows_with_future_training_labels": 2999,
+    "rows_with_future_training_labels_after128warmup": 2871,
+    "maximum_training_label_lead_bars": 973,
+    "first_wavelet_call": {
+      "input_rows": 126,
+      "first": 93607.1,
+      "last": 93400.02,
+      "wavelet": "db4",
+      "mode": "smooth",
+      "level": 2
+    },
+    "prediction_values_are_only_watermarks": true
+  },
+  "prefix": {
+    "rows": 2800,
+    "fits": [
+      {
+        "first_feature_id": 0,
+        "last_feature_id": 967,
+        "latest_label_id": 973,
+        "training_rows": 968,
+        "labels_changed_from_original_closes": 0
+      },
+      {
+        "first_feature_id": 973,
+        "last_feature_id": 1940,
+        "latest_label_id": 1946,
+        "training_rows": 968,
+        "labels_changed_from_original_closes": 0
+      },
+      {
+        "first_feature_id": 1826,
+        "last_feature_id": 2793,
+        "latest_label_id": 2799,
+        "training_rows": 968,
+        "labels_changed_from_original_closes": 115
+      }
+    ],
+    "assignments": [
+      {
+        "first_output_id": 0,
+        "last_output_id": 973,
+        "fit_call": 0,
+        "latest_training_label_id": 973,
+        "output_rows": 974
+      },
+      {
+        "first_output_id": 973,
+        "last_output_id": 1946,
+        "fit_call": 1,
+        "latest_training_label_id": 1946,
+        "output_rows": 974
+      },
+      {
+        "first_output_id": 1826,
+        "last_output_id": 2799,
+        "fit_call": 2,
+        "latest_training_label_id": 2799,
+        "output_rows": 974
+      }
+    ],
+    "normalization_fits": [
+      {
+        "rows": 2800,
+        "first_id": 0,
+        "last_id": 2799
+      }
+    ],
+    "assigned_rows": 2800,
+    "rows_with_future_training_labels": 2799,
+    "rows_with_future_training_labels_after128warmup": 2671,
+    "maximum_training_label_lead_bars": 973,
+    "first_wavelet_call": {
+      "input_rows": 126,
+      "first": 93607.1,
+      "last": 93400.02,
+      "wavelet": "db4",
+      "mode": "smooth",
+      "level": 2
+    },
+    "prediction_values_are_only_watermarks": true
+  },
+  "appended200rows_change_past_training_assignment_afterwarmup": 974,
+  "appended200rows_change_past_watermarks_afterwarmup": 974,
+  "source_xgboost_executed": false,
+  "real_pywavelets_transform_executed": false,
+  "source_financial_engine_executed": false,
+  "new_native_wallets": 0,
+  "profit_proven": false,
+  "not_a_claim_about_current_upstream": true,
+  "production_eligible": false,
+  "goal_complete": false
+}

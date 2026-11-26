@@ -1,0 +1,40 @@
+{
+  "hypothesis": "A slower long-short trend strategy can add large completed wins through longer directional holds. Compare full-account net return and risk to NFI, including small losses and the cost of committed capital.",
+  "source": {
+    "title": "Catching Crypto Trends: A Tactical Approach for Bitcoin and Altcoins",
+    "authors": ["Carlo Zarattini", "Andrea Pagani", "Alberto Barbon"],
+    "url": "https://concretumgroup.com/wp-content/uploads/2026/02/Catching-Crypto-Trends.pdf",
+    "sha256": "9fc2811b2c8062cd1fae92c3f1464d3883fdb7cae588604dea34c20d6742945d",
+    "sections": ["4.1", "Figure 1", "Appendix. Long-Short Implementation"],
+    "lookback": "60 days, the illustrated lookback in Figure 1; frozen without a window search",
+    "prior_related_study": "donchian_consensus_20261107 used long-only spot and nine horizons. Its negative results remain on record."
+  },
+  "signal": {
+    "period": "60 completed UTC daily closes including the current completed day",
+    "entry": "Long at upper close-channel boundary, short at lower close-channel boundary. Degenerate flat channel yields no new entry.",
+    "exit": "On later daily closes, opposite channel boundary takes precedence. Otherwise exit a long below its previous trail or a short at or above its previous trail. Initialize trail at the entry signal day's midpoint. On surviving closes ratchet the next trail with the midpoint.",
+    "clock": "Only completed daily information. Project the decision to the 23:00 UTC hourly row only. Native signal shift executes at next 00:00. Native opposite entries may follow a real simulated exit if the engine has capacity.",
+    "no_fixed_profit_target": true
+  },
+  "local_adaptation": {
+    "venue": "original ordered 40 Binance USDT perpetuals",
+    "direction_and_trail": "source mechanism applied to actual held trades. Every rejected entry stays rejected for that clock. Fresh next-day breakout can submit a new request.",
+    "initial_weight": "25% divided by annualized sample standard deviation of 90 daily simple returns, then capped at one times the native proposed stake and native maximum. No post-entry resizing. Native wallet and minimum stakes apply.",
+    "initial_capital_usdt": [1000, 500],
+    "cost_bps_per_side": [15, 8],
+    "leverage": 1,
+    "slots_per_wallet": 6,
+    "balance_ratio": 0.99,
+    "matching": "1h main, 5m detail, market entry and exit, initial clock only. Local precision lookup shares legacy NFI 5m table for comparison. Pinned native funding.",
+    "comparison_window_utc": ["2025-01-01T00:00:00Z", "2026-08-31T23:00:00Z"],
+    "funding_unknown": "Gross exposure at the missing AXS/TRB slot keeps the affected account economically UNKNOWN.",
+    "scope": "Local adaptation to comparable Freqtrade perpetual wallets. Fixed slot budget, cap, initial-only volatility sizing, and native order timing differ from paper's daily volatility-targeted ensemble."
+  },
+  "comparison": {
+    "base": "same-cost original NFI40 1000 account",
+    "fixed_combination": "sum actual Donchian500 and audited NFI500 NAV at all 14592 identical hours, no rebalancing",
+    "combination_gate": "For both fees higher net cumulative return and no higher marked hourly drawdown than original NFI1000. Both annual sections strictly positive. Numeric account and evidence checks must pass.",
+    "tail_diagnostics": "Report positive natural completed campaigns above 1%, 2%, and 5% of own starting capital, top 10 winner contribution, loss distribution, and holding times. Forced exits remain separate. Tail metrics alone never establish account improvement.",
+    "preregistration": "Existing NFI baseline outcomes known. No Donchian60-tail economic result observed. No threshold optimization or selective window."
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "frozen_at": "2026-11-16T19:34:04.637265+00:00",
+  "scope": "Post-result diagnostic of existing NFI6 initial orders,not retuned financial replay",
+  "accounts": [
+    {
+      "account": "nfi-x4-compact-1x-cost8",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x4-compact-1x-cost8/native_results/backtest-result-2026-11-05_13-05-15.zip",
+      "sha256": "b6e5a77c18a9d2ff88ff45bbbb78a22d1f4cd6fcb89ee687ab2fe108a7f3abf0"
+    },
+    {
+      "account": "nfi-x8-1x-cost8",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x8-1x-cost8/native_results/backtest-result-2026-11-05_12-46-45.zip",
+      "sha256": "80e731e8528e6c95a424e71ae8867b1fe48f914ecbb4569e34c8f131f9743c73"
+    },
+    {
+      "account": "nfi-x4-compact-1x-cost15",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x4-compact-1x-cost15/native_results/backtest-result-2026-11-05_13-32-44.zip",
+      "sha256": "4c586726635a1a9429a0417d4cfda5c462b3b82dd1795a322e5a669f13bd2b92"
+    },
+    {
+      "account": "nfi-x8-1x-cost15",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15/native_results/backtest-result-2026-11-05_13-13-57.zip",
+      "sha256": "e2ff3c9a7de5960375b63270e2ce1ee35a4eca47a43a28ad1ad2cc3a08624fb3"
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_x7_20261105_v001/nfi-x7-1x-cost15/native_results/backtest-result-2026-11-05_14-00-12.zip",
+      "sha256": "d78b249c8d73c0db7d2b1b4a2a9e65a9b1c32331bfe5c55ab91b5af6d3bab98f"
+    },
+    {
+      "account": "nfi-x7-1x-cost8",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_x7_20261105_v001/nfi-x7-1x-cost8/native_results/backtest-result-2026-11-05_13-41-38.zip",
+      "sha256": "3c3a907800d361afe2e2cd01eb964b9b2a5f11141898e6cfdf44c35acb008773"
+    }
+  ],
+  "screens": [
+    {
+      "pair": "SOL/USDT:USDT",
+      "field": "minimum_amount",
+      "old_value": "1",
+      "new_value": "0.01",
+      "conservative_start": "2025-04-03T00:00:00+00:00",
+      "transition_start": "2025-04-09T09:30:00+00:00",
+      "transition_end": "2025-04-09T09:31:00+00:00",
+      "clock_limit": "Postponement announcement Apr1 walltime lacks timezone;startApr3 conservative;extended suspension end is a diagnostic boundary,not separately certified by postponement text"
+    },
+    {
+      "pair": "BTC/USDT:USDT",
+      "field": "minimum_notional",
+      "old_value": "100",
+      "new_value": "50",
+      "conservative_start": "2026-04-11T00:00:00+00:00",
+      "transition_start": "2026-04-14T06:30:00+00:00",
+      "transition_end": "2026-04-14T10:30:00+00:00",
+      "clock_limit": "Announcement says approximately4h;10:30not certified exact activation"
+    }
+  ],
+  "rules": [
+    "Read actual nativeZIP without importing strategy,engine or profit calculator",
+    "Only initial entries use trade.open_timestamp as native initial submission proxy;DCA submission timestamps absent so do not promote their fill timestamps to order submission",
+    "Require both initialcampaign/open and firstfilled clocks inside conservative notice window for narrow screen",
+    "Broader pre-transition oldvalue screen is sensitivity only,not proof of invalid execution",
+    "Exclude reduce-only exits from minnotional rejection;do not treat minimum amount as step size",
+    "Include short initial entries;none of these are real venue order/acceptance evidence"
+  ],
+  "new_financial_accounts": 0,
+  "goal_complete": false
+}

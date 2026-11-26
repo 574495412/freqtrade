@@ -1,0 +1,52 @@
+{
+  "scope": "Native synthetic lifecycle fixtures, not source strategy financial evidence",
+  "start": "2025-01-02T00:00Z",
+  "end_exclusive": "2025-01-04T02:00Z",
+  "pairs": [
+    "FAKEONE/USDT:USDT",
+    "FAKETWO/USDT:USDT"
+  ],
+  "fixture_market_specs": "Synthetic .1coin quantity tick/min, .001price tick,5USDT notional minimum,3marginleverage; not EOS or venue certification",
+  "costs_per_side": 0.0015,
+  "initial_tradable_ratio": 0.99,
+  "cases": {
+    "normal1000": {
+      "capital": 1000,
+      "strategy": "FixtureCopula",
+      "expected": "complete"
+    },
+    "normal500": {
+      "capital": 500,
+      "strategy": "FixtureCopula",
+      "expected": "complete"
+    },
+    "under_minimum": {
+      "capital": 1000,
+      "strategy": "FixtureCopula",
+      "expected": "both_legs_rejected"
+    },
+    "one_leg_rejected": {
+      "capital": 1000,
+      "strategy": "FixtureRejectSecond",
+      "expected": "native_pair_mismatch_detected"
+    },
+    "missing_funding_exposed": {
+      "capital": 1000,
+      "strategy": "FixtureCopula",
+      "expected": "actual_missing_funding_exposure_detected"
+    },
+    "missing_funding_flat": {
+      "capital": 1000,
+      "strategy": "FixtureCopula",
+      "expected": "unexposed_gap_retained"
+    }
+  },
+  "same_native_engine": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "parent_manifest": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/copula_execution_native_20261115_v3/artifact_manifest.json",
+    "sha256": "9508db228a1d1704e4b0b0072ab537b62e915bc33b85bde6e182368ab4a3b441"
+  },
+  "source20_funded_admission": false,
+  "orders_enabled": false,
+  "services_enabled": false
+}

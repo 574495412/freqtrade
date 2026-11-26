@@ -1,0 +1,276 @@
+{
+  "freeze": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/first_cap_exit_freeze.json",
+    "sha256": "2958d0e70ce3bd7428237310ba3d2a3c8f0bc0b5bdee94c8ee7116a434da8d11"
+  },
+  "paths": [
+    {
+      "pair": "AAVE/USDT:USDT",
+      "first_filled_clock": "2025-11-05T01:25:00+00:00",
+      "capped": {
+        "opened": "2025-11-05T01:25:00+00:00",
+        "closed": "2025-11-14T05:05:00+00:00",
+        "added_fills": 1,
+        "first_margin_usdt": 212.15833333333333,
+        "cumulative_margin_usdt": 423.593,
+        "net_usdt": 6.1425646,
+        "exit_reason": "exit_profit_short_rebuy_t_0_1_m ( 562 )"
+      },
+      "uncapped": {
+        "opened": "2025-11-05T01:25:00+00:00",
+        "closed": "2025-11-21T07:35:00+00:00",
+        "added_fills": 29,
+        "first_margin_usdt": 212.15833333333333,
+        "cumulative_margin_usdt": 3105.6276666666668,
+        "net_usdt": 21.153795680000044,
+        "exit_reason": "exit_short_rebuy_1_1_1 ( 562 )"
+      },
+      "rejected_requests": 32,
+      "first_rejection": "2025-11-10T11:30:00+00:00",
+      "last_rejection": "2025-11-11T02:00:00+00:00",
+      "status": "estimated",
+      "next_bar_utc": "2025-11-10T11:35:00+00:00",
+      "cover_price_proxy": 224.8,
+      "concurrent_mark_price": 224.83334052,
+      "pre_entry_nav_usdt": 10485.957681017078,
+      "next_bar_net_usdt": -237.64803807964452,
+      "next_bar_vs_capped_actual_usdt": -243.7906026806817,
+      "next_bar_net_fraction_of_prior_nav": -0.022663455767122073,
+      "capped_actual_fraction_of_prior_nav": 0.0005857895660898954,
+      "open_quantity_before_cover": 6.7,
+      "exit_orders": {
+        "fills": [
+          {
+            "time_utc": "2025-11-14T05:05:00+00:00",
+            "amount": 6.7,
+            "price": 188.56,
+            "tag": "exit_profit_short_rebuy_t_0_1_m ( 562 )",
+            "fraction_of_all_entry_quantity": 1.0
+          }
+        ],
+        "reason": "exit_profit_short_rebuy_t_0_1_m ( 562 )",
+        "last_close_fraction": 1.0
+      }
+    },
+    {
+      "pair": "DYDX/USDT:USDT",
+      "first_filled_clock": "2025-09-04T23:55:00+00:00",
+      "capped": {
+        "opened": "2025-09-04T23:55:00+00:00",
+        "closed": "2025-09-18T23:55:00+00:00",
+        "added_fills": 1,
+        "first_margin_usdt": 114.8175,
+        "cumulative_margin_usdt": 229.6175,
+        "net_usdt": -116.38777989,
+        "exit_reason": "exit_bad_trade_abandon_14d ( 562 )"
+      },
+      "uncapped": {
+        "opened": "2025-09-04T23:55:00+00:00",
+        "closed": "2025-09-18T23:55:00+00:00",
+        "added_fills": 2,
+        "first_margin_usdt": 114.79859999999998,
+        "cumulative_margin_usdt": 344.36549999999994,
+        "net_usdt": -117.90167095,
+        "exit_reason": "exit_bad_trade_abandon_14d ( 562 )"
+      },
+      "rejected_requests": 2,
+      "first_rejection": "2025-09-18T22:20:00+00:00",
+      "last_rejection": "2025-09-18T22:25:00+00:00",
+      "status": "estimated",
+      "next_bar_utc": "2025-09-18T22:25:00+00:00",
+      "cover_price_proxy": 0.691,
+      "concurrent_mark_price": 0.690753,
+      "pre_entry_nav_usdt": 5443.341672693749,
+      "next_bar_net_usdt": -117.55703113571529,
+      "next_bar_vs_capped_actual_usdt": -1.1692512499999026,
+      "next_bar_net_fraction_of_prior_nav": -0.02159648212520523,
+      "capped_actual_fraction_of_prior_nav": -0.02138167818379902,
+      "open_quantity_before_cover": 1167.5,
+      "exit_orders": {
+        "fills": [
+          {
+            "time_utc": "2025-09-18T23:55:00+00:00",
+            "amount": 1167.5,
+            "price": 0.69,
+            "tag": "exit_bad_trade_abandon_14d ( 562 )",
+            "fraction_of_all_entry_quantity": 1.0
+          }
+        ],
+        "reason": "exit_bad_trade_abandon_14d ( 562 )",
+        "last_close_fraction": 1.0
+      }
+    },
+    {
+      "pair": "FARTCOIN/USDT:USDT",
+      "first_filled_clock": "2026-09-16T01:40:00+00:00",
+      "capped": {
+        "opened": "2026-09-16T01:40:00+00:00",
+        "closed": "2026-09-21T13:05:00+00:00",
+        "added_fills": 1,
+        "first_margin_usdt": 783.9208666666667,
+        "cumulative_margin_usdt": 1567.8399333333334,
+        "net_usdt": -1103.3351397499998,
+        "exit_reason": "stop_loss"
+      },
+      "uncapped": {
+        "opened": "2026-09-16T01:40:00+00:00",
+        "closed": "2026-10-18T19:45:00+00:00",
+        "added_fills": 33,
+        "first_margin_usdt": 756.8679466666666,
+        "cumulative_margin_usdt": 12624.457426666668,
+        "net_usdt": 224.41156520000038,
+        "exit_reason": "exit_short_rebuy_1_1_1 ( 562 )"
+      },
+      "rejected_requests": 125,
+      "first_rejection": "2026-09-18T19:45:00+00:00",
+      "last_rejection": "2026-09-21T13:05:00+00:00",
+      "status": "estimated",
+      "next_bar_utc": "2026-09-18T19:50:00+00:00",
+      "cover_price_proxy": 0.1638,
+      "concurrent_mark_price": 0.1637,
+      "pre_entry_nav_usdt": 37570.706174130195,
+      "next_bar_net_usdt": -781.5077555030717,
+      "next_bar_vs_capped_actual_usdt": 321.8273842525124,
+      "next_bar_net_fraction_of_prior_nav": -0.020800986595274306,
+      "capped_actual_fraction_of_prior_nav": -0.02936689916437386,
+      "open_quantity_before_cover": 33411.0,
+      "exit_orders": {
+        "fills": [
+          {
+            "time_utc": "2026-09-21T04:50:00+00:00",
+            "amount": 33364.1,
+            "price": 0.1736,
+            "tag": "derisk_level_3",
+            "fraction_of_all_entry_quantity": 0.9985962706892939
+          },
+          {
+            "time_utc": "2026-09-21T13:05:00+00:00",
+            "amount": 46.9,
+            "price": 0.1837,
+            "tag": "stop_loss",
+            "fraction_of_all_entry_quantity": 0.001403729310706055
+          }
+        ],
+        "reason": "stop_loss",
+        "last_close_fraction": 0.001403729310706055
+      }
+    },
+    {
+      "pair": "NEAR/USDT:USDT",
+      "first_filled_clock": "2026-08-14T07:45:00+00:00",
+      "capped": {
+        "opened": "2026-08-14T07:45:00+00:00",
+        "closed": "2026-09-04T19:50:00+00:00",
+        "added_fills": 1,
+        "first_margin_usdt": 700.8000000000001,
+        "cumulative_margin_usdt": 1401.0373333333334,
+        "net_usdt": -999.87634434,
+        "exit_reason": "stop_loss"
+      },
+      "uncapped": {
+        "opened": "2026-08-14T07:45:00+00:00",
+        "closed": "2026-09-28T00:00:00+00:00",
+        "added_fills": 47,
+        "first_margin_usdt": 700.2666666666668,
+        "cumulative_margin_usdt": 13477.831666666667,
+        "net_usdt": -5766.02531195,
+        "exit_reason": "exit_bad_trade_broken_237pct ( 562 )"
+      },
+      "rejected_requests": 1351,
+      "first_rejection": "2026-08-21T23:15:00+00:00",
+      "last_rejection": "2026-09-04T19:50:00+00:00",
+      "status": "estimated",
+      "next_bar_utc": "2026-08-21T23:20:00+00:00",
+      "cover_price_proxy": 1.979,
+      "concurrent_mark_price": 1.98002757,
+      "pre_entry_nav_usdt": 33935.715801566315,
+      "next_bar_net_usdt": -797.851912423756,
+      "next_bar_vs_capped_actual_usdt": 202.02443191802035,
+      "next_bar_net_fraction_of_prior_nav": -0.023510684645317862,
+      "capped_actual_fraction_of_prior_nav": -0.0294638353935605,
+      "open_quantity_before_cover": 2522.0,
+      "exit_orders": {
+        "fills": [
+          {
+            "time_utc": "2026-08-22T02:20:00+00:00",
+            "amount": 2518.0,
+            "price": 2.059,
+            "tag": "derisk_level_3",
+            "fraction_of_all_entry_quantity": 0.9984139571768438
+          },
+          {
+            "time_utc": "2026-09-04T19:50:00+00:00",
+            "amount": 4.0,
+            "price": 2.177,
+            "tag": "stop_loss",
+            "fraction_of_all_entry_quantity": 0.0015860428231562252
+          }
+        ],
+        "reason": "stop_loss",
+        "last_close_fraction": 0.0015860428231562252
+      }
+    },
+    {
+      "pair": "USUAL/USDT:USDT",
+      "first_filled_clock": "2025-08-05T22:05:00+00:00",
+      "capped": {
+        "opened": "2025-08-05T22:05:00+00:00",
+        "closed": "2025-08-15T16:35:00+00:00",
+        "added_fills": 1,
+        "first_margin_usdt": 107.66802666666668,
+        "cumulative_margin_usdt": 215.32429333333334,
+        "net_usdt": 16.2359197,
+        "exit_reason": "exit_profit_short_rebuy_t_5_1_m ( 562 )"
+      },
+      "uncapped": {
+        "opened": "2025-08-05T22:05:00+00:00",
+        "closed": "2025-08-12T10:25:00+00:00",
+        "added_fills": 2,
+        "first_margin_usdt": 107.66802666666668,
+        "cumulative_margin_usdt": 322.97529000000003,
+        "net_usdt": 8.1761775,
+        "exit_reason": "exit_profit_short_rebuy_t_2_1_m ( 562 )"
+      },
+      "rejected_requests": 16,
+      "first_rejection": "2025-08-09T20:30:00+00:00",
+      "last_rejection": "2025-08-14T03:55:00+00:00",
+      "status": "estimated",
+      "next_bar_utc": "2025-08-09T20:35:00+00:00",
+      "cover_price_proxy": 0.08559,
+      "concurrent_mark_price": 0.08562201,
+      "pre_entry_nav_usdt": 5042.552465677307,
+      "next_bar_net_usdt": -139.5205807015775,
+      "next_bar_vs_capped_actual_usdt": -155.75650040559026,
+      "next_bar_net_fraction_of_prior_nav": -0.02766864234953227,
+      "capped_actual_fraction_of_prior_nav": 0.003219782007328945,
+      "open_quantity_before_cover": 9159.0,
+      "exit_orders": {
+        "fills": [
+          {
+            "time_utc": "2025-08-15T16:35:00+00:00",
+            "amount": 9159.0,
+            "price": 0.06866,
+            "tag": "exit_profit_short_rebuy_t_5_1_m ( 562 )",
+            "fraction_of_all_entry_quantity": 1.0
+          }
+        ],
+        "reason": "exit_profit_short_rebuy_t_5_1_m ( 562 )",
+        "last_close_fraction": 1.0
+      }
+    }
+  ],
+  "next_bar_price_proxy_net_change_usdt": 123.13546183426088,
+  "large_wins": {
+    "actual": 0,
+    "price_proxy": 0
+  },
+  "large_losses": {
+    "actual": 3,
+    "price_proxy": 5
+  },
+  "next_step_admitted": false,
+  "near_profit_difference_usdt": 4766.14896761,
+  "observed_account_end_nav_difference_usdt": 4186.805859716122,
+  "additive_difference_excluding_same_near_campaign_usdt": -579.3431078938784,
+  "orders_enabled": false
+}

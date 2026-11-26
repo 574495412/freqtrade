@@ -1,0 +1,123 @@
+{
+  "source_series": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/v002/CovarianceRiskTS_1000_15bps/hourly_equity.parquet",
+      "sha256": "c190c6e63a95e4f1e249555ecab05b3c9e6844a40cb5cad8f1837ab697bc2aaf",
+      "cost": 15,
+      "series": "CovarianceRiskTS"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/v002/DiagonalRiskTS_1000_15bps/hourly_equity.parquet",
+      "sha256": "3219d43845dae404670e20c12c1d950f240251c445794d5af65c89c1cfd39055",
+      "cost": 15,
+      "series": "DiagonalRiskTS"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/v002/GrossOneRiskTS_1000_15bps/hourly_equity.parquet",
+      "sha256": "3fea91f2f5333ed0644c008baa36f49586ac8b278a2b99c67b9500822a02788d",
+      "cost": 15,
+      "series": "GrossOneRiskTS"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/v002/combo_15bps.parquet",
+      "sha256": "3003752c1f41f7693c485ccd3ae1909a5cb1b496d184afaf8f0044a80a97ed0b",
+      "cost": 15,
+      "series": "Mix"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/v002/CovarianceRiskTS_1000_8bps/hourly_equity.parquet",
+      "sha256": "9b6bbe085ec573f908e3cb1ca18564e13ade2e8b5c61bdb104540981381e09ae",
+      "cost": 8,
+      "series": "CovarianceRiskTS"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/v002/DiagonalRiskTS_1000_8bps/hourly_equity.parquet",
+      "sha256": "e20e78d15f86d6835045f6ef145a6d1955450c648eb925808313947dbb8bebe1",
+      "cost": 8,
+      "series": "DiagonalRiskTS"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/v002/GrossOneRiskTS_1000_8bps/hourly_equity.parquet",
+      "sha256": "d7edb44a2925e13d59a3abd7b7c2c6cb0521a3c1d0cced5c4aabc03b52a5ae9c",
+      "cost": 8,
+      "series": "GrossOneRiskTS"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/v002/combo_8bps.parquet",
+      "sha256": "392721bb8592202e9bdc90c5b13caebd429687921047da1f3c33c17d7b0fa32e",
+      "cost": 8,
+      "series": "Mix"
+    }
+  ],
+  "actual_points_per_curve": 14592,
+  "identical_starting_usdt": 1000,
+  "endpoints_and_drawdowns": [
+    {
+      "cost": 15,
+      "series": "CovarianceRiskTS",
+      "start": 1000.0,
+      "end": 886.2268075800065,
+      "net_return": -0.11377319241999351,
+      "maximum_drawdown": 0.2223495060725691
+    },
+    {
+      "cost": 15,
+      "series": "DiagonalRiskTS",
+      "start": 1000.0,
+      "end": 819.1736370715698,
+      "net_return": -0.18082636292843013,
+      "maximum_drawdown": 0.4195898170681607
+    },
+    {
+      "cost": 15,
+      "series": "GrossOneRiskTS",
+      "start": 1000.0,
+      "end": 903.6976177524572,
+      "net_return": -0.09630238224754284,
+      "maximum_drawdown": 0.41079137736091176
+    },
+    {
+      "cost": 15,
+      "series": "Mix",
+      "start": 1000.0,
+      "end": 931.1970875472786,
+      "net_return": -0.06880291245272141,
+      "maximum_drawdown": 0.20154477703758344
+    },
+    {
+      "cost": 8,
+      "series": "CovarianceRiskTS",
+      "start": 1000.0,
+      "end": 956.3662250741006,
+      "net_return": -0.04363377492589937,
+      "maximum_drawdown": 0.19321524289559044
+    },
+    {
+      "cost": 8,
+      "series": "DiagonalRiskTS",
+      "start": 1000.0,
+      "end": 865.5563323647023,
+      "net_return": -0.1344436676352977,
+      "maximum_drawdown": 0.407507868413887
+    },
+    {
+      "cost": 8,
+      "series": "GrossOneRiskTS",
+      "start": 1000.0,
+      "end": 962.7498852799722,
+      "net_return": -0.037250114720027816,
+      "maximum_drawdown": 0.39861196034757973
+    },
+    {
+      "cost": 8,
+      "series": "Mix",
+      "start": 1000.0,
+      "end": 1005.2421386763722,
+      "net_return": 0.005242138676372132,
+      "maximum_drawdown": 0.17118343949842763
+    }
+  ],
+  "table_endpoint_reconciliation": true,
+  "rendered_visual_inspection": "pending",
+  "format": "Standalone scientific research figure in established repository report"
+}

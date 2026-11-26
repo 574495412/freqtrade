@@ -1,0 +1,9 @@
+{
+  "window": ["2025-01-01T00:00:00Z", "2026-01-01T00:00:00Z"],
+  "warmup": {"5m": "2024-11-01T00:00:00Z", "4h": "2024-08-01T00:00:00Z", "1d": "2022-10-01T00:00:00Z", "mark_and_funding": "2024-12-01T00:00:00Z"},
+  "membership": "The frozen 365-day prior-UTC-turnover top-80 schedule. Include the complete union, with continuous data through year-end once a selected contract has listed. The parent archive and November market identities are retrospective.",
+  "raw": "Use Binance public USD-M monthly archives and their published SHA256 checksums. Reuse previously verified copies with exactly the same archive identity. A missing or conflicting source is pending, with no fabricated candles, rates or renamed-contract substitutions.",
+  "normalization": "For seven exchange candle streams use trade-derived 15m/1h/4h and mark-derived 1h from strictly complete 5m windows, plus exchange-source 4h and 1d warmup. Keep events at raw exchange clocks and only derive the pinned native hourly funding input after validating unique settlement hours. Keep all coverage and listing-clock exceptions.",
+  "evaluation": "Use anonymous native Freqtrade under archived config. Start every variant at 1000 USDT, isolated 3x and two identical cost models of 15 and 8 bp per side, with the same dynamic list, market snapshots and five-minute terminal mark. Compare long-window net return, marked drawdown and profits/losses of large trades. This is a distinct empty-wallet 2025 run.",
+  "orders_enabled": false
+}

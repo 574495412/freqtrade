@@ -1,0 +1,45 @@
+{
+  "frozen_utc": "2026-11-15T04:12:53.215477+00:00",
+  "scope": "Native Copula run-admission boundaries, synthetic parity/negative-case validation; no source20 financial account",
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "parent_manifest": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/copula_fills_native_20261115_v4/artifact_manifest.json",
+    "sha256": "7343669980a750921b4c6645a678a17425b4958fb2d5e4279114fac843449b7c"
+  },
+  "inputs": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/copula_fills_native_20261115_v4/fixture_inputs_maintenance_fixed.json",
+    "sha256": "640114b9969987b64b3de59c4a3ab5812af102f58613bfad0e3028334f3fac45"
+  },
+  "observation": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/copula_fills_native_20261115_v4/observation_protocol.json",
+    "sha256": "e765cb2d16af87d15bed7797b4350137fb9f04a8131aa893af9491b174392647"
+  },
+  "fixture_protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/copula_fills_native_20261115_v4/fixture_protocol.json",
+    "sha256": "114b576f704fc21ec73bdb20fe094120c29ad83fd81c6f0ce55647c2bf3e442e"
+  },
+  "expected": {
+    "normal1000": "complete_equal_to_parent",
+    "normal500": "complete_equal_to_parent",
+    "under_minimum": "complete_equal_to_parent",
+    "one_leg_rejected": "abort_same_opening_phase_2025Jan2_00:05_no_zip",
+    "missing_funding_exposed": "abort_before_event_2025Jan3_11:00_no_zip",
+    "missing_funding_flat": "complete_equal_to_parent_unknown_retained"
+  },
+  "clocks": "Before entire native main5minute phase check known funding gaps against actual pre-event holdings; after entire phase validate pair actual quantity and side; no event prefetch/reorder or new trades",
+  "no_changes": [
+    "signals",
+    "states",
+    "thresholds",
+    "capital",
+    "costs",
+    "sizing",
+    "native wallet",
+    "native matcher",
+    "native Trade/Order"
+  ],
+  "source20_financial_admission": false,
+  "orders_enabled": false,
+  "services_enabled": false,
+  "expected_funding_contract": "Synthetic every hour Jan2 00UTC through Jan4 01UTC; unknown observations never zero-filled; not a venue calendar"
+}

@@ -1,0 +1,22 @@
+{
+  "registered_at": "2026-11-13T15:44:26.795999+00:00",
+  "source": "Wu/Pinsky 2026 DOI10.3390/jrfm19090692; author repo5693993e108f2b3668bd21b1dd36ae31f79d8fcd",
+  "rules": "BTC08/20UTC reverse PREVIOUS SAME session return; ETH05UTC same-session reversal and17UTC long. No own sign/hour selection.",
+  "source_selection": "Source BTC full-sample optimum unstable in training holdout; ETH more stable. Paper SPA fails to reject. Do not omit these failures or claim our overlap as OOS.",
+  "adaptation": "Binance USDT isolated perpetual instead of Kraken USD hourly spot; source rule from completed hourly boundary quotes. Flat each boundary, reopen exactly5m later via ordinary native5m strategy; actual wallet/lot/fees/funding/liquidation. No external account simulator.",
+  "funding_and_risk": "1x,99% native investable funds,one position per separate500 wallet; catastrophic99%stop and native liquidation. Historical50%DD gate is not a live guarantee.",
+  "controls": "TimedLong uses identical session boundary,5m cash gap and finite input mask, always long. PassiveLong enters earliest native valid bar,holds until terminal. No same-direction keep or fee-free rebalance invented.",
+  "combination": "For each policy sum actual independent BTC500 and ETH500 hourly wallets, no transfers/rebalance; total1000. Never scale a1000 wallet curve.",
+  "costs_bps_per_side": [
+    15,
+    8
+  ],
+  "window": [
+    "2025-01-01T00:00:00Z",
+    "2026-08-31T23:00:00Z"
+  ],
+  "acceptance": "Combined source must beat both matched timed-long and passive combinations at BOTH costs; positive full and each continuous annual slice; hourlyDD<=50%. Native numeric pass remains conditional, not independent/live qualification.",
+  "no_rescue": "No local sign/hour/window/leverage/fee tuning after results. Preserve source and technical failures.",
+  "orders_enabled": false,
+  "production_eligible": false
+}

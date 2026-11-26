@@ -1,0 +1,116 @@
+{
+  "scope": "Canonical11spot-symbol input availability; no historical strategy scores or accounts",
+  "frozen_source_symbols": [
+    "BTC",
+    "ETH",
+    "BNB",
+    "SOL",
+    "XRP",
+    "ADA",
+    "AVAX",
+    "DOT",
+    "LINK",
+    "LTC",
+    "MATIC"
+  ],
+  "records": [
+    {
+      "symbol": "BTC",
+      "native_file_present": true,
+      "original_window_observations": 608,
+      "source_frozen_forward_unavailable": false,
+      "sha256": "78eb74dc6fb66f0d15d0515e346f37e8c8eb4bccc8d9d3a7199e012e308e71f8"
+    },
+    {
+      "symbol": "ETH",
+      "native_file_present": true,
+      "original_window_observations": 608,
+      "source_frozen_forward_unavailable": false,
+      "sha256": "c7a79ee33870d5da9e8e36a1dc5ca850aa5861a3a0af1ebd6c5c95dc66fb4c66"
+    },
+    {
+      "symbol": "BNB",
+      "native_file_present": true,
+      "original_window_observations": 608,
+      "source_frozen_forward_unavailable": false,
+      "sha256": "07c5308ec3ee2e4adffbfbf985a629061425aa4d835dd83e0ca0ba89d158f240"
+    },
+    {
+      "symbol": "SOL",
+      "native_file_present": true,
+      "original_window_observations": 608,
+      "source_frozen_forward_unavailable": false,
+      "sha256": "61bb60e30e41de9859445031c96761a59d2e1162a82ed1e9210c0aee0100df4d"
+    },
+    {
+      "symbol": "XRP",
+      "native_file_present": true,
+      "original_window_observations": 608,
+      "source_frozen_forward_unavailable": false,
+      "sha256": "348512baf1ae36cf20a452efd0d63b3556c80a80fb5764fcb16f083894dfafb9"
+    },
+    {
+      "symbol": "ADA",
+      "native_file_present": true,
+      "original_window_observations": 608,
+      "source_frozen_forward_unavailable": false,
+      "sha256": "e44c668cd6d1b52cdc2fd166a59c504a9b799136d7dfab01ea10a7e7509a019b"
+    },
+    {
+      "symbol": "AVAX",
+      "native_file_present": false,
+      "original_window_observations": 0,
+      "source_frozen_forward_unavailable": false,
+      "sha256": null
+    },
+    {
+      "symbol": "DOT",
+      "native_file_present": true,
+      "original_window_observations": 608,
+      "source_frozen_forward_unavailable": false,
+      "sha256": "96c4eb24b06cea6dda05479eebbc8297aa25b2c5600f7cb4230b92eaf2451517"
+    },
+    {
+      "symbol": "LINK",
+      "native_file_present": true,
+      "original_window_observations": 608,
+      "source_frozen_forward_unavailable": false,
+      "sha256": "4f69de2fbb080a3d76b5f3f11ecd5857fc929836e137e8283d53937ac26bc1f3"
+    },
+    {
+      "symbol": "LTC",
+      "native_file_present": true,
+      "original_window_observations": 608,
+      "source_frozen_forward_unavailable": false,
+      "sha256": "d5705cf0cecba61a8d3d7b98842a0912068567834b90b15f2b492143754a9921"
+    },
+    {
+      "symbol": "MATIC",
+      "native_file_present": false,
+      "original_window_observations": 0,
+      "source_frozen_forward_unavailable": true,
+      "sha256": null
+    }
+  ],
+  "current_native_cached_subset_only": true,
+  "not_a_claim_no_other_history_exists": true,
+  "complete_original_universe_admitted": false,
+  "failed_symbol": "MATIC",
+  "source_notional_definition": "dailyclose times dailybasevolume; BTCshare in11source assets; not actualquotevolume or market-cap dominance",
+  "synthetic_probe": {
+    "only_pure_feature_AST_executed": true,
+    "missing_MATIC_input_cells": 10,
+    "missing_daily_rows": 5,
+    "BTCshare_still_finite": true,
+    "MATIC_ffill_returns_zero": true,
+    "equal_alt_weight_still_nonzero": true,
+    "claim": "Missing source closes can become zero quoted returns after ffill; this is not observed tradability. No source money engine executed."
+  },
+  "original_frozen_history_pickle_available_here": false,
+  "new_registry": 0,
+  "factor_analysis_calls": 0,
+  "funded_accounts": 0,
+  "accepted_new_independent_alphas": 0,
+  "return_metrics": null,
+  "no_posthoc_switch": "Do not select the source24-variant screened ETH/BNB/SOLwinner or renamePOL toMATIC to repair this canonical full-pool intake."
+}

@@ -1,0 +1,19 @@
+{
+  "recorded_at": "2026-11-16T22:41:20.834420+00:00",
+  "classification": "SOURCE_GATE_PARITY_FAILED_V001",
+  "native_financial_attempts": 4,
+  "financial_evaluation_admitted": false,
+  "source_parameters_unchanged": true,
+  "cause": "optimized entropy summation/log/normalization differed by floating-point tail; exact <= median gate may flip at ties",
+  "original_native_outputs_preserved": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/permutation_entropy_source_native_20261117_v1",
+  "original_feature_module": {
+    "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/ordinal_entropy.py",
+    "sha256": "1e52fe8f412656a8b4175eceff270aecc59123a386cb1780bdceb5e466ea9342",
+    "archived_path": "/Users/chrise/GitHub/freqtrade/research/crypto/permutation_entropy_source_native_20261117_v1/implementation_v001/ordinal_entropy.py"
+  },
+  "original_analysis_failure": "combined NAV index equality compares pandas timestamp resolutions rather than normalizing ns; cash/NAV account audits passed before combination check",
+  "correction_plan": "source exact count-frequency summation order,math.log2 and multiplication order; exact source gate parity before4corrected runs; normalize index unit in analysis only; no threshold/window/direction/weights/cost retuning",
+  "new_maximum_total_financial_attempts": 8,
+  "new_candidate_policies": 1,
+  "goal_complete": false
+}

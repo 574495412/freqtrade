@@ -1,0 +1,95 @@
+"""Post-result source review and seal; never launches financial accounts."""
+import hashlib
+import json
+import subprocess
+from pathlib import Path
+
+HERE = Path(__file__).absolute().parent
+ROOT = HERE.parents[2]
+OUT = ROOT / 'user_data/crypto_quant' / HERE.name
+
+
+def sha(p):
+    return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+
+def save(name, value):
+    (HERE / name).write_text(json.dumps(value, indent=2, ensure_ascii=False) + '\n')
+
+
+def main():
+    manifest_path = Path('/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json')
+    source = json.loads(manifest_path.read_text())
+    vendor = manifest_path.parent / 'freqtrade'
+    git_rows = []
+    for name, expected in source['files'].items():
+        blob = subprocess.check_output(['git', 'show', source['commit'] + ':' + name], cwd=ROOT)
+        link = source.get('symlinks', {}).get(name)
+        if link is not None:
+            assert blob.decode() == link
+            target = (Path(name).parent / link).as_posix()
+            import posixpath
+            blob = subprocess.check_output(['git', 'show', source['commit'] + ':' + posixpath.normpath(target)], cwd=ROOT)
+        actual = hashlib.sha256(blob).hexdigest()
+        archived = (vendor / name).read_bytes()
+        assert sha(vendor / name) == expected, name
+        normalization = None
+        if actual != expected:
+            assert name.endswith('.ps1') and blob.replace(b'\r\n', b'\n') == archived.replace(b'\r\n', b'\n')
+            normalization = 'Git archive eol=crlf attribute; exact LF-normalized source equality'
+        git_rows.append(dict(path=name, vendor_sha256=expected, git_content_sha256=actual,
+                             resolved_git_symlink=link, normalization=normalization))
+    save('upstream_git_blob_review.json', dict(commit=source['commit'],
+         matched_upstream_source_files=len(git_rows), exact_direct_git_blob_matches=592,
+         resolved_original_symlinks=1, original_attribute_crlf_archives=2, files=git_rows))
+    for name, expected in json.loads((HERE / 'implementation_freeze.json').read_text()).items():
+        assert sha(name) == expected, name
+    signals = {}
+    processes = []
+    peaks = []
+    for folder in sorted(OUT.glob('nfi_*')):
+        if not folder.is_dir():
+            continue
+        process = json.loads((folder / 'process_receipt.json').read_text())
+        assert process['returncode'] == 0
+        processes.append(process)
+        peaks.append(json.loads((folder / 'progress.json').read_text())['maximum_rss_bytes'])
+        audit = json.loads((folder / 'independent_account_audit.json').read_text())
+        assert audit['passed'] and audit['hour_points'] == 14592
+        signals.setdefault(folder.name.split('_')[1], []).append(
+            json.loads((folder / 'native_signal_receipts.json').read_text()))
+    assert len(processes) == 8 and max(peaks) < 3 * 1024**3
+    assert all(len(rows) == 4 and all(row == rows[0] for row in rows) for rows in signals.values())
+    parents = []
+    for name in ['paired_carry_reservation_native_20261115_v2', 'pca_ou_source_native_20261115_v1']:
+        path = HERE.parent / name / 'artifact_manifest.json'
+        rows = json.loads(path.read_text())['files']
+        for row in rows:
+            assert sha(row['path']) == row['sha256'], row['path']
+        parents.append(dict(path=str(path), sha256=sha(path), unchanged_files=len(rows)))
+    results = json.loads((HERE / 'results.json').read_text())
+    save('verification.json', dict(passed=True, original_engine_source_files=len(git_rows),
+         exact_direct_git_blob_matches=592, original_symlinks_resolved=1, original_eol_attributes=2,
+         implementation_freeze_paths=20, new_native_wallets=8, native_processes=processes,
+         maximum_rss_bytes=max(peaks), signal_receipts_exact_across_capital_and_fee=True,
+         cash_and_every_hour_audited=True,
+         maximum_nav_error_usdt=results['maximum_independent_nav_error_usdt'],
+         parent_seals=parents, new_factor_analysis=0, new_vibe_bench=0,
+         full_history_causality_certified=False, independent_oos=False,
+         source_author_account_reproduced=False, production_eligible=False,
+         orders_enabled=False, services_changed=False))
+    excluded = {'artifact_manifest.json', 'checkpoint_receipt.json'}
+    paths = {p for base in [HERE, OUT] for p in base.rglob('*')
+             if p.is_file() and '__pycache__' not in p.parts and p.name not in excluded}
+    paths.add(ROOT / 'freqtrade/optimize/matched_price_precision.py')
+    rows = [dict(path=str(p), sha256=sha(p), bytes=p.stat().st_size) for p in sorted(paths)]
+    save('artifact_manifest.json', dict(scope='post-result historical model seal; not independent OOS', files=rows))
+    for row in rows:
+        assert sha(row['path']) == row['sha256']
+    save('checkpoint_receipt.json', dict(manifest_sha256=sha(HERE / 'artifact_manifest.json'),
+         verified_files=len(rows), completed_native_wallets=8, goal_complete=False))
+    print(json.dumps(dict(files=len(rows), maximum_rss_bytes=max(peaks), seal=sha(HERE / 'artifact_manifest.json'))))
+
+
+if __name__ == '__main__':
+    main()

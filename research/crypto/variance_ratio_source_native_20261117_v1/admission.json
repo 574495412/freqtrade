@@ -1,0 +1,44 @@
+{
+  "status": "NOT_ADMITTED_SOURCE_CONTRACT_UNBOUND",
+  "source_commit": "b02ac45c455e6cca9523673355090ef6909fc03b",
+  "reference_sdk": "flint-trading 1.1.0, author dependency unverified",
+  "reason": [
+    "author SDK version not pinned",
+    "current-inclusive reference SDK channels restrict breakout to equality extrema and disable opposite-channel-only exits",
+    "all 14592 independent flat probes have no entry under unchanged source defaults; no native financial run performed"
+  ],
+  "counts": {
+    "bars": 14592,
+    "close_at_48_high": 0,
+    "close_at_48_low": 1,
+    "variance_ratio_pass": 2948,
+    "high_and_vr": 0,
+    "low_and_vr": 0,
+    "flat_long_order_probes": 0,
+    "flat_short_order_probes": 0,
+    "opposite_channel_long_exit": 0,
+    "opposite_channel_short_exit": 0
+  },
+  "source_rules_modified": false,
+  "thresholds_retuned": false,
+  "official_backtest_completed": false,
+  "new_native_wallets": 0,
+  "new_native_trades": 0,
+  "new_native_fills": 0,
+  "new_independent_alpha_qualified": 0,
+  "profit_proven": false,
+  "financial_gate": "NOT_RUN",
+  "native_strategy_implemented": false,
+  "production_eligible": false,
+  "orders_enabled": false,
+  "goal_complete": false,
+  "verification_passed": true,
+  "artifact_hashes": {
+    "protocol.json": "509cfae77dad34cb0246b540c646cff12595127eb73b8825583e1431db1212f2",
+    "diagnostics.json": "bb6e126aa7b8c7c1a64a4a5f2797ec9bc4b53328f47b37bab11c305ecdbabcd0",
+    "verification.json": "cd42a483a9d05155b71fa1d3c687017ed73976cfd5ac1e03df1a0da10dce6d3c",
+    "source_receipts.json": "54e2148744ff8a8d0aa375e9857b8994ad6e9919b869b2f7641c2726c4050a3d",
+    "sdk_distribution_receipts.json": "f33e70f1a812919ac29bc44f3ac439c981b98e0f8635eccfaa5d2bdd0004b804",
+    "sdk_execution_receipts.json": "34fec3dd6116715a29eb1660e6506f76801840859714cc26feb01e4d704e0d3e"
+  }
+}

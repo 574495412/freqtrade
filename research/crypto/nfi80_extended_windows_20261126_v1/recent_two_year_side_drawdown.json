@@ -1,0 +1,459 @@
+{
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/side_attribution.py",
+    "sha256": "68010278ff68d60325ddcf84b5d676d3cb7f00cdcbd46e2e8f31bde5716218a3"
+  },
+  "drawdowns": {
+    "15bp": {
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_15bp_drawdown_comparison.json",
+        "sha256": "105d649acbf5994865a6f1d5bf8ddf238dca1ae1a5f4d2b76857439da6de308c"
+      },
+      "windows": {
+        "12": {
+          "peak": "2026-10-31T00:40:00+00:00",
+          "trough": "2026-11-21T04:30:00+00:00",
+          "drawdown": 0.25268209346677983,
+          "accounts": {
+            "12": {
+              "pnl_usdt": {
+                "long": -11173.032771801512,
+                "short": 782.330410476117
+              },
+              "fraction_of_peak_nav": {
+                "long": -0.2717068791872025,
+                "short": 0.01902478571978944
+              },
+              "short_pnl_times_long_loss": 0.07001952168712523
+            },
+            "14": {
+              "pnl_usdt": {
+                "long": -12148.60934038858,
+                "short": 999.9026963357799
+              },
+              "fraction_of_peak_nav": {
+                "long": -0.27183182829674596,
+                "short": 0.022373373811615804
+              },
+              "short_pnl_times_long_loss": 0.0823059387556039
+            }
+          }
+        },
+        "14": {
+          "peak": "2026-10-31T00:40:00+00:00",
+          "trough": "2026-11-21T04:30:00+00:00",
+          "drawdown": 0.24945845448548198,
+          "accounts": {
+            "12": {
+              "pnl_usdt": {
+                "long": -11173.032771801512,
+                "short": 782.330410476117
+              },
+              "fraction_of_peak_nav": {
+                "long": -0.2717068791872025,
+                "short": 0.01902478571978944
+              },
+              "short_pnl_times_long_loss": 0.07001952168712523
+            },
+            "14": {
+              "pnl_usdt": {
+                "long": -12148.60934038858,
+                "short": 999.9026963357799
+              },
+              "fraction_of_peak_nav": {
+                "long": -0.27183182829674596,
+                "short": 0.022373373811615804
+              },
+              "short_pnl_times_long_loss": 0.0823059387556039
+            }
+          }
+        }
+      }
+    },
+    "8bp_12": {
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_8bp_12_verified.json",
+        "sha256": "ff8bbdd7d765e24f926c2a7b97f15368ef2a38fa6b7c040ddc3ae994c5fef9d7"
+      },
+      "peak": "2026-10-31T00:40:00+00:00",
+      "trough": "2026-11-21T04:30:00+00:00",
+      "drawdown": 0.24925306546144121,
+      "accounts": {
+        "12": {
+          "pnl_usdt": {
+            "long": -14746.28013849128,
+            "short": 1100.8659820203015
+          },
+          "fraction_of_peak_nav": {
+            "long": -0.26936196194029843,
+            "short": 0.02010889647866546
+          },
+          "short_pnl_times_long_loss": 0.07465380907465476
+        }
+      },
+      "complete_campaigns": {
+        "peak": "2026-10-31T00:40:00+00:00",
+        "trough": "2026-11-21T04:30:00+00:00",
+        "marked_nav_usdt": [
+          54745.22101141978,
+          41099.8068549593
+        ],
+        "marked_nav_change_usdt": -13645.41415646048,
+        "change_by_pair_usdt": {
+          "WLD/USDT:USDT": -6672.410708326472,
+          "APT/USDT:USDT": -4699.614893454077,
+          "PHA/USDT:USDT": -2509.7365351470135,
+          "CYBER/USDT:USDT": -1666.9222719390837,
+          "UNI/USDT:USDT": -892.6112061161602,
+          "ALGO/USDT:USDT": -95.39334665694207,
+          "QNT/USDT:USDT": 4.066483400000065,
+          "AERO/USDT:USDT": 25.21899872099975,
+          "FARTCOIN/USDT:USDT": 25.754830040569328,
+          "GALA/USDT:USDT": 29.727207449783254,
+          "MORPHO/USDT:USDT": 44.03567891586805,
+          "RUNE/USDT:USDT": 53.494551034779626,
+          "BEAMX/USDT:USDT": 59.56089531010257,
+          "LDO/USDT:USDT": 75.28830973258414,
+          "1000SHIB/USDT:USDT": 88.6183997478677,
+          "RENDER/USDT:USDT": 95.15308450612459,
+          "AVAX/USDT:USDT": 99.42154163931978,
+          "ZEN/USDT:USDT": 110.440225550119,
+          "SUI/USDT:USDT": 114.76440629250203,
+          "DOT/USDT:USDT": 132.4192334497839,
+          "ICP/USDT:USDT": 133.27822281419097,
+          "CRV/USDT:USDT": 154.20681397936633,
+          "OP/USDT:USDT": 163.049205406731,
+          "HOT/USDT:USDT": 176.7392961167062,
+          "SEI/USDT:USDT": 186.38998052834603,
+          "ZIL/USDT:USDT": 196.40347329920087,
+          "JUP/USDT:USDT": 391.41555516966605,
+          "INJ/USDT:USDT": 531.828412064158
+        },
+        "closing_ledger_change_usdt": 2520.993011880004,
+        "marked_gross_to_nav": [
+          0.9980888133370044,
+          1.1155720406062575
+        ],
+        "campaigns": [
+          {
+            "pair": "WLD/USDT:USDT",
+            "side": "long",
+            "entry_tag": "145 ",
+            "opening_fill": "2026-10-29T20:05:00+00:00",
+            "held_at_peak": true,
+            "held_at_trough": true,
+            "entry_orders_before_trough": 16,
+            "marked_pnl_change_usdt": -6672.410708326472
+          },
+          {
+            "pair": "APT/USDT:USDT",
+            "side": "long",
+            "entry_tag": "145 ",
+            "opening_fill": "2026-10-29T20:05:00+00:00",
+            "held_at_peak": true,
+            "held_at_trough": true,
+            "entry_orders_before_trough": 12,
+            "marked_pnl_change_usdt": -4699.614893454077
+          },
+          {
+            "pair": "PHA/USDT:USDT",
+            "side": "long",
+            "entry_tag": "63 ",
+            "opening_fill": "2026-10-23T18:05:00+00:00",
+            "held_at_peak": true,
+            "held_at_trough": true,
+            "entry_orders_before_trough": 24,
+            "marked_pnl_change_usdt": -2509.7365351470135
+          },
+          {
+            "pair": "CYBER/USDT:USDT",
+            "side": "long",
+            "entry_tag": "101 ",
+            "opening_fill": "2026-11-20T11:30:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": true,
+            "entry_orders_before_trough": 3,
+            "marked_pnl_change_usdt": -1666.9222719390837
+          },
+          {
+            "pair": "UNI/USDT:USDT",
+            "side": "long",
+            "entry_tag": "141 ",
+            "opening_fill": "2026-11-20T15:25:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": true,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": -892.6112061161602
+          },
+          {
+            "pair": "ALGO/USDT:USDT",
+            "side": "long",
+            "entry_tag": "120 ",
+            "opening_fill": "2026-11-20T15:25:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": true,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": -95.39334665694207
+          },
+          {
+            "pair": "QNT/USDT:USDT",
+            "side": "long",
+            "entry_tag": "64 ",
+            "opening_fill": "2026-11-04T18:40:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 4.066483400000065
+          },
+          {
+            "pair": "DOT/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-10T09:05:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 7.901836543311759
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-07T07:30:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 11.768955034779403
+          },
+          {
+            "pair": "AERO/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-19T15:00:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 25.21899872099975
+          },
+          {
+            "pair": "FARTCOIN/USDT:USDT",
+            "side": "long",
+            "entry_tag": "62 ",
+            "opening_fill": "2026-11-14T20:55:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 25.754830040569328
+          },
+          {
+            "pair": "GALA/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-02T06:10:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 29.727207449783254
+          },
+          {
+            "pair": "RUNE/USDT:USDT",
+            "side": "long",
+            "entry_tag": "141 ",
+            "opening_fill": "2026-10-31T21:55:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 41.72559600000022
+          },
+          {
+            "pair": "MORPHO/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-13T23:05:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 44.03567891586805
+          },
+          {
+            "pair": "INJ/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-16T01:25:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 2,
+            "marked_pnl_change_usdt": 49.49482214415746
+          },
+          {
+            "pair": "BEAMX/USDT:USDT",
+            "side": "long",
+            "entry_tag": "64 ",
+            "opening_fill": "2026-10-31T13:30:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 59.56089531010257
+          },
+          {
+            "pair": "LDO/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-19T14:55:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 75.28830973258414
+          },
+          {
+            "pair": "1000SHIB/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-05T23:10:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 88.6183997478677
+          },
+          {
+            "pair": "RENDER/USDT:USDT",
+            "side": "long",
+            "entry_tag": "102 ",
+            "opening_fill": "2026-11-20T15:20:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 95.15308450612459
+          },
+          {
+            "pair": "AVAX/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-07T15:45:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 99.42154163931978
+          },
+          {
+            "pair": "ZEN/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-07T20:55:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 110.440225550119
+          },
+          {
+            "pair": "SUI/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-07T20:50:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 114.76440629250203
+          },
+          {
+            "pair": "DOT/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-08T01:40:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 124.51739690647213
+          },
+          {
+            "pair": "ICP/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-07T03:35:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 133.27822281419097
+          },
+          {
+            "pair": "CRV/USDT:USDT",
+            "side": "long",
+            "entry_tag": "141 142 ",
+            "opening_fill": "2026-11-05T15:55:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 154.20681397936633
+          },
+          {
+            "pair": "OP/USDT:USDT",
+            "side": "long",
+            "entry_tag": "102 ",
+            "opening_fill": "2026-11-20T15:20:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 163.049205406731
+          },
+          {
+            "pair": "HOT/USDT:USDT",
+            "side": "long",
+            "entry_tag": "64 ",
+            "opening_fill": "2026-11-03T20:25:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 176.7392961167062
+          },
+          {
+            "pair": "SEI/USDT:USDT",
+            "side": "short",
+            "entry_tag": "562 ",
+            "opening_fill": "2026-11-08T01:35:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 186.38998052834603
+          },
+          {
+            "pair": "ZIL/USDT:USDT",
+            "side": "long",
+            "entry_tag": "2 ",
+            "opening_fill": "2026-11-20T06:10:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 196.40347329920087
+          },
+          {
+            "pair": "JUP/USDT:USDT",
+            "side": "long",
+            "entry_tag": "145 ",
+            "opening_fill": "2026-10-29T20:05:00+00:00",
+            "held_at_peak": true,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 9,
+            "marked_pnl_change_usdt": 391.41555516966605
+          },
+          {
+            "pair": "INJ/USDT:USDT",
+            "side": "long",
+            "entry_tag": "5 ",
+            "opening_fill": "2026-11-14T16:45:00+00:00",
+            "held_at_peak": false,
+            "held_at_trough": false,
+            "entry_orders_before_trough": 1,
+            "marked_pnl_change_usdt": 482.3335899200006
+          }
+        ],
+        "source_reads": {
+          "5m-mark": 28,
+          "1h-funding_rate": 28,
+          "1h-mark": 28
+        }
+      }
+    }
+  },
+  "scope": "Additive attribution of actual marked campaign PnL; no counterfactual sizing or order simulation",
+  "orders_enabled": false
+}

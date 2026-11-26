@@ -1,0 +1,50 @@
+{
+  "derived_at": "2026-11-17T14:02:38.889465+00:00",
+  "parent": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/audit_accounts.py",
+    "sha256": "e1fdf42c145001617eafa106c31e0240f93d6ecf927a7868f32a9b7c789bd363"
+  },
+  "parent_manifest": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/artifact_manifest.json",
+    "sha256": "21b148e72c52e2fa6ae209ac830954077721c5cf3f6bf55c40b7ebeb5d8b5d22"
+  },
+  "parent_source_unchanged_and_matches_seal": true,
+  "files": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/audit_accounts.py",
+      "sha256": "96d5861441eac7d77a500adedf53d6c2d8d777c5ea9b63d980dc132c58822eb0"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/test_funding_audit.py",
+      "sha256": "736560bf488fd0c570e6ea5a50660c4ec16681349a7bc6e24461329ddc075294"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/funding_audit_tests.log",
+      "sha256": "d1b49b4e145b440820b1067e499d65d1ec1b66f0397e579dace0ae4a69ba20d8"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/funding_audit_lint.log",
+      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/audit_accounts_derivation.patch",
+      "sha256": "33cef79f1e6856959eaf348cf71a85dceac090117ff9f1afbc65efb1b108e481"
+    }
+  ],
+  "changes": [
+    "Explicit before_orders and after_orders funding ownership from actual single entry/full exit fills",
+    "Two orders only; no DCA, partial exit, inconsistent clocks or quantities",
+    "Independent hourly funding accrual excludes current-time event in before-processing snapshot",
+    "Reject duplicate event ownership across same-pair lifecycles",
+    "Retain entry/exit boundary event details instead of rejecting all boundary fills",
+    "Verify actual funding policy sidecar, extension audit, extension SHA, candidate sources and marked/funding input hashes",
+    "Keep original fill/cash, quantity and price precision, full-hour NAV, endpoint and full/split-period audits"
+  ],
+  "tests": {
+    "passed": 16,
+    "scope": "Hand-computed opening, closing, ordinary holding, signed rate and short cashflow, same-time reversal, zero-duration roundtrip, duplicate ownership and invalid-input rejection; not complete native-account audit"
+  },
+  "financial_accounts_started_by_this_task": 0,
+  "native_or_candidate_implementation_imported": false,
+  "orders_enabled": false
+}

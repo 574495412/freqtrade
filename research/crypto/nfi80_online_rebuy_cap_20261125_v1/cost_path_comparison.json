@@ -1,0 +1,57 @@
+{
+  "comparisons": {
+    "15": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_rebuy_cap_20261125_v1/comparison_15bp.json",
+      "sha256": "cced03881274892465bc22fcbe77990a454233cd237fb8430645415bec1989df"
+    },
+    "8": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_rebuy_cap_20261125_v1/comparison_8bp.json",
+      "sha256": "d397d1a93d4e49b20772f79d33f8eeaed6b9cc9f9d25754ae4660e9828ce16ee"
+    }
+  },
+  "native_8bp_control_and_cap": {
+    "exact_trades": true,
+    "exact_five_minute_wallet": true,
+    "marks": 89917,
+    "blocked_adjustments": 0
+  },
+  "same_entry_NEAR_562_by_cost": {
+    "15": {
+      "control": {
+        "entry_clock": "2026-08-14 07:45:00+00:00",
+        "exit_clock": "2026-09-28 00:00:00+00:00",
+        "net_usdt": -402.68639123,
+        "adds": 46,
+        "exit_reason": "exit_bad_trade_broken_237pct ( 562 )"
+      },
+      "candidate": {
+        "entry_clock": "2026-08-14 07:45:00+00:00",
+        "exit_clock": "2026-09-04 19:50:00+00:00",
+        "net_usdt": -63.48822503,
+        "adds": 1,
+        "exit_reason": "stop_loss"
+      }
+    },
+    "8": {
+      "control": {
+        "entry_clock": "2026-08-14 07:45:00+00:00",
+        "exit_clock": "2026-08-19 03:25:00+00:00",
+        "net_usdt": 0.21214601,
+        "adds": 0,
+        "exit_reason": "exit_profit_short_rebuy_t_0_1_m ( 562 )"
+      },
+      "candidate": {
+        "entry_clock": "2026-08-14 07:45:00+00:00",
+        "exit_clock": "2026-08-19 03:25:00+00:00",
+        "net_usdt": 0.21214601,
+        "adds": 0,
+        "exit_reason": "exit_profit_short_rebuy_t_0_1_m ( 562 )"
+      }
+    }
+  },
+  "replay_independent_from_failed_artifact": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/cap_discovery_8bp/parity.json",
+    "sha256": "093c7ea6a3c14b4a609263c34dc48315a6752435d03ca786af28ccf3aff33bf2"
+  },
+  "orders_enabled": false
+}

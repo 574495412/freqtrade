@@ -1,0 +1,30 @@
+{
+  "source": "https://quantitative.cz/wp-content/uploads/2023/09/impact_of_size_and_volume_on_cryptocurrency_momentum_and_reversal.pdf",
+  "source_sha256": "e91db8b5898dcda9fc292d2daedf241d82a87b83b0e9b24a73e9cb1216ea75a6",
+  "source_sections": [
+    "2.2 formula 2",
+    "3.1 Table 4",
+    "Table 6"
+  ],
+  "source_predictor": "last completed week closing log price minus log of the highest traded price over that week",
+  "source_portfolio": "Equal-weight quintile long-short within the large-and-liquid cohort. Prev-week cap >= USD50m, prev-week traded volume >= USD5m, end-of-week close >= USD0.001. The long-only strong cohort is not evidence of the reported long-short premium.",
+  "diagnostic_week_boundary": "Monday 00:00 UTC adopted for input coverage check, not identified in the viewed paper",
+  "weekly_decision_clocks": 87,
+  "pairs_with_every_required_daily_Bar": 40,
+  "missing_daily_count_by_pair": {},
+  "signal_inputs_in_pinned_bars": [
+    "close",
+    "date",
+    "high",
+    "low",
+    "open",
+    "volume"
+  ],
+  "unavailable_in_pinned_bars": [
+    "point-in-time circulating market cap by coin",
+    "market-wide USD turnover used by paper"
+  ],
+  "conclusion": "Technical predictor inputs inspected; original membership cannot be admitted with the pinned bars alone. Fixed forty-pair rank adaptation is separately testable after its own registration.",
+  "factor_analysis_run": false,
+  "native_accounts_run": 0
+}

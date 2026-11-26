@@ -1,0 +1,59 @@
+{
+  "frozen_at": "2026-11-17T00:41:13.027559+00:00",
+  "source_policy_manifest": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_policy_native_20261117_v3/artifact_manifest.json",
+    "sha256": "814fe8478e82518cefa84366e9bc0a738c38cfd7e3d9e7aebb0a71aec54da160"
+  },
+  "native_template_plan": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/plan.json",
+    "sha256": "45d01166ecc2031b67dc785a39ddb421de5c5b35e409798a2face15061268337"
+  },
+  "scope": "Full native cash spot accounts for fixed source CPU wavelet strategy; no source rule retuning",
+  "source_commit": "9bb7dab5df53203e69f60336749551a40767af0b",
+  "source_variant": "CPU/no saved scaler, original 15m startup128 and default source policy",
+  "financial_window": {
+    "start": "2025-01-01T00:00:00Z",
+    "end_exclusive": "2026-09-01T00:00:00Z",
+    "comparison_end": "2026-08-31T23:00:00Z"
+  },
+  "pairs": [
+    "BTC/USDT",
+    "ETH/USDT"
+  ],
+  "leverage": 1,
+  "capital": [
+    1000,
+    500
+  ],
+  "cost_bps_per_side": [
+    20,
+    13
+  ],
+  "max_open_trades": 2,
+  "tradable_balance_ratio": 0.99,
+  "warmup_contract": "Original startup128; initial model1000 remains part of account cash ramp. No extra pretraining or shifted window to rescue results.",
+  "cache_contract": "Actual source indicators computed through native callback before financial matching; exact-input, source, parameter and dependency hashes allow reuse across capital/cost only. No external account simulator.",
+  "model_observation": "Read-only sklearn subclass delegates original fit/predict; guard on full expected fit/predict count to detect source swallowed errors; no estimator parameter changes.",
+  "financial_gate": "Both costs: continuous and each annual subperiod positive, hourly NAV DD <=15%, daily NAV Sharpe>.5, fullwindow return beats all frozen matched1000spot controls. Fixed500+500wavelet+NFI and wavelet+Trend portfolios use actual native500 wallets and must beat best matched1000spot control without worse DD. Retain every failed outcome; no retuning.",
+  "portfolio_splits": [
+    {
+      "wavelet": 500,
+      "nfi_spot": 500
+    },
+    {
+      "wavelet": 500,
+      "trendcore": 500
+    }
+  ],
+  "selection_not_independent_oos": true,
+  "rule_reference_not_historical_venue_certification": true,
+  "resource_contract": {
+    "memory_guard_bytes": 3221225472,
+    "wall_guard_seconds": 14400,
+    "minimum_free_disk_bytes": 1073741824,
+    "account_concurrency": 1
+  },
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

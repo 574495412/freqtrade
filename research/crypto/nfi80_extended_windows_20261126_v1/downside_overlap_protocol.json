@@ -1,0 +1,11 @@
+{
+  "hypothesis": "Long additions to a full NFI book can increase losses when the proposed position overlaps more with the existing long holdings on down-market days than over all days.",
+  "boundaries": "Apply to fresh longs seeking slot 11 through 14. This scope was motivated by observed 2024 stress attribution. It preserves slots 1 to 10, shorts, and management of existing trades. All results here screen already executed positions.",
+  "history": "Use 60 consecutive daily log returns through the cutoff from already completed UTC daily candles. For a hypothetical confirmation at 00:00 use the preceding day availability clock, with new daily data usable at 00:05. Pairwise Pearson correlation on the subset of days with negative BTC futures return, requiring at least 20 negative days. Compute an identical all-days comparator.",
+  "holdings": "Use original long quantities strictly before the order candle and last available trade-price daily close. Divide each notional by its actual leverage and sum only positive correlations times these margin-equivalent exposures. Normalize by marked NAV at the candle start. The pre-candle book is fixed for all confirmations at that clock.",
+  "rule": "Reject only if downside overlap exceeds both the all-days overlap and 30 percent of pre-candle marked NAV. The 30 percent threshold comes from prior A14 overlap research; this blocking rule and BTC conditioning are local adaptations. Carry missing calendars, zero variance, and ambiguous boundary slots as unknown.",
+  "comparison": "Original matched 2024 15 bp stress cohorts and completed 2025-2026 continuous 14-slot versus 12-slot accounts at both 15 and 8 bp. Include all original four stress additions and all naturally closed first fills exclusive to 14 slots in each full comparison.",
+  "advance": "Require at least one definite block of the two original stress longs in slots 11 or 12, and retain every exclusive large winner under both costs. Gate only a subsequent native wallet run. No counterfactual fill, PnL or drawdown is calculated.",
+  "source": "https://doi.org/10.1515/snde-2025-0030",
+  "orders_enabled": false
+}

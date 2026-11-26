@@ -1,0 +1,74 @@
+{
+  "primary": {
+    "url": "https://link.springer.com/article/10.1186/s40854-021-00291-9",
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/max_lottery_source_native_20261115_v1/sources/article.html",
+    "sha256": "308920d3115536afa71671e0c4bfdf6d94741ffd9d278eebf8ddd8360fad5f54",
+    "doi": "10.1186/s40854-021-00291-9",
+    "published": "2021-09-08",
+    "license": "CC BY4.0",
+    "read_scope": "Introduction, methods/variable construction, univariate portfolio section, conclusion, data availability and footnotes; not every table or author implementation audited",
+    "rule": "Maximum of28completed daily returns, weekly7day forecast; positive direction from crypto paper, footnote9pins length",
+    "author_code_and_dataset": "Upon request; not obtained, no author contacted",
+    "source_samples": "CoinMarketCap spot2014Jan-2020Sep, cap>5mUSD and6monthseasoning; not reproduced by local fixed40perpetuals",
+    "return_definition": "Close-to-close simple price return is explicit local convention; paper labels daily R without full source-data/code contract",
+    "source_claims_used_as_local_accounts": false
+  },
+  "github": {
+    "url": "https://github.com/OpenSourceAP/CrossSection/blob/9f053398c4995651d822e90d81526d0644c6f3e5/Signals/pyCode/Predictors/MaxRet.py",
+    "commit": "9f053398c4995651d822e90d81526d0644c6f3e5",
+    "license": "GPL-2.0",
+    "complete_reviewed_file": true,
+    "external_code_executed": false,
+    "scope": "Stocks CRSP calendar-month grouped maximum. It does not implement crypto28day weekly timing or an account",
+    "no_stock_direction_copied": true,
+    "no_external_account_engine_adopted": true
+  },
+  "local_related_definitions": [
+    {
+      "name": "core_equity_max_month",
+      "scope": "negative calendar-month equity MAX, separate market/clock"
+    },
+    {
+      "name": "core_equity_neg_max_return_7",
+      "scope": "negative7session log-return stock MAX, separate source/contract"
+    },
+    {
+      "name": "skew_vol annual360",
+      "scope": "older local lottery/skewness family, remains failed/UNKNOWN as documented; not repaired"
+    }
+  ],
+  "x_twitter": {
+    "new_max_rule": "Searches did not yield a directly reviewed complete MAX algorithm/account",
+    "previous_intake": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1/source_intake.json",
+    "previous_sha256": "bcc61f7af788f7a7f53e1879d6cbd5b8cabccc39f645418a7da30f21e9b9f8bb",
+    "previous_access_explicitly_reused": true,
+    "historical_sentiment_inputs_not_used": true,
+    "new_tweets_or_strategy_accounts_admitted": false
+  },
+  "youtube": {
+    "new_max_rule": "No complete verified MAX transcript/rule set obtained; no video watched",
+    "previous_intake": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1/source_intake.json",
+    "previous_sha256": "bcc61f7af788f7a7f53e1879d6cbd5b8cabccc39f645418a7da30f21e9b9f8bb",
+    "previous_metadata_status_reused": true,
+    "full_transcript_read": false,
+    "new_strategy_admitted": false
+  },
+  "douyin": {
+    "url": "https://www.douyin.com/shipin/7644368945084237874",
+    "platform_display_name": "自由琦谈",
+    "reviewed": "Web tool read the main platform AI transcript paragraph for factor combination, not the audio/video; direct response stored separately",
+    "takeaway": "Equal-weight feature baseline, linear fit overfitting concerns, and factor combo distinct from funded risk-constrained portfolio",
+    "limitations": "Automatic transcript has recognition errors; no reproducible full numerical formulas, input vintage or cash ledger. Promotional returns not adopted",
+    "related_video_paragraphs_not_adopted": true,
+    "video_watched": false,
+    "strategy_admitted": false
+  },
+  "eos_followup": {
+    "url": "https://gist.github.com/hoangtuanictvn/71530b7dc55c514597b24582636dbb84",
+    "reviewed": "Web header and market-type fields; serverTime1612072950783 and isSpotTradingAllowed=true, permissionsSPOT/MARGIN",
+    "excluded": "2021 spot snapshot cannot certify actual2025 EOSUSDT perpetual minima; Copula metadata remains unadmitted"
+  },
+  "new_accepted_alphas": 0,
+  "financial_accounts": 0,
+  "production_approval": false
+}

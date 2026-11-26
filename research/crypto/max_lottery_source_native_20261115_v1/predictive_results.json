@@ -1,0 +1,398 @@
+{
+  "actual_registry_views": 3,
+  "global_registry_modified": false,
+  "actual_factor_analysis_calls": 9,
+  "unique_nonoverlapping_weeks": 86,
+  "assets": 40,
+  "independent_ic_rows_including_reused_splits": 516,
+  "independent_group_nav_cells": 5160,
+  "maximum_group_nav_error": 1.6653345369377348e-15,
+  "label": "Gross quote simple return with complete endpoints only; not net portfolio or funding return",
+  "receipts": [
+    {
+      "factor": "max28",
+      "split": "all",
+      "observations": 86,
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.115895,
+        "ic_std": 0.23368,
+        "ir": -0.496,
+        "ic_positive_ratio": 0.3256,
+        "ic_count": 86,
+        "n_groups": 10,
+        "long_short_spread": -0.5075,
+        "group_final_equity": {
+          "Group_1": 0.5905,
+          "Group_2": 0.4615,
+          "Group_3": 0.1886,
+          "Group_4": 0.3859,
+          "Group_5": 0.188,
+          "Group_6": 0.2442,
+          "Group_7": 0.1736,
+          "Group_8": 0.2029,
+          "Group_9": 0.3291,
+          "Group_10": 0.0831
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/max_lottery_source_native_20261115_v1/predictive/max28/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "max28",
+      "split": "calendar2025",
+      "observations": 53,
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.093154,
+        "ic_std": 0.257026,
+        "ir": -0.3624,
+        "ic_positive_ratio": 0.3774,
+        "ic_count": 53,
+        "n_groups": 10,
+        "long_short_spread": -0.4827,
+        "group_final_equity": {
+          "Group_1": 0.6436,
+          "Group_2": 0.6205,
+          "Group_3": 0.3382,
+          "Group_4": 0.5961,
+          "Group_5": 0.2376,
+          "Group_6": 0.4775,
+          "Group_7": 0.3646,
+          "Group_8": 0.428,
+          "Group_9": 0.6024,
+          "Group_10": 0.1609
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/max_lottery_source_native_20261115_v1/predictive/max28/calendar2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "max28",
+      "split": "calendar2026_through_aug",
+      "observations": 33,
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.152419,
+        "ic_std": 0.188321,
+        "ir": -0.8094,
+        "ic_positive_ratio": 0.2424,
+        "ic_count": 33,
+        "n_groups": 10,
+        "long_short_spread": -0.4013,
+        "group_final_equity": {
+          "Group_1": 0.9175,
+          "Group_2": 0.7437,
+          "Group_3": 0.5577,
+          "Group_4": 0.6474,
+          "Group_5": 0.7911,
+          "Group_6": 0.5115,
+          "Group_7": 0.476,
+          "Group_8": 0.4741,
+          "Group_9": 0.5464,
+          "Group_10": 0.5163
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/max_lottery_source_native_20261115_v1/predictive/max28/calendar2026_through_aug/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "mom21_skip7",
+      "split": "all",
+      "observations": 86,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.004512,
+        "ic_std": 0.256146,
+        "ir": 0.0176,
+        "ic_positive_ratio": 0.5116,
+        "ic_count": 86,
+        "n_groups": 10,
+        "long_short_spread": 0.0373,
+        "group_final_equity": {
+          "Group_1": 0.1527,
+          "Group_2": 0.4586,
+          "Group_3": 0.1975,
+          "Group_4": 0.2814,
+          "Group_5": 0.1615,
+          "Group_6": 0.2171,
+          "Group_7": 0.2804,
+          "Group_8": 0.4665,
+          "Group_9": 0.2487,
+          "Group_10": 0.19
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/max_lottery_source_native_20261115_v1/predictive/mom21_skip7/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "mom21_skip7",
+      "split": "calendar2025",
+      "observations": 53,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.030776,
+        "ic_std": 0.277728,
+        "ir": 0.1108,
+        "ic_positive_ratio": 0.5472,
+        "ic_count": 53,
+        "n_groups": 10,
+        "long_short_spread": 0.0898,
+        "group_final_equity": {
+          "Group_1": 0.3349,
+          "Group_2": 0.5446,
+          "Group_3": 0.3357,
+          "Group_4": 0.3516,
+          "Group_5": 0.246,
+          "Group_6": 0.383,
+          "Group_7": 0.4994,
+          "Group_8": 0.5616,
+          "Group_9": 0.5423,
+          "Group_10": 0.4247
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/max_lottery_source_native_20261115_v1/predictive/mom21_skip7/calendar2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "mom21_skip7",
+      "split": "calendar2026_through_aug",
+      "observations": 33,
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.037671,
+        "ic_std": 0.214383,
+        "ir": -0.1757,
+        "ic_positive_ratio": 0.4545,
+        "ic_count": 33,
+        "n_groups": 10,
+        "long_short_spread": -0.0086,
+        "group_final_equity": {
+          "Group_1": 0.456,
+          "Group_2": 0.8421,
+          "Group_3": 0.5883,
+          "Group_4": 0.8003,
+          "Group_5": 0.6562,
+          "Group_6": 0.5668,
+          "Group_7": 0.5615,
+          "Group_8": 0.8306,
+          "Group_9": 0.4587,
+          "Group_10": 0.4474
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/max_lottery_source_native_20261115_v1/predictive/mom21_skip7/calendar2026_through_aug/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "lowvol28",
+      "split": "all",
+      "observations": 86,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.165156,
+        "ic_std": 0.254036,
+        "ir": 0.6501,
+        "ic_positive_ratio": 0.7326,
+        "ic_count": 86,
+        "n_groups": 10,
+        "long_short_spread": 0.6517,
+        "group_final_equity": {
+          "Group_1": 0.0943,
+          "Group_2": 0.1663,
+          "Group_3": 0.1876,
+          "Group_4": 0.1216,
+          "Group_5": 0.2777,
+          "Group_6": 0.2266,
+          "Group_7": 0.365,
+          "Group_8": 0.3411,
+          "Group_9": 0.412,
+          "Group_10": 0.746
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/max_lottery_source_native_20261115_v1/predictive/lowvol28/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": true
+    },
+    {
+      "factor": "lowvol28",
+      "split": "calendar2025",
+      "observations": 53,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.166197,
+        "ic_std": 0.284425,
+        "ir": 0.5843,
+        "ic_positive_ratio": 0.717,
+        "ic_count": 53,
+        "n_groups": 10,
+        "long_short_spread": 0.7638,
+        "group_final_equity": {
+          "Group_1": 0.1561,
+          "Group_2": 0.3399,
+          "Group_3": 0.4208,
+          "Group_4": 0.3008,
+          "Group_5": 0.4103,
+          "Group_6": 0.4212,
+          "Group_7": 0.4491,
+          "Group_8": 0.4221,
+          "Group_9": 0.6587,
+          "Group_10": 0.9199
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/max_lottery_source_native_20261115_v1/predictive/lowvol28/calendar2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": true
+    },
+    {
+      "factor": "lowvol28",
+      "split": "calendar2026_through_aug",
+      "observations": 33,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.163483,
+        "ic_std": 0.199888,
+        "ir": 0.8179,
+        "ic_positive_ratio": 0.7576,
+        "ic_count": 33,
+        "n_groups": 10,
+        "long_short_spread": 0.2072,
+        "group_final_equity": {
+          "Group_1": 0.6037,
+          "Group_2": 0.4893,
+          "Group_3": 0.4459,
+          "Group_4": 0.4041,
+          "Group_5": 0.677,
+          "Group_6": 0.5381,
+          "Group_7": 0.8127,
+          "Group_8": 0.808,
+          "Group_9": 0.6256,
+          "Group_10": 0.8109
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/max_lottery_source_native_20261115_v1/predictive/lowvol28/calendar2026_through_aug/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": true
+    }
+  ],
+  "deduplication": [
+    {
+      "peer": "mom21_skip7",
+      "shared_assets": 40,
+      "observations": 86,
+      "mean_abs_pearson": 0.367264866295035,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "lowvol28",
+      "shared_assets": 40,
+      "observations": 86,
+      "mean_abs_pearson": 0.863278783515312,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "raw28",
+      "shared_assets": 40,
+      "observations": 86,
+      "mean_abs_pearson": 0.40195969991964575,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "skew28",
+      "shared_assets": 40,
+      "observations": 86,
+      "mean_abs_pearson": 0.7179403753237147,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "annual_low_skew360_recomputed",
+      "shared_assets": 40,
+      "observations": 86,
+      "mean_abs_pearson": 0.17664526625267776,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "lowvol63_recomputed",
+      "shared_assets": 40,
+      "observations": 86,
+      "mean_abs_pearson": 0.6257624463095738,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "previous_eight_residual14",
+      "shared_assets": 8,
+      "observations": 86,
+      "mean_abs_pearson": 0.3840366097476191,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "previous_six_edge30",
+      "shared_assets": 6,
+      "observations": 86,
+      "mean_abs_pearson": 0.4502093037721831,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "previous_six_amihud30",
+      "shared_assets": 6,
+      "observations": 86,
+      "mean_abs_pearson": 0.3207154898564365,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "previous_six_lowvol63",
+      "shared_assets": 6,
+      "observations": 86,
+      "mean_abs_pearson": 0.7288039487539163,
+      "duplicate_gt_99": false
+    }
+  ],
+  "source_factor_admitted_to_financial_stage": false,
+  "financed_account_returns": null,
+  "historical_funded_accounts": 0,
+  "combination_accounts": 0,
+  "accepted_new_alphas": 0,
+  "independent_oos_certified": false,
+  "group_curves_are_funded_returns": false
+}

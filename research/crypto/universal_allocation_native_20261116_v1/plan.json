@@ -1,0 +1,448 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "schema": "matched-nfi-carry-native-v1",
+  "registered_at": "2026-11-15T16:53:52.294512+00:00",
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/candles",
+  "pairs": [
+    "BTC/USDT",
+    "ETH/USDT"
+  ],
+  "candidates": [
+    {
+      "name": "up_1000_conservative",
+      "strategy": "OnlineAllocation",
+      "capital": 1000,
+      "mode": "spot",
+      "scenario": "conservative",
+      "cost_bps": 20,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/up_1000_conservative.json",
+        "sha256": "aa3655c940890de25c3e2a73d6854f0f03646089b396f9e55aa4a61b06d97dd9"
+      },
+      "source_files": {
+        "OnlineAllocation.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/OnlineAllocation.py",
+          "sha256": "e0ab834bf94a3ebceca10c865dee91a7f303db90acdf126584cd2c7562eb00b0"
+        },
+        "UniversalSignals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/universal_allocation.py",
+          "sha256": "9fc574eafef2993f5fd5f98f0b5e8efe4044ad68730c14bf948a3e66f4667164"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    },
+    {
+      "name": "crp_1000_conservative",
+      "strategy": "ConstantThirds",
+      "capital": 1000,
+      "mode": "spot",
+      "scenario": "conservative",
+      "cost_bps": 20,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/crp_1000_conservative.json",
+        "sha256": "286592e95c9d8cff4bfbc0b2a3058b52b637f3b061d9f6e67f7d891bb2f76970"
+      },
+      "source_files": {
+        "OnlineAllocation.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/OnlineAllocation.py",
+          "sha256": "e0ab834bf94a3ebceca10c865dee91a7f303db90acdf126584cd2c7562eb00b0"
+        },
+        "UniversalSignals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/universal_allocation.py",
+          "sha256": "9fc574eafef2993f5fd5f98f0b5e8efe4044ad68730c14bf948a3e66f4667164"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    },
+    {
+      "name": "up_1000_lower",
+      "strategy": "OnlineAllocation",
+      "capital": 1000,
+      "mode": "spot",
+      "scenario": "lower",
+      "cost_bps": 13,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/up_1000_lower.json",
+        "sha256": "71d6fa469f4accf5f3c20508652347e71d6e5fbad0837b290623d44bd482aaff"
+      },
+      "source_files": {
+        "OnlineAllocation.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/OnlineAllocation.py",
+          "sha256": "e0ab834bf94a3ebceca10c865dee91a7f303db90acdf126584cd2c7562eb00b0"
+        },
+        "UniversalSignals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/universal_allocation.py",
+          "sha256": "9fc574eafef2993f5fd5f98f0b5e8efe4044ad68730c14bf948a3e66f4667164"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    },
+    {
+      "name": "crp_1000_lower",
+      "strategy": "ConstantThirds",
+      "capital": 1000,
+      "mode": "spot",
+      "scenario": "lower",
+      "cost_bps": 13,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/crp_1000_lower.json",
+        "sha256": "3994e19f814637914846547be711aeae6d349d749d5a0fac54636f3aa196edbc"
+      },
+      "source_files": {
+        "OnlineAllocation.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/OnlineAllocation.py",
+          "sha256": "e0ab834bf94a3ebceca10c865dee91a7f303db90acdf126584cd2c7562eb00b0"
+        },
+        "UniversalSignals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/universal_allocation.py",
+          "sha256": "9fc574eafef2993f5fd5f98f0b5e8efe4044ad68730c14bf948a3e66f4667164"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    },
+    {
+      "name": "up_500_conservative",
+      "strategy": "OnlineAllocation",
+      "capital": 500,
+      "mode": "spot",
+      "scenario": "conservative",
+      "cost_bps": 20,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/up_500_conservative.json",
+        "sha256": "277dfaf9ecd7eb66d083b86ab8139a04182724d44e440d7908bd255e5e8aa576"
+      },
+      "source_files": {
+        "OnlineAllocation.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/OnlineAllocation.py",
+          "sha256": "e0ab834bf94a3ebceca10c865dee91a7f303db90acdf126584cd2c7562eb00b0"
+        },
+        "UniversalSignals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/universal_allocation.py",
+          "sha256": "9fc574eafef2993f5fd5f98f0b5e8efe4044ad68730c14bf948a3e66f4667164"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    },
+    {
+      "name": "crp_500_conservative",
+      "strategy": "ConstantThirds",
+      "capital": 500,
+      "mode": "spot",
+      "scenario": "conservative",
+      "cost_bps": 20,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/crp_500_conservative.json",
+        "sha256": "d830212ea8c8651267a64d5d704ae13bf753f474f582bcafedc9f3441ec50059"
+      },
+      "source_files": {
+        "OnlineAllocation.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/OnlineAllocation.py",
+          "sha256": "e0ab834bf94a3ebceca10c865dee91a7f303db90acdf126584cd2c7562eb00b0"
+        },
+        "UniversalSignals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/universal_allocation.py",
+          "sha256": "9fc574eafef2993f5fd5f98f0b5e8efe4044ad68730c14bf948a3e66f4667164"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    },
+    {
+      "name": "up_500_lower",
+      "strategy": "OnlineAllocation",
+      "capital": 500,
+      "mode": "spot",
+      "scenario": "lower",
+      "cost_bps": 13,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/up_500_lower.json",
+        "sha256": "821e18e220d987a4b039323d28ce436a6cc9ea1aadd1f2a1cf3ad5f401e40f4c"
+      },
+      "source_files": {
+        "OnlineAllocation.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/OnlineAllocation.py",
+          "sha256": "e0ab834bf94a3ebceca10c865dee91a7f303db90acdf126584cd2c7562eb00b0"
+        },
+        "UniversalSignals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/universal_allocation.py",
+          "sha256": "9fc574eafef2993f5fd5f98f0b5e8efe4044ad68730c14bf948a3e66f4667164"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    },
+    {
+      "name": "crp_500_lower",
+      "strategy": "ConstantThirds",
+      "capital": 500,
+      "mode": "spot",
+      "scenario": "lower",
+      "cost_bps": 13,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/crp_500_lower.json",
+        "sha256": "f42c3b652f19bdee14a2998251398e7b6425c96a1fa5c45c191006f8b9635c53"
+      },
+      "source_files": {
+        "OnlineAllocation.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/OnlineAllocation.py",
+          "sha256": "e0ab834bf94a3ebceca10c865dee91a7f303db90acdf126584cd2c7562eb00b0"
+        },
+        "UniversalSignals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/universal_allocation.py",
+          "sha256": "9fc574eafef2993f5fd5f98f0b5e8efe4044ad68730c14bf948a3e66f4667164"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    }
+  ],
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+    "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+  },
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/data_receipts.json",
+    "sha256": "da666aeb5507316c18fc4e9a0ff90fe29c8b6493b3c774f17095dd5d5cb56555"
+  },
+  "marks": {
+    "BTC/USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/BTC_USDT-1h.feather",
+      "sha256": "beed6bde8f88040b0af3457543d9d9a6cd0d15716b521cec1614ebe9e14a3a76"
+    },
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    "ETH/USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/ETH_USDT-1h.feather",
+      "sha256": "1a7e97e71696dc76472fb89c5c474824085f0a4601fc6a4007c1911780d51957"
+    },
+    "ETH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+    }
+  },
+  "allowed_leverage": 1,
+  "initial_equity_usdt": 1000,
+  "total_cost_bps_per_side": [
+    20,
+    13
+  ],
+  "runner_sha256": "89ce7cf48ce99e90ecb97f70a4e9618003ae03b7aa5425013a57fce2568b2f00",
+  "runner_module": "research.crypto.universal_allocation_native_20261116_v1.native_runner",
+  "price_precision_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/matched_price_precision.py",
+    "sha256": "651d8e731c0a85649fb547ff27f5381eebb086e905537c27f8aee5b578aec9bb"
+  },
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/protocol.json",
+      "sha256": "6acf4cfffb6d0c7f41bff5b9f383ae0b5fe1d471ddb1116e28d58a67ad212dde"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/protocol_freeze.json",
+      "sha256": "dfc45ab903bd7c386af6e530ee912f81e2634e448185564b95536215238ac7b2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/OnlineAllocation.py",
+      "sha256": "e0ab834bf94a3ebceca10c865dee91a7f303db90acdf126584cd2c7562eb00b0"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/NativeAllocations.py",
+      "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/run.py",
+      "sha256": "918b5a304aea47b30a4254a109317ce530fbaafe9974c29cc4b51278ab36ee19"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/CaptureRules.py",
+      "sha256": "519ae02c22ab37138cfe0ee6410e4a8e694c7714d74a1f13011e592846eaed46"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/universal_allocation.py",
+      "sha256": "9fc574eafef2993f5fd5f98f0b5e8efe4044ad68730c14bf948a3e66f4667164"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/band_trend_native_20261113_v1/observe_clock.py",
+      "sha256": "f2bb297fca1ec753d9a010c39ff45506dccc0aadadf067f069de2e8a8d7b638d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/skew_vol_native_20261113_v1/clock_fix.py",
+      "sha256": "3569781b7f1e30319cb0f2aed0a2c12587f0448de154f5575415b6f1684df8ce"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false
+}

@@ -1,0 +1,53 @@
+{
+  "frozen_utc": "2026-11-14T09:16:41.722849+00:00",
+  "scope": "BTC source strategy allocation study; not a new cross-sectional factor",
+  "source_url": "https://www.quantconnect.com/terminal/cache/embedded_backtest_b1a65b7cdcbd0e5ba35370df12ea454a.html",
+  "source_capture_sha256": "f202229c124dc3e0f351c5c9b7506227a7c7a4c7675fcb3585e773dc951e9d47",
+  "source_alpha_sha256": "28e9ddd95ec8cb6eaef7f48a9601b47e56b4ab872183d2c36d69058bed0b80ac",
+  "source_main_sha256": "de7de567e2a804a9b1cc74fb65d91cf7357531b9f8cdd79085038d90c122346a",
+  "source_n_days": 4,
+  "source_k1": 0.5,
+  "source_k2": 0.5,
+  "source_anchor": "Open of latest COMPLETED daily bar, exactly as on_consolidated assigns bar.open; not current-day open",
+  "source_decisions": "Hourly close price >= upper renews365-day long intent; price < lower cancels intent; within band retains intent until expiry",
+  "local_calendar": "UTC completed24-hour daily bars; exact previous four calendar days; reject gaps",
+  "initial_state": "Flat at window start; warmup never creates a funded position",
+  "local_execution": "Native1h IStrategy signals on completed hourly bar; next-open orders. No entry/normalexit at00/08/16; hold pending state until next permitted hour.5m native detail for other lifecycle rules",
+  "local_sizing": "Native unlimited99percent cash, retain actual quantity until exit; no repeated insight-rebalance or free daily target reset; source GDAX cash BTCUSD portfolio is NOT replicated",
+  "instrument": "BTC/USDT:USDT Binance perpetual",
+  "leverage": 1.0,
+  "margin_mode": "isolated",
+  "max_open_trades": 1,
+  "stoploss": -0.99,
+  "roi": {},
+  "main_classes": [
+    "SourceDualBTC",
+    "SmaPriceBTC",
+    "HoldBTC"
+  ],
+  "source_control": "SMA10>20 of latest completed daily futures close, same execution/cash/cost contract",
+  "capital_usdt": [
+    1000,
+    500
+  ],
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "account_start": "2025-01-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "native_end": "2026-09-01T00:00:00Z",
+  "periods": "608day wallet uninterrupted; report2025 and2026throughAug slices without reset",
+  "unique_native_accounts": 12,
+  "combo": "Actual500SourceDualBTC+actual500SmaPriceBTC simultaneous-hour NAV sum; no scaling/transfers/year resets",
+  "necessary_gates": "Both cost combos and candidate positive full and each continuous year, DD<=50percent; candidate1000 beats both matched1000controls and combo beats best1000component at both costs",
+  "incumbent_requirement": "If necessary gates pass, run same-input incumbentNFI comparison before claiming higher returns than existing best",
+  "no_rescue": "No sign/window/k/anchor/pool/cost/exit/capital/window changes after outcomes",
+  "data": "Existing checksum-bound futures1h/5m/1d/mark/funding; raw historical market rule snapshot not PIT certified",
+  "independent_oos": false,
+  "accepted_new_factors": 0,
+  "orders": false,
+  "deployment": false,
+  "service_changes": false,
+  "resource": "onefinanceworker,3GiBRSS,3600seconds,2GiBfreebeforeworker"
+}

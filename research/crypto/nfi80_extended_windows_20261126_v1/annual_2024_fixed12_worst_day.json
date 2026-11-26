@@ -1,0 +1,102 @@
+{
+  "scope": "Fixed 12-slot boost, year 2024, 15 bp per side, worst complete midnight-to-midnight observation",
+  "account": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/annual_2024_fixed12_15bp_verified.json",
+    "sha256": "4c584d6cef117f6c471ef9e211ac8d04b0a41ce75b8895e1e20ac975bb9bc48a"
+  },
+  "native_trades": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_fixed_boost_12_15bp/account/native_results/backtest-result-2026-11-26_05-52-56.zip",
+    "sha256": "d68d164e9dbd9d23a17510c05517770151d07d222c626dca277167888ba5601d"
+  },
+  "verified_nav": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_2024_fixed_boost_12_15bp/account/five_minute_equity.parquet",
+    "sha256": "c0e5ebcf81d2f0f5fa1dfb0263a17878b7d1483cfd4718527db13d53f8731dab"
+  },
+  "btc_daily_input": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/annual_2024/candles/futures/BTC_USDT_USDT-1d-futures.feather",
+    "sha256": "4082bc28a3f24632ba26e9803442fd3db3d463b239c8ac4b26fe6442c65cc843"
+  },
+  "start": "2024-04-13T00:00:00+00:00",
+  "end": "2024-04-14T00:00:00+00:00",
+  "five_minute_marks": 289,
+  "start_equity_usdt": 1808.3779205598535,
+  "end_equity_usdt": 1332.972354374227,
+  "daily_net_return": -0.26289060532128494,
+  "prior_btc_volatility": 0.5088665901286163,
+  "prior_btc_volatility_threshold": 0.8235735545111486,
+  "prior_high_volatility": false,
+  "closed_realized_change_usdt": -36.46916615000009,
+  "open_pnl_change_usdt": -437.9786231144433,
+  "additional_mark_change_usdt": -0.9577769211828127,
+  "total_change_usdt": -475.4055661856264,
+  "open_position_side_count": {
+    "2024-04-13T00:00:00+00:00": {
+      "short": 0,
+      "long": 11
+    },
+    "2024-04-14T00:00:00+00:00": {
+      "short": 0,
+      "long": 10
+    }
+  },
+  "native_realized_trades": [
+    {
+      "pair": "UNI/USDT:USDT",
+      "entry_tag": "143 ",
+      "exit": "2024-04-13T01:05:00+00:00",
+      "exit_reason": "exit_profit_long_tc_t_0_1_m ( 143 )",
+      "net_realized_usdt": 5.5380364
+    },
+    {
+      "pair": "ARB/USDT:USDT",
+      "entry_tag": "61 ",
+      "exit": "2024-04-13T01:40:00+00:00",
+      "exit_reason": "exit_profit_long_rebuy_t_0_1_m ( 61 )",
+      "net_realized_usdt": 1.06069265
+    },
+    {
+      "pair": "PYTH/USDT:USDT",
+      "entry_tag": "104 ",
+      "exit": "2024-04-13T04:30:00+00:00",
+      "exit_reason": "exit_long_rapid_rpd_6 ( 104 )",
+      "net_realized_usdt": 19.69049064
+    },
+    {
+      "pair": "ONG/USDT:USDT",
+      "entry_tag": "5 ",
+      "exit": "2024-04-13T05:25:00+00:00",
+      "exit_reason": "exit_profit_long_normal_t_0_1_m ( 5 )",
+      "net_realized_usdt": 3.17758385
+    },
+    {
+      "pair": "ONDO/USDT:USDT",
+      "entry_tag": "143 ",
+      "exit": "2024-04-13T19:15:00+00:00",
+      "exit_reason": "exit_profit_long_tc_t_2_1_m ( 143 )",
+      "net_realized_usdt": 15.38712397
+    },
+    {
+      "pair": "ALT/USDT:USDT",
+      "entry_tag": "2 ",
+      "exit": "2024-04-13T20:05:00+00:00",
+      "exit_reason": "stop_loss",
+      "net_realized_usdt": -121.11307335000001
+    },
+    {
+      "pair": "ONDO/USDT:USDT",
+      "entry_tag": "144 ",
+      "exit": "2024-04-13T22:30:00+00:00",
+      "exit_reason": "exit_long_tc_d_5_1 ( 144 )",
+      "net_realized_usdt": 31.727155040000003
+    },
+    {
+      "pair": "MANA/USDT:USDT",
+      "entry_tag": "62 ",
+      "exit": "2024-04-13T22:45:00+00:00",
+      "exit_reason": "exit_long_rebuy_d_3_2 ( 62 )",
+      "net_realized_usdt": 8.06282465
+    }
+  ],
+  "new_native_accounts": 0,
+  "orders_enabled": false
+}

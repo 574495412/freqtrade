@@ -1,0 +1,602 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/memory_storage.py",
+    "sha256": "b20f8fa3aff2b7da5e537c50068fefb3b19729d44c1af83f2ff6306c7680a7b4"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "schema": "hawkes-native-source-v1",
+  "registered_at": "2026-11-17T14:18:19.323259+00:00",
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/hawkes_source_native_20261117_v1/attempt3",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/candles",
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT"
+  ],
+  "candidates": [
+    {
+      "name": "hawkes_before_orders_1000_conservative",
+      "strategy": "HawkesStrategyOffline",
+      "capital": 1000,
+      "mode": "futures",
+      "scenario": "conservative",
+      "cost_bps": 15,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/hawkes_before_orders_1000_conservative_attempt3.json",
+        "sha256": "5d24206ca9275266a09182f5e39179225b969d30e4640793b3834e28742063f0"
+      },
+      "source_files": {
+        "HawkesStrategy.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategy.py",
+          "sha256": "be88c4d7e096ce2150d9c961748138453150e49f233f8113ab63fc5c9dce718f"
+        },
+        "HawkesInputs.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesInputs.py",
+          "sha256": "17575afeffbf50cda6c602d61dfdf8d4fcf1c579da7640b81e5438d5ebf4883c"
+        },
+        "source_hawkes.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/hawkes.py",
+          "sha256": "004d1a46777fa7d70a3fa97484fdc9329fd369fc61660a913bb1980991e47cdf"
+        },
+        "SOURCE_LICENSE.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/LICENSE",
+          "sha256": "d0eea335221a9ce020333f13fc56056a940a309d0f54f058ca5bdf83aad955c0"
+        },
+        "HawkesStrategyOffline.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategyOffline.py",
+          "sha256": "f75a6b40adc0a89e53179f403033d9e7033393d9aa9fb7324adf0ab2235e1509"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "funding_ownership": "before_orders"
+    },
+    {
+      "name": "hawkes_before_orders_1000_lower",
+      "strategy": "HawkesStrategyOffline",
+      "capital": 1000,
+      "mode": "futures",
+      "scenario": "lower",
+      "cost_bps": 8,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/hawkes_before_orders_1000_lower_attempt3.json",
+        "sha256": "ae0161917315d43678791191d374339c37f21b9affda173c57f006c393355f1a"
+      },
+      "source_files": {
+        "HawkesStrategy.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategy.py",
+          "sha256": "be88c4d7e096ce2150d9c961748138453150e49f233f8113ab63fc5c9dce718f"
+        },
+        "HawkesInputs.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesInputs.py",
+          "sha256": "17575afeffbf50cda6c602d61dfdf8d4fcf1c579da7640b81e5438d5ebf4883c"
+        },
+        "source_hawkes.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/hawkes.py",
+          "sha256": "004d1a46777fa7d70a3fa97484fdc9329fd369fc61660a913bb1980991e47cdf"
+        },
+        "SOURCE_LICENSE.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/LICENSE",
+          "sha256": "d0eea335221a9ce020333f13fc56056a940a309d0f54f058ca5bdf83aad955c0"
+        },
+        "HawkesStrategyOffline.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategyOffline.py",
+          "sha256": "f75a6b40adc0a89e53179f403033d9e7033393d9aa9fb7324adf0ab2235e1509"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "funding_ownership": "before_orders"
+    },
+    {
+      "name": "hawkes_before_orders_500_conservative",
+      "strategy": "HawkesStrategyOffline",
+      "capital": 500,
+      "mode": "futures",
+      "scenario": "conservative",
+      "cost_bps": 15,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/hawkes_before_orders_500_conservative_attempt3.json",
+        "sha256": "8b9f7238c60c1769355e0fa457534a15d2bf3c6f032bf3afcae6facdb0748669"
+      },
+      "source_files": {
+        "HawkesStrategy.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategy.py",
+          "sha256": "be88c4d7e096ce2150d9c961748138453150e49f233f8113ab63fc5c9dce718f"
+        },
+        "HawkesInputs.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesInputs.py",
+          "sha256": "17575afeffbf50cda6c602d61dfdf8d4fcf1c579da7640b81e5438d5ebf4883c"
+        },
+        "source_hawkes.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/hawkes.py",
+          "sha256": "004d1a46777fa7d70a3fa97484fdc9329fd369fc61660a913bb1980991e47cdf"
+        },
+        "SOURCE_LICENSE.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/LICENSE",
+          "sha256": "d0eea335221a9ce020333f13fc56056a940a309d0f54f058ca5bdf83aad955c0"
+        },
+        "HawkesStrategyOffline.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategyOffline.py",
+          "sha256": "f75a6b40adc0a89e53179f403033d9e7033393d9aa9fb7324adf0ab2235e1509"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "funding_ownership": "before_orders"
+    },
+    {
+      "name": "hawkes_before_orders_500_lower",
+      "strategy": "HawkesStrategyOffline",
+      "capital": 500,
+      "mode": "futures",
+      "scenario": "lower",
+      "cost_bps": 8,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/hawkes_before_orders_500_lower_attempt3.json",
+        "sha256": "3de670585a40907c4eb1cbd3ebc86d51a126ef4698b6f25072c4f67c2281ff62"
+      },
+      "source_files": {
+        "HawkesStrategy.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategy.py",
+          "sha256": "be88c4d7e096ce2150d9c961748138453150e49f233f8113ab63fc5c9dce718f"
+        },
+        "HawkesInputs.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesInputs.py",
+          "sha256": "17575afeffbf50cda6c602d61dfdf8d4fcf1c579da7640b81e5438d5ebf4883c"
+        },
+        "source_hawkes.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/hawkes.py",
+          "sha256": "004d1a46777fa7d70a3fa97484fdc9329fd369fc61660a913bb1980991e47cdf"
+        },
+        "SOURCE_LICENSE.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/LICENSE",
+          "sha256": "d0eea335221a9ce020333f13fc56056a940a309d0f54f058ca5bdf83aad955c0"
+        },
+        "HawkesStrategyOffline.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategyOffline.py",
+          "sha256": "f75a6b40adc0a89e53179f403033d9e7033393d9aa9fb7324adf0ab2235e1509"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "funding_ownership": "before_orders"
+    },
+    {
+      "name": "hawkes_after_orders_1000_conservative",
+      "strategy": "HawkesStrategyOffline",
+      "capital": 1000,
+      "mode": "futures",
+      "scenario": "conservative",
+      "cost_bps": 15,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/hawkes_after_orders_1000_conservative_attempt3.json",
+        "sha256": "d6f84e78cfd6eeec976430833bd4345c99b29d4c90bc57aa49b69d95242c3a88"
+      },
+      "source_files": {
+        "HawkesStrategy.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategy.py",
+          "sha256": "be88c4d7e096ce2150d9c961748138453150e49f233f8113ab63fc5c9dce718f"
+        },
+        "HawkesInputs.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesInputs.py",
+          "sha256": "17575afeffbf50cda6c602d61dfdf8d4fcf1c579da7640b81e5438d5ebf4883c"
+        },
+        "source_hawkes.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/hawkes.py",
+          "sha256": "004d1a46777fa7d70a3fa97484fdc9329fd369fc61660a913bb1980991e47cdf"
+        },
+        "SOURCE_LICENSE.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/LICENSE",
+          "sha256": "d0eea335221a9ce020333f13fc56056a940a309d0f54f058ca5bdf83aad955c0"
+        },
+        "HawkesStrategyOffline.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategyOffline.py",
+          "sha256": "f75a6b40adc0a89e53179f403033d9e7033393d9aa9fb7324adf0ab2235e1509"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "funding_ownership": "after_orders"
+    },
+    {
+      "name": "hawkes_after_orders_1000_lower",
+      "strategy": "HawkesStrategyOffline",
+      "capital": 1000,
+      "mode": "futures",
+      "scenario": "lower",
+      "cost_bps": 8,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/hawkes_after_orders_1000_lower_attempt3.json",
+        "sha256": "5f0a9cee94db8e066f1e60bec714ff715d67cb4c0b9243cae05c0c6d8180455b"
+      },
+      "source_files": {
+        "HawkesStrategy.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategy.py",
+          "sha256": "be88c4d7e096ce2150d9c961748138453150e49f233f8113ab63fc5c9dce718f"
+        },
+        "HawkesInputs.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesInputs.py",
+          "sha256": "17575afeffbf50cda6c602d61dfdf8d4fcf1c579da7640b81e5438d5ebf4883c"
+        },
+        "source_hawkes.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/hawkes.py",
+          "sha256": "004d1a46777fa7d70a3fa97484fdc9329fd369fc61660a913bb1980991e47cdf"
+        },
+        "SOURCE_LICENSE.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/LICENSE",
+          "sha256": "d0eea335221a9ce020333f13fc56056a940a309d0f54f058ca5bdf83aad955c0"
+        },
+        "HawkesStrategyOffline.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategyOffline.py",
+          "sha256": "f75a6b40adc0a89e53179f403033d9e7033393d9aa9fb7324adf0ab2235e1509"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "funding_ownership": "after_orders"
+    },
+    {
+      "name": "hawkes_after_orders_500_conservative",
+      "strategy": "HawkesStrategyOffline",
+      "capital": 500,
+      "mode": "futures",
+      "scenario": "conservative",
+      "cost_bps": 15,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/hawkes_after_orders_500_conservative_attempt3.json",
+        "sha256": "ae5ad0878d2ffd2372ff5933cd457c3e03519369b585919004a66ce73dff89ca"
+      },
+      "source_files": {
+        "HawkesStrategy.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategy.py",
+          "sha256": "be88c4d7e096ce2150d9c961748138453150e49f233f8113ab63fc5c9dce718f"
+        },
+        "HawkesInputs.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesInputs.py",
+          "sha256": "17575afeffbf50cda6c602d61dfdf8d4fcf1c579da7640b81e5438d5ebf4883c"
+        },
+        "source_hawkes.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/hawkes.py",
+          "sha256": "004d1a46777fa7d70a3fa97484fdc9329fd369fc61660a913bb1980991e47cdf"
+        },
+        "SOURCE_LICENSE.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/LICENSE",
+          "sha256": "d0eea335221a9ce020333f13fc56056a940a309d0f54f058ca5bdf83aad955c0"
+        },
+        "HawkesStrategyOffline.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategyOffline.py",
+          "sha256": "f75a6b40adc0a89e53179f403033d9e7033393d9aa9fb7324adf0ab2235e1509"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "funding_ownership": "after_orders"
+    },
+    {
+      "name": "hawkes_after_orders_500_lower",
+      "strategy": "HawkesStrategyOffline",
+      "capital": 500,
+      "mode": "futures",
+      "scenario": "lower",
+      "cost_bps": 8,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/hawkes_after_orders_500_lower_attempt3.json",
+        "sha256": "4f44a8b915f936f297c03f6a25bcff2b0aa17c4d20a9c4d2dc6e5716e2ac8c7e"
+      },
+      "source_files": {
+        "HawkesStrategy.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategy.py",
+          "sha256": "be88c4d7e096ce2150d9c961748138453150e49f233f8113ab63fc5c9dce718f"
+        },
+        "HawkesInputs.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesInputs.py",
+          "sha256": "17575afeffbf50cda6c602d61dfdf8d4fcf1c579da7640b81e5438d5ebf4883c"
+        },
+        "source_hawkes.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/hawkes.py",
+          "sha256": "004d1a46777fa7d70a3fa97484fdc9329fd369fc61660a913bb1980991e47cdf"
+        },
+        "SOURCE_LICENSE.txt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source/LICENSE",
+          "sha256": "d0eea335221a9ce020333f13fc56056a940a309d0f54f058ca5bdf83aad955c0"
+        },
+        "HawkesStrategyOffline.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategyOffline.py",
+          "sha256": "f75a6b40adc0a89e53179f403033d9e7033393d9aa9fb7324adf0ab2235e1509"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "funding_ownership": "after_orders"
+    }
+  ],
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+    "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+  },
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/data_receipts.json",
+    "sha256": "b44a4c83ebc45dd21dcbaffb7115af9c3cd9c84cc8021d399858246d86421a62"
+  },
+  "marks": {
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    "ETH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+    }
+  },
+  "allowed_leverage": 1,
+  "initial_equity_usdt": 1000,
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "runner_sha256": "cbe977bef4bfd19e300812219bd5f98ff1bdc0301a90732ce3dac6a3efbfe761",
+  "runner_module": "research.crypto.hawkes_source_native_20261117_v1.native_runner",
+  "price_precision_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/price_precision.py",
+    "sha256": "2beff0d12afedc42f08e8b627ab8ba00226706ea7079b237d0b8dbec8e14fb2d"
+  },
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/protocol.json",
+      "sha256": "705e75e863d67d76bbc9554be1c88ce2f5f6d675df2878ac71dae76b87c28ed8"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/source_receipts.json",
+      "sha256": "fe7b403564598105847038962d0fc184638fa9a29be9126e1582f7c7248ef4b2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesInputs.py",
+      "sha256": "17575afeffbf50cda6c602d61dfdf8d4fcf1c579da7640b81e5438d5ebf4883c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/audit_accounts.py",
+      "sha256": "96d5861441eac7d77a500adedf53d6c2d8d777c5ea9b63d980dc132c58822eb0"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/analyze.py",
+      "sha256": "83d5d53449691fe7dfbfb6de652988b41e29ee98cd2704e723bc05452efc6bf8"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/preflight.py",
+      "sha256": "5d679f2afcbfc0c8904a28af12bf33ba1d5b47ebc0bb3a1c70d964e0d0f55434"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/execute.py",
+      "sha256": "cae312fe3dc496f40f60986453ace47ea88e69f3bf0e6b38a8c3a0158bee007e"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/prepare_plan.py",
+      "sha256": "137ccd6175e82fbd42a37f3c98fb9f7ccc60124a978eb32332c50f3641ce2c5b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/test_inputs.py",
+      "sha256": "996807d30511b55b662ef894dfe9cbf0105da8571a9f68c0c27c33513cc52447"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/test_funding_audit.py",
+      "sha256": "736560bf488fd0c570e6ea5a50660c4ec16681349a7bc6e24461329ddc075294"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/feature_validation_v2.json",
+      "sha256": "32a99f27896b7b0a9866397a586b9ae4668c30421d611280b77cd06115e32e8b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/CaptureRules.py",
+      "sha256": "63a896092661da455437c7c939a66701a8a2b3aed9197af983b72a569d5fe208"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/FundingOwnershipBacktesting.py",
+      "sha256": "ed160d36da842f6f282045908cdbaeb73674c1bba7befccd65f8b12c1b6ccfd9"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/matched_price_precision.py",
+      "sha256": "651d8e731c0a85649fb547ff27f5381eebb086e905537c27f8aee5b578aec9bb"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategyOffline.py",
+      "sha256": "f75a6b40adc0a89e53179f403033d9e7033393d9aa9fb7324adf0ab2235e1509"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/test_offline_history.py",
+      "sha256": "4663f65e4331bb94e8fde2d40b75bf67a3e30b0e846a935b511af657c2cdd20f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/offline_history_validation.json",
+      "sha256": "fb14821e76d678221a94fcf68e496ec209880b8e077b13bd08b56aaaa0a84eb3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/preflight_attempt2.py",
+      "sha256": "c6892771ec519bf215064c003aa612c11467561c5cd32ba88a47c09971b27faf"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/analyze_attempt2.py",
+      "sha256": "aaa64e422c056c4278245f1df3fc1f5a2285d029eebd048b052d5f33eb4f529c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/execute_attempt2.py",
+      "sha256": "de976343bfe669682b548a0d89234b2c1cdf2c166e88520b6bb62271b76faf55"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/register_attempt2.py",
+      "sha256": "4d70b5a05b3497467d943e68d6bcdd109bde8c45184bafd7d6fb420f8d529245"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/technical_retry_attempt2.json",
+      "sha256": "39c18e55e22afd7228fee36a6d78287b67eea94dd5bde33c044d3abda872053d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/implementation_freeze.json",
+      "sha256": "c197d9cbce0363166f1f2ef58bdbf228d3257d3ead6f980ac05977aba411d2e3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+      "sha256": "7fddcb56cfb30c9274ac9fbf7219be4254c7f4e393966104bb2de47ef9729a20"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/candles/futures/ETH_USDT_USDT-1h-futures.feather",
+      "sha256": "52e2e1aa2dd8697e1cf7f203177997bd1b0bbf303521779c9ea9d399e66447d4"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/preflight_attempt3.py",
+      "sha256": "0f4adb928e9388131d3415f506e20fa8bce4ccaeddf480a7989a63a91141614c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/analyze_attempt3.py",
+      "sha256": "906dadeb41cb4cc9bba22fcdba1985691668bca2af276a246a736b5f10aef7a7"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/execute_attempt3.py",
+      "sha256": "093d76f2ff0b65c73d0c3ad9a9b569753df98134e1e0f437ebc937ca066e233b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/technical_retry_attempt3.json",
+      "sha256": "6728e67389d7a22ca87c90e3b6536132285311ca58206832df32fd3bd128c931"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/registration_attempt2_freeze.json",
+      "sha256": "abc7a17f4a4a4b4c51faeb0f728b45c6c9a51774095d43cb64efe63137f27ac4"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false,
+  "native_start": "2024-12-31T23:00:00Z",
+  "minimum_free_disk_bytes": 1073741824,
+  "funding_extension": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/FundingOwnershipBacktesting.py",
+    "sha256": "ed160d36da842f6f282045908cdbaeb73674c1bba7befccd65f8b12c1b6ccfd9"
+  }
+}

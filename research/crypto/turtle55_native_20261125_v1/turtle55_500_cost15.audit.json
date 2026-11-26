@@ -1,0 +1,153 @@
+{
+  "status": "VERIFIED",
+  "capital_usdt": 500,
+  "cost_bps_per_side": 15,
+  "periods": [
+    {
+      "name": "continuous",
+      "net_return": -0.16607248908490524,
+      "initial_marked_equity": 500.0,
+      "ending_marked_equity": 416.9637554575474,
+      "hourly_mark_drawdown": 0.3720254904052944,
+      "cagr_365day": -0.10329871722167683,
+      "complete_24h_daily_nav_sharpe": -0.3188098287924004,
+      "complete_24h_returns": 607,
+      "calendar_hours": 14592
+    },
+    {
+      "name": "calendar-2025",
+      "net_return": 0.0406585689530663,
+      "initial_marked_equity": 500.0,
+      "ending_marked_equity": 520.3292844765332,
+      "hourly_mark_drawdown": 0.2887688592179779,
+      "cagr_365day": 0.0406585689530663,
+      "complete_24h_daily_nav_sharpe": 0.2839754528414873,
+      "complete_24h_returns": 365,
+      "calendar_hours": 8761
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "net_return": -0.19865406791965323,
+      "initial_marked_equity": 520.3292844765332,
+      "ending_marked_equity": 416.9637554575474,
+      "hourly_mark_drawdown": 0.21466506680605024,
+      "cagr_365day": -0.2830194441733904,
+      "complete_24h_daily_nav_sharpe": -1.2166607942423278,
+      "complete_24h_returns": 242,
+      "calendar_hours": 5832
+    }
+  ],
+  "native_distributions": {
+    "starting_usdt": 500,
+    "cost_bps_per_side": 15,
+    "marked_ending_usdt": 416.9637554575474,
+    "marked_cumulative_return": -0.16607248908490524,
+    "maximum_hourly_drawdown": 0.3720254904052944,
+    "continuous_2025_return": 0.0406585689530663,
+    "continuous_2026_through_august_return": -0.19865406791965323,
+    "natural_campaigns_closed_before_endpoint": 119,
+    "profitable_campaigns": 22,
+    "losing_campaigns": 97,
+    "worst_natural_campaign_usdt": -8.50633146,
+    "gross_losing_campaign_pnl_usdt": -293.42198032999994,
+    "gross_winner_pnl_usdt": 209.42798202999998,
+    "winner_median_usdt": 4.855387115,
+    "winner_p90_usdt": 20.971743973000002,
+    "win_duration_median_minutes": 83520.0,
+    "winners_above_fraction_of_starting_capital": {
+      "0.01": {
+        "count": 10,
+        "gross_winner_pnl_share": 0.8549849950535762
+      },
+      "0.02": {
+        "count": 7,
+        "gross_winner_pnl_share": 0.7422121455466903
+      },
+      "0.05": {
+        "count": 2,
+        "gross_winner_pnl_share": 0.30821787439442294
+      }
+    },
+    "top_10_gross_winner_pnl_share": 0.8549849950535762,
+    "top_5_campaigns": [
+      {
+        "pair": "RUNE/USDT:USDT",
+        "is_short": true,
+        "close": "2025-04-22T00:00:00.000Z",
+        "profit_abs": 37.65147991,
+        "minutes": 148320.0,
+        "enter_tag": "turtle55_short"
+      },
+      {
+        "pair": "SNX/USDT:USDT",
+        "is_short": true,
+        "close": "2025-04-23T00:00:00.000Z",
+        "profit_abs": 26.89796755,
+        "minutes": 122400.0,
+        "enter_tag": "turtle55_short"
+      },
+      {
+        "pair": "IOTX/USDT:USDT",
+        "is_short": true,
+        "close": "2026-08-09T00:00:00.000Z",
+        "profit_abs": 21.00064769,
+        "minutes": 116640.0,
+        "enter_tag": "turtle55_short"
+      },
+      {
+        "pair": "BNB/USDT:USDT",
+        "is_short": false,
+        "close": "2025-11-04T00:00:00.000Z",
+        "profit_abs": 20.71161052,
+        "minutes": 158400.0,
+        "enter_tag": "turtle55_long"
+      },
+      {
+        "pair": "TRB/USDT:USDT",
+        "is_short": true,
+        "close": "2025-04-24T00:00:00.000Z",
+        "profit_abs": 20.55104465,
+        "minutes": 128160.0,
+        "enter_tag": "turtle55_short"
+      }
+    ],
+    "completed_24h_marked_days": 607,
+    "largest_marked_day_ending_utc": "2026-02-06T00:00:00+00:00",
+    "largest_marked_day_gain_usdt": 33.95185169370353,
+    "top_5_days_share_of_positive_24h_cash_changes": 0.11231474012845262,
+    "last_partial_day_change_usdt": 1.2424710978899611,
+    "open_campaigns_at_marked_endpoint": 6,
+    "native_terminal_trade_count_including_force": 125,
+    "archive_sha256": "12b6c2eb8272e3c5d00896dcec8e5bc4de61634ea3e6f2ec0dc3d5007721e120",
+    "curve_sha256": "7237a2abf3e1e3e3fe39522c8297b92417e197e5765075480006ebca4b463d0a"
+  },
+  "campaigns_by_count_of_additions": {
+    "0": 50,
+    "1": 24,
+    "2": 18,
+    "3": 33
+  },
+  "entry_add_exit_clock_audit_passed": true,
+  "independent_nav_error_usdt": 4.466562586458167e-08,
+  "independent_trade_cash_error_usdt": 4.97762304e-09,
+  "independent_model_funding_error_usdt": 0.0,
+  "known_missing_funding_exposure": [
+    {
+      "pair": "AXS/USDT:USDT",
+      "slot_ms": 1782273600000,
+      "campaigns": [],
+      "status": "NO_GROSS_EXPOSURE",
+      "rate_imputed": false
+    },
+    {
+      "pair": "TRB/USDT:USDT",
+      "slot_ms": 1782273600000,
+      "campaigns": [],
+      "status": "NO_GROSS_EXPOSURE",
+      "rate_imputed": false
+    }
+  ],
+  "stop_execution_prices_independently_certified": false,
+  "historical_rules_certified": false,
+  "orders_enabled": false
+}

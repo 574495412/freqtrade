@@ -1,0 +1,144 @@
+{
+  "mode": "blocks32",
+  "passed": true,
+  "actual_market_assets": 1,
+  "cache_aliases": 6,
+  "cycles": 10,
+  "native_1000_row_slices": 60,
+  "shape": [
+    175904,
+    237
+  ],
+  "write_seconds": 3.227383083081804,
+  "first_read_cycle_seconds": 0.11046554101631045,
+  "remaining_nine_cycles_seconds": 0.1860074606956914,
+  "individual_warm_cycle_seconds": [
+    0.11221762513741851,
+    0.008520542061887681,
+    0.008623793022707105,
+    0.013325124979019165,
+    0.00982275081332773,
+    0.008709500776603818,
+    0.008492999826557934,
+    0.007970416103489697,
+    0.008324707974679768
+  ],
+  "total_native_read_seconds": 0.29647300171200186,
+  "exact_verification_seconds_excluded_from_read_time": 0.9618911652360111,
+  "read_counters": {
+    "block_loads": 12,
+    "cache_hits": 102,
+    "compressed_read_bytes": 21770268,
+    "decompressed_read_bytes": 85732872,
+    "written_bytes": 483123168,
+    "maximum_cached_blocks": 12,
+    "evictions": 0
+  },
+  "resources": [
+    {
+      "phase": "blocks32:before",
+      "rss_bytes": 1534132224,
+      "peak_rss_bytes": 1603993600,
+      "available_bytes": 2820014080
+    },
+    {
+      "phase": "blocks32:write:CACHE_ALIAS_0/USDT:USDT",
+      "rss_bytes": 1103020032,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3352264704
+    },
+    {
+      "phase": "blocks32:write:CACHE_ALIAS_1/USDT:USDT",
+      "rss_bytes": 1104723968,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3103965184
+    },
+    {
+      "phase": "blocks32:write:CACHE_ALIAS_2/USDT:USDT",
+      "rss_bytes": 1105018880,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3093233664
+    },
+    {
+      "phase": "blocks32:write:CACHE_ALIAS_3/USDT:USDT",
+      "rss_bytes": 1102970880,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3093282816
+    },
+    {
+      "phase": "blocks32:write:CACHE_ALIAS_4/USDT:USDT",
+      "rss_bytes": 955072512,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3092692992
+    },
+    {
+      "phase": "blocks32:write:CACHE_ALIAS_5/USDT:USDT",
+      "rss_bytes": 909688832,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3089203200
+    },
+    {
+      "phase": "blocks32:cycle:0",
+      "rss_bytes": 863518720,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3089203200
+    },
+    {
+      "phase": "blocks32:cycle:1",
+      "rss_bytes": 869433344,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3108634624
+    },
+    {
+      "phase": "blocks32:cycle:2",
+      "rss_bytes": 869531648,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3107143680
+    },
+    {
+      "phase": "blocks32:cycle:3",
+      "rss_bytes": 869629952,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3107143680
+    },
+    {
+      "phase": "blocks32:cycle:4",
+      "rss_bytes": 869646336,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3107143680
+    },
+    {
+      "phase": "blocks32:cycle:5",
+      "rss_bytes": 869498880,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3107143680
+    },
+    {
+      "phase": "blocks32:cycle:6",
+      "rss_bytes": 869400576,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3107143680
+    },
+    {
+      "phase": "blocks32:cycle:7",
+      "rss_bytes": 817938432,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3107143680
+    },
+    {
+      "phase": "blocks32:cycle:8",
+      "rss_bytes": 817987584,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3107143680
+    },
+    {
+      "phase": "blocks32:cycle:9",
+      "rss_bytes": 818020352,
+      "peak_rss_bytes": 1619116032,
+      "available_bytes": 3102212096
+    }
+  ],
+  "legacy_maximum_observed_cached": null,
+  "legacy_writeback_skips": null,
+  "reader_instrumentation": "Legacy writer/trim unchanged; SHA check plus counted IO layers before own-process pickle loading; block map unchanged"
+}

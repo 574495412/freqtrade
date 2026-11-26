@@ -1,0 +1,34 @@
+{
+  "registered_at": "2026-11-13T14:27:44.415872+00:00",
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/skew_vol_native_20261113_v1/source_receipt.json",
+    "sha256": "2f347eadd3fcfa9a6a421dbdefc4ba964101b254b9bb27e736dc85d98e2bcf89"
+  },
+  "source_formula": "Population skewness of360complete daily simple returns; adjusted-sample multiplier constant n360 so ranks identical.",
+  "lowvol_control": "63complete daily simple-return sample standard deviation; common361close input support.",
+  "selection": "Fixed40; exact10lowest long,10highest short, tie by pair; missing input rejects month, not delete names.",
+  "calendar": "Month-start decision uses last completed daily bar; close all on day1, one initial attempt at00:00day2; hold to next day1. Native daily signals lag once.",
+  "sizing": "Each native wallet freezes0.99available equity/20 at first monthly entry; no min-order upsizing; unfilled budgets remain cash.",
+  "account_window": [
+    "2025-01-01T00:00:00Z",
+    "2026-08-31T23:00:00Z"
+  ],
+  "initial_wallets": [
+    1000,
+    500
+  ],
+  "costs_bps_per_side": [
+    15,
+    8
+  ],
+  "native_risk": "1x isolated,20slots,noDCA,noROI,no trailing; native99%per-position catastrophic stop and native liquidation. No portfolio50%hard stop.",
+  "combination": "Sum two actual500USDT native wallets; no transfers or rebalancing; max40positions, duplicate same-contract sleeves possible.",
+  "acceptance": "Both costs: combination positive, return above both1000wallet controls, hourlyDD<=50%, both continuous calendar slices positive; no retuning.",
+  "source_adaptations": [
+    "Coinmetrics USD spot45 replaced by fixed Binance USDT perpetual40; no original-universe replication.",
+    "Explicit one-day monthly cash gap; minimum orders, native price precision, margin/funding and catastrophic risk change economics.",
+    "Source does not specify skew estimator; frozen moment estimator and common n make conventional correction rank-invariant."
+  ],
+  "independent_oos": false,
+  "orders_enabled": false
+}

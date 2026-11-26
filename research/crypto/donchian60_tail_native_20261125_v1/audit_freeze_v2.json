@@ -1,0 +1,25 @@
+{
+  "created_at": "2026-11-25T13:02:44.541782+00:00",
+  "files": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/donchian60_tail_native_20261125_v1/audit.py": "9ac3ef1cdc97f33e40a5d1bdb08b84c0470b6022d9a86a720e5c88a71c58da99",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/donchian60_tail_native_20261125_v1/protocol.json": "2b0a277edfa1efdd6017c8520a29b9f95d900a12b9368a289cb50361e88edb96",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/donchian60_tail_native_20261125_v1/freeze.json": "2bbc7aba91b6c883ce6259f1c51099a39947edd2aee5d076279a1e0657dfcafb",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/profit_distribution.py": "fa6cff6f66657e3af890f5f30c1a3cfa46b3ad78a8ba6265cf020ebb274bb87d",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/audit_results.json": "e24d7b2a982c48f4374e145951ce526485376c5c52f8fe9d53b5daefbb8bf44a",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/head_shoulders_financial_native_20261117_v3/independent_account_audit_v2.py": "f841934ed845ea9d7ec0a3c6da05f595e2e93c008ff2cc113e93294828575654",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/donchian60_tail_native_20261125_v1/audit_v2.py": "3724655b34205954b4f0ffe232b92524ab8cdfc68b5e0be3cbfa0b2d9a551535",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/donchian60_tail_native_20261125_v1/audit_freeze.json": "5c339ba847be3278dd33fe2abe668b6933793fcb1e537d3fc7a08874d7c11b8b",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/donchian60_tail_native_20261125_v1/first_wallet_independent_audit_v2.json": "f6c3840f2b0b0e974bf89f3b38f02bcd78850b3dbc4a46244fc4fa69aad80515",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/head_shoulders_audit_evidence_v3_20261118_v1/audited_complete_accounts/admission.json": "dad205d6be9fcb0e9f06fbc4103a7aae867c50e200100152d505e5e076ea6633"
+  },
+  "native_financial_reruns": 0,
+  "retained_original_independent_audit_exit": {
+    "session": 79301,
+    "exit_code": 1,
+    "reason": "Original audit compared exit fill with raw bar OPEN, but native _exit_trade rounds OPEN to the price tick stored on the trade."
+  },
+  "changes": [
+    "Check frozen native order metadata and round OPEN to the trade tick using independent Decimal math",
+    "Bind the two independently verified NFI500 cutoff paths before assessing actual combinations"
+  ]
+}

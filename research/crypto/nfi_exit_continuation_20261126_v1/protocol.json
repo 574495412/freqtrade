@@ -1,0 +1,8 @@
+{
+  "hypothesis": "NFI's profitable natural exits may realize gains before the directional move has ended. Detect possible follow-through in the original price tape rather than infer a higher account return.",
+  "source": "Both matched archived 2026 FlatTopBoost 12-slot native account baselines. Their original prices, costs, fills and open positions remain unchanged.",
+  "cohort": "Only already profitable natural closes, as observed at exit. Keep terminal closes, late price labels and missing candles counted separately. Split long/short and first/second half by actual exit date.",
+  "clock": "Anchor at the first full 5m trade candle open strictly later than the actual close timestamp. Compare the trading open 4 hours and 24 hours after this anchor. Use the same contracts and confirmed cutoff no later than research account ending clock.",
+  "labels": "Directional price returns. Combine no positions, calculate no alternative cash account, and do not treat the price label as realized net PnL. Both end horizons must exist to include a campaign in the shared sample.",
+  "orders_enabled": false
+}

@@ -1,0 +1,38 @@
+{
+  "scope": "REPORT_ONLY_ONE_NEW_COMPLETED_WALLET",
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15/hourly_equity.parquet",
+      "sha256": "43b2f8ba81621adef48080f17fb67e9ea985f3e95db616bbeb711886cf3c2fa2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost15/hourly_equity.parquet",
+      "sha256": "5cbd2af0fe12267924251f0eb949833793cd16a015b0b3dbd095a88f2f50e2d9"
+    }
+  ],
+  "metrics": [
+    {
+      "label": "Original 1,000 USDT wallet",
+      "cumulative_return_pct": 135.6564040788781,
+      "maximum_hourly_drawdown_pct": 4.515382750036379
+    },
+    {
+      "label": "Actual 500 USDT wallet (new; audit pending)",
+      "cumulative_return_pct": 129.66339325839957,
+      "maximum_hourly_drawdown_pct": 4.473331082709697
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/first_completed_15bp_nav_comparison.png",
+      "sha256": "41d0871ea1599b8b4bd1c53c38195ce46bcafc490351e74404ac2ebf35bd1f32"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/first_completed_15bp_nav_comparison.svg",
+      "sha256": "77feb03f452ccf61c03953585e4ef9abd0a387d5245e80bade84fa8aabcb538f"
+    }
+  ],
+  "financial_reruns": 0,
+  "independent_audit_pass_claimed": false,
+  "goal_complete": false
+}

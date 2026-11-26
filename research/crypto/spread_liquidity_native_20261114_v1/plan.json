@@ -1,0 +1,334 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+    "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "allowed_leverage": 1.0,
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "schema": "freqtrade.native.spread-liquidity.v1",
+  "registered_at": "2026-11-13T16:57:52.640888+00:00",
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/spread_liquidity_native_20261114_v1",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/spread_liquidity_native_20261114_v1/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/spread_liquidity_native_20261114_v1/data_receipts.json",
+    "sha256": "0614527fed7fe1bf454082ef152e0208e409e27f3eb310f03489d34a1f4bc308"
+  },
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "BNB/USDT:USDT",
+    "XRP/USDT:USDT",
+    "LTC/USDT:USDT",
+    "DOGE/USDT:USDT"
+  ],
+  "marks": {
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    "ETH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+    },
+    "BNB/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BNB_USDT_USDT-1h-mark.feather",
+      "sha256": "aa19bfe19bc1b7ffe90e9d6a5bb5da1f806f8f5aa3f67e6a6405e62a91a392be"
+    },
+    "XRP/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/XRP_USDT_USDT-1h-mark.feather",
+      "sha256": "e821b1b0b56da2a98337e49c605661aa8d62e4a383550c64c94edc060d41c89a"
+    },
+    "LTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/LTC_USDT_USDT-1h-mark.feather",
+      "sha256": "05e04be247cc13f8127c7a809f8b1032e974586e60bdfddd07ba6d5a8ae581e1"
+    },
+    "DOGE/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/DOGE_USDT_USDT-1h-mark.feather",
+      "sha256": "1acea3fba1b5f6035dc9ec3d3e1d814ff43081cd2439106433a52bb2ddccbb25"
+    }
+  },
+  "candidates": [
+    {
+      "name": "EdgeLiquidity_1000",
+      "strategy": "EdgeLiquidity",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "BNB/USDT:USDT",
+        "XRP/USDT:USDT",
+        "LTC/USDT:USDT",
+        "DOGE/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/EdgeLiquidity_1000.json",
+        "sha256": "b9d3e76a95eab4ab97956233aa63a78cb14d004e161c5af7bb873bcccd310e8d"
+      },
+      "source_files": {
+        "SpreadPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/SpreadPortfolio.py",
+          "sha256": "41461ca682c5b624e26edb0c90702ee5ed5df09e705041151c4e67bdd9a21734"
+        },
+        "SpreadFeatures.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/SpreadFeatures.py",
+          "sha256": "c421ba7377909ae4b5ec17999c2c508033cd43d138cf721b6e1ea885df3672d7"
+        },
+        "edge_author.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/edge_author.py",
+          "sha256": "08305189738c2fe4b9156f23c6d8ef2c8aacd597efa415e894670aa7dc4f5f7d"
+        }
+      }
+    },
+    {
+      "name": "EdgeLiquidity_500",
+      "strategy": "EdgeLiquidity",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "BNB/USDT:USDT",
+        "XRP/USDT:USDT",
+        "LTC/USDT:USDT",
+        "DOGE/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/EdgeLiquidity_500.json",
+        "sha256": "87c6dcc025a8161416266014bdcbf0a5fe3d98f297282c516e5d8cd094cf30f3"
+      },
+      "source_files": {
+        "SpreadPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/SpreadPortfolio.py",
+          "sha256": "41461ca682c5b624e26edb0c90702ee5ed5df09e705041151c4e67bdd9a21734"
+        },
+        "SpreadFeatures.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/SpreadFeatures.py",
+          "sha256": "c421ba7377909ae4b5ec17999c2c508033cd43d138cf721b6e1ea885df3672d7"
+        },
+        "edge_author.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/edge_author.py",
+          "sha256": "08305189738c2fe4b9156f23c6d8ef2c8aacd597efa415e894670aa7dc4f5f7d"
+        }
+      }
+    },
+    {
+      "name": "AmihudLiquidity_1000",
+      "strategy": "AmihudLiquidity",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "BNB/USDT:USDT",
+        "XRP/USDT:USDT",
+        "LTC/USDT:USDT",
+        "DOGE/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/AmihudLiquidity_1000.json",
+        "sha256": "8fc17f9ae2e77e0a1f0d81a786ea5bf01c08463f0a28d37475f2e88adfbf8630"
+      },
+      "source_files": {
+        "SpreadPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/SpreadPortfolio.py",
+          "sha256": "41461ca682c5b624e26edb0c90702ee5ed5df09e705041151c4e67bdd9a21734"
+        },
+        "SpreadFeatures.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/SpreadFeatures.py",
+          "sha256": "c421ba7377909ae4b5ec17999c2c508033cd43d138cf721b6e1ea885df3672d7"
+        },
+        "edge_author.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/edge_author.py",
+          "sha256": "08305189738c2fe4b9156f23c6d8ef2c8aacd597efa415e894670aa7dc4f5f7d"
+        }
+      }
+    },
+    {
+      "name": "AmihudLiquidity_500",
+      "strategy": "AmihudLiquidity",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "BNB/USDT:USDT",
+        "XRP/USDT:USDT",
+        "LTC/USDT:USDT",
+        "DOGE/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/AmihudLiquidity_500.json",
+        "sha256": "94b25e23c550f409f2fbf6d14fb06ec47ef0dadab9d78c00d8d7e3f2462fb6b2"
+      },
+      "source_files": {
+        "SpreadPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/SpreadPortfolio.py",
+          "sha256": "41461ca682c5b624e26edb0c90702ee5ed5df09e705041151c4e67bdd9a21734"
+        },
+        "SpreadFeatures.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/SpreadFeatures.py",
+          "sha256": "c421ba7377909ae4b5ec17999c2c508033cd43d138cf721b6e1ea885df3672d7"
+        },
+        "edge_author.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/edge_author.py",
+          "sha256": "08305189738c2fe4b9156f23c6d8ef2c8aacd597efa415e894670aa7dc4f5f7d"
+        }
+      }
+    },
+    {
+      "name": "LowVolBaseline_1000",
+      "strategy": "LowVolBaseline",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "BNB/USDT:USDT",
+        "XRP/USDT:USDT",
+        "LTC/USDT:USDT",
+        "DOGE/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/LowVolBaseline_1000.json",
+        "sha256": "f7934f37aa525839408115602f00e2c3b32f24480c755e4c6782bac3def7f892"
+      },
+      "source_files": {
+        "SpreadPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/SpreadPortfolio.py",
+          "sha256": "41461ca682c5b624e26edb0c90702ee5ed5df09e705041151c4e67bdd9a21734"
+        },
+        "SpreadFeatures.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/SpreadFeatures.py",
+          "sha256": "c421ba7377909ae4b5ec17999c2c508033cd43d138cf721b6e1ea885df3672d7"
+        },
+        "edge_author.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/edge_author.py",
+          "sha256": "08305189738c2fe4b9156f23c6d8ef2c8aacd597efa415e894670aa7dc4f5f7d"
+        }
+      }
+    },
+    {
+      "name": "LowVolBaseline_500",
+      "strategy": "LowVolBaseline",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "BNB/USDT:USDT",
+        "XRP/USDT:USDT",
+        "LTC/USDT:USDT",
+        "DOGE/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/LowVolBaseline_500.json",
+        "sha256": "44e2b23576176f12ae91cb9b0352cc467c67eb2c19e507e4b6526d775e0d4d61"
+      },
+      "source_files": {
+        "SpreadPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/SpreadPortfolio.py",
+          "sha256": "41461ca682c5b624e26edb0c90702ee5ed5df09e705041151c4e67bdd9a21734"
+        },
+        "SpreadFeatures.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/SpreadFeatures.py",
+          "sha256": "c421ba7377909ae4b5ec17999c2c508033cd43d138cf721b6e1ea885df3672d7"
+        },
+        "edge_author.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/edge_author.py",
+          "sha256": "08305189738c2fe4b9156f23c6d8ef2c8aacd597efa415e894670aa7dc4f5f7d"
+        }
+      }
+    }
+  ],
+  "initial_equity_usdt": 1000,
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "runner_sha256": "22f97145bcb6ac75e81df29ffab6fa99e8b2313ec539dc687f544011be9fe8e8",
+  "runner_module": "research.crypto.spread_liquidity_native_20261114_v1.native_runner",
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/protocol.json",
+      "sha256": "5a431d17708fb8cd5268425eb99c4233499fb721c926f1bb5c07a5185d22ad44"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/source_manifest.json",
+      "sha256": "1e7ed7bcc3545ae5184ec0e91d30a6fb4894be1450987b3aaf8b8dafa5872550"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/input_admission.json",
+      "sha256": "bdec254443580c7b06dd54b30ec248c25b8e142406821b0981cd40a38f1fa6c2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/preflight.py",
+      "sha256": "82f99ab860a745614904084b84300574db772887534f1feff614ebf34afd0fdd"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/run.py",
+      "sha256": "f2ccb1836b8fd46a11b0ed5cb4dc2af32607ccd5f361fdef397acfa3db930a63"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/spread_liquidity_native_20261114_v1/quote_volumes.parquet",
+      "sha256": "c40d880538e9addcdcff6e6d96cc6ba9cc8f6984fb129f83d7522bf48458088b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/band_trend_native_20261113_v1/observe_clock.py",
+      "sha256": "f2bb297fca1ec753d9a010c39ff45506dccc0aadadf067f069de2e8a8d7b638d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/skew_vol_native_20261113_v1/clock_fix.py",
+      "sha256": "3569781b7f1e30319cb0f2aed0a2c12587f0448de154f5575415b6f1684df8ce"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false
+}

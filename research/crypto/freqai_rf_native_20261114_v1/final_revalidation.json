@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "strategy": "RollingRF",
+      "actual_native_fits": 3,
+      "old_native_prediction_matrix_exact": true,
+      "prefix_future_and_truncation_exact": true,
+      "native_model": {
+        "train_stop": "2025-01-01 00:00:00+00:00",
+        "training_rows": 683,
+        "feature_count": 65,
+        "latest_training_date": "2024-12-31 03:00:00+00:00",
+        "latest_label_known_at": "2025-01-01 00:00:00+00:00",
+        "mature_label_check_passed": true,
+        "classes": [
+          "down",
+          "up"
+        ],
+        "prior": false,
+        "class_prior": null,
+        "native_training_pipeline": true,
+        "native_rf_fit": true,
+        "full_source_label_inverse_transform_skipped": true,
+        "prediction_rows": 168,
+        "maximum_probability_error": 0.0,
+        "independent_prediction_reconciliation_passed": true
+      }
+    },
+    {
+      "strategy": "RollingPrior",
+      "actual_native_fits": 3,
+      "old_native_prediction_matrix_exact": true,
+      "prefix_future_and_truncation_exact": true,
+      "native_model": {
+        "train_stop": "2025-01-01 00:00:00+00:00",
+        "training_rows": 683,
+        "feature_count": 65,
+        "latest_training_date": "2024-12-31 03:00:00+00:00",
+        "latest_label_known_at": "2025-01-01 00:00:00+00:00",
+        "mature_label_check_passed": true,
+        "classes": [
+          "down",
+          "up"
+        ],
+        "prior": true,
+        "class_prior": [
+          0.5080527086383602,
+          0.49194729136163984
+        ],
+        "native_training_pipeline": true,
+        "native_rf_fit": false,
+        "full_source_label_inverse_transform_skipped": true,
+        "prediction_rows": 168,
+        "maximum_probability_error": 0.0,
+        "independent_prediction_reconciliation_passed": true
+      }
+    }
+  ],
+  "additional_native_component_fits": 6,
+  "change": "Pre-window label placeholders restored to unknown for lossless export; probability domain guard rejects values outside[0,1]. No prediction values, model parameters or signals changed.",
+  "financial_accounts": 0
+}

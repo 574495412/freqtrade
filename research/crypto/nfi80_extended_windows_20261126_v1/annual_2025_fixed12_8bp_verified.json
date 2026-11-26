@@ -1,0 +1,169 @@
+{
+  "account_contract": {
+    "start": "2025-01-01T00:00:00+00:00",
+    "end": "2026-01-01T00:00:00+00:00",
+    "historical_schedule": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/schedule_2025.json",
+      "sha256": "7ac752c676c89d4f7394aef400454838a1c40149543f138ec1358ae986379a30"
+    },
+    "data_receipts": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/annual_2025/normalized-receipts.json",
+      "sha256": "e05abb3ec6d76ba5dc56b3c79b8ce3646ba1728791c313b9650e967045891bbb"
+    },
+    "market_snapshot": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/annual_2025/registrations/markets.json",
+      "sha256": "c95603edd21ff1d6ab2be8cf45631f82c918819ab2af3b1ddeb34f5395b82b4f"
+    },
+    "initial_equity_usdt": 1000,
+    "allowed_leverage": 3.0,
+    "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "runner_sha256": "8d890270cddb4a007f51cdc97066dbc45679e16881da4ac20152c520b3b490f5",
+    "observer_source": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/observer.py",
+      "sha256": "1d9d26dacb77b702332daa84fb9b3cc2856c4f0cfd5f308420d07377ba181e56"
+    }
+  },
+  "cost_per_side_bp": 8,
+  "accounts": {
+    "original": {
+      "net_return": 11.00337718575,
+      "drawdown": 0.19674054013786357,
+      "final_equity_usdt": 12003.377185750001,
+      "mark_points": 105120,
+      "peak_positions": 12,
+      "trades": 581,
+      "natural_closed_trades": 581,
+      "natural_profit_at_least_25_usdt": 134,
+      "natural_profit_at_least_50_usdt": 61,
+      "largest_natural_winner_usdt": 312.35025846,
+      "largest_natural_loss_usdt": -1028.5542126200003,
+      "top_five_profit_fraction": 0.09716261206285023,
+      "receipts": [
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_8bp/account_reconciled.json",
+          "sha256": "f2e4527b60ba1d05201f325b56aa71c446fa3b60e0396914b6705bf4389ee5e2"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_8bp/completion.json",
+          "sha256": "fbdde95415eb48cfc62d44a01c812a7d05b03d0ac91cf74ab4b12da81b4039b1"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_8bp/account/registered_plan.json",
+          "sha256": "bf4c98c5dd87f417111e0d18de6106b9ddfc2585f0c845a9e23936bf754fe36e"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_8bp/account/result.json",
+          "sha256": "6a068e6cc259e9dffc9e544ac27ee35b3fb5e6849f5263a0233bb93023a3b0a7"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_8bp/account/native_results/backtest-result-2026-11-26_05-11-31.zip",
+          "sha256": "6c8b2a4e6817d5e1bb8e26d95c168d28120474f404d379608cfff13f90be5ad3"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_8bp/account/five_minute_equity.parquet",
+          "sha256": "42561506968ea224b1406d4c5b79d0d1ceca456b0800d2cbd616f5f35e1298fa"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_8bp/account/effective_config.json",
+          "sha256": "d49ffe8659110e7a7978593a434f0b41e0ec765a7b8a8e71e9d97612372b88d5"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_8bp/account/bounded_storage_audit.json",
+          "sha256": "40901ee002e04d32202be1100df42af55fe60c72aed3cc00bb1ba2f7bb483fe8"
+        }
+      ]
+    },
+    "fixed_boost_12": {
+      "net_return": 15.455747346679999,
+      "drawdown": 0.20392539448055302,
+      "final_equity_usdt": 16455.74734668,
+      "mark_points": 105120,
+      "peak_positions": 12,
+      "trades": 580,
+      "natural_closed_trades": 580,
+      "natural_profit_at_least_25_usdt": 177,
+      "natural_profit_at_least_50_usdt": 85,
+      "largest_natural_winner_usdt": 470.64596195,
+      "largest_natural_loss_usdt": -1078.23187326,
+      "top_five_profit_fraction": 0.11007407766133818,
+      "receipts": [
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account_reconciled.json",
+          "sha256": "b31ff7b98f9428eef3135302ec149f4ad4a2c38354121a4cf7d793e2d1a51da7"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/completion.json",
+          "sha256": "a3e1ba761e5aca1a27ec51c3df729b9f9c2c7c4e8b1de07c72740cc9dfde143c"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account/registered_plan.json",
+          "sha256": "ea5818422f960b2776faefa135f87f4f0b5c54ae370c5ac280ba9c4d0fb65d92"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account/result.json",
+          "sha256": "5876ef5172fe5f6e3e69cc0f7759a803e0ca499fb9ed58f2a190aad6a4b580db"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account/native_results/backtest-result-2026-11-26_06-18-38.zip",
+          "sha256": "1f31af687addc90c0a9c647bff4d1b9875d52e26801a5b6d4cab0074c0b8b602"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account/five_minute_equity.parquet",
+          "sha256": "53092eecf9423a1633ae4a53d4c092434012978504bdb90baa047c07f7ff663e"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account/effective_config.json",
+          "sha256": "215e886dfae23ba4c025a8498195cd9cbf7c03749794d387e92d1104f8ea5e51"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account/bounded_storage_audit.json",
+          "sha256": "d8e2db8a2cffa408ef63a21494617ae405c93066bfb678d8db5bd81c53af065b"
+        }
+      ]
+    }
+  },
+  "normalized_large_trades": {
+    "original": {
+      "natural_closes": 581,
+      "wins_at_least_25_usdt": 134,
+      "wins_at_least_50_usdt": 61,
+      "trades_with_prior_equity": 581,
+      "wins_at_least_1pct_of_equity": 92,
+      "losses_at_least_1pct_of_equity": 3,
+      "best_profit_fraction_of_prior_equity": 0.062411837413794934,
+      "worst_profit_fraction_of_prior_equity": -0.21633914889314196,
+      "single_entry_count": 522,
+      "single_entry_wins_at_least_10pct_of_margin": 165,
+      "median_opening_margin_usdt": 156.44130333333334
+    },
+    "fixed_boost_12": {
+      "natural_closes": 580,
+      "wins_at_least_25_usdt": 177,
+      "wins_at_least_50_usdt": 85,
+      "trades_with_prior_equity": 580,
+      "wins_at_least_1pct_of_equity": 98,
+      "losses_at_least_1pct_of_equity": 3,
+      "best_profit_fraction_of_prior_equity": 0.07822694403110282,
+      "worst_profit_fraction_of_prior_equity": -0.1968237901060301,
+      "single_entry_count": 521,
+      "single_entry_wins_at_least_10pct_of_margin": 165,
+      "median_opening_margin_usdt": 187.3968
+    }
+  },
+  "matched_natural_trades": {
+    "matched_first_entries": 578,
+    "original_only_entries": 3,
+    "candidate_only_entries": 2,
+    "control_only_net_realized_usdt": 12.98846532,
+    "candidate_only_net_realized_usdt": 5.0574362,
+    "single_entries_with_same_fill_prices_and_clocks": 519,
+    "single_entry_matched_net_pnl_change_usdt": 4444.46743245,
+    "same_price_and_clock_opening_margin_component_usdt": 4444.467432585646,
+    "remaining_net_pnl_change_usdt": -1.356456778012216e-07
+  },
+  "net_return_difference": 4.452370160929998,
+  "max_drawdown_difference": 0.007184854342689451,
+  "final_equity_difference_usdt": 4452.370160929999,
+  "fixed_fill_fraction_of_final_equity_difference": 0.9982250513639453,
+  "orders_enabled": false
+}

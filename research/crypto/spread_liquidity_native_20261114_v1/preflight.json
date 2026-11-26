@@ -1,0 +1,148 @@
+{
+  "passed": true,
+  "author_fixtures": [
+    {
+      "fixture": "ohlc.csv",
+      "actual": 0.01018490349054776,
+      "author_expected": 0.0101849034905478
+    },
+    {
+      "fixture": "ohlc-miss.csv",
+      "actual": 0.010132849697801967,
+      "author_expected": 0.01013284969780197
+    }
+  ],
+  "actual_native_strategies": [
+    {
+      "strategy": "EdgeLiquidity",
+      "checks": [
+        {
+          "pair": "BTC/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "ETH/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "BNB/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "XRP/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "LTC/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "DOGE/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        }
+      ]
+    },
+    {
+      "strategy": "AmihudLiquidity",
+      "checks": [
+        {
+          "pair": "BTC/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "ETH/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "BNB/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "XRP/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "LTC/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "DOGE/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        }
+      ]
+    },
+    {
+      "strategy": "LowVolBaseline",
+      "checks": [
+        {
+          "pair": "BTC/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "ETH/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "BNB/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "XRP/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "LTC/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        },
+        {
+          "pair": "DOGE/USDT:USDT",
+          "native_daily_rows": 680,
+          "prefix_future_checks": 3,
+          "native_hourly_rows": 14664
+        }
+      ]
+    }
+  ],
+  "full_common_days": 608,
+  "factor_cells": 10944,
+  "scoped_mean_abs_daily_pearson": {
+    "Edge_Amihud": 0.6050203465814019,
+    "Edge_LowVol": 0.49221228279422363
+  },
+  "all_registry_dedup_claim": false,
+  "independent_oos_certified": false
+}

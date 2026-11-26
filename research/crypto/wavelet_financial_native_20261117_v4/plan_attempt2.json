@@ -1,0 +1,285 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/memory_storage.py",
+    "sha256": "b20f8fa3aff2b7da5e537c50068fefb3b19729d44c1af83f2ff6306c7680a7b4"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "schema": "source-wavelet-native-account-v4",
+  "registered_at": "2026-11-17T00:57:28.041437+00:00",
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wavelet_financial_native_20261117_v4/attempt2",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wavelet_financial_native_20261117_v4/candles",
+  "pairs": [
+    "BTC/USDT",
+    "ETH/USDT"
+  ],
+  "candidates": [
+    {
+      "name": "wavelet_1000_conservative",
+      "strategy": "ResearchWaveletCPU",
+      "capital": 1000,
+      "mode": "spot",
+      "scenario": "conservative",
+      "cost_bps": 20,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/wavelet_1000_conservative_attempt2.json",
+        "sha256": "f3071db647f9aae21c668afb5addbf3c10ffdefdfb03993d598e613cef10aea6"
+      },
+      "source_files": {
+        "ResearchWaveletCPU.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/ResearchWaveletCPU.py",
+          "sha256": "e255dcab36cbeb9869dc10f716f78115f8af071486afe223ffdb1de860159465"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    },
+    {
+      "name": "wavelet_1000_lower",
+      "strategy": "ResearchWaveletCPU",
+      "capital": 1000,
+      "mode": "spot",
+      "scenario": "lower",
+      "cost_bps": 13,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/wavelet_1000_lower_attempt2.json",
+        "sha256": "2df1807fbc607f810351bf51b29e37bcc95837d06f995656692b3ff6993941e1"
+      },
+      "source_files": {
+        "ResearchWaveletCPU.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/ResearchWaveletCPU.py",
+          "sha256": "e255dcab36cbeb9869dc10f716f78115f8af071486afe223ffdb1de860159465"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    },
+    {
+      "name": "wavelet_500_conservative",
+      "strategy": "ResearchWaveletCPU",
+      "capital": 500,
+      "mode": "spot",
+      "scenario": "conservative",
+      "cost_bps": 20,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/wavelet_500_conservative_attempt2.json",
+        "sha256": "833017d4eab005b26c1ba960558c1c600f41fc47944ef01f622566d404f06cf8"
+      },
+      "source_files": {
+        "ResearchWaveletCPU.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/ResearchWaveletCPU.py",
+          "sha256": "e255dcab36cbeb9869dc10f716f78115f8af071486afe223ffdb1de860159465"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    },
+    {
+      "name": "wavelet_500_lower",
+      "strategy": "ResearchWaveletCPU",
+      "capital": 500,
+      "mode": "spot",
+      "scenario": "lower",
+      "cost_bps": 13,
+      "pairs": [
+        "BTC/USDT",
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/wavelet_500_lower_attempt2.json",
+        "sha256": "92f04f954424c70f2bb97a84cd834b38351e33f8fda3e335571e52ed9e0ee07e"
+      },
+      "source_files": {
+        "ResearchWaveletCPU.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/ResearchWaveletCPU.py",
+          "sha256": "e255dcab36cbeb9869dc10f716f78115f8af071486afe223ffdb1de860159465"
+        }
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      }
+    }
+  ],
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 14400,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+    "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+  },
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/data_receipts.json",
+    "sha256": "28aa354641742e2710177e3937118e3259969bc89c65b01ab904f1f6625b4208"
+  },
+  "marks": {
+    "BTC/USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/BTC_USDT-1h.feather",
+      "sha256": "beed6bde8f88040b0af3457543d9d9a6cd0d15716b521cec1614ebe9e14a3a76"
+    },
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    "ETH/USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/ETH_USDT-1h.feather",
+      "sha256": "1a7e97e71696dc76472fb89c5c474824085f0a4601fc6a4007c1911780d51957"
+    },
+    "ETH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+    }
+  },
+  "allowed_leverage": 1,
+  "initial_equity_usdt": 1000,
+  "total_cost_bps_per_side": [
+    20,
+    13
+  ],
+  "runner_sha256": "36c62b04e56e346ab80bcba03438b8febfdb5962c54125c57e6fc04731e72817",
+  "runner_module": "research.crypto.wavelet_financial_native_20261117_v4.native_runner",
+  "price_precision_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/wavelet_price_precision.py",
+    "sha256": "2917dea1ce01345c9055a6deb042a72396f6a650461154fabfcaafba82a7189d"
+  },
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/protocol.json",
+      "sha256": "c410fab2c733f72d28eec94876d8ec82aaa554a06e25a70ebaeaa94b9721a7af"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/implementation_freeze.json",
+      "sha256": "75e489716f99b02c74bcf5aa802149c550aa7f41044a45627df156817579cd14"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/preflight.json",
+      "sha256": "779e72c64e4a5037e7845e997e70b4a0e0a7a3b95fc5404f82939b5f2d6a1cf7"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/CaptureRules.py",
+      "sha256": "63a896092661da455437c7c939a66701a8a2b3aed9197af983b72a569d5fe208"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_policy_native_20261117_v3/artifact_manifest.json",
+      "sha256": "814fe8478e82518cefa84366e9bc0a738c38cfd7e3d9e7aebb0a71aec54da160"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_policy_native_20261117_v3/source_policy.py",
+      "sha256": "9ebc8a52c2dd55bf3081f4c70e66b0e28b1d43361151151df772b5d5f2f58a49"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_policy_native_20261117_v3/SourceWaveletCPU.py",
+      "sha256": "43d4ad3b4dd7aa51be9699bfec6aba27e5c53161748b3d17bfeffa5d7bab9e07"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_policy_native_20261117_v3/source_receipts.json",
+      "sha256": "b93a4a79a5f56d791227c21f32471507f87442d53ca4d62d831f048606313ba1"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_policy_native_20261117_v3/sources/utils/ExitPolicy.py",
+      "sha256": "50d7c41cc8d5b9aeac7ddd5a4901d322cb7f7a772c10663e0515df34e96684dd"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_policy_native_20261117_v3/sources/utils/custom_indicators.py",
+      "sha256": "ecdc5cb1142f7a816c6634ac1235ed6ffb1d124d16c8acb6cbad94cf03d66637"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/comparison_contract.json",
+      "sha256": "e5a83493f04cd3c663883dbf8c2fabcbbf3e6cfbfd500eecccc4b2f3bad7e6ec"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/precision_freeze.json",
+      "sha256": "c85b77fd07e795712f06339589407eeedf361d3e4e2168f21eb096c40c85d63c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/precision_admission.json",
+      "sha256": "016823da24a7080f260a1009a602059cf97304574fe2d548c900e3f55ee7f798"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/wavelet_price_precision.py",
+      "sha256": "2917dea1ce01345c9055a6deb042a72396f6a650461154fabfcaafba82a7189d"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false,
+  "minimum_free_disk_bytes": 1073741824
+}

@@ -1,0 +1,48 @@
+{
+  "captured_at": "2026-11-16T21:11:42.948992+00:00",
+  "selected_repository": "https://github.com/zodboy/freqtrade-simple-mean-reversion",
+  "commit": "16aa652f9db446e3738fea030e33ecc76be1e3ce",
+  "strategy_source_bytes_unchanged": true,
+  "source_selection": "Exactrepository/classnotfoundinlocalintakes;existingRSI2dualhorizonexcluded;publicminimalbaselineonly,nocertifiedmaturity",
+  "mechanism": "Priceextreme+rollingRSImeanreversion;contrastswithTrendCoretrend,overlapsNFIreversionnotprovenindependentalpha",
+  "source_comment_divergences": [
+    "_rsiusesrollingarithmeticaverages,notWilderEWMA",
+    "720/1440/2880areminutes:12/24/48hours,not30/60/120days",
+    "negativeROIthresholdafter48hoursisnotforcedtimeexit"
+  ],
+  "local_adaptations": [
+    "SourceexampleOKXlimit3slotschangedtofixedBinancemarket2slotscohort",
+    "Native150hourwarmupandallsourceeconomicparametersretained"
+  ],
+  "social_searches": [
+    {
+      "platform": "X/Twitter",
+      "query": "\"freqtrade-simple-mean-reversion\" site:x.com",
+      "admitted": false,
+      "reason": "Noattributableoriginalpostreturned"
+    },
+    {
+      "platform": "YouTube",
+      "query": "\"zodboy\" \"SimpleMeanReversion\" site:youtube.com",
+      "admitted": false,
+      "reason": "Noattributableoriginalvideoreturned"
+    },
+    {
+      "platform": "Douyin",
+      "query": "\"\u5e03\u6797\u5e26\" \"RSI\" \"\u91cf\u5316\" site:douyin.com",
+      "admitted": false,
+      "reason": "Searchsnippetsgeneralindicators/stocktools;nofullcryptostrategycontractorsourcechain",
+      "discovery_only_urls": [
+        "https://www.douyin.com/shipin/7639570570501392436",
+        "https://www.douyin.com/shipin/7372744244303546418"
+      ]
+    }
+  ],
+  "videos_watched": false,
+  "transcripts_independently_verified": false,
+  "new_social_alpha": 0,
+  "new_factor_analysis": 0,
+  "new_vibe_bench": 0,
+  "source_license": "MITdeclaredinsourceheader/README;notoplevelLICENSEfile",
+  "orders_enabled": false
+}

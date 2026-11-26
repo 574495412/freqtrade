@@ -1,0 +1,508 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+    "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/session_reversal_native_20261113_v1/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/session_reversal_native_20261113_v1/data_receipts.json",
+    "sha256": "b36cc08ff29d0de51c5dc579d0fa7e8a87a3387e73b5fceb2a275d6fa8d514d0"
+  },
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT"
+  ],
+  "marks": {
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    "ETH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+    }
+  },
+  "allowed_leverage": 1.0,
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "schema": "freqtrade.native.funding-ownership.v3",
+  "registered_at": "2026-11-13T16:29:28.228311+00:00",
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/session_funding_native_20261114_v3",
+  "candidates": [
+    {
+      "strategy": "BoundaryCarrySource",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "name": "BoundaryCarrySource_BTC_inclusive",
+      "costs": [
+        15
+      ],
+      "funding_ownership": "inclusive",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/BoundaryCarrySource_BTC_inclusive.json",
+        "sha256": "2eacedeebf503cb751672872aa29835f34e27f8808a52fc8df87752a7739cb7a"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        },
+        "CarryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/CarryRules.py",
+          "sha256": "4555379721cfa5e92a125bb21659f037cec315a9cff5d40b534f4c435d55298f"
+        }
+      },
+      "role": "default_off_parity",
+      "original_candidate": "BoundaryCarrySource_BTC"
+    },
+    {
+      "strategy": "BoundaryCarrySource",
+      "capital": 500,
+      "pairs": [
+        "ETH/USDT:USDT"
+      ],
+      "name": "BoundaryCarrySource_ETH_inclusive",
+      "costs": [
+        15
+      ],
+      "funding_ownership": "inclusive",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/BoundaryCarrySource_ETH_inclusive.json",
+        "sha256": "a1117ebec575ce5f84485afae7eae98b694603c47d1778a7d639e9ec45f9f9c2"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        },
+        "CarryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/CarryRules.py",
+          "sha256": "4555379721cfa5e92a125bb21659f037cec315a9cff5d40b534f4c435d55298f"
+        }
+      },
+      "role": "default_off_parity",
+      "original_candidate": "BoundaryCarrySource_ETH"
+    },
+    {
+      "strategy": "BoundaryCarryLong",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "name": "BoundaryCarryLong_BTC_inclusive",
+      "costs": [
+        15
+      ],
+      "funding_ownership": "inclusive",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/BoundaryCarryLong_BTC_inclusive.json",
+        "sha256": "9da676ba4c8a2364733fff65945ab36161d933b05201728df933cedec77a0d22"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        },
+        "CarryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/CarryRules.py",
+          "sha256": "4555379721cfa5e92a125bb21659f037cec315a9cff5d40b534f4c435d55298f"
+        }
+      },
+      "role": "default_off_parity",
+      "original_candidate": "BoundaryCarryLong_BTC"
+    },
+    {
+      "strategy": "BoundaryCarryLong",
+      "capital": 500,
+      "pairs": [
+        "ETH/USDT:USDT"
+      ],
+      "name": "BoundaryCarryLong_ETH_inclusive",
+      "costs": [
+        15
+      ],
+      "funding_ownership": "inclusive",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/BoundaryCarryLong_ETH_inclusive.json",
+        "sha256": "94445794e7648f3a8e759af90db94ccbcce3abf694fea69248fdf9a48bdf0c56"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        },
+        "CarryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/CarryRules.py",
+          "sha256": "4555379721cfa5e92a125bb21659f037cec315a9cff5d40b534f4c435d55298f"
+        }
+      },
+      "role": "default_off_parity",
+      "original_candidate": "BoundaryCarryLong_ETH"
+    },
+    {
+      "strategy": "BoundaryCarrySource",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "name": "BoundaryCarrySource_BTC_before_orders",
+      "costs": [
+        15,
+        8
+      ],
+      "funding_ownership": "before_orders",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/BoundaryCarrySource_BTC_before_orders.json",
+        "sha256": "2eacedeebf503cb751672872aa29835f34e27f8808a52fc8df87752a7739cb7a"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        },
+        "CarryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/CarryRules.py",
+          "sha256": "4555379721cfa5e92a125bb21659f037cec315a9cff5d40b534f4c435d55298f"
+        }
+      },
+      "role": "full_ownership_scenario",
+      "original_candidate": "BoundaryCarrySource_BTC"
+    },
+    {
+      "strategy": "BoundaryCarrySource",
+      "capital": 500,
+      "pairs": [
+        "ETH/USDT:USDT"
+      ],
+      "name": "BoundaryCarrySource_ETH_before_orders",
+      "costs": [
+        15,
+        8
+      ],
+      "funding_ownership": "before_orders",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/BoundaryCarrySource_ETH_before_orders.json",
+        "sha256": "a1117ebec575ce5f84485afae7eae98b694603c47d1778a7d639e9ec45f9f9c2"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        },
+        "CarryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/CarryRules.py",
+          "sha256": "4555379721cfa5e92a125bb21659f037cec315a9cff5d40b534f4c435d55298f"
+        }
+      },
+      "role": "full_ownership_scenario",
+      "original_candidate": "BoundaryCarrySource_ETH"
+    },
+    {
+      "strategy": "BoundaryCarryLong",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "name": "BoundaryCarryLong_BTC_before_orders",
+      "costs": [
+        15,
+        8
+      ],
+      "funding_ownership": "before_orders",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/BoundaryCarryLong_BTC_before_orders.json",
+        "sha256": "9da676ba4c8a2364733fff65945ab36161d933b05201728df933cedec77a0d22"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        },
+        "CarryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/CarryRules.py",
+          "sha256": "4555379721cfa5e92a125bb21659f037cec315a9cff5d40b534f4c435d55298f"
+        }
+      },
+      "role": "full_ownership_scenario",
+      "original_candidate": "BoundaryCarryLong_BTC"
+    },
+    {
+      "strategy": "BoundaryCarryLong",
+      "capital": 500,
+      "pairs": [
+        "ETH/USDT:USDT"
+      ],
+      "name": "BoundaryCarryLong_ETH_before_orders",
+      "costs": [
+        15,
+        8
+      ],
+      "funding_ownership": "before_orders",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/BoundaryCarryLong_ETH_before_orders.json",
+        "sha256": "94445794e7648f3a8e759af90db94ccbcce3abf694fea69248fdf9a48bdf0c56"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        },
+        "CarryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/CarryRules.py",
+          "sha256": "4555379721cfa5e92a125bb21659f037cec315a9cff5d40b534f4c435d55298f"
+        }
+      },
+      "role": "full_ownership_scenario",
+      "original_candidate": "BoundaryCarryLong_ETH"
+    },
+    {
+      "strategy": "BoundaryCarrySource",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "name": "BoundaryCarrySource_BTC_after_orders",
+      "costs": [
+        15,
+        8
+      ],
+      "funding_ownership": "after_orders",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/BoundaryCarrySource_BTC_after_orders.json",
+        "sha256": "2eacedeebf503cb751672872aa29835f34e27f8808a52fc8df87752a7739cb7a"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        },
+        "CarryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/CarryRules.py",
+          "sha256": "4555379721cfa5e92a125bb21659f037cec315a9cff5d40b534f4c435d55298f"
+        }
+      },
+      "role": "full_ownership_scenario",
+      "original_candidate": "BoundaryCarrySource_BTC"
+    },
+    {
+      "strategy": "BoundaryCarrySource",
+      "capital": 500,
+      "pairs": [
+        "ETH/USDT:USDT"
+      ],
+      "name": "BoundaryCarrySource_ETH_after_orders",
+      "costs": [
+        15,
+        8
+      ],
+      "funding_ownership": "after_orders",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/BoundaryCarrySource_ETH_after_orders.json",
+        "sha256": "a1117ebec575ce5f84485afae7eae98b694603c47d1778a7d639e9ec45f9f9c2"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        },
+        "CarryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/CarryRules.py",
+          "sha256": "4555379721cfa5e92a125bb21659f037cec315a9cff5d40b534f4c435d55298f"
+        }
+      },
+      "role": "full_ownership_scenario",
+      "original_candidate": "BoundaryCarrySource_ETH"
+    },
+    {
+      "strategy": "BoundaryCarryLong",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "name": "BoundaryCarryLong_BTC_after_orders",
+      "costs": [
+        15,
+        8
+      ],
+      "funding_ownership": "after_orders",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/BoundaryCarryLong_BTC_after_orders.json",
+        "sha256": "9da676ba4c8a2364733fff65945ab36161d933b05201728df933cedec77a0d22"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        },
+        "CarryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/CarryRules.py",
+          "sha256": "4555379721cfa5e92a125bb21659f037cec315a9cff5d40b534f4c435d55298f"
+        }
+      },
+      "role": "full_ownership_scenario",
+      "original_candidate": "BoundaryCarryLong_BTC"
+    },
+    {
+      "strategy": "BoundaryCarryLong",
+      "capital": 500,
+      "pairs": [
+        "ETH/USDT:USDT"
+      ],
+      "name": "BoundaryCarryLong_ETH_after_orders",
+      "costs": [
+        15,
+        8
+      ],
+      "funding_ownership": "after_orders",
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/BoundaryCarryLong_ETH_after_orders.json",
+        "sha256": "94445794e7648f3a8e759af90db94ccbcce3abf694fea69248fdf9a48bdf0c56"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        },
+        "CarryRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/CarryRules.py",
+          "sha256": "4555379721cfa5e92a125bb21659f037cec315a9cff5d40b534f4c435d55298f"
+        }
+      },
+      "role": "full_ownership_scenario",
+      "original_candidate": "BoundaryCarryLong_ETH"
+    }
+  ],
+  "initial_equity_usdt": 500,
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "runner_sha256": "aaf6a2af07cb6a2cc376b23ca4962833ddee3b079c2e2a1a94e2fc0175234114",
+  "runner_module": "research.crypto.session_funding_native_20261114_v3.native_runner",
+  "funding_extension": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/FundingOwnershipBacktesting.py",
+    "sha256": "ed160d36da842f6f282045908cdbaeb73674c1bba7befccd65f8b12c1b6ccfd9"
+  },
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/protocol.json",
+      "sha256": "7826f04446d1d29d256cadd83b705739bb6ebabc4c9a298c255d3fcde8c1de03"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/source_manifest.json",
+      "sha256": "6faa1d9db1bda3b53a12b9d4986c032258a3a7ef02dfa0b0b6dccc9303b9309a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/run.py",
+      "sha256": "cf0a3e4c0970fc8aaa86b1bc653c546bb8dbf15d05072f5ab1b7061d6c87cb46"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/preflight.py",
+      "sha256": "7af2c921ab71b307aca39d28dfed1a1dce99eb7ef80ac84995167fdb3811f428"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/FundingOwnershipBacktesting.py",
+      "sha256": "ed160d36da842f6f282045908cdbaeb73674c1bba7befccd65f8b12c1b6ccfd9"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/test_funding_ownership.py",
+      "sha256": "20283bd7ccca116c0b2f27160766339ed7d0a465868fc2770902f71e6e1179fa"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_carry_native_20261113_v2/plan.json",
+      "sha256": "dd4a15795544a232be3e0b520f5aeb79cfe2b1688dea5a411816a6cb3c3fe16e"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_carry_native_20261113_v2/preflight.json",
+      "sha256": "5c898fc7b40ba4ad0e8af5aae032771c5ab76de3d234bb531560fb38b70b5e7f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_carry_native_20261113_v2/preflight.py",
+      "sha256": "33e140f3de00c76d15e5fff89c8984396e4542e0edd9ce0c49f054783e20f12a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_carry_native_20261113_v2/funding_recheck.json",
+      "sha256": "1a020ffcc61aa8fb031c1b787d9eb22da9e04ec5b477bfae85ad40917c684bd9"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/band_trend_native_20261113_v1/observe_clock.py",
+      "sha256": "f2bb297fca1ec753d9a010c39ff45506dccc0aadadf067f069de2e8a8d7b638d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/skew_vol_native_20261113_v1/clock_fix.py",
+      "sha256": "3569781b7f1e30319cb0f2aed0a2c12587f0448de154f5575415b6f1684df8ce"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/source/LICENSE",
+      "sha256": "f16fdf7cbf23233d96956ca990d3aa4d77628a51e14547e25204ef1edfea2009"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/source/README.md",
+      "sha256": "67259785bce7995173121a0a37ad5481b501219ee247a72d8f326798276ddf3e"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/source/btc_eth_backtest.py",
+      "sha256": "70a2d1b4432d6a7e8e2e06bd6bf104d5b2b2ee4b57b240274f4cc1f56e89b219"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_funding_native_20261114_v3/source/cutoff_strategy_analysis.py",
+      "sha256": "34916ac57bdd7f05a6f2efe7f37181bd6d3a6584e616a2aba33f05256775e7af"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false
+}

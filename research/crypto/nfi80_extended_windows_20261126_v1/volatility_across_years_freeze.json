@@ -1,0 +1,34 @@
+{
+  "scope": "Fixed 15bp annual complete UTC days and completed January–November 2026 dates",
+  "calendar": "Complete midnight to next-midnight cash equity intervals with both marks; annual terminal partial day is excluded",
+  "as_of": "Same causal 7-day BTC variation and trailing 90-observation 80th percentile that exclude the current observation from the cutoff",
+  "script": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/volatility_across_years.py",
+    "sha256": "e73d436a78f6c90304a6b9d108dfc394ede5a51b4b0004c54dc415453cb8e329"
+  },
+  "owner": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/volatility_regime.py",
+    "sha256": "085b08d1a646ff9752ba76272ceb4c12348960f298c4825453602af7107feb53"
+  },
+  "annual": {
+    "2024": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/annual_2024_fixed12_15bp_verified.json",
+      "sha256": "4c584d6cef117f6c471ef9e211ac8d04b0a41ce75b8895e1e20ac975bb9bc48a"
+    },
+    "2025": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/boost14_2025_15bp_frozen_basis.json",
+      "sha256": "227215bbd5372e898e5e17f99b1d5f2e9d2519d03f0cdc6df2d49211bc6fc15e"
+    }
+  },
+  "previous_regime": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/volatility_regime.json",
+    "sha256": "ef61bfecbb94890cd343066f2f5aead0e9d4be53db4cdfac1ef23e3811192773"
+  },
+  "online_comparison": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/comparison_15bp.json",
+    "sha256": "f800f33c85aa3f36da1c9169c74da48d75d3bc941b66e33c34c0074088c153a8"
+  },
+  "parameter_changes": false,
+  "new_native_accounts": 0,
+  "orders_enabled": false
+}

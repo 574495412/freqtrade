@@ -1,0 +1,693 @@
+{
+  "window_selection": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/market_stress_window_selection.json",
+    "sha256": "7b87198a3037d3dbbd47461ee7b7fb241fe36651350838f42d93a396212d728e"
+  },
+  "groups": {
+    "15": {
+      "2025": {
+        "event": {
+          "native_btc_mark_tape": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/annual_2025/candles/futures/BTC_USDT_USDT-5m-mark.feather",
+            "sha256": "fa7315df36e4bed9fc35d642692b0e79f204b20e5ed363bdcbdb74d44e32c0c1"
+          },
+          "registered_plan": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_15bp/account/registered_plan.json",
+            "sha256": "ab0693bf193725cba720a247a963e6ad7c11fa5d4db4142f3cda7c8f9c355d32"
+          },
+          "event_source": {
+            "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/annual_original_15bp_october_event.json",
+            "sha256": "418678b7775bf9d62d5cd5b9e260a08efd32c6700b2446d4e8811a95760c0bea"
+          },
+          "btc_end_to_end_return": -0.09050368817485632,
+          "btc_local_peak_to_trough_drawdown": 0.14906827835644143,
+          "btc_peak": "2025-10-10T13:40:00+00:00",
+          "btc_trough": "2025-10-10T21:20:00+00:00"
+        },
+        "accounts": {
+          "12": {
+            "source": {
+              ".zip": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_15bp/account/native_results/backtest-result-2026-11-26_03-43-40.zip",
+                "sha256": "e5198abfa84ab2b9f04c56aa764abfb8fb153dd50c9218856494609097a508b9"
+              },
+              ".parquet": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_15bp/account/five_minute_equity.parquet",
+                "sha256": "306593cbb7350d4ea6a629a6c4a7a2d8206aa5952ddaa2744e9564aa6a600b93"
+              }
+            },
+            "marks_including_boundary": 577,
+            "event_start_nav_usdt": 5523.5957836141115,
+            "event_end_nav_usdt": 7624.054171474902,
+            "event_net_change_usdt": 2100.458387860791,
+            "event_return": 0.3802701121055698,
+            "event_max_five_minute_drawdown": 0.07611384284067346,
+            "event_drawdown_trough": "2025-10-10T21:25:00+00:00",
+            "positions_at_event_drawdown_trough": 0,
+            "peak_trade_price_gross_to_marked_nav": 0.9406274285697485,
+            "natural_realized_pnl_usdt": 1489.19903497,
+            "change_in_open_trade_price_pnl_usdt": 609.7603164778886,
+            "change_in_trade_to_mark_adjustment_usdt": 1.4990364129034788,
+            "natural_campaign_count": 32,
+            "largest_realized": [
+              {
+                "pair": "ONDO/USDT:USDT",
+                "tag": "145",
+                "close": "2025-10-10 21:45:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 429.4665801
+              },
+              {
+                "pair": "ADA/USDT:USDT",
+                "tag": "145",
+                "close": "2025-10-10 21:45:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 389.325182
+              },
+              {
+                "pair": "SEI/USDT:USDT",
+                "tag": "145",
+                "close": "2025-10-10 21:45:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 383.3152717
+              }
+            ],
+            "smallest_realized": [
+              {
+                "pair": "PENGU/USDT:USDT",
+                "tag": "161",
+                "close": "2025-10-10 21:20:00+00:00",
+                "entry_fills": 89,
+                "profit_abs_usdt": -1047.4291186599999
+              },
+              {
+                "pair": "SEI/USDT:USDT",
+                "tag": "63",
+                "close": "2025-10-10 22:30:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 0.74258835
+              },
+              {
+                "pair": "ZEN/USDT:USDT",
+                "tag": "2",
+                "close": "2025-10-11 01:20:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 3.56152335
+              }
+            ],
+            "full_window_multiplier": 14.85952581122067,
+            "non_event_observed_multiplier_product": 10.765665126627145
+          },
+          "14": {
+            "source": {
+              ".zip": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_15bp/account/native_results/backtest-result-2026-11-26_04-13-52.zip",
+                "sha256": "75f7093a6ff60d84210e9b50c1ea459aea7dc300aadf16e73f4909831bfe6837"
+              },
+              ".parquet": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_15bp/account/five_minute_equity.parquet",
+                "sha256": "6641530ab64384ba4cd694290e165134b24cc3180c656db07220f07374cf8d4d"
+              }
+            },
+            "marks_including_boundary": 577,
+            "event_start_nav_usdt": 5858.960177323845,
+            "event_end_nav_usdt": 8089.224131919512,
+            "event_net_change_usdt": 2230.263954595667,
+            "event_return": 0.38065866418200667,
+            "event_max_five_minute_drawdown": 0.07601924274102922,
+            "event_drawdown_trough": "2025-10-10T21:25:00+00:00",
+            "positions_at_event_drawdown_trough": 0,
+            "peak_trade_price_gross_to_marked_nav": 0.9406539406448426,
+            "natural_realized_pnl_usdt": 1582.0339664599999,
+            "change_in_open_trade_price_pnl_usdt": 646.6398339304924,
+            "change_in_trade_to_mark_adjustment_usdt": 1.590154205174258,
+            "natural_campaign_count": 32,
+            "largest_realized": [
+              {
+                "pair": "ONDO/USDT:USDT",
+                "tag": "145",
+                "close": "2025-10-10 21:45:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 455.6705019
+              },
+              {
+                "pair": "ADA/USDT:USDT",
+                "tag": "145",
+                "close": "2025-10-10 21:45:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 413.125768
+              },
+              {
+                "pair": "SEI/USDT:USDT",
+                "tag": "145",
+                "close": "2025-10-10 21:45:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 406.6927795
+              }
+            ],
+            "smallest_realized": [
+              {
+                "pair": "PENGU/USDT:USDT",
+                "tag": "161",
+                "close": "2025-10-10 21:20:00+00:00",
+                "entry_fills": 89,
+                "profit_abs_usdt": -1110.4397638300002
+              },
+              {
+                "pair": "SEI/USDT:USDT",
+                "tag": "63",
+                "close": "2025-10-10 22:30:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 0.78785595
+              },
+              {
+                "pair": "ZEN/USDT:USDT",
+                "tag": "2",
+                "close": "2025-10-11 01:20:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 3.7795758
+              }
+            ],
+            "full_window_multiplier": 15.768854646567247,
+            "non_event_observed_multiplier_product": 11.421254981881967
+          }
+        },
+        "event_14_minus_12_dollar_pnl_usdt": 129.80556673487627,
+        "event_fraction_of_observed_final_nav_difference": 0.14274876336171935,
+        "non_event_multiplier_ratio_14_to_12": 1.0608963633499362
+      },
+      "2026_to_nov09": {
+        "event": {
+          "native_btc_mark_tape": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/candles/futures/BTC_USDT_USDT-5m-mark.feather",
+            "sha256": "3b6098273730dd0abd012765804e17945c4e6af4193afcee98464fee438e90cf"
+          },
+          "registered_plan": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/registered_plan.json",
+            "sha256": "9d785803d8b888b07251233d140e8a43f4ee3e67cb5e98849bbe52e996955a7e"
+          },
+          "selection_days": 311,
+          "largest_intraday_mark_drawdown": 0.14574508238061445,
+          "btc_end_to_end_return": -0.03567137227133477,
+          "btc_local_peak_to_trough_drawdown": 0.18064308177579147,
+          "btc_peak": "2026-02-05T00:30:00+00:00",
+          "btc_trough": "2026-02-06T00:20:00+00:00"
+        },
+        "accounts": {
+          "12": {
+            "source": {
+              ".zip": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/native_results/backtest-result-2026-11-09_11-36-59.zip",
+                "sha256": "48381f6843d81002e70cdb18cd8a5e4105c11ad9716e8f2a11334b1e857ccf1e"
+              },
+              ".parquet": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/five_minute_equity.parquet",
+                "sha256": "ccfa92f02e0bf5109869bf1a17462bb523db061464ccea2a762ca05fdf28d068"
+              }
+            },
+            "marks_including_boundary": 577,
+            "event_start_nav_usdt": 1157.6935433997942,
+            "event_end_nav_usdt": 1212.28064998,
+            "event_net_change_usdt": 54.58710658020573,
+            "event_return": 0.047151603195349834,
+            "event_max_five_minute_drawdown": 0.037568055956186064,
+            "event_drawdown_trough": "2026-02-06T00:20:00+00:00",
+            "positions_at_event_drawdown_trough": 4,
+            "peak_trade_price_gross_to_marked_nav": 0.7946931633508122,
+            "natural_realized_pnl_usdt": 47.600617490000005,
+            "change_in_open_trade_price_pnl_usdt": 7.036581516305911,
+            "change_in_trade_to_mark_adjustment_usdt": -0.05009242610003639,
+            "natural_campaign_count": 10,
+            "largest_realized": [
+              {
+                "pair": "TRB/USDT:USDT",
+                "tag": "4",
+                "close": "2026-02-06 00:40:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 18.30698135
+              },
+              {
+                "pair": "ENA/USDT:USDT",
+                "tag": "62",
+                "close": "2026-02-06 00:40:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 5.1154498
+              },
+              {
+                "pair": "SPX/USDT:USDT",
+                "tag": "62",
+                "close": "2026-02-06 13:25:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 4.7887964
+              }
+            ],
+            "smallest_realized": [
+              {
+                "pair": "AXL/USDT:USDT",
+                "tag": "562",
+                "close": "2026-02-05 16:25:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 1.22243629
+              },
+              {
+                "pair": "UNI/USDT:USDT",
+                "tag": "62",
+                "close": "2026-02-06 02:15:00+00:00",
+                "entry_fills": 2,
+                "profit_abs_usdt": 1.62935144
+              },
+              {
+                "pair": "C98/USDT:USDT",
+                "tag": "65",
+                "close": "2026-02-05 16:35:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 2.13471552
+              }
+            ],
+            "full_window_multiplier": 2.4555668532165904,
+            "non_event_observed_multiplier_product": 2.3449965083599222
+          },
+          "14": {
+            "source": {
+              ".zip": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_15bp/native_results/backtest-result-2026-11-25_15-57-59.zip",
+                "sha256": "7f276984d84678c00fb3b45f88b260c91b2f5f6ddf33ad8c52a223761799da91"
+              },
+              ".parquet": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_15bp/five_minute_equity.parquet",
+                "sha256": "33155f67fc938ec146e4bcdb76bd9767b8d513fa1ff25d14b2f209579718c8cb"
+              }
+            },
+            "marks_including_boundary": 577,
+            "event_start_nav_usdt": 1157.6935433997942,
+            "event_end_nav_usdt": 1212.28064998,
+            "event_net_change_usdt": 54.58710658020573,
+            "event_return": 0.047151603195349834,
+            "event_max_five_minute_drawdown": 0.037568055956186064,
+            "event_drawdown_trough": "2026-02-06T00:20:00+00:00",
+            "positions_at_event_drawdown_trough": 4,
+            "peak_trade_price_gross_to_marked_nav": 0.7946931633508122,
+            "natural_realized_pnl_usdt": 47.600617490000005,
+            "change_in_open_trade_price_pnl_usdt": 7.036581516305911,
+            "change_in_trade_to_mark_adjustment_usdt": -0.05009242610003639,
+            "natural_campaign_count": 10,
+            "largest_realized": [
+              {
+                "pair": "TRB/USDT:USDT",
+                "tag": "4",
+                "close": "2026-02-06 00:40:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 18.30698135
+              },
+              {
+                "pair": "ENA/USDT:USDT",
+                "tag": "62",
+                "close": "2026-02-06 00:40:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 5.1154498
+              },
+              {
+                "pair": "SPX/USDT:USDT",
+                "tag": "62",
+                "close": "2026-02-06 13:25:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 4.7887964
+              }
+            ],
+            "smallest_realized": [
+              {
+                "pair": "AXL/USDT:USDT",
+                "tag": "562",
+                "close": "2026-02-05 16:25:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 1.22243629
+              },
+              {
+                "pair": "UNI/USDT:USDT",
+                "tag": "62",
+                "close": "2026-02-06 02:15:00+00:00",
+                "entry_fills": 2,
+                "profit_abs_usdt": 1.62935144
+              },
+              {
+                "pair": "C98/USDT:USDT",
+                "tag": "65",
+                "close": "2026-02-05 16:35:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 2.13471552
+              }
+            ],
+            "full_window_multiplier": 2.5475942428228966,
+            "non_event_observed_multiplier_product": 2.4328800481697144
+          }
+        },
+        "event_14_minus_12_dollar_pnl_usdt": 0.0,
+        "event_fraction_of_observed_final_nav_difference": 0.0,
+        "non_event_multiplier_ratio_14_to_12": 1.0374770450601896
+      }
+    },
+    "8": {
+      "2025": {
+        "event": {
+          "native_btc_mark_tape": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/annual_2025/candles/futures/BTC_USDT_USDT-5m-mark.feather",
+            "sha256": "fa7315df36e4bed9fc35d642692b0e79f204b20e5ed363bdcbdb74d44e32c0c1"
+          },
+          "registered_plan": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_15bp/account/registered_plan.json",
+            "sha256": "ab0693bf193725cba720a247a963e6ad7c11fa5d4db4142f3cda7c8f9c355d32"
+          },
+          "event_source": {
+            "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/annual_original_15bp_october_event.json",
+            "sha256": "418678b7775bf9d62d5cd5b9e260a08efd32c6700b2446d4e8811a95760c0bea"
+          },
+          "btc_end_to_end_return": -0.09050368817485632,
+          "btc_local_peak_to_trough_drawdown": 0.14906827835644143,
+          "btc_peak": "2025-10-10T13:40:00+00:00",
+          "btc_trough": "2025-10-10T21:20:00+00:00"
+        },
+        "accounts": {
+          "12": {
+            "source": {
+              ".zip": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account/native_results/backtest-result-2026-11-26_06-18-38.zip",
+                "sha256": "1f31af687addc90c0a9c647bff4d1b9875d52e26801a5b6d4cab0074c0b8b602"
+              },
+              ".parquet": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account/five_minute_equity.parquet",
+                "sha256": "53092eecf9423a1633ae4a53d4c092434012978504bdb90baa047c07f7ff663e"
+              }
+            },
+            "marks_including_boundary": 577,
+            "event_start_nav_usdt": 5993.282865247833,
+            "event_end_nav_usdt": 8381.181320962616,
+            "event_net_change_usdt": 2387.8984557147833,
+            "event_return": 0.3984291263075632,
+            "event_max_five_minute_drawdown": 0.07462709237425025,
+            "event_drawdown_trough": "2025-10-10T21:25:00+00:00",
+            "positions_at_event_drawdown_trough": 0,
+            "peak_trade_price_gross_to_marked_nav": 0.9395535831857502,
+            "natural_realized_pnl_usdt": 1756.48036131,
+            "change_in_open_trade_price_pnl_usdt": 629.6717958175595,
+            "change_in_trade_to_mark_adjustment_usdt": 1.7462985872225545,
+            "natural_campaign_count": 35,
+            "largest_realized": [
+              {
+                "pair": "ONDO/USDT:USDT",
+                "tag": "145",
+                "close": "2025-10-10 21:45:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 470.64596195
+              },
+              {
+                "pair": "ADA/USDT:USDT",
+                "tag": "145",
+                "close": "2025-10-10 21:45:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 426.9852096
+              },
+              {
+                "pair": "SEI/USDT:USDT",
+                "tag": "145",
+                "close": "2025-10-10 21:45:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 420.35324832
+              }
+            ],
+            "smallest_realized": [
+              {
+                "pair": "PENGU/USDT:USDT",
+                "tag": "161",
+                "close": "2025-10-10 21:20:00+00:00",
+                "entry_fills": 88,
+                "profit_abs_usdt": -1078.23187326
+              },
+              {
+                "pair": "ORDI/USDT:USDT",
+                "tag": "63",
+                "close": "2025-10-10 22:25:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 0.68977856
+              },
+              {
+                "pair": "SOL/USDT:USDT",
+                "tag": "63",
+                "close": "2025-10-11 00:55:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 0.89609248
+              }
+            ],
+            "full_window_multiplier": 16.45574734668,
+            "non_event_observed_multiplier_product": 11.76730878748932
+          },
+          "14": {
+            "source": {
+              ".zip": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_8bp/account/native_results/backtest-result-2026-11-26_07-11-19.zip",
+                "sha256": "c9b99bb62402da28263181c3d4cbc096fd161d476779f50a852d32836c2378b4"
+              },
+              ".parquet": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_8bp/account/five_minute_equity.parquet",
+                "sha256": "81cc68f2c68dd108fb09d2a85e163c676a220f69f9ab177796ff61a101ffadb6"
+              }
+            },
+            "marks_including_boundary": 577,
+            "event_start_nav_usdt": 6307.348282633405,
+            "event_end_nav_usdt": 8820.642707241917,
+            "event_net_change_usdt": 2513.2944246085126,
+            "event_return": 0.39847084891896567,
+            "event_max_five_minute_drawdown": 0.07458222283237126,
+            "event_drawdown_trough": "2025-10-10T21:25:00+00:00",
+            "positions_at_event_drawdown_trough": 0,
+            "peak_trade_price_gross_to_marked_nav": 0.9395117502780947,
+            "natural_realized_pnl_usdt": 1848.9385327,
+            "change_in_open_trade_price_pnl_usdt": 662.5180444784515,
+            "change_in_trade_to_mark_adjustment_usdt": 1.8378474300607195,
+            "natural_campaign_count": 35,
+            "largest_realized": [
+              {
+                "pair": "ONDO/USDT:USDT",
+                "tag": "145",
+                "close": "2025-10-10 21:45:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 495.33941117
+              },
+              {
+                "pair": "ADA/USDT:USDT",
+                "tag": "145",
+                "close": "2025-10-10 21:45:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 449.3018928
+              },
+              {
+                "pair": "SEI/USDT:USDT",
+                "tag": "145",
+                "close": "2025-10-10 21:45:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 442.40217552
+              }
+            ],
+            "smallest_realized": [
+              {
+                "pair": "PENGU/USDT:USDT",
+                "tag": "161",
+                "close": "2025-10-10 21:20:00+00:00",
+                "entry_fills": 88,
+                "profit_abs_usdt": -1134.3294787300001
+              },
+              {
+                "pair": "ORDI/USDT:USDT",
+                "tag": "63",
+                "close": "2025-10-10 22:25:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 0.72565208
+              },
+              {
+                "pair": "SOL/USDT:USDT",
+                "tag": "63",
+                "close": "2025-10-11 00:55:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 0.9401626
+              }
+            ],
+            "full_window_multiplier": 17.31171439683,
+            "non_event_observed_multiplier_product": 12.379031289935114
+          }
+        },
+        "event_14_minus_12_dollar_pnl_usdt": 125.39596889372933,
+        "event_fraction_of_observed_final_nav_difference": 0.14649625691988374,
+        "non_event_multiplier_ratio_14_to_12": 1.0519849112055393
+      },
+      "2026_to_nov09": {
+        "event": {
+          "native_btc_mark_tape": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/candles/futures/BTC_USDT_USDT-5m-mark.feather",
+            "sha256": "3b6098273730dd0abd012765804e17945c4e6af4193afcee98464fee438e90cf"
+          },
+          "registered_plan": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/registered_plan.json",
+            "sha256": "9d785803d8b888b07251233d140e8a43f4ee3e67cb5e98849bbe52e996955a7e"
+          },
+          "selection_days": 311,
+          "largest_intraday_mark_drawdown": 0.14574508238061445,
+          "btc_end_to_end_return": -0.03567137227133477,
+          "btc_local_peak_to_trough_drawdown": 0.18064308177579147,
+          "btc_peak": "2026-02-05T00:30:00+00:00",
+          "btc_trough": "2026-02-06T00:20:00+00:00"
+        },
+        "accounts": {
+          "12": {
+            "source": {
+              ".zip": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_8bps/native_results/backtest-result-2026-11-09_12-01-25.zip",
+                "sha256": "9e0554593bc987ad467ad6462a437af89d333ea5b5b07ed54fbbb48e1f6c57b0"
+              },
+              ".parquet": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_8bps/five_minute_equity.parquet",
+                "sha256": "ea4c30a4a757fcd5d1eeb51286c9b3451fa4dade4781353fc319dd9b8c973de1"
+              }
+            },
+            "marks_including_boundary": 577,
+            "event_start_nav_usdt": 1160.8368836929003,
+            "event_end_nav_usdt": 1229.00112722,
+            "event_net_change_usdt": 68.16424352709964,
+            "event_return": 0.05871991533405874,
+            "event_max_five_minute_drawdown": 0.03680627414303128,
+            "event_drawdown_trough": "2026-02-06T00:20:00+00:00",
+            "positions_at_event_drawdown_trough": 4,
+            "peak_trade_price_gross_to_marked_nav": 0.7940568690679972,
+            "natural_realized_pnl_usdt": 61.35075544,
+            "change_in_open_trade_price_pnl_usdt": 6.863796101339816,
+            "change_in_trade_to_mark_adjustment_usdt": -0.05030801424004494,
+            "natural_campaign_count": 10,
+            "largest_realized": [
+              {
+                "pair": "TRB/USDT:USDT",
+                "tag": "4",
+                "close": "2026-02-06 00:40:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 18.97520576
+              },
+              {
+                "pair": "JUP/USDT:USDT",
+                "tag": "562",
+                "close": "2026-02-05 20:25:00+00:00",
+                "entry_fills": 2,
+                "profit_abs_usdt": 17.14420012
+              },
+              {
+                "pair": "ENA/USDT:USDT",
+                "tag": "62",
+                "close": "2026-02-06 00:40:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 5.28839424
+              }
+            ],
+            "smallest_realized": [
+              {
+                "pair": "AXL/USDT:USDT",
+                "tag": "562",
+                "close": "2026-02-05 16:25:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 1.32548009
+              },
+              {
+                "pair": "HBAR/USDT:USDT",
+                "tag": "141",
+                "close": "2026-02-05 17:10:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 1.79384862
+              },
+              {
+                "pair": "UNI/USDT:USDT",
+                "tag": "62",
+                "close": "2026-02-06 02:15:00+00:00",
+                "entry_fills": 2,
+                "profit_abs_usdt": 1.82441764
+              }
+            ],
+            "full_window_multiplier": 3.012353900815678,
+            "non_event_observed_multiplier_product": 2.8452793389318534
+          },
+          "14": {
+            "source": {
+              ".zip": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_8bp/native_results/backtest-result-2026-11-25_16-13-59.zip",
+                "sha256": "748b0b6e9978066c9247fa0809bc7e7d8fec7a57ff81a9fa5abf667a0382d99e"
+              },
+              ".parquet": {
+                "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_8bp/five_minute_equity.parquet",
+                "sha256": "da58bb9b0908124675a9cbe956ed93359303388039de4ab7288953235579ae4f"
+              }
+            },
+            "marks_including_boundary": 577,
+            "event_start_nav_usdt": 1160.8368836929003,
+            "event_end_nav_usdt": 1229.00112722,
+            "event_net_change_usdt": 68.16424352709964,
+            "event_return": 0.05871991533405874,
+            "event_max_five_minute_drawdown": 0.03680627414303128,
+            "event_drawdown_trough": "2026-02-06T00:20:00+00:00",
+            "positions_at_event_drawdown_trough": 4,
+            "peak_trade_price_gross_to_marked_nav": 0.7940568690679972,
+            "natural_realized_pnl_usdt": 61.35075544,
+            "change_in_open_trade_price_pnl_usdt": 6.863796101339816,
+            "change_in_trade_to_mark_adjustment_usdt": -0.05030801424004494,
+            "natural_campaign_count": 10,
+            "largest_realized": [
+              {
+                "pair": "TRB/USDT:USDT",
+                "tag": "4",
+                "close": "2026-02-06 00:40:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 18.97520576
+              },
+              {
+                "pair": "JUP/USDT:USDT",
+                "tag": "562",
+                "close": "2026-02-05 20:25:00+00:00",
+                "entry_fills": 2,
+                "profit_abs_usdt": 17.14420012
+              },
+              {
+                "pair": "ENA/USDT:USDT",
+                "tag": "62",
+                "close": "2026-02-06 00:40:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 5.28839424
+              }
+            ],
+            "smallest_realized": [
+              {
+                "pair": "AXL/USDT:USDT",
+                "tag": "562",
+                "close": "2026-02-05 16:25:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 1.32548009
+              },
+              {
+                "pair": "HBAR/USDT:USDT",
+                "tag": "141",
+                "close": "2026-02-05 17:10:00+00:00",
+                "entry_fills": 1,
+                "profit_abs_usdt": 1.79384862
+              },
+              {
+                "pair": "UNI/USDT:USDT",
+                "tag": "62",
+                "close": "2026-02-06 02:15:00+00:00",
+                "entry_fills": 2,
+                "profit_abs_usdt": 1.82441764
+              }
+            ],
+            "full_window_multiplier": 3.1010654880574022,
+            "non_event_observed_multiplier_product": 2.9290707042937987
+          }
+        },
+        "event_14_minus_12_dollar_pnl_usdt": 0.0,
+        "event_fraction_of_observed_final_nav_difference": 0.0,
+        "non_event_multiplier_ratio_14_to_12": 1.0294492580097254
+      }
+    }
+  },
+  "orders_enabled": false
+}

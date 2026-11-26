@@ -1,0 +1,96 @@
+{
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "dry_run_wallet": 1000,
+  "max_open_trades": 2,
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "",
+  "unfilledtimeout": {
+    "entry": 3,
+    "exit": 2,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0
+  },
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "username": "",
+    "password": ""
+  },
+  "telegram": {
+    "enabled": false,
+    "token": "",
+    "chat_id": ""
+  },
+  "dry_run": true,
+  "backtest_cache": "none",
+  "position_adjustment_enable": false,
+  "trading_mode": "futures",
+  "fee": 0.0008,
+  "margin_mode": "isolated",
+  "exchange": {
+    "name": "binance",
+    "enable_ws": false,
+    "pair_whitelist": [
+      "ADA/USDT:USDT",
+      "BNB/USDT:USDT",
+      "BTC/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "ETH/USDT:USDT",
+      "LINK/USDT:USDT",
+      "LTC/USDT:USDT",
+      "XRP/USDT:USDT"
+    ],
+    "pair_blacklist": [],
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "timeout": 20000
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "timeout": 20000
+    }
+  },
+  "strategy": "ResidualInputs",
+  "timeframe_detail": "5m",
+  "export": "trades",
+  "research_quote_volume": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/spread_liquidity_native_20261114_v1/quote_volumes.parquet",
+  "research_quote_sha256": "c40d880538e9addcdcff6e6d96cc6ba9cc8f6984fb129f83d7522bf48458088b",
+  "strategy_path": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1",
+  "user_data_dir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/residual_momentum_source_native_20261114_v1",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/residual_momentum_source_native_20261114_v1/candles",
+  "runmode": "backtest",
+  "candle_type_def": "futures",
+  "timeframe": "1h",
+  "startup_candle_count": 1464,
+  "timerange": "1735689600-1788220799",
+  "research_diagnostic_only": true,
+  "research_admission": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1/input_admission.json"
+}

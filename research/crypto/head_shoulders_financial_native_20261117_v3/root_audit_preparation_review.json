@@ -1,0 +1,45 @@
+{
+  "reviewed_at": "2026-11-17T16:07:07.353000+00:00",
+  "state": "INDEPENDENT_AUDIT_PREPARATION_REVIEWED_NOT_RELEASED",
+  "plan_sha256": "38cf9e9f9452e479c212fbe092f9f03f7b1ca2ee382867822c3a30ba10d265b8",
+  "audit_code_sha256": "f841934ed845ea9d7ec0a3c6da05f595e2e93c008ff2cc113e93294828575654",
+  "audit_freeze_sha256": "961111c411fefdf4aaa73a4cc61b42d286403f24ecdc001323b183a3ae589a6b",
+  "audit_preparation_manifest_sha256": "140b40a6057c08eaeeb6afb8f724746e393e6d047d25d9743110e6c36f5ecf1a",
+  "root_hash_verification": {
+    "original_preparation": 49,
+    "audit_preparation": 20,
+    "audit_v2_freeze": 22,
+    "storage_unit_freeze": 4
+  },
+  "root_read_audit_entire_code": true,
+  "reviewed_formulas": [
+    "Decimal fills, both commissions, exported native funding",
+    "independent strict H&S inclusive two-fill funding oracle",
+    "pre-clock hourly NAV with remaining exit fee",
+    "first strict source-close crossing or expiry, bound to event ID",
+    "unknown gross missing-rate exposure without opposite-position netting",
+    "actual500+actual500 fixed NAV sum and identical-cost original1000 comparison"
+  ],
+  "observed_test_receipts": {
+    "synthetic_cases_passed": 36,
+    "timestamp_variants_passed": 4,
+    "integer_clock_assertions_passed": 12,
+    "exit_codes": [
+      0,
+      0
+    ]
+  },
+  "retained_failed_audit_attempt": true,
+  "native_object_two_fill_mechanical_proof": "IN_PROGRESS_SEPARATE_FROM_COMPLETE_ACCOUNT_EVIDENCE",
+  "limits": [
+    "No market financial run in this audit preparation",
+    "Source and risk/force exits remain distinct",
+    "Native stop/liquidation prices not independently certified by this reconciler",
+    "NFI DCA boundary ambiguity remains UNKNOWN despite aggregate agreement",
+    "Original inferred-price and historical-rule gaps remain"
+  ],
+  "predecessor_nfi500": "STILL_RUNNING_NO_EXECUTION_RELEASE",
+  "execution_release_created": false,
+  "orders_enabled": false,
+  "goal_complete": false
+}

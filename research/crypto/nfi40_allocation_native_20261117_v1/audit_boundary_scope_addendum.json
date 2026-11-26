@@ -1,0 +1,28 @@
+{
+  "written_at": "2026-11-17T16:02:52.739980+00:00",
+  "actual500_completed_economic_outputs_read": false,
+  "audit_code_changed": false,
+  "frozen_audit_script_sha256": "d4179546fee15098cd7e922327fb0a4f50a26e6b9c5f333e33775ef352befde1",
+  "parent_review_requirement": "Separate numerical cash/NAV agreement from uniquely identifiable funding-boundary order state.",
+  "numeric_pass_scope": "audit_actual500.passed describes its explicit numeric/input checks only; it does not certify unique funding-boundary ordering or venue settlement.",
+  "funding_identifiability_rule": "After complete native outputs, inventory every exported fill coincident with an actual funding event. A non-initial entry (DCA), partial exit, or coupled same-time multi-fill state lacking order creation timestamps remains UNKNOWN even if every cash/NAV value reconciles.",
+  "required_event_fields": [
+    "candidate",
+    "trade_index",
+    "archive_order_index",
+    "pair",
+    "timestamp_UTC",
+    "ft_is_entry",
+    "amount",
+    "gross_quantity_before",
+    "gross_quantity_after",
+    "initial_entry_or_DCA_or_partial_or_final_exit",
+    "same_timestamp_fills",
+    "creation_timestamp_available"
+  ],
+  "no_full_funding_independent_proof_from_aggregate_agreement": true,
+  "private_venue_settlement_certified": false,
+  "financial_parameters_changed": false,
+  "financial_restarts": 0,
+  "original_audit_and_failure_records_preserved": true
+}

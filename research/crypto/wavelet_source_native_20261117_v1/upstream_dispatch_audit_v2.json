@@ -1,0 +1,28 @@
+{
+  "status": "CURRENT_SOURCE_DEFAULT_ROUTES_TO_SUBCLASS_ROLLING",
+  "passed_source_dispatch_probe": true,
+  "commit": "9bb7dab5df53203e69f60336749551a40767af0b",
+  "original_methods_executed": [
+    "TSPredict.add_predictions",
+    "TS_Wavelet.init_model",
+    "TS_Wavelet.add_jumping_predictions"
+  ],
+  "explicit_numerical_boundary": "add_rolling_predictions replaced by call recorder; full numerical body not executed",
+  "route_calls": [
+    {
+      "path": "TS_Wavelet.add_rolling_predictions",
+      "rows": 300
+    }
+  ],
+  "default_use_rolling_false_still_redirects_to_rolling": true,
+  "previous_default_signature_mismatch_claim_withdrawn": true,
+  "model_or_forecast_validity_certified": false,
+  "native_constructor_executed": false,
+  "new_financial_runs": 0,
+  "new_native_wallets": 0,
+  "inputs": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_source_native_20261117_v1/sources/nateemma_strategies/TSPredict/TSPredict.py": "3568998f610a3eee66a8c0c1093617d83809ed38185de7a6b2dcd067d965c9e6",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_source_native_20261117_v1/sources/nateemma_strategies/TSPredict/TS_Wavelet.py": "cd0199466d41822e41319189ae4e1facdc2beca81bda4edfcadd1746904236c7",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_source_native_20261117_v1/sources/nateemma_strategies/TSPredict/TS_Wavelet_DWT.py": "75b655b9f4688b73531de46efc2fe323cb69dff9295d9f25c7739c74467fb5f0"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "strategy_type": "fixed source strategy/allocation study, not new factor selection",
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "native_core_files_checked": 595,
+  "joint_daily_start": "2023-10-31 00:00:00+00:00",
+  "observed_daily_rows": 1036,
+  "decisions": 608,
+  "full_1095_day_covariance_at_first_decision": false,
+  "actual_strategies": [
+    {
+      "strategy": "CovarianceRiskTS",
+      "mode": "covariance",
+      "scalar_weight_cells": 17632,
+      "maximum_weight_error": 2.3925306180672123e-14,
+      "native_hourly_rows": 423168,
+      "actual_prefix_refits": 6,
+      "minimum_covariance_observations": 426
+    },
+    {
+      "strategy": "DiagonalRiskTS",
+      "mode": "diagonal",
+      "scalar_weight_cells": 17632,
+      "maximum_weight_error": 1.887379141862766e-14,
+      "native_hourly_rows": 423168,
+      "actual_prefix_refits": 6,
+      "minimum_covariance_observations": 426
+    },
+    {
+      "strategy": "GrossOneRiskTS",
+      "mode": "gross_one",
+      "scalar_weight_cells": 17632,
+      "maximum_weight_error": 3.6359804056473877e-14,
+      "native_hourly_rows": 423168,
+      "actual_prefix_refits": 6,
+      "minimum_covariance_observations": 426
+    }
+  ],
+  "sources": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/TSMomPortfolio.py": "f06b07dad48dddabd6dc6ef6a330aacf2a9d11a44a8354de251ad90ab564b3bf",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/RiskWeights.py": "f49d7f19ea8af822b8e0d38df99a3a4e81da0d97c4ca13e4e78e368372d3df43",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/AuthorMath.py": "577b6300348014315ffbc5b7f3cb0aed2d749dc47bf5a5ec483705015288396d",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/NativeAllocations.py": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/preflight.py": "d18a23b199ad455112ac3e07db3a58429fbca8a33faf95b209b001b7f506ff96",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/test_tsmom.py": "27ea8bc62bfbd30751a67afe9567c3773b254a36138ae9429ed9bc8f1a9bf170",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/complete_inputs.py": "51fff0511dde0e76bb711298bf8ef749e374a5e848e74f04c986c2786f17ee44",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/native_runner.py": "474a145adb67bb14eac25b525b730eb036523f641142300e47d865aed856e1a8",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/run.py": "fc835f6fcd6097992cae0b904b3959c8a19644c3b732c5acaa9b9cae48b3942f"
+  },
+  "native_funded_accounts": 0,
+  "supplied_funding_not_actual_settlement": true
+}

@@ -1,0 +1,9 @@
+{
+  "hypothesis": "The admitted weekly-high rank can improve a split alongside NFI after actual short exposure, native funding and execution costs.",
+  "design_status": "Economic variant frozen after the factor-only result and before any funded weekly-high result. Prior NFI and Turtle returns known. This is an exploratory fixed-universe adaptation.",
+  "inputs": "The same 40 ordered Binance USDT perpetuals and pinned daily OHLC, populated from completed Monday-to-Sunday UTC weeks. No use of predictive labels to choose positions.",
+  "allocation": "Every Monday rank log(last completed weekly close)-log(last completed weekly high); long top three and short bottom three with native equal proposed slot stakes. Ties follow the original pair order. Six slots, one times leverage, 99% usable balance and actual market minimums. No replacement for a rejected order or intraperiod rebalance.",
+  "clock": "Close all source positions at Monday 00:00; enter the new ranks at Monday 01:00. The explicit 1h wait separates actual liquidation from new entries at the native hourly decision clock. This financial entry clock is 55 minutes after the 00:05 diagnostic label clock. The final open week is included in the marked comparison.",
+  "baseline": "Original 1000 USDT NFI comparison. Run the fixed 500 USDT slate at 15 bp per side first. Reconcile and sum its marked NAV with the verified same-cost 500 USDT NFI wallet. Require better cumulative return, no larger marked drawdown, positive yearly sections and independently reconciled cash/marks/funding at 15 bp before spending on additional costs or considering a shared wallet.",
+  "scope": "Freqtrade native Backtesting.start, 1h plus 5m detail with pinned legacy precision rules and funding. AXS/TRB exposure at the known missing funding slot is UNKNOWN. No live orders or account change. No market-cap filter claim and no use of hindsight to tune trades."
+}

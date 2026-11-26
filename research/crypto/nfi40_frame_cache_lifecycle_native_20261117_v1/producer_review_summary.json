@@ -1,0 +1,59 @@
+{
+  "status": "OBJECT_INTERFACE_VALIDATED_EXECUTION_HELD",
+  "plan_sha256": "ee004aa7474f1bb6605b2cb04c2806f68d05334327d73199e82c0c7eae8f40d9",
+  "producer_freeze_sha256": "603ebe40f8b6d3322f2ae2943b01450d7572aa442a2a47458397fb27bf44dfd1",
+  "review_files": {
+    "native_producer.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/native_producer.py",
+      "sha256": "2817e2faaf20880c0d11487fe3d0d85170cf78025ca4e3946aa635e014bab31c"
+    },
+    "capture_native.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/capture_native.py",
+      "sha256": "62f4693f1b60f8a926c0a659b4d97d4bf2977fda2f0322ca383079c8aa2ccf44"
+    },
+    "execute_pair.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/execute_pair.py",
+      "sha256": "edeb15ddece1a4b334b999b00ba02f636c3b67f93b2284f16214001ceed0f4cb"
+    },
+    "producer_release_protocol.json": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/producer_release_protocol.json",
+      "sha256": "0cd68d540b6d7107e8e3aab398497b93193dede9c75a8c692232d54454a869cf"
+    },
+    "test_producer_objects.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/test_producer_objects.py",
+      "sha256": "6cd185ee9a76128c223767df57cd3696975cb3577850495ed9087a055431a4dd"
+    },
+    "PRODUCER.md": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/PRODUCER.md",
+      "sha256": "0539f6193c31d36a59151235830d0364256fe5c73b341a567d9a225bcb2646d2"
+    }
+  },
+  "constructor_gate": {
+    "worker": "native_producer.run_variant enters sealed shared_worker_admission before native imports/constructors/output/thread; private sentinel rejects direct constructors",
+    "controller": "require_release before subprocess/output; each child repeats gate and holds shared+local locks",
+    "root_release_absent": true
+  },
+  "resource_guard": {
+    "max_rss_bytes": 3221225472,
+    "minimum_system_available_bytes": 1610612736,
+    "minimum_free_disk_bytes": 5368709120,
+    "max_seconds_per_variant": 1800,
+    "sampling_seconds": 0.25,
+    "check_before_constructors": true,
+    "abort_codes": [
+      73,
+      74
+    ],
+    "actual_runtime_tested": false
+  },
+  "only_storage_variation": "private analyzed cache; raw/indicator/row adapter and native economic code unchanged",
+  "actual_coverage": "UNKNOWN; require real entry/add/partial/full, callback, reset/clear/cleanup receipts and exact full semantic trace",
+  "scope_limits": [
+    "No native Backtesting.start or financial account executed",
+    "No replacement admission",
+    "No resource-failure recovery branch implemented",
+    "No synthetic native matching fixture producer implemented",
+    "Short-window native precision differs from old full-window precision and cannot certify history"
+  ],
+  "result_path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/producer_object_validation.json"
+}

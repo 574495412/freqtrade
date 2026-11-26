@@ -1,0 +1,8 @@
+{
+  "hypothesis": "Test whether aged underwater pure Top Coins long campaigns retain economic value after seven days. The WLD/APT drawdown observation motivated the diagnostic; it is not an untouched validation sample.",
+  "rule": "Use a single seven-calendar-day checkpoint from actual first fill. Score only campaigns still open strictly after that checkpoint in the completed archive. Net marked campaign PnL includes prior partial closes, fees, settlement cash and a closing-fee reserve. Identify negative values as time-exit candidates. Keep the seven-day horizon, zero threshold and source-defined pure Top Coins tags fixed.",
+  "opportunity": "Compare the observed remaining mark-to-end change on those native paths. Use natural close PnL when observed before the account endpoint, and use a separately reconstructed last mark for standing positions. Negative continuation is potential exposure reduction, without claiming the checkpoint price was executable or that other account trades are unchanged.",
+  "accounts": "Use independently reconciled 12-slot FlatTopBoost 2025–2026 continuous 15 bp account. Use the three already finished same-rules but independently capitalized 8 bp windows for a cost-path check. Display each period separately.",
+  "advance": "Require negative aggregate observed post-checkpoint continuation in both calendar parts of the continuous wallet. Require at least one qualifying candidate in each part and zero subsequent naturally realized wins at or above 1% of the marked account NAV before the first entry in all completed scopes. Preserve no-hit, missing and rejected cases. Require a native timed-exit experiment before using any improvement value as account evidence.",
+  "orders_enabled": false
+}

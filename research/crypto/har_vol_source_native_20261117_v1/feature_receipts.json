@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "symbol": "BTCUSDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/har_vol_source_native_20261117_v1/BTCUSDT_daily_features.parquet",
+      "sha256": "9cb54bd581b3651d61b3739c448fdc0434ba34188e7ec223abb4d77c87005432",
+      "rows": 1431,
+      "raw_rows": 2060560,
+      "missing_minutes": 80,
+      "dropped_or_unknown_days": [],
+      "max_native_hourly_open_error": 0.0,
+      "empty5min_ffill_is_source_model_not_observation": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/har_vol_source_native_20261117_v1/ETHUSDT_daily_features.parquet",
+      "sha256": "adf113b7250f28d9f9c5f9e350c919047d6559b035b5235687b14a3b6b9e0b74",
+      "rows": 1431,
+      "raw_rows": 2060560,
+      "missing_minutes": 80,
+      "dropped_or_unknown_days": [],
+      "max_native_hourly_open_error": 0.0,
+      "empty5min_ffill_is_source_model_not_observation": true
+    }
+  ],
+  "source_feature_code_sha256": "0836b4704f66685331deafce85383abd6713c270bf14ec9566128fc69ad39d5b",
+  "raw_receipts_sha256": "4df8ddca348bddc41da1a284ef840ecbf6074376d5929b73b7afc3520e6487d6",
+  "actual_prefix_checks": [
+    {
+      "symbol": "BTCUSDT",
+      "cutoff": "2024-12-31",
+      "passed": true
+    },
+    {
+      "symbol": "BTCUSDT",
+      "cutoff": "2025-07-31",
+      "passed": true
+    },
+    {
+      "symbol": "BTCUSDT",
+      "cutoff": "2026-01-31",
+      "passed": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "cutoff": "2024-12-31",
+      "passed": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "cutoff": "2025-07-31",
+      "passed": true
+    },
+    {
+      "symbol": "ETHUSDT",
+      "cutoff": "2026-01-31",
+      "passed": true
+    }
+  ],
+  "hardlinks": [
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/candles/BTC_USDT-5m.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/har_vol_source_native_20261117_v1/candles/BTC_USDT-5m.feather",
+      "sha256": "366afbdd6214d8d5b502c9c12bb3794aac31581b83f97d15730f6f359062e638"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/candles/BTC_USDT-1h.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/har_vol_source_native_20261117_v1/candles/BTC_USDT-1h.feather",
+      "sha256": "beed6bde8f88040b0af3457543d9d9a6cd0d15716b521cec1614ebe9e14a3a76"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/candles/BTC_USDT-1d.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/har_vol_source_native_20261117_v1/candles/BTC_USDT-1d.feather",
+      "sha256": "55ded0b005bc6e20c903d6e856db3de3f39008cab4316beb4bd65fa6094f9d1f"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/candles/ETH_USDT-5m.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/har_vol_source_native_20261117_v1/candles/ETH_USDT-5m.feather",
+      "sha256": "407c6748bed2d85fa9739f5e6ef7eba174f6b1ab7b8db84ffb71a65f6248793c"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/candles/ETH_USDT-1h.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/har_vol_source_native_20261117_v1/candles/ETH_USDT-1h.feather",
+      "sha256": "1a7e97e71696dc76472fb89c5c474824085f0a4601fc6a4007c1911780d51957"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/candles/ETH_USDT-1d.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/har_vol_source_native_20261117_v1/candles/ETH_USDT-1d.feather",
+      "sha256": "8263f44836cc93c7d5cfdcaf77fdce87cc8d535e297a9d824bce2bea260ad34c"
+    }
+  ],
+  "new_financial_accounts": 0,
+  "source_account_simulator_executed": false
+}

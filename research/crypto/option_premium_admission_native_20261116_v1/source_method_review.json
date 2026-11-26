@@ -1,0 +1,87 @@
+{
+  "Github": {
+    "repository": "mikemarshall01/crypto-quant-strategies",
+    "commit": "6f039e64d6d13227cdc5a79bbd9d78b093468cd0",
+    "selected_file": "notebooks/08_variance_risk_premium.py",
+    "selected_file_sha256": "bbd9cf2400d6cb4cb1f52b59638c823ef95eaee82f7ae90215f4f7d2fe26446b",
+    "license": "MIT;byte-exact sealed-source reuse",
+    "read_scope": "Selected ranges292-355,862-915,990-1060,1065-1135,1362-1383,1468-1510;not entire notebook/repository/references",
+    "source_financial_engine_executed": false,
+    "synthetic_fallback_used": false,
+    "observations": [
+      "VEGA_SCALE100 is a normalised quantity,not actual initial cash or exact traded option vega",
+      "Per-roll formula is implied variance minus monthly realised variance,two approximate drag terms,and cumulative sums,not a complete collateral account",
+      "DVOL from a surface is not the premium of a specific tradable ATM call+put",
+      "Current source text says struck and settledBTC;primary venue metadata has USD strike and BTC premium/settlement",
+      "Synthetic source scaling100to200 doubles numbers;this cannot certify dollar account returns",
+      "Source cumulated-net drawdown omits initial zero anchor in a two-loss synthetic witness",
+      "Fallback is openly labeled synthetic;its interpolation/bfill is not admitted historical evidence"
+    ]
+  },
+  "primary_sources": [
+    {
+      "url": "https://support.deribit.com/hc/en-us/articles/31424939096093-Inverse-Options",
+      "scope": "Current product/settlement sections;web text,raw requests403",
+      "facts": "USD strike;coin premium/settlement;2026-08-01 physical future then coin switch;isolated net intrinsic same,existing future netting affects delivery fees"
+    },
+    {
+      "url": "https://support.deribit.com/hc/en-us/articles/25944746248989-Fees",
+      "scope": "Current standard inverse option trade fee/cap section;web text,raw403",
+      "facts": "3bps underlying,12.5percent premium cap;not certified historic/private fee schedule"
+    },
+    {
+      "url": "https://support.deribit.com/hc/en-us/articles/25944779257373-6-July-2023-TS",
+      "scope": "Original tier tick examples and API rules;web text",
+      "facts": "Premium<=.005 uses.0001;strictly above.005 uses.0005"
+    },
+    {
+      "url": "https://support.deribit.com/hc/en-us/articles/38507223482781-API-guidance",
+      "scope": "Contract_size/min_trade_amount/lot_size section;web text",
+      "facts": "lot_size reserved;not a trading-size minimum or increment"
+    },
+    {
+      "url": "https://docs.deribit.com/api-reference/market-data/public-get_tradingview_chart_data",
+      "scope": "Selected description,request and volume/cost/price fields",
+      "facts": "Historical chart OHLCV;excludes block/RFQ;cost means quote volume,not fees"
+    },
+    {
+      "url": "https://docs.deribit.com/api-reference/market-data/public-get_last_trades_by_instrument_and_time",
+      "scope": "Request fields and delayed-block note",
+      "facts": "Historical prints may arrive after trade timestamp;include_old is not documented here"
+    },
+    {
+      "url": "https://docs.deribit.com/api-reference/market-data/public-get_delivery_prices",
+      "scope": "Date-bound filtering and delivery data",
+      "facts": "UTC date filter and records_total;current first unfiltered page100 of2670 despite requested1000,not an exhaustive history"
+    },
+    {
+      "url": "https://docs.deribit.com/articles/options-data-collection-best-practices",
+      "scope": "Chain discovery,book amounts,history/settlement and pagination sections",
+      "facts": "Use explicit expiry metadata,track instrument lifecycle,distinguish quotes/marks/trades/combos;no stream/service started"
+    }
+  ],
+  "actual_api_evidence": {
+    "current_live_BTC": 1064,
+    "current_live_ETH": 884,
+    "one_expired_BTC_call": 1,
+    "current_metadata_not_historical_universe": true,
+    "one_chart_bar_starts": 25,
+    "zero_volume": 21,
+    "positive_volume": 4,
+    "chart_and_trade_tape_not_reconciled": true,
+    "documented_trade_time_query_count": 0,
+    "delivery_day": "2025-06-27",
+    "delivery_price_usd_per_btc": "107106.02",
+    "delivery_filtered_records_total": 1,
+    "no_bidask_or_whole_historical_chain_acquired": true,
+    "source_chart_absence_not_proof_of_market_absence": true
+  },
+  "financial_admission": {
+    "accepted_independent_alpha": 0,
+    "full_native_option_accounts": 0,
+    "closed_real_positions": 0,
+    "full_comparison_window_complete": false,
+    "no_margin_collateral_premium_hedge_fee_expiry_account_integration": true,
+    "no_higher_comparable_return_established": true
+  }
+}

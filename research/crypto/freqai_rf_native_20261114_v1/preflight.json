@@ -1,0 +1,177 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "strategy": "RollingRF",
+      "start": "2025-01-01 00:00:00+00:00",
+      "actual_native_refits": 3,
+      "prefix_future_and_truncation_passed": true,
+      "original_native_model": {
+        "train_stop": "2025-01-01 00:00:00+00:00",
+        "training_rows": 683,
+        "feature_count": 65,
+        "latest_training_date": "2024-12-31 03:00:00+00:00",
+        "latest_label_known_at": "2025-01-01 00:00:00+00:00",
+        "mature_label_check_passed": true,
+        "classes": [
+          "down",
+          "up"
+        ],
+        "prior": false,
+        "class_prior": null,
+        "native_training_pipeline": true,
+        "native_rf_fit": true,
+        "full_source_label_inverse_transform_skipped": true,
+        "prediction_rows": 168,
+        "maximum_probability_error": 0.0,
+        "independent_prediction_reconciliation_passed": true
+      }
+    },
+    {
+      "strategy": "RollingRF",
+      "start": "2025-06-01 00:00:00+00:00",
+      "actual_native_refits": 3,
+      "prefix_future_and_truncation_passed": true,
+      "original_native_model": {
+        "train_stop": "2025-06-01 00:00:00+00:00",
+        "training_rows": 700,
+        "feature_count": 65,
+        "latest_training_date": "2025-05-31 03:00:00+00:00",
+        "latest_label_known_at": "2025-06-01 00:00:00+00:00",
+        "mature_label_check_passed": true,
+        "classes": [
+          "down",
+          "up"
+        ],
+        "prior": false,
+        "class_prior": null,
+        "native_training_pipeline": true,
+        "native_rf_fit": true,
+        "full_source_label_inverse_transform_skipped": true,
+        "prediction_rows": 168,
+        "maximum_probability_error": 0.0,
+        "independent_prediction_reconciliation_passed": true
+      }
+    },
+    {
+      "strategy": "RollingRF",
+      "start": "2026-01-01 00:00:00+00:00",
+      "actual_native_refits": 3,
+      "prefix_future_and_truncation_passed": true,
+      "original_native_model": {
+        "train_stop": "2026-01-01 00:00:00+00:00",
+        "training_rows": 700,
+        "feature_count": 65,
+        "latest_training_date": "2025-12-31 03:00:00+00:00",
+        "latest_label_known_at": "2026-01-01 00:00:00+00:00",
+        "mature_label_check_passed": true,
+        "classes": [
+          "down",
+          "up"
+        ],
+        "prior": false,
+        "class_prior": null,
+        "native_training_pipeline": true,
+        "native_rf_fit": true,
+        "full_source_label_inverse_transform_skipped": true,
+        "prediction_rows": 168,
+        "maximum_probability_error": 0.0,
+        "independent_prediction_reconciliation_passed": true
+      }
+    },
+    {
+      "strategy": "RollingPrior",
+      "start": "2025-01-01 00:00:00+00:00",
+      "actual_native_refits": 3,
+      "prefix_future_and_truncation_passed": true,
+      "original_native_model": {
+        "train_stop": "2025-01-01 00:00:00+00:00",
+        "training_rows": 683,
+        "feature_count": 65,
+        "latest_training_date": "2024-12-31 03:00:00+00:00",
+        "latest_label_known_at": "2025-01-01 00:00:00+00:00",
+        "mature_label_check_passed": true,
+        "classes": [
+          "down",
+          "up"
+        ],
+        "prior": true,
+        "class_prior": [
+          0.5080527086383602,
+          0.49194729136163984
+        ],
+        "native_training_pipeline": true,
+        "native_rf_fit": false,
+        "full_source_label_inverse_transform_skipped": true,
+        "prediction_rows": 168,
+        "maximum_probability_error": 0.0,
+        "independent_prediction_reconciliation_passed": true
+      }
+    },
+    {
+      "strategy": "RollingPrior",
+      "start": "2025-06-01 00:00:00+00:00",
+      "actual_native_refits": 3,
+      "prefix_future_and_truncation_passed": true,
+      "original_native_model": {
+        "train_stop": "2025-06-01 00:00:00+00:00",
+        "training_rows": 700,
+        "feature_count": 65,
+        "latest_training_date": "2025-05-31 03:00:00+00:00",
+        "latest_label_known_at": "2025-06-01 00:00:00+00:00",
+        "mature_label_check_passed": true,
+        "classes": [
+          "down",
+          "up"
+        ],
+        "prior": true,
+        "class_prior": [
+          0.5014285714285714,
+          0.49857142857142855
+        ],
+        "native_training_pipeline": true,
+        "native_rf_fit": false,
+        "full_source_label_inverse_transform_skipped": true,
+        "prediction_rows": 168,
+        "maximum_probability_error": 0.0,
+        "independent_prediction_reconciliation_passed": true
+      }
+    },
+    {
+      "strategy": "RollingPrior",
+      "start": "2026-01-01 00:00:00+00:00",
+      "actual_native_refits": 3,
+      "prefix_future_and_truncation_passed": true,
+      "original_native_model": {
+        "train_stop": "2026-01-01 00:00:00+00:00",
+        "training_rows": 700,
+        "feature_count": 65,
+        "latest_training_date": "2025-12-31 03:00:00+00:00",
+        "latest_label_known_at": "2026-01-01 00:00:00+00:00",
+        "mature_label_check_passed": true,
+        "classes": [
+          "down",
+          "up"
+        ],
+        "prior": true,
+        "class_prior": [
+          0.4928571428571429,
+          0.5071428571428571
+        ],
+        "native_training_pipeline": true,
+        "native_rf_fit": false,
+        "full_source_label_inverse_transform_skipped": true,
+        "prediction_rows": 168,
+        "maximum_probability_error": 0.0,
+        "independent_prediction_reconciliation_passed": true
+      }
+    }
+  ],
+  "actual_native_component_model_fits": 18,
+  "native_source_files_verified": 595,
+  "financial_accounts": 0,
+  "protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/freqai_rf_native_20261114_v1/protocol.json",
+    "sha256": "ecec01a3587623707a36269f8c1bf77ec84bcee177ecd2a23e6a40d720798b6a"
+  }
+}

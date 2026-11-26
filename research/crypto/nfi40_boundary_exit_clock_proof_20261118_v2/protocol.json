@@ -1,0 +1,65 @@
+{
+  "schema": "nfi40-final-exit-clock-and-individual-application.v2",
+  "frozen_before_object_probe": true,
+  "prepared_at": "2026-11-17T16:54:46.064093+00:00",
+  "actual_account": "nfi40_x8_500_cost15",
+  "effective_config": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost15/effective_config.json",
+  "actual_source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost15/strategies/NostalgiaForInfinityX8.py",
+  "original_source": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+  "vendor_root": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "vendor_manifest": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+  "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost15/native_results/backtest-result-2026-11-17_16-14-24.zip",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles",
+  "claim_to_test": "For two actual non-risk/non-force funding-boundary final exits in the completed15bp account, exit2min<main5m and old-order cancellation before fill uniquely constrain creation to the fill clock. No complete account/numeric funding claim.",
+  "observed_config_before_probe": {
+    "timeframe": "5m",
+    "timeframe_detail_key": "absent; official default empty =>zero detail timedelta",
+    "entry_timeout_minutes": 3,
+    "exit_timeout_minutes": 2,
+    "entry_order_type": "limit",
+    "entry_time_in_force": "GTC"
+  },
+  "fixture_scope": [
+    "old pending exits inside current range canceled before any fill",
+    "long/short new actual _exit_trade creation and _try_close_open_order fill at same clock",
+    "native2min expiry short-circuits NFI force_exit timeout exception too",
+    "out-of-contract replacement creates new Order; retained order preserves oldclock",
+    "detail1m/exit10min delayed-fill counterexamples",
+    "120/119/0sec exact timeout boundaries",
+    "unknown/changed contracts rejected",
+    "sequential readonly all40 date-only inputgrid validation with800startup andfull175104 comparison bars"
+  ],
+  "excluded_side_effects": [
+    "liquidation update no-op",
+    "funding and after-fill stop hooks record only",
+    "source order_filled economics not executed; static source rejects order date/status mutation",
+    "entry stake/precision fixture constants; no pricing proof"
+  ],
+  "configuration_or_economic_changes": false,
+  "numeric_account_reaudit": false,
+  "financial_backtesting_start": false,
+  "max_rss_expected_bytes": 2147483648,
+  "disk_floor_bytes": 1073741824,
+  "unknown_retained_if_any_required_constraint_fails": true,
+  "entry_proof_directory": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_dca_creation_clock_proof_20261118_v1",
+  "required_source_sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3",
+  "application_scope": {
+    "implemented_interface": "application_gate.py",
+    "permitted_actual_account": "nfi40_x8_500_cost15",
+    "separate_evidence_required_for_8bp": true,
+    "both_object_proof_terminal_receipts_required": true,
+    "bindings": [
+      "successful actual process/result",
+      "actual effective_config exact timeout/no-detail",
+      "actual copied strategy equals fixed source",
+      "595 vendor owners",
+      "frozen ZIP and all40 complete5m inputgrid plus exportedfillgrid",
+      "both conditional clock proof receipts"
+    ],
+    "classification_only": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT",
+    "creation_metadata_available": false,
+    "old_numeric_audit_or_UNKNOWN_receipts_modified": false,
+    "HS_audit_v3_patch_created": false,
+    "future_patch_requirement": "If later authorized, a separate frozen audit v3 minimal evidence-classification patch must prove all cash/NAV/funding formulas/tolerances and economic-gate AST unchanged; old v2 retained."
+  }
+}

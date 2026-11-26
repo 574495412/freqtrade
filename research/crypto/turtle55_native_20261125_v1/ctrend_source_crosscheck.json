@@ -1,0 +1,31 @@
+{
+  "scope": "Recalculated the 371 released weekly factor observations and verified selected author-released aggregate cells. No asset-level re-estimation or Freqtrade account.",
+  "source_commit": "c31860f7f479b8da0d0a8488aa4133c5ff5f7fe8",
+  "source_digests": {
+    "paper_factor/PAPER_WEEKLY_RETURNS.csv": "11f26943a618788f38f11223c40672502cf2605e67f40689c565ad3dba6e08f8",
+    "source_tables/NINETEEN_WAY_HEADLINE.csv": "b55dd6759bc2489bc1beef1d4219018e32c7b2e12462a9689fe56cc34c03c5f8"
+  },
+  "published_series": {
+    "weeks": 371,
+    "gross_weekly_mean": 0.03865567947439763,
+    "stdev": 0.14342192491215702,
+    "weekly_sample_annualized_sharpe": 1.9435666411283472
+  },
+  "published_revisit_cells": {
+    "CTREND H-L weekly mean (t)": {
+      "P0_M0_D0": "3.89 (5.12)",
+      "P0_M2_D0": "4.29 (3.91)",
+      "P0_M1_D0": "0.05 (0.02)"
+    },
+    "Annualized Sharpe": {
+      "P0_M0_D0": "1.98",
+      "P0_M2_D0": "1.50",
+      "P0_M1_D0": "0.01"
+    },
+    "Net return (1), 30/40 bps (t)": {
+      "P0_M0_D0": "2.93 (3.86)",
+      "P0_M2_D0": "3.35 (3.05)",
+      "P0_M1_D0": "-0.87 (-0.40)"
+    }
+  }
+}

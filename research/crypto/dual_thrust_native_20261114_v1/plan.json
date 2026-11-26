@@ -1,0 +1,241 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "schema": "freqtrade.native.dual-thrust-local.v1",
+  "registered_at": "2026-11-14T09:18:43.788435+00:00",
+  "source_strategy_allocation_study": true,
+  "not_new_factor_screen": true,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+    "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+  },
+  "pairs": [
+    "BTC/USDT:USDT"
+  ],
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/dual_thrust_native_20261114_v1",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/dual_thrust_native_20261114_v1/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/dual_thrust_native_20261114_v1/data_receipts.json",
+    "sha256": "038027358ea6fd90f6c2ab6343df7e74d9ff6c42c277fe3279c44b4ea18f9cb2"
+  },
+  "marks": {
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/dual_thrust_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    }
+  },
+  "candidates": [
+    {
+      "name": "SourceDualBTC_1000",
+      "strategy": "SourceDualBTC",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/SourceDualBTC_1000.json",
+        "sha256": "5eac175abd589fe53b972e6618fd0d4711c0e0471efc96a9a8f4bdbaeb898dd8"
+      },
+      "source_files": {
+        "DualPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualPortfolio.py",
+          "sha256": "1473f45d1364b935258995d82986bbae314c280693380fb3a874a4512301f5bf"
+        },
+        "DualRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualRules.py",
+          "sha256": "1714c17fd02912a6f5b1745cda58156172ebea3a39164f72204010c8d92b415b"
+        }
+      }
+    },
+    {
+      "name": "SourceDualBTC_500",
+      "strategy": "SourceDualBTC",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/SourceDualBTC_500.json",
+        "sha256": "c15bcfb4d13d23b225401cb3768ff55e2c135e0d25ae9942712f02595a710b4f"
+      },
+      "source_files": {
+        "DualPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualPortfolio.py",
+          "sha256": "1473f45d1364b935258995d82986bbae314c280693380fb3a874a4512301f5bf"
+        },
+        "DualRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualRules.py",
+          "sha256": "1714c17fd02912a6f5b1745cda58156172ebea3a39164f72204010c8d92b415b"
+        }
+      }
+    },
+    {
+      "name": "SmaPriceBTC_1000",
+      "strategy": "SmaPriceBTC",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/SmaPriceBTC_1000.json",
+        "sha256": "09e59890f69682b9a8300ea703489a2ab5f961422385f1b78344294981e0b847"
+      },
+      "source_files": {
+        "DualPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualPortfolio.py",
+          "sha256": "1473f45d1364b935258995d82986bbae314c280693380fb3a874a4512301f5bf"
+        },
+        "DualRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualRules.py",
+          "sha256": "1714c17fd02912a6f5b1745cda58156172ebea3a39164f72204010c8d92b415b"
+        }
+      }
+    },
+    {
+      "name": "SmaPriceBTC_500",
+      "strategy": "SmaPriceBTC",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/SmaPriceBTC_500.json",
+        "sha256": "c424b2b13dec2b9921af4e9598f910878ca7099ffa7bad7ecede6151fc2329d3"
+      },
+      "source_files": {
+        "DualPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualPortfolio.py",
+          "sha256": "1473f45d1364b935258995d82986bbae314c280693380fb3a874a4512301f5bf"
+        },
+        "DualRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualRules.py",
+          "sha256": "1714c17fd02912a6f5b1745cda58156172ebea3a39164f72204010c8d92b415b"
+        }
+      }
+    },
+    {
+      "name": "HoldBTC_1000",
+      "strategy": "HoldBTC",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/HoldBTC_1000.json",
+        "sha256": "6a57f5def20aedb4d2e9837c576faa87315e94b70410ad90d873ccc4833a2366"
+      },
+      "source_files": {
+        "DualPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualPortfolio.py",
+          "sha256": "1473f45d1364b935258995d82986bbae314c280693380fb3a874a4512301f5bf"
+        },
+        "DualRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualRules.py",
+          "sha256": "1714c17fd02912a6f5b1745cda58156172ebea3a39164f72204010c8d92b415b"
+        }
+      }
+    },
+    {
+      "name": "HoldBTC_500",
+      "strategy": "HoldBTC",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/HoldBTC_500.json",
+        "sha256": "85d55a5431911bfb154166363dfa3ce4df51f675755a5d8ac3ca296c82648499"
+      },
+      "source_files": {
+        "DualPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualPortfolio.py",
+          "sha256": "1473f45d1364b935258995d82986bbae314c280693380fb3a874a4512301f5bf"
+        },
+        "DualRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualRules.py",
+          "sha256": "1714c17fd02912a6f5b1745cda58156172ebea3a39164f72204010c8d92b415b"
+        }
+      }
+    }
+  ],
+  "allowed_leverage": 1.0,
+  "initial_equity_usdt": 1000,
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "runner_sha256": "474a145adb67bb14eac25b525b730eb036523f641142300e47d865aed856e1a8",
+  "runner_module": "research.crypto.tsmom_risk_native_20261114_v1.native_runner",
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/protocol.json",
+      "sha256": "db82c7814dddeddde2f765be1aa8a280aee57c488fd0b28e0fc6a62e2d4457a9"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/sources/qc_crypto_embedded.html",
+      "sha256": "f202229c124dc3e0f351c5c9b7506227a7c7a4c7675fcb3585e773dc951e9d47"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/sources/pre_0.txt",
+      "sha256": "28e9ddd95ec8cb6eaef7f48a9601b47e56b4ab872183d2c36d69058bed0b80ac"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/sources/pre_1.txt",
+      "sha256": "de7de567e2a804a9b1cc74fb65d91cf7357531b9f8cdd79085038d90c122346a"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false
+}

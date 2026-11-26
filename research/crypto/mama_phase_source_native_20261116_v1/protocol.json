@@ -1,0 +1,44 @@
+{
+  "frozen_at": "2026-11-15T18:17:04.964372+00:00",
+  "hypothesis": "A phase-adaptive crossover may reduce fixed-speed trend lag without an external state estimator;unproven trend-family variant",
+  "source": "TA-Lib MAMA0.8.1 C BSD3 and pinned official method documentation;indicator,not a complete author account",
+  "indicator": {
+    "input": "completed hourly close",
+    "fastlimit": 0.5,
+    "slowlimit": 0.05,
+    "unstable_period": 0,
+    "compatibility": 0
+  },
+  "signal": "entry on strict MAMA>FAMA and previous MAMA<=FAMA;exit on strict MAMA<FAMA and previous MAMA>=FAMA;exact ties do not switch;no initial inherited exposure",
+  "initialization": "512pre-window hourly bars;TA-Lib lookback32;fixed engineering prefix,not tuned from returns",
+  "initial_flat": true,
+  "entry_fill": "native next hourly open with5minute detail market orders",
+  "capital": [
+    1000,
+    500
+  ],
+  "per_side_bps": [
+    20,
+    13
+  ],
+  "pairs": [
+    "BTC/USDT",
+    "ETH/USDT"
+  ],
+  "wallet": "single shared native unlimited2slots,99%tradable;spot1x;noDCA",
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-08-31T23:00:00Z",
+  "new_native_wallets": 4,
+  "reused_controls": "four each:matchedHold andNFIspot;carry broader hedge/market capital reference",
+  "portfolios": [
+    "actual500MAMA+500NFIspot",
+    "actual500MAMA+500carry"
+  ],
+  "portfolio_policy": "fixed initial sleeves;no scaling,transfers or dynamic rebalance;run frozen descriptive combinations even when standalone fails;no promotion without all gates",
+  "financial_gate": "both costs:full and two continuous annual slices positive,DD<=30%,dailyNAVSharpe>.5,beats matchedhold/NFIspot/cash;combo beats bestmatched1000spot withoutworseDD",
+  "independent_oos": false,
+  "history_already_seen": true,
+  "no_registry_cross_section_factor": true,
+  "no_orders": true,
+  "no_parameter_rescue": true
+}

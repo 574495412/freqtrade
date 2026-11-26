@@ -1,0 +1,29 @@
+{
+  "registered_at": "2026-11-13T15:00:08.227198+00:00",
+  "source": "EdgeLuck/freqtrade-open-interest37a8ed8682b79ba29b6bfbc67fff2a696e388826",
+  "source_role": "Author calls it a reference with no demonstrated edge; attribution study, not a proven strategy.",
+  "source_formula": "1h close above prior20highs or below prior20lows;5hour base-OI relative increase>0 confirms direction.",
+  "source_risk": "Exact original source10%stop, inert10000%ROI and no discretionary exit; no exit completion invented.",
+  "input_contract": "Same venue Binance archive sum_open_interest, exact top-of-hour raw timestamp. Point is assumed available5min later, therefore before same-row1h-close decision. No value-as-amount, Bybit substitution, missing OI fill or compressed-row shifts.",
+  "unknown_policy": "Explicit full hourly grid with NaN for missing top-of-hour snapshots; disable informative forward-fill. Candidate needs all6consecutive points for5hour change. Two price controls: same availability mask and full price calendar.",
+  "universe": [
+    "BTC/USDT:USDT"
+  ],
+  "universe_reason": "The pinned source explicitly demonstrates BTCUSDT; not deletion of AXS/TRB from a failed source portfolio.",
+  "window_utc": [
+    "2025-01-01T00:00:00Z",
+    "2026-08-31T23:00:00Z"
+  ],
+  "capital_usdt": 1000,
+  "leverage": 1,
+  "maximum_open_positions": 1,
+  "cost_bps_per_side": [
+    15,
+    8
+  ],
+  "native_detail": "5m",
+  "acceptance": "Candidate positive at both costs, both continuous calendar slices positive, return above both price controls, hourlyDD<=50%. Even a numeric pass cannot qualify an example with unvalidated exit/independent evidence.",
+  "cascade_notebook_rejected": "6f039e64: best_regime selected on same-sample future24h returns; sum of per-event returns is not a funded continuous account. OI only validates a short proxy window; not observed liquidations.",
+  "orders_enabled": false,
+  "production_eligible": false
+}

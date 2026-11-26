@@ -1,0 +1,62 @@
+{
+  "frozen_utc": "2026-11-14T09:53:27.555868+00:00",
+  "scope": "BTC native FreqAI rolling supervised classifier and matched account combinations; not a cross-sectional alpha screen",
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "source": "Pinned FreqAI docs, RF classifier and FreqaiExampleStrategy; local categorical target/account adaptation, not official profitability",
+  "source_feature_methods": "Unmodified inherited example expand_all(10,20), expand_basic, standard;1h only,2shifted candles,no correlated pairs",
+  "target": "Up iff close[t+20]>close[t],else down; missing/nonfinite future stays missing. Labels mature at date[t]+21hours for hourly start labels",
+  "train_period_days": 30,
+  "backtest_period_days": 7,
+  "test_size": 0,
+  "shuffle": false,
+  "continual_learning": false,
+  "models": [
+    "AuditedRF",
+    "TrainingPrior"
+  ],
+  "rf_parameters": {
+    "n_estimators": 100,
+    "max_depth": 5,
+    "min_samples_leaf": 5,
+    "max_features": "sqrt",
+    "n_jobs": 1,
+    "random_state": 42
+  },
+  "prior": "Native BaseClassifierModel pipeline with sklearn DummyClassifier(strategy=prior), same past labels/features/sample weights",
+  "source_bug_fix": "Confirmed string-label double inverse_transform error; supported RF subclass delegates predict to unmodified BaseClassifierModel.predict, estimator/training arithmetic unchanged",
+  "pipeline": "Native constant-feature removal and MinMax(-1,1);noPCA/noSVM/noDI/noDBSCAN/noise0/weight_factor0",
+  "probability_entry": 0.6,
+  "probability_exit": 0.5,
+  "state": "Long/short entry from high-confidence probability; existing side exits on own probability<.5; no same-row reversal; initial flat",
+  "risk": "RF/Prior keep source example stoploss-.05 and ROI0:.10,240:-1; native stop/ROI lifecycle. NoDCA, leverage1isolated,maxoneposition",
+  "controls": "Existing SmaPriceBTC and HoldBTC from prior sealed DualThrust study, unchanged long-only/noROI/-.99stop; contextual strategy benchmarks. RF vsPrior alone isolates model under identical risk/execution",
+  "cash": "Native99percent unlimited stake; retain actual quantity until exit; no free daily quantity reset",
+  "normal_order_clock": "Completed1h signals atnextopen; no entry/normal signal exits00/08/16; native mechanical exits remain active",
+  "slippage_guard": "RF/Prior source0.25percent confirm-entry gap guard retained; fixed15/8bps per side includes aggregate cost, funding separate",
+  "account_start": "2025-01-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "native_end": "2026-09-01T00:00:00Z",
+  "window": "608calendar days,14592pre-order hourly snapshots; uninterrupted2025/2026 slices; no resets",
+  "prediction_admission": "All14592raw financial-window prediction rows do_predict1 with finite two-class probabilities; reject native skipped/null training, not cashfill. Initial00 snapshot flat before first01 completed-hour prediction",
+  "capital_usdt": [
+    1000,
+    500
+  ],
+  "cost_bps_per_side": [
+    15,
+    8
+  ],
+  "accounts": 16,
+  "combinations": "Actual500RF+500Sma; actual500Prior+500Sma attributioncontrol, eachcost; no transfers/scaling/reset",
+  "gates": "RF and RFmix positive full and both continuous year slices at bothcosts, hourlyDD<=.5;RF1000 beats1000Prior/Sma/Hold;RFmix beatsPriorMix and best1000RF/Sma. If all pass, require same-input incumbentNFI followup before global superiority",
+  "predictive_diagnostics": "Rolling prediction Brier/AUC/direction and same-date prior comparison; overlapping20h labels are not independent OOS. Diagnostics not a post-hoc ranking/filter",
+  "no_rescue": "No model params/features/labels/splits/thresholds/risks/pool/window/cost/weights changes after outputs",
+  "save_models": "Native save_backtest_modelsFalse; own read-only tree/matrix artifacts and nativemetadata/predictions preserved, no remote pickle loading",
+  "runtime": "Isolated dependency directory and child-only OpenMP library path; no shared env changes",
+  "resource": "One worker at a time,3GiBRSS,1hworker,>=2GiBfree",
+  "independent_oos": false,
+  "accepted_new_factors": 0,
+  "orders": false,
+  "deployment": false,
+  "service_changes": false
+}

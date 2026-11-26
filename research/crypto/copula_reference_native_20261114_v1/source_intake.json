@@ -1,0 +1,151 @@
+{
+  "asof": "2026-11-14T16:12:00.112277+00:00",
+  "primary": {
+    "url": "https://doi.org/10.1186/s40854-024-00702-7",
+    "authors": [
+      "Masood Tadi",
+      "Jiří Witzany"
+    ],
+    "published": "2025-01-13",
+    "pdf": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/copula_reference_native_20261114_v1/sources/paper.pdf",
+      "sha256": "61541b3b501d0491c1a635cfe5067aba0439fc6612ee0159b678d6373e5bcecb"
+    },
+    "relevant_method_sections_read": "Universe,rawpriceOLS,reference-spreads,marginals,CopulaCDF/conditionalprobabilities,signals,rollingformation,weeklyquantities/costs; not claiming every appendix/reference read",
+    "visually_reviewed_pages": [
+      7,
+      10,
+      11,
+      12
+    ],
+    "source_period": "2021-01-01 through2023-01-19; not our2025-2026 account",
+    "source_universe": [
+      "BTC",
+      "ETH",
+      "BCH",
+      "XRP",
+      "EOS",
+      "LTC",
+      "TRX",
+      "ETC",
+      "LINK",
+      "XLM",
+      "ADA",
+      "XMR",
+      "DASH",
+      "ZEC",
+      "XTZ",
+      "ATOM",
+      "BNB",
+      "ONT",
+      "IOTA",
+      "BAT"
+    ],
+    "source_code": "Author implementation not obtained; public supplementary links are data CSVs, not recovered account code.",
+    "source_capital": "20000USDT, about20000 per side; weekly fixed quantities, not same as1000USDTgrossone or daily NAV rebalancing.",
+    "signals": "Copula of stationary raw-price BTC-reference spreads; BTC cancels, actual two-altcoin legs follow Table4 sign.",
+    "mathematical_adaptation": "Canonical valid rotations and asymmetric-logistic/Tawn kernels, explicitly distinct from literal printed Eq16/24 boundary identities. Exact author-code equivalence UNKNOWN."
+  },
+  "github": {
+    "secondary_discovery": {
+      "path": "research/crypto/candle_boundary_native_20261114_v1/sources/github_research.md",
+      "claim_limit": "Secondary suggestion describes BTCvsALT and is insufficient to implement the reference-spread method."
+    },
+    "student_reproduction": {
+      "pin": "c6f3ab2f262a5528e61c37e2165565278d99c920",
+      "pin_method": "git ls-remote HEAD; unauthenticated REST rate limited403",
+      "files": [
+        {
+          "name": "README.md",
+          "url": "https://raw.githubusercontent.com/ZhechongYe/Numerical-Copula-Trading/c6f3ab2f262a5528e61c37e2165565278d99c920/README.md",
+          "status": 200,
+          "bytes": 17641
+        },
+        {
+          "name": "rolling_backtest.py",
+          "url": "https://raw.githubusercontent.com/ZhechongYe/Numerical-Copula-Trading/c6f3ab2f262a5528e61c37e2165565278d99c920/rolling_backtest.py",
+          "status": 200,
+          "bytes": 24906
+        },
+        {
+          "name": "spread_adf_kss.py",
+          "url": "https://raw.githubusercontent.com/ZhechongYe/Numerical-Copula-Trading/c6f3ab2f262a5528e61c37e2165565278d99c920/spread_adf_kss.py",
+          "status": 200,
+          "bytes": 14837
+        },
+        {
+          "name": "copula_marginals.py",
+          "url": "https://raw.githubusercontent.com/ZhechongYe/Numerical-Copula-Trading/c6f3ab2f262a5528e61c37e2165565278d99c920/copula_marginals.py",
+          "status": 200,
+          "bytes": 7289
+        },
+        {
+          "name": "copula_fitting.py",
+          "url": "https://raw.githubusercontent.com/ZhechongYe/Numerical-Copula-Trading/c6f3ab2f262a5528e61c37e2165565278d99c920/copula_fitting.py",
+          "status": 200,
+          "bytes": 7924
+        },
+        {
+          "name": "LICENSE",
+          "url": "https://raw.githubusercontent.com/ZhechongYe/Numerical-Copula-Trading/c6f3ab2f262a5528e61c37e2165565278d99c920/LICENSE",
+          "status": 200,
+          "bytes": 1067
+        }
+      ]
+    },
+    "license": "MIT; preserved complete LICENSE",
+    "read_scope": "Complete core copula density/fitting module and marginal fitting functions; rolling engine sections on formation,signals,sizing and fees; README relevant methods. Not every notebook/GPU variant.",
+    "differences": [
+      "OKXspotBTC+7alts rather than paper20BinanceUSDTperpetuals",
+      "Only5copula families; no BB1/BB6/BB7/BB8/Joe/constrainedTawn/rotations",
+      "Optional CMI and same-bar flip modes are local variants",
+      "Fixed-notional external PnL loop is not nativeWallets/funding/margin; not executed or used for returns"
+    ],
+    "admission": "Source-inspection only; no external account simulator used. No reproduction headline adopted."
+  },
+  "X": {
+    "query": "site:x.com \"copula\" \"Tadi\"",
+    "result": "No verified complete primary trading rule retrieved in targeted search. No post viewed."
+  },
+  "YouTube": {
+    "query": "site:youtube.com \"copula\" \"Tadi\"",
+    "result": "No verified complete primary video/transcript retrieved in targeted search. No video watched."
+  },
+  "Douyin": {
+    "status": "Prior paired-research indexed transcript7548096488870628643 remains a general discovery lead, not this full Copula method. No new video viewed or complete exact-rule transcript obtained.",
+    "no_rules_or_profit_admitted": true
+  },
+  "EOS": {
+    "official_notice": "https://www.binance.com/en/support/announcement/detail/1e89a9ca957c4b0ca7502e60b993e201",
+    "notice_capture": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/copula_reference_native_20261114_v1/sources/eos_notice_web_capture.txt",
+      "sha256": "2051ead3ae148e0990c73bda98dda1a7bb007a2cb342103842e7f6b1097997b9"
+    },
+    "published_at_proxy": "2025-05-14T09:00:00Z",
+    "new_positions_stop": "2025-05-21T08:30:00Z",
+    "automatic_settlement": "2025-05-21T09:00:00Z",
+    "source_terminal_observation_retained_in_raw": true,
+    "terminal_zero_volume_bar_quarantined": 1,
+    "EOS_to_A_futures_position_rollover_assumed": false,
+    "source_historical_first_seen_certified": false
+  },
+  "XMR": "Official2024spot/Coin-Mnotice explicitly allows USDT-MXMRUSDT to continue; no spot->USDTperpetual delist inference. Current frozen market exists, and hourly archives obtained.",
+  "native_owner": {
+    "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/copula_reference.py",
+    "sha256": "b7b151ca2e15d211bfaa8efff5d032dc1818138904440ba6624a5e762e600405"
+  },
+  "official_vs_local": "Upstream pinnedFreqtrade595originalfiles unchanged. Local statistical input module, explicitIStrategyextension,preparation,diagnostics only. Upstream DelistFilter declares supports_backtesting=NO; not claimed historical execution support.",
+  "native_funded_accounts": 0,
+  "new_accepted_alpha": 0,
+  "retired_metadata_probe": {
+    "url": "https://api.tardis.dev/v1/instruments/binance-futures/EOSUSDT",
+    "requested_at": "2026-11-14T16:13:01.839992+00:00",
+    "status": 401,
+    "response_bytes": 126,
+    "authorization_header_sent": false,
+    "source": "Tardis normalized vendor metadata, not direct Binance account or settlement",
+    "docs": "https://docs.tardis.dev/api/instruments-metadata-api",
+    "metadata_semantics": "MostnonBitmexrequestsrequirepro/business; changehistoryexceptcontractMultiplierbest-effort. Evenretrievalwouldnotcertifycompletehistoricaltiers.",
+    "admission": "Unresolved; no specification borrowed from A or another asset."
+  }
+}

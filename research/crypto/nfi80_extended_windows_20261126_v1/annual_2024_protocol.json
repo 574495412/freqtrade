@@ -1,0 +1,13 @@
+{
+  "window": ["2024-01-01T00:00:00Z", "2025-01-01T00:00:00Z"],
+  "warmup": {
+    "5m": "2023-11-01T00:00:00Z",
+    "4h": "2023-08-01T00:00:00Z",
+    "1d": "2021-10-01T00:00:00Z",
+    "mark_and_funding": "2023-12-01T00:00:00Z"
+  },
+  "selection": "Use the existing exact prior-day-turnover rankings for all 366 UTC days. This historical universe uses the supported retrospective market inventory.",
+  "input": "Reuse the 2025 pipeline for archive identity, published SHA256 and exact raw-market clock validation. Retain uncovered sources, listing-clock mismatches, and unsupported events.",
+  "evaluation": "After input admission, use the same owning Freqtrade engine and 1000 USDT initial empty account, daily top 80, 3x isolated, 15 and 8 bp per side and five-minute marks. Compare original, fixed boost and 14-slot versions. No substitute cash simulator.",
+  "orders_enabled": false
+}

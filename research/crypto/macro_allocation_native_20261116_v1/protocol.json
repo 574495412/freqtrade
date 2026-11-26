@@ -1,0 +1,56 @@
+{
+  "frozen_at": "2026-11-15T18:58:20.884938+00:00",
+  "scope": "explicit conditional historical native allocation;not repair of historical firstseen rejection or author financial account",
+  "source_commit": "6f039e64d6d13227cdc5a79bbd9d78b093468cd0",
+  "signal": "fixed10calendar-day positiveTNXchange ANDpositiveDXYlogchange gives .25BTCfraction,else1;no sign/window/threshold changes",
+  "data_clock": "explicit next_day_06utc_model from previously sealed input;current snapshot never historicalfirstseen certified",
+  "raw_null_policy": "source rawnulls retained;dated prior nonnull quote carry max120h;unknownanyrequiredendpointfatal before account",
+  "source_negative_conclusion_and_financial_math_defect_known": true,
+  "methods": [
+    "MacroRisk",
+    "DailyFullBTC",
+    "BuyHoldBTC"
+  ],
+  "initial_capital": [
+    1000,
+    500
+  ],
+  "per_side_spot_cost_bps": [
+    20,
+    13
+  ],
+  "allowed_universe": [
+    "BTC/USDT",
+    "ETH/USDT"
+  ],
+  "traded_policy": "BTCsourceonly;ETHexplicitzeroallocation inunchanged configureduniverse",
+  "wallet": "shared spotUSDT,2slots,custom99pctnetliquidationNAV BTCtargetfraction,1x,no borrowing or transfers",
+  "start": "2025-01-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "native_signal_left": "2024-12-31T23:00:00Z",
+  "initial_state": "flatcash;firstactualtargetJan1 00:00,then daily06:00",
+  "rebalance": "Macro/DailyFull actualnativequantity atinitialplus608daily06clocks;BuyHoldinitialonly;5mdetail marketmatching;minima/precision/cashtrackingerrors retained",
+  "source_differences": [
+    "nativeactualamounts/simpleeconomicaccount instead ofsourcecompoundedlogreturns",
+    "fee20/13perfill notsource10bpsonweightchanges",
+    "dailyactualretargetevenunchangedfraction;notfreeweightreset",
+    "06UTCsourceavailabilitymodel vssourcedateonlylag",
+    "99pctbudget andremainingexitfeereseve"
+  ],
+  "new_native_wallets": 12,
+  "portfolios": [
+    "actual500Macro+sealed500NFIspot",
+    "actual500Macro+sealed500carry",
+    "actual500Macro+actual500BuyHoldBTC"
+  ],
+  "portfolio_contract": "samehouractual500walletsums;no1000scaling/crossmargin/transfers/optimization;carrydifferentmarketreference",
+  "financial_gate": "bothcostsfullandbothannualcontinuousslicespositive,DD<=30pct,dailyNAVSharpe>.5;MacrobeatsDailyFull/Hold/samecapitalNFIspot/cash;combo beatsbestmatched1000spot withoutworseDD;modelresultnevercertifieshistoricalsourcefirstseen",
+  "source_author_account_reproduced": false,
+  "independent_oos": false,
+  "history_already_used": true,
+  "new_registry_or_FA": 0,
+  "new_vibe_bench": 0,
+  "no_parameter_rescue": true,
+  "orders_enabled": false,
+  "services_changed": false
+}

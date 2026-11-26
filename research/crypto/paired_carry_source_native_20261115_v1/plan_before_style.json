@@ -1,0 +1,923 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "schema": "freqtrade.native.segregated-paired-carry.v1",
+  "registered_at": "2026-11-15T05:47:32.257553+00:00",
+  "source_strategy_allocation_study": true,
+  "not_new_factor_screen": true,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+    "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+  },
+  "pairs": [
+    "BTC/USDT",
+    "BTC/USDT:USDT",
+    "ETH/USDT",
+    "ETH/USDT:USDT"
+  ],
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/data_receipts.json",
+    "sha256": "806bc59e4d6a73f7c217af4d90028bd42f27e3545a654f00c2848149a6c740e8"
+  },
+  "marks": {
+    "BTC/USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/BTC_USDT-1h.feather",
+      "sha256": "beed6bde8f88040b0af3457543d9d9a6cd0d15716b521cec1614ebe9e14a3a76"
+    },
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    "ETH/USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/ETH_USDT-1h.feather",
+      "sha256": "1a7e97e71696dc76472fb89c5c474824085f0a4601fc6a4007c1911780d51957"
+    },
+    "ETH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/paired_carry_source_native_20261115_v1/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+    }
+  },
+  "candidates": [
+    {
+      "name": "carry_BTC_spot_1000_conservative",
+      "strategy": "CarrySpot",
+      "capital": 250.0,
+      "portfolio_capital": 1000,
+      "role": "carry",
+      "symbol": "BTC",
+      "mode": "spot",
+      "scenario": "conservative",
+      "quantity": 0.002,
+      "cost_bps": 20,
+      "pairs": [
+        "BTC/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_BTC_spot_1000_conservative.json",
+        "sha256": "803c3d142211b3a27d1c8bb7225ef1edabb081a467ef88ca487b1eca6408d1d8"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_BTC_futures_1000_conservative",
+      "strategy": "CarryShort",
+      "capital": 250.0,
+      "portfolio_capital": 1000,
+      "role": "carry",
+      "symbol": "BTC",
+      "mode": "futures",
+      "scenario": "conservative",
+      "quantity": 0.002,
+      "cost_bps": 15,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_BTC_futures_1000_conservative.json",
+        "sha256": "1c655af158ab5793c8532b0d49386922f4739097ed9378363849cc7657d53f53"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_ETH_spot_1000_conservative",
+      "strategy": "CarrySpot",
+      "capital": 250.0,
+      "portfolio_capital": 1000,
+      "role": "carry",
+      "symbol": "ETH",
+      "mode": "spot",
+      "scenario": "conservative",
+      "quantity": 0.071,
+      "cost_bps": 20,
+      "pairs": [
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_ETH_spot_1000_conservative.json",
+        "sha256": "e1b8469fb441366e4e0e400fb945d84aec6e81a48b0165682963f15a4884ed33"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_ETH_futures_1000_conservative",
+      "strategy": "CarryShort",
+      "capital": 250.0,
+      "portfolio_capital": 1000,
+      "role": "carry",
+      "symbol": "ETH",
+      "mode": "futures",
+      "scenario": "conservative",
+      "quantity": 0.071,
+      "cost_bps": 15,
+      "pairs": [
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_ETH_futures_1000_conservative.json",
+        "sha256": "b2f85fa919fb18f2d1f3420b2b6ebdcd3b9a228da4c9fd638ab51b58445c6f8f"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "benchmark_BTC_spot_1000_conservative",
+      "strategy": "CarrySpot",
+      "capital": 500.0,
+      "portfolio_capital": 1000,
+      "role": "benchmark",
+      "symbol": "BTC",
+      "mode": "spot",
+      "scenario": "conservative",
+      "quantity": 0.00506,
+      "cost_bps": 20,
+      "pairs": [
+        "BTC/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/benchmark_BTC_spot_1000_conservative.json",
+        "sha256": "0c599644e2edd9d281aa36e1d3c59f1009176b9faf8320e3e1f6df344f5629b9"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "benchmark_ETH_spot_1000_conservative",
+      "strategy": "CarrySpot",
+      "capital": 500.0,
+      "portfolio_capital": 1000,
+      "role": "benchmark",
+      "symbol": "ETH",
+      "mode": "spot",
+      "scenario": "conservative",
+      "quantity": 0.142,
+      "cost_bps": 20,
+      "pairs": [
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/benchmark_ETH_spot_1000_conservative.json",
+        "sha256": "ba4e58eb17cf34e3aaacd1262d1644578132c4f57047b84dbffc30cf14de1942"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_BTC_spot_500_conservative",
+      "strategy": "CarrySpot",
+      "capital": 125.0,
+      "portfolio_capital": 500,
+      "role": "carry",
+      "symbol": "BTC",
+      "mode": "spot",
+      "scenario": "conservative",
+      "quantity": 0.001,
+      "cost_bps": 20,
+      "pairs": [
+        "BTC/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_BTC_spot_500_conservative.json",
+        "sha256": "709daa71673f34100934cfa328350ceb920eff2dcabbc680284528d36986312b"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_BTC_futures_500_conservative",
+      "strategy": "CarryShort",
+      "capital": 125.0,
+      "portfolio_capital": 500,
+      "role": "carry",
+      "symbol": "BTC",
+      "mode": "futures",
+      "scenario": "conservative",
+      "quantity": 0.001,
+      "cost_bps": 15,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_BTC_futures_500_conservative.json",
+        "sha256": "934d17c8487940509fbf40001b34be1b9f79998e389e259c1ac073b8a5f60707"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_ETH_spot_500_conservative",
+      "strategy": "CarrySpot",
+      "capital": 125.0,
+      "portfolio_capital": 500,
+      "role": "carry",
+      "symbol": "ETH",
+      "mode": "spot",
+      "scenario": "conservative",
+      "quantity": 0.035,
+      "cost_bps": 20,
+      "pairs": [
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_ETH_spot_500_conservative.json",
+        "sha256": "16b16e634dfc1a684cea8846cae66a867899a255fb82ab76e10e17332948478c"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_ETH_futures_500_conservative",
+      "strategy": "CarryShort",
+      "capital": 125.0,
+      "portfolio_capital": 500,
+      "role": "carry",
+      "symbol": "ETH",
+      "mode": "futures",
+      "scenario": "conservative",
+      "quantity": 0.035,
+      "cost_bps": 15,
+      "pairs": [
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_ETH_futures_500_conservative.json",
+        "sha256": "c38eeb2480657b99445d28910712366e79c342f99e0d0f90af9a4daead916ab5"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "benchmark_BTC_spot_500_conservative",
+      "strategy": "CarrySpot",
+      "capital": 250.0,
+      "portfolio_capital": 500,
+      "role": "benchmark",
+      "symbol": "BTC",
+      "mode": "spot",
+      "scenario": "conservative",
+      "quantity": 0.00253,
+      "cost_bps": 20,
+      "pairs": [
+        "BTC/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/benchmark_BTC_spot_500_conservative.json",
+        "sha256": "b477c3ffd69a10582b049fd53ef39c7e68eb53f395974733524c62263b12fbdf"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "benchmark_ETH_spot_500_conservative",
+      "strategy": "CarrySpot",
+      "capital": 250.0,
+      "portfolio_capital": 500,
+      "role": "benchmark",
+      "symbol": "ETH",
+      "mode": "spot",
+      "scenario": "conservative",
+      "quantity": 0.071,
+      "cost_bps": 20,
+      "pairs": [
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/benchmark_ETH_spot_500_conservative.json",
+        "sha256": "e1b8469fb441366e4e0e400fb945d84aec6e81a48b0165682963f15a4884ed33"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_BTC_spot_1000_lower",
+      "strategy": "CarrySpot",
+      "capital": 250.0,
+      "portfolio_capital": 1000,
+      "role": "carry",
+      "symbol": "BTC",
+      "mode": "spot",
+      "scenario": "lower",
+      "quantity": 0.002,
+      "cost_bps": 13,
+      "pairs": [
+        "BTC/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_BTC_spot_1000_lower.json",
+        "sha256": "803c3d142211b3a27d1c8bb7225ef1edabb081a467ef88ca487b1eca6408d1d8"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_BTC_futures_1000_lower",
+      "strategy": "CarryShort",
+      "capital": 250.0,
+      "portfolio_capital": 1000,
+      "role": "carry",
+      "symbol": "BTC",
+      "mode": "futures",
+      "scenario": "lower",
+      "quantity": 0.002,
+      "cost_bps": 8,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_BTC_futures_1000_lower.json",
+        "sha256": "1c655af158ab5793c8532b0d49386922f4739097ed9378363849cc7657d53f53"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_ETH_spot_1000_lower",
+      "strategy": "CarrySpot",
+      "capital": 250.0,
+      "portfolio_capital": 1000,
+      "role": "carry",
+      "symbol": "ETH",
+      "mode": "spot",
+      "scenario": "lower",
+      "quantity": 0.071,
+      "cost_bps": 13,
+      "pairs": [
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_ETH_spot_1000_lower.json",
+        "sha256": "e1b8469fb441366e4e0e400fb945d84aec6e81a48b0165682963f15a4884ed33"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_ETH_futures_1000_lower",
+      "strategy": "CarryShort",
+      "capital": 250.0,
+      "portfolio_capital": 1000,
+      "role": "carry",
+      "symbol": "ETH",
+      "mode": "futures",
+      "scenario": "lower",
+      "quantity": 0.071,
+      "cost_bps": 8,
+      "pairs": [
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_ETH_futures_1000_lower.json",
+        "sha256": "b2f85fa919fb18f2d1f3420b2b6ebdcd3b9a228da4c9fd638ab51b58445c6f8f"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "benchmark_BTC_spot_1000_lower",
+      "strategy": "CarrySpot",
+      "capital": 500.0,
+      "portfolio_capital": 1000,
+      "role": "benchmark",
+      "symbol": "BTC",
+      "mode": "spot",
+      "scenario": "lower",
+      "quantity": 0.00506,
+      "cost_bps": 13,
+      "pairs": [
+        "BTC/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/benchmark_BTC_spot_1000_lower.json",
+        "sha256": "0c599644e2edd9d281aa36e1d3c59f1009176b9faf8320e3e1f6df344f5629b9"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "benchmark_ETH_spot_1000_lower",
+      "strategy": "CarrySpot",
+      "capital": 500.0,
+      "portfolio_capital": 1000,
+      "role": "benchmark",
+      "symbol": "ETH",
+      "mode": "spot",
+      "scenario": "lower",
+      "quantity": 0.1421,
+      "cost_bps": 13,
+      "pairs": [
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/benchmark_ETH_spot_1000_lower.json",
+        "sha256": "9705cbfa5b6e3d871df8d39b3b8511799de98cc855933fc08db531dec1d2f0b8"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_BTC_spot_500_lower",
+      "strategy": "CarrySpot",
+      "capital": 125.0,
+      "portfolio_capital": 500,
+      "role": "carry",
+      "symbol": "BTC",
+      "mode": "spot",
+      "scenario": "lower",
+      "quantity": 0.001,
+      "cost_bps": 13,
+      "pairs": [
+        "BTC/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_BTC_spot_500_lower.json",
+        "sha256": "709daa71673f34100934cfa328350ceb920eff2dcabbc680284528d36986312b"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_BTC_futures_500_lower",
+      "strategy": "CarryShort",
+      "capital": 125.0,
+      "portfolio_capital": 500,
+      "role": "carry",
+      "symbol": "BTC",
+      "mode": "futures",
+      "scenario": "lower",
+      "quantity": 0.001,
+      "cost_bps": 8,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_BTC_futures_500_lower.json",
+        "sha256": "934d17c8487940509fbf40001b34be1b9f79998e389e259c1ac073b8a5f60707"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_ETH_spot_500_lower",
+      "strategy": "CarrySpot",
+      "capital": 125.0,
+      "portfolio_capital": 500,
+      "role": "carry",
+      "symbol": "ETH",
+      "mode": "spot",
+      "scenario": "lower",
+      "quantity": 0.035,
+      "cost_bps": 13,
+      "pairs": [
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_ETH_spot_500_lower.json",
+        "sha256": "16b16e634dfc1a684cea8846cae66a867899a255fb82ab76e10e17332948478c"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "carry_ETH_futures_500_lower",
+      "strategy": "CarryShort",
+      "capital": 125.0,
+      "portfolio_capital": 500,
+      "role": "carry",
+      "symbol": "ETH",
+      "mode": "futures",
+      "scenario": "lower",
+      "quantity": 0.035,
+      "cost_bps": 8,
+      "pairs": [
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/carry_ETH_futures_500_lower.json",
+        "sha256": "c38eeb2480657b99445d28910712366e79c342f99e0d0f90af9a4daead916ab5"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+        "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+        "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "benchmark_BTC_spot_500_lower",
+      "strategy": "CarrySpot",
+      "capital": 250.0,
+      "portfolio_capital": 500,
+      "role": "benchmark",
+      "symbol": "BTC",
+      "mode": "spot",
+      "scenario": "lower",
+      "quantity": 0.00253,
+      "cost_bps": 13,
+      "pairs": [
+        "BTC/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/benchmark_BTC_spot_500_lower.json",
+        "sha256": "b477c3ffd69a10582b049fd53ef39c7e68eb53f395974733524c62263b12fbdf"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    },
+    {
+      "name": "benchmark_ETH_spot_500_lower",
+      "strategy": "CarrySpot",
+      "capital": 250.0,
+      "portfolio_capital": 500,
+      "role": "benchmark",
+      "symbol": "ETH",
+      "mode": "spot",
+      "scenario": "lower",
+      "quantity": 0.071,
+      "cost_bps": 13,
+      "pairs": [
+        "ETH/USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/benchmark_ETH_spot_500_lower.json",
+        "sha256": "e1b8469fb441366e4e0e400fb945d84aec6e81a48b0165682963f15a4884ed33"
+      },
+      "market_snapshot": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/ccxt-spot-market-rules.json",
+        "sha256": "88ebc6ebb9800b7065c36cd977d66364996b1441a1622d251a40378fe0d1b0d4"
+      },
+      "observer_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/spot_baseline_20261105/spot_observer.py",
+        "sha256": "8514f4667ae21cbd73eda13ae5469dfc9a9587c4725405e118ff0c38b83c32c0"
+      },
+      "source_files": {
+        "CarryLeg.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+          "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+        }
+      }
+    }
+  ],
+  "allowed_leverage": 1.0,
+  "initial_equity_usdt": 1000,
+  "total_cost_bps_per_side": [
+    8,
+    13,
+    15,
+    20
+  ],
+  "runner_sha256": "2e17fd9a82c10a02e4a2ecc63a2c1d0993da577375095c8aa4f66abe79b6d312",
+  "runner_module": "research.crypto.paired_carry_source_native_20261115_v1.native_runner",
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/protocol.json",
+      "sha256": "f6b403cef6efa53a9728567013abe9bf797e31ea97e5ad77e8cd4479aa2891b4"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CarryLeg.py",
+      "sha256": "15ce373e60ba0d04450531ccdf3b2d2312aeecb79635b46826f620d9c74578e2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/CaptureRules.py",
+      "sha256": "519ae02c22ab37138cfe0ee6410e4a8e694c7714d74a1f13011e592846eaed46"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/paired_carry.py",
+      "sha256": "4f4ae5e8356d577161a58a73217a13c7cef338eeec31baa9ded274a6db4c348f"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false,
+  "native_start": "2025-01-01T00:00:00Z",
+  "price_precision_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/carry_precision.py",
+    "sha256": "5fb79f8d4433bf6521e21af92608add313f155adc6789dcdad52df411899beb3"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "frozen_at": "2026-11-16T22:31:33.446764+00:00",
+  "scope": "crypto BTC/ETH spot local entropy gate hypothesis through native Freqtrade; not author trading strategy reproduction",
+  "source": {
+    "repository": "neurotrader888/PermutationEntropy",
+    "commit": "890da37156744ef4d97a5e266b7ca387498a85dd",
+    "indicator_only": true,
+    "license": "MIT",
+    "defaults_selected_from_demo": {
+      "dimension": 3,
+      "multiplier": 28,
+      "ordinal_histogram_hours": 168,
+      "source_first_valid_index": 170
+    },
+    "selected_stream": "close; volume demo not selected, before local economic results",
+    "video": "https://www.youtube.com/watch?v=PsQbKJvpGDU",
+    "video_access": "web fetch failed; indexed title/author/description only; not watched or transcribed"
+  },
+  "hypothesis": "Lower relative ordinal-price complexity may improve source-derived trend allocation through a causal exposure filter; new local hypothesis, not an independent alpha claim",
+  "local_rule": {
+    "entropy_dimension": 3,
+    "entropy_multiplier": 28,
+    "tie_rule": "source >= comparison, unchanged",
+    "first_valid_index": 170,
+    "threshold": "median of previous 8760 hourly entropy values; current value excluded; min_periods8760",
+    "allow": "current completed-hour entropy <= preceding-year median",
+    "clock": "hourly OPEN-labelled close becomes known at OPEN+1h; sample gate on existing sixhour target execution clocks",
+    "missing_or_unmatured": "zero allocation; no fill, no neutral replacement",
+    "allocation": "each source noOI weight multiplied by its own entropy gate, no cross-asset redistribution; original underlying signal risk-reference recurrence unchanged",
+    "timing_and_execution": "retain native TrendCore noOI sixhour allocation,5% nonzero-target no-trade band,0.99 markedNAV budget,spot1x2slots,-99% emergency stop and native sizing/fills"
+  },
+  "native_financial_contract": {
+    "pairs": [
+      "BTC/USDT",
+      "ETH/USDT"
+    ],
+    "capital": [
+      1000,
+      500
+    ],
+    "cost_bps_each_side": [
+      20,
+      13
+    ],
+    "window_UTC": [
+      "2025-01-01T00:00:00Z",
+      "2026-08-31T23:00:00Z"
+    ],
+    "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "data": "reuse sealed TrendCore candles and complete2023-03-25 onward signal prices; no new market data",
+    "historical_rules": "fixed snapshot research model,not historical venue certification",
+    "maximum_new_financial_wallets": 4,
+    "sequential_workers": 1,
+    "resource_guards": "retain existing1GiB free disk gate; no deletion of prior results to force admission"
+  },
+  "comparisons": {
+    "single": "actual1000 entropy candidate vs sealed actual1000 TrendCore noOI and NFIspot at same costs and endpoints",
+    "fixed_combinations": [
+      "actual500 entropy+actual500 NFIspot",
+      "actual500 entropy+actual500 TrendCore noOI"
+    ],
+    "combination_contract": "separate actual500 wallets,no scaling,no shared margin,no intersleeve transfers; total1000 capital comparison,not sharedwallet proof",
+    "promotion_gates": [
+      "positive net returns in both continuous and both calendar subperiods under both costs",
+      "continuous net return higher than matched sealed TrendCore at both costs",
+      "continuous hourlyNAV drawdown no greater than15% or matched TrendCore at both costs",
+      "dailyNAV Sharpe >=0.5 under both costs",
+      "fixed entropy+NFI combo must improve net return vs sealed actual500TrendCore+actual500NFI,with no greater drawdown at both costs; each reported even if fail"
+    ],
+    "no_parameter_search": true,
+    "not_independent_OOS": "same historical window reused by prior research; source selection is not untouched holdout"
+  },
+  "input_seals": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/artifact_manifest.json": "21b148e72c52e2fa6ae209ac830954077721c5cf3f6bf55c40b7ebeb5d8b5d22",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/permutation_entropy_source_native_20261117_v1/source_receipts.json": "11c5075cc0c68363296fcd8eb91bcf64e55e6909049648f4e74e45798032a8bc"
+  },
+  "economic_results_observed": false,
+  "new_native_wallets": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

@@ -1,0 +1,358 @@
+{
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/top_coins_seven_day_exit.py",
+    "sha256": "6f65f2bff870bfa3abcfc98303e96f8f5710390eca20c5cab9882be027241b5c"
+  },
+  "protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/top_coins_seven_day_exit_protocol.json",
+    "sha256": "ca529a633cf248336cdaee13571d8e7731807a8a304f6904186009e6a1b4cd21"
+  },
+  "native_strategy": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+    "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+  },
+  "source_tags": [
+    "141",
+    "142",
+    "143",
+    "144",
+    "145"
+  ],
+  "continuous_basis": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_15bp_12_verified.json",
+    "sha256": "0513832bce22a2125e51adc6a3c5931fd8793f02f38415920e097e1638410cfc"
+  },
+  "continuous_15bp": {
+    "account_source": {
+      ".zip": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_12_15bp/account/native_results/backtest-result-2026-11-26_08-31-54.zip",
+        "sha256": "27b08c91bd06ee0617d712899c6d635218e4c6f861a8912c9355dd05f97c3660"
+      },
+      ".parquet": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_12_15bp/account/five_minute_equity.parquet",
+        "sha256": "48fc0e2fdd1f1906de1bc46a5e853bc07834dd35ce907a381fb4e901bade412e"
+      }
+    },
+    "plan": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_12_15bp/account/registered_plan.json",
+      "sha256": "990d0dc2cff0743fdefb52ad13ed2c013ea0cfe22a10dc0fca1e9b73eee08cbe"
+    },
+    "pure_top_coins_campaigns": 259,
+    "by_checkpoint_year": {
+      "2025": {
+        "alive_at_day_7": 0,
+        "underwater_at_day_7": 0,
+        "candidate_natural_closes": 0,
+        "candidate_terminal_marks": 0,
+        "continuation_improved": 0,
+        "continuation_deteriorated": 0,
+        "later_large_natural_wins": 0,
+        "missing_prior_nav_for_natural_closes": 0,
+        "net_continuation_usdt": 0.0
+      },
+      "2026": {
+        "alive_at_day_7": 3,
+        "underwater_at_day_7": 3,
+        "candidate_natural_closes": 1,
+        "candidate_terminal_marks": 2,
+        "continuation_improved": 1,
+        "continuation_deteriorated": 2,
+        "later_large_natural_wins": 0,
+        "missing_prior_nav_for_natural_closes": 0,
+        "net_continuation_usdt": -1992.2555760169707
+      }
+    },
+    "summary": {
+      "alive_at_day_7": 3,
+      "underwater_at_day_7": 3,
+      "candidate_natural_closes": 1,
+      "candidate_terminal_marks": 2,
+      "continuation_improved": 1,
+      "continuation_deteriorated": 2,
+      "later_large_natural_wins": 0,
+      "missing_prior_nav_for_natural_closes": 0,
+      "net_continuation_usdt": -1992.2555760169707
+    },
+    "campaigns": [
+      {
+        "pair": "JUP/USDT:USDT",
+        "tags": [
+          "145"
+        ],
+        "first_fill": "2026-10-29T20:05:00+00:00",
+        "checkpoint": "2026-11-05T20:05:00+00:00",
+        "marked_campaign_at_checkpoint_usdt": -1277.7989653150012,
+        "mark_notional_at_checkpoint_usdt": 11731.62568426,
+        "time_exit_candidate": true,
+        "endpoint_clock": "2026-11-19T12:25:00+00:00",
+        "endpoint_status": "natural_close",
+        "endpoint_campaign_pnl_usdt": 105.31997646000005,
+        "observed_continuation_usdt": 1383.1189417750013,
+        "natural_win_at_least_1pct": false
+      },
+      {
+        "pair": "WLD/USDT:USDT",
+        "tags": [
+          "145"
+        ],
+        "first_fill": "2026-10-29T20:05:00+00:00",
+        "checkpoint": "2026-11-05T20:05:00+00:00",
+        "marked_campaign_at_checkpoint_usdt": -2499.457133381691,
+        "mark_notional_at_checkpoint_usdt": 4607.7669,
+        "time_exit_candidate": true,
+        "endpoint_clock": "2026-11-25T23:55:00+00:00",
+        "endpoint_status": "terminal_mark",
+        "endpoint_campaign_pnl_usdt": -3976.5563363565248,
+        "observed_continuation_usdt": -1477.0992029748336,
+        "natural_win_at_least_1pct": null
+      },
+      {
+        "pair": "APT/USDT:USDT",
+        "tags": [
+          "145"
+        ],
+        "first_fill": "2026-10-29T20:05:00+00:00",
+        "checkpoint": "2026-11-05T20:05:00+00:00",
+        "marked_campaign_at_checkpoint_usdt": -1163.1118009862942,
+        "mark_notional_at_checkpoint_usdt": 9934.51116,
+        "time_exit_candidate": true,
+        "endpoint_clock": "2026-11-25T23:55:00+00:00",
+        "endpoint_status": "terminal_mark",
+        "endpoint_campaign_pnl_usdt": -3061.3871158034326,
+        "observed_continuation_usdt": -1898.2753148171385,
+        "natural_win_at_least_1pct": null
+      }
+    ]
+  },
+  "standalone_reset_windows_8bp": {
+    "2025": {
+      "summary_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/annual_2025_boost14_8bp_verified.json",
+        "sha256": "a925c4e20733e341e912ae9d185bf340ef324cae4fcfaf55dfddad8cf2ce0888"
+      },
+      "account_source": {
+        ".zip": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account/native_results/backtest-result-2026-11-26_06-18-38.zip",
+          "sha256": "1f31af687addc90c0a9c647bff4d1b9875d52e26801a5b6d4cab0074c0b8b602"
+        },
+        ".parquet": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account/five_minute_equity.parquet",
+          "sha256": "53092eecf9423a1633ae4a53d4c092434012978504bdb90baa047c07f7ff663e"
+        }
+      },
+      "plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account/registered_plan.json",
+        "sha256": "ea5818422f960b2776faefa135f87f4f0b5c54ae370c5ac280ba9c4d0fb65d92"
+      },
+      "pure_top_coins_campaigns": 183,
+      "by_checkpoint_year": {
+        "2025": {
+          "alive_at_day_7": 0,
+          "underwater_at_day_7": 0,
+          "candidate_natural_closes": 0,
+          "candidate_terminal_marks": 0,
+          "continuation_improved": 0,
+          "continuation_deteriorated": 0,
+          "later_large_natural_wins": 0,
+          "missing_prior_nav_for_natural_closes": 0,
+          "net_continuation_usdt": 0.0
+        },
+        "2026": {
+          "alive_at_day_7": 0,
+          "underwater_at_day_7": 0,
+          "candidate_natural_closes": 0,
+          "candidate_terminal_marks": 0,
+          "continuation_improved": 0,
+          "continuation_deteriorated": 0,
+          "later_large_natural_wins": 0,
+          "missing_prior_nav_for_natural_closes": 0,
+          "net_continuation_usdt": 0.0
+        }
+      },
+      "summary": {
+        "alive_at_day_7": 0,
+        "underwater_at_day_7": 0,
+        "candidate_natural_closes": 0,
+        "candidate_terminal_marks": 0,
+        "continuation_improved": 0,
+        "continuation_deteriorated": 0,
+        "later_large_natural_wins": 0,
+        "missing_prior_nav_for_natural_closes": 0,
+        "net_continuation_usdt": 0.0
+      },
+      "campaigns": []
+    },
+    "2026_to_nov09": {
+      "summary_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/comparison_8bp.json",
+        "sha256": "7ec32cc862787da7cb4b99ebf0850828790fd0df30959799849aaf4bf674943c"
+      },
+      "account_source": {
+        ".zip": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_8bps/native_results/backtest-result-2026-11-09_12-01-25.zip",
+          "sha256": "9e0554593bc987ad467ad6462a437af89d333ea5b5b07ed54fbbb48e1f6c57b0"
+        },
+        ".parquet": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_8bps/five_minute_equity.parquet",
+          "sha256": "ea4c30a4a757fcd5d1eeb51286c9b3451fa4dade4781353fc319dd9b8c973de1"
+        }
+      },
+      "plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_8bps/registered_plan.json",
+        "sha256": "9d785803d8b888b07251233d140e8a43f4ee3e67cb5e98849bbe52e996955a7e"
+      },
+      "pure_top_coins_campaigns": 83,
+      "by_checkpoint_year": {
+        "2025": {
+          "alive_at_day_7": 0,
+          "underwater_at_day_7": 0,
+          "candidate_natural_closes": 0,
+          "candidate_terminal_marks": 0,
+          "continuation_improved": 0,
+          "continuation_deteriorated": 0,
+          "later_large_natural_wins": 0,
+          "missing_prior_nav_for_natural_closes": 0,
+          "net_continuation_usdt": 0.0
+        },
+        "2026": {
+          "alive_at_day_7": 3,
+          "underwater_at_day_7": 3,
+          "candidate_natural_closes": 0,
+          "candidate_terminal_marks": 3,
+          "continuation_improved": 0,
+          "continuation_deteriorated": 3,
+          "later_large_natural_wins": 0,
+          "missing_prior_nav_for_natural_closes": 0,
+          "net_continuation_usdt": -92.03801066707051
+        }
+      },
+      "summary": {
+        "alive_at_day_7": 3,
+        "underwater_at_day_7": 3,
+        "candidate_natural_closes": 0,
+        "candidate_terminal_marks": 3,
+        "continuation_improved": 0,
+        "continuation_deteriorated": 3,
+        "later_large_natural_wins": 0,
+        "missing_prior_nav_for_natural_closes": 0,
+        "net_continuation_usdt": -92.03801066707051
+      },
+      "campaigns": [
+        {
+          "pair": "WLD/USDT:USDT",
+          "tags": [
+            "145"
+          ],
+          "first_fill": "2026-10-29T20:05:00+00:00",
+          "checkpoint": "2026-11-05T20:05:00+00:00",
+          "marked_campaign_at_checkpoint_usdt": -209.79553455426628,
+          "mark_notional_at_checkpoint_usdt": 389.05899999999997,
+          "time_exit_candidate": true,
+          "endpoint_clock": "2026-11-09T05:00:00+00:00",
+          "endpoint_status": "terminal_mark",
+          "endpoint_campaign_pnl_usdt": -237.70713385892464,
+          "observed_continuation_usdt": -27.911599304658353,
+          "natural_win_at_least_1pct": null
+        },
+        {
+          "pair": "APT/USDT:USDT",
+          "tags": [
+            "145"
+          ],
+          "first_fill": "2026-10-29T20:05:00+00:00",
+          "checkpoint": "2026-11-05T20:05:00+00:00",
+          "marked_campaign_at_checkpoint_usdt": -96.70206061148735,
+          "mark_notional_at_checkpoint_usdt": 840.1762799999999,
+          "time_exit_candidate": true,
+          "endpoint_clock": "2026-11-09T05:00:00+00:00",
+          "endpoint_status": "terminal_mark",
+          "endpoint_campaign_pnl_usdt": -124.88225897792269,
+          "observed_continuation_usdt": -28.180198366435334,
+          "natural_win_at_least_1pct": null
+        },
+        {
+          "pair": "JUP/USDT:USDT",
+          "tags": [
+            "145"
+          ],
+          "first_fill": "2026-10-29T20:05:00+00:00",
+          "checkpoint": "2026-11-05T20:05:00+00:00",
+          "marked_campaign_at_checkpoint_usdt": -106.60480513577531,
+          "mark_notional_at_checkpoint_usdt": 992.2939915200001,
+          "time_exit_candidate": true,
+          "endpoint_clock": "2026-11-09T05:00:00+00:00",
+          "endpoint_status": "terminal_mark",
+          "endpoint_campaign_pnl_usdt": -142.55101813175213,
+          "observed_continuation_usdt": -35.94621299597682,
+          "natural_win_at_least_1pct": null
+        }
+      ]
+    },
+    "2026_nov10_to_nov25_restart": {
+      "summary_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_window_8bp_controls.json",
+        "sha256": "3032e339448f48c1c3c081e0c8c2e5af020577b2ba937741785906d8c77c5216"
+      },
+      "account_source": {
+        ".zip": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/fixed_boost_12_8bp/native_results/backtest-result-2026-11-26_02-08-53.zip",
+          "sha256": "77d8540e8f62e11f8ae85a59b90df2a10a8665a19f9873398330d982bd25d274"
+        },
+        ".parquet": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/fixed_boost_12_8bp/five_minute_equity.parquet",
+          "sha256": "f2663175f9e995827b86cef382a407689642a35b6a6504cb158fc48db04a06db"
+        }
+      },
+      "plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/fixed_boost_12_8bp/registered_plan.json",
+        "sha256": "42881cf4e776750f67f849b59c31b6778f758ceb23423be63de75cece31cba07"
+      },
+      "pure_top_coins_campaigns": 2,
+      "by_checkpoint_year": {
+        "2025": {
+          "alive_at_day_7": 0,
+          "underwater_at_day_7": 0,
+          "candidate_natural_closes": 0,
+          "candidate_terminal_marks": 0,
+          "continuation_improved": 0,
+          "continuation_deteriorated": 0,
+          "later_large_natural_wins": 0,
+          "missing_prior_nav_for_natural_closes": 0,
+          "net_continuation_usdt": 0.0
+        },
+        "2026": {
+          "alive_at_day_7": 0,
+          "underwater_at_day_7": 0,
+          "candidate_natural_closes": 0,
+          "candidate_terminal_marks": 0,
+          "continuation_improved": 0,
+          "continuation_deteriorated": 0,
+          "later_large_natural_wins": 0,
+          "missing_prior_nav_for_natural_closes": 0,
+          "net_continuation_usdt": 0.0
+        }
+      },
+      "summary": {
+        "alive_at_day_7": 0,
+        "underwater_at_day_7": 0,
+        "candidate_natural_closes": 0,
+        "candidate_terminal_marks": 0,
+        "continuation_improved": 0,
+        "continuation_deteriorated": 0,
+        "later_large_natural_wins": 0,
+        "missing_prior_nav_for_natural_closes": 0,
+        "net_continuation_usdt": 0.0
+      },
+      "campaigns": []
+    }
+  },
+  "checks": {
+    "negative_continuation_both_years": false,
+    "candidate_support_both_years": false,
+    "no_observed_large_winner_cut": true,
+    "prior_nav_available": true
+  },
+  "advance": false,
+  "new_native_accounts": 0,
+  "orders_enabled": false
+}

@@ -1,0 +1,62 @@
+"""Actual native IStrategy input owner, not an all-cash strategy backtest."""
+import hashlib
+import json
+from pathlib import Path
+
+import pandas as pd
+
+from freqtrade.data.signed_jump import daily_signed_variation
+from freqtrade.enums import RunMode
+from freqtrade.strategy import IStrategy
+
+
+class SignedJumpInputs(IStrategy):
+    INTERFACE_VERSION=3
+    timeframe='1h'
+    startup_candle_count=10000
+    can_short=True
+    minimal_roi={}
+    stoploss=-.99
+
+    def ft_bot_start(self,**kwargs):
+        # Native Backtesting calls this lifecycle method directly. A loop
+        # callback exception alone is swallowed by its safe wrapper.
+        raise ValueError('Input-only class cannot start a native financial backtest')
+
+    def bot_start(self,**kwargs):
+        if not self.config.get('research_diagnostic_only') or self.config.get('runmode')!=RunMode.BACKTEST:
+            raise ValueError('Input-only research; no financial account or service')
+        a=json.loads(Path(self.config['research_admission']).read_text())
+        if self.config['exchange']['pair_whitelist']!=a['pairs']:raise ValueError('Fixed eight-pair universe changed')
+        self.research_daily={};self.research_minute_samples={}
+        for row in a['minute_vwap_inputs']:
+            path=Path(row['path'])
+            if hashlib.sha256(path.read_bytes()).hexdigest()!=row['sha256']:raise ValueError('Minute VWAP input drift')
+            observed=pd.read_parquet(path)
+            bars=self.dp.get_pair_dataframe(row['pair'],'5m','futures')
+            # The native provider may expose an earlier warmup prefix. Validate
+            # the complete observed-minute domain, never remove internal bars.
+            bars=bars.loc[bars.date.between(observed.date.iloc[0],observed.date.iloc[-1])]
+            if not pd.DatetimeIndex(bars.date).equals(pd.DatetimeIndex(observed.date)):
+                raise ValueError('Native execution-input and minute-VWAP grids differ')
+            self.research_minute_samples[row['pair']]=observed
+            self.research_daily[row['pair']]=daily_signed_variation(observed)
+
+    def populate_indicators(self,dataframe,metadata):
+        previous=pd.DatetimeIndex(dataframe.date.dt.floor('D'))-pd.Timedelta(days=1)
+        values=self.research_daily[metadata['pair']]
+        for key in ['rsj','rsk','rkt','rv','day_return']:
+            dataframe['negative_'+key]=-values[key].reindex(previous).to_numpy()
+        return dataframe
+
+    def populate_entry_trend(self,dataframe,metadata):
+        dataframe['enter_long']=0;dataframe['enter_short']=0
+        return dataframe
+
+    def populate_exit_trend(self,dataframe,metadata):
+        dataframe['exit_long']=0;dataframe['exit_short']=0
+        return dataframe
+
+    def confirm_trade_entry(self,*args,**kwargs):return False
+
+    def bot_loop_start(self,*args,**kwargs):raise ValueError('No all-cash backtest from an input-only view')

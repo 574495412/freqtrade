@@ -1,0 +1,15 @@
+{
+  "at": "2026-11-17T14:22:22.102464+00:00",
+  "original_failures": "Both own auditors compared a nanosecond DatetimeIndex to a pandas3 string-created microsecond date_range; equals rejects different units despite same timestamps",
+  "change": "Explicit.as_unit(ns) on expected common calendar, same timestamps/window/values",
+  "native_wallets_rerun": false,
+  "candidate_or_fills_or_parameters_changed": false,
+  "files": {
+    "analyze_attempt3.py": "906dadeb41cb4cc9bba22fcdba1985691668bca2af276a246a736b5f10aef7a7",
+    "analyze_attempt3_v2.py": "ad4b3d4c88e6b3987596116fe27eb93dbc4ecb6ee50a7f0f4bf9d24eee609360",
+    "audit_execution.py": "d14dc24a1b32ef506c772eddc5d0e27910b133f23151660e21e33cc9b82180b8",
+    "audit_execution_v2.py": "67e59ce4a412f28d6eb2e65ff527df07053d1b4678ebd0fa383e9b09e3982ae8",
+    "analysis_attempt3.log": "54a2dd74aacc80a9c211b684b325205afab6e3dfdb93a1ca3ec2b303dba4a735",
+    "executed_policy_audit_attempt3.log": "1f4a2b128ebad2544314380af4e841a387841a77fdf4b0999bf8a472d3692185"
+  }
+}

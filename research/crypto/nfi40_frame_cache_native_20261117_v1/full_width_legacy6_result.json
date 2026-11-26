@@ -1,0 +1,142 @@
+{
+  "mode": "legacy6",
+  "passed": true,
+  "actual_market_assets": 1,
+  "cache_aliases": 6,
+  "cycles": 10,
+  "native_1000_row_slices": 60,
+  "shape": [
+    175904,
+    237
+  ],
+  "write_seconds": 3.039564250037074,
+  "first_read_cycle_seconds": 1.8305543329333887,
+  "remaining_nine_cycles_seconds": 0.005564242834225297,
+  "individual_warm_cycle_seconds": [
+    0.0007592501351609826,
+    0.0005797080229967833,
+    0.0003897080896422267,
+    0.0004224567674100399,
+    0.0006160399643704295,
+    0.0006070410599932075,
+    0.0007339159492403269,
+    0.0006606649840250611,
+    0.0007954578613862395
+  ],
+  "total_native_read_seconds": 1.836118575767614,
+  "exact_verification_seconds_excluded_from_read_time": 0.9623587018577382,
+  "read_counters": {
+    "loads": 6,
+    "hits": 114,
+    "guard_read_bytes": 483775160,
+    "compressed_read_bytes": 483775160,
+    "decompressed_read_bytes": 1890331962
+  },
+  "resources": [
+    {
+      "phase": "legacy6:before",
+      "rss_bytes": 1977253888,
+      "peak_rss_bytes": 1996881920,
+      "available_bytes": 2989228032
+    },
+    {
+      "phase": "legacy6:write:CACHE_ALIAS_0/USDT:USDT",
+      "rss_bytes": 1789018112,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 2989228032
+    },
+    {
+      "phase": "legacy6:write:CACHE_ALIAS_1/USDT:USDT",
+      "rss_bytes": 1443250176,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 3012460544
+    },
+    {
+      "phase": "legacy6:write:CACHE_ALIAS_2/USDT:USDT",
+      "rss_bytes": 1361920000,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 2984591360
+    },
+    {
+      "phase": "legacy6:write:CACHE_ALIAS_3/USDT:USDT",
+      "rss_bytes": 1098219520,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 3093004288
+    },
+    {
+      "phase": "legacy6:write:CACHE_ALIAS_4/USDT:USDT",
+      "rss_bytes": 986333184,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 3024093184
+    },
+    {
+      "phase": "legacy6:write:CACHE_ALIAS_5/USDT:USDT",
+      "rss_bytes": 901070848,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 3424485376
+    },
+    {
+      "phase": "legacy6:cycle:0",
+      "rss_bytes": 1085341696,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 2889367552
+    },
+    {
+      "phase": "legacy6:cycle:1",
+      "rss_bytes": 1042972672,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 2892169216
+    },
+    {
+      "phase": "legacy6:cycle:2",
+      "rss_bytes": 1037074432,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 2892169216
+    },
+    {
+      "phase": "legacy6:cycle:3",
+      "rss_bytes": 1010139136,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 2892169216
+    },
+    {
+      "phase": "legacy6:cycle:4",
+      "rss_bytes": 1006239744,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 2892169216
+    },
+    {
+      "phase": "legacy6:cycle:5",
+      "rss_bytes": 997064704,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 2892169216
+    },
+    {
+      "phase": "legacy6:cycle:6",
+      "rss_bytes": 992722944,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 2892169216
+    },
+    {
+      "phase": "legacy6:cycle:7",
+      "rss_bytes": 936804352,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 2892169216
+    },
+    {
+      "phase": "legacy6:cycle:8",
+      "rss_bytes": 926384128,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 2892169216
+    },
+    {
+      "phase": "legacy6:cycle:9",
+      "rss_bytes": 902381568,
+      "peak_rss_bytes": 2121220096,
+      "available_bytes": 2918154240
+    }
+  ],
+  "legacy_maximum_observed_cached": 6,
+  "legacy_writeback_skips": 0,
+  "reader_instrumentation": "Legacy writer/trim unchanged; SHA check plus counted IO layers before own-process pickle loading; block map unchanged"
+}

@@ -1,0 +1,47 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "role": "trendcore",
+      "same_shared_wallet_model_contract": true,
+      "accounts": [
+        "trendcore_1000_conservative",
+        "trendcore_1000_lower",
+        "trendcore_500_conservative",
+        "trendcore_500_lower"
+      ],
+      "source_plan": "research/crypto/trendcore_source_native_20261117_v1/plan.json"
+    },
+    {
+      "role": "nfi_spot",
+      "same_shared_wallet_model_contract": true,
+      "accounts": [
+        "nfi_spot_1000_conservative",
+        "nfi_spot_1000_lower",
+        "nfi_spot_500_conservative",
+        "nfi_spot_500_lower"
+      ],
+      "source_plan": "research/crypto/nfi_carry_matched_native_20261115_v1/plan.json"
+    },
+    {
+      "role": "crp",
+      "same_shared_wallet_model_contract": true,
+      "accounts": [
+        "crp_1000_conservative",
+        "crp_1000_lower",
+        "crp_500_conservative",
+        "crp_500_lower"
+      ],
+      "source_plan": "research/crypto/universal_allocation_native_20261116_v1/plan.json"
+    },
+    {
+      "role": "benchmark",
+      "same_shared_wallet_model_contract": false,
+      "classification": "additionalcapitalcontextonly:independentassetwallets,95percentbudget,noDCA/rebalance,entry00:05",
+      "original_gate_requirement_retained": true,
+      "not_used_to_declare_strictwalletdominance": true
+    }
+  ],
+  "portfolio_versus_single_wallet_is_aggregate_capital_comparison": true,
+  "frozen_economic_gates_not_changed": true
+}

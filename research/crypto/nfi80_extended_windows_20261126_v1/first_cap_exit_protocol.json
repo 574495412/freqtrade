@@ -1,0 +1,8 @@
+{
+  "question": "Does covering the remainder of a pure short Rebuy position after the first rejected budget request improve observed outcomes compared with carrying it under the existing cap?",
+  "cases": "Use all naturally closed full-window 15 bp 14-slot cap campaigns with actual rejected requests, including winning, losing and small trades. Their capped and uncapped final profits were known before this new diagnostic. No time or price thresholds are selected from the hypothetical exits.",
+  "timing": "Observe the actual first cap rejection on its five-minute candle, then use the next five-minute futures candle open as the full short cover price proxy. Reconstruct only filled cash and funding known by the next-candle time from the capped wallet's actual history. Debit original exit commission and any entry commissions. Reuse native filled quantity and mark-to-exit reservation methodology.",
+  "output": "Show actual partial closes and terminal-stop quantities for NEAR and FARTCOIN. Compare the proxy result and natural net profit for every affected cap campaign. Summarize whether the paired terminal wallet advantage depends on the matched NEAR transaction through an additive omission sensitivity.",
+  "admission": "Require higher net sum on the unchanged sampled capped campaigns, no reduction in count of gains at least 1 percent of pre-entry marked NAV, and at least one capped loss of that size removed. Passing only admits an execution experiment in the real engine; it supplies no alternative account path. Preserve fee and stop-related costs.",
+  "orders_enabled": false
+}

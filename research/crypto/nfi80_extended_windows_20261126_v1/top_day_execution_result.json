@@ -1,0 +1,546 @@
+{
+  "freeze": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/top_day_execution_freeze.json",
+    "sha256": "7eb7a901428508131009ed1be94848f36778d7bc595c194abb6b8311fa691844"
+  },
+  "targets": [
+    {
+      "pair": "1MBABYDOGE/USDT:USDT",
+      "clock": "2025-02-02T19:00:00Z",
+      "archive": {
+        "url": "https://data.binance.vision/data/futures/um/daily/aggTrades/1MBABYDOGEUSDT/1MBABYDOGEUSDT-aggTrades-2025-02-02.zip",
+        "archive": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/selected_top_days_execution/1MBABYDOGEUSDT-aggTrades-2025-02-02.zip",
+          "sha256": "34da20869f703be2b1e40ac3abecce28b833ce9b8debaece8a5db256e127e0f1"
+        },
+        "published_checksum": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/selected_top_days_execution/1MBABYDOGEUSDT-aggTrades-2025-02-02.zip.CHECKSUM",
+          "sha256": "3fa4f7dc1268e18032730668be81884030db52e067bbd2b76ce5eae4e5d02a5d"
+        }
+      },
+      "observations_5m": 4518,
+      "measures_by_fee": {
+        "15": {
+          "original_quantity": 221517.0,
+          "original_buy_limit": 0.0016339,
+          "original_entry_notional_usdt": 361.9366263,
+          "qty_fraction_of_prints_in_entry_5m": 0.0003067485907164475,
+          "target_qty_as_fraction_of_executed_at_or_below_limit": 0.0007213344297165988,
+          "first_observed_eligible_qty_ms": 335,
+          "observed_sell_taker_qty_at_or_below_limit": {
+            "1": 307725.0,
+            "5": 2891149.0,
+            "30": 39227673.0,
+            "300": 307093341.0
+          },
+          "buy_print_price_proxies": [
+            {
+              "delay_seconds": 0,
+              "observed_5_second_qty": 2325844.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.0016339132048556093,
+              "price_delta_bp": 0.0808180158484717,
+              "entry_cost_delta_usdt": 0.0029251000000272143
+            },
+            {
+              "delay_seconds": 1,
+              "observed_5_second_qty": 2816930.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.0016343941264101629,
+              "price_delta_bp": 3.024214518410062,
+              "entry_cost_delta_usdt": 0.10945740000005344
+            },
+            {
+              "delay_seconds": 5,
+              "observed_5_second_qty": 2191926.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.0016321341296604778,
+              "price_delta_bp": -10.807701447592688,
+              "entry_cost_delta_usdt": -0.391170299999942
+            },
+            {
+              "delay_seconds": 15,
+              "observed_5_second_qty": 1009024.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.0016300283526772211,
+              "price_delta_bp": -23.695742228893035,
+              "entry_cost_delta_usdt": -0.857635700000003
+            }
+          ],
+          "independent_native_candle": {
+            "open": 0.0016339,
+            "high": 0.0016467,
+            "low": 0.0016042,
+            "close": 0.0016439,
+            "volume": 722145127.0
+          },
+          "agg_trade_open": 0.0016339,
+          "same_native_and_print_open": true,
+          "whole_campaign_net_usdt": 18.57340094
+        },
+        "8": {
+          "original_quantity": 218318.0,
+          "original_buy_limit": 0.0016339,
+          "original_entry_notional_usdt": 356.7097802,
+          "qty_fraction_of_prints_in_entry_5m": 0.0003023187332260431,
+          "target_qty_as_fraction_of_executed_at_or_below_limit": 0.0007109174014945508,
+          "first_observed_eligible_qty_ms": 335,
+          "observed_sell_taker_qty_at_or_below_limit": {
+            "1": 307725.0,
+            "5": 2891149.0,
+            "30": 39227673.0,
+            "300": 307093341.0
+          },
+          "buy_print_price_proxies": [
+            {
+              "delay_seconds": 0,
+              "observed_5_second_qty": 2325844.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.001633910467758041,
+              "price_delta_bp": 0.06406608752618226,
+              "entry_cost_delta_usdt": 0.002285299999982726
+            },
+            {
+              "delay_seconds": 1,
+              "observed_5_second_qty": 2816930.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.0016343911097573265,
+              "price_delta_bp": 3.0057516208237267,
+              "entry_cost_delta_usdt": 0.10721810000001142
+            },
+            {
+              "delay_seconds": 5,
+              "observed_5_second_qty": 2191926.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.0016321316991727665,
+              "price_delta_bp": -10.822576823755758,
+              "entry_cost_delta_usdt": -0.386051899999984
+            },
+            {
+              "delay_seconds": 15,
+              "observed_5_second_qty": 1009024.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.001630031698714719,
+              "price_delta_bp": -23.675263389931757,
+              "entry_cost_delta_usdt": -0.8445198000000005
+            }
+          ],
+          "independent_native_candle": {
+            "open": 0.0016339,
+            "high": 0.0016467,
+            "low": 0.0016042,
+            "close": 0.0016439,
+            "volume": 722145127.0
+          },
+          "agg_trade_open": 0.0016339,
+          "same_native_and_print_open": true,
+          "whole_campaign_net_usdt": 18.81814067
+        }
+      }
+    },
+    {
+      "pair": "NOT/USDT:USDT",
+      "clock": "2025-02-02T19:00:00Z",
+      "archive": {
+        "url": "https://data.binance.vision/data/futures/um/daily/aggTrades/NOTUSDT/NOTUSDT-aggTrades-2025-02-02.zip",
+        "archive": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/selected_top_days_execution/NOTUSDT-aggTrades-2025-02-02.zip",
+          "sha256": "33ee29365df890cc22a04089bf63ea757bb8c3bca71092e605b683ba673e594d"
+        },
+        "published_checksum": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/selected_top_days_execution/NOTUSDT-aggTrades-2025-02-02.zip.CHECKSUM",
+          "sha256": "bb0d8f11e0cbd63253b53b00c03605bc96c26e416b77cea9277ce0bd36266e29"
+        }
+      },
+      "observations_5m": 2182,
+      "measures_by_fee": {
+        "15": {
+          "original_quantity": 112823.0,
+          "original_buy_limit": 0.003208,
+          "original_entry_notional_usdt": 361.93618399999997,
+          "qty_fraction_of_prints_in_entry_5m": 0.000176405889094437,
+          "target_qty_as_fraction_of_executed_at_or_below_limit": 0.000455670545563044,
+          "first_observed_eligible_qty_ms": 1153,
+          "observed_sell_taker_qty_at_or_below_limit": {
+            "1": 33047.0,
+            "5": 2577463.0,
+            "30": 15738762.0,
+            "300": 247597746.0
+          },
+          "buy_print_price_proxies": [
+            {
+              "delay_seconds": 0,
+              "observed_5_second_qty": 5636858.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.003208,
+              "price_delta_bp": 0.0,
+              "entry_cost_delta_usdt": 0.0
+            },
+            {
+              "delay_seconds": 1,
+              "observed_5_second_qty": 5276997.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.003208,
+              "price_delta_bp": 0.0,
+              "entry_cost_delta_usdt": 0.0
+            },
+            {
+              "delay_seconds": 5,
+              "observed_5_second_qty": 2448083.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.003207,
+              "price_delta_bp": -3.1172069825424753,
+              "entry_cost_delta_usdt": -0.11282299999993484
+            },
+            {
+              "delay_seconds": 15,
+              "observed_5_second_qty": 4822860.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.003202,
+              "price_delta_bp": -18.703241895261513,
+              "entry_cost_delta_usdt": -0.6769379999999501
+            }
+          ],
+          "independent_native_candle": {
+            "open": 0.003208,
+            "high": 0.003232,
+            "low": 0.003151,
+            "close": 0.003227,
+            "volume": 639564816.0
+          },
+          "agg_trade_open": 0.003208,
+          "same_native_and_print_open": true,
+          "whole_campaign_net_usdt": 22.56666701
+        },
+        "8": {
+          "original_quantity": 111194.0,
+          "original_buy_limit": 0.003208,
+          "original_entry_notional_usdt": 356.710352,
+          "qty_fraction_of_prints_in_entry_5m": 0.00017385884466790305,
+          "target_qty_as_fraction_of_executed_at_or_below_limit": 0.0004490913257344435,
+          "first_observed_eligible_qty_ms": 1153,
+          "observed_sell_taker_qty_at_or_below_limit": {
+            "1": 33047.0,
+            "5": 2577463.0,
+            "30": 15738762.0,
+            "300": 247597746.0
+          },
+          "buy_print_price_proxies": [
+            {
+              "delay_seconds": 0,
+              "observed_5_second_qty": 5636858.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.003208,
+              "price_delta_bp": 0.0,
+              "entry_cost_delta_usdt": 0.0
+            },
+            {
+              "delay_seconds": 1,
+              "observed_5_second_qty": 5276997.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.003208,
+              "price_delta_bp": 0.0,
+              "entry_cost_delta_usdt": 0.0
+            },
+            {
+              "delay_seconds": 5,
+              "observed_5_second_qty": 2448083.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.003207,
+              "price_delta_bp": -3.1172069825424753,
+              "entry_cost_delta_usdt": -0.11119399999995494
+            },
+            {
+              "delay_seconds": 15,
+              "observed_5_second_qty": 4822860.0,
+              "matched_print_amount": true,
+              "printed_vwap": 0.003202,
+              "price_delta_bp": -18.703241895261513,
+              "entry_cost_delta_usdt": -0.6671640000000139
+            }
+          ],
+          "independent_native_candle": {
+            "open": 0.003208,
+            "high": 0.003232,
+            "low": 0.003151,
+            "close": 0.003227,
+            "volume": 639564816.0
+          },
+          "agg_trade_open": 0.003208,
+          "same_native_and_print_open": true,
+          "whole_campaign_net_usdt": 22.75657717
+        }
+      }
+    },
+    {
+      "pair": "INJ/USDT:USDT",
+      "clock": "2026-06-04T02:05:00Z",
+      "archive": {
+        "url": "https://data.binance.vision/data/futures/um/daily/aggTrades/INJUSDT/INJUSDT-aggTrades-2026-06-04.zip",
+        "archive": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/selected_top_days_execution/INJUSDT-aggTrades-2026-06-04.zip",
+          "sha256": "3cedf31d9430e7cc03a4884ea93d6b3fa483720fe8c519fd5a854ebc3f395f6e"
+        },
+        "published_checksum": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/selected_top_days_execution/INJUSDT-aggTrades-2026-06-04.zip.CHECKSUM",
+          "sha256": "bf7bf4cd135a4c4f0f95ae87305b7fbf0cd2fd105da08161273cd920995cd523"
+        }
+      },
+      "observations_5m": 4066,
+      "measures_by_fee": {
+        "15": {
+          "original_quantity": 919.6,
+          "original_buy_limit": 6.0,
+          "original_entry_notional_usdt": 5517.6,
+          "qty_fraction_of_prints_in_entry_5m": 0.003168345758995556,
+          "target_qty_as_fraction_of_executed_at_or_below_limit": 0.055481481034576376,
+          "first_observed_eligible_qty_ms": 1703,
+          "observed_sell_taker_qty_at_or_below_limit": {
+            "1": 819.0,
+            "5": 3529.1000000000004,
+            "30": 16574.9,
+            "300": 16574.9
+          },
+          "buy_print_price_proxies": [
+            {
+              "delay_seconds": 0,
+              "observed_5_second_qty": 7005.900000000001,
+              "matched_print_amount": true,
+              "printed_vwap": 5.997106241844279,
+              "price_delta_bp": -4.822930259534841,
+              "entry_cost_delta_usdt": -2.66110000000117
+            },
+            {
+              "delay_seconds": 1,
+              "observed_5_second_qty": 7528.3,
+              "matched_print_amount": true,
+              "printed_vwap": 5.996748260113093,
+              "price_delta_bp": -5.41956647817865,
+              "entry_cost_delta_usdt": -2.990299999999479
+            },
+            {
+              "delay_seconds": 5,
+              "observed_5_second_qty": 6630.5,
+              "matched_print_amount": true,
+              "printed_vwap": 5.997656263592867,
+              "price_delta_bp": -3.9062273452217244,
+              "entry_cost_delta_usdt": -2.155300000000352
+            },
+            {
+              "delay_seconds": 15,
+              "observed_5_second_qty": 11909.899999999998,
+              "matched_print_amount": true,
+              "printed_vwap": 5.983022836015659,
+              "price_delta_bp": -28.295273307233913,
+              "entry_cost_delta_usdt": -15.612199999999575
+            }
+          ],
+          "independent_native_candle": {
+            "open": 6.0,
+            "high": 6.196,
+            "low": 5.98,
+            "close": 6.123,
+            "volume": 304155.7
+          },
+          "agg_trade_open": 6.0,
+          "same_native_and_print_open": true,
+          "whole_campaign_net_usdt": 388.3824846
+        },
+        "8": {
+          "original_quantity": 1034.0,
+          "original_buy_limit": 6.0,
+          "original_entry_notional_usdt": 6204.0,
+          "qty_fraction_of_prints_in_entry_5m": 0.0035624940352342377,
+          "target_qty_as_fraction_of_executed_at_or_below_limit": 0.06238348345993037,
+          "first_observed_eligible_qty_ms": 1843,
+          "observed_sell_taker_qty_at_or_below_limit": {
+            "1": 819.0,
+            "5": 3529.1000000000004,
+            "30": 16574.9,
+            "300": 16574.9
+          },
+          "buy_print_price_proxies": [
+            {
+              "delay_seconds": 0,
+              "observed_5_second_qty": 7005.900000000001,
+              "matched_print_amount": true,
+              "printed_vwap": 5.996541295938104,
+              "price_delta_bp": -5.764506769826427,
+              "entry_cost_delta_usdt": -3.5763000000006286
+            },
+            {
+              "delay_seconds": 1,
+              "observed_5_second_qty": 7528.3,
+              "matched_print_amount": true,
+              "printed_vwap": 5.996222920696324,
+              "price_delta_bp": -6.295132172793316,
+              "entry_cost_delta_usdt": -3.9055000000007567
+            },
+            {
+              "delay_seconds": 5,
+              "observed_5_second_qty": 6630.5,
+              "matched_print_amount": true,
+              "printed_vwap": 5.997880270793037,
+              "price_delta_bp": -3.532882011604288,
+              "entry_cost_delta_usdt": -2.1917999999996027
+            },
+            {
+              "delay_seconds": 15,
+              "observed_5_second_qty": 11909.899999999998,
+              "matched_print_amount": true,
+              "printed_vwap": 5.983241586073501,
+              "price_delta_bp": -27.930689877497805,
+              "entry_cost_delta_usdt": -17.328199999999924
+            }
+          ],
+          "independent_native_candle": {
+            "open": 6.0,
+            "high": 6.196,
+            "low": 5.98,
+            "close": 6.123,
+            "volume": 304155.7
+          },
+          "agg_trade_open": 6.0,
+          "same_native_and_print_open": true,
+          "whole_campaign_net_usdt": 445.7028048
+        }
+      }
+    },
+    {
+      "pair": "DOT/USDT:USDT",
+      "clock": "2026-06-04T02:05:00Z",
+      "archive": {
+        "url": "https://data.binance.vision/data/futures/um/daily/aggTrades/DOTUSDT/DOTUSDT-aggTrades-2026-06-04.zip",
+        "archive": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/selected_top_days_execution/DOTUSDT-aggTrades-2026-06-04.zip",
+          "sha256": "c2418497409722f76572e0ccaa01c64e0904596f845bd92556be9347f6cda3e5"
+        },
+        "published_checksum": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/selected_top_days_execution/DOTUSDT-aggTrades-2026-06-04.zip.CHECKSUM",
+          "sha256": "b1f25121f3465a7909717ddee4993ce8fdd97f2e9a574bc1e6667cd0ce144c9e"
+        }
+      },
+      "observations_5m": 1480,
+      "measures_by_fee": {
+        "15": {
+          "original_quantity": 3065.4,
+          "original_buy_limit": 1.011,
+          "original_entry_notional_usdt": 3099.1193999999996,
+          "qty_fraction_of_prints_in_entry_5m": 0.0012936737815911158,
+          "target_qty_as_fraction_of_executed_at_or_below_limit": 0.2342324444104837,
+          "first_observed_eligible_qty_ms": 1649,
+          "observed_sell_taker_qty_at_or_below_limit": {
+            "1": 1257.1,
+            "5": 13087.0,
+            "30": 13087.0,
+            "300": 13087.0
+          },
+          "buy_print_price_proxies": [
+            {
+              "delay_seconds": 0,
+              "observed_5_second_qty": 29688.900000000005,
+              "matched_print_amount": true,
+              "printed_vwap": 1.011,
+              "price_delta_bp": 0.0,
+              "entry_cost_delta_usdt": 0.0
+            },
+            {
+              "delay_seconds": 1,
+              "observed_5_second_qty": 20937.6,
+              "matched_print_amount": true,
+              "printed_vwap": 1.0119357343250472,
+              "price_delta_bp": 9.25553239413901,
+              "entry_cost_delta_usdt": 2.8684000000002925
+            },
+            {
+              "delay_seconds": 5,
+              "observed_5_second_qty": 39166.6,
+              "matched_print_amount": true,
+              "printed_vwap": 1.0142214719123115,
+              "price_delta_bp": 31.864212782508616,
+              "entry_cost_delta_usdt": 9.875100000000202
+            },
+            {
+              "delay_seconds": 15,
+              "observed_5_second_qty": 8435.6,
+              "matched_print_amount": true,
+              "printed_vwap": 1.0174847980687676,
+              "price_delta_bp": 64.14241413222221,
+              "entry_cost_delta_usdt": 19.878500000000713
+            }
+          ],
+          "independent_native_candle": {
+            "open": 1.011,
+            "high": 1.041,
+            "low": 1.01,
+            "close": 1.03,
+            "volume": 2765812.7
+          },
+          "agg_trade_open": 1.011,
+          "same_native_and_print_open": true,
+          "whole_campaign_net_usdt": 177.4115577
+        },
+        "8": {
+          "original_quantity": 3450.0,
+          "original_buy_limit": 1.011,
+          "original_entry_notional_usdt": 3487.95,
+          "qty_fraction_of_prints_in_entry_5m": 0.0014559843891463918,
+          "target_qty_as_fraction_of_executed_at_or_below_limit": 0.26362038664323373,
+          "first_observed_eligible_qty_ms": 1649,
+          "observed_sell_taker_qty_at_or_below_limit": {
+            "1": 1257.1,
+            "5": 13087.0,
+            "30": 13087.0,
+            "300": 13087.0
+          },
+          "buy_print_price_proxies": [
+            {
+              "delay_seconds": 0,
+              "observed_5_second_qty": 29688.900000000005,
+              "matched_print_amount": true,
+              "printed_vwap": 1.011,
+              "price_delta_bp": 0.0,
+              "entry_cost_delta_usdt": 0.0
+            },
+            {
+              "delay_seconds": 1,
+              "observed_5_second_qty": 20937.6,
+              "matched_print_amount": true,
+              "printed_vwap": 1.0119428985507244,
+              "price_delta_bp": 9.326395160480505,
+              "entry_cost_delta_usdt": 3.2529999999997017
+            },
+            {
+              "delay_seconds": 5,
+              "observed_5_second_qty": 39166.6,
+              "matched_print_amount": true,
+              "printed_vwap": 1.0141967826086957,
+              "price_delta_bp": 31.620006020729452,
+              "entry_cost_delta_usdt": 11.028900000000249
+            },
+            {
+              "delay_seconds": 15,
+              "observed_5_second_qty": 8435.6,
+              "matched_print_amount": true,
+              "printed_vwap": 1.017542231884058,
+              "price_delta_bp": 64.71050330423279,
+              "entry_cost_delta_usdt": 22.570700000000215
+            }
+          ],
+          "independent_native_candle": {
+            "open": 1.011,
+            "high": 1.041,
+            "low": 1.01,
+            "close": 1.03,
+            "volume": 2765812.7
+          },
+          "agg_trade_open": 1.011,
+          "same_native_and_print_open": true,
+          "whole_campaign_net_usdt": 204.70092
+        }
+      }
+    }
+  ],
+  "orders_enabled": false,
+  "fills_verified_live": false
+}

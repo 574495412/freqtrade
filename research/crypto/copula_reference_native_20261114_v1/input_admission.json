@@ -1,0 +1,2842 @@
+{
+  "passed_for_hourly_prices": true,
+  "source_universe": [
+    "BTC",
+    "ETH",
+    "BCH",
+    "XRP",
+    "EOS",
+    "LTC",
+    "TRX",
+    "ETC",
+    "LINK",
+    "XLM",
+    "ADA",
+    "XMR",
+    "DASH",
+    "ZEC",
+    "XTZ",
+    "ATOM",
+    "BNB",
+    "ONT",
+    "IOTA",
+    "BAT"
+  ],
+  "complete_source_members": 20,
+  "reused": [
+    {
+      "symbol": "BTC",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+        "sha256": "7fddcb56cfb30c9274ac9fbf7219be4254c7f4e393966104bb2de47ef9729a20"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+        "sha256": "c0485b869bb316b94962d666285990b890af51c1cad7b050068d1b1fc5b6f7ce"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "ETH",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ETH_USDT_USDT-1h-futures.feather",
+        "sha256": "52e2e1aa2dd8697e1cf7f203177997bd1b0bbf303521779c9ea9d399e66447d4"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/ETH_USDT_USDT-1h-futures.feather",
+        "sha256": "8ef7938df02a514be72363a0e224a95d13e7dd7b53157ddaac6bdd0db0b9b7cf"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "BCH",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BCH_USDT_USDT-1h-futures.feather",
+        "sha256": "3e7e9bbe4c35f313ef7bcef27d1838c11d01268051c6113790cad35b41bd3361"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/BCH_USDT_USDT-1h-futures.feather",
+        "sha256": "d0aeebcdb9de77c371612ab2dc0912ee3cab204206d2170ce057ff0d66d0ffa6"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "XRP",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/XRP_USDT_USDT-1h-futures.feather",
+        "sha256": "aab39f3d5d22c96eed95d0120a3209e3f3f1441f6cf9ff343314d214e7a4f52b"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/XRP_USDT_USDT-1h-futures.feather",
+        "sha256": "47393e8c9cb287a6403fe8d76a95a162702030b1f1e74d60a8bf1903171a72dd"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "LTC",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/LTC_USDT_USDT-1h-futures.feather",
+        "sha256": "9df00cbe2f9e3355b6cda22c7513ec499852b123ec0b95711de3b012e12d290e"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/LTC_USDT_USDT-1h-futures.feather",
+        "sha256": "44eecde357ed95d1ce963589213d760d8862ffec5e16ac02d21cd2e477320a96"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "TRX",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/TRX_USDT_USDT-1h-futures.feather",
+        "sha256": "73aaf9f4ce76bc096acb44f26f288e9c89307f17ce0f6d975976902765d6959f"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/TRX_USDT_USDT-1h-futures.feather",
+        "sha256": "a890337533f135177b46e44eda365dccbbf21ed82c670c32b5aa219b57faf5fa"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "ETC",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ETC_USDT_USDT-1h-futures.feather",
+        "sha256": "aa4d56e832f9b75bc06bbdeadbdacdbec37d11f1f1ae109e1ad1d6200b40e5b4"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/ETC_USDT_USDT-1h-futures.feather",
+        "sha256": "3f9af1aeb2e40cfde2ca1e74f91ede04c8589bfbdbcb070c9c59d919d26d4f07"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "LINK",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/LINK_USDT_USDT-1h-futures.feather",
+        "sha256": "1a43cb1f843cb08f035c09d2832aa13a8de51b8ae6f747946608e332027ab52c"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/LINK_USDT_USDT-1h-futures.feather",
+        "sha256": "b009fe0d53ececbe62efd423d2fb4fb6bf81cf4100cedf187451fa40889d86ab"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "XLM",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/XLM_USDT_USDT-1h-futures.feather",
+        "sha256": "6bd9803f767563d8461e21828f06d13779f1fb8241cc9aeffa452cec2f2c2782"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/XLM_USDT_USDT-1h-futures.feather",
+        "sha256": "da4af2762fe6d676797ff968cf65029e979fb0381641903b2cf6b362adea64ed"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "ADA",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ADA_USDT_USDT-1h-futures.feather",
+        "sha256": "dd5d172ec001c8dc88a7229861af80dcc929f6197cca7435dec528e3d2b73034"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/ADA_USDT_USDT-1h-futures.feather",
+        "sha256": "d5b8d0437ff084f0c3b708e32da1b807721ab156f8c32cd1ef347fdb30d98d3c"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "ATOM",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ATOM_USDT_USDT-1h-futures.feather",
+        "sha256": "8d92e119fd25b0a411d89198d52db53061271c54ea20fcca2bba61ddb1a1acb9"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/ATOM_USDT_USDT-1h-futures.feather",
+        "sha256": "970b107725361e708f542398eb38e3acb763fd9aad9cfe39042bfe544314ed11"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "BNB",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BNB_USDT_USDT-1h-futures.feather",
+        "sha256": "655c6bb14c6e8606f51d9a18848c81a6041156aac703a516e09388902cab7fed"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/BNB_USDT_USDT-1h-futures.feather",
+        "sha256": "20c00908eaac9737114e2944b02b537468c9018963a1cd0238ddf3192e083f54"
+      },
+      "rows": 15336
+    },
+    {
+      "symbol": "IOTA",
+      "source": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/IOTA_USDT_USDT-1h-futures.feather",
+        "sha256": "885eb561e1ad06b32758c8120b8d1b31ab45d8278b05e082edbef7af76a082d4"
+      },
+      "target": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/candles/futures/IOTA_USDT_USDT-1h-futures.feather",
+        "sha256": "766dcb57232e4cb4afb55aa735d7d2654beff8084706f279d93f78d4e2b94b78"
+      },
+      "rows": 15336
+    }
+  ],
+  "archives": [
+    {
+      "passed": true,
+      "symbol": "EOS",
+      "month": "2024-12",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/EOSUSDT/1h/EOSUSDT-1h-2024-12.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/EOSUSDT-1h-2024-12.zip",
+        "sha256": "2d5524b2a6f810b326adae8de46da878574e9210439c69fb6b854007cc5c5066"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/EOSUSDT-1h-2024-12.zip.CHECKSUM",
+        "sha256": "8545d4fc041ed220eaa734d810d8a4156a28bcd3e3874217a63e311970f4de93"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/EOS_2024-12.parquet",
+        "sha256": "fdde92d4f495a122501ccf87ac912013c391ff7265f98e5f4228ad4fc316e70b"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "EOS",
+      "month": "2025-03",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/EOSUSDT/1h/EOSUSDT-1h-2025-03.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/EOSUSDT-1h-2025-03.zip",
+        "sha256": "0ee3818c56d836fbde8f91c588061712f99ce9cd2d656f77ca014eee33a6414f"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/EOSUSDT-1h-2025-03.zip.CHECKSUM",
+        "sha256": "fb2f054127f6fb7acb2c38b865c57f78df15d2549c2c76e18246ecbe0be03642"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/EOS_2025-03.parquet",
+        "sha256": "f14406815eed75672dfaa32a91b14d6f7099f23c200e364541ef7c4f48de50bc"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "EOS",
+      "month": "2025-01",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/EOSUSDT/1h/EOSUSDT-1h-2025-01.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/EOSUSDT-1h-2025-01.zip",
+        "sha256": "313556c60b4339dc85912377be53804c835bac492605410e6f9392245b94639f"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/EOSUSDT-1h-2025-01.zip.CHECKSUM",
+        "sha256": "c427b7947d1eac4d53c23b3c3717300f85b31468a71f1e273d0a7708f281b6a0"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/EOS_2025-01.parquet",
+        "sha256": "1d9f71092464c84835e29351499728035da3cf697fbd258c3cd1a056a73cc708"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "EOS",
+      "month": "2025-02",
+      "rows": 672,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/EOSUSDT/1h/EOSUSDT-1h-2025-02.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/EOSUSDT-1h-2025-02.zip",
+        "sha256": "55af9ad428d2dc8b7968b83166a874a003f651f1f407b1fce8f08d7ece73ecff"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/EOSUSDT-1h-2025-02.zip.CHECKSUM",
+        "sha256": "c5369a7d0604b8e8dffae047c83903a30a026ca98b15bb5771a4e2cf042c7c80"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/EOS_2025-02.parquet",
+        "sha256": "8d6af5790da4e5b37a1f0a8e2920f94e18dd4cfc497289dc8f65427fab3a0255"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "EOS",
+      "month": "2025-05",
+      "rows": 489,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/EOSUSDT/1h/EOSUSDT-1h-2025-05.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/EOSUSDT-1h-2025-05.zip",
+        "sha256": "3adc7f5a4b8ecdb87541f86da858d4c41190cbf5d215b50122875b7f5b8f39b4"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/EOSUSDT-1h-2025-05.zip.CHECKSUM",
+        "sha256": "5f1c2ba344c481da2f615b3dc667c4b4993e40a1967e536fc2906ca60cd2d841"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/EOS_2025-05.parquet",
+        "sha256": "b2316867275d8fb63c6b3caac8c6177b6724cdc6955d95f5ab4a76ebc571cc10"
+      },
+      "terminal_observations_quarantined": 1
+    },
+    {
+      "passed": true,
+      "symbol": "EOS",
+      "month": "2025-04",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/EOSUSDT/1h/EOSUSDT-1h-2025-04.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/EOSUSDT-1h-2025-04.zip",
+        "sha256": "e660115c61e3ca9613ff433342d7ff093bcd79ff726ece8015d863218b01a21c"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/EOSUSDT-1h-2025-04.zip.CHECKSUM",
+        "sha256": "7722b102e080b87d1c81229192dccb49e393d767b30772eb22eb638948e32e18"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/EOS_2025-04.parquet",
+        "sha256": "e4f0c2c2773571819f44c272cbb670ceb6dad3f7810250c7fe3f6bebb8706bda"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2025-01",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2025-01.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-01.zip",
+        "sha256": "cf71bf79decf0440e985b6afe5876597f66a8aa6c2e88e832a5ece77ba94a94f"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-01.zip.CHECKSUM",
+        "sha256": "6b9617f321644dbc9e194a4241580916a6963f71089669d520eaf4b6b99f374f"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2025-01.parquet",
+        "sha256": "93478b456ea4d7ece6160e20dbbf13b33b137ac54d7c625549d344f6d5870a7a"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2024-12",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2024-12.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2024-12.zip",
+        "sha256": "9dd7ebb161d70877ebad14da535c829dd4e4486b3b21aea7e44e2a8b29d1da4e"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2024-12.zip.CHECKSUM",
+        "sha256": "1b15209be8b66a47a7154bd8c9e840fe0fe4a60483b421f51a0c7b984b6a02eb"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2024-12.parquet",
+        "sha256": "fb319f3e011c512d2ff57f3168f95cf565cbe8e6cc16dfbcaadae58d5b471b45"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2025-02",
+      "rows": 672,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2025-02.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-02.zip",
+        "sha256": "053cfbd6a8c4ea1fc136c677acd397547841e9bfc024eca5955146c6d4555a9b"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-02.zip.CHECKSUM",
+        "sha256": "8251b27821a60f0004af0279ed9c52132138c0190256818f7b6cfbe7278c1efb"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2025-02.parquet",
+        "sha256": "999d1bb6fa917340df0fc4c2a8b4ac984b5fca03e07796143b632df8ff4bf4bb"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2025-03",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2025-03.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-03.zip",
+        "sha256": "9aa1f18f3e028692db179fcd479e23502e2db9d239a54631674fb457b2721479"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-03.zip.CHECKSUM",
+        "sha256": "329365243654114098f017baa2b02ee9ca4fc79839e496579b277d722775e1fc"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2025-03.parquet",
+        "sha256": "c4316f9a748b0cf04d4e5622957d7d6dd4a87f9fda66053f69728b7de544843e"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2025-04",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2025-04.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-04.zip",
+        "sha256": "db5c36ac6f6d543864b4f8dc2fc6002910512cf3d502f81832c735439bdaf878"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-04.zip.CHECKSUM",
+        "sha256": "6d1f6a878e6db52075a1af9ee731587697e5475ee652d758dd26646f70d9fdf2"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2025-04.parquet",
+        "sha256": "3ade03732bcce6cc2100775bb0b10bd7024b2fdca65e4a07b2a978f1bca47c09"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2025-05",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2025-05.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-05.zip",
+        "sha256": "c2b561367df0046184143f2972816588358985845b2789cdf688384f3fb881fd"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-05.zip.CHECKSUM",
+        "sha256": "bb0f5923696cfe5995ffad2b0fcfbd044aade1001a4ebfc0bd20c88d2730618c"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2025-05.parquet",
+        "sha256": "c8510944050a79a959fa3ae8f7e51d6798701286eb676fbd34475fd099ccf87f"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2025-06",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2025-06.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-06.zip",
+        "sha256": "abd0e6e3a2b153a82ade590e819363a6a0312b9ebff3a5122d4cf724df1067b5"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-06.zip.CHECKSUM",
+        "sha256": "55c435f44f81f7e4d9bb1127d13d859f69eed51f29347f7b385bd401bdf943c9"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2025-06.parquet",
+        "sha256": "ab608b370623a6876ca74341bde4165686b7b2bcfbaec288edbe53367d9837b8"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2025-07",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2025-07.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-07.zip",
+        "sha256": "7f714f746d5d2a58b536417b0c7a9e44649bc07d1b25e437ac27311cca4ef779"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-07.zip.CHECKSUM",
+        "sha256": "ab741179ec19ee0c44532db959f282934185a05cc1b0bcbf8a130b4cbd6abb0c"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2025-07.parquet",
+        "sha256": "d820786cac6f3ea03d8daa6e52de2aae3c6417f016e0083c4d5e646256d1cbe5"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2025-08",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2025-08.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-08.zip",
+        "sha256": "e3987839ce41eb6c8a1ebd23eddf6eb7d578820d93e1178d55076a8c390a0172"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-08.zip.CHECKSUM",
+        "sha256": "b4764ba475f1a6cee2d5ddd0a294df59c15303b10c2d4c7e492eaa027f88ebba"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2025-08.parquet",
+        "sha256": "af729a3d563b5f70a434dcc3363dcf828faee51ede51b8d9a5226621361fab81"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2025-09",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2025-09.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-09.zip",
+        "sha256": "01a1536919dcfd4362607783c544d3164b14c42c45c7526375e1dc0d8453153a"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-09.zip.CHECKSUM",
+        "sha256": "fd252fa9c2250399d2f0448fcdbeb4057586e3955e520d2fbc33383190723c54"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2025-09.parquet",
+        "sha256": "5d0f063af41d129d94eb1808629e189c163558c0ca4eb843d7feadd08c0c6fbc"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2025-10",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2025-10.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-10.zip",
+        "sha256": "d41e9a80a9ca08d197401a2b18699263424fb258295b07cd6440f6b2bf8a5478"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-10.zip.CHECKSUM",
+        "sha256": "ec5147db0f7ffd0aa32436d0d34ba1a9498caff78b252b7394b2d755c4facdd8"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2025-10.parquet",
+        "sha256": "20002510c6b63f2711c2990813ab8a30884635e96148d8ef8f8807cc42142bcb"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2025-11",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2025-11.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-11.zip",
+        "sha256": "78fe2f1f6b73b26b8215e51e6978ac1a3f796e78f4af170078ff23baa60dab77"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-11.zip.CHECKSUM",
+        "sha256": "e3a4a8c16743fcaf24589de028e42989d2ffc93e8a34217ef8377a2c6dfb39a8"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2025-11.parquet",
+        "sha256": "39669b9855a9b39f7ae4c0fd4dd280f9734fd96a1b22541c17e4084ee2bbb599"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2025-12",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2025-12.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-12.zip",
+        "sha256": "8ddaf93c978ce71fa7f6fd296a09a93509d94291eb5c5dada13120bbe4d576fe"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2025-12.zip.CHECKSUM",
+        "sha256": "3947ff4c00828257dfeaadd7163483951a65e15f274b05cc9f4867fec2258060"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2025-12.parquet",
+        "sha256": "91fd437bdd590d32c3a748ddd451e1e6a5b879fe29bdddf0c1f94d0e7c2f5cf6"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2026-01",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2026-01.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-01.zip",
+        "sha256": "f3db3fa43edb1572ed3ed1f7e51ed597aee3af772faf6668eff339c490238e11"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-01.zip.CHECKSUM",
+        "sha256": "1de2e65af20050750e1e74017296900b1fc3876a94a214c19a5031c513724632"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2026-01.parquet",
+        "sha256": "3af2dbf3707ddac7b80183322c63156dd824395365ca96205a05d3f06e26e2a8"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2026-02",
+      "rows": 672,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2026-02.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-02.zip",
+        "sha256": "72f6972490f91b342fe75ea2296befebd742272f0369abc2c26b9aec9e735162"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-02.zip.CHECKSUM",
+        "sha256": "1a828232d767c9aa6b9bbede2ccbd26d61800fa7b1617207b76628744b9ceeb7"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2026-02.parquet",
+        "sha256": "4afd772d11996691725a4ce67edc1030fca0604be1366c187cc29b1dce872226"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2026-03",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2026-03.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-03.zip",
+        "sha256": "e9a83a342e4a97ec4a9be622b8d29dfb29c6edc0aca428e3d567b21695d52530"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-03.zip.CHECKSUM",
+        "sha256": "a6af313ef2950c3c669e376e8899a8c7d9de081015f5d9610a6a4b09b349e5c2"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2026-03.parquet",
+        "sha256": "0d1ba3d5681f9e08d1773f27b8fddc63eb6f0df7ef524992565867b0ca665e0c"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2026-04",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2026-04.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-04.zip",
+        "sha256": "1a92f4cf636df260a14f42a4cd102d3b735327d01dbba697b85c8b47da3225b7"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-04.zip.CHECKSUM",
+        "sha256": "a8ebe645b16b6a2548acdd81ba0fe8c1938e8d77e457ee8464e1f21c35933b24"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2026-04.parquet",
+        "sha256": "3a2c0a3f1ef9920e3223475fee0a7c8c2fc1af99078622a421598d17f933303b"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2026-05",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2026-05.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-05.zip",
+        "sha256": "e3e707f33c8c57c99550aa6d30e4266ce4685939a9aaecc5f23c11e1671164db"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-05.zip.CHECKSUM",
+        "sha256": "9330723c6c216ae0a07dc09844f52a79a4e819a330a65c8eeb5416118c8dbe90"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2026-05.parquet",
+        "sha256": "85cd705c7dcc1447e7a6df3d2230fcb705b343e28b23b492e6b7555c8e3d9529"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2026-06",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2026-06.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-06.zip",
+        "sha256": "a314cb56d7c1b83c4d2d5cc0cb21bf06ae8a6a94187fa129ffffbff05cd9aaa8"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-06.zip.CHECKSUM",
+        "sha256": "3587fcd581e912520629c1f746cfed3d79fc18f600dd6c706bd3be2a7d9ab94a"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2026-06.parquet",
+        "sha256": "6d0f0cc5403ea0bf118564e0e26e9886de3bd66b9f4c0de5407815ab2edf7a3d"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2026-07",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2026-07.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-07.zip",
+        "sha256": "84fade8b360f60c2a8f77056a5d7692852f34d0465cbefcb0481905d8a055a6d"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-07.zip.CHECKSUM",
+        "sha256": "42861ba7b3abb11d4251b66b86444dfef71580fbfcf76e15964f1af0c2c18f42"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2026-07.parquet",
+        "sha256": "60063ad156d7cfa2e3a025cb31c62ccc3d69cdb2f9435cbb6a1953ac510798ee"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XMR",
+      "month": "2026-08",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XMRUSDT/1h/XMRUSDT-1h-2026-08.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-08.zip",
+        "sha256": "1c18038553b8745e07a1854ced7ea7c8bba2a8e9bde290e807503bb2abcf7457"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XMRUSDT-1h-2026-08.zip.CHECKSUM",
+        "sha256": "f65ad7d33701dce4cd3e77129d6438650b356193615372178b3d84824a7c8406"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XMR_2026-08.parquet",
+        "sha256": "0a939048a27d9b832926177fb09ec6c28c9ce25c9c02a8a4d30a56283cd14f65"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2024-12",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2024-12.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2024-12.zip",
+        "sha256": "524cdc71d05c4017b193e9a59b2ce69be08bfed8f5c89d959895687a0c3a9ed2"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2024-12.zip.CHECKSUM",
+        "sha256": "3daaac056971ae565f28330f3cd2fee6b06cc055ccc3e452ed4219da6476a550"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2024-12.parquet",
+        "sha256": "e5713b52b1a3ad2bc421cc4935ae3d8846db2804abae5e83712791e9080c50d0"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2025-02",
+      "rows": 672,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2025-02.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-02.zip",
+        "sha256": "251045c03be4ec21766f07b877d57edb91a21da762336abc02799c5bf347faf7"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-02.zip.CHECKSUM",
+        "sha256": "e73ff099572cbf98e1b59d24d49e3b8987018cb29690813328b7af5e2cdb490a"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2025-02.parquet",
+        "sha256": "912ca7633e59ddafcfd78e5bcf71c2c5b2a2fa9ff3a2c218f4eca69dd66b7c35"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2025-01",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2025-01.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-01.zip",
+        "sha256": "2a74d94d09bab4f8a39f270f30de7d8fac31de5d4a370d45e5e3b39a0032e88d"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-01.zip.CHECKSUM",
+        "sha256": "7ae192992caf5aa812367b0cb4e02325df9d4b04319f8de23e519412fac109f8"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2025-01.parquet",
+        "sha256": "2383124e26d2d3478f69f7883ee0e2546263f3e23ea24b0a53761fd69f81ed65"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2025-04",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2025-04.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-04.zip",
+        "sha256": "4bce38b9b43408de41d5e9abd7a37eef044e3f14d5fc938e61665f74ce02a9e0"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-04.zip.CHECKSUM",
+        "sha256": "ea737adc6340a773b515882d4abcb7c646d01aa0b52217ae077f9bfd206197b2"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2025-04.parquet",
+        "sha256": "5d06ba9c04276f0779b0d0d6aa275756f2796f4492908d3b4129016bcc255263"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2025-03",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2025-03.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-03.zip",
+        "sha256": "ee4cc240af605269b0bc3b67c9b02acfbf740854ef808a9bcbc6bb223aab590c"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-03.zip.CHECKSUM",
+        "sha256": "6cab1ab92263711e4f566775e5738b48c1f6cdf20523e0b66de971baefde16d6"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2025-03.parquet",
+        "sha256": "554d94fc8041b9153d6810ee429f3a731f379a7474db746742ad0a23e9638ed7"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2025-06",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2025-06.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-06.zip",
+        "sha256": "82f6cb9bb187152078aba0779835c15ed44cfd953091f889082f63d4bfe26120"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-06.zip.CHECKSUM",
+        "sha256": "8cd35f0cba3829b7b8127d8456d421ed63f45c714b893f56bd453d454f0ddf00"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2025-06.parquet",
+        "sha256": "59b39a431c035148ca2bd07840d97af817b1bb0513531f6087c1c9476f57936b"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2025-05",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2025-05.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-05.zip",
+        "sha256": "93dd3fb9e8363144cc44d1933b78652c608379cd12ef492cb5b29c6a090c849f"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-05.zip.CHECKSUM",
+        "sha256": "c5ecfbdd52e328de58ba95af9315adb49619540bd144fe1b830dc106e86a9537"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2025-05.parquet",
+        "sha256": "f59332332c33d8c3b72b77b0578460e81e6976b34bce6629f14ce7194bb2b592"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2025-08",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2025-08.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-08.zip",
+        "sha256": "003e16ecd159ddcee1faa5f54f4ec79bfa2a7914016c6dbf33bab24d3668824e"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-08.zip.CHECKSUM",
+        "sha256": "d75099cf0a134126812697513f4617afa00d6f48ba6fa8a859e1221e761af780"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2025-08.parquet",
+        "sha256": "2219d87a355e833319d8e1ce429ac26bd6cb73d1f94859c91f69630d32b6f9d5"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2025-07",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2025-07.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-07.zip",
+        "sha256": "ce32e46d800ee9073e455bf39c886b1db30b33bf3372fe75f06f500895ba6bf3"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-07.zip.CHECKSUM",
+        "sha256": "5b4eb03e80b18a120dfb755981e8aa584335345e43b36eaa72d78abc1a925bdf"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2025-07.parquet",
+        "sha256": "6d7a434f62d2f7bc4d77d79e858e65ddcc7437f1299ec33b21c547e7089fe0e4"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2025-09",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2025-09.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-09.zip",
+        "sha256": "8d53c15814b1dfbb6d3b469be344896f58a63f2265a39e1569f3f97bc539056c"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-09.zip.CHECKSUM",
+        "sha256": "55e6b0bdb31995bf1b950f56f39d838957d8d83210ed57d516777ad3e24f7acc"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2025-09.parquet",
+        "sha256": "22bad23e88c2d9a48d1b00859c8c5cb5fb32abbc7cb6182d1f5ad5482d2eed42"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2025-10",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2025-10.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-10.zip",
+        "sha256": "b725d990f229b5da103f8f1f4d04e8c5c1f4cbf813036d6a9aae7095ea8793bd"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-10.zip.CHECKSUM",
+        "sha256": "7faf62e1ace95fe5ed28019f1d6a3b7ca74a785609bbb5668219abebc24f571c"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2025-10.parquet",
+        "sha256": "009710b1459ccf4dcf47baf46bf9e53c3e26d9795e2df38e6718d6417851cb26"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2025-12",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2025-12.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-12.zip",
+        "sha256": "b9213731a904ae4f83bf04892d119795207bafd22e9f67489ba7df0634e295ca"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-12.zip.CHECKSUM",
+        "sha256": "9e19a026e388a5dd8f4977299e470ab71ca1b2b4f895e6dee313f6457c58cddd"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2025-12.parquet",
+        "sha256": "e100fa0f54debcd750b5e9ce03e5ae072e7c5970e1bbbd85e6154d7883691639"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2025-11",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2025-11.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-11.zip",
+        "sha256": "48374852843dca72d88f8740f52c6f6cc9c81e31930ba2f03fcf4d4af5e1da0c"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2025-11.zip.CHECKSUM",
+        "sha256": "0e560e2c7c5c34aaf388b3569946e6cc7de5d9ceafb34b59b260324b83ed965d"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2025-11.parquet",
+        "sha256": "3681592498a45e5deb1f5f9c1a79ad4dc6eddf97cbbd17138a53102bd8028f06"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2026-02",
+      "rows": 672,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2026-02.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-02.zip",
+        "sha256": "5b02ab6bd26ad5c1589d58705e3a46d3ed08b86d543b9a49cc9a60e915871e79"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-02.zip.CHECKSUM",
+        "sha256": "6cf676909a808cb4429345e57785b92b2e2999b9020e0844cc73a126c36b82db"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2026-02.parquet",
+        "sha256": "f2ea554b9bc667aec6dd606941c949de415f7cebf243adaed3dea8a63d6c1639"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2026-01",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2026-01.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-01.zip",
+        "sha256": "af954beb060ca52ead38a94c4a28561e9b28dc53af4608d606cc688155e04fd0"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-01.zip.CHECKSUM",
+        "sha256": "81ffff5dae203792fd5db3166042aa65dfd66c2265f92464f60b863e23be12e0"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2026-01.parquet",
+        "sha256": "c94e81d59247810bc0dde6c0b18faf5e14af843ec9e177a0f34899085eeb8696"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2026-03",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2026-03.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-03.zip",
+        "sha256": "a74a50292a87bb684ec7ac98efe0d777810bb2b4f76279215fea83b088ff5473"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-03.zip.CHECKSUM",
+        "sha256": "982de845252b5cfacbaec460bf805ca19ccaccf9967562a0d8b4e56e5e288e43"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2026-03.parquet",
+        "sha256": "80bd9be9a5664a02751663db3daf55bf184922d9e4e7996f2a3efcd9379ca71e"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2026-04",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2026-04.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-04.zip",
+        "sha256": "1fab925066f92242762f8cc4fc84a9daf3ffbd562816993accfac76844366086"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-04.zip.CHECKSUM",
+        "sha256": "b78f86a5465524847828fbd4942bbbb665c8a399bed457a4e87aede3fcc244c1"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2026-04.parquet",
+        "sha256": "ade536c1e7fcabd500b698f112a14dd9f21cd54aba9f8a6c4d67f1473c7c4114"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2026-05",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2026-05.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-05.zip",
+        "sha256": "ba7a07cf498180a39e5ece5cf85baa604ea630e1698e1a01fcb82fb0fa2977c0"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-05.zip.CHECKSUM",
+        "sha256": "cc3a7ed0c7bdc433e6c98168dda0593bba68d5aa930d73af2b7a38ed71e8612a"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2026-05.parquet",
+        "sha256": "1522b29b7d6a0cd366f0dbdfaebd0417dbf7cacff03d44c21c05bd7ad50fa3eb"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2026-06",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2026-06.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-06.zip",
+        "sha256": "70d3b13fd57943e5d6124a79be6bb0f51c8c04fb1159107391aaa7656594e312"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-06.zip.CHECKSUM",
+        "sha256": "0a4ebbef0d569b6b0e1524994a0f038ceaf87be93b29f9dc60881764230ccfdf"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2026-06.parquet",
+        "sha256": "d5bbc9a3098bc0dfa52e37d1a9e1a1dd41a984ce3fa8e0dbf2456ae31c5316a1"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2026-07",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2026-07.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-07.zip",
+        "sha256": "2cd94c107ce6f69143603ed127b37f3a269461e3227031703bc082f69e916b82"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-07.zip.CHECKSUM",
+        "sha256": "1add528f1f59a4ba76d4c0be181032994fbca3240ce966e063ac804bb27567a7"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2026-07.parquet",
+        "sha256": "03b74c47d62cdb38c3123d55cb4d8128b76161f8533f143ea2e4c4ff62162441"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "DASH",
+      "month": "2026-08",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/DASHUSDT/1h/DASHUSDT-1h-2026-08.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-08.zip",
+        "sha256": "037dbee7579513b5cc7867b1d1c78d4556726f9dfdf33f44011e5935acf46427"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/DASHUSDT-1h-2026-08.zip.CHECKSUM",
+        "sha256": "28f3139694da9c9f53f59787a005a411a69b24b0345ea47e5580f97f3e0068fd"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/DASH_2026-08.parquet",
+        "sha256": "bd10cc630ad2b2af54113a222cebd37076f4065371bb28abfabbfcdd5ea9dddc"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2024-12",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2024-12.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2024-12.zip",
+        "sha256": "d6a046955ea54f1fea5d4dccb4f6071a47932bcf4f3666161628c5d9463bde3e"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2024-12.zip.CHECKSUM",
+        "sha256": "cecea8b9031d4fb1d16bdf65f63bd2b081f9ec696ea66ebd36a29178871d7324"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2024-12.parquet",
+        "sha256": "e65456f6f49a8ff947c1aea9ca4f18c5837e1e0c2aff511f8d59ec6e9ee15095"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2025-01",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2025-01.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-01.zip",
+        "sha256": "2cb730750d5f0901f0bdc0c228efb0a23eba66a1f9208a6ea97eb32f9e2a7bc5"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-01.zip.CHECKSUM",
+        "sha256": "81b701b08194025bc930b945eedf2f0704a1a1669d88d6e4b2f0ff484a2d2d31"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2025-01.parquet",
+        "sha256": "ed2a290be0453fdc69cff9be16be18a932ca817e502b40d8a2fca0283520f019"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2025-02",
+      "rows": 672,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2025-02.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-02.zip",
+        "sha256": "851c5b2785845c0717978bf517c72092e6bf3d15d6a4bc4faf8a4f4b29878d37"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-02.zip.CHECKSUM",
+        "sha256": "66f4d8b8f396faa0cff0e3918eaa8e5fe2fb78ce8cb1945a0d7fe2b1a30191ae"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2025-02.parquet",
+        "sha256": "dca73c4efed4245889421e0f5b0ded0ab6dc87de753ae087916fa75e839da866"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2025-04",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2025-04.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-04.zip",
+        "sha256": "5ed523be2d1127b5bd718629ca79ffab4a496949a807bd4125704930138d799b"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-04.zip.CHECKSUM",
+        "sha256": "c1d2c2475bfef65ff742f130b43ec7879f77f74284a145d919bff06e91f6406b"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2025-04.parquet",
+        "sha256": "7e30dffad28006f9407410dccf1acde8705ad246c5c01850b6a3d7278a0eb4af"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2025-03",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2025-03.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-03.zip",
+        "sha256": "f9470c0dbab5de80a25a9a2876ef5a35b254e1b5e31c395a1b1d4e68f769c9da"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-03.zip.CHECKSUM",
+        "sha256": "bbacb8b87f3f2939154830498e1b78d8feab6d4ae5fb2d03e78a3eac70340e72"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2025-03.parquet",
+        "sha256": "1d9f41d9c426889d3e160653f598e89227b2efe27946f11884b32ce90eff43df"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2025-05",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2025-05.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-05.zip",
+        "sha256": "e286e918f3436cea794de030bbc9ab91cac9892e2c49b8073c82df4c0f7f3048"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-05.zip.CHECKSUM",
+        "sha256": "1616e17c8d556a52c9650c75e24d245e79369888a923b1c1d2b662a91213f0e0"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2025-05.parquet",
+        "sha256": "44782c348e4cc919b8f0085f6c41adaccab0d0f101a6a9117c7af450fe80cd91"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2025-06",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2025-06.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-06.zip",
+        "sha256": "d2e4c9f89b3aad2adbb5a3700e8d87d1ff61968e7c33aa32b619c61998dd6ef4"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-06.zip.CHECKSUM",
+        "sha256": "1e8a47e18befbef85c37e139acca24f0dd3da815aa5ce520a72398dbe5da3a22"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2025-06.parquet",
+        "sha256": "97b17e28e767e289aa8be3e8929d51981dfdb02e5eb7af3e5f67947541df9cb1"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2025-08",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2025-08.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-08.zip",
+        "sha256": "a25324c35d6afdfd6ed0baddbec58850814ad0c33031992e4f87555534938f08"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-08.zip.CHECKSUM",
+        "sha256": "ec3d1236c5aed270704a786ea57524178e91b75c7624445143cbab9b54924e66"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2025-08.parquet",
+        "sha256": "6e024736cfcefa7d455417353a1020164560e7ea2190a40d923fcb0404d6cb2e"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2025-07",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2025-07.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-07.zip",
+        "sha256": "a5f2e18d003654b37cc29df0f8976ee9ebb7e4bbdb450cbf73575d2f09792a87"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-07.zip.CHECKSUM",
+        "sha256": "46c987823fa0f09872c82ecef6ed0199e52a4f0d6bb245a9a1e5698c04720d2a"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2025-07.parquet",
+        "sha256": "c146c8e73bfafc4f88494d609297755172b624621688c6cdda097f49f06a16db"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2025-09",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2025-09.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-09.zip",
+        "sha256": "09dd2992b93d74796923dace758c47a898166f5a4781a2af91efc127bd7fef7a"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-09.zip.CHECKSUM",
+        "sha256": "568c4cc7b98b71e44804b6591723770ec02d0295662d5f8279534a83bdfa9f2f"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2025-09.parquet",
+        "sha256": "1f99b01caec35648bb449c58fb3d94f43d4d309fc466a434475ace08a411ecc5"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2025-10",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2025-10.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-10.zip",
+        "sha256": "2c6dce4acbac64f0f2781d9170b3e8d739ee67ea47ab502f6df6c9c54cab34af"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-10.zip.CHECKSUM",
+        "sha256": "99f950295abf208d61ccf4eb690f46e967482fd0519652967ac2cc4514d4795b"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2025-10.parquet",
+        "sha256": "6154cf004df37a256d97d5e3a3b4056874c6f20d0c8e6af6084ae92397ad15e9"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2025-11",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2025-11.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-11.zip",
+        "sha256": "f095710813773bae9832cecd7ebd4f9ee6b5943e201e7175218eec9bc37fa545"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-11.zip.CHECKSUM",
+        "sha256": "3dab167fb2a871a2b8795f18990411d78c763682dfd5d430d12ac2a1b27dc367"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2025-11.parquet",
+        "sha256": "45546fbb1ab84b6e6e17199c56d35c2a1d77b021bbeae004a41837c5c2b93121"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2026-01",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2026-01.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-01.zip",
+        "sha256": "8383988462dc3d8c6b2b39f158edfd1e15a0a0a41fc3b0e95a215a8ea4ec692d"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-01.zip.CHECKSUM",
+        "sha256": "8cc88662c04a81e6211df6555592a3c6a347bd373c7326cabc29e63d07f5ed0e"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2026-01.parquet",
+        "sha256": "7ef79e95747f8db51cd2208ac74ff37d52e51e5e8a04b5a6c2a6f97f7f7b934e"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2025-12",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2025-12.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-12.zip",
+        "sha256": "8db4c9d4dd8fd7e57d5d9734406a6572fe42e3150ed3d1cf12a0b92e9a290f5a"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2025-12.zip.CHECKSUM",
+        "sha256": "998803b7df3d67c60bd21763fb66e06fd2e95d645ce32f5ed86d2f6e1779f7af"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2025-12.parquet",
+        "sha256": "01b39a254b4716c647e23c0d26fb0c751aa2ae20522555259ed4425d477498d0"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2026-02",
+      "rows": 672,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2026-02.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-02.zip",
+        "sha256": "9aa0cb077e22f0419b73eaef9cdc927e6563b89e455591f3a85f3318c100e2ab"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-02.zip.CHECKSUM",
+        "sha256": "0dcc279871e66419c57994aca03f3a55c0e970aa92fbe5c7380a28322826824e"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2026-02.parquet",
+        "sha256": "86c477f4022f872ef8db105a2b87124e99100b282990432d4bde38f37744bb3e"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2026-03",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2026-03.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-03.zip",
+        "sha256": "06387f30f7c73c77eb7af30ebbf7f69cf19b8bfd00a16e9ff01bdf6b2435b404"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-03.zip.CHECKSUM",
+        "sha256": "0c372f40dba6d452cb1d3766885912e28d740e4de7d48f5a4cbe5effac3527eb"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2026-03.parquet",
+        "sha256": "68685f6226c1731ab7d0446df66239a4fe82d330322f7bc85466a9b5c7158a3b"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2026-05",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2026-05.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-05.zip",
+        "sha256": "4e8b552fb40710bac3e6facd5ba8a0fcd68af8d3e54ad531a345d0ca35b325c2"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-05.zip.CHECKSUM",
+        "sha256": "8f2728c6fbdee9778ec4e6cfe7afe2385f9e44e86bd17904b14be87c38e14647"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2026-05.parquet",
+        "sha256": "7de43b378d95398c1858470f0c1a0476dc1e60cbcc8d4c66321222afab50793a"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2026-04",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2026-04.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-04.zip",
+        "sha256": "5fe2351c50b13e2f89b5899cf563bc9f9fb56193f128c79dbd1ef75cdf564b8d"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-04.zip.CHECKSUM",
+        "sha256": "e75374a6d7d377993f97befa86107a1af03c8a8e35bb5ab35f14176e84403693"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2026-04.parquet",
+        "sha256": "f742c18b4bef12907ba8c63bfc536056b311b7e101ceae901fb720e6ca2cc488"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2026-06",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2026-06.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-06.zip",
+        "sha256": "3479c4d11097104c1e530b49580f95dedd572ac3a88610f1a94282d2d0451e19"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-06.zip.CHECKSUM",
+        "sha256": "5c17b82c5291b249be9a76d1b6c96700e58fa77635508178ec63ce6017681e3e"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2026-06.parquet",
+        "sha256": "8b109e89359c7769ae09a2708bc59a4e476caa0bad6dd51d5374f4f686bd2bea"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2026-07",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2026-07.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-07.zip",
+        "sha256": "c0f4f0344fee7bb6e03ae2e1aed5ddc4ebd2c4d634a169f00acd64ece5b9b775"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-07.zip.CHECKSUM",
+        "sha256": "96164a54663a2fe176d6a501faa42fe2e08f56866d9d3ef1336de62ca5b5fa4c"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2026-07.parquet",
+        "sha256": "92630feed5c08aaf5ff0aac7ca248fcb78da7dccd0018d5b7537af261e49d358"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2024-12",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2024-12.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2024-12.zip",
+        "sha256": "781c6bcfd817c704c890a53cfc89a8bd748573a4543776779c3779db0cebf5be"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2024-12.zip.CHECKSUM",
+        "sha256": "ca9b22c29192e20329156f2243e3336e08816b59041e851be1aba79a2d4fe7b0"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2024-12.parquet",
+        "sha256": "661796c20403754b6dc2a9c6cb21a82f0a910081d3b2038c59006e4731c74cd1"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ZEC",
+      "month": "2026-08",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ZECUSDT/1h/ZECUSDT-1h-2026-08.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-08.zip",
+        "sha256": "281ecf91191223880a117fbcaa8f3ebd89050ebfaad1a220cba11d6106899f95"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ZECUSDT-1h-2026-08.zip.CHECKSUM",
+        "sha256": "b3cd054e53f54a08a84367cf2c77bfd6e3f4d036fdf40f48328ca584896008c3"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ZEC_2026-08.parquet",
+        "sha256": "d668c4ef9be5d74df5a5092458cf1afeff9b5ef7cadbc2ad1cc80f6be3b1cd24"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2025-01",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2025-01.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-01.zip",
+        "sha256": "f7f0e588d2d46ad22a2b2c6a96b82c487a8ac3223f6fbb94f6891102d0dbf34a"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-01.zip.CHECKSUM",
+        "sha256": "237afe41847a23e688f6abfc090793e3e214d966188f88b65fe121f15622638c"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2025-01.parquet",
+        "sha256": "22b7dd32d9a53bfbaa4c01d5ca19f7cf60a69ef8abbf7d2626951bdd8b17f66d"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2025-02",
+      "rows": 672,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2025-02.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-02.zip",
+        "sha256": "d60ef2f3be6414dc98f07dede70fd7dd6735abe0ca69cef74f66c2c29039ff61"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-02.zip.CHECKSUM",
+        "sha256": "de31e7e0d685c16a6ea1cafc1b80857cf9520bc52e2d361c3cded5b1f1271a86"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2025-02.parquet",
+        "sha256": "e11132a6f213e8b623dfda2b38a6ceabdac53f26c6254fe20ab9ae07a34b099c"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2025-04",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2025-04.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-04.zip",
+        "sha256": "24d961d8be78baded272ab8c076f43ca8ff3b35869187a980201a91bb6ba17c8"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-04.zip.CHECKSUM",
+        "sha256": "fd8629cf940a896fba2a3dcabb46395144f088733661ac11d83d0dbfc12d9956"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2025-04.parquet",
+        "sha256": "573c0293577cd9a63ad47c0cf57ca4a0bc1926f99bc788e39942b32b2e73478a"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2025-03",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2025-03.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-03.zip",
+        "sha256": "1b29ecaf68f0ae96aaf6e04126c87ebffbf50ba3512333c003c764ff13b037e7"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-03.zip.CHECKSUM",
+        "sha256": "455f45b04718144f188fad81acf7732034d43438f200f0f85f9dd2eeab5c439e"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2025-03.parquet",
+        "sha256": "1182bfcd173ff6c93a26aba59ed5d77f29951c0913f133b450b7b7c14063096f"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2025-05",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2025-05.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-05.zip",
+        "sha256": "22865245182296d527d3be85cb676f8be19f0a2282149a1dab38fefa5c042da1"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-05.zip.CHECKSUM",
+        "sha256": "d9b2f37709beade66f8e0e37bc5ccc5432e08f470ea03fd38a8dd9d78f9a6b16"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2025-05.parquet",
+        "sha256": "54d515613c271fdd838c820313e210ba0a864b3af11beb72cc27b4ba50fa1f36"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2025-08",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2025-08.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-08.zip",
+        "sha256": "d3b3738a04f1ec45881ab43995cefae502a8521d98e474bf8eb71df4f14729cc"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-08.zip.CHECKSUM",
+        "sha256": "16f2f5b076b649b7c6a47d3ddb9b3c103373858fa2c3d7f39f9fccacd8b8fb15"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2025-08.parquet",
+        "sha256": "c6196cf78d13bbe0630f5499ea542c1e7066e23a418fc906a427698213241cd4"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2025-06",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2025-06.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-06.zip",
+        "sha256": "195efc99f77c5465a5aee7befb91287376d4933cb3a593262762d5f22e4645f7"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-06.zip.CHECKSUM",
+        "sha256": "74c68369a65388a694ca505b00a796cdbf9e9af71b3e68dabc6c983bedbb8058"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2025-06.parquet",
+        "sha256": "50187e21ddc1fb973ad6e4abf158cf5981b54f4746dd3bf7af2e1e2104199e19"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2025-07",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2025-07.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-07.zip",
+        "sha256": "f28d37917746d1bae653074c7fb7f127c22b1f8575f186bda6f127e671ef7b89"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-07.zip.CHECKSUM",
+        "sha256": "1a73bd3f0b83c6d61f5f3042538a736afb4d1fea129f5ea860f03a928efa0140"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2025-07.parquet",
+        "sha256": "afee694a919656e8f6f3673521c0fd6b578a4366812cd249658128fa8110d21e"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2025-09",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2025-09.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-09.zip",
+        "sha256": "a58a6b66fb77513cb8fd94b6e022d7025007252e4e4f239d0c15ce3a84df50f0"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-09.zip.CHECKSUM",
+        "sha256": "767f2f4431930884e993a3575a7db2b1f06cde394821dfd8fd12c290e17314de"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2025-09.parquet",
+        "sha256": "512b7f6742af7e0eda387b850cab3ae131fd9e6f8deec5190d8571f5ec0e2cc8"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2025-12",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2025-12.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-12.zip",
+        "sha256": "7097a4bffbe3cfbe5a3368e53314722f53d82f324e7205e0ecec3d574702dfa3"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-12.zip.CHECKSUM",
+        "sha256": "6c8419e38384a0391eaadc5067b35b87072f32c9acc24e6b6ff40c285ad64c95"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2025-12.parquet",
+        "sha256": "0a2f96236c71965934d1e21870455208325cce7d4e8ba2f0c62fd6dc12328005"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2025-11",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2025-11.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-11.zip",
+        "sha256": "72bd25dcee9a116fc3aeb8e72df1d4d587454eeeed5d3dae8f0c12a906475da6"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-11.zip.CHECKSUM",
+        "sha256": "ddb33b26ebf9bdcec13aadf344af05fd4fd2dc98111271b09af74bbf4af1c799"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2025-11.parquet",
+        "sha256": "d0c839719ec53d88c8c9307a3560a5ced1d968ea655c88af0cbb94791fcedeec"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2025-10",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2025-10.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-10.zip",
+        "sha256": "109889e3a4e18883bdb9336f186e3c68dc79163286c5109af0cb324dca46139c"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2025-10.zip.CHECKSUM",
+        "sha256": "a427409d0b054d9c675549cb0a100de93ac8046874ef82186b3e01e51f4eb1b1"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2025-10.parquet",
+        "sha256": "9b026b86af8e478dd6252270cb34c4107c92656c7db7e1afd6108994c05a3c78"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2026-01",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2026-01.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-01.zip",
+        "sha256": "f281d03e9c8d6ce867da2278575f8d01e69eb6f061b50cdb92b6bcc850b7d5ab"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-01.zip.CHECKSUM",
+        "sha256": "347799b954e03db2c27d7ec0fc425506ae587e1062ba43288c4c296676655478"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2026-01.parquet",
+        "sha256": "186729ee51143a4a26709efa19207b7930d5f9cb46ac1673dfa03f0c2f811ef0"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2026-02",
+      "rows": 672,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2026-02.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-02.zip",
+        "sha256": "f76e4e431fe25a86ff5e7f48df4e0cd4b34c535f1983a07b75105147a5cf2e6c"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-02.zip.CHECKSUM",
+        "sha256": "9414c5a095e0a75f05e1afb6ebb87447ae07b671dbc9a5e0d899c5be91391f96"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2026-02.parquet",
+        "sha256": "25cc40e037639c56c86456446bc8a040f4e7fd02c9a8b4ee073ea0f2721d17fb"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2026-03",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2026-03.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-03.zip",
+        "sha256": "109419131275139447748aeec8bda3afef2b7b6ecdb7063502d8ea33462aec0f"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-03.zip.CHECKSUM",
+        "sha256": "0c6d3027012d332d03aefe0305860534d9bf821fafb10e82e3fa80959d45d5cc"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2026-03.parquet",
+        "sha256": "ad29dc2974c4c37d8a630ecdffc63eace5805f0abe0fb1d257ffb634e7efc75a"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2026-04",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2026-04.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-04.zip",
+        "sha256": "2a0c056557890785810be8cbf72b0b07b58f7e634c074eb45986f472890df5af"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-04.zip.CHECKSUM",
+        "sha256": "39e281896720f9b4b51959c13cb6fa879be3129a59e0d7306bf8118ead515065"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2026-04.parquet",
+        "sha256": "1877a6535d45b850241e98eaa31c759100b886762e6054677786aa9b7e757099"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2026-05",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2026-05.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-05.zip",
+        "sha256": "7921c143f0a138309399af9d53a0d85acf6b1e252f47095fdcb237fd9633eb26"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-05.zip.CHECKSUM",
+        "sha256": "d9207e3d2a3f51e9be2312b33856335683f449a3c75fed6305aaee3d9fde1bab"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2026-05.parquet",
+        "sha256": "b3215009b7a87db9589db638c4821a36d296b401fb9619b49db885b2e0da5ede"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2026-07",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2026-07.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-07.zip",
+        "sha256": "64ce3358f325cb7accd4d0eefa13f03f066cb57bff998d2ebac75ed61acb7f7c"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-07.zip.CHECKSUM",
+        "sha256": "1286c3bc4daee9f7d461a318cde8ab8a642e5531311edf9ea293413bfb7538d9"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2026-07.parquet",
+        "sha256": "8b6acbf9581d485744d0b454e9004fb39cea4be225666b0c63730a52976c0f11"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2026-06",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2026-06.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-06.zip",
+        "sha256": "27ea7a5cd249fcec39168965864b534e6bfe12d1937a4264171e25f9a1402c02"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-06.zip.CHECKSUM",
+        "sha256": "e3ecd60255efce7e5168cac1c880f96a984f005eb5dd84280314fdac317512f6"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2026-06.parquet",
+        "sha256": "58c7cdbde7fa3c7edd157f18a6facb07cf5d36b265c7aab80397124cd94b7781"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "XTZ",
+      "month": "2026-08",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/XTZUSDT/1h/XTZUSDT-1h-2026-08.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-08.zip",
+        "sha256": "83f057d73121dd5cfcb7eb0170c4e65ca1bda1fae0ba2e038cb6d0987c34a5d8"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/XTZUSDT-1h-2026-08.zip.CHECKSUM",
+        "sha256": "6d6383c6ee4ecfefd8cbdc6b6b12736aacfe0df7620002612b1d3e5a4a3be851"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/XTZ_2026-08.parquet",
+        "sha256": "08f5730b993874f4c8958e737c22ca9fd206234e242d24120f54dcdbd80091d0"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2024-12",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2024-12.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2024-12.zip",
+        "sha256": "f88d39469c1604788d4a4f08a3ad83cac278829ad3646c29b62d6f7f856203b7"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2024-12.zip.CHECKSUM",
+        "sha256": "884d80389cf724ca0ac94bd306300642a2e906136d1da8e6b36fac84a9c19a0e"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2024-12.parquet",
+        "sha256": "aa86812cc7e072f191d6dbb90b83ee283719d0f98f9a488ca3c012880edc3fae"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2025-01",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2025-01.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-01.zip",
+        "sha256": "d5ee2489318a74e28da622d74c8abde8329fdab83c59177c989886dbaba5c460"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-01.zip.CHECKSUM",
+        "sha256": "9acfa8d2790a9278a8141170ce37d8f7091922a891b7a80874fa6b3ab5504ff7"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2025-01.parquet",
+        "sha256": "edfeed1864d138cefd4cbd76ab0da3c4a8592d3f6d6f66da605a54872e6c3e14"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2025-03",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2025-03.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-03.zip",
+        "sha256": "844076eda3bca8387f0b718efb0548984f988b17d2f0fd7cffa8bd1b11375177"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-03.zip.CHECKSUM",
+        "sha256": "02cb155262a3d27bf94eed5007264d7c6f512fd80df8140b094da6b230fb3c56"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2025-03.parquet",
+        "sha256": "3f0da6663b1a7b8c953322080f1028ef5f49d30ff7564136d56597b721dff82c"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2025-02",
+      "rows": 672,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2025-02.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-02.zip",
+        "sha256": "835991119fe57a81e22acf3e3106405ff29ecce988eee8e8a35a9dc298e3325c"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-02.zip.CHECKSUM",
+        "sha256": "462d3867bfc1340cbe312c43c99e2eea5d13d0d5e778b53f8e05c6b20bf6f82d"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2025-02.parquet",
+        "sha256": "852b1de08afbdcf00d13fe2c3c2de59215dda93d262194f5c2a511db51a49dca"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2025-04",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2025-04.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-04.zip",
+        "sha256": "6d056ca4aefa587b037e348274b3d9e2cfe470183c493a59cd735fa812be4419"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-04.zip.CHECKSUM",
+        "sha256": "535c9590ec429cf2184cfb55e978ebe27ccca4d26652d00dfb60e797729e1ce7"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2025-04.parquet",
+        "sha256": "349cb2f02ca6431235a5845976cc0b86e0ae12061a697cb626425413e5731fd6"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2025-05",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2025-05.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-05.zip",
+        "sha256": "5e7f6011cc9d336dc45015c139a15af0d0445fe818102166c2c99d04f3ef8844"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-05.zip.CHECKSUM",
+        "sha256": "dd6c48101d4ff634024cb53fcf09276c8693c6723de1954df858d7db9e79c6e0"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2025-05.parquet",
+        "sha256": "67232babaa02c1f9fde9a6e77981b6e6be1eba967822d16be83571dd687108ca"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2025-07",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2025-07.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-07.zip",
+        "sha256": "71e21df6e72463fce18b3aea9351265ff358e2fc687bce29cb9b640f9017cf81"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-07.zip.CHECKSUM",
+        "sha256": "ba860c56500a8d9f9ad10463bca7b5c096e4415748601cc1b5be568d00e02984"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2025-07.parquet",
+        "sha256": "e3c669715e5bd763c98eaeb1955cf9c1b3f141eb537a9584a638aec97e3f54e2"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2025-06",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2025-06.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-06.zip",
+        "sha256": "29de5db17dfe8d19d9419f57b929a0c78b13fd562e70b8170df39cd85341f5a5"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-06.zip.CHECKSUM",
+        "sha256": "f54fc10a5e8f4cf6a5cd31b743b401e796c5478d45b060c59c1d6bb0bad6fc33"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2025-06.parquet",
+        "sha256": "a1533e8036e2bb2bc1456544222d549a26b0337743d8d5835eaa10d9075bff36"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2025-08",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2025-08.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-08.zip",
+        "sha256": "46ee09e82282099cfcf113856cd5a09ec5de3b3106721659fcc721910b332415"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-08.zip.CHECKSUM",
+        "sha256": "5df59229672e9d67781b173d006b4edfc3555d5f5e333d25e2f3973a42931252"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2025-08.parquet",
+        "sha256": "66fde3b442a3f90db17c84f307b9f46fdcf5f3a64e29f52933814a3a6e875ebc"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2025-09",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2025-09.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-09.zip",
+        "sha256": "bfa1109d05b92bd7a56a890af148c4278afa7c7f4dbbf1a4bd17230b9aaccda3"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-09.zip.CHECKSUM",
+        "sha256": "32d983953d3bbb7aa21423186d024d3d89a291045851fa2bee0241d2f3f29588"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2025-09.parquet",
+        "sha256": "969e2c2a318411cc80e3e7c26ccb5f6698e3097c51ecdf1a123c4ab43859e100"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2025-11",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2025-11.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-11.zip",
+        "sha256": "d78e6714264689686ce0287bbf74732cd12b90e07ea14b0a72ebf1c9ef832bb9"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-11.zip.CHECKSUM",
+        "sha256": "eabbd6a867b51708bb8abdefcc914d57f107da095721037205814fb460158eb1"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2025-11.parquet",
+        "sha256": "a3e121a4da88b65d2378d3b174bbf98e30501337400b14dfa678841888751844"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2025-10",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2025-10.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-10.zip",
+        "sha256": "9108177b21e8813dc025ed522de1522c8acac5ed50ef5a5cdc9997c1b37f9291"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-10.zip.CHECKSUM",
+        "sha256": "1e1ba7b4153c3b7e7a89f070afb6fecea3cdf4a4c6d15aecca39cfbdbbe85273"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2025-10.parquet",
+        "sha256": "529b18bdd80e1d817d6cee59a78399163f2c41ec10635ddcbf3a138b27ecb029"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2025-12",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2025-12.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-12.zip",
+        "sha256": "faa090e78e1e0bc29863730e8c862fedd2f2684b2bfb8650e6dac3faadcb15f8"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2025-12.zip.CHECKSUM",
+        "sha256": "d428208d35991acf99d1960560057398552ed7807e4298b4e8dd090857741783"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2025-12.parquet",
+        "sha256": "e2185a972203ae422b4fa0968aa19cb5e9ecce5a168e01bbd8084519f409280c"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2026-03",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2026-03.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-03.zip",
+        "sha256": "579021064d3b4618eafaf9c6e8a9d707042aab12d65f9728c64f6d82f19bc4d5"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-03.zip.CHECKSUM",
+        "sha256": "4797990cefb6c80ad5707ec23832c3cfd447fa2f1fff3b4b9f29c48185922b81"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2026-03.parquet",
+        "sha256": "622bd84c849e12ea111f4ebd0e7fc4c2001cae0b7c90692b455a0e5395aae973"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2026-02",
+      "rows": 672,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2026-02.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-02.zip",
+        "sha256": "6978db00ecb833506955face4ec52dd002104b37007d7f7784dc9b5553d9b38c"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-02.zip.CHECKSUM",
+        "sha256": "dbee594921826b62ac0e6d15707390479450b52e593d547bb143ae654db8c8d9"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2026-02.parquet",
+        "sha256": "830ab49377e012c930efb5eaf208b55486be7390a72ef44d5420bab08b4dd194"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2026-01",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2026-01.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-01.zip",
+        "sha256": "075aa2aba36a8adaaff521e5d7380182f55a6cb90e1204e354f13fdf2e9a95ac"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-01.zip.CHECKSUM",
+        "sha256": "d9d8bdc2e3cc2f937adf61e9b3820387b309ac87379ae4a137b1954b68aea59d"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2026-01.parquet",
+        "sha256": "930ecafeb72f26e42cda43de7cc13140f46f698cc84c5cbbec8e5ebdde5114e7"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2026-04",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2026-04.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-04.zip",
+        "sha256": "11978dea7a5c0e01c4c693ad5d22235557c43158746a70d10ba24b4427ebb97e"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-04.zip.CHECKSUM",
+        "sha256": "7d7fba750bcdf55b8a21443e5f1ca907b96422a762b7b8cb61298972cf248f93"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2026-04.parquet",
+        "sha256": "4c9d3da21fff28777f1e66afbeabe518d1d638927979789e93ac071e7ef8a2ea"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2026-07",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2026-07.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-07.zip",
+        "sha256": "b25fc64a01865cea5e3726206da2abc22e88099015b0bf66a201d9d20beedcbe"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-07.zip.CHECKSUM",
+        "sha256": "a4e5c95b29dccfc43046d97eb2f11e80ac25860db5857d0ce89bc02feaf048cc"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2026-07.parquet",
+        "sha256": "9b2afbfa4256b2283a44361e78143d281aa903189204736965e70d8c174d5119"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2026-06",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2026-06.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-06.zip",
+        "sha256": "b7611bab8595047351adaa005617bfdc932528a135886d9459768cd55695a831"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-06.zip.CHECKSUM",
+        "sha256": "b4d2cf16fc33f73f71d192b7fdc5b1afe4d9828840ceb083257455d704ea551b"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2026-06.parquet",
+        "sha256": "72730e11a5235ba76aa19a9ca90c0cae45b2e675293d651ec3d465f141c6c089"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2026-05",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2026-05.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-05.zip",
+        "sha256": "87181934c4a16445a2cd91fcb0fc7b4d4b6919c49924ae990453650e11b22f29"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-05.zip.CHECKSUM",
+        "sha256": "e6612e430af35c0e9270ff0a2bd6b1a2860e74e7dee9797778a15db7ad6cfe4b"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2026-05.parquet",
+        "sha256": "c0e5febdee044c7f2756f4a758384b871aa6301afdfe2b1ef1999279906dbb3b"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "ONT",
+      "month": "2026-08",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/ONTUSDT/1h/ONTUSDT-1h-2026-08.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-08.zip",
+        "sha256": "cbe9bc3450711c59180a2411534ca4642e09d1e48c4f64db355cec6163d164da"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/ONTUSDT-1h-2026-08.zip.CHECKSUM",
+        "sha256": "6536d9d41e16cbec9e49ef223053f5351ca7a68fb5d9ae068c0411b9e41b89a8"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/ONT_2026-08.parquet",
+        "sha256": "f38c76d1aa554914ef6ed22d3892b274094373e4669841b5d87cc8f76146d7af"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2024-12",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2024-12.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2024-12.zip",
+        "sha256": "51030503f02dc36868e5f3c54b34fae45738def8c39b1780ab7dd17a0d233118"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2024-12.zip.CHECKSUM",
+        "sha256": "e2a04831af03e29c9251e90348bc60475715f0fd63d401a2fdddfc929850a174"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2024-12.parquet",
+        "sha256": "930fb1278fb5c980d54ffef634814976020a78357f190b4b2fd25c15b1a81dc5"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2025-01",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2025-01.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-01.zip",
+        "sha256": "7806a0cc6df024eec9031d0d521b18449c0915dcb6a2c1197095af03742696ba"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-01.zip.CHECKSUM",
+        "sha256": "dbd8edb7a595aa10443adbbd8d895bcc16105b1285a4e483a1087003a64276f0"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2025-01.parquet",
+        "sha256": "c91c843e0a7cc34dd58a85f612fa7f890aafde9cdca8af3e982bf21b6cffa266"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2025-02",
+      "rows": 672,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2025-02.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-02.zip",
+        "sha256": "80daee162340e1631737bb66fdc61496b566430504708f78da6b2271cac20d5d"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-02.zip.CHECKSUM",
+        "sha256": "aadd44858f6864cc0409144a4caeeab5ff0a40d0df75a5f2bae58bd74ac0d3c4"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2025-02.parquet",
+        "sha256": "728f387274a44dd125ba0be1a831d8e6c74d23ab852c8ca9a693b4413b6d9943"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2025-03",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2025-03.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-03.zip",
+        "sha256": "da7ad6ad028cf5ee87c2739a80c3f96f7bb6be2290ae80d12dde0a5029df7184"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-03.zip.CHECKSUM",
+        "sha256": "790ebf3cfd4c8415cabfaf8a6abb96a9593bf95c6e4044d7fd7622a616821120"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2025-03.parquet",
+        "sha256": "ec9d404452ee5995a963527d9388de5b7a70727220efb023ceb3d0a0846d2699"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2025-05",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2025-05.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-05.zip",
+        "sha256": "edc26fe6a51bfd6462ec836f0d111b831962b8189431be9f89c6220ac5889953"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-05.zip.CHECKSUM",
+        "sha256": "2f9dea92a294dd90cdb63643ef058c51f9cfa38eda2642fcd68842f5ec7f483a"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2025-05.parquet",
+        "sha256": "87bac801b1706952102aec00fe36a443dbf10b780090158474885cc70cd373c8"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2025-06",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2025-06.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-06.zip",
+        "sha256": "f9ded43ddf2d7a8586f0ae09479a2ad204d8eb260532c26fc783e3966e504418"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-06.zip.CHECKSUM",
+        "sha256": "bb1504ab2b6a4f73c793c278f44368aa2b05714af88f96e9bcce3c5349f2ce62"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2025-06.parquet",
+        "sha256": "5ec3d5442972234326bd8b12baa2df176659c09db838ad2a1937bd9668aaf56d"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2025-04",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2025-04.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-04.zip",
+        "sha256": "8f7ad3dd9fbdbe86b4122a97da9125adf552f62cd02b74e01fff2aea66bb1468"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-04.zip.CHECKSUM",
+        "sha256": "1abc34b0306f2a91623b5dd9bd1249d074bbfa014fb159366557fa40b1c77449"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2025-04.parquet",
+        "sha256": "149e765a48df59ceae71f93e3bb9cee70041ff2e54a5c985856529031d7945df"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2025-07",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2025-07.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-07.zip",
+        "sha256": "fb5372c7b20ecc39bf8c7fe797787ab416d45497879eb1174a4bc4cf86750f6d"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-07.zip.CHECKSUM",
+        "sha256": "50db6ab29af5dd9799cde635d8b30b5721bff12ed41abc530004ac95c16ba34d"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2025-07.parquet",
+        "sha256": "dd863a4c504eea43f36556fded5b03811eadd45eb4b65d0fa11e0531cca88e13"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2025-10",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2025-10.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-10.zip",
+        "sha256": "c50dead98129e2b723b1aedc5b1e59bcdd17e6d8068bf499c33b3abb6f76c1b2"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-10.zip.CHECKSUM",
+        "sha256": "3a9be5b3e83244be4c0eaa60a2e4aa87aae5e94b902ca910c7eb052666948ec8"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2025-10.parquet",
+        "sha256": "121bf99a2d95bc1bed3b03168da02b2efcfde8efe5758595cbda217780cdd801"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2025-09",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2025-09.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-09.zip",
+        "sha256": "48ad829e7dc077ad02f620521a82d7e3bae3e2c077c869c64c396f35dc85d12f"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-09.zip.CHECKSUM",
+        "sha256": "58a54951e2797fb74468f2e6baea11c5c19e26115042ee1185b244d6decbf125"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2025-09.parquet",
+        "sha256": "b27c624b1bed45c6f12c9916ada609e94603c12d6333e7cb44188ae46020f21f"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2025-08",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2025-08.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-08.zip",
+        "sha256": "7bf249d9bbebcb3a2bfc614f3d84db77c58518439084ee127e6fe12291464e7a"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-08.zip.CHECKSUM",
+        "sha256": "e2789715201d90c6c0089e97df202a7246f0edbc4cb25502b06cefcfb43fdcf0"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2025-08.parquet",
+        "sha256": "c658fe696c674ba022877e0c01f3c123b2982480d885dbd4b04948ee6ff7dfb2"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2025-11",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2025-11.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-11.zip",
+        "sha256": "66ed7bb938c4efe58a6a215eed769c8898c97309385d36b31eef49a9c03a4c10"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-11.zip.CHECKSUM",
+        "sha256": "634b8253d43bd311d147b44fc5015cf23ad11d8347fd8eb5be0c1e452eef379e"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2025-11.parquet",
+        "sha256": "16ff462dd788396adaf855d6ec0daef88f466652849090c5801870add777a851"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2025-12",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2025-12.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-12.zip",
+        "sha256": "8d40a6033eaf6e83ab619bed34cd1fb70479fbd9dd9d42e18b4fa46f2f5d2d60"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2025-12.zip.CHECKSUM",
+        "sha256": "03f7533cbc6eb0a92ef46e3ca0ce806431e4f9153659723473f2d37c08f01376"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2025-12.parquet",
+        "sha256": "f742ff5258280ab26f308beddf98e4f68f0389f7f61ce6b9e9ef29dfdbd7587d"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2026-02",
+      "rows": 672,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2026-02.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-02.zip",
+        "sha256": "218213604e711d9b6447a4faf46ddb00a4d15b674faf690faac8485726290305"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-02.zip.CHECKSUM",
+        "sha256": "9d09010ea5825339ee0b34386fae6b750dc87ec34607ee2500f968c77067d0a7"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2026-02.parquet",
+        "sha256": "b160606760e558014f3afb35d8c837235337b57bcaed6ae8e02ddc54cda142dc"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2026-01",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2026-01.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-01.zip",
+        "sha256": "fee52a8e3de240c8e81bd4521263c7cd85316405aff7f6dd6a30a0cc220f1b7a"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-01.zip.CHECKSUM",
+        "sha256": "065eed08f204202122ac6e2ff2b7cbce33e6f018960938c28c62b9681b518c74"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2026-01.parquet",
+        "sha256": "6db3f46fe616e27a15ced083c6e703282b006930e3168bb16ba5f8e02952df51"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2026-03",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2026-03.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-03.zip",
+        "sha256": "37dfc10e8d5d38fef8f34483d26f46f80f109f6da08b93fc2fcb7adf53303f8f"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-03.zip.CHECKSUM",
+        "sha256": "0839ed9c901ed87725a87b2f8a3b0d282f1af282b15cc742d652b8a52ac3f8dd"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2026-03.parquet",
+        "sha256": "10305a3a6d963bad8d78d701e548f84f72c0f3f0bbfec7a03b7c0b2ab76fa19d"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2026-06",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2026-06.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-06.zip",
+        "sha256": "1f7d674aba4616958c40bfc409a5c6fa57310ee2446f559f6d7096358af890e5"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-06.zip.CHECKSUM",
+        "sha256": "e3c7b767ca700b3daa91a3d33a612784780f0cb56a52f41b49d52e93a73e31ac"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2026-06.parquet",
+        "sha256": "9d1889d15c5a6d09b5a70de6944328ba6dd9ead8a37e0dc2f06e3688938c5cb5"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2026-04",
+      "rows": 720,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2026-04.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-04.zip",
+        "sha256": "06bd4328e8bbff04ee80eb760fffb8da62fcd2e4f8ba03d7954c005e4b3fbb60"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-04.zip.CHECKSUM",
+        "sha256": "9381546cd0d049f11e85d0636c656a69fa514bd6f32c0d87be2c20bed98d95c9"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2026-04.parquet",
+        "sha256": "6120c7a3e057af38398e03a1898fc1fe613fccc40b8ec9b735519ce6230b06d2"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2026-05",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2026-05.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-05.zip",
+        "sha256": "8329c52e4f364819b29b6113f38ccc552ce2a3c9eaf1a908955eed561a0774d2"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-05.zip.CHECKSUM",
+        "sha256": "8d8310dfa6a4c2edb189d63eb6dc66b946f0ca7602c17958cef9a28c712b319e"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2026-05.parquet",
+        "sha256": "d2a2c3ea0277fa1b2be54dd56d8caa8d17aaef661d4d81ed1f50c31e029831f5"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2026-07",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2026-07.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-07.zip",
+        "sha256": "77f96a51e9cce6101f50df265c5d4f716c96cebf907d3e9923d859196b7d5394"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-07.zip.CHECKSUM",
+        "sha256": "6f3f0d99cb7685d70ba0c9a19fc28fed4da246531e6dd1c40271c334029a79c5"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2026-07.parquet",
+        "sha256": "5b66059a9ef51b1a1fceecf571f98a6a689106042d51ff821331459d51d5f1ca"
+      },
+      "terminal_observations_quarantined": 0
+    },
+    {
+      "passed": true,
+      "symbol": "BAT",
+      "month": "2026-08",
+      "rows": 744,
+      "url": "https://data.binance.vision/data/futures/um/monthly/klines/BATUSDT/1h/BATUSDT-1h-2026-08.zip",
+      "archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-08.zip",
+        "sha256": "4ae48dd1b0135d820d36d62e0bb447139430296f72a48661be675fadc260ae3a"
+      },
+      "checksum": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/archives/BATUSDT-1h-2026-08.zip.CHECKSUM",
+        "sha256": "85efe0bd3942781315cda52c9025957a880c755f3b44b7af6187329cd00c42fb"
+      },
+      "prepared": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/monthly/BAT_2026-08.parquet",
+        "sha256": "41d857bd47a3ae73d82ab493ccd2555c5e2eba6ca1ed410a972611d1387e16be"
+      },
+      "terminal_observations_quarantined": 0
+    }
+  ],
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_reference_native_20261114_v1/data_receipts.json",
+    "sha256": "18196c3577d5353f52038d73726a0f1fab70f95cc4f1a8e9dd3c37882c63d24c"
+  },
+  "terminal_EOS": "2025-05-21 09:00:00+00:00",
+  "missing_postterminal_prices_imputed": false,
+  "substituted_A_for_EOS": false,
+  "native_funded_accounts": 0,
+  "financial_admission": false,
+  "pending": [
+    "EOS retired market precision/lot/leverage metadata",
+    "Full native paired execution and lifecycle integration",
+    "Source-complete copula family and constrained Tawn estimation",
+    "Funding inputs and ownership verification",
+    "Frozen account matrix before any returns"
+  ]
+}

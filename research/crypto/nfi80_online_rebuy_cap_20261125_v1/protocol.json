@@ -1,0 +1,9 @@
+{
+  "hypothesis": "Bounding repeated short-rebuy margin requests can reduce the occasional large loss without removing the original small-profit entries.",
+  "mechanism": "Keep all native capital settings, 12 slots, 3x isolated leverage, dynamic 80 and FlatTopBoost first stake. For short trades where all entry tags belong to the original short-rebuy family, reject a whole positive position-adjustment request when lifetime filled entry margin plus the requested amount exceeds twice actual filled first-entry margin. Exits and reductions do not replenish the budget; preserve every native reduction, exit, initial order and other signal. Match original entry margin, not gross notional. This policy guards requests in historical replay; venue rounding and intrabar losses are separate.",
+  "threshold_origin": "Two times first-entry margin fixes the aggregate additional budget to one initial allocation across the life of each position. It is a single structural budget and was not selected from a candidate parameter search.",
+  "known_evidence": "Pure short 562 has 66 winners out of 67 natural closes under the archived 15bp control, but a single NEAR trade lost 402.69 USDT after 46 entry additions. The 8bp control exits that same initial signal with no additions and a small positive fill. This archived outcome informed the mechanism, so the full window and that trade are discovery evidence.",
+  "window": ["2026-01-01T00:00:00Z", "2026-11-09T05:00:00Z"],
+  "advance": "Compare against same 12-slot archived FlatTopBoost. Require improvement in cumulative marked net return and no worsening of maximum 5m drawdown at 15bp with independently reconciled economics. Check natural closes, fills, liquidation, maximum notional exposure and losses by signal family. Retain all results. Advance to 8bp and a later unused complete window only after the 15bp comparison passes.",
+  "orders_enabled": false
+}

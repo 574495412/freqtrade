@@ -1,0 +1,532 @@
+{
+  "new_completed_native_wallets": 4,
+  "preserved_failed_financial_attempts": 2,
+  "actual_native_trades": 424,
+  "actual_fills": 848,
+  "common_endpoint_fills": 844,
+  "new_hour_points": 58368,
+  "maximum_independent_nav_error_usdt": 3.637978807091713e-12,
+  "maximum_native_quote_error_usdt": 3.517186542012496e-12,
+  "accounts": [
+    {
+      "account": "heracles_1000_conservative",
+      "capital": 1000,
+      "scenario": "conservative",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.04939483260459987,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 950.6051673954001,
+          "cagr_365day": -0.029954823489064863,
+          "hourly_mark_drawdown": 0.5597197282734756,
+          "daily_nav_sharpe": 0.14437296584056952,
+          "calendar_hours": 14592,
+          "complete_24h_returns": 607
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.008140115777200085,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1008.1401157772001,
+          "cagr_365day": 0.008140115777200085,
+          "hourly_mark_drawdown": 0.3770963093573474,
+          "daily_nav_sharpe": 0.25715145858486227,
+          "calendar_hours": 8761,
+          "complete_24h_returns": 365
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.057070388809441264,
+          "initial_usdt": 1008.1401157772001,
+          "ending_usdt": 950.6051673954001,
+          "cagr_365day": -0.08449688669556266,
+          "hourly_mark_drawdown": 0.3979484945564977,
+          "daily_nav_sharpe": -0.04349928169364413,
+          "calendar_hours": 5832,
+          "complete_24h_returns": 242
+        }
+      ],
+      "actual_native_trades": 106,
+      "actual_fills": 212,
+      "common_endpoint_fills": 211,
+      "naturally_closed_before_endpoint": 105,
+      "post_loop_terminal_force_exits": 1,
+      "terminal_orders": [
+        {
+          "pair": "BTC/USDT",
+          "raw_force_date": "2026-08-31 20:00:00+00:00",
+          "actual_post_loop_phase_after": "2026-09-01 00:00:00+00:00"
+        }
+      ],
+      "hour_points": 14592,
+      "maximum_independent_nav_error_usdt": 9.094947017729282e-13,
+      "maximum_per_trade_cash_error_usdt": 5e-09,
+      "native_quote_rows_audited": 3648,
+      "maximum_native_quote_error_usdt": 6.465938895416912e-13,
+      "common_gross_price_pnl_usdt": 161.5168032,
+      "paid_quote_fees_usdt": 209.9700898798,
+      "remaining_exit_fee_reserve_usdt": 0.941545937,
+      "closed_pnl_rounding_usdt": 1.22e-08,
+      "archive_sha256": "0c5ddeef5086b9475dc6b12974cb023129229a4c505b9dd770b537dc1d296ac9",
+      "independent_candidate_imports": false,
+      "passed": true
+    },
+    {
+      "account": "heracles_1000_lower",
+      "capital": 1000,
+      "scenario": "lower",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.06646048074233335,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 933.5395192576666,
+          "cagr_365day": -0.04044787643764414,
+          "hourly_mark_drawdown": 0.5839317286316673,
+          "daily_nav_sharpe": 0.1212380042339509,
+          "calendar_hours": 14592,
+          "complete_24h_returns": 607
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.04679834111175696,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1046.798341111757,
+          "cagr_365day": 0.04679834111175696,
+          "hourly_mark_drawdown": 0.3743104485517498,
+          "daily_nav_sharpe": 0.33470720350662675,
+          "calendar_hours": 8761,
+          "complete_24h_returns": 365
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.10819545408698628,
+          "initial_usdt": 1046.798341111757,
+          "ending_usdt": 933.5395192576666,
+          "cagr_365day": -0.15804401879326302,
+          "hourly_mark_drawdown": 0.43580767421664024,
+          "daily_nav_sharpe": -0.236510077229111,
+          "calendar_hours": 5832,
+          "complete_24h_returns": 242
+        }
+      ],
+      "actual_native_trades": 106,
+      "actual_fills": 212,
+      "common_endpoint_fills": 211,
+      "naturally_closed_before_endpoint": 105,
+      "post_loop_terminal_force_exits": 1,
+      "terminal_orders": [
+        {
+          "pair": "BTC/USDT",
+          "raw_force_date": "2026-08-31 20:00:00+00:00",
+          "actual_post_loop_phase_after": "2026-09-01 00:00:00+00:00"
+        }
+      ],
+      "hour_points": 14592,
+      "maximum_independent_nav_error_usdt": 3.637978807091713e-12,
+      "maximum_per_trade_cash_error_usdt": 5e-09,
+      "native_quote_rows_audited": 3648,
+      "maximum_native_quote_error_usdt": 3.517186542012496e-12,
+      "common_gross_price_pnl_usdt": 73.4651793,
+      "paid_quote_fees_usdt": 139.32182892706,
+      "remaining_exit_fee_reserve_usdt": 0.60383117145,
+      "closed_pnl_rounding_usdt": 5.618e-08,
+      "archive_sha256": "69f106f5f4159c9e7a45c46d2dfdafb26a80fbef3654ad0b196e1976b44f729b",
+      "independent_candidate_imports": false,
+      "passed": true
+    },
+    {
+      "account": "heracles_500_conservative",
+      "capital": 500,
+      "scenario": "conservative",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.04924655672920042,
+          "initial_usdt": 500.0,
+          "ending_usdt": 475.3767216353998,
+          "cagr_365day": -0.029863985439595564,
+          "hourly_mark_drawdown": 0.5595760041996751,
+          "daily_nav_sharpe": 0.14446481787159002,
+          "calendar_hours": 14592,
+          "complete_24h_returns": 607
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.008138337411199403,
+          "initial_usdt": 500.0,
+          "ending_usdt": 504.06916870559974,
+          "cagr_365day": 0.008138337411199403,
+          "hourly_mark_drawdown": 0.37712189044017275,
+          "daily_nav_sharpe": 0.2570839884872666,
+          "calendar_hours": 8761,
+          "complete_24h_returns": 365
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.05692164657457488,
+          "initial_usdt": 504.06916870559974,
+          "ending_usdt": 475.3767216353998,
+          "cagr_365day": -0.08427991997537576,
+          "hourly_mark_drawdown": 0.39773253072768844,
+          "daily_nav_sharpe": -0.0431951541565063,
+          "calendar_hours": 5832,
+          "complete_24h_returns": 242
+        }
+      ],
+      "actual_native_trades": 106,
+      "actual_fills": 212,
+      "common_endpoint_fills": 211,
+      "naturally_closed_before_endpoint": 105,
+      "post_loop_terminal_force_exits": 1,
+      "terminal_orders": [
+        {
+          "pair": "BTC/USDT",
+          "raw_force_date": "2026-08-31 20:00:00+00:00",
+          "actual_post_loop_phase_after": "2026-09-01 00:00:00+00:00"
+        }
+      ],
+      "hour_points": 14592,
+      "maximum_independent_nav_error_usdt": 4.547473508864641e-13,
+      "maximum_per_trade_cash_error_usdt": 5e-09,
+      "native_quote_rows_audited": 3648,
+      "maximum_native_quote_error_usdt": 3.0109248427834245e-13,
+      "common_gross_price_pnl_usdt": 80.7940375,
+      "paid_quote_fees_usdt": 104.947328812,
+      "remaining_exit_fee_reserve_usdt": 0.469987037,
+      "closed_pnl_rounding_usdt": -1.56e-08,
+      "archive_sha256": "eaeb31c705e031430305e73e8a44e9fcf28b21edc8a388bb83791f4cc4c422ae",
+      "independent_candidate_imports": false,
+      "passed": true
+    },
+    {
+      "account": "heracles_500_lower",
+      "capital": 500,
+      "scenario": "lower",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.06536607647296266,
+          "initial_usdt": 500.0,
+          "ending_usdt": 467.3169617635187,
+          "cagr_365day": -0.03977267866272649,
+          "hourly_mark_drawdown": 0.5835069528110198,
+          "daily_nav_sharpe": 0.12256826730773111,
+          "calendar_hours": 14592,
+          "complete_24h_returns": 607
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.04736862628767868,
+          "initial_usdt": 500.0,
+          "ending_usdt": 523.6843131438393,
+          "cagr_365day": 0.04736862628767868,
+          "hourly_mark_drawdown": 0.374215588000544,
+          "daily_nav_sharpe": 0.3357618943312251,
+          "calendar_hours": 8761,
+          "complete_24h_returns": 365
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.1076361272728028,
+          "initial_usdt": 523.6843131438393,
+          "ending_usdt": 467.3169617635187,
+          "cagr_365day": -0.15725057748326765,
+          "hourly_mark_drawdown": 0.43529374441376145,
+          "daily_nav_sharpe": -0.23475761379200807,
+          "calendar_hours": 5832,
+          "complete_24h_returns": 242
+        }
+      ],
+      "actual_native_trades": 106,
+      "actual_fills": 212,
+      "common_endpoint_fills": 211,
+      "naturally_closed_before_endpoint": 105,
+      "post_loop_terminal_force_exits": 1,
+      "terminal_orders": [
+        {
+          "pair": "BTC/USDT",
+          "raw_force_date": "2026-08-31 20:00:00+00:00",
+          "actual_post_loop_phase_after": "2026-09-01 00:00:00+00:00"
+        }
+      ],
+      "hour_points": 14592,
+      "maximum_independent_nav_error_usdt": 1.4210854715202004e-12,
+      "maximum_per_trade_cash_error_usdt": 4.99e-09,
+      "native_quote_rows_audited": 3648,
+      "maximum_native_quote_error_usdt": 1.3926637620897964e-12,
+      "common_gross_price_pnl_usdt": 37.2876398,
+      "paid_quote_fees_usdt": 69.66825162544,
+      "remaining_exit_fee_reserve_usdt": 0.3024264412,
+      "closed_pnl_rounding_usdt": 3.016e-08,
+      "archive_sha256": "b218106c9fb0dfac445947e45afc2784ee363214b201e0d1ac7622b2e884930a",
+      "independent_candidate_imports": false,
+      "passed": true
+    }
+  ],
+  "standalone_gates": [
+    {
+      "account": "heracles_1000_conservative",
+      "passed": false,
+      "matched_nfi_spot_1000": {
+        "net_return": 0.035830653179999894,
+        "initial_usdt": 1000.0,
+        "ending_usdt": 1035.83065318,
+        "cagr_365day": 0.021360160366660663,
+        "hourly_mark_drawdown": 0.021617140851596606,
+        "daily_nav_sharpe": 1.1788170813500412,
+        "calendar_hours": 14592,
+        "complete_24h_returns": 607
+      }
+    },
+    {
+      "account": "heracles_1000_lower",
+      "passed": false,
+      "matched_nfi_spot_1000": {
+        "net_return": 0.03731987366,
+        "initial_usdt": 1000.0,
+        "ending_usdt": 1037.31987366,
+        "cagr_365day": 0.022241500419227345,
+        "hourly_mark_drawdown": 0.02145225451111543,
+        "daily_nav_sharpe": 1.1837148105052022,
+        "calendar_hours": 14592,
+        "complete_24h_returns": 607
+      }
+    }
+  ],
+  "portfolios": [
+    {
+      "name": "heracles_nfi_spot_1000_conservative",
+      "scenario": "conservative",
+      "actual500plus500": true,
+      "new_native_wallet": false,
+      "mixed_market_hedged_component": false,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.0072369632246002125,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 992.7630367753998,
+          "cagr_365day": -0.004351160471180893,
+          "hourly_mark_drawdown": 0.33411370066861623,
+          "daily_nav_sharpe": 0.0745917017720633,
+          "calendar_hours": 14592,
+          "complete_24h_returns": 607
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.02145548384559981,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1021.4554838455997,
+          "cagr_365day": 0.02145548384559981,
+          "hourly_mark_drawdown": 0.22513904992084088,
+          "daily_nav_sharpe": 0.2092786635202217,
+          "calendar_hours": 8761,
+          "complete_24h_returns": 365
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.028089767517011976,
+          "initial_usdt": 1021.4554838455997,
+          "ending_usdt": 992.7630367753998,
+          "cagr_365day": -0.04190056585314139,
+          "hourly_mark_drawdown": 0.20690449114425524,
+          "daily_nav_sharpe": -0.17764184583371795,
+          "calendar_hours": 5832,
+          "complete_24h_returns": 242
+        }
+      ],
+      "passed": false
+    },
+    {
+      "name": "heracles_carry_1000_conservative",
+      "scenario": "conservative",
+      "actual500plus500": true,
+      "new_native_wallet": false,
+      "mixed_market_hedged_component": true,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.012800023929906312,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 987.1999760700937,
+          "cagr_365day": -0.007704524615302688,
+          "hourly_mark_drawdown": 0.33413071009760165,
+          "daily_nav_sharpe": 0.060909500095886214,
+          "calendar_hours": 14592,
+          "complete_24h_returns": 607
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.013624515776235357,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1013.6245157762354,
+          "cagr_365day": 0.013624515776235357,
+          "hourly_mark_drawdown": 0.22559576254934077,
+          "daily_nav_sharpe": 0.17886347906454345,
+          "calendar_hours": 8761,
+          "complete_24h_returns": 365
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.026069357335843146,
+          "initial_usdt": 1013.6245157762354,
+          "ending_usdt": 987.1999760700937,
+          "cagr_365day": -0.03890684258190258,
+          "hourly_mark_drawdown": 0.20780739274869564,
+          "daily_nav_sharpe": -0.1603877585560749,
+          "calendar_hours": 5832,
+          "complete_24h_returns": 242
+        }
+      ],
+      "passed": false
+    },
+    {
+      "name": "heracles_nfi_spot_1000_lower",
+      "scenario": "lower",
+      "actual500plus500": true,
+      "new_native_wallet": false,
+      "mixed_market_hedged_component": false,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.014528620316481278,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 985.4713796835188,
+          "cagr_365day": -0.00874804412272201,
+          "hourly_mark_drawdown": 0.3528801114831034,
+          "daily_nav_sharpe": 0.05730940390392385,
+          "calendar_hours": 14592,
+          "complete_24h_returns": 607
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.041838731063839285,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1041.8387310638393,
+          "cagr_365day": 0.041838731063839285,
+          "hourly_mark_drawdown": 0.2263104457034164,
+          "daily_nav_sharpe": 0.2882907825029984,
+          "calendar_hours": 8761,
+          "complete_24h_returns": 365
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.05410372037403799,
+          "initial_usdt": 1041.8387310638393,
+          "ending_usdt": 985.4713796835188,
+          "cagr_365day": -0.08016623265175893,
+          "hourly_mark_drawdown": 0.23078554165589504,
+          "daily_nav_sharpe": -0.38319048037063946,
+          "calendar_hours": 5832,
+          "complete_24h_returns": 242
+        }
+      ],
+      "passed": false
+    },
+    {
+      "name": "heracles_carry_1000_lower",
+      "scenario": "lower",
+      "actual500plus500": true,
+      "new_native_wallet": false,
+      "mixed_market_hedged_component": true,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.020334033191787282,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 979.6659668082127,
+          "cagr_365day": -0.012258023153717268,
+          "hourly_mark_drawdown": 0.35318597983643973,
+          "daily_nav_sharpe": 0.043198250899213385,
+          "calendar_hours": 14592,
+          "complete_24h_returns": 607
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.03380269052964158,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1033.8026905296415,
+          "cagr_365day": 0.03380269052964158,
+          "hourly_mark_drawdown": 0.2268157134997587,
+          "daily_nav_sharpe": 0.2574060200539775,
+          "calendar_hours": 8761,
+          "complete_24h_returns": 365
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.05236659201737348,
+          "initial_usdt": 1033.8026905296415,
+          "ending_usdt": 979.6659668082127,
+          "cagr_365day": -0.07762725419341743,
+          "hourly_mark_drawdown": 0.231998296799524,
+          "daily_nav_sharpe": -0.3660276980789598,
+          "calendar_hours": 5832,
+          "complete_24h_returns": 242
+        }
+      ],
+      "passed": false
+    }
+  ],
+  "control_references": [
+    {
+      "name": "nfi_spot_1000_conservative",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/nfi_spot_1000_conservative_20bps/hourly_equity.parquet",
+      "sha256": "cc147c4a73cc8bdfb6f0c2d4b7196cab4e2a77cb43475b16e9e3a9dd80ef78dd",
+      "reused_not_new_wallet": true
+    },
+    {
+      "name": "carry_1000_conservative",
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_1000_conservative.parquet",
+      "sha256": "96034985f244f0dfbc743b6a2386417caf702310b6dfa57ad824eb569e87b6c9",
+      "reused_not_new_wallet": true
+    },
+    {
+      "name": "nfi_spot_500_conservative",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/nfi_spot_500_conservative_20bps/hourly_equity.parquet",
+      "sha256": "d9c388d9c47fa41974f1434a2f643bbc4c23f8da07f66ba8a162dc4dc1c26c00",
+      "reused_not_new_wallet": true
+    },
+    {
+      "name": "carry_500_conservative",
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_500_conservative.parquet",
+      "sha256": "825b768e3469d696f02d7167ffb9738987d228d317e937d03d6e3d2589444db3",
+      "reused_not_new_wallet": true
+    },
+    {
+      "name": "nfi_spot_1000_lower",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/nfi_spot_1000_lower_13bps/hourly_equity.parquet",
+      "sha256": "daa4069e4b0df01321a29cc1107d2bd3825642a86d4624cea285ab6e5f8d318b",
+      "reused_not_new_wallet": true
+    },
+    {
+      "name": "carry_1000_lower",
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_1000_lower.parquet",
+      "sha256": "c99e8af11fe07e64c0b41585a47e3ce0e3dd9eb25c5bd9a41561435eb7a5f4a9",
+      "reused_not_new_wallet": true
+    },
+    {
+      "name": "nfi_spot_500_lower",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/nfi_spot_500_lower_13bps/hourly_equity.parquet",
+      "sha256": "3b22d9a940f7e4fe2fd99f58e8f4f384e7d03f640d910e23c2933328d4bf1780",
+      "reused_not_new_wallet": true
+    },
+    {
+      "name": "carry_500_lower",
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/carry_500_lower.parquet",
+      "sha256": "43290a53201ff49927d485a5441c1f13587111b202ef4739ca10a144a97d2a7d",
+      "reused_not_new_wallet": true
+    }
+  ],
+  "new_accepted_independent_alphas": 0,
+  "new_registry_definitions": 0,
+  "new_factor_analysis": 0,
+  "new_vibe_benches": 0,
+  "independent_oos": false,
+  "author_account_reproduced": false,
+  "higher_comparable_return_established": false,
+  "goal_complete": false,
+  "orders_enabled": false,
+  "production_eligible": false
+}

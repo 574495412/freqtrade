@@ -1,0 +1,19 @@
+{
+  "registered_at": "2026-11-13T16:29:28.228311+00:00",
+  "known_results": "V2 inclusive funding policy has8bps+6.03% and15bps-51.63%,fails2026 andpressure. No independent new alpha or source/hour/weight retune.",
+  "native_owner": "Local subclass of fixed native Backtesting overrides only funding callbacks/order-funding transfer; original matcher,wallet,strategy,quantities,fees,risk remain native. Private-method local extension,not an upstream supported stable plugin.",
+  "before_orders": "At nominal eventT,the position immediately before native boundary orders owns it:open<T<=close",
+  "after_orders": "Position after native boundary fills owns eventT:open<=T<close. Existing continuing positions accrue current events normally; final closing amount is set before native order transfer.",
+  "scope": "Single full entry/full exit positions,no DCA/partial fills/position adjustments. Same pinned BoundaryCarrySource and BoundaryCarryLong. Nominal-clock assumptions,not certified actual settlement or rigorous real-return bounds.",
+  "full_replay": "All orders,sizes,funding,cash,subsequent lot rounding andNAV rerun through native chain. Not adding fixed-fill cash deltas to oldNAV.",
+  "matrix": "16actual scenario accounts(twoownership*two policies*twoassets*twocosts)plus4inclusive15bps technical reruns.500USDT each;actualBTC500+ETH500sum1000;no transfers.",
+  "source_selection_limits": "Same author5693993e108f2b3668bd21b1dd36ae31f79d8fcd;original full-sample selection and native local market/quantity differences retained.",
+  "window": [
+    "2025-01-01T00:00:00Z",
+    "2026-08-31T23:00:00Z"
+  ],
+  "acceptance": "Source positive full andboth continuous annual slices,DD<=50%,above matchedlong andoldpassive atboth costs inBOTH ownership scenarios;no selecting favorable funding order after outcomes.",
+  "exchange_limit": "Binance public FAQ allows processing deviation around nominaltime. Neither nominalorder case nor publiccalc_time proves private account attribution.",
+  "orders_enabled": false,
+  "production_eligible": false
+}

@@ -1,0 +1,80 @@
+{
+  "frozen_at": "2026-11-15T17:25:38.693585+00:00",
+  "scope": "New monthly institutional-flow calendar hypothesis;not rescue of rejected intraday sessions orUP",
+  "sources": {
+    "TDZNBEER": "8fc167de4b82fc03feb3b94c4eda4f9023d2fb25",
+    "f1devbin": "9d8b7f1c4ff667d5532687a837162c5b9559fe48"
+  },
+  "rules": {
+    "Calendar32": {
+      "last": 3,
+      "first": 2
+    },
+    "Calendar23": {
+      "last": 2,
+      "first": 3
+    }
+  },
+  "direction": "long inside predeclared UTCcalendar windows,flat otherwise;no short/signflip",
+  "source_rule_selection": "Both independently published defaults fixed;no date/threshold/fee optimization",
+  "source_reuse": "MIT originals preserved;only reviewed purecalendarfunctions executed for parity,not author financial engine",
+  "window": [
+    "2025-01-01T00:00:00Z",
+    "2026-08-31T23:00:00Z"
+  ],
+  "native_start": "2024-12-31T23:00:00Z",
+  "clock": "Known calendar of hour completion;nativeonebarlag executes atthatUTCopen;no futurepriceuse;onepreaccountbarforfirstJan1open",
+  "symbols": [
+    "BTC/USDT",
+    "ETH/USDT"
+  ],
+  "capital": [
+    1000,
+    500
+  ],
+  "scenario_cost_bps": {
+    "conservative": 20,
+    "lower": 13
+  },
+  "wallet_contract": "Shared spotUSDTwallet,longonly1x,2slots,unlimitednativeper-slotstake,ratio.99;buybothatwindowstart,holdactualquantitiesuntilwindowend;noDCA/dailyfreeweightresets",
+  "local_source_differences": [
+    "BinanceUSDTvsTDZNBinanceUS",
+    "Sharedtwoassetnativewalletvsseparate sourcecoin arithmetic",
+    "Nativeopenfills vsdailycloseboundaryproxy",
+    "Nativequantities/minimums/fees/remainingexitreserve",
+    "500/1000initialcapital and20/13bps eachside;not source6/10bps"
+  ],
+  "new_native_wallets": 12,
+  "methods": [
+    "Calendar32",
+    "Calendar23",
+    "HoldMatched"
+  ],
+  "control": "NewsharedwalletHoldMatched plus sealedsharedwalletNFIspot same2coins/slots/fees/capital/window;carry/NFIfutures only broaderreference",
+  "fixed_portfolios": [
+    "actual500Calendar32+actual500Calendar23",
+    "actual500Calendar32+sealedactual500NFIspot",
+    "actual500Calendar23+sealedactual500NFIspot",
+    "actual500Calendar32+sealedactual500carry",
+    "actual500Calendar23+sealedactual500carry"
+  ],
+  "portfolio_policy": "Sumexacthourlyactual500wallets,no1000scaling,transfers orcrossmargin;calendarvariantsnotindependentmechanisms",
+  "gates": "Bothfees full+bothannualcontinuousslices positive,DD<=30pct,dailyNAVSharpe>.5;calendarbeatsnewmatchedHold+sealedNFIspot+zero-interestcash atsamecapital;portfolio beatsbestmatched1000spot withnoDDworsening;carry/futures differ economic contract andremainbroaderreferences",
+  "known_before_freeze": [
+    "BothGHauthornegativeconclusionsread;notindependentOOS",
+    "PreviousmatchedBTCETHNFI/carry/UPresultsalreadyviewed",
+    "No localcalendarstrategyaccountreturninspected"
+  ],
+  "factor_type": "Time-onlystrategy;crosssectionalICundefinedforcommoncalendarsignal;noforcedRegistryfactor",
+  "new_factor_analysis": 0,
+  "new_vibe_bench": 0,
+  "resource_policy": {
+    "children": 1,
+    "rss": 3221225472,
+    "wall": 3600,
+    "min_disk": 2147483648
+  },
+  "no_retuning": true,
+  "orders_enabled": false,
+  "services_changed": false
+}

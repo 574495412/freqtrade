@@ -1,0 +1,7 @@
+{
+  "hypothesis": "Pure NFI long-scalp campaigns may concentrate open margin after repeated additions, leaving a source of loss or capacity pressure.",
+  "subgroup": "Long trades with a nonempty entry-tag set contained in the archived strategy's long_scalp_mode_tags, as read from that source. Include all matched natural closes.",
+  "measurement": "Record first entry margin and peak still-open entry margin, using native average cost for reductions. Flag positive additions whose resulting outstanding margin exceeds two times the initial fill. Record unchanged realized outcomes for both flagged and unflagged trades.",
+  "economics_boundary": "The two-times threshold reuses the magnitude of prior short-risk research, while the outstanding exposure definition is specific to this new diagnostic. No adjustments are blocked in any reported wallet.",
+  "orders_enabled": false
+}

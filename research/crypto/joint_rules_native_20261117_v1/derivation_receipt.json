@@ -1,0 +1,39 @@
+{
+  "created_at": "2026-11-17T14:40:09.385749+00:00",
+  "parent_templates": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/amount_rules_native_20261117_v1/run_native.py",
+      "sha256": "f08ca5d8321ff4c74be00119e783a81441ef546f7dbee57db2a7af9f10c871b4"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/amount_rules_native_20261117_v1/prepare.py",
+      "sha256": "8463ef094986d8974c4db698abb3137fd5ee02678dd65ce71d17dd86b4a6f679"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/amount_rules_native_20261117_v1/audit.py",
+      "sha256": "f0b15ee167e01cda6d1255464e61bccb6d7997ce32c03de2da3f43b03d74225d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/suspension_native_20261117_v1/prepare_fixture.py",
+      "sha256": "267dc9e4691064e745ffe1893d040c279ef3952198b6706dd533d35d349f9e07"
+    }
+  ],
+  "new_module_class": "NativeJoint(DatedAmountMixin,OrderOperationMixin,Backtesting)",
+  "shared_native_modules_modified": false,
+  "changes": "New frozen combined synthetic fixtures, explicit operation and quantity schedules, actual native execution and independent Decimal raw-ZIP audit; existing modules untouched",
+  "terminal_execution_observed": true,
+  "controller_exit_code": 0,
+  "child_returncodes": [
+    0,
+    0,
+    1,
+    1,
+    1
+  ],
+  "independent_audit_exit_code": 0,
+  "lint_semantic_check_passed": true,
+  "actual_native_completed": 2,
+  "expected_rejected": 3,
+  "new_historical_strategy_accounts": 0,
+  "orders_enabled": false
+}

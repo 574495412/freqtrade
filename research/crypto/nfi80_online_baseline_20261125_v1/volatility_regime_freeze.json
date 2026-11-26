@@ -1,0 +1,40 @@
+{
+  "protocol": {
+    "sample": "Complete UTC days within the January\u2013November 2026 archived deployment-aligned native account",
+    "volatility": "Square root of 365 times the mean of the previous seven completed BTC daily log returns squared",
+    "comparison": "High means current observation is at least the 80th percentile of the prior 90 observed 7-day volatilities",
+    "windows": [
+      "entire calendar",
+      "January\u2013June",
+      "July through the end"
+    ],
+    "outcomes": "Cash account daily return, share of days below -2 percent, and within-day peak-to-trough on 5-minute marks including both day boundaries",
+    "scope": "Retrospective regime attribution without account replay or weight changes. Contiguous volatility regimes are serially dependent."
+  },
+  "script": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/volatility_regime.py",
+    "sha256": "085b08d1a646ff9752ba76272ceb4c12348960f298c4825453602af7107feb53"
+  },
+  "plan": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/plan.json",
+    "sha256": "d12d43c421d1172ae177bd27e10d16f70be0cb6b22fe69a5b591429288793e16"
+  },
+  "schedule": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/schedule.json",
+    "sha256": "27139ea6ca7c6755d9d40c835a2ee69fcd10281fbee07562536cb65b35231a2d"
+  },
+  "btc": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/daily/BTC.json",
+    "sha256": "924e77890bde3e7d4ff15693a6e4fa9ae7da3ee4a0447078626dd88bc4a496df"
+  },
+  "reported_accounts": {
+    "15": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/comparison_15bp.json",
+      "sha256": "f800f33c85aa3f36da1c9169c74da48d75d3bc941b66e33c34c0074088c153a8"
+    },
+    "8": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/comparison_8bp.json",
+      "sha256": "7ec32cc862787da7cb4b99ebf0850828790fd0df30959799849aaf4bf674943c"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "captured_at": "2026-11-13T14:14:04.701668+00:00",
+  "github": {
+    "Bandtastic": "Exact pinned source archived; actual native strategy accounts, not certified profitable alpha.",
+    "AverageStrategy": "Exact existing pinned source reused; old negative results and startup0 caveat preserved.",
+    "PowerTower": {
+      "url": "https://raw.githubusercontent.com/freqtrade/freqtrade-strategies/f3340ce11f5bdf62f598522e64d1f5638eaa13f5/user_data/strategies/PowerTower.py",
+      "source_sha256": "ce423a28ea54cfa46f44566ef5632d2ec04718a0723b16e322e9f9ac92df8f41",
+      "decision": "SOURCE_ADMISSION_REJECTED_QUOTE_UNIT_DEPENDENCE",
+      "formula": "close[t] > close[t-2]**3.849 and analogous1/3,2/4 terms",
+      "unit_counterexample": {
+        "same_return_and_candle_shape": true,
+        "all_prices10": false,
+        "all_prices0.1": true
+      },
+      "accounts": 0
+    }
+  },
+  "social_sources": [
+    {
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=GpR1VOTEdHE",
+      "state": "SEARCH_METADATA_ONLY; direct fetch throttled",
+      "economic_evidence": false
+    },
+    {
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=tQfZbC43uJc",
+      "state": "SEARCH_METADATA_ONLY; direct fetch throttled",
+      "economic_evidence": false
+    },
+    {
+      "platform": "X/Twitter",
+      "url": "https://x.com/freqtrade",
+      "state": "DIRECT_READ_403; searches yielded no verifiable source formula",
+      "economic_evidence": false
+    },
+    {
+      "platform": "Douyin",
+      "url": "https://www.douyin.com/video/7116367282749672712",
+      "state": "Indexed title/date only; direct page has0readable lines; no transcript/formula",
+      "economic_evidence": false
+    }
+  ],
+  "primary_workflow": [
+    {
+      "url": "https://www.freqtrade.io/en/stable/backtesting/",
+      "state": "Read; native assumptions, detail-timeframe and dry-run distinction"
+    },
+    {
+      "url": "https://www.freqtrade.io/en/2026.9/strategy-customization/",
+      "state": "Read; IStrategy/source interfaces and learning-only strategy examples"
+    }
+  ],
+  "not_claimed": [
+    "Watched videos or extracted full transcripts",
+    "Verified any social-media advertised returns",
+    "All candidate sources accessible",
+    "New statistically independent alpha",
+    "Forward or live profit"
+  ]
+}

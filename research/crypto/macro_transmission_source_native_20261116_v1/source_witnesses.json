@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "source_sha256": "872ed922d7b123258e655aaba3cc9db262c795647ab21b91e734fc4e025de1db",
+  "selected_perf_definition_lines": [
+    1142,
+    1151
+  ],
+  "source_bh_compounds_log_returns_as_simple": true,
+  "deterministic_price_path": [
+    100.0,
+    200.0,
+    100.0
+  ],
+  "true_buy_and_hold_multiple": 1.0,
+  "source_formula_multiple": 0.5195469860817997,
+  "source_formula_loss_percent": -48.045301391820026,
+  "witness_is_synthetic_not_strategy_profit": true,
+  "source_financial_engine_executed": false,
+  "source_fixture_rows": 2722,
+  "source_fixture_start": "2019-01-02 00:00:00",
+  "source_fixture_end": "2026-06-15 00:00:00",
+  "absent_target_calendar_dates": 77,
+  "absent_target_start": "2026-06-16 00:00:00",
+  "absent_target_end": "2026-08-31 00:00:00",
+  "source_main_rule": "LOOKBACK10,REDUCED.25,yielddiff>0 ANDdxylogdiff>0,onecalendar-daylag",
+  "source_statistical_grid": "full-sample5x20correlation/FDRgrid;not training/live partition;not actually used to select fixedheadwindinputs",
+  "source_portfolio_contract_missing": [
+    "initial/terminalcash",
+    "actualunits",
+    "dailyrebalancecostwhenweightunchanged",
+    "minnotional/precision",
+    "snapshotfirstseen"
+  ],
+  "full_source_account_reproduction_admitted": false
+}

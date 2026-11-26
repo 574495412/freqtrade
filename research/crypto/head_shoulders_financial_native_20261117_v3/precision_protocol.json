@@ -1,0 +1,79 @@
+{
+  "frozen_at": "2026-11-17T15:33:34.821230+00:00",
+  "before_precision_route_diagnostics": true,
+  "before_financial_outcomes": true,
+  "audit_code_sha256": "8a35ba3d76f3b94785b91e66a47c390c13008ddb30ff3f774f8ed81dbd19c5a8",
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "native_owners": {
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/data/btanalysis/historic_precision.py": "eb8c134741bf4de3fd855d9b727cd9b8a9856490f0fb4485d216f2156b32226f",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/data/history/history_utils.py": "c14c282a8c1cc662c6285c160c6ba54167583d1a7a5ed300b9f12d7cf044a3ca",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/data/history/datahandlers/idatahandler.py": "8459a25bef0c6dd1111d2b993f0b307ddadf67b65bdcaf070e96fe88ff9c3ad2",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/optimize/backtesting.py": "1d45e0b34ddf30813bbdf51a20be6e8345a65b668f373f8ce2fbb6e93271b234"
+  },
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles",
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "TRB/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "XRP/USDT:USDT",
+    "ADA/USDT:USDT",
+    "BNB/USDT:USDT",
+    "LINK/USDT:USDT",
+    "DOT/USDT:USDT",
+    "FIL/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "DYDX/USDT:USDT",
+    "LTC/USDT:USDT",
+    "BCH/USDT:USDT",
+    "ETC/USDT:USDT",
+    "GALA/USDT:USDT",
+    "SAND/USDT:USDT",
+    "UNI/USDT:USDT",
+    "IOTA/USDT:USDT",
+    "RUNE/USDT:USDT",
+    "AXS/USDT:USDT",
+    "AAVE/USDT:USDT",
+    "EGLD/USDT:USDT",
+    "ALGO/USDT:USDT",
+    "SNX/USDT:USDT",
+    "CRV/USDT:USDT",
+    "MASK/USDT:USDT",
+    "SUSHI/USDT:USDT",
+    "KSM/USDT:USDT",
+    "IOTX/USDT:USDT",
+    "MANA/USDT:USDT",
+    "NEO/USDT:USDT",
+    "GRT/USDT:USDT",
+    "TRX/USDT:USDT",
+    "CELO/USDT:USDT",
+    "SKL/USDT:USDT",
+    "THETA/USDT:USDT"
+  ],
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+    "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+  },
+  "routes": {
+    "nfi5m": {
+      "timeframe": "5m",
+      "timerange": "1735689600-1788220799",
+      "startup_candles": 800
+    },
+    "hs1h": {
+      "timeframe": "1h",
+      "timerange": "1735686000-1788220799",
+      "startup_candles": 0
+    }
+  },
+  "comparison_start": "2025-01-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "compare": "exact monthly tables and official Series.asof at every common hourly boundary; static fallback unchanged",
+  "maximum_rss_bytes": 2147483648,
+  "on_difference": "preserve default mismatch and register sharedlegacy5mreference through supported get_pair_precision before any new financial start",
+  "source_signal_rule_changes_allowed": false,
+  "historically_corrected_precision_claim_allowed": false
+}

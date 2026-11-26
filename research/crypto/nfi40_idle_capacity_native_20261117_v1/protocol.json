@@ -1,0 +1,277 @@
+{
+  "schema": "freqtrade.crypto.nfi40_idle_capacity_preregistration.v1",
+  "registered_at": "2026-11-17T15:16:41.959247+00:00",
+  "hypothesis": "A single shared 1000 USDT native wallet may improve full-window net performance by admitting at most one head-and-shoulders auxiliary trade only while NFI is flat, while prioritizing NFI and recording displacement, preemption latency and costs.",
+  "motivation": "Previously observed original 1000 USDT X8 capacity and already admitted source geometry; independent capital-utilization hypothesis, not a repair selected after new head-and-shoulders financial outcomes.",
+  "prior_observations": {
+    "old_nfi_account_returns_known": true,
+    "old_nfi_capacity_diagnostics_known": true,
+    "head_shoulders_source_geometry_diagnostics_known": true,
+    "head_shoulders_market_financial_outcomes_read_by_this_study": false,
+    "current_parallel_500_wallet_outputs_read": false,
+    "parameters_selected_from_new_auxiliary_returns": false,
+    "sample_out_of_sample_claim": false
+  },
+  "contract": {
+    "ordered_pairs": [
+      "BTC/USDT:USDT",
+      "ETH/USDT:USDT",
+      "SOL/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "TRB/USDT:USDT",
+      "DOGE/USDT:USDT",
+      "XRP/USDT:USDT",
+      "ADA/USDT:USDT",
+      "BNB/USDT:USDT",
+      "LINK/USDT:USDT",
+      "DOT/USDT:USDT",
+      "FIL/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "ATOM/USDT:USDT",
+      "DYDX/USDT:USDT",
+      "LTC/USDT:USDT",
+      "BCH/USDT:USDT",
+      "ETC/USDT:USDT",
+      "GALA/USDT:USDT",
+      "SAND/USDT:USDT",
+      "UNI/USDT:USDT",
+      "IOTA/USDT:USDT",
+      "RUNE/USDT:USDT",
+      "AXS/USDT:USDT",
+      "AAVE/USDT:USDT",
+      "EGLD/USDT:USDT",
+      "ALGO/USDT:USDT",
+      "SNX/USDT:USDT",
+      "CRV/USDT:USDT",
+      "MASK/USDT:USDT",
+      "SUSHI/USDT:USDT",
+      "KSM/USDT:USDT",
+      "IOTX/USDT:USDT",
+      "MANA/USDT:USDT",
+      "NEO/USDT:USDT",
+      "GRT/USDT:USDT",
+      "TRX/USDT:USDT",
+      "CELO/USDT:USDT",
+      "SKL/USDT:USDT",
+      "THETA/USDT:USDT"
+    ],
+    "exchange": "Binance",
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+    "initial_shared_wallet_usdt": 1000,
+    "leverage": 1.0,
+    "max_open_trades_total": 6,
+    "position_stacking": false,
+    "stake_amount": "unlimited",
+    "tradable_balance_ratio": 0.99,
+    "cost_bps_per_side": [
+      15,
+      8
+    ],
+    "cost_components": "5 bp commission plus 10/3 bp fee proxy; dataset funding separately; not orderbook slippage evidence",
+    "account_start": "2025-01-01T00:00:00Z",
+    "native_timerange_end_exclusive": "2026-09-01T00:00:00Z",
+    "common_comparison_endpoint": "2026-08-31T23:00:00Z",
+    "comparison_marks": "complete hourly mark OPEN before current bar processing, remaining close fee reserved",
+    "expected_common_hourly_points": 14592,
+    "main_timeframe": "5m",
+    "new_independent_500_plus_500_sleeves": false
+  },
+  "policy": {
+    "1_same_contract_and_flat_admission": {
+      "maximum_auxiliary_positions": 1,
+      "auxiliary_requires_no_open_nfi_trade_or_pending_entry": true,
+      "auxiliary_requires_no_existing_auxiliary_trade_or_pending_entry": true,
+      "auxiliary_requires_no_current_known_nfi_entry_signal_in_any_of_40_pairs": true,
+      "nfi_signal_information_clock": "Only direction-valid original NFI signal from the completed 5m candle ending at current native time; no future rows. Conservative veto may remain even if later NFI confirm rejects.",
+      "simultaneous_auxiliary_priority": "Original frozen pair order, no return-based ranking",
+      "auxiliary_signal_clock": "Original 1h break candle closes at T; project one signal onto 5m row T-5m; native signal shift enters at T only. No forward-filled/retried event.",
+      "self_terminal_events": "Retain source records; reject native entries"
+    },
+    "2_native_cash_reservation": {
+      "budget_B": "wallets.get_total_stake_amount() from this one native wallet",
+      "available_F": "wallets.get_available_stake_amount() from this one native wallet",
+      "auxiliary_margin_cap": "B/6",
+      "cash_reserve_R": "5*B/6",
+      "fee_f": "scenario per-side all-in fee proxy, 0.0015 or 0.0008",
+      "requested_auxiliary_margin_S": "max(0, min(B/6, (F-R)/(1+2*f)))",
+      "confirm_after_native_amount_and_minimum_adjustments": "Require actual margin <= B/6 and actual margin*(1+2*f) <= F-R; otherwise reject, never silently upsizing above cap",
+      "reservation_is_not_guaranteed_future_dca_capacity": true,
+      "funding_reserve_guarantee": false,
+      "no_virtual_wallet_or_synthetic_capital_transfer": true
+    },
+    "3_nfi_preemption": {
+      "trigger": "Any current known direction-valid NFI entry signal in the pool, or any NFI open trade/pending entry",
+      "action": "Auxiliary custom_exit requests full exit with independent aux_nfi_priority_preempt reason; keep request active until actual native close",
+      "release_cash": "Only actual native fills and wallet update release funds",
+      "same_pair_same_clock_reentry": "Reject after auxiliary close at T, including native opposite-direction second-loop reentry; NFI may enter later only if its original later signal independently permits it",
+      "late_auxiliary_entries": "Reject T+5m and later; no queue",
+      "costs_and_delays": "Record actual entry/exit fees, funding, pending/paused execution, missed NFI signals and altered sizing; no atomic preemption assumption"
+    },
+    "4_source_dispatch": {
+      "nfi_enter_tag": "Preserve exact original NFI numeric/space tag; do not prefix or rewrite it because source classifies tag.split() using all/any membership",
+      "auxiliary_enter_tag": "Dedicated immutable hs1_* event identity",
+      "unknown_tag": "Reject or separate policy-error exit; never default to NFI",
+      "nfi_callbacks": "Pass original-tag trades to pinned NFI custom_exit, adjust_trade_position, order_filled, confirm_trade_entry/exit and entry/exit timeout callbacks; preserve their order tags and custom data",
+      "auxiliary_callbacks": "Independent source-event exit/expiry state, no DCA or partial exit; do not call NFI trade callbacks for auxiliary trades",
+      "global_position_adjustment": "Enabled for NFI; return None for auxiliary trades",
+      "nfi_source_modified": false
+    },
+    "5_interaction_and_execution_contract": {
+      "nfi_unchanged_outcome_guarantee": false,
+      "known_interactions": [
+        "shared actual cash",
+        "global six-slot count",
+        "NFI all-trade queries",
+        "same-pair exclusivity",
+        "auxiliary profits/losses alter subsequent stakes",
+        "preemption latency and fees",
+        "pending orders and historical operation restrictions"
+      ],
+      "one_strategy_one_timeframe_and_order_type_contract": true,
+      "proposed_minimal_supported_adapter": "Main 5m IStrategy derived from pinned NFI; keep global entry/exit limit type. Adapt H&S to native 5m-open limit orders in an explicitly separate frozen policy, using original completed 1h observations. Do not claim existing 1h/market H&S is execution-identical.",
+      "auxiliary_limit_price": "Native proposed current 5m open; no use of intrabar future high/low for signals",
+      "auxiliary_unfilled_entry": "Cancel at first subsequent 5m callback; no delayed event entry; actual operation-rule delays remain recorded",
+      "alternative_per_source_order_type_extension": "Not selected or implemented here; would require a separately frozen native extension and validation",
+      "native_risk_exits": "Keep native -99% catastrophe/liq mechanisms distinct from source target/stop/expiry and policy errors; no claim that source exits remove native risk"
+    }
+  },
+  "mandatory_gates_before_any_combined_financial_start": [
+    "Implement a separate version with explicit hashes and actual supported IStrategy/native interfaces; no external account simulator.",
+    "Auxiliary-disabled composite must reproduce unchanged NFI signals, tags, fills, DCA/partial exits, fees, funding and full-window native wallet/mark account under the same 1000-USDT cohort and chosen verification tier.",
+    "Run and audit a separately frozen H&S-only 5m/limit control using this execution translation before combined financial comparison; the 1h/market interface cannot substitute.",
+    "Native lifecycle fixtures must cover tags, source callback dispatch, original NFI order_filled custom data, cash reserve after minimum/precision adjustments, simultaneous 40-pair intents, DCA vs auxiliary cash, all six slots, pending orders, preemption pause/continue/stop, same-clock reverse attempt, source-close availability and expiry.",
+    "Freeze actual common native historical rules/funding ownership contract and cost/window before financial execution; new exposure at AXS/TRB unknown funding slots must be independently checked.",
+    "Use Configuration -> local Backtesting.start -> actual complete ZIP and one real native wallet; independently reconcile fill quantities, fees, funding, cash and complete endpoint NAV; retain rejects/failures.",
+    "Compare combined account with matched NFI-only control; do not add sleeve returns or assume NFI PnL is unchanged. Record source-attributed trades and capacity/cash conflicts as diagnostics, not an independent simulated account."
+  ],
+  "verification_tiers": {
+    "tier_1_conditional_legacy_model": {
+      "meaning": "Reproducible native engineering and complete account comparison conditional on the explicitly frozen old execution/data model; never certified corrected history",
+      "retained_limits": [
+        "legacy full-month OHLC decimal heuristic can include later monthly observations",
+        "historical per-symbol tick/amount/notional/operation effective and known-at coverage not certified for the complete original pool",
+        "historical universe tradability/survivorship not certified",
+        "AXS/TRB 2026-06-24 04:00 UTC funding slots remain UNKNOWN; old accounts have no exposure, but new accounts must recheck",
+        "fee proxy and OHLC native fills do not certify exchange execution"
+      ],
+      "execution_admitted_by_this_document": false
+    },
+    "tier_2_historical_causal_execution": {
+      "meaning": "Separate stricter gate requiring admitted effective/knowledge clocks and actual reachable rule/funding support, followed by complete native controls and independent account audit",
+      "currently_certified": false,
+      "cannot_be_inferred_from_tier_1": true
+    }
+  },
+  "diagnostic_definitions": {
+    "flat_hours": "Count archived hourly rows with open_trades == 0; rows are pre-current-bar processing",
+    "gross_ratio": "Quantiles of existing archived gross_ratio column, excluding missing first-row ratio; not free cash or a future DCA budget",
+    "multi_entry_campaign": "Native ZIP trade has more than one serialized order with ft_is_entry true",
+    "serialized_max_stake_ratio": "Native max_stake_amount divided by first entry amount*safe_price at 1x; native field sums entry notionals without subtracting partial exits, so this is cumulative entry turnover, NOT peak simultaneous capital",
+    "source_candidate_events": "v1 source events with earliest_signal_available in inclusive shared comparison window and self_terminal_at_confirmation false",
+    "flat_event_join": "many-to-one exact join source earliest_signal_available to archived hourly date; retain only open_trades == 0; report both event rows and distinct clocks",
+    "flat_event_limit": "Potential only; distinct clocks are a lower deduplicated count than rows, still an upper bound before max-one auxiliary occupancy, same-clock NFI signals, cash/minimum/dated-rule gates. Neither admitted trades nor profit."
+  },
+  "baseline_inputs": [
+    {
+      "cost_bps_per_side": 15,
+      "account": "nfi-x8-1x-cost15",
+      "curve": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15/hourly_equity.parquet",
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15/native_results/backtest-result-2026-11-05_13-13-57.zip",
+      "inputs": [
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15/hourly_equity.parquet",
+          "sha256": "43b2f8ba81621adef48080f17fb67e9ea985f3e95db616bbeb711886cf3c2fa2",
+          "expected_from": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/input_hashes.json",
+          "bytes": 596158
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15/native_results/backtest-result-2026-11-05_13-13-57.zip",
+          "sha256": "e2ff3c9a7de5960375b63270e2ce1ee35a4eca47a43a28ad1ad2cc3a08624fb3",
+          "expected_from": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/input_hashes.json",
+          "bytes": 3794094
+        }
+      ]
+    },
+    {
+      "cost_bps_per_side": 8,
+      "account": "nfi-x8-1x-cost8",
+      "curve": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x8-1x-cost8/hourly_equity.parquet",
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x8-1x-cost8/native_results/backtest-result-2026-11-05_12-46-45.zip",
+      "inputs": [
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x8-1x-cost8/hourly_equity.parquet",
+          "sha256": "b753e652a1c1301f00ef1ea2301e22fa226b9bde6361ff3b9fd31404d2bb8c21",
+          "expected_from": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/input_hashes.json",
+          "bytes": 581426
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x8-1x-cost8/native_results/backtest-result-2026-11-05_12-46-45.zip",
+          "sha256": "80e731e8528e6c95a424e71ae8867b1fe48f914ecbb4569e34c8f131f9743c73",
+          "expected_from": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/input_hashes.json",
+          "bytes": 3794566
+        }
+      ]
+    }
+  ],
+  "reference_inputs": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/input_hashes.json",
+      "sha256": "dfc4298effab9de728608f9ccaaeb31f6204f107212cb7341be8ae3081d929d1",
+      "bytes": 62893
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/protocol.json",
+      "sha256": "eef4dc2d369c5f8a0195316923f1e16b525c9dce6a9addde869ebd78622eabad",
+      "bytes": 1804
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/verification.json",
+      "sha256": "c0b313c8257a755fde21cc5b32b3ccb95df567b681a1485f01877cbc8671fd90",
+      "bytes": 1502
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/next_native_gate.json",
+      "sha256": "6b44d346d8084d02e141d69d63a2ba25016e16c044bffc146654aedf36225ced",
+      "bytes": 1492
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/precision_count_qualification.json",
+      "sha256": "ec8dc76567fea521f5a3dfa3f04085414b4f41974e12e0a5c5117f6fedfa23d0",
+      "bytes": 532
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/head_shoulders_source_native_20261117_v1/artifact_manifest.json",
+      "sha256": "ed3f314b59ee5e645c0cc1a78febe73ca1c6fc1097c37512fce7c95468fba284",
+      "bytes": 5395
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/head_shoulders_source_native_20261117_v1/protocol.json",
+      "sha256": "7746b635effb5c54f1218eb2e314da9a1cfabd3d0a649ac000e76e6b39e1941b",
+      "bytes": 13989
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/head_shoulders_source_native_20261117_v1/source_events.parquet",
+      "sha256": "1603ca0759de09c70a9fcbca363a3f69230573017f39fef2519fa52bc07ce157",
+      "bytes": 348282
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/plan.json",
+      "sha256": "1b0fea99e5d5809e8b0f24c028ebb6adc1be163eea840775d96892db40d5edc6",
+      "bytes": 19556
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+      "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3",
+      "bytes": 3097254
+    }
+  ],
+  "implementation_status": "NOT_IMPLEMENTED",
+  "financial_execution_admitted": false,
+  "native_accounts_started_by_this_study": 0,
+  "market_returns_computed_by_this_study": false,
+  "orders_enabled": false,
+  "deployment_enabled": false,
+  "financial_performance_proven": false,
+  "goal_complete": false
+}

@@ -1,0 +1,121 @@
+{
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_reset_audit.py",
+    "sha256": "029d222c574d914ac24e076658f6e35cb91586ff91186245c2d280aefc019c75"
+  },
+  "reset_native_reconciliation": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/comparison_15bp.json",
+    "sha256": "f800f33c85aa3f36da1c9169c74da48d75d3bc941b66e33c34c0074088c153a8"
+  },
+  "carry_native_reconciliation": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_15bp_12_verified.json",
+    "sha256": "0513832bce22a2125e51adc6a3c5931fd8793f02f38415920e097e1638410cfc"
+  },
+  "common_basis": {
+    "same_engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "bound_market_manifest": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_inputs_20261126/shards.json",
+      "sha256": "e3a837dc8ab9f11834069fac31b3c91c8baf7e8ead2589fb7e9aefa3043ba255"
+    },
+    "matched_pairlist_days": 313,
+    "matched_source_files": 1768,
+    "matching_market_terms": 221,
+    "same_registered_trading_config": true,
+    "matched_source_grid_stops_before": "2026-11-09T00:00:00+00:00"
+  },
+  "start": "2026-01-01T00:00:00+00:00",
+  "end": "2026-11-08T23:55:00+00:00",
+  "five_minute_marks": 89856,
+  "wallets": {
+    "reset": {
+      "initial_nav": 1000.0,
+      "ending_nav": 2423.9825818396266,
+      "net_return": 1.4239825818396266,
+      "marked_drawdown": 0.1683228894097153,
+      "drawdown_peak": "2026-09-15T19:05:00+00:00",
+      "drawdown_trough": "2026-10-08T17:50:00+00:00",
+      "open_trades_start": 0,
+      "open_trades_end": 5,
+      "empty_initial_open_pnl_field": true,
+      "net_realized_pnl": 2016.39359726,
+      "change_in_open_marked_pnl": -592.4110154203745,
+      "tail_counts": {
+        "natural_closes": 303,
+        "wins_at_least_25_usdt": 24,
+        "wins_at_least_50_usdt": 2,
+        "trades_with_prior_equity": 303,
+        "wins_at_least_1pct_of_equity": 44,
+        "losses_at_least_1pct_of_equity": 1,
+        "best_profit_fraction_of_prior_equity": 0.026498713693037,
+        "worst_profit_fraction_of_prior_equity": -0.18708518882176875,
+        "single_entry_count": 270,
+        "single_entry_wins_at_least_10pct_of_margin": 101,
+        "median_opening_margin_usdt": 54.67333333333334
+      }
+    },
+    "carry": {
+      "initial_nav": 14860.186273480245,
+      "ending_nav": 34928.63156161507,
+      "net_return": 1.350484100185832,
+      "marked_drawdown": 0.1628286681293144,
+      "drawdown_peak": "2026-10-31T00:40:00+00:00",
+      "drawdown_trough": "2026-11-08T22:00:00+00:00",
+      "open_trades_start": 1,
+      "open_trades_end": 5,
+      "empty_initial_open_pnl_field": false,
+      "net_realized_pnl": 28636.41252117,
+      "change_in_open_marked_pnl": -8567.967233035166,
+      "tail_counts": {
+        "natural_closes": 302,
+        "wins_at_least_25_usdt": 206,
+        "wins_at_least_50_usdt": 157,
+        "trades_with_prior_equity": 302,
+        "wins_at_least_1pct_of_equity": 43,
+        "losses_at_least_1pct_of_equity": 2,
+        "best_profit_fraction_of_prior_equity": 0.02638999235033643,
+        "worst_profit_fraction_of_prior_equity": -0.17007369411043047,
+        "single_entry_count": 267,
+        "single_entry_wins_at_least_10pct_of_margin": 100,
+        "median_opening_margin_usdt": 795.7479356666668
+      }
+    }
+  },
+  "reset_return_during_carry_peak_to_trough": -0.1597330541436226,
+  "attribution": {
+    "realized_trade_groups": {
+      "same_fill_clocks_prices": {
+        "reset_count": 295,
+        "carry_count": 295,
+        "reset_nav_fraction": 2.36071538221,
+        "carry_nav_fraction": 2.2925405621938677,
+        "carry_minus_reset": -0.06817482001613229
+      },
+      "same_first_entry_other_fills": {
+        "reset_count": 2,
+        "carry_count": 2,
+        "reset_nav_fraction": -0.40919750171,
+        "carry_nav_fraction": -0.3631016501811532,
+        "carry_minus_reset": 0.04609585152884682
+      },
+      "first_entry_only_one_wallet": {
+        "reset_count": 6,
+        "carry_count": 5,
+        "reset_nav_fraction": 0.06487571676000001,
+        "carry_nav_fraction": -0.0023828176840011593,
+        "carry_minus_reset": -0.06725853444400116
+      }
+    },
+    "open_marked_pnl_change_gap_fraction": 0.015839021277493925,
+    "normalized_return_gap": -0.07349848165379447,
+    "first_matched_entry": {
+      "pair": "POPCAT/USDT:USDT",
+      "clock": "2026-01-06T02:10:00+00:00",
+      "reset_margin_usdt": 20.6016,
+      "carry_margin_usdt": 306.4130333333333
+    },
+    "same_fill_median_margin_ratio": 14.484455958549225
+  },
+  "scope": "Observed path comparison. January capital and holdings differ jointly, and the warmup uses separately sourced pre-January tapes. Contributions are marked-account arithmetic using each path's own January NAV, without causal counterfactual claims.",
+  "new_native_accounts": 0,
+  "orders_enabled": false
+}

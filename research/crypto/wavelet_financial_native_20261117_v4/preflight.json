@@ -1,0 +1,204 @@
+{
+  "passed": true,
+  "cases": [
+    {
+      "capital": 1000,
+      "cost_bps": 20,
+      "all_source_columns_equal": true,
+      "trace": {
+        "model_events": [
+          {
+            "stage": "source_model_fit_complete",
+            "pair": "BTC/USDT",
+            "rows": 994,
+            "columns": 101,
+            "label_last": "2024-10-11 09:45:00+00:00",
+            "first_prediction": "2024-10-11 10:00:00+00:00",
+            "x_sha256": "be3ef8f3e4501a52adaec48e8cbda87c2e75b9505917037cb92c60ee3430a28b",
+            "y_sha256": "6fbf45f98cdf4fbc9b2190cf4625b4bde8c4e37431f703149068c0bbf5271d5f",
+            "elapsed_seconds": 0.12421420798636973,
+            "estimator_count": 101,
+            "booster_parameters": {
+              "boosting_type": "gbdt",
+              "colsample_bytree": 1.0,
+              "learning_rate": 0.1,
+              "max_depth": -1,
+              "min_child_samples": 20,
+              "min_child_weight": 0.001,
+              "min_split_gain": 0.0,
+              "num_leaves": 31,
+              "random_state": 42,
+              "reg_alpha": 0.0,
+              "reg_lambda": 0.0,
+              "subsample": 1.0,
+              "subsample_for_bin": 200000,
+              "subsample_freq": 0,
+              "objective": "regression",
+              "metric": [
+                "regression"
+              ],
+              "num_threads": 10,
+              "num_iterations": 100
+            }
+          },
+          {
+            "stage": "source_model_fit_complete",
+            "pair": "BTC/USDT",
+            "rows": 994,
+            "columns": 101,
+            "label_last": "2024-10-11 09:45:00+00:00",
+            "first_prediction": "2024-10-11 10:00:00+00:00",
+            "x_sha256": "be3ef8f3e4501a52adaec48e8cbda87c2e75b9505917037cb92c60ee3430a28b",
+            "y_sha256": "6fbf45f98cdf4fbc9b2190cf4625b4bde8c4e37431f703149068c0bbf5271d5f",
+            "elapsed_seconds": 0.12421420798636973,
+            "estimator_count": 101,
+            "booster_parameters": {
+              "boosting_type": "gbdt",
+              "colsample_bytree": 1.0,
+              "learning_rate": 0.1,
+              "max_depth": -1,
+              "min_child_samples": 20,
+              "min_child_weight": 0.001,
+              "min_split_gain": 0.0,
+              "num_leaves": 31,
+              "random_state": 42,
+              "reg_alpha": 0.0,
+              "reg_lambda": 0.0,
+              "subsample": 1.0,
+              "subsample_for_bin": 200000,
+              "subsample_freq": 0,
+              "objective": "regression",
+              "metric": [
+                "regression"
+              ],
+              "num_threads": 10,
+              "num_iterations": 100
+            }
+          },
+          {
+            "stage": "source_model_predict_complete",
+            "pair": "BTC/USDT",
+            "rows": 1000,
+            "prediction_sha256": "6e990502697d79aeace80e76dc8e1b84318f8082334e28333d982fb3068763d5",
+            "elapsed_seconds": 38.93700174998958
+          },
+          {
+            "stage": "source_model_fit_complete",
+            "pair": "ETH/USDT",
+            "rows": 994,
+            "columns": 101,
+            "label_last": "2024-10-11 09:45:00+00:00",
+            "first_prediction": "2024-10-11 10:00:00+00:00",
+            "x_sha256": "a72528ac9e3bc362a0513113d48ec9a3224b52b37ed0d8b4099cc3d6524a4a96",
+            "y_sha256": "613d774c11650267b38e5d708b5ea399bf73e5c45ef8b5025dfe3a69e898be87",
+            "elapsed_seconds": 0.11922062502708286,
+            "estimator_count": 101,
+            "booster_parameters": {
+              "boosting_type": "gbdt",
+              "colsample_bytree": 1.0,
+              "learning_rate": 0.1,
+              "max_depth": -1,
+              "min_child_samples": 20,
+              "min_child_weight": 0.001,
+              "min_split_gain": 0.0,
+              "num_leaves": 31,
+              "random_state": 42,
+              "reg_alpha": 0.0,
+              "reg_lambda": 0.0,
+              "subsample": 1.0,
+              "subsample_for_bin": 200000,
+              "subsample_freq": 0,
+              "objective": "regression",
+              "metric": [
+                "regression"
+              ],
+              "num_threads": 10,
+              "num_iterations": 100
+            }
+          },
+          {
+            "stage": "source_model_fit_complete",
+            "pair": "ETH/USDT",
+            "rows": 994,
+            "columns": 101,
+            "label_last": "2024-10-11 09:45:00+00:00",
+            "first_prediction": "2024-10-11 10:00:00+00:00",
+            "x_sha256": "a72528ac9e3bc362a0513113d48ec9a3224b52b37ed0d8b4099cc3d6524a4a96",
+            "y_sha256": "613d774c11650267b38e5d708b5ea399bf73e5c45ef8b5025dfe3a69e898be87",
+            "elapsed_seconds": 0.11922062502708286,
+            "estimator_count": 101,
+            "booster_parameters": {
+              "boosting_type": "gbdt",
+              "colsample_bytree": 1.0,
+              "learning_rate": 0.1,
+              "max_depth": -1,
+              "min_child_samples": 20,
+              "min_child_weight": 0.001,
+              "min_split_gain": 0.0,
+              "num_leaves": 31,
+              "random_state": 42,
+              "reg_alpha": 0.0,
+              "reg_lambda": 0.0,
+              "subsample": 1.0,
+              "subsample_for_bin": 200000,
+              "subsample_freq": 0,
+              "objective": "regression",
+              "metric": [
+                "regression"
+              ],
+              "num_threads": 10,
+              "num_iterations": 100
+            }
+          },
+          {
+            "stage": "source_model_predict_complete",
+            "pair": "ETH/USDT",
+            "rows": 1000,
+            "prediction_sha256": "b2b632e4da809e78038b089d4dd9f1e6e5dc50473548739d0df36a22415c352b",
+            "elapsed_seconds": 37.70001183298882
+          }
+        ],
+        "feature_caches": [
+          {
+            "pair": "BTC/USDT",
+            "cache_hit": false,
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wavelet_financial_native_20261117_v4/preflight_attempt2/features/BTC_USDT.parquet",
+            "sha256": "ae88c0a207c9ddfbd153625ca882c5e5de8ed9e3a7e01b38c114cdaf37d21fda"
+          },
+          {
+            "pair": "ETH/USDT",
+            "cache_hit": false,
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wavelet_financial_native_20261117_v4/preflight_attempt2/features/ETH_USDT.parquet",
+            "sha256": "4716054db97ac60a4c66e9e92ca43c8b8f75307df34c9e87d5bc0f4a4236cb03"
+          }
+        ]
+      },
+      "financial_start_called": false
+    },
+    {
+      "capital": 500,
+      "cost_bps": 13,
+      "all_source_columns_equal": true,
+      "trace": {
+        "model_events": [],
+        "feature_caches": [
+          {
+            "pair": "BTC/USDT",
+            "cache_hit": true,
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wavelet_financial_native_20261117_v4/preflight_attempt2/features/BTC_USDT.parquet",
+            "sha256": "ae88c0a207c9ddfbd153625ca882c5e5de8ed9e3a7e01b38c114cdaf37d21fda"
+          },
+          {
+            "pair": "ETH/USDT",
+            "cache_hit": true,
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wavelet_financial_native_20261117_v4/preflight_attempt2/features/ETH_USDT.parquet",
+            "sha256": "4716054db97ac60a4c66e9e92ca43c8b8f75307df34c9e87d5bc0f4a4236cb03"
+          }
+        ]
+      },
+      "financial_start_called": false
+    }
+  ],
+  "new_financial_wallets": 0,
+  "cached_result_does_not_recompute_or_simulate_financial_results": true
+}

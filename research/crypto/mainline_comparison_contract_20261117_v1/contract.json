@@ -1,0 +1,74 @@
+{
+  "recorded_at": "2026-11-17T14:29:26.129995+00:00",
+  "reason": "User clarified original strategy has much higher returns;BTCETH diagnostic controls must not be presented as original fullpool strategy",
+  "primary_existing_baseline": "Originalordered40coinNFI_X8_fixed1000USDT1xisolated6slots,2025Jan1-Aug2026,15/8bp",
+  "baselines": [
+    {
+      "cost_bps_per_side": 15,
+      "net_return": 1.356564040788781,
+      "hourly_mark_drawdown": 0.045153827500363786,
+      "initial_usdt": 1000.0,
+      "ending_usdt": 2356.564040788781,
+      "hour_points": 14592,
+      "new_financial_run": false,
+      "comparison": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/native_rechecks/wide_strategy_cost15_20261105_v001/comparison.json",
+        "sha256": "5f4191cbcdbb775c67d8723662b4cbcf04e8d5bf04c30fbe691a884d4253636f"
+      },
+      "old_native_outputs_rechecked": [
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15/result.json",
+          "sha256": "cf40128830760b304a0da1c0a7a26f23f32372697b71e50feac8748df239e2c3"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15/native_results/backtest-result-2026-11-05_13-13-57.zip",
+          "sha256": "e2ff3c9a7de5960375b63270e2ce1ee35a4eca47a43a28ad1ad2cc3a08624fb3"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15/hourly_equity.parquet",
+          "sha256": "43b2f8ba81621adef48080f17fb67e9ea985f3e95db616bbeb711886cf3c2fa2"
+        }
+      ]
+    },
+    {
+      "cost_bps_per_side": 8,
+      "net_return": 1.4120919597300001,
+      "hourly_mark_drawdown": 0.038209224790953566,
+      "initial_usdt": 1000.0,
+      "ending_usdt": 2412.0919597300003,
+      "hour_points": 14592,
+      "new_financial_run": false,
+      "comparison": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/native_rechecks/wide_strategy_comparison_20261105_v001/comparison.json",
+        "sha256": "cd99c2e5744d7a1f6ecc1a48a8af7dc30fe039c026d2f7e64dab09f7502bcf07"
+      },
+      "old_native_outputs_rechecked": [
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x8-1x-cost8/result.json",
+          "sha256": "5b794f9e1c98f6d7f1a24cf4ce1a6f283a89b1450c86b7dde1005afca4db3de4"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x8-1x-cost8/native_results/backtest-result-2026-11-05_12-46-45.zip",
+          "sha256": "80e731e8528e6c95a424e71ae8867b1fe48f914ecbb4569e34c8f131f9743c73"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x8-1x-cost8/hourly_equity.parquet",
+          "sha256": "b753e652a1c1301f00ef1ea2301e22fa226b9bde6361ff3b9fd31404d2bb8c21"
+        }
+      ]
+    }
+  ],
+  "evidence_tier": "Old native model conditional historical records, not corrected causal return or OOS/live certification",
+  "retained_limits": [
+    "Wholemonthhistoricalprecisionincludesfutureobservations",
+    "HistoricalpoolEligibility/survivorshipnotcertified",
+    "TwoAXS/TRBfundingslotsremainunknown;old6NFIwalletshadnoexposure,newwalletmustrecheck",
+    "Historicalcontinuousprice/amount/notional/operationsrulesnotadmitted"
+  ],
+  "two_asset_studies": "Mechanism screen only. No outperformance or multi-strategy advantage over original40coinbaseline established",
+  "portfolio_requirement": "Freeze source/weights/capital first. Test actual strategy allocation wallets or native shared-capital interface with sameoriginalpool/leverage/cost/window. Include allpositions,fees,funding,openlosses. Compare combinedtotal1000 to originaltotal1000;do not sum separate1000accounts or scale assumed500performance",
+  "next_native_integration": "Joint DatedAmountMixin + OrderOperationMixin lifecycle test remains missing;engineeringcannotbyitselfcertifyhistorical40coinreturns",
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

@@ -1,0 +1,56 @@
+{
+  "source_sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3",
+  "NFI_overridden_price_callbacks": [],
+  "NFI_custom_exit_line": 1925,
+  "owners": {
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/optimize/backtesting.py": "1d45e0b34ddf30813bbdf51a20be6e8345a65b668f373f8ce2fbb6e93271b234",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/strategy/interface.py": "5d0faa6da85bd223bcea2281bd173c7ffc54c3a9647ae136e4ebc7d5685dea02",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/persistence/trade_model.py": "a011ca8686a205fd279ef665a2a3d5a1a4e3fb8cec9cbbac7f429eed0da85c2d",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/exchange/exchange_utils.py": "cbb5c257c19e5f841ce5bb9397c77ed69d74e5d816abcbb959f59450464fbca0"
+  },
+  "fixed_native_facts": [
+    {
+      "path": "freqtrade/optimize/backtesting.py",
+      "lines": "791-793",
+      "fact": "order considered fully filled if rate lies inside bar low/high; no tick path, queue or size model"
+    },
+    {
+      "path": "freqtrade/optimize/backtesting.py",
+      "lines": "813-821,1566-1579",
+      "fact": "entry fill then source exit evaluation and exit matching at same native bar clock"
+    },
+    {
+      "path": "freqtrade/optimize/backtesting.py",
+      "lines": "987-1003",
+      "fact": "funding and position adjustment before should_exit; current_rate is current bar OPEN"
+    },
+    {
+      "path": "freqtrade/optimize/backtesting.py",
+      "lines": "594-595,875-911,947-949",
+      "fact": "CUSTOM_EXIT defaults to OPEN, inherited custom_exit_price returns proposed rate, exit rounded using trade saved precision"
+    },
+    {
+      "path": "freqtrade/optimize/backtesting.py",
+      "lines": "1145-1156",
+      "fact": "new/default DCA proposed entry price is current bar OPEN"
+    },
+    {
+      "path": "freqtrade/strategy/interface.py",
+      "lines": "506-560",
+      "fact": "source inherits unchanged proposed-rate entry/exit price hooks"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+      "lines": "1963-1985",
+      "fact": "custom_exit reads analyzed source candles plus current filled-order profit at passed current_rate"
+    }
+  ],
+  "abstract_samebar_risk": "For a different price-policy/pending-entry scenario, OHLC cannot distinguish O100 H110 L80 C90 via O-H-L-C versus O-L-H-C; low limit entry then samebar OPEN exit need not be temporally realizable. No such samebar entry/exit occurs in either reviewed export.",
+  "actual_export_counterevidence": {
+    "all1373fills_equal_corresponding5mOPEN": true,
+    "all_fills_in_range": true,
+    "same_campaign_samebar_cycles": 0,
+    "same_pair_samebar_entry_exit_groups": 0
+  },
+  "cash_reconciliation_certifies_tick_path": false
+}

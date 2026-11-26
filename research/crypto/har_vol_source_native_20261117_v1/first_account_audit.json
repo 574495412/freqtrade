@@ -1,0 +1,58 @@
+{
+  "account": "har_1000_conservative",
+  "role": "har",
+  "capital": 1000,
+  "scenario": "conservative",
+  "periods": [
+    {
+      "name": "continuous",
+      "net_return": -0.1264056189075986,
+      "initial_usdt": 1000.0,
+      "ending_usdt": 873.5943810924014,
+      "cagr_365day": -0.07792939229662887,
+      "hourly_mark_drawdown": 0.4947486621503402,
+      "daily_nav_sharpe": -0.05739829966153218,
+      "complete_24h_returns": 607,
+      "calendar_hours": 14592
+    },
+    {
+      "name": "calendar-2025",
+      "net_return": -0.0651193453799993,
+      "initial_usdt": 1000.0,
+      "ending_usdt": 934.8806546200007,
+      "cagr_365day": -0.0651193453799993,
+      "hourly_mark_drawdown": 0.3446618022588869,
+      "daily_nav_sharpe": -0.0014609496527100286,
+      "complete_24h_returns": 365,
+      "calendar_hours": 8761
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "net_return": -0.06555518420959328,
+      "initial_usdt": 934.8806546200007,
+      "ending_usdt": 873.5943810924014,
+      "cagr_365day": -0.09684495151471251,
+      "hourly_mark_drawdown": 0.3849004733661602,
+      "daily_nav_sharpe": -0.1387463503335197,
+      "complete_24h_returns": 242,
+      "calendar_hours": 5832
+    }
+  ],
+  "passed": true,
+  "archive_sha256": "6038739f5ee32dbcb02e4fede35fb7f838dab59a264f7f4c2869bd7f9ba6432b",
+  "actual_native_trades": 2,
+  "filled_orders": 904,
+  "multi_order_trades": 2,
+  "hour_points": 14592,
+  "maximum_nav_error_usdt": 9.208633855450898e-12,
+  "maximum_cash_error_usdt": 8.359999e-08,
+  "maximum_funding_error_usdt": 0.0,
+  "funding_boundary_fills": [],
+  "maximum_gross_exposure_to_nav": 0.994031499878241,
+  "maximum_abs_net_exposure_to_nav": 0.994031499878241,
+  "native_funding_usdt": 0.0,
+  "naturally_closed_before_endpoint": 0,
+  "open_trades_at_common_endpoint": 2,
+  "hypothetical_terminal_force_exits": 2,
+  "private_settlement_certified": false
+}

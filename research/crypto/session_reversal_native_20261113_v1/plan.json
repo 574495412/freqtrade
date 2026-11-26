@@ -1,0 +1,244 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+    "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "schema": "freqtrade.native.session-reversal.v1",
+  "registered_at": "2026-11-13T15:44:26.795999+00:00",
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/session_reversal_native_20261113_v1",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/session_reversal_native_20261113_v1/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/session_reversal_native_20261113_v1/data_receipts.json",
+    "sha256": "b36cc08ff29d0de51c5dc579d0fa7e8a87a3387e73b5fceb2a275d6fa8d514d0"
+  },
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT"
+  ],
+  "candidates": [
+    {
+      "name": "SourceSessions_BTC",
+      "strategy": "SourceSessions",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/SourceSessions_BTC.json",
+        "sha256": "eea5ce94d818cd4407974f60fed3492a5c3c93eb118ec127da325c89088a9a45"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        }
+      }
+    },
+    {
+      "name": "SourceSessions_ETH",
+      "strategy": "SourceSessions",
+      "capital": 500,
+      "pairs": [
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/SourceSessions_ETH.json",
+        "sha256": "f09902c15fc60cc1705229955712ab3b71594a4b72e7d326bb1720b9cead225b"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        }
+      }
+    },
+    {
+      "name": "TimedLongSessions_BTC",
+      "strategy": "TimedLongSessions",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/TimedLongSessions_BTC.json",
+        "sha256": "d9b4b6128c2b36e8ec0a140d8c2cec5fa94169a138168e61ccc0d5559eaef112"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        }
+      }
+    },
+    {
+      "name": "TimedLongSessions_ETH",
+      "strategy": "TimedLongSessions",
+      "capital": 500,
+      "pairs": [
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/TimedLongSessions_ETH.json",
+        "sha256": "74a0229bd198df077e3ecb0ce25b0fb8c959449dd50ab22e7789c3b8cae32ec5"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        }
+      }
+    },
+    {
+      "name": "PassiveLong_BTC",
+      "strategy": "PassiveLong",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/PassiveLong_BTC.json",
+        "sha256": "125a8a4c31ea2b3c82c247ce7b79e678f580034c1e4a0e5f299ae992d84a6257"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        }
+      }
+    },
+    {
+      "name": "PassiveLong_ETH",
+      "strategy": "PassiveLong",
+      "capital": 500,
+      "pairs": [
+        "ETH/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/PassiveLong_ETH.json",
+        "sha256": "ee7a5ef121423ac6cdde24b263117b13dca4be83e3802672a0ffe6a22d177950"
+      },
+      "source_files": {
+        "SessionRules.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/SessionRules.py",
+          "sha256": "b8cc7c6a0d31d691d1599e41f9df0e9bbe8c42f3ec8b3f623e030c21eb1b80fb"
+        }
+      }
+    }
+  ],
+  "marks": {
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    "ETH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+    }
+  },
+  "initial_equity_usdt": 500,
+  "allowed_leverage": 1.0,
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "runner_sha256": "22d2ef7936440d283ea7045f87c1e504f5fb10ae62598b5055ffc31fc1c2d7cf",
+  "runner_module": "research.crypto.session_reversal_native_20261113_v1.native_runner",
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/protocol.json",
+      "sha256": "c5472d190a79f06713d91fd58ab9c8bf98846673db8698c26d12c8f7cab059dd"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/source_manifest.json",
+      "sha256": "6faa1d9db1bda3b53a12b9d4986c032258a3a7ef02dfa0b0b6dccc9303b9309a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/run.py",
+      "sha256": "0d0c1fe107254af58bc490a9a10c3b0ede6f3789575f1c1a577f248687f9aabe"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/preflight.py",
+      "sha256": "ab83663a7b14bca6190c60f9a8caa6b063f0b6b7601fde3ab50d78c093bebe86"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/band_trend_native_20261113_v1/observe_clock.py",
+      "sha256": "f2bb297fca1ec753d9a010c39ff45506dccc0aadadf067f069de2e8a8d7b638d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/skew_vol_native_20261113_v1/clock_fix.py",
+      "sha256": "3569781b7f1e30319cb0f2aed0a2c12587f0448de154f5575415b6f1684df8ce"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/source/LICENSE",
+      "sha256": "f16fdf7cbf23233d96956ca990d3aa4d77628a51e14547e25204ef1edfea2009"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/source/README.md",
+      "sha256": "67259785bce7995173121a0a37ad5481b501219ee247a72d8f326798276ddf3e"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/source/btc_eth_backtest.py",
+      "sha256": "70a2d1b4432d6a7e8e2e06bd6bf104d5b2b2ee4b57b240274f4cc1f56e89b219"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/session_reversal_native_20261113_v1/source/cutoff_strategy_analysis.py",
+      "sha256": "34916ac57bdd7f05a6f2efe7f37181bd6d3a6584e616a2aba33f05256775e7af"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false
+}

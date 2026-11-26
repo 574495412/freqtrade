@@ -1,0 +1,23 @@
+{
+  "user_data_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/freqai_rf_native_20261114_v1/component",
+  "timeframe": "1h",
+  "timerange": "20250101-20250108",
+  "config_files": [
+    "/Users/chrise/GitHub/freqtrade/research/crypto/freqai_rf_native_20261114_v1/component_config.json"
+  ],
+  "exchange": {
+    "pair_whitelist": [
+      "BTC/USDT:USDT"
+    ]
+  },
+  "freqai": {
+    "identifier": "native_rf_probe",
+    "train_period_days": 30,
+    "backtest_period_days": 7,
+    "feature_parameters": {
+      "include_corr_pairlist": [],
+      "weight_factor": 0,
+      "shuffle_after_split": false
+    }
+  }
+}

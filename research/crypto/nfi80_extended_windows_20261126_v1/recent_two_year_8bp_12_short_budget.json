@@ -1,0 +1,80 @@
+{
+  "verified_base": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_8bp_12_verified.json",
+    "sha256": "ff8bbdd7d765e24f926c2a7b97f15368ef2a38fa6b7c040ddc3ae994c5fef9d7"
+  },
+  "exposure_implementation": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/short_rebuy_transfer_audit.py",
+    "sha256": "17b2de73c1291399638f69a01bb79fb774b5e4f52fe51980ae325953770495b8"
+  },
+  "same_two_times_first_filled_margin_definition": true,
+  "original_transfer_screen": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/short_rebuy_transfer_audit.json",
+    "sha256": "49f83f7ebd066036a9c852c72228279558763c8e430eb9a7c9950acd9cd7287d"
+  },
+  "role": "original twelve-slot wallet",
+  "account": {
+    "registered_plan": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_12_8bp/account/registered_plan.json",
+      "sha256": "1d4d84fc6747cb6c1012353a37379f0f29c2e779efb708500924e11bbfe73181"
+    },
+    "native_account_refs": {
+      ".zip": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_12_8bp/account/native_results/backtest-result-2026-11-26_10-21-52.zip",
+        "sha256": "cd05ed9d72edef6f383029e38b5efcf222f49ae7b0c7297ef9426b13a01e7b04"
+      },
+      ".parquet": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_12_8bp/account/five_minute_equity.parquet",
+        "sha256": "c609f441e9c7bd8f87f924d81d350fd05a447ffbddc3c3c6a47ea94164c5c031"
+      }
+    },
+    "natural_short_rebuy_campaigns": 179,
+    "terminal_short_rebuy_campaigns": 0,
+    "natural_beyond_2x_count": 3,
+    "crossed_campaigns": [
+      {
+        "pair": "USUAL/USDT:USDT",
+        "tag": "562",
+        "first_fill": "2025-08-05T22:05:00+00:00",
+        "first_filled_budget_exceedance": "2025-08-09T20:30:00+00:00",
+        "first_crossing_addition_number": 2,
+        "addition_count": 2,
+        "first_margin_usdt": 109.66722666666666,
+        "lifetime_margin_usdt": 328.98372666666666,
+        "lifetime_margin_over_first": 2.9998362926292654,
+        "natural_close_net_usdt": 9.70748381,
+        "natural_close_net_to_prior_nav": 0.001863912811156488,
+        "outside_discovery_window": true
+      },
+      {
+        "pair": "DYDX/USDT:USDT",
+        "tag": "562",
+        "first_fill": "2025-09-04T23:55:00+00:00",
+        "first_filled_budget_exceedance": "2025-09-18T22:20:00+00:00",
+        "first_crossing_addition_number": 2,
+        "addition_count": 2,
+        "first_margin_usdt": 118.4841,
+        "lifetime_margin_usdt": 355.41566666666665,
+        "lifetime_margin_over_first": 2.9996908164611678,
+        "natural_close_net_usdt": -120.1111012,
+        "natural_close_net_to_prior_nav": -0.021366328344675608,
+        "outside_discovery_window": true
+      },
+      {
+        "pair": "AAVE/USDT:USDT",
+        "tag": "562",
+        "first_fill": "2025-11-05T01:25:00+00:00",
+        "first_filled_budget_exceedance": "2025-11-10T11:30:00+00:00",
+        "first_crossing_addition_number": 2,
+        "addition_count": 31,
+        "first_margin_usdt": 224.28166666666667,
+        "lifetime_margin_usdt": 3387.346,
+        "lifetime_margin_over_first": 15.103089121565889,
+        "natural_close_net_usdt": 44.65186835000003,
+        "natural_close_net_to_prior_nav": 0.004081758344191147,
+        "outside_discovery_window": true
+      }
+    ]
+  },
+  "orders_enabled": false
+}

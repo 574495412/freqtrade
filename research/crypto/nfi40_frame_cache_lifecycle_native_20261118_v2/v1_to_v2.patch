@@ -1,0 +1,585 @@
+--- /Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/capture_native.py
++++ /Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261118_v2/capture_native.py
+@@ -124,6 +124,11 @@
+             "native_signal_seconds": 0.0,
+         }
+         self.refresh = {}
++        self.assigned_rows = {}
++        self.cache_path_evidence = {
++            "native_callback_dp_reads": 0,
++            "native_callback_cross_block_reads": 0,
++        }
+         self.last_state_hash = None
+         self.event_sequence = 0
+         self.stream = (output / "actual_native_trace.jsonl").open("x")
+@@ -183,6 +188,7 @@
+             # The just-assigned key is already most-recent in both mappings.
+             _, refreshed = provider._DataProvider__cached_pairs[(pair, timeframe, candle_type)]
+             self.refresh[(pair, timeframe)] = refreshed
++            self.assigned_rows[(pair, timeframe)] = len(dataframe)
+ 
+         def get(pair, timeframe):
+             before = time.perf_counter()
+@@ -210,6 +216,20 @@
+                     "last_date": typed(frame.date.iloc[-1]) if len(frame) else None,
+                     "callback": self.stack[-1]["name"] if self.stack else None,
+                 }
++                maximum = provider._DataProvider__slice_index.get(pair)
++                rows = self.assigned_rows.get((pair, timeframe))
++                if len(frame) and maximum is not None and rows is not None:
++                    start, stop = max(0, maximum - 1000), min(maximum, rows)
++                    if len(frame) != max(0, stop - start):
++                        raise ValueError("Observed native slice bounds do not match returned rows")
++                    crosses = start // 4096 != (stop - 1) // 4096
++                    record["native_logical_slice"] = [start, stop]
++                    record["crosses_4096_block_boundary"] = crosses
++                    if self.stack and self.phase == "native_matching":
++                        self.cache_path_evidence["native_callback_dp_reads"] += 1
++                        self.cache_path_evidence["native_callback_cross_block_reads"] += int(
++                            crosses
++                        )
+                 self.append("dp_read_records", record)
+                 if self.stack:
+                     self.stack[-1]["frames"].append((frame, digest))
+@@ -225,6 +245,7 @@
+             original_clear()
+             after_keys = list(provider._DataProvider__cached_pairs)
+             self.refresh.clear()
++            self.assigned_rows.clear()
+             if after_keys:
+                 raise ValueError("Native clear did not empty analyzed keys")
+             self.append(
+--- /Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/execute_pair.py
++++ /Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261118_v2/execute_pair.py
+@@ -14,13 +14,14 @@
+ from .admission import checked, read, require_release, sha
+ from .native_producer import HERE, ROOT, VARIANTS, save
+ from .receipt_contract import compare_receipts
++from .technical_contract import observed_storage_coverage, verify_terminal_resources
+ 
+ 
+ def now():
+     return datetime.now(UTC).isoformat()
+ 
+ 
+-def terminal_copy(output, process):
++def terminal_copy(output, process, plan):
+     """Only an observed Popen.wait return code can complete the worker receipt."""
+     path = output / "native_lifecycle_receipt.json"
+     if process.get("terminal_witness") != "Popen.wait" or process.get("returncode") != 0:
+@@ -32,6 +33,7 @@
+         raise ValueError("Worker attempted to claim its own future terminal state")
+     checked(receipt["native_zip"])
+     checked(receipt["full_semantic_trace"])
++    verify_terminal_resources(output, process, plan["resource_limits"])
+     return {**receipt, "terminal_exit_code": process["returncode"]}
+ 
+ 
+@@ -85,6 +87,7 @@
+                         os.killpg(process.pid, signal.SIGKILL)
+                 returncode = process.wait()
+             receipt_path = output / "native_lifecycle_receipt.json"
++            resource_path = output / "resources.json"
+             terminal = {
+                 **identity,
+                 "command": command,
+@@ -94,6 +97,7 @@
+                 "terminal_witness": "Popen.wait",
+                 "controller_terminated": controller_terminated,
+                 "receipt_sha256": sha(receipt_path) if receipt_path.is_file() else None,
++                "resources_sha256": sha(resource_path) if resource_path.is_file() else None,
+                 "producer_freeze_sha256": sha(HERE / "producer_freeze.json"),
+                 "plan_sha256": sha(HERE / "plan.json"),
+                 "orders_enabled": False,
+@@ -101,16 +105,18 @@
+             save(control / (variant + ".process_receipt.json"), terminal)
+             if returncode != 0 or controller_terminated:
+                 raise RuntimeError("Native variant failed; no retry: " + variant)
+-            results.append(terminal_copy(output, terminal))
++            results.append(terminal_copy(output, terminal, plan))
+         result = compare_receipts(*results)
+         if (
+             results[0]["full_semantic_trace"]["sha256"]
+             != results[1]["full_semantic_trace"]["sha256"]
+         ):
+             raise ValueError("Full exact semantic trace differs")
++        save(control / "observed_native_parity.json", result)
++        coverage = observed_storage_coverage(*results)
+         save(
+             control / "comparison.json",
+-            {**result, "native_variants_completed": 2, "orders_enabled": False},
++            {**result, **coverage, "native_variants_completed": 2, "orders_enabled": False},
+         )
+         return result
+     except BaseException as error:
+--- /Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/freeze_producer.py
++++ /Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261118_v2/freeze_producer.py
+@@ -1,42 +1,41 @@
+-"""Seal new producer inputs before detached probes; never releases or starts anything."""
++"""Freeze the v2 technical correction before object probes; no release or account."""
+ 
+ import json
+ from datetime import UTC, datetime
++from pathlib import Path
+ 
+ from .admission import HERE, checked, read, sha
+ 
+ 
+ def run():
+-    if (HERE / "execution_release.json").exists():
+-        raise ValueError("Preparation must not create or reuse a release")
+     destination = HERE / "producer_freeze.json"
+-    if destination.exists():
+-        raise ValueError("Producer freeze already exists; preserve it")
+-    preparation = read(HERE / "artifact_manifest.json")
+-    # Existing manifest schema is inspected rather than rewriting its contents.
+-    for path, record in preparation["files"].items():
+-        checked(
+-            {
+-                "path": str(HERE / path) if not path.startswith("/") else path,
+-                "sha256": record["sha256"],
+-            }
+-        )
++    if destination.exists() or (HERE / "execution_release.json").exists():
++        raise ValueError("Cannot overwrite freeze or reuse a release")
+     protocol = read(HERE / "producer_release_protocol.json")
++    old = HERE.parent / "nfi40_frame_cache_lifecycle_native_20261117_v1"
++    for name in protocol["unchanged_files"]:
++        if (HERE / name).read_bytes() != (old / name).read_bytes():
++            raise ValueError("Unchanged economic/gate source differs: " + name)
++    for record in protocol["lineage"].values():
++        manifest = read(checked(record))
++        for path, item in manifest["files"].items():
++            checked({"path": path, "sha256": item["sha256"]})
+     files = {str(HERE / name): sha(HERE / name) for name in protocol["new_files"]}
++    for record in protocol["lineage"].values():
++        files[record["path"]] = record["sha256"]
+     plan = read(HERE / "plan.json")
+-    for record in [v["storage_source"] for v in plan["variants"]]:
+-        checked(record)
+-        files[record["path"]] = record["sha256"]
+-    freeze = {
+-        "schema": "nfi40-lifecycle-producer-freeze.v1",
++    for variant in plan["variants"]:
++        checked(variant["storage_source"])
++        files[variant["storage_source"]["path"]] = variant["storage_source"]["sha256"]
++    result = {
++        "schema": "nfi40-lifecycle-producer-freeze.v2",
+         "created_at": datetime.now(UTC).isoformat(),
+         "plan_sha256": sha(HERE / "plan.json"),
++        "economic_plan_unchanged": True,
+         "implementation_complete": True,
+-        "implementation_scope": "actual fixed short NFI producer only",
+-        "supplemental_synthetic_native_producer_implemented": False,
++        "implementation_scope": "Fixed short native producer with corrected terminal resource and observed cache-path gates",
+         "before_any_native_start": True,
+-        "before_detached_object_probe": True,
+-        "preparation_manifest_sha256": sha(HERE / "artifact_manifest.json"),
++        "before_object_probes": True,
+         "native_start_entrypoint": {
+             "path": str(HERE / "native_producer.py"),
+             "sha256": sha(HERE / "native_producer.py"),
+@@ -45,9 +44,11 @@
+         "execution_authorized": False,
+         "native_accounts_started": 0,
+         "technical_recovery_branch_implemented": False,
++        "supplemental_synthetic_native_producer_implemented": False,
++        "complete_cache_lifecycle_certified": False,
+     }
+     with destination.open("x") as stream:
+-        json.dump(freeze, stream, indent=2)
++        json.dump(result, stream, indent=2)
+         stream.write("\n")
+     return {"path": str(destination), "sha256": sha(destination)}
+ 
+--- /Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/native_producer.py
++++ /Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261118_v2/native_producer.py
+@@ -17,6 +17,7 @@
+ 
+ from .admission import checked, read, sha, shared_worker_admission
+ from .capture_native import Capture, typed
++from .technical_contract import resource_failures
+ 
+ 
+ HERE = Path(__file__).resolve().parent
+@@ -50,6 +51,7 @@
+         self.stop = threading.Event()
+         self.peak = 0
+         self.minimum_available = self.psutil.virtual_memory().available
++        self.minimum_free_disk = shutil.disk_usage(ROOT).free
+         self.monitor = None
+ 
+     def sample(self):
+@@ -58,6 +60,7 @@
+         free = shutil.disk_usage(ROOT).free
+         self.peak = max(self.peak, rss)
+         self.minimum_available = min(self.minimum_available, available)
++        self.minimum_free_disk = min(self.minimum_free_disk, free)
+         result = {
+             "worker_pid": os.getpid(),
+             "rss_bytes": rss,
+@@ -65,6 +68,7 @@
+             "available_bytes": available,
+             "minimum_available_bytes": self.minimum_available,
+             "free_disk_bytes": free,
++            "minimum_free_disk_bytes": self.minimum_free_disk,
+             "elapsed_seconds": time.monotonic() - self.started,
+         }
+         failed = (
+@@ -100,7 +104,22 @@
+         self.stop.set()
+         if self.monitor is not None:
+             self.monitor.join(timeout=1)
+-        return self.sample()[0]
++        try:
++            result, failed = self.sample()
++            result.update(
++                schema="native-worker-terminal-resources.v2",
++                final_sample_passed=not failed,
++                monitor_stopped=self.monitor is None or not self.monitor.is_alive(),
++            )
++            failures = resource_failures(result, self.limits)
++            result["terminal_gate_failures"] = failures
++            save(self.output / "resources.json", result)
++            if failures:
++                raise RuntimeError("Final resource sample rejected: " + ",".join(failures))
++            return result
++        except BaseException as error:
++            save(self.output / "terminal_resource_failure.json", {"error": str(error)})
++            raise
+ 
+ 
+ def _construct(plan, output, admitted):
+@@ -358,6 +377,7 @@
+             "worker_method_completed": True,
+             "terminal_exit_code": None,
+             "callback_errors": trace.errors,
++            "cache_path_evidence": trace.cache_path_evidence,
+             "contract": contract,
+             **trace.records,
+             "measurements": {
+@@ -408,7 +428,9 @@
+         finally:
+             socket.socket.connect = original_connect
+             socket.create_connection = original_create_connection
+-            save(output / "resources.json", resources.finish())
++            # The final sample runs after receipt export and cleanup. It writes
++            # its evidence before raising, so a last-moment breach cannot exit 0.
++            resources.finish()
+ 
+ 
+ def run_variant(variant):
+--- /dev/null
++++ /Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261118_v2/technical_contract.py
+@@ -0,0 +1,80 @@
++"""Resource/observed-storage gates only; never constructs or runs an account."""
++
++import math
++
++from .admission import read, sha
++
++
++def resource_failures(receipt, limits):
++    required = (
++        "rss_bytes",
++        "peak_sampled_rss_bytes",
++        "available_bytes",
++        "minimum_available_bytes",
++        "free_disk_bytes",
++        "minimum_free_disk_bytes",
++        "elapsed_seconds",
++        "worker_pid",
++    )
++    if any(
++        not isinstance(receipt.get(k), (int, float))
++        or isinstance(receipt.get(k), bool)
++        or not math.isfinite(receipt[k])
++        or receipt[k] < 0
++        for k in required
++    ):
++        return ["missing_or_invalid_resource_numbers"]
++    checks = {
++        "final_sample_failed": receipt.get("final_sample_passed") is not True,
++        "monitor_not_stopped": receipt.get("monitor_stopped") is not True,
++        "rss_limit": max(receipt["rss_bytes"], receipt["peak_sampled_rss_bytes"])
++        > limits["max_rss_bytes"],
++        "available_floor": min(receipt["available_bytes"], receipt["minimum_available_bytes"])
++        < limits["minimum_system_available_bytes"],
++        "disk_floor": min(receipt["free_disk_bytes"], receipt["minimum_free_disk_bytes"])
++        < limits["minimum_free_disk_bytes"],
++        "elapsed_limit": receipt["elapsed_seconds"] > limits["max_seconds_per_variant"],
++    }
++    return [name for name, failed in checks.items() if failed]
++
++
++def verify_terminal_resources(output, process, limits):
++    path = output / "resources.json"
++    if not path.is_file() or process.get("resources_sha256") != sha(path):
++        raise ValueError("Terminal process receipt does not bind resources.json")
++    receipt = read(path)
++    if receipt.get("schema") != "native-worker-terminal-resources.v2":
++        raise ValueError("Wrong terminal resource receipt schema")
++    if receipt.get("worker_pid") != process.get("pid"):
++        raise ValueError("Terminal resource receipt worker identity differs")
++    if failures := resource_failures(receipt, limits):
++        raise ValueError("Terminal resource gate failed: " + ",".join(failures))
++    return receipt
++
++
++def observed_storage_coverage(baseline, candidate):
++    """Require actual callback slices across a block and actual 32-block eviction."""
++    evidence = []
++    for receipt in (baseline, candidate):
++        row = receipt.get("cache_path_evidence", {})
++        if (
++            row.get("native_callback_dp_reads", 0) <= 0
++            or row.get("native_callback_cross_block_reads", 0) <= 0
++        ):
++            raise ValueError("Observed native callback cross-block coverage missing")
++        evidence.append(row)
++    if evidence[0] != evidence[1]:
++        raise ValueError("Native cache slice-path coverage differs")
++    stats = candidate.get("measurements", {}).get("block_stats", [])
++    if not stats or sum(s.get("evictions", 0) for s in stats) <= 0:
++        raise ValueError("Actual block-store LRU eviction was not observed")
++    if max(s.get("maximum_cached_blocks", 0) for s in stats) != 32:
++        raise ValueError("Actual block-store 32-block capacity was not observed")
++    return {
++        "observed_native_callback_block_crossing_and_eviction": True,
++        "evidence": evidence[1],
++        "actual_block_evictions": sum(s["evictions"] for s in stats),
++        "complete_cache_lifecycle_certified": False,
++        "remaining_scope": "Fixed short observed paths only; 8192-boundary synthetic native fixture and full-window replay remain unexecuted",
++        "execution_replacement_admitted": False,
++    }
+--- /Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/test_producer_objects.py
++++ /Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261118_v2/test_producer_objects.py
+@@ -173,6 +173,41 @@
+             "actual_official_DP_object_slice_noindex_missing_clear_callback_semantics_equal"
+         )
+ 
++        boundary_output = root / "synthetic_boundary_counter"
++        boundary_output.mkdir()
++        provider = DataProvider(config, None)
++        install(provider, boundary_output / "blocks")
++        trace = Capture(boundary_output, lambda: {"synthetic": True})
++        trace.install_provider(provider, native_producer.VARIANTS[1])
++        boundary_frame = pd.DataFrame(
++            {
++                "date": pd.date_range("2025-03-01", periods=5000, freq="5min", tz="UTC"),
++                "close": [100.0] * 5000,
++            }
++        )
++        provider._set_cached_df("BTC/USDT:USDT", "5m", boundary_frame, CandleType.FUTURES)
++        provider._set_dataframe_max_index("BTC/USDT:USDT", 4500)
++        strategy = SyntheticCallbacks()
++        for callback in CALLBACKS:
++            setattr(strategy, callback, harmless)
++
++        def boundary_callback(pair, current_time, **kwargs):
++            value, _ = provider.get_analyzed_dataframe(pair, "5m")
++            pd.testing.assert_frame_equal(value, boundary_frame.iloc[3500:4500], check_exact=True)
++            return "synthetic_boundary"
++
++        strategy.custom_exit = boundary_callback
++        trace.install_strategy(strategy)
++        trace.phase = "native_matching"  # Synthetic phase marker, never lifecycle evidence.
++        assert strategy.custom_exit("BTC/USDT:USDT", clock) == "synthetic_boundary"
++        assert trace.cache_path_evidence == {
++            "native_callback_dp_reads": 1,
++            "native_callback_cross_block_reads": 1,
++        }
++        trace.fail_if_errors()
++        trace.close()
++        observed.append("synthetic_official_DP_4096_boundary_read_counter_records_actual_slice")
++
+         output = root / "mutation"
+         output.mkdir()
+         provider = DataProvider(config, None)
+--- /dev/null
++++ /Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261118_v2/test_terminal_resources.py
+@@ -0,0 +1,184 @@
++"""Pure object/resource-receipt tests; no native backtester, wallet or subprocess."""
++
++import copy
++import json
++import tempfile
++from pathlib import Path
++from types import SimpleNamespace
++
++from .admission import sha
++from .execute_pair import terminal_copy
++from .native_producer import Resources, save
++from .technical_contract import (
++    observed_storage_coverage,
++    resource_failures,
++    verify_terminal_resources,
++)
++
++
++def rejected(operation, text):
++    try:
++        operation()
++    except (RuntimeError, ValueError) as error:
++        assert text in str(error), str(error)
++    else:
++        raise AssertionError("Expected rejection: " + text)
++
++
++def run():
++    limits = {
++        "max_rss_bytes": 3000,
++        "minimum_system_available_bytes": 1500,
++        "minimum_free_disk_bytes": 5000,
++        "max_seconds_per_variant": 1800,
++    }
++    good = {
++        "worker_pid": 123,
++        "rss_bytes": 2000,
++        "peak_sampled_rss_bytes": 2500,
++        "available_bytes": 2000,
++        "minimum_available_bytes": 1600,
++        "free_disk_bytes": 6000,
++        "minimum_free_disk_bytes": 5500,
++        "elapsed_seconds": 1799.0,
++    }
++    completed = []
++    with tempfile.TemporaryDirectory(prefix="nfi-terminal-resource-") as folder:
++        root = Path(folder)
++
++        def resource(name, sample, failed=False, alive=False):
++            output = root / name
++            output.mkdir()
++            obj = Resources.__new__(Resources)
++            obj.output, obj.limits = output, limits
++            obj.stop = SimpleNamespace(set=lambda: None)
++            obj.monitor = SimpleNamespace(join=lambda timeout: None, is_alive=lambda: alive)
++            obj.sample = lambda: (copy.deepcopy(sample), failed)
++            return obj
++
++        passing = resource("pass", good)
++        result = passing.finish()
++        assert not resource_failures(result, limits)
++        process = {"pid": 123, "resources_sha256": sha(passing.output / "resources.json")}
++        assert verify_terminal_resources(passing.output, process, limits) == result
++        completed.append("successful_final_sample_written_and_controller_sha_identity_bound")
++
++        # Synthetic receipt files exercise the real controller acceptance
++        # function without creating a subprocess or a native account/archive.
++        placeholder = passing.output / "synthetic_placeholder.txt"
++        placeholder.write_text("Synthetic resource-gate object test only\n")
++        reference = {"path": str(placeholder), "sha256": sha(placeholder)}
++        save(
++            passing.output / "native_lifecycle_receipt.json",
++            {
++                "terminal_exit_code": None,
++                "worker_method_completed": True,
++                "native_zip": reference,
++                "full_semantic_trace": reference,
++                "synthetic_receipt_fixture": True,
++            },
++        )
++        terminal = {
++            **process,
++            "terminal_witness": "Popen.wait",
++            "returncode": 0,
++            "receipt_sha256": sha(passing.output / "native_lifecycle_receipt.json"),
++        }
++        assert (
++            terminal_copy(passing.output, terminal, {"resource_limits": limits})[
++                "terminal_exit_code"
++            ]
++            == 0
++        )
++        unbound = {**terminal, "resources_sha256": "changed"}
++        rejected(
++            lambda: terminal_copy(passing.output, unbound, {"resource_limits": limits}),
++            "resources.json",
++        )
++        completed.append("actual_controller_terminal_copy_requires_bound_resource_receipt")
++
++        final = {**good, "rss_bytes": 3001, "peak_sampled_rss_bytes": 3001}
++        failing = resource("final_first_breach", final, failed=True)
++        rejected(failing.finish, "Final resource sample rejected")
++        saved = json.loads((failing.output / "resources.json").read_text())
++        assert (
++            saved["final_sample_passed"] is False and "rss_limit" in saved["terminal_gate_failures"]
++        )
++        assert (failing.output / "terminal_resource_failure.json").is_file()
++        completed.append("first_breach_only_at_final_sample_rejects_and_preserves_receipt")
++
++        # Even a false producer success flag cannot bypass the controller's
++        # independent bounds validation over the actual resource receipt.
++        for field, bad in [
++            ("rss_bytes", 3001),
++            ("peak_sampled_rss_bytes", 3001),
++            ("available_bytes", 1499),
++            ("minimum_available_bytes", 1499),
++            ("free_disk_bytes", 4999),
++            ("minimum_free_disk_bytes", 4999),
++            ("elapsed_seconds", 1800.001),
++        ]:
++            changed = {**result, field: bad, "final_sample_passed": True}
++            path = root / field
++            path.mkdir()
++            save(path / "resources.json", changed)
++            bound = {"pid": 123, "resources_sha256": sha(path / "resources.json")}
++            rejected(
++                lambda path=path, bound=bound: verify_terminal_resources(path, bound, limits),
++                "resource gate failed",
++            )
++        completed.append("controller_recomputes_all_seven_current_or_historical_bounds")
++        for altered in [
++            {"pid": 123, "resources_sha256": "wrong"},
++            {"pid": 124, "resources_sha256": process["resources_sha256"]},
++            {"pid": 123},
++        ]:
++            rejected(
++                lambda altered=altered: verify_terminal_resources(passing.output, altered, limits),
++                "resource",
++            )
++        for key in good:
++            bad = {**result}
++            bad.pop(key)
++            assert resource_failures(bad, limits)
++        assert resource_failures({**result, "rss_bytes": float("nan")}, limits)
++        completed.append("missing_digest_identity_numeric_fields_and_nan_reject")
++        alive = resource("monitor_alive", good, alive=True)
++        rejected(alive.finish, "monitor_not_stopped")
++        completed.append("monitor_thread_not_terminal_rejects")
++
++        ev = {"native_callback_dp_reads": 4, "native_callback_cross_block_reads": 1}
++        baseline = {"cache_path_evidence": dict(ev)}
++        candidate = {
++            "cache_path_evidence": dict(ev),
++            "measurements": {"block_stats": [{"evictions": 2, "maximum_cached_blocks": 32}]},
++        }
++        coverage = observed_storage_coverage(baseline, candidate)
++        assert coverage["observed_native_callback_block_crossing_and_eviction"]
++        assert not coverage["complete_cache_lifecycle_certified"]
++        for mutation in ("no_cross", "no_eviction", "no_capacity", "unequal_paths"):
++            c = copy.deepcopy(candidate)
++            if mutation == "no_cross":
++                c["cache_path_evidence"]["native_callback_cross_block_reads"] = 0
++            elif mutation == "no_eviction":
++                c["measurements"]["block_stats"][0]["evictions"] = 0
++            elif mutation == "no_capacity":
++                c["measurements"]["block_stats"][0]["maximum_cached_blocks"] = 31
++            else:
++                c["cache_path_evidence"]["native_callback_dp_reads"] = 5
++            rejected(lambda c=c: observed_storage_coverage(baseline, c), "")
++        completed.append("cross_block_eviction_capacity_path_gate_rejects_missing_real_evidence")
++    return {
++        "passed": True,
++        "checks": completed,
++        "synthetic_resource_and_receipt_objects_only": True,
++        "native_accounts_started": 0,
++        "subprocesses_started": 0,
++        "financial_lock_acquired": False,
++        "actual_native_path_coverage": "UNKNOWN",
++        "execution_replacement_admitted": False,
++    }
++
++
++if __name__ == "__main__":
++    print(json.dumps(run(), indent=2))

@@ -1,0 +1,69 @@
+{
+  "verified_at": "2026-11-17T14:14:54.095344+00:00",
+  "passed": true,
+  "scope": "Official IStrategy subclass feature/history integration; no Backtesting.start or account economics",
+  "official_IStrategy_path": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/strategy/interface.py",
+  "records": [
+    {
+      "pair": "BTC/USDT:USDT",
+      "input_path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+      "input_sha256": "7fddcb56cfb30c9274ac9fbf7219be4254c7f4e393966104bb2de47ef9729a20",
+      "full_rows": 27048,
+      "native_rows": 14593,
+      "prehistory_rows": 12455,
+      "prehistory_origin": "2023-08-01 00:00:00+00:00",
+      "native_start": "2024-12-31 23:00:00+00:00",
+      "exact_full_source_tail": true,
+      "exact_native_OHLCV_preserved": true,
+      "prefix_lengths_exact": [
+        1,
+        241,
+        10481
+      ],
+      "custom_index_preserved": true,
+      "future_history_and_native_shock_prefix_exact": true
+    },
+    {
+      "pair": "ETH/USDT:USDT",
+      "input_path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_carry_matched_native_20261115_v1/candles/futures/ETH_USDT_USDT-1h-futures.feather",
+      "input_sha256": "52e2e1aa2dd8697e1cf7f203177997bd1b0bbf303521779c9ea9d399e66447d4",
+      "full_rows": 27048,
+      "native_rows": 14593,
+      "prehistory_rows": 12455,
+      "prehistory_origin": "2023-08-01 00:00:00+00:00",
+      "native_start": "2024-12-31 23:00:00+00:00",
+      "exact_full_source_tail": true,
+      "exact_native_OHLCV_preserved": true,
+      "prefix_lengths_exact": [
+        1,
+        241,
+        10481
+      ],
+      "custom_index_preserved": true,
+      "future_history_and_native_shock_prefix_exact": true
+    }
+  ],
+  "rejected_cases": [
+    "BTC_origin",
+    "BTC_OHLCV",
+    "BTC_native_gap",
+    "BTC_SHA",
+    "ETH_origin",
+    "ETH_OHLCV",
+    "ETH_native_gap",
+    "ETH_SHA"
+  ],
+  "source_signal_or_parameters_changed": false,
+  "exchange_capability_modified": false,
+  "original_strategy_unchanged": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/HawkesStrategy.py",
+    "sha256": "be88c4d7e096ce2150d9c961748138453150e49f233f8113ab63fc5c9dce718f"
+  },
+  "files": {
+    "HawkesStrategyOffline.py": "f75a6b40adc0a89e53179f403033d9e7033393d9aa9fb7324adf0ab2235e1509",
+    "test_offline_history.py": "4663f65e4331bb94e8fde2d40b75bf67a3e30b0e846a935b511af657c2cdd20f",
+    "HawkesInputs.py": "17575afeffbf50cda6c602d61dfdf8d4fcf1c579da7640b81e5438d5ebf4883c"
+  },
+  "new_native_accounts_completed": 0,
+  "higher_return_proven": false
+}

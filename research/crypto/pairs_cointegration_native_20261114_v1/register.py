@@ -1,0 +1,116 @@
+"""Actual native strategy preflight then frozen financial configurations."""
+import copy
+import hashlib
+import importlib.util
+import json
+import math
+import sys
+from datetime import UTC,datetime
+from pathlib import Path
+from unittest.mock import patch
+
+import numpy as np
+import pandas as pd
+
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[2]
+PARENT=HERE.parent/'tsmom_risk_native_20261114_v1'
+OUT=ROOT/'user_data/crypto_quant/pairs_cointegration_native_20261114_v1'
+
+
+def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+def ref(path):return dict(path=str(Path(path).resolve()),sha256=sha(path))
+def save(path,value):Path(path).write_text(json.dumps(value,indent=2,default=str)+'\n')
+
+
+def main():
+    if (HERE/'plan.json').exists():raise ValueError('Never overwrite a registered matrix')
+    protocol=json.loads((HERE/'protocol.json').read_text());admission=json.loads((HERE/'input_admission.json').read_text())
+    assert admission['passed'] and sha(HERE/'protocol.json')==json.loads((HERE/'protocol_freeze.json').read_text())['protocol']['sha256']
+    old=json.loads((PARENT/'v002/plan.json').read_text());sys.path.insert(0,old['engine_source']);sys.path.insert(0,str(PARENT));sys.path.insert(0,str(HERE))
+    from PairWeights import SYMBOLS,fit_pairs,states_from_z
+    from freqtrade.data.dataprovider import DataProvider
+    from freqtrade.enums import RunMode,CandleType
+    from freqtrade.resolvers import ExchangeResolver,StrategyResolver
+    manifest=json.loads(Path(old['engine_manifest']['path']).read_text())
+    for path,digest in manifest['files'].items():assert sha(Path(old['engine_source'])/path)==digest
+    snapshot=json.loads(Path(old['market_snapshot']['path']).read_text());pairs=[s+'/USDT:USDT' for s in SYMBOLS]
+    template=json.loads(Path(old['candidates'][0]['config']['path']).read_text())
+    source_files={name:ref(PARENT/name) for name in ['AuthorMath.py','RiskWeights.py','NativeAllocations.py','TSMomPortfolio.py','ClockedPortfolio.py']}
+    source_files.update({name:ref(HERE/name) for name in ['PairWeights.py','PairPortfolio.py']})
+    candidates=[];checks=[]
+    for strategy in ['SourceNaivePairs','AdjustedEGPairs','TrendGrossOne']:
+        for capital in [1000,500]:
+            raw=copy.deepcopy(template);raw.update(strategy=strategy,dry_run_wallet=capital,max_open_trades=10,research_decision_end='2026-08-31')
+            raw['exchange']['pair_whitelist']=pairs
+            config_path=HERE/f'{strategy}_{capital}.json';save(config_path,raw)
+            candidates.append(dict(name=f'{strategy}_{capital}',strategy=strategy,capital=capital,pairs=pairs,config=ref(config_path),source_files=source_files))
+            if capital!=1000:continue
+            config=copy.deepcopy(raw);config.update(strategy_path=str(HERE),user_data_dir=OUT,datadir=OUT/'candles',runmode=RunMode.BACKTEST,
+                candle_type_def=CandleType.FUTURES,timeframe='1h',startup_candle_count=72,timerange='1735689600-1788220799')
+            owner=StrategyResolver.load_strategy(config)
+            exchange=ExchangeResolver.load_exchange(config,validate=False,load_leverage_tiers=False)
+            try:
+                exchange._markets=snapshot['markets'];exchange._leverage_tiers=snapshot['leverage_tiers']
+                exchange._api.set_markets(snapshot['markets'],snapshot['currencies']);exchange._api_async.set_markets(snapshot['markets'],snapshot['currencies'])
+                owner.dp=DataProvider(config,exchange);owner.bot_start()
+                owner.research_weights.to_parquet(OUT/f'preflight_weights_{strategy}.parquet')
+                frames={}
+                for pair in pairs:
+                    frame=owner.dp.get_pair_dataframe(pair,'1h','futures');actual=owner.advise_indicators(frame,dict(pair=pair))
+                    frames[pair]=actual[['date','target_weight','source_signal','source_volatility']]
+                check=dict(strategy=strategy,actual_native_strategy=True,weights_cells=owner.research_weights.size,
+                           native_indicator_rows=sum(map(len,frames.values())),prefix_refits=[])
+                if strategy!='TrendGrossOne':
+                    save(OUT/f'preflight_diagnostics_{strategy}.json',owner.research_allocation_diagnostics)
+                    owner.research_pair_states.to_parquet(OUT/f'preflight_states_{strategy}.parquet',index=False)
+                    original=owner.research_weights.copy()
+                    namespace=owner.bot_start.__func__.__globals__;load=namespace['load_pair_history']
+                    for cutoff in [pd.Timestamp('2025-06-01',tz='UTC'),pd.Timestamp('2026-02-01',tz='UTC')]:
+                        for operation in ['perturb','truncate']:
+                            def changed(*args,operation=operation,cutoff=cutoff,**kwargs):
+                                frame=load(*args,**kwargs).copy()
+                                if operation=='truncate':return frame.loc[frame.date.lt(cutoff)].copy()
+                                frame.loc[frame.date.ge(cutoff),['open','high','low','close']]*=3
+                                return frame
+                            owner.config['research_decision_end']=str(cutoff.date())
+                            with patch.dict(namespace,{'load_pair_history':changed}):owner.bot_start()
+                            pd.testing.assert_frame_equal(owner.research_weights,original.loc[:cutoff],check_exact=True,check_freq=False)
+                            check['prefix_refits'].append(dict(cutoff=str(cutoff),operation=operation,exact_cells=owner.research_weights.size))
+                    owner.config['research_decision_end']='2026-08-31'
+                checks.append(check)
+            finally:exchange.close()
+    # Source functions are evaluated for numerical checks only, never source PnL.
+    spec=importlib.util.spec_from_file_location('read_only_source_pairs',HERE/'source/pairs/cointegration.py');source=importlib.util.module_from_spec(spec);spec.loader.exec_module(source)
+    close=pd.read_parquet(OUT/'spot_daily.parquet');train=np.log(close.loc['2020-08-18':'2024-01-16'])
+    expected,_=source.find_cointegrated_pairs(train);actual,_=fit_pairs(close,'naive')
+    independent={(r.dependent,r.independent):r for r in expected.itertuples()};errors=[]
+    for row in actual:
+        other=independent[(row['dependent'],row['independent'])]
+        for field in ['alpha','beta','pvalue']:
+            errors.append(abs(row[field]-getattr(other,field)))
+    assert max(errors)<1e-9
+    spec=importlib.util.spec_from_file_location('source_state_check',HERE/'source/pairs/backtest.py');source_state=importlib.util.module_from_spec(spec);spec.loader.exec_module(source_state)
+    z=pd.Series([np.nan,2,2.1,-5,-3,-.5,-.49,5,5,0,-5,0])
+    np.testing.assert_array_equal(states_from_z(z),source_state.generate_signal(z).to_numpy())
+    check=dict(passed=True,source_train_pair_count=45,source_numeric_max_error=max(errors),source_state_machine_exact=True,
+               actual_native_strategies=checks,financial_accounts_executed=0,upstream_files_verified=len(manifest['files']))
+    save(HERE/'preflight.json',check)
+    dependencies={str(p):sha(p) for p in sorted((HERE/'dependencies').rglob('*')) if p.is_file() and '__pycache__' not in str(p)}
+    save(HERE/'dependency_manifest.json',dependencies)
+    plan=copy.deepcopy(old)
+    for key in ['technical_change','original_frozen_plan','alpha_parameters_changed','financial_output_already_observed']:
+        plan.pop(key,None)
+    plan.update(schema='freqtrade.native.cointegration-pairs.v1',registered_at=datetime.now(UTC).isoformat(),output_root=str(OUT),
+        datadir=str(OUT/'candles'),pairs=pairs,candidates=candidates,data_receipts=ref(OUT/'data_receipts.json'),
+        marks={p:ref(OUT/'candles/futures'/f'{p.split("/")[0]}_USDT_USDT-1h-mark.feather') for p in pairs},
+        runner_module='research.crypto.tsmom_risk_native_20261114_v1.native_runner',runner_sha256=sha(PARENT/'native_runner.py'),
+        allowed_leverage=3,source_strategy_allocation_study=True,not_new_factor_screen=True)
+    bound=[HERE/'protocol.json',HERE/'protocol_freeze.json',HERE/'source_manifest.json',HERE/'input_admission.json',HERE/'preflight.json',HERE/'dependency_manifest.json']
+    bound+=[Path(r['path']) for r in json.loads((HERE/'source_manifest.json').read_text())['files']]
+    bound+=[Path(p) for p in dependencies]
+    plan['additional_source_seals']=[ref(p) for p in bound]
+    save(HERE/'plan.json',plan)
+    print('Native preflight and12-account matrix registered; no financial output used',flush=True)
+
+
+if __name__=='__main__':main()

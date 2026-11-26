@@ -1,0 +1,22 @@
+{
+  "scope": "Prospective native paired execution preflight; no account returns inspected",
+  "native_engine": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "parent_models": "copula_account_native_20261115_v2; all88weeks, full20 source members and all3 alpha views unchanged",
+  "account_target": "2025-01-01T00:00Z through 2026-08-31T23:00Z,14592 common hourly pre-order marks; native terminal liquidation separate",
+  "sizing_interpretation": "Table4 reference-beta ratio, one common multiplier; this is a disclosed local interpretation, not exact author Q1/Q2 implementation parity",
+  "paper_ambiguity": "Paper Table4 uses beta1/beta2 units; prose fixes weekly Q1/Q2 under separate20000per-coin caps without uniquely specifying the same ratio. Retain ambiguity, do not select interpretation after profits.",
+  "normalized_gross": "Actual flat native Wallets.get_total_stake_amount with tradable_balance_ratio=.99; do not multiply by .99 twice",
+  "margin_leverage": 3,
+  "coin_units": "At initial T+5 or subsequent weekly T+10 flat boundary, common k=native grossbudget/(beta1*P1+beta2*P2); floor each beta*k with native exchange precision; hold quantities fixed throughout that week",
+  "sizing_prices": "Native actual opening prices at the budget callback, no future bar close",
+  "source_difference": "Normalized gross about1 rather than paper per-side20000on20000initial capital; threefold margin is not threefold target gross exposure",
+  "execution_clock": "Hourly decisionT uses completedT-1bar. Normal entries/exits atT+5m; weekly old positions closeT+5,new weekly flat budget/entryT+10. Source start begins flat with no inherited exposure.",
+  "entry_admission": "Both legs pass current native quantity,min/maxstake,and joint available margin+entrycost checks before either is requested; unexpected one-leg or changed-quantity fill must fail the actual-account audit",
+  "native_signal_bar": "Put signals exactly5minutes before declared native execution time; native Backtesting does its own one-main-bar lag, no direct matcher replacement",
+  "cost_reference_bps_per_side": [15,8],
+  "account_matrix_status": "Not yet authorized by input admission; actual full-wallet and500+500matrix registration required before funded runs",
+  "unresolved": ["EOS historical minimum quantity/notional specification", "actual paired fill integration and actual missing-funding exposure audit", "complete native funded/account/ZIP and independent mark-cash verification"],
+  "financial_admission": false,
+  "orders_enabled": false,
+  "live_or_paper_services": false
+}

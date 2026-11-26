@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-11-17T14:18:19.323259+00:00",
+  "failure": "Binance frozen metadata does not support ticker pricing; attempt2 stopped at exchange.validate_config before Backtesting construction/start",
+  "financial_starts": 0,
+  "change": "Restore use_order_book=True for entry/exit config, matching accepted Binance pricing admission. Fixed native OHLCV market matching unchanged; no real book fetched",
+  "source_signal_warmup_wallet_cost_window_parameters_changed": false,
+  "preflight_fix": "Now explicitly runs exchange.validate_config before constructor, as financial runner does",
+  "prior_failures_preserved": true
+}

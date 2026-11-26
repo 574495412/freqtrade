@@ -1,0 +1,1595 @@
+{
+  "verified_at": "2026-11-17T14:49:15.370822+00:00",
+  "passed": true,
+  "scope": "Original ordered 40-pair source event admission; no account signals or returns",
+  "protocol_sha256": "7746b635effb5c54f1218eb2e314da9a1cfabd3d0a649ac000e76e6b39e1941b",
+  "ordered_pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "TRB/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "XRP/USDT:USDT",
+    "ADA/USDT:USDT",
+    "BNB/USDT:USDT",
+    "LINK/USDT:USDT",
+    "DOT/USDT:USDT",
+    "FIL/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "DYDX/USDT:USDT",
+    "LTC/USDT:USDT",
+    "BCH/USDT:USDT",
+    "ETC/USDT:USDT",
+    "GALA/USDT:USDT",
+    "SAND/USDT:USDT",
+    "UNI/USDT:USDT",
+    "IOTA/USDT:USDT",
+    "RUNE/USDT:USDT",
+    "AXS/USDT:USDT",
+    "AAVE/USDT:USDT",
+    "EGLD/USDT:USDT",
+    "ALGO/USDT:USDT",
+    "SNX/USDT:USDT",
+    "CRV/USDT:USDT",
+    "MASK/USDT:USDT",
+    "SUSHI/USDT:USDT",
+    "KSM/USDT:USDT",
+    "IOTX/USDT:USDT",
+    "MANA/USDT:USDT",
+    "NEO/USDT:USDT",
+    "GRT/USDT:USDT",
+    "TRX/USDT:USDT",
+    "CELO/USDT:USDT",
+    "SKL/USDT:USDT",
+    "THETA/USDT:USDT"
+  ],
+  "pairs_checked": 40,
+  "input_rows": 1081920,
+  "source_events": 1891,
+  "source_event_rows_retained_without_selection": true,
+  "prefix_and_future_shock_cases": 120,
+  "geometric_constraints_checked": 1891,
+  "self_terminal_events": 30,
+  "unknown_tail_nonselfterminal_events": 0,
+  "source_exit_synthetic_fixtures": [
+    {
+      "inverted": false,
+      "case": "target_equal_does_not_exit",
+      "passed": true
+    },
+    {
+      "inverted": false,
+      "case": "stop_equal_does_not_exit",
+      "passed": true
+    },
+    {
+      "inverted": false,
+      "case": "strict_target_cross",
+      "passed": true
+    },
+    {
+      "inverted": false,
+      "case": "strict_stop_cross",
+      "passed": true
+    },
+    {
+      "inverted": false,
+      "case": "expiry_uses_width_minus_one",
+      "passed": true
+    },
+    {
+      "inverted": false,
+      "case": "unknown_tail_is_nan",
+      "passed": true
+    },
+    {
+      "inverted": false,
+      "case": "self_terminal_confirmation",
+      "passed": true
+    },
+    {
+      "inverted": false,
+      "case": "self_terminal_stop_cross",
+      "passed": true
+    },
+    {
+      "inverted": true,
+      "case": "target_equal_does_not_exit",
+      "passed": true
+    },
+    {
+      "inverted": true,
+      "case": "stop_equal_does_not_exit",
+      "passed": true
+    },
+    {
+      "inverted": true,
+      "case": "strict_target_cross",
+      "passed": true
+    },
+    {
+      "inverted": true,
+      "case": "strict_stop_cross",
+      "passed": true
+    },
+    {
+      "inverted": true,
+      "case": "expiry_uses_width_minus_one",
+      "passed": true
+    },
+    {
+      "inverted": true,
+      "case": "unknown_tail_is_nan",
+      "passed": true
+    },
+    {
+      "inverted": true,
+      "case": "self_terminal_confirmation",
+      "passed": true
+    },
+    {
+      "inverted": true,
+      "case": "self_terminal_stop_cross",
+      "passed": true
+    }
+  ],
+  "records": [
+    {
+      "pair": "BTC/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+      "sha256": "7fddcb56cfb30c9274ac9fbf7219be4254c7f4e393966104bb2de47ef9729a20",
+      "pair_order": 0,
+      "rows": 27048,
+      "source_events": 57,
+      "independent_constraints_checked": 57,
+      "normal_events": 25,
+      "inverse_events": 32,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 24,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 45,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 56,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "ETH/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ETH_USDT_USDT-1h-futures.feather",
+      "sha256": "52e2e1aa2dd8697e1cf7f203177997bd1b0bbf303521779c9ea9d399e66447d4",
+      "pair_order": 1,
+      "rows": 27048,
+      "source_events": 56,
+      "independent_constraints_checked": 56,
+      "normal_events": 31,
+      "inverse_events": 25,
+      "self_terminal_events": 2,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 24,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 47,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 56,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "SOL/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/SOL_USDT_USDT-1h-futures.feather",
+      "sha256": "9acc5e0a2aa20e718d7e4c4a342aedb97475b9e5557b617f04213d45e889cefa",
+      "pair_order": 2,
+      "rows": 27048,
+      "source_events": 56,
+      "independent_constraints_checked": 56,
+      "normal_events": 30,
+      "inverse_events": 26,
+      "self_terminal_events": 1,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 25,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 45,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 55,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "AVAX/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/AVAX_USDT_USDT-1h-futures.feather",
+      "sha256": "ec3836d80b339ccd72558f1f79a6271f9c2bda0aeeba6b9b878fe1847838f473",
+      "pair_order": 3,
+      "rows": 27048,
+      "source_events": 66,
+      "independent_constraints_checked": 66,
+      "normal_events": 35,
+      "inverse_events": 31,
+      "self_terminal_events": 2,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 23,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 47,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 65,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "TRB/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/TRB_USDT_USDT-1h-futures.feather",
+      "sha256": "35cf2250db9140ea66e6acfc33c9a8987a075ea1ff72ca70054868fe0f17e6b6",
+      "pair_order": 4,
+      "rows": 27048,
+      "source_events": 54,
+      "independent_constraints_checked": 54,
+      "normal_events": 24,
+      "inverse_events": 30,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 22,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 44,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 54,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "DOGE/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/DOGE_USDT_USDT-1h-futures.feather",
+      "sha256": "0bc39e227f545e650653c0bf6082641213693060a8a14307c41578d2f006b433",
+      "pair_order": 5,
+      "rows": 27048,
+      "source_events": 44,
+      "independent_constraints_checked": 44,
+      "normal_events": 17,
+      "inverse_events": 27,
+      "self_terminal_events": 1,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 19,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 38,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 44,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "XRP/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/XRP_USDT_USDT-1h-futures.feather",
+      "sha256": "aab39f3d5d22c96eed95d0120a3209e3f3f1441f6cf9ff343314d214e7a4f52b",
+      "pair_order": 6,
+      "rows": 27048,
+      "source_events": 46,
+      "independent_constraints_checked": 46,
+      "normal_events": 19,
+      "inverse_events": 27,
+      "self_terminal_events": 1,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 21,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 34,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 46,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "ADA/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ADA_USDT_USDT-1h-futures.feather",
+      "sha256": "dd5d172ec001c8dc88a7229861af80dcc929f6197cca7435dec528e3d2b73034",
+      "pair_order": 7,
+      "rows": 27048,
+      "source_events": 39,
+      "independent_constraints_checked": 39,
+      "normal_events": 22,
+      "inverse_events": 17,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 21,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 36,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 39,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "BNB/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BNB_USDT_USDT-1h-futures.feather",
+      "sha256": "655c6bb14c6e8606f51d9a18848c81a6041156aac703a516e09388902cab7fed",
+      "pair_order": 8,
+      "rows": 27048,
+      "source_events": 42,
+      "independent_constraints_checked": 42,
+      "normal_events": 21,
+      "inverse_events": 21,
+      "self_terminal_events": 1,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 18,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 32,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 42,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "LINK/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/LINK_USDT_USDT-1h-futures.feather",
+      "sha256": "1a43cb1f843cb08f035c09d2832aa13a8de51b8ae6f747946608e332027ab52c",
+      "pair_order": 9,
+      "rows": 27048,
+      "source_events": 59,
+      "independent_constraints_checked": 59,
+      "normal_events": 37,
+      "inverse_events": 22,
+      "self_terminal_events": 2,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 33,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 48,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 58,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "DOT/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/DOT_USDT_USDT-1h-futures.feather",
+      "sha256": "d08c6a358f119a83615bef7d7dcb27b82809fd756fcf83c3637b47bf52a0e8fd",
+      "pair_order": 10,
+      "rows": 27048,
+      "source_events": 42,
+      "independent_constraints_checked": 42,
+      "normal_events": 23,
+      "inverse_events": 19,
+      "self_terminal_events": 2,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 26,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 38,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 42,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "FIL/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/FIL_USDT_USDT-1h-futures.feather",
+      "sha256": "4a33873e12c7aaad8ca52e3dabf40bf4e4691f018bb117eed5915679e1b47b43",
+      "pair_order": 11,
+      "rows": 27048,
+      "source_events": 61,
+      "independent_constraints_checked": 61,
+      "normal_events": 28,
+      "inverse_events": 33,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 33,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 54,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 60,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "NEAR/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/NEAR_USDT_USDT-1h-futures.feather",
+      "sha256": "91286a452fb63d6070ff4d435dc767b568d0e979613f6a41f3b3e87aa04814ec",
+      "pair_order": 12,
+      "rows": 27048,
+      "source_events": 55,
+      "independent_constraints_checked": 55,
+      "normal_events": 32,
+      "inverse_events": 23,
+      "self_terminal_events": 2,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 18,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 44,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 53,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "ATOM/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ATOM_USDT_USDT-1h-futures.feather",
+      "sha256": "8d92e119fd25b0a411d89198d52db53061271c54ea20fcca2bba61ddb1a1acb9",
+      "pair_order": 13,
+      "rows": 27048,
+      "source_events": 51,
+      "independent_constraints_checked": 51,
+      "normal_events": 30,
+      "inverse_events": 21,
+      "self_terminal_events": 1,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 28,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 43,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 50,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "DYDX/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/DYDX_USDT_USDT-1h-futures.feather",
+      "sha256": "529741bac89e5ed8cb481b218e073f2750d2ee312687cdcc4309ec4a368896f0",
+      "pair_order": 14,
+      "rows": 27048,
+      "source_events": 31,
+      "independent_constraints_checked": 31,
+      "normal_events": 10,
+      "inverse_events": 21,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 15,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 26,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 31,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "LTC/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/LTC_USDT_USDT-1h-futures.feather",
+      "sha256": "9df00cbe2f9e3355b6cda22c7513ec499852b123ec0b95711de3b012e12d290e",
+      "pair_order": 15,
+      "rows": 27048,
+      "source_events": 63,
+      "independent_constraints_checked": 63,
+      "normal_events": 30,
+      "inverse_events": 33,
+      "self_terminal_events": 2,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 31,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 50,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 62,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "BCH/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BCH_USDT_USDT-1h-futures.feather",
+      "sha256": "3e7e9bbe4c35f313ef7bcef27d1838c11d01268051c6113790cad35b41bd3361",
+      "pair_order": 16,
+      "rows": 27048,
+      "source_events": 57,
+      "independent_constraints_checked": 57,
+      "normal_events": 33,
+      "inverse_events": 24,
+      "self_terminal_events": 1,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 25,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 42,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 57,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "ETC/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ETC_USDT_USDT-1h-futures.feather",
+      "sha256": "aa4d56e832f9b75bc06bbdeadbdacdbec37d11f1f1ae109e1ad1d6200b40e5b4",
+      "pair_order": 17,
+      "rows": 27048,
+      "source_events": 51,
+      "independent_constraints_checked": 51,
+      "normal_events": 28,
+      "inverse_events": 23,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 24,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 39,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 51,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "GALA/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/GALA_USDT_USDT-1h-futures.feather",
+      "sha256": "0156568e032cc5149c1b09e9dc2fa05aaf89cf6ac832dc76fa6022a2cdfd55ed",
+      "pair_order": 18,
+      "rows": 27048,
+      "source_events": 44,
+      "independent_constraints_checked": 44,
+      "normal_events": 25,
+      "inverse_events": 19,
+      "self_terminal_events": 1,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 23,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 38,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 44,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "SAND/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/SAND_USDT_USDT-1h-futures.feather",
+      "sha256": "f041d117dd2435e1c5cf37365c1b00cb90cb141ae837e86b71d9cf47fd42b066",
+      "pair_order": 19,
+      "rows": 27048,
+      "source_events": 46,
+      "independent_constraints_checked": 46,
+      "normal_events": 24,
+      "inverse_events": 22,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 17,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 38,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 45,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "UNI/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/UNI_USDT_USDT-1h-futures.feather",
+      "sha256": "b13df5e27d4e5d10416aa69b4609d2633b8db737558b9563369a463ab5aa0509",
+      "pair_order": 20,
+      "rows": 27048,
+      "source_events": 46,
+      "independent_constraints_checked": 46,
+      "normal_events": 27,
+      "inverse_events": 19,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 28,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 40,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 46,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "IOTA/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/IOTA_USDT_USDT-1h-futures.feather",
+      "sha256": "885eb561e1ad06b32758c8120b8d1b31ab45d8278b05e082edbef7af76a082d4",
+      "pair_order": 21,
+      "rows": 27048,
+      "source_events": 52,
+      "independent_constraints_checked": 52,
+      "normal_events": 29,
+      "inverse_events": 23,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 17,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 44,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 51,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "RUNE/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/RUNE_USDT_USDT-1h-futures.feather",
+      "sha256": "7416176eabb8e8b2e5ac58571138f41838ae960921f7f156923404a89d62b1ea",
+      "pair_order": 22,
+      "rows": 27048,
+      "source_events": 38,
+      "independent_constraints_checked": 38,
+      "normal_events": 23,
+      "inverse_events": 15,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 19,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 29,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 37,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "AXS/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/AXS_USDT_USDT-1h-futures.feather",
+      "sha256": "49fc5975f16bd8a232d8893461bd24da80798dae8b88306973571216091fff24",
+      "pair_order": 23,
+      "rows": 27048,
+      "source_events": 37,
+      "independent_constraints_checked": 37,
+      "normal_events": 23,
+      "inverse_events": 14,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 18,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 29,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 36,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "AAVE/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/AAVE_USDT_USDT-1h-futures.feather",
+      "sha256": "cd90eadfa0c86e517c5fae0037b2a71dde4357f2472370c0c46147f929968591",
+      "pair_order": 24,
+      "rows": 27048,
+      "source_events": 51,
+      "independent_constraints_checked": 51,
+      "normal_events": 28,
+      "inverse_events": 23,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 22,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 40,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 51,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "EGLD/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/EGLD_USDT_USDT-1h-futures.feather",
+      "sha256": "36bad175f628a13922cb51673448316990be9a0267494f9ccd9d68cce6e5d097",
+      "pair_order": 25,
+      "rows": 27048,
+      "source_events": 52,
+      "independent_constraints_checked": 52,
+      "normal_events": 30,
+      "inverse_events": 22,
+      "self_terminal_events": 1,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 22,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 43,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 50,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "ALGO/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/ALGO_USDT_USDT-1h-futures.feather",
+      "sha256": "e5d427f0b8ee7b42328eee3ba9b5191d45b39ddd2580b1f761ecd862099283b6",
+      "pair_order": 26,
+      "rows": 27048,
+      "source_events": 36,
+      "independent_constraints_checked": 36,
+      "normal_events": 18,
+      "inverse_events": 18,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 12,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 27,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 35,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "SNX/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/SNX_USDT_USDT-1h-futures.feather",
+      "sha256": "34a89128354150816a74e4091d2f3abe271f179056eba7ce57b514232239e108",
+      "pair_order": 27,
+      "rows": 27048,
+      "source_events": 46,
+      "independent_constraints_checked": 46,
+      "normal_events": 24,
+      "inverse_events": 22,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 22,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 37,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 45,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "CRV/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/CRV_USDT_USDT-1h-futures.feather",
+      "sha256": "fc60591727dc486e3a6793d8702e88e09db281778b815658b0dcac6d523ec712",
+      "pair_order": 28,
+      "rows": 27048,
+      "source_events": 21,
+      "independent_constraints_checked": 21,
+      "normal_events": 12,
+      "inverse_events": 9,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 11,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 20,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 21,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "MASK/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/MASK_USDT_USDT-1h-futures.feather",
+      "sha256": "1b5b80d031abfe61cade758ea260b891664b349c90720eb51141ee913f8aae4b",
+      "pair_order": 29,
+      "rows": 27048,
+      "source_events": 51,
+      "independent_constraints_checked": 51,
+      "normal_events": 28,
+      "inverse_events": 23,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 23,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 41,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 49,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "SUSHI/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/SUSHI_USDT_USDT-1h-futures.feather",
+      "sha256": "1ad21ec4c8fe67dc690d0cce7d3fc3bb330622a024dc67702c90ec38523b8566",
+      "pair_order": 30,
+      "rows": 27048,
+      "source_events": 58,
+      "independent_constraints_checked": 58,
+      "normal_events": 28,
+      "inverse_events": 30,
+      "self_terminal_events": 2,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 23,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 44,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 57,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "KSM/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/KSM_USDT_USDT-1h-futures.feather",
+      "sha256": "1f51f00c793a9d71c5796587e2a74b160ba54d64ca43893debefcdf0227fe3fe",
+      "pair_order": 31,
+      "rows": 27048,
+      "source_events": 42,
+      "independent_constraints_checked": 42,
+      "normal_events": 16,
+      "inverse_events": 26,
+      "self_terminal_events": 2,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 21,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 36,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 42,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "IOTX/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/IOTX_USDT_USDT-1h-futures.feather",
+      "sha256": "6afc737cc11b7c82f4f0041f10f71e42d35f603fee436a148adf41a350845581",
+      "pair_order": 32,
+      "rows": 27048,
+      "source_events": 41,
+      "independent_constraints_checked": 41,
+      "normal_events": 25,
+      "inverse_events": 16,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 20,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 37,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 40,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "MANA/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/MANA_USDT_USDT-1h-futures.feather",
+      "sha256": "7719fbbcb827ba968861d2942073882a3af99246cb9067e99d52cc57f02c5544",
+      "pair_order": 33,
+      "rows": 27048,
+      "source_events": 35,
+      "independent_constraints_checked": 35,
+      "normal_events": 21,
+      "inverse_events": 14,
+      "self_terminal_events": 2,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 16,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 32,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 35,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "NEO/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/NEO_USDT_USDT-1h-futures.feather",
+      "sha256": "e5aade60ab3ed040dd35926c3ac52998c7c3d7f43f38f7c8978aa68eb67d846e",
+      "pair_order": 34,
+      "rows": 27048,
+      "source_events": 56,
+      "independent_constraints_checked": 56,
+      "normal_events": 31,
+      "inverse_events": 25,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 27,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 51,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 56,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "GRT/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/GRT_USDT_USDT-1h-futures.feather",
+      "sha256": "d013a247ac5a1104344fd719b7ed86c36a0148fa1d9570782e8a5bcf287147d5",
+      "pair_order": 35,
+      "rows": 27048,
+      "source_events": 48,
+      "independent_constraints_checked": 48,
+      "normal_events": 25,
+      "inverse_events": 23,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 16,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 41,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 47,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "TRX/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/TRX_USDT_USDT-1h-futures.feather",
+      "sha256": "73aaf9f4ce76bc096acb44f26f288e9c89307f17ce0f6d975976902765d6959f",
+      "pair_order": 36,
+      "rows": 27048,
+      "source_events": 39,
+      "independent_constraints_checked": 39,
+      "normal_events": 18,
+      "inverse_events": 21,
+      "self_terminal_events": 0,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 17,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 24,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 37,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "CELO/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/CELO_USDT_USDT-1h-futures.feather",
+      "sha256": "3e024d6f7c00fec0d3a32e80b729ae3ed15f1306b008481d4fab3c83380fb97a",
+      "pair_order": 37,
+      "rows": 27048,
+      "source_events": 27,
+      "independent_constraints_checked": 27,
+      "normal_events": 14,
+      "inverse_events": 13,
+      "self_terminal_events": 1,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 12,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 22,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 27,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "SKL/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/SKL_USDT_USDT-1h-futures.feather",
+      "sha256": "78c05766f30f9aed6e4d8460bc147f1a48208c1534da99d82cb1ac2929caedec",
+      "pair_order": 38,
+      "rows": 27048,
+      "source_events": 47,
+      "independent_constraints_checked": 47,
+      "normal_events": 21,
+      "inverse_events": 26,
+      "self_terminal_events": 2,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 24,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 42,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 47,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    },
+    {
+      "pair": "THETA/USDT:USDT",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/THETA_USDT_USDT-1h-futures.feather",
+      "sha256": "600d3691a19c073b878ebba2ad80ed4eb32016c83518137f633eceab3ec40a33",
+      "pair_order": 39,
+      "rows": 27048,
+      "source_events": 48,
+      "independent_constraints_checked": 48,
+      "normal_events": 19,
+      "inverse_events": 29,
+      "self_terminal_events": 1,
+      "expiry_horizon_outside_snapshot_events": 0,
+      "unknown_tail_nonselfterminal_events": 0,
+      "nonfinite_r2_events_retained": 0,
+      "source_events_at_same_bar": 0,
+      "prefix_cases": [
+        {
+          "prefix_rows": 12456,
+          "confirmed_events": 20,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 21216,
+          "confirmed_events": 38,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        },
+        {
+          "prefix_rows": 26808,
+          "confirmed_events": 48,
+          "prefix_exact": true,
+          "future_shock_exact": true
+        }
+      ]
+    }
+  ],
+  "event_artifact": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/head_shoulders_source_native_20261117_v1/source_events.parquet",
+    "sha256": "1603ca0759de09c70a9fcbca363a3f69230573017f39fef2519fa52bc07ce157",
+    "bytes": 348282
+  },
+  "resources": {
+    "free_disk_bytes": 1634304000,
+    "peak_rss_bytes": 123830272
+  },
+  "original_forward_return_function_called_on_market_data": false,
+  "overlap_or_allocation_policy_selected": false,
+  "native_accounts_completed": 0,
+  "financial_performance_proven": false,
+  "orders_enabled": false,
+  "goal_complete": false
+}

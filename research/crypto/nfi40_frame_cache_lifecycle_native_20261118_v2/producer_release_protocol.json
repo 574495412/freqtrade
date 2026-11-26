@@ -1,0 +1,59 @@
+{
+  "schema": "nfi40-cache-lifecycle-terminal-resource-v2",
+  "prepared_at": "2026-11-17T16:50:31.759905+00:00",
+  "status": "PREPARED_FOR_REVIEW_HELD",
+  "lineage": {
+    "v1_preparation_manifest": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/artifact_manifest.json",
+      "sha256": "c3ce202fc82b66ceaf9b24e6c17bedebf739a2209cf10faf3079322c07140483"
+    },
+    "v1_producer_manifest": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/producer_artifact_manifest.json",
+      "sha256": "5384fd2a180fa9bbe1664abc2d1191befd9420b71a66d8aa2e3b423f397b577d"
+    }
+  },
+  "economic_plan_byte_identical": true,
+  "economic_plan_sha256": "ee004aa7474f1bb6605b2cb04c2806f68d05334327d73199e82c0c7eae8f40d9",
+  "unchanged_files": [
+    "plan.json",
+    "preparation_freeze.json",
+    "admission.py",
+    "receipt_contract.py"
+  ],
+  "retained_v1_findings": [
+    "Resources.finish discarded final failed flag after monitor stop, permitting terminal-only resource breach to exit0",
+    "Controller did not bind/validate resources.json",
+    "Observed short parity did not mandate native callback block crossing or actualLRUeviction"
+  ],
+  "v2_changes": [
+    "Final resource sample records final flag and monitor stop, validates current/historical sampled bounds, writes failure and raises on any gap",
+    "Controller binds resources SHA to observed terminal process and independently validates schema/PID/limits/flags",
+    "Capture uses existing slice index plus assigned frame length to record actual callback crossing; no extra wholeframe materialization",
+    "After exact observed native parity require real callback crossing and actual candidate32-block eviction; missing coverage retains observed parity but denies technical admission"
+  ],
+  "scope_after_future_pass": "Observed fixed short native path parity plus observed block crossing/eviction only; fullcache lifecycle,8192 synthetic native matching case,fullwindow replay and replacement remain unproved",
+  "execution_gate": "Byte-identical original admission; exact new producer freeze and root release required, same NFI2+HS4 successful predecessors and shared financial lock. Recovery from actual failure is NOT_IMPLEMENTED; no bypass",
+  "permitted_validation_now": "static and pure resources/receipts plus detached officialDataProvider/LocalTrade/Order; no Backtesting constructor/start or financiallock",
+  "native_accounts_started": 0,
+  "orders_enabled": false,
+  "release_created": false,
+  "existing_NFI500_or_HS_code_changed": false,
+  "complete_cache_lifecycle_certified": false,
+  "execution_replacement_admitted": false,
+  "new_files": [
+    "plan.json",
+    "preparation_freeze.json",
+    "admission.py",
+    "receipt_contract.py",
+    "capture_native.py",
+    "native_producer.py",
+    "execute_pair.py",
+    "technical_contract.py",
+    "test_producer_objects.py",
+    "test_terminal_resources.py",
+    "producer_release_protocol.json",
+    "freeze_producer.py",
+    "README.md",
+    "focused_review_before_probes.json"
+  ]
+}

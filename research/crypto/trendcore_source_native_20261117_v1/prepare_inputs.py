@@ -1,0 +1,149 @@
+"""Checksum-verified public warm-up; never computes an account return."""
+
+import concurrent.futures
+import hashlib
+import io
+import json
+from datetime import UTC, datetime
+from pathlib import Path
+from zipfile import ZipFile
+
+import pandas as pd
+import requests
+
+HERE = Path(__file__).absolute().parent
+ROOT = HERE.parents[2]
+PARENT = HERE.with_name("universal_allocation_native_20261116_v1")
+
+
+def sha(p):
+    return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+
+
+def save(p, x):
+    Path(p).write_text(json.dumps(x, indent=2, default=str) + "\n")
+
+
+def fetch(job):
+    asset, month = job
+    name = f"{asset}USDT-1h-{month}.zip"
+    path = HERE / "warmup_archives" / name
+    url = "https://data.binance.vision/data/spot/monthly/klines/" + asset + "USDT/1h/" + name
+    for target, source in [(path, url), (Path(str(path) + ".CHECKSUM"), url + ".CHECKSUM")]:
+        if not target.exists():
+            response = requests.get(source, timeout=30)
+            response.raise_for_status()
+            target.write_bytes(response.content)
+    expected, filename = Path(str(path) + ".CHECKSUM").read_text().strip().split()
+    assert filename == name and sha(path) == expected
+    with ZipFile(path) as z:
+        assert z.testzip() is None and z.namelist() == [name[:-4] + ".csv"]
+        raw = pd.read_csv(io.BytesIO(z.read(z.namelist()[0])), header=None)
+    dates = pd.to_datetime(raw[0], unit="ms", utc=True)
+    expected_dates = pd.date_range(
+        pd.Timestamp(month + "-01", tz="UTC"),
+        pd.Timestamp(month + "-01", tz="UTC") + pd.offsets.MonthBegin(1),
+        inclusive="left",
+        freq="h",
+    )
+    actual = pd.DatetimeIndex(dates).as_unit("ns")
+    assert len(actual.difference(expected_dates)) == 0 and not actual.duplicated().any()
+    missing = expected_dates.as_unit("ns").difference(actual)
+    # Full retained input is checked independently after applying declared warm-up.
+    assert not (missing >= pd.Timestamp("2023-03-25T00:00Z")).any()
+    frame = pd.DataFrame({"date": dates, "close": raw[4].astype(float)})
+    assert frame.close.gt(0).all()
+    return frame, dict(
+        path=str(path),
+        url=url,
+        sha256=sha(path),
+        checksum_sha256=sha(str(path) + ".CHECKSUM"),
+        rows=len(frame),
+        missing_hours=missing.astype(str).tolist(),
+        asset=asset,
+        month=month,
+    )
+
+
+def main():
+    out = ROOT / "user_data/crypto_quant" / HERE.name
+    (out / "candles").mkdir(parents=True, exist_ok=True)
+    (HERE / "warmup_archives").mkdir(exist_ok=True)
+    source = json.loads((PARENT / "plan.json").read_text())
+    receipts = json.loads((PARENT / "data_receipts.json").read_text())
+    links = []
+    for name, expected in receipts.items():
+        src = Path(source["datadir"]) / name
+        assert sha(src) == expected
+        dst = out / "candles" / name
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        if not dst.exists():
+            dst.hardlink_to(src)
+        assert sha(dst) == expected and src.stat().st_ino == dst.stat().st_ino
+        links.append(dict(source=str(src), target=str(dst), sha256=expected))
+    jobs = [
+        (asset, str(month)[:7])
+        for asset in ["BTC", "ETH"]
+        for month in pd.date_range("2022-10-01", "2024-09-01", freq="MS")
+    ]
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as pool:
+        fetched = list(pool.map(fetch, jobs))
+    components, series = [], {}
+    for asset in ["BTC", "ETH"]:
+        chunks = [frame for frame, row in fetched if row["asset"] == asset]
+        local_path = Path(source["datadir"]) / f"{asset}_USDT-1h.feather"
+        local = pd.read_feather(local_path, columns=["date", "close"])
+        full = pd.concat([*chunks, local], ignore_index=True)
+        full = full.loc[
+            full.date.lt(pd.Timestamp("2026-09-01", tz="UTC"))
+            & full.date.ge(pd.Timestamp("2023-03-25", tz="UTC"))
+        ]
+        assert not full.date.duplicated().any()
+        assert (
+            pd.DatetimeIndex(full.date)
+            .as_unit("ns")
+            .equals(
+                pd.date_range(
+                    "2023-03-25", "2026-09-01", inclusive="left", freq="h", tz="UTC"
+                ).as_unit("ns")
+            )
+        )
+        series[asset + "/USDT"] = full.set_index("date").close
+        components.append(
+            dict(
+                asset=asset,
+                local_path=str(local_path),
+                local_sha256=sha(local_path),
+                local_rows=len(local),
+            )
+        )
+    combined = pd.DataFrame(series)
+    combined.to_parquet(out / "signal_prices.parquet")
+    save(HERE / "data_receipts.json", receipts)
+    save(
+        HERE / "input_receipts.json",
+        dict(
+            created_at=datetime.now(UTC).isoformat(),
+            archives=[row for _, row in fetched],
+            existing_inputs=components,
+            hardlinks=links,
+            signal_prices=dict(
+                path=str(out / "signal_prices.parquet"),
+                sha256=sha(out / "signal_prices.parquet"),
+                rows=len(combined),
+            ),
+            official_data_docs="https://github.com/binance/binance-public-data",
+            economic_results_computed=False,
+        ),
+    )
+    print(
+        "Verified",
+        len(fetched),
+        "monthly archives;",
+        len(combined),
+        "complete warmup/evaluation hourly rows per asset;0 accounts",
+    )
+
+
+if __name__ == "__main__":
+    main()

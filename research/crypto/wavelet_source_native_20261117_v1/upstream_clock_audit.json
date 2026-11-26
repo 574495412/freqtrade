@@ -1,0 +1,94 @@
+{
+  "status": "CURRENT_CPU_ROLLING_CONTROL_CLOCKS_PASS_ONLY",
+  "full": {
+    "rows": 6000,
+    "fits": [
+      {
+        "training_rows": 994,
+        "latest_feature_source_clock": 993,
+        "latest_label_source_clock": 999
+      },
+      {
+        "training_rows": 3494,
+        "latest_feature_source_clock": 3493,
+        "latest_label_source_clock": 3499
+      }
+    ],
+    "prediction_windows": [
+      {
+        "first_output_clock": 1000,
+        "last_output_clock": 3499,
+        "latest_label_source_clock": 999,
+        "rows": 2500
+      },
+      {
+        "first_output_clock": 3500,
+        "last_output_clock": 5999,
+        "latest_label_source_clock": 3499,
+        "rows": 2500
+      }
+    ],
+    "scaling_windows_checked": 5000,
+    "first_feature_clock": 63,
+    "normalized_features_real_model_and_prices_not_executed": true
+  },
+  "prefix": {
+    "rows": 5800,
+    "fits": [
+      {
+        "training_rows": 994,
+        "latest_feature_source_clock": 993,
+        "latest_label_source_clock": 999
+      },
+      {
+        "training_rows": 3494,
+        "latest_feature_source_clock": 3493,
+        "latest_label_source_clock": 3499
+      }
+    ],
+    "prediction_windows": [
+      {
+        "first_output_clock": 1000,
+        "last_output_clock": 3499,
+        "latest_label_source_clock": 999,
+        "rows": 2500
+      },
+      {
+        "first_output_clock": 3500,
+        "last_output_clock": 5799,
+        "latest_label_source_clock": 3499,
+        "rows": 2300
+      }
+    ],
+    "scaling_windows_checked": 4800,
+    "first_feature_clock": 63,
+    "normalized_features_real_model_and_prices_not_executed": true
+  },
+  "appended200rows_changed_prior_training_model_clock": 0,
+  "exact_source_methods_executed": [
+    "TSPredict.add_predictions",
+    "TS_Wavelet.init_model",
+    "TS_Wavelet.add_jumping_predictions",
+    "TS_Wavelet.build_coefficient_table",
+    "TS_Wavelet.merge_coeff_table",
+    "TS_Wavelet.add_rolling_predictions"
+  ],
+  "selected_branch": "CPU, DWT, no stored scaler, source default sixbar horizon and2500row chunks",
+  "stand_ins": [
+    "set_data gives row IDs, not normalized market features",
+    "wavelet coefficients/inverse carry row clocks only",
+    "scaler identity; no artifact IO",
+    "LightGBM wrapper records fit/predict clocks only",
+    "scale_array identity while checking the source past32row slices"
+  ],
+  "real_wavelet_model_scaler_or_native_account_certified": false,
+  "actual_feature_pipeline_causality_not_proven": true,
+  "external_scaler_provenance_not_proven": true,
+  "native_constructor_executed": false,
+  "new_native_wallets": 0,
+  "new_financial_runs": 0,
+  "source_inputs": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_source_native_20261117_v1/sources/nateemma_strategies/TSPredict/TSPredict.py": "3568998f610a3eee66a8c0c1093617d83809ed38185de7a6b2dcd067d965c9e6",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_source_native_20261117_v1/sources/nateemma_strategies/TSPredict/TS_Wavelet.py": "cd0199466d41822e41319189ae4e1facdc2beca81bda4edfcadd1746904236c7"
+  }
+}

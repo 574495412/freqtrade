@@ -1,0 +1,123 @@
+{
+  "passed": true,
+  "scope": "Source contract/readiness audit only",
+  "paper_sha256": "c3ef13008bf2019bbcee1b41e182c64b2213c3780bf7d5070839bc5a1c7acc99",
+  "review": "27pages extracted; relevant methods/results/appendix text read, pages8/9/10/22/24 rendered and visually checked",
+  "published": "2026-06-11",
+  "license": "CC BY4.0 per publisher page",
+  "source_universe": [
+    "BTC",
+    "ETH",
+    "BNB",
+    "ADA",
+    "SOL",
+    "XRP",
+    "DOT",
+    "LTC",
+    "LINK",
+    "DOGE"
+  ],
+  "source_window": [
+    "2021-01-01",
+    "2023-12-31"
+  ],
+  "local_target_window": [
+    "2025-01-01T00:00Z",
+    "2026-08-31T23:00Z"
+  ],
+  "issues": [
+    {
+      "kind": "inconsistent_performance",
+      "pages": [
+        10,
+        22
+      ],
+      "table3_overlay_return": ".411",
+      "section5_2_1_overlay_return": "6.032",
+      "appendix_terminal": "1411000",
+      "body_implied_terminal": "7032000.000",
+      "disposition": "Neither version admitted as author account; do not choose larger number"
+    },
+    {
+      "kind": "illustrative_equity",
+      "pages": [
+        10,
+        22
+      ],
+      "fact": "Main text calls appendix a cross-check from final net series; appendix Table11 explicitly labels values illustrative and asks replacement with actual backtest output",
+      "disposition": "No actual equity series/trade/fee/funding artifact supplied by this PDF"
+    },
+    {
+      "kind": "gof_conflict",
+      "pages": [
+        8,
+        24
+      ],
+      "main": "1000parametric bootstrap samples with parameter refitting, KS and CvM p>.05",
+      "appendix": "Algorithm3 p-values from asymptotic distributions",
+      "disposition": "Do not silently use the cheaper test and claim source parity"
+    },
+    {
+      "kind": "cost_scope_conflict",
+      "pages": [
+        1,
+        9,
+        10,
+        16
+      ],
+      "abstract_fee_roundtrip": ".0008",
+      "section4_3_3_fee_plus_spread_roundtrip": ".0012",
+      "table10_matching_moderate_return_cost": ".0008",
+      "disposition": "Matched net-account cost definition unresolved; no favorable cost choice"
+    },
+    {
+      "kind": "quantity_notional_hedge_mismatch",
+      "pages": [
+        6,
+        9
+      ],
+      "equation": "P1=alpha+beta*P2",
+      "prose": "Long notional N, short notional beta*N",
+      "counterexample": {
+        "p1": "200",
+        "p2": "100",
+        "beta": "2",
+        "long_notional": "1000",
+        "source_q1": "5",
+        "source_q2": "20",
+        "spread_q2": "10",
+        "source_common_move_pnl": "-10",
+        "spread_common_move_pnl": "0"
+      },
+      "disposition": "This example disproves automatic spread/dollar neutrality; no actual strategy return computed"
+    },
+    {
+      "kind": "account_definition_missing",
+      "pages": [
+        9,
+        23,
+        26
+      ],
+      "fact": "100percent market overlay plus30percent pairs allocation; max portfolio risk is input rmax without numeric value, code available upon request",
+      "disposition": "Complete shared margin/cash/risk cap and release rules not pinned; no author contacted"
+    },
+    {
+      "kind": "date_boundary_requires_clarification",
+      "pages": [
+        7
+      ],
+      "quoted_rows": 26257,
+      "full_three_year_hours": 26280,
+      "difference_hours": 23,
+      "disposition": "26257could describe an inclusive Dec31midnight endpoint; do not assert data loss or silently change boundary"
+    }
+  ],
+  "admitted_as_high_return_reference": false,
+  "implementation_admitted": false,
+  "new_registry_factors": 0,
+  "native_accounts": 0,
+  "combinations": 0,
+  "financial_performance": null,
+  "previous_copula_source_unchanged": true,
+  "source_not_repaired_after_reading_returns": true
+}

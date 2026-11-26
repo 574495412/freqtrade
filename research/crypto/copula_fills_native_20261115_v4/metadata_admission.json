@@ -1,0 +1,106 @@
+{
+  "source20": [
+    "BTC",
+    "ETH",
+    "BCH",
+    "XRP",
+    "EOS",
+    "LTC",
+    "TRX",
+    "ETC",
+    "LINK",
+    "XLM",
+    "ADA",
+    "XMR",
+    "DASH",
+    "ZEC",
+    "XTZ",
+    "ATOM",
+    "BNB",
+    "ONT",
+    "IOTA",
+    "BAT"
+  ],
+  "target_window": [
+    "2025-01-01T00:00Z",
+    "2026-08-31T23:00Z"
+  ],
+  "eos_active_nomination": "2025-01-10 week, original three source threshold views retained",
+  "author_preprint": {
+    "url": "https://quantitative.cz/wp-content/uploads/2024/04/wp_2023_04_tadi_witzany.pdf",
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/copula_fills_native_20261115_v4/sources/author_preprint_2023.pdf",
+    "sha256": "46a195d107b7879195c36f72d68ad032308d3d6115512abe7727ed23fbbe16a4",
+    "bytes": 2590460,
+    "status": 200,
+    "title": "FFA Working Paper4/2023, Copula-Based Trading of Cointegrated Cryptocurrency Pairs",
+    "reviewed": "Cover/bibliography and PDF page28 (printed26), Appendix TableVII visually checked",
+    "minimum_trade_amount_reference": "0.1 EOS",
+    "max_leverage_reference": 75,
+    "step_size_not_certified": true,
+    "notional_minimum_not_present": true,
+    "version": "Earlier2023preprint, not2025published paperTable1; do not transfer all methods/version parity"
+  },
+  "joh5": {
+    "repository": "https://github.com/JohnKearney1/Joh5Bot",
+    "commit": "b3724b82627892659096b193011ec122a486f29c",
+    "commit_author_clock": "2021-05-06T02:53:19-04:00",
+    "commit_committer_clock": "2021-05-06T02:53:19-04:00",
+    "readme_path": "/Users/chrise/GitHub/freqtrade/research/crypto/copula_fills_native_20261115_v4/sources/joh5_README.md",
+    "readme_sha256": "7256ed90f7d4f73dc6d64ecc1daed898c3e30c576caf600ec97fbf9d7331a595",
+    "readme_git_blob_sha1": "eba496ac46e645049f12ab1ba25242e51851bdd1",
+    "reviewed_resource": "README only; no API files, credentials or executable trading code read",
+    "eos_row": {
+      "quantity_column_label": "Min. Notional (base quantity units)",
+      "minimum_quantity_reference": "0.1 EOS",
+      "price_tick_reference": "0.001 USDT",
+      "minimum_notional_reference": "5 USDT"
+    },
+    "admission": "Dated2021reference, not2025 historical EOS order certification; archive date is not data observation date",
+    "license_file_in_tree": false
+  },
+  "official_notices": [
+    {
+      "url": "https://www.binance.com/en/support/announcement/detail/a05ae5aad6e44f6c848bde0a4c94ad4b",
+      "publication": "2024-09-17T08:00Z",
+      "effective": "2024-09-17T07:30Z",
+      "observed_read": "Actual web parser body and EOS-specific table; local direct download202zero bytes",
+      "eos_first_tier_after": {
+        "notional_cap": "10000 USDT",
+        "maintenance_margin_rate": ".005",
+        "maximum_leverage": 75
+      },
+      "scope": "Leverage/MMR only; no minimum order quantity/notional certification"
+    },
+    {
+      "url": "https://www.binance.com/kk-KZ/support/announcement/detail/f231705aaacd4c14932f6a788b94f588",
+      "publication": "2025-02-20T08:30Z",
+      "effective": "2025-02-20T09:30Z",
+      "observed_read": "Actual web parser body and EOS-specific before/after table; local direct download202zero bytes",
+      "eos_first_tier_before_and_after": {
+        "notional_cap": "10000 USDT",
+        "maintenance_margin_rate": ".005",
+        "maximum_leverage": 75
+      },
+      "scope": "Relevant first-tier consistency corroborates reference, does not itself prove every intervening day"
+    },
+    {
+      "url": "https://www.binance.com/kk-KZ/support/announcement/detail/556e80d3f5364f75aafaf1eb9e9f20c1",
+      "publication": "2021-05-12",
+      "observed_read": "Actual primary body/table read; local download202zero bytes",
+      "eos_value": "0.111 USDT minimum LIMIT order price",
+      "scope": "Not minimum quantity or notional; excluded from such admission"
+    }
+  ],
+  "admitted_financial_metadata": false,
+  "reason": "No admitted EOS order minimum/quantity step specification for actual2025 nominated week; dated2021/2023references and observed price tick are not day-specific venue execution rules",
+  "no_substitutions": [
+    "No spot minimum copied to futures",
+    "No A token or other venue EOS contract",
+    "No dropped EOS week or member",
+    "No guessed5USDTminimum",
+    "No leverage or gross-budget rescue"
+  ],
+  "fixture_metadata_scope": "Explicit synthetic only; .1 step/min and5notional not EOS certification",
+  "source20_funded_accounts": 0,
+  "source_strategy_returns": null
+}

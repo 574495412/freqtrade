@@ -1,0 +1,46 @@
+{
+  "schema": "nfi40-dca-creation-clock-constraint.v1",
+  "frozen_before_object_probe": true,
+  "prepared_at": "2026-11-17T16:45:44.927072+00:00",
+  "actual_account": "nfi40_x8_500_cost15",
+  "effective_config": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost15/effective_config.json",
+  "actual_source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost15/strategies/NostalgiaForInfinityX8.py",
+  "original_source": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+  "vendor_root": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "vendor_manifest": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+  "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost15/native_results/backtest-result-2026-11-17_16-14-24.zip",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles",
+  "claim_to_test": "In the exact native no-detail 5m configuration,3min entry timeout removes any older pending entry before the next5m fill. A later DCA fill F therefore has original creation F. No claims before actual fixtures pass.",
+  "observed_config_before_probe": {
+    "timeframe": "5m",
+    "timeframe_detail_key": "absent; official default empty =>zero detail timedelta",
+    "entry_timeout_minutes": 3,
+    "exit_timeout_minutes": 2,
+    "entry_order_type": "limit",
+    "entry_time_in_force": "GTC"
+  },
+  "fixture_scope": [
+    "native manage_open_orders/check_order_cancel/replace on detached LocalTrade/Order",
+    "actual _enter_trade and _try_close_open_order with fixed stake/metadata fixture; no wallets or account",
+    "old pending price inside current OHLC must cancel before fill",
+    "new DCA created and filled at exact current row clock",
+    "replace cannot reset an old order clock; new replacement is new Order",
+    "source timeout functions exact AST; native built-in expiry short-circuits them",
+    "long/short/initial/DCA",
+    "exact timeout equality and just-before",
+    "detail1m and timeout10m demonstrate delayed fill counterexamples and cannot supportactual certificate",
+    "missing effective config/detail unknown/changed timeout rejected"
+  ],
+  "excluded_side_effects": [
+    "liquidation update no-op",
+    "funding and after-fill stop hooks record only",
+    "source order_filled economics not executed; static source rejects order date/status mutation",
+    "entry stake/precision fixture constants; no pricing proof"
+  ],
+  "configuration_or_economic_changes": false,
+  "numeric_account_reaudit": false,
+  "financial_backtesting_start": false,
+  "max_rss_expected_bytes": 2147483648,
+  "disk_floor_bytes": 1073741824,
+  "unknown_retained_if_any_required_constraint_fails": true
+}

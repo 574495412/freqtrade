@@ -1,0 +1,58 @@
+{
+  "schema": "nfi40-execution-jump-diagnostic.v1",
+  "prepared_at": "2026-11-17T16:35:57.700657+00:00",
+  "selection": "Root observed largest positive saved hourly-mark NAV jump in both fixed 15bp accounts at2025-10-10T22UTC; diagnostic after outcomes, not preregistered alpha test",
+  "accounts": [
+    {
+      "name": "original1000_cost15",
+      "capital": 1000,
+      "directory": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15"
+    },
+    {
+      "name": "new500_cost15",
+      "capital": 500,
+      "directory": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost15"
+    }
+  ],
+  "source_sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3",
+  "source_path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles",
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "detail_start": "2025-10-10T20:00:00Z",
+  "detail_end": "2025-10-11T00:00:00Z",
+  "fixed_snapshot_times": [
+    "2025-02-03T03:00Z",
+    "2025-02-03T04:00Z",
+    "2025-02-03T05:00Z",
+    "2025-02-03T06:00Z",
+    "2025-02-03T07:00Z",
+    "2025-10-10T20:00Z",
+    "2025-10-10T21:00Z",
+    "2025-10-10T22:00Z",
+    "2025-10-10T23:00Z",
+    "2025-10-11T00:00Z"
+  ],
+  "additional_selection": "Top5 positive and3 negative hourly percent changes per frozen curve; prior+current snapshots only",
+  "samebar_definitions": [
+    "same campaign contains entry and exit with same5m fill timestamp",
+    "same pair across campaigns at same5m timestamp",
+    "different pairs/campaigns at account5m clock; not a roundtrip profit attribution",
+    "complete campaign all fills in same5m bar"
+  ],
+  "cash_reconstruction": "Decimal actual exported qty*safe_price and native fees/funding; no synthetic orders or account matcher",
+  "snapshot_reconciliation": "Only selected saved hourly snapshots, orders strictly before clock; markOPEN and remaining exit fee reserve; conditional native funding history diagnostic AST",
+  "funding_diagnostic_source": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/audit_actual500.py",
+  "known_limits": [
+    "Minified orders lack creation timestamps and exact withinbar fill time",
+    "OHLC cannot identify low/high sequence or queue/liquidity/slippage",
+    "Native wholemonth precision and historical universe/rules gaps remain",
+    "DCA/funding boundary paths lacking creation times remain UNKNOWN even if cash/NAV aggregate agrees",
+    "Full1h DD is sampling-grid statistic, not intrahour or actual execution DD",
+    "Frozen local recorded prices are not independently authenticated exchange ticks"
+  ],
+  "new_native_accounts_started": 0,
+  "Backtesting_import_or_start_forbidden": true,
+  "orders_enabled": false,
+  "existing_accounts_modified": false
+}

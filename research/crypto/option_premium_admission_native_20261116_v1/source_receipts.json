@@ -1,0 +1,101 @@
+[
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/AXSUSDT_funding_refresh.json",
+    "url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=AXSUSDT&startTime=1782259200000&endTime=1782345600000&limit=1000",
+    "status": 200,
+    "sha256": "78061f20efa401c9b0f407de1aa16d21e47f9565863c55c9f70d1c826b2e0659",
+    "observed_at": "2026-11-15T19:21:55.874702+00:00"
+  },
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/TRBUSDT_funding_refresh.json",
+    "url": "https://fapi.binance.com/fapi/v1/fundingRate?symbol=TRBUSDT&startTime=1782259200000&endTime=1782345600000&limit=1000",
+    "status": 200,
+    "sha256": "49a2672ff67ad63a307cad09cd7cefb43390ac2a0d8afb07c1f98118c682b6d1",
+    "observed_at": "2026-11-15T19:21:56.731279+00:00"
+  },
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/08_variance_risk_premium.py",
+    "url": "https://raw.githubusercontent.com/mikemarshall01/crypto-quant-strategies/6f039e64d6d13227cdc5a79bbd9d78b093468cd0/notebooks/08_variance_risk_premium.py",
+    "status": 200,
+    "sha256": "bbd9cf2400d6cb4cb1f52b59638c823ef95eaee82f7ae90215f4f7d2fe26446b",
+    "observed_at": "2026-11-15T19:21:57.892548+00:00"
+  },
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/deribit_options.html",
+    "url": "https://support.deribit.com/hc/en-us/articles/31424939096093-Inverse-Options",
+    "status": 403,
+    "sha256": "0dbf73fe97e6ed8671261a5b117a6b691a7b47d3574ba7d3139e5b729744c847",
+    "observed_at": "2026-11-15T19:24:27.679507+00:00"
+  },
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/deribit_fees.html",
+    "url": "https://support.deribit.com/hc/en-us/articles/25944746248989-Fees",
+    "status": 403,
+    "sha256": "64d377262ab7c8360541fc2fb66383706cb2b89149a84259ea1b006e7f42438d",
+    "observed_at": "2026-11-15T19:24:28.523455+00:00"
+  },
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/btc_instruments.json",
+    "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=BTC&kind=option&expired=false",
+    "status": 200,
+    "sha256": "a459dacba0c1dc169ff79a7a4d4066345a76b8156e0e22c321a8df9a0b9b4b02",
+    "observed_at": "2026-11-15T19:24:29.650107+00:00"
+  },
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/expired_instrument.json",
+    "url": "https://www.deribit.com/api/v2/public/get_instrument?instrument_name=BTC-27JUN25-100000-C",
+    "status": 200,
+    "sha256": "46dcf902fffec957931b4b6a8e712e1b02f7b32f5bde5268ac6ddd2714157084",
+    "observed_at": "2026-11-15T19:24:30.761731+00:00"
+  },
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/expired_option_candles.json",
+    "url": "https://www.deribit.com/api/v2/public/get_tradingview_chart_data?instrument_name=BTC-27JUN25-100000-C&start_timestamp=1748736000000&end_timestamp=1748822400000&resolution=60",
+    "status": 200,
+    "sha256": "1dc103580f2f4906a745c3c9303a2d5fcf6090510bb1f7bfbabd0e7abc9172a5",
+    "observed_at": "2026-11-15T19:50:08.977367+00:00"
+  },
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/expired_option_trades.json",
+    "url": "https://www.deribit.com/api/v2/public/get_last_trades_by_instrument_and_time?instrument_name=BTC-27JUN25-100000-C&start_timestamp=1748736000000&end_timestamp=1748822400000&count=1000&sorting=asc&include_old=true",
+    "status": 200,
+    "sha256": "a49a3eaa9816e5e77c5a78bf06f20a4ea31d8ecc1d418ec1d25717ed9495fdc4",
+    "observed_at": "2026-11-15T19:50:10.042184+00:00"
+  },
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/eth_instruments.json",
+    "url": "https://www.deribit.com/api/v2/public/get_instruments?currency=ETH&kind=option&expired=false",
+    "status": 200,
+    "sha256": "8eb17d0082fad5f4cc1c7507144ed323334ec31aed908c1a4997504760a341cc",
+    "observed_at": "2026-11-15T19:50:11.168349+00:00"
+  },
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/LICENSE",
+    "url": "https://raw.githubusercontent.com/mikemarshall01/crypto-quant-strategies/6f039e64d6d13227cdc5a79bbd9d78b093468cd0/LICENSE",
+    "status": 200,
+    "sha256": "a9a3a524a2f75af80eb825cb245e96174a818fe8045383756521276d902da2e8",
+    "provenance": "byte-exact reuse from sealed macro-source capture",
+    "source_path": "/Users/chrise/GitHub/freqtrade/research/crypto/macro_transmission_source_native_20261116_v1/sources/LICENSE"
+  },
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/expired_option_trades_documented.json",
+    "url": "https://www.deribit.com/api/v2/public/get_last_trades_by_instrument_and_time?instrument_name=BTC-27JUN25-100000-C&start_timestamp=1748736000000&end_timestamp=1748822400000&count=1000&sorting=asc",
+    "status": 200,
+    "sha256": "d1a86169c2f99f2aba954abdda9e2cdae5c9d18a3607a289254cff4c86aa7791",
+    "observed_at": "2026-11-15T20:00:29.368971+00:00"
+  },
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/btc_delivery_prices.json",
+    "url": "https://www.deribit.com/api/v2/public/get_delivery_prices?index_name=btc_usd&offset=0&count=1000",
+    "status": 200,
+    "sha256": "e66886c635da0895db414717c394be5686fa99374d9c17342542aaaba3be92a5",
+    "observed_at": "2026-11-15T20:06:06.360893+00:00"
+  },
+  {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/btc_expiry_delivery.json",
+    "url": "https://www.deribit.com/api/v2/public/get_delivery_prices?index_name=btc_usd&start_timestamp=1750982400000&end_timestamp=1751068799999&count=10",
+    "status": 200,
+    "sha256": "7e23114d77eac8b0f3298c0a266e851024154227a4670fe78f7a9112cc7fb6c6",
+    "observed_at": "2026-11-15T20:07:10.120521+00:00"
+  }
+]

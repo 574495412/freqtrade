@@ -1,0 +1,1214 @@
+{
+  "new_native_wallets": 8,
+  "existing_carry_leg_wallets_reused": 24,
+  "new_native_trades": 58,
+  "new_simulated_fills": 132,
+  "new_hour_points": 116736,
+  "maximum_independent_nav_error_usdt": 1.8860419004340656e-08,
+  "accounts": [
+    {
+      "account": "nfi_spot_1000_conservative",
+      "role": "nfi_spot",
+      "capital": 1000,
+      "scenario": "conservative",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.035830653179999894,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1035.83065318,
+          "cagr_365day": 0.021360160366660663,
+          "hourly_mark_drawdown": 0.021617140851596606,
+          "daily_nav_sharpe": 1.1788170813500412,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.035830653179999894,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1035.83065318,
+          "cagr_365day": 0.035830653179999894,
+          "hourly_mark_drawdown": 0.021617140851596606,
+          "daily_nav_sharpe": 1.5212701642332676,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.0,
+          "initial_usdt": 1035.83065318,
+          "ending_usdt": 1035.83065318,
+          "cagr_365day": 0.0,
+          "hourly_mark_drawdown": 0.0,
+          "daily_nav_sharpe": null,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "passed": true,
+      "archive_sha256": "0c91be9f3d6ccc02e08cd1b612529a6c4130a4173fbb9e336bff4661857b712c",
+      "actual_native_trades": 4,
+      "filled_orders": 10,
+      "multi_order_trades": 2,
+      "hour_points": 14592,
+      "maximum_nav_error_usdt": 6.000163921271451e-09,
+      "maximum_cash_error_usdt": 4e-09,
+      "maximum_funding_error_usdt": 0.0,
+      "funding_boundary_fills": [],
+      "maximum_gross_exposure_to_nav": 0.5091411297580082,
+      "maximum_abs_net_exposure_to_nav": 0.5091411297580082,
+      "native_funding_usdt": 0.0,
+      "naturally_closed_before_endpoint": 4,
+      "open_trades_at_common_endpoint": 0,
+      "hypothetical_terminal_force_exits": 0,
+      "private_settlement_certified": false
+    },
+    {
+      "account": "nfi_futures_1000_conservative",
+      "role": "nfi_futures",
+      "capital": 1000,
+      "scenario": "conservative",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.04953653936000002,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1049.53653936,
+          "cagr_365day": 0.029452491026646932,
+          "hourly_mark_drawdown": 0.021241089120968892,
+          "daily_nav_sharpe": 1.2636260854133925,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.04713889669999993,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1047.1388967,
+          "cagr_365day": 0.04713889669999993,
+          "hourly_mark_drawdown": 0.021241089120968892,
+          "daily_nav_sharpe": 1.5585490373771804,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.0022897083353088377,
+          "initial_usdt": 1047.1388967,
+          "ending_usdt": 1049.53653936,
+          "cagr_365day": 0.0034418411007024474,
+          "hourly_mark_drawdown": 0.0009949485619207277,
+          "daily_nav_sharpe": 1.2281141896460288,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "passed": true,
+      "archive_sha256": "95cc5807a059602727b0f29b8bb99c3091afdda127825a6472cb0f0bc2191d9c",
+      "actual_native_trades": 10,
+      "filled_orders": 23,
+      "multi_order_trades": 3,
+      "hour_points": 14592,
+      "maximum_nav_error_usdt": 8.885990609996952e-09,
+      "maximum_cash_error_usdt": 4.78213228e-09,
+      "maximum_funding_error_usdt": 2.7755575615628914e-17,
+      "funding_boundary_fills": [],
+      "maximum_gross_exposure_to_nav": 0.5071401297698427,
+      "maximum_abs_net_exposure_to_nav": 0.5071401297698427,
+      "native_funding_usdt": 0.12304401388637036,
+      "naturally_closed_before_endpoint": 10,
+      "open_trades_at_common_endpoint": 0,
+      "hypothetical_terminal_force_exits": 0,
+      "private_settlement_certified": false
+    },
+    {
+      "account": "nfi_spot_1000_lower",
+      "role": "nfi_spot",
+      "capital": 1000,
+      "scenario": "lower",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.03731987366,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1037.31987366,
+          "cagr_365day": 0.022241500419227345,
+          "hourly_mark_drawdown": 0.02145225451111543,
+          "daily_nav_sharpe": 1.1837148105052022,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.03731987366,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1037.31987366,
+          "cagr_365day": 0.03731987366,
+          "hourly_mark_drawdown": 0.02145225451111543,
+          "daily_nav_sharpe": 1.5276068329839727,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.0,
+          "initial_usdt": 1037.31987366,
+          "ending_usdt": 1037.31987366,
+          "cagr_365day": 0.0,
+          "hourly_mark_drawdown": 0.0,
+          "daily_nav_sharpe": null,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "passed": true,
+      "archive_sha256": "15f3d2009bb99833236522b1f9a19834eaedc14217a4b0984d86f3cd635f41df",
+      "actual_native_trades": 4,
+      "filled_orders": 10,
+      "multi_order_trades": 2,
+      "hour_points": 14592,
+      "maximum_nav_error_usdt": 3.999957698397338e-09,
+      "maximum_cash_error_usdt": 6.7999999e-09,
+      "maximum_funding_error_usdt": 0.0,
+      "funding_boundary_fills": [],
+      "maximum_gross_exposure_to_nav": 0.5087877848774851,
+      "maximum_abs_net_exposure_to_nav": 0.5087877848774851,
+      "native_funding_usdt": 0.0,
+      "naturally_closed_before_endpoint": 4,
+      "open_trades_at_common_endpoint": 0,
+      "hypothetical_terminal_force_exits": 0,
+      "private_settlement_certified": false
+    },
+    {
+      "account": "nfi_futures_1000_lower",
+      "role": "nfi_futures",
+      "capital": 1000,
+      "scenario": "lower",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.04661515314000009,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1046.61515314,
+          "cagr_365day": 0.02773118311093481,
+          "hourly_mark_drawdown": 0.017979035053867776,
+          "daily_nav_sharpe": 1.2469681236122645,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.04403987039000001,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1044.03987039,
+          "cagr_365day": 0.04403987039000001,
+          "hourly_mark_drawdown": 0.017979035053867776,
+          "daily_nav_sharpe": 1.5282533155072417,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.0024666517276183964,
+          "initial_usdt": 1044.03987039,
+          "ending_usdt": 1046.61515314,
+          "cagr_365day": 0.0037079832159920834,
+          "hourly_mark_drawdown": 0.0008254523926745083,
+          "daily_nav_sharpe": 1.2281141896460308,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "passed": true,
+      "archive_sha256": "338ec04af47500c458aa3ed3bc955975ac2ebb034d4f22ad913b6511b63fcfba",
+      "actual_native_trades": 11,
+      "filled_orders": 24,
+      "multi_order_trades": 2,
+      "hour_points": 14592,
+      "maximum_nav_error_usdt": 1.8860419004340656e-08,
+      "maximum_cash_error_usdt": 4.16956525e-09,
+      "maximum_funding_error_usdt": 2.7755575615628914e-17,
+      "funding_boundary_fills": [],
+      "maximum_gross_exposure_to_nav": 0.5066230367605488,
+      "maximum_abs_net_exposure_to_nav": 0.5066230367605488,
+      "native_funding_usdt": 0.12073260686027036,
+      "naturally_closed_before_endpoint": 11,
+      "open_trades_at_common_endpoint": 0,
+      "hypothetical_terminal_force_exits": 0,
+      "private_settlement_certified": false
+    },
+    {
+      "account": "nfi_spot_500_conservative",
+      "role": "nfi_spot",
+      "capital": 500,
+      "scenario": "conservative",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.034772630279999994,
+          "initial_usdt": 500.0,
+          "ending_usdt": 517.38631514,
+          "cagr_365day": 0.020733700949541634,
+          "hourly_mark_drawdown": 0.021602774125736524,
+          "daily_nav_sharpe": 1.14357695543709,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.034772630279999994,
+          "initial_usdt": 500.0,
+          "ending_usdt": 517.38631514,
+          "cagr_365day": 0.034772630279999994,
+          "hourly_mark_drawdown": 0.021602774125736524,
+          "daily_nav_sharpe": 1.4756824357218985,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.0,
+          "initial_usdt": 517.38631514,
+          "ending_usdt": 517.38631514,
+          "cagr_365day": 0.0,
+          "hourly_mark_drawdown": 0.0,
+          "daily_nav_sharpe": null,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "passed": true,
+      "archive_sha256": "e968e584559fe62298db17eb018a771391b0f29cb1f488ee483e323913828e58",
+      "actual_native_trades": 4,
+      "filled_orders": 10,
+      "multi_order_trades": 2,
+      "hour_points": 14592,
+      "maximum_nav_error_usdt": 4.000014541816199e-09,
+      "maximum_cash_error_usdt": 4e-09,
+      "maximum_funding_error_usdt": 0.0,
+      "funding_boundary_fills": [],
+      "maximum_gross_exposure_to_nav": 0.5091411297580082,
+      "maximum_abs_net_exposure_to_nav": 0.5091411297580082,
+      "native_funding_usdt": 0.0,
+      "naturally_closed_before_endpoint": 4,
+      "open_trades_at_common_endpoint": 0,
+      "hypothetical_terminal_force_exits": 0,
+      "private_settlement_certified": false
+    },
+    {
+      "account": "nfi_futures_500_conservative",
+      "role": "nfi_futures",
+      "capital": 500,
+      "scenario": "conservative",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.04476526646000001,
+          "initial_usdt": 500.0,
+          "ending_usdt": 522.38263323,
+          "cagr_365day": 0.026640219739077375,
+          "hourly_mark_drawdown": 0.021206348614708492,
+          "daily_nav_sharpe": 1.0691165326292245,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.042405681620000024,
+          "initial_usdt": 500.0,
+          "ending_usdt": 521.20284081,
+          "cagr_365day": 0.042405681620000024,
+          "hourly_mark_drawdown": 0.021206348614708492,
+          "daily_nav_sharpe": 1.311845846710813,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.002263595528693818,
+          "initial_usdt": 521.20284081,
+          "ending_usdt": 522.38263323,
+          "cagr_365day": 0.0034025665965644603,
+          "hourly_mark_drawdown": 0.0009836017458270119,
+          "daily_nav_sharpe": 1.2281141896460226,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "passed": true,
+      "archive_sha256": "8b5c9997af911b87299e3c3873f33bec98bfd2fc0b68577b54f60f117f66a798",
+      "actual_native_trades": 10,
+      "filled_orders": 22,
+      "multi_order_trades": 2,
+      "hour_points": 14592,
+      "maximum_nav_error_usdt": 8.594952305429615e-09,
+      "maximum_cash_error_usdt": 3.956000001e-09,
+      "maximum_funding_error_usdt": 0.0,
+      "funding_boundary_fills": [],
+      "maximum_gross_exposure_to_nav": 0.5071401297698427,
+      "maximum_abs_net_exposure_to_nav": 0.5071401297698427,
+      "native_funding_usdt": -0.007249091404968168,
+      "naturally_closed_before_endpoint": 10,
+      "open_trades_at_common_endpoint": 0,
+      "hypothetical_terminal_force_exits": 0,
+      "private_settlement_certified": false
+    },
+    {
+      "account": "nfi_spot_500_lower",
+      "role": "nfi_spot",
+      "capital": 500,
+      "scenario": "lower",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.03630883584000011,
+          "initial_usdt": 500.0,
+          "ending_usdt": 518.15441792,
+          "cagr_365day": 0.021643210245375855,
+          "hourly_mark_drawdown": 0.02145225451111543,
+          "daily_nav_sharpe": 1.1507219363703394,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.03630883584000011,
+          "initial_usdt": 500.0,
+          "ending_usdt": 518.15441792,
+          "cagr_365day": 0.03630883584000011,
+          "hourly_mark_drawdown": 0.02145225451111543,
+          "daily_nav_sharpe": 1.4849245839275806,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.0,
+          "initial_usdt": 518.15441792,
+          "ending_usdt": 518.15441792,
+          "cagr_365day": 0.0,
+          "hourly_mark_drawdown": 0.0,
+          "daily_nav_sharpe": null,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "passed": true,
+      "archive_sha256": "4d754d8c16d6f7b22b1af56ebc105baaca319d9c11263f361486206aea29dc4f",
+      "actual_native_trades": 4,
+      "filled_orders": 10,
+      "multi_order_trades": 2,
+      "hour_points": 14592,
+      "maximum_nav_error_usdt": 4.9000163926393725e-09,
+      "maximum_cash_error_usdt": 2.9e-09,
+      "maximum_funding_error_usdt": 0.0,
+      "funding_boundary_fills": [],
+      "maximum_gross_exposure_to_nav": 0.5087877848774851,
+      "maximum_abs_net_exposure_to_nav": 0.5087877848774851,
+      "native_funding_usdt": 0.0,
+      "naturally_closed_before_endpoint": 4,
+      "open_trades_at_common_endpoint": 0,
+      "hypothetical_terminal_force_exits": 0,
+      "private_settlement_certified": false
+    },
+    {
+      "account": "nfi_futures_500_lower",
+      "role": "nfi_futures",
+      "capital": 500,
+      "scenario": "lower",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.04211632250000008,
+          "initial_usdt": 500.0,
+          "ending_usdt": 521.05816125,
+          "cagr_365day": 0.025076670384672095,
+          "hourly_mark_drawdown": 0.017979035053867776,
+          "daily_nav_sharpe": 1.0451637737346935,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.039581917260000044,
+          "initial_usdt": 500.0,
+          "ending_usdt": 519.79095863,
+          "cagr_365day": 0.039581917260000044,
+          "hourly_mark_drawdown": 0.017979035053867776,
+          "daily_nav_sharpe": 1.273254383947151,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.0024379081608882913,
+          "initial_usdt": 519.79095863,
+          "ending_usdt": 521.05816125,
+          "cagr_365day": 0.003664748158654474,
+          "hourly_mark_drawdown": 0.0008158335069288203,
+          "daily_nav_sharpe": 1.228114189646028,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "passed": true,
+      "archive_sha256": "42f0ff2862672bf8c37919a24cd1fc2f8bf9214fa24bb7c90e6a575178ed41e6",
+      "actual_native_trades": 11,
+      "filled_orders": 23,
+      "multi_order_trades": 1,
+      "hour_points": 14592,
+      "maximum_nav_error_usdt": 6.151935849629808e-09,
+      "maximum_cash_error_usdt": 4.39106614e-09,
+      "maximum_funding_error_usdt": 0.0,
+      "funding_boundary_fills": [],
+      "maximum_gross_exposure_to_nav": 0.5066230367556306,
+      "maximum_abs_net_exposure_to_nav": 0.5066230367556306,
+      "native_funding_usdt": -0.008418246129468168,
+      "naturally_closed_before_endpoint": 11,
+      "open_trades_at_common_endpoint": 0,
+      "hypothetical_terminal_force_exits": 0,
+      "private_settlement_certified": false
+    },
+    {
+      "account": "carry_1000_conservative",
+      "role": "carry",
+      "capital": 1000,
+      "scenario": "conservative",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.023811875711548858,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1023.8118757115489,
+          "cagr_365day": 0.014228663389532326,
+          "hourly_mark_drawdown": 0.0029950039082330404,
+          "daily_nav_sharpe": 5.1406456751159375,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.01924828790659827,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1019.2482879065982,
+          "cagr_365day": 0.01924828790659827,
+          "hourly_mark_drawdown": 0.0029950039082330404,
+          "daily_nav_sharpe": 5.599371654319205,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.004477405416420721,
+          "initial_usdt": 1019.2482879065982,
+          "ending_usdt": 1023.8118757115489,
+          "cagr_365day": 0.006734032809257773,
+          "hourly_mark_drawdown": 0.0016411179014191868,
+          "daily_nav_sharpe": 6.068909150318263,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "reused_sealed_parent": true,
+      "new_native_runs": 0
+    },
+    {
+      "account": "benchmark_1000_conservative",
+      "role": "benchmark",
+      "capital": 1000,
+      "scenario": "conservative",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.20329537034200007,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 796.7046296579999,
+          "cagr_365day": -0.12754733107593985,
+          "hourly_mark_drawdown": 0.5851700651400413,
+          "daily_nav_sharpe": -0.03836350259615375,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.08639862874920001,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 913.6013712508,
+          "cagr_365day": -0.08639862874920001,
+          "hourly_mark_drawdown": 0.4230926935751962,
+          "daily_nav_sharpe": 0.0753156662375893,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.12795158290180564,
+          "initial_usdt": 913.6013712508,
+          "ending_usdt": 796.7046296579999,
+          "cagr_365day": -0.18590847037653757,
+          "hourly_mark_drawdown": 0.4507095885097613,
+          "daily_nav_sharpe": -0.21335937511615732,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "reused_sealed_parent": true,
+      "new_native_runs": 0
+    },
+    {
+      "account": "carry_500_conservative",
+      "role": "carry",
+      "capital": 500,
+      "scenario": "conservative",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.023646508869387795,
+          "initial_usdt": 500.0,
+          "ending_usdt": 511.8232544346939,
+          "cagr_365day": 0.014130308214286291,
+          "hourly_mark_drawdown": 0.0029710898343141556,
+          "daily_nav_sharpe": 5.147422054966428,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.01911069414127131,
+          "initial_usdt": 500.0,
+          "ending_usdt": 509.55534707063566,
+          "cagr_365day": 0.01911069414127131,
+          "hourly_mark_drawdown": 0.0029710898343141556,
+          "daily_nav_sharpe": 5.6055882774251655,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.004450757659783422,
+          "initial_usdt": 509.55534707063566,
+          "ending_usdt": 511.8232544346939,
+          "cagr_365day": 0.006693909808819676,
+          "hourly_mark_drawdown": 0.0016275604582597358,
+          "daily_nav_sharpe": 6.08237236958372,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "reused_sealed_parent": true,
+      "new_native_runs": 0
+    },
+    {
+      "account": "benchmark_500_conservative",
+      "role": "benchmark",
+      "capital": 500,
+      "scenario": "conservative",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.20329537034200007,
+          "initial_usdt": 500.0,
+          "ending_usdt": 398.35231482899997,
+          "cagr_365day": -0.12754733107593985,
+          "hourly_mark_drawdown": 0.5851700651400413,
+          "daily_nav_sharpe": -0.03836350259615375,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.08639862874920001,
+          "initial_usdt": 500.0,
+          "ending_usdt": 456.8006856254,
+          "cagr_365day": -0.08639862874920001,
+          "hourly_mark_drawdown": 0.4230926935751962,
+          "daily_nav_sharpe": 0.0753156662375893,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.12795158290180564,
+          "initial_usdt": 456.8006856254,
+          "ending_usdt": 398.35231482899997,
+          "cagr_365day": -0.18590847037653757,
+          "hourly_mark_drawdown": 0.4507095885097613,
+          "daily_nav_sharpe": -0.21335937511615732,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "reused_sealed_parent": true,
+      "new_native_runs": 0
+    },
+    {
+      "account": "carry_1000_lower",
+      "role": "carry",
+      "capital": 1000,
+      "scenario": "lower",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.024871509090548916,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1024.871509090549,
+          "cagr_365day": 0.014858750529222808,
+          "hourly_mark_drawdown": 0.0019375152695572107,
+          "daily_nav_sharpe": 7.5503377306317745,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.02038318379716464,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1020.3831837971647,
+          "cagr_365day": 0.02038318379716464,
+          "hourly_mark_drawdown": 0.0019375152695572107,
+          "daily_nav_sharpe": 8.627773796381328,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.004398666466338241,
+          "initial_usdt": 1020.3831837971647,
+          "ending_usdt": 1024.871509090549,
+          "cagr_365day": 0.006615478672704622,
+          "hourly_mark_drawdown": 0.0016400047479461222,
+          "daily_nav_sharpe": 6.497575910570356,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "reused_sealed_parent": true,
+      "new_native_runs": 0
+    },
+    {
+      "account": "benchmark_1000_lower",
+      "role": "benchmark",
+      "capital": 1000,
+      "scenario": "lower",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.2021955965372001,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 797.8044034627999,
+          "cagr_365day": -0.1268244826731928,
+          "hourly_mark_drawdown": 0.5850746900855566,
+          "daily_nav_sharpe": -0.03683808175189582,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.08516670852788,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 914.83329147212,
+          "cagr_365day": -0.08516670852788,
+          "hourly_mark_drawdown": 0.42304494281905014,
+          "daily_nav_sharpe": 0.0778955664772959,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.1279237311324788,
+          "initial_usdt": 914.83329147212,
+          "ending_usdt": 797.8044034627999,
+          "cagr_365day": -0.18586940878125346,
+          "hourly_mark_drawdown": 0.45061259127321984,
+          "daily_nav_sharpe": -0.2134904976998429,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "reused_sealed_parent": true,
+      "new_native_runs": 0
+    },
+    {
+      "account": "carry_500_lower",
+      "role": "carry",
+      "capital": 500,
+      "scenario": "lower",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.02469801008938788,
+          "initial_usdt": 500.0,
+          "ending_usdt": 512.349005044694,
+          "cagr_365day": 0.014755601083237257,
+          "hourly_mark_drawdown": 0.001915030856540989,
+          "daily_nav_sharpe": 7.561586835777551,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.02023675477160447,
+          "initial_usdt": 500.0,
+          "ending_usdt": 510.1183773858022,
+          "cagr_365day": 0.02023675477160447,
+          "hourly_mark_drawdown": 0.001915030856540989,
+          "daily_nav_sharpe": 8.639214851108752,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.004372764749866587,
+          "initial_usdt": 510.1183773858022,
+          "ending_usdt": 512.349005044694,
+          "cagr_365day": 0.006576480498603932,
+          "hourly_mark_drawdown": 0.0016263793292301543,
+          "daily_nav_sharpe": 6.512201403896296,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "reused_sealed_parent": true,
+      "new_native_runs": 0
+    },
+    {
+      "account": "benchmark_500_lower",
+      "role": "benchmark",
+      "capital": 500,
+      "scenario": "lower",
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.2021077582723001,
+          "initial_usdt": 500.0,
+          "ending_usdt": 398.94612086384996,
+          "cagr_365day": -0.12676676638885176,
+          "hourly_mark_drawdown": 0.5848986192229103,
+          "daily_nav_sharpe": -0.036971276156016496,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.08512902497697994,
+          "initial_usdt": 500.0,
+          "ending_usdt": 457.43548751151,
+          "cagr_365day": -0.08512902497697994,
+          "hourly_mark_drawdown": 0.42284939690898093,
+          "daily_nav_sharpe": 0.07777082640160567,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.12786364032630582,
+          "initial_usdt": 457.43548751151,
+          "ending_usdt": 398.94612086384996,
+          "cagr_365day": -0.18578513039400946,
+          "hourly_mark_drawdown": 0.4504327894281114,
+          "daily_nav_sharpe": -0.2136495515473459,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "reused_sealed_parent": true,
+      "new_native_runs": 0
+    }
+  ],
+  "portfolios": [
+    {
+      "name": "spot_carry_1000_conservative",
+      "scenario": "conservative",
+      "actual500plus500": true,
+      "sleeves": [
+        "nfi_spot_500_conservative",
+        "carry_500_conservative"
+      ],
+      "scaled_curves": false,
+      "transfers": false,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.029209569574693894,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1029.209569574694,
+          "cagr_365day": 0.017435570550164536,
+          "hourly_mark_drawdown": 0.010619444666823075,
+          "daily_nav_sharpe": 1.8858810895908946,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.026941662210635542,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1026.9416622106355,
+          "cagr_365day": 0.026941662210635542,
+          "hourly_mark_drawdown": 0.010619444666823075,
+          "daily_nav_sharpe": 2.25318569900225,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.0022084091506973103,
+          "initial_usdt": 1026.9416622106355,
+          "ending_usdt": 1029.209569574694,
+          "cagr_365day": 0.0033195661934801723,
+          "hourly_mark_drawdown": 0.0008084054855961309,
+          "daily_nav_sharpe": 6.083525267225665,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "positive_all_periods": true,
+      "numeric_gate": true,
+      "beats_best_same_contract1000": false,
+      "no_worse_dd_than_best": true,
+      "frozen_financial_gate": false,
+      "best_same_contract1000": "nfi_futures_1000_conservative",
+      "source_overlap": false
+    },
+    {
+      "name": "futures_carry_1000_conservative",
+      "scenario": "conservative",
+      "actual500plus500": true,
+      "sleeves": [
+        "nfi_futures_500_conservative",
+        "carry_500_conservative"
+      ],
+      "scaled_curves": false,
+      "transfers": false,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.03420588766469379,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1034.2058876646938,
+          "cagr_365day": 0.020398025192269076,
+          "hourly_mark_drawdown": 0.010445094949643297,
+          "daily_nav_sharpe": 1.6121056225553416,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.030758187880635557,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1030.7581878806357,
+          "cagr_365day": 0.030758187880635557,
+          "hourly_mark_drawdown": 0.010445094949643297,
+          "daily_nav_sharpe": 1.8814559384291543,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.0033448192064784443,
+          "initial_usdt": 1030.7581878806357,
+          "ending_usdt": 1034.2058876646938,
+          "cagr_365day": 0.005029191798121335,
+          "hourly_mark_drawdown": 0.0008135085822623678,
+          "daily_nav_sharpe": 3.3551737422803436,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "positive_all_periods": true,
+      "numeric_gate": true,
+      "beats_best_same_contract1000": false,
+      "no_worse_dd_than_best": true,
+      "frozen_financial_gate": false,
+      "best_same_contract1000": "nfi_futures_1000_conservative",
+      "source_overlap": false
+    },
+    {
+      "name": "spot_futures_1000_conservative",
+      "scenario": "conservative",
+      "actual500plus500": true,
+      "sleeves": [
+        "nfi_spot_500_conservative",
+        "nfi_futures_500_conservative"
+      ],
+      "scaled_curves": false,
+      "transfers": false,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.03976894837000011,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1039.76894837,
+          "cagr_365day": 0.02368979594250087,
+          "hourly_mark_drawdown": 0.021404076126807392,
+          "daily_nav_sharpe": 1.1694911732310718,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.03858915595000001,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1038.58915595,
+          "cagr_365day": 0.03858915595000001,
+          "hourly_mark_drawdown": 0.021404076126807392,
+          "daily_nav_sharpe": 1.4667584683529251,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.001135956805673466,
+          "initial_usdt": 1038.58915595,
+          "ending_usdt": 1039.76894837,
+          "cagr_365day": 0.001707051987596575,
+          "hourly_mark_drawdown": 0.0004936081040456397,
+          "daily_nav_sharpe": 1.228114189646024,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "positive_all_periods": true,
+      "numeric_gate": true,
+      "beats_best_same_contract1000": false,
+      "no_worse_dd_than_best": false,
+      "frozen_financial_gate": false,
+      "best_same_contract1000": "nfi_futures_1000_conservative",
+      "source_overlap": true
+    },
+    {
+      "name": "spot_carry_1000_lower",
+      "scenario": "lower",
+      "actual500plus500": true,
+      "sleeves": [
+        "nfi_spot_500_lower",
+        "carry_500_lower"
+      ],
+      "scaled_curves": false,
+      "transfers": false,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.030503422964693883,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1030.503422964694,
+          "cagr_365day": 0.01820328227985768,
+          "hourly_mark_drawdown": 0.01057404512351201,
+          "daily_nav_sharpe": 1.9106568509324575,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.02827279530580218,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1028.2727953058022,
+          "cagr_365day": 0.02827279530580218,
+          "hourly_mark_drawdown": 0.01057404512351201,
+          "daily_nav_sharpe": 2.294036119306134,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.0021692956082033366,
+          "initial_usdt": 1028.2727953058022,
+          "ending_usdt": 1030.503422964694,
+          "cagr_365day": 0.003260740751541924,
+          "hourly_mark_drawdown": 0.0008076299951541577,
+          "daily_nav_sharpe": 6.513682014671537,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "positive_all_periods": true,
+      "numeric_gate": true,
+      "beats_best_same_contract1000": false,
+      "no_worse_dd_than_best": true,
+      "frozen_financial_gate": false,
+      "best_same_contract1000": "nfi_futures_1000_lower",
+      "source_overlap": false
+    },
+    {
+      "name": "futures_carry_1000_lower",
+      "scenario": "lower",
+      "actual500plus500": true,
+      "sleeves": [
+        "nfi_futures_500_lower",
+        "carry_500_lower"
+      ],
+      "scaled_curves": false,
+      "transfers": false,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.03340716629469398,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1033.407166294694,
+          "cagr_365day": 0.01992482599967005,
+          "hourly_mark_drawdown": 0.00887626136095665,
+          "daily_nav_sharpe": 1.6409753120866384,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.029909336015802257,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1029.9093360158022,
+          "cagr_365day": 0.029909336015802257,
+          "hourly_mark_drawdown": 0.00887626136095665,
+          "daily_nav_sharpe": 1.908204862883605,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.003396250676222845,
+          "initial_usdt": 1029.9093360158022,
+          "ending_usdt": 1033.407166294694,
+          "cagr_365day": 0.00510658878523973,
+          "hourly_mark_drawdown": 0.0007578092628186539,
+          "daily_nav_sharpe": 3.23663446695782,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "positive_all_periods": true,
+      "numeric_gate": true,
+      "beats_best_same_contract1000": false,
+      "no_worse_dd_than_best": true,
+      "frozen_financial_gate": false,
+      "best_same_contract1000": "nfi_futures_1000_lower",
+      "source_overlap": false
+    },
+    {
+      "name": "spot_futures_1000_lower",
+      "scenario": "lower",
+      "actual500plus500": true,
+      "sleeves": [
+        "nfi_spot_500_lower",
+        "nfi_futures_500_lower"
+      ],
+      "scaled_curves": false,
+      "transfers": false,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": 0.039212579169999984,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1039.21257917,
+          "cagr_365day": 0.02336089879813663,
+          "hourly_mark_drawdown": 0.015531142917310392,
+          "daily_nav_sharpe": 1.1789593328578687,
+          "complete_24h_returns": 607,
+          "calendar_hours": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": 0.037945376549999965,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 1037.94537655,
+          "cagr_365day": 0.037945376549999965,
+          "hourly_mark_drawdown": 0.015531142917310392,
+          "daily_nav_sharpe": 1.4749701678794302,
+          "complete_24h_returns": 365,
+          "calendar_hours": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.0012208760197112145,
+          "initial_usdt": 1037.94537655,
+          "ending_usdt": 1039.21257917,
+          "cagr_365day": 0.0018347029090288736,
+          "hourly_mark_drawdown": 0.00040855992061794577,
+          "daily_nav_sharpe": 1.2281141896460253,
+          "complete_24h_returns": 242,
+          "calendar_hours": 5832
+        }
+      ],
+      "positive_all_periods": true,
+      "numeric_gate": true,
+      "beats_best_same_contract1000": false,
+      "no_worse_dd_than_best": true,
+      "frozen_financial_gate": false,
+      "best_same_contract1000": "nfi_futures_1000_lower",
+      "source_overlap": true
+    }
+  ],
+  "standalone_gates": [
+    {
+      "account": "nfi_spot_1000_conservative",
+      "positive_all_periods": false,
+      "beats_carry_and_hold": true,
+      "drawdown_le30": true,
+      "sharpe_gt_half": true,
+      "frozen_financial_gate": false
+    },
+    {
+      "account": "nfi_futures_1000_conservative",
+      "positive_all_periods": true,
+      "beats_carry_and_hold": true,
+      "drawdown_le30": true,
+      "sharpe_gt_half": true,
+      "frozen_financial_gate": true
+    },
+    {
+      "account": "nfi_spot_1000_lower",
+      "positive_all_periods": false,
+      "beats_carry_and_hold": true,
+      "drawdown_le30": true,
+      "sharpe_gt_half": true,
+      "frozen_financial_gate": false
+    },
+    {
+      "account": "nfi_futures_1000_lower",
+      "positive_all_periods": true,
+      "beats_carry_and_hold": true,
+      "drawdown_le30": true,
+      "sharpe_gt_half": true,
+      "frozen_financial_gate": true
+    },
+    {
+      "account": "nfi_spot_500_conservative",
+      "positive_all_periods": false,
+      "beats_carry_and_hold": true,
+      "drawdown_le30": true,
+      "sharpe_gt_half": true,
+      "frozen_financial_gate": false
+    },
+    {
+      "account": "nfi_futures_500_conservative",
+      "positive_all_periods": true,
+      "beats_carry_and_hold": true,
+      "drawdown_le30": true,
+      "sharpe_gt_half": true,
+      "frozen_financial_gate": true
+    },
+    {
+      "account": "nfi_spot_500_lower",
+      "positive_all_periods": false,
+      "beats_carry_and_hold": true,
+      "drawdown_le30": true,
+      "sharpe_gt_half": true,
+      "frozen_financial_gate": false
+    },
+    {
+      "account": "nfi_futures_500_lower",
+      "positive_all_periods": true,
+      "beats_carry_and_hold": true,
+      "drawdown_le30": true,
+      "sharpe_gt_half": true,
+      "frozen_financial_gate": true
+    }
+  ],
+  "independent_cash_oracle": {
+    "path": "/Users/chrise/GitHub/TradingAgents/research_tools/nfi_reproduction/audit_original.py",
+    "sha256": "30fed01717f5bc2c96fb036fbf8a8817e6fe713dd5afa05058dcaf1746823512"
+  },
+  "new_accepted_independent_alphas": 0,
+  "independent_oos": false,
+  "source_author_account_reproduced": false,
+  "higher_comparable_return_goal_achieved": false,
+  "orders_enabled": false,
+  "services_changed": false
+}

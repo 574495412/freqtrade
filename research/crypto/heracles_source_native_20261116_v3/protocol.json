@@ -1,0 +1,73 @@
+{
+  "frozen_at": "2026-11-16T13:51:59.341519+00:00",
+  "objective": "Find higher comparable complete-account crypto returns via existing native Freqtrade;source strategy adoption,not new predictive factor",
+  "source": {
+    "repo": "freqtrade/freqtrade-strategies",
+    "commit": "f3340ce11f5bdf62f598522e64d1f5638eaa13f5",
+    "file": "user_data/strategies/Heracles.py",
+    "source_unchanged": true,
+    "ta_version": "0.11.0",
+    "author_ta_version_unknown": true,
+    "known_pasted_claim": "25 trades /48.88sum percent;not a complete author account or adopted return"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "pool": [
+    "BTC/USDT",
+    "ETH/USDT"
+  ],
+  "initial_capital": [
+    1000,
+    500
+  ],
+  "mode": "spot",
+  "leverage": 1,
+  "slots": 2,
+  "stake": "unlimited/native available cash split",
+  "tradable_balance_ratio": 0.99,
+  "account_window": [
+    "2025-01-01T00:00:00Z",
+    "2026-08-31T23:00:00Z"
+  ],
+  "native_start": "2024-12-31T20:00:00Z",
+  "execution": {
+    "main_timeframe": "4h,source original",
+    "detail_timeframe": "5m,native matching",
+    "marks": "hourly open,before same-clock fills",
+    "source_signal_delay": "native next4h open after completed source4h candle",
+    "startup_candles": 100,
+    "why_startup": "At least35source4hbars needed from20rolling+15shift;100fixed warmup,not signal parameter change",
+    "terminal": "Common23UTC marked inventory with remaining exit fee;native4h terminal force sale separately retained",
+    "source_age_filter": "Both fixed assets require original price observation at least100days before account start;current AgeFilter not historicallisting certificate"
+  },
+  "cost_bps_per_side": {
+    "conservative": 20,
+    "lower": 13
+  },
+  "cost_definition": "10bps commission +10/3bps slippage budget through native quote fee proxy;not orderbook fills",
+  "source_risk": "Keep buy_params15/9/.16/.75,ROI0:.598/644:.166/3269:.115/7289:0 andstop-.256;no hyperopt or trailing/risk tuning",
+  "planned_new_native_wallets": 4,
+  "frozen_portfolios": [
+    "Actual500Heracles+500NFIspot per cost",
+    "Actual500Heracles+500pairedcarry per cost"
+  ],
+  "portfolio_count": 4,
+  "wallet_contract": "No scaling1000curves,transfers,shared collateral or post-result rebalance;carry component retains its existing spot/futures fee and collateral contract",
+  "numeric_gates": {
+    "new_strategy": "Both costs fullnet>same-contractNFIspot1000;both continuous annual slices>0;hourlyDD<=.25;dailyNAVSharpe>.5;>=30naturally closed campaigns beforecommonendpoint",
+    "portfolio": "Higher fullnet than both fixed matched1000sleeve references and hourlyDD<=maxreferenceDD;all costs;cross-market carry mix separately labeled"
+  },
+  "comparison_limits": "Previously observed source window and NFI/carry controls;no independent OOS;BTCETH2pool differs from author unspecified universe;no source headline profit parity",
+  "resource_contract": {
+    "one_native_financial_worker": true,
+    "rss_guard_bytes": 2147483648,
+    "wall_guard_seconds": 1800,
+    "min_free_disk_before_worker_bytes": 536870912,
+    "reason": "Current1.2GiBfree;small 2asset4h datasets,1worker;resource-only threshold,new protocol,old seals unchanged"
+  },
+  "new_registry_definitions": 0,
+  "new_factor_analysis": 0,
+  "new_vibe_bench": 0,
+  "real_orders_enabled": false,
+  "production_eligible": false,
+  "no_sign_threshold_lookback_roi_stop_pool_cost_window_or_weight_rescue": true
+}

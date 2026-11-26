@@ -1,0 +1,834 @@
+{
+  "passed_execution": true,
+  "native_algorithm_calls": 40,
+  "resolved_startup_candles": 800,
+  "native_log_hashes": {
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x4-compact-1x-cost8.log": "3c8a673118ba6738c74d844b7fa2d967a9c7359408b06cfd6c391195b1f27ab6",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x8-1x-cost8.log": "69289ace7d45499fda5e635676e8b801b4caebb7195883096164b374181fa578",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15.log": "82c38bad5c40e4170a9c80dd5b2fffec75988d5968b3ab3bb9776587e9152d63",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x4-compact-1x-cost15.log": "f5949a59a6ec4f67e66da6df0083c46c8884340d9f10f7e155e2d27c9950bcdb",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_x7_20261105_v001/nfi-x7-1x-cost8.log": "a9dfc13494855e8f433e77b7539f89059db2d9dad7c105772dd407d88b593215",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_x7_20261105_v001/nfi-x7-1x-cost15.log": "f195c6ea9febda945d1d7ce114209b281ab6a685d3c81bf571581a1489c7d981"
+  },
+  "pairs": [
+    {
+      "pair": "BTC/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 4,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "ETH/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 55,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "SOL/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 22625,
+      "first_difference": "2025-01-01T00:05:00+00:00",
+      "recorded_native_orders_checked": 59,
+      "recorded_orders_at_different_precision": 4
+    },
+    {
+      "pair": "AVAX/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 80,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "TRB/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 68,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "DOGE/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 88,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "XRP/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 100,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "ADA/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 118,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "BNB/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 28,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "LINK/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 107,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "DOT/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 8905,
+      "first_difference": "2026-07-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 80,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "FIL/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 7926,
+      "first_difference": "2026-07-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 126,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "NEAR/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 62,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "ATOM/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 36,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "DYDX/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 7282,
+      "first_difference": "2026-04-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 84,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "LTC/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 64,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "BCH/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 47,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "ETC/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 50,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "GALA/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 8749,
+      "first_difference": "2026-04-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 205,
+      "recorded_orders_at_different_precision": 11
+    },
+    {
+      "pair": "SAND/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 101,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "UNI/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 56,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "IOTA/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 3251,
+      "first_difference": "2026-06-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 88,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "RUNE/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 1814,
+      "first_difference": "2025-11-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 70,
+      "recorded_orders_at_different_precision": 4
+    },
+    {
+      "pair": "AXS/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 1519,
+      "first_difference": "2026-08-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 22,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "AAVE/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 94,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "EGLD/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 24,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "ALGO/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 5850,
+      "first_difference": "2026-07-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 60,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "SNX/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 6128,
+      "first_difference": "2026-04-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 68,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "CRV/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 13860,
+      "first_difference": "2026-04-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 311,
+      "recorded_orders_at_different_precision": 25
+    },
+    {
+      "pair": "MASK/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 68,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "SUSHI/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 84,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "KSM/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 34,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "IOTX/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 2102,
+      "first_difference": "2026-06-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 36,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "MANA/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 2097,
+      "first_difference": "2026-07-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 34,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "NEO/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 159,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "GRT/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 38,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "TRX/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 12,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "CELO/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 7490,
+      "first_difference": "2026-03-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 6,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "SKL/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 3247,
+      "first_difference": "2026-06-01T00:00:00+00:00",
+      "recorded_native_orders_checked": 50,
+      "recorded_orders_at_different_precision": 0
+    },
+    {
+      "pair": "THETA/USDT:USDT",
+      "native_loaded_rows": 175904,
+      "target_bars_with_different_empirical_precision": 0,
+      "first_difference": null,
+      "recorded_native_orders_checked": 118,
+      "recorded_orders_at_different_precision": 0
+    }
+  ],
+  "target_bar_observations": 7003720,
+  "target_bars_with_full_vs_past_precision_difference": 102845,
+  "recorded_order_observations_checked": 2994,
+  "recorded_orders_at_different_precision": 44,
+  "recorded_fills_off_strict_past_grid": 0,
+  "findings": [
+    {
+      "account": "nfi-x8-1x-cost8",
+      "trade_index": 182,
+      "archive_order_index": 0,
+      "at": "2025-11-04T16:50:00+00:00",
+      "filled_price": 158.55,
+      "full_month_tick": 0.001,
+      "strict_past_observed_tick": 0.01,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x8-1x-cost8",
+      "trade_index": 182,
+      "archive_order_index": 1,
+      "at": "2025-11-04T22:10:00+00:00",
+      "filled_price": 152.88,
+      "full_month_tick": 0.001,
+      "strict_past_observed_tick": 0.01,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x8-1x-cost15",
+      "trade_index": 178,
+      "archive_order_index": 0,
+      "at": "2025-11-04T16:50:00+00:00",
+      "filled_price": 158.55,
+      "full_month_tick": 0.001,
+      "strict_past_observed_tick": 0.01,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x8-1x-cost15",
+      "trade_index": 178,
+      "archive_order_index": 1,
+      "at": "2025-11-04T19:05:00+00:00",
+      "filled_price": 156.67,
+      "full_month_tick": 0.001,
+      "strict_past_observed_tick": 0.01,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost8",
+      "trade_index": 185,
+      "archive_order_index": 5,
+      "at": "2026-04-01T06:10:00+00:00",
+      "filled_price": 0.00301,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 1e-05,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost8",
+      "trade_index": 185,
+      "archive_order_index": 6,
+      "at": "2026-04-17T12:05:00+00:00",
+      "filled_price": 0.00336,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 1e-05,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost8",
+      "trade_index": 185,
+      "archive_order_index": 7,
+      "at": "2026-04-17T13:25:00+00:00",
+      "filled_price": 0.00343,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 1e-05,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost8",
+      "trade_index": 185,
+      "archive_order_index": 8,
+      "at": "2026-04-20T20:00:00+00:00",
+      "filled_price": 0.00327,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 1e-05,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost8",
+      "trade_index": 185,
+      "archive_order_index": 9,
+      "at": "2026-04-22T01:10:00+00:00",
+      "filled_price": 0.00322,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 1e-05,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost8",
+      "trade_index": 185,
+      "archive_order_index": 10,
+      "at": "2026-04-22T05:20:00+00:00",
+      "filled_price": 0.00329,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 1e-05,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost8",
+      "trade_index": 185,
+      "archive_order_index": 11,
+      "at": "2026-04-22T18:15:00+00:00",
+      "filled_price": 0.00334,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 1e-05,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost8",
+      "trade_index": 185,
+      "archive_order_index": 12,
+      "at": "2026-04-24T12:00:00+00:00",
+      "filled_price": 0.00328,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 1e-05,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost8",
+      "trade_index": 185,
+      "archive_order_index": 13,
+      "at": "2026-04-24T16:30:00+00:00",
+      "filled_price": 0.00335,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 1e-05,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost8",
+      "trade_index": 185,
+      "archive_order_index": 14,
+      "at": "2026-04-26T00:00:00+00:00",
+      "filled_price": 0.00348,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 1e-05,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost8",
+      "trade_index": 185,
+      "archive_order_index": 15,
+      "at": "2026-04-29T04:45:00+00:00",
+      "filled_price": 0.00336,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 1e-05,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x8-1x-cost8",
+      "trade_index": 176,
+      "archive_order_index": 0,
+      "at": "2025-11-03T20:10:00+00:00",
+      "filled_price": 0.783,
+      "full_month_tick": 0.0001,
+      "strict_past_observed_tick": 0.001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x8-1x-cost8",
+      "trade_index": 176,
+      "archive_order_index": 1,
+      "at": "2025-11-04T06:20:00+00:00",
+      "filled_price": 0.778,
+      "full_month_tick": 0.0001,
+      "strict_past_observed_tick": 0.001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x8-1x-cost15",
+      "trade_index": 172,
+      "archive_order_index": 0,
+      "at": "2025-11-03T20:10:00+00:00",
+      "filled_price": 0.783,
+      "full_month_tick": 0.0001,
+      "strict_past_observed_tick": 0.001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x8-1x-cost15",
+      "trade_index": 172,
+      "archive_order_index": 1,
+      "at": "2025-11-04T06:20:00+00:00",
+      "filled_price": 0.778,
+      "full_month_tick": 0.0001,
+      "strict_past_observed_tick": 0.001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 80,
+      "at": "2026-04-20T16:00:00+00:00",
+      "filled_price": 0.228,
+      "full_month_tick": 0.0001,
+      "strict_past_observed_tick": 0.001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 81,
+      "at": "2026-04-20T18:05:00+00:00",
+      "filled_price": 0.233,
+      "full_month_tick": 0.0001,
+      "strict_past_observed_tick": 0.001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 82,
+      "at": "2026-04-22T02:15:00+00:00",
+      "filled_price": 0.232,
+      "full_month_tick": 0.0001,
+      "strict_past_observed_tick": 0.001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 83,
+      "at": "2026-04-22T05:30:00+00:00",
+      "filled_price": 0.237,
+      "full_month_tick": 0.0001,
+      "strict_past_observed_tick": 0.001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 84,
+      "at": "2026-04-26T16:00:00+00:00",
+      "filled_price": 0.228,
+      "full_month_tick": 0.0001,
+      "strict_past_observed_tick": 0.001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 85,
+      "at": "2026-04-27T01:05:00+00:00",
+      "filled_price": 0.233,
+      "full_month_tick": 0.0001,
+      "strict_past_observed_tick": 0.001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 86,
+      "at": "2026-04-28T03:45:00+00:00",
+      "filled_price": 0.23,
+      "full_month_tick": 0.0001,
+      "strict_past_observed_tick": 0.001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 87,
+      "at": "2026-04-29T06:30:00+00:00",
+      "filled_price": 0.233,
+      "full_month_tick": 0.0001,
+      "strict_past_observed_tick": 0.001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 92,
+      "at": "2026-05-01T14:50:00+00:00",
+      "filled_price": 0.2372,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 93,
+      "at": "2026-05-02T21:30:00+00:00",
+      "filled_price": 0.2379,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 94,
+      "at": "2026-05-03T21:35:00+00:00",
+      "filled_price": 0.2353,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 95,
+      "at": "2026-05-04T04:50:00+00:00",
+      "filled_price": 0.241,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 96,
+      "at": "2026-05-04T05:35:00+00:00",
+      "filled_price": 0.242,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 97,
+      "at": "2026-05-04T06:00:00+00:00",
+      "filled_price": 0.243,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 98,
+      "at": "2026-05-05T07:00:00+00:00",
+      "filled_price": 0.2395,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 99,
+      "at": "2026-05-06T04:10:00+00:00",
+      "filled_price": 0.246,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 100,
+      "at": "2026-05-07T09:00:00+00:00",
+      "filled_price": 0.2465,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 101,
+      "at": "2026-05-08T15:55:00+00:00",
+      "filled_price": 0.253,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 102,
+      "at": "2026-05-09T20:00:00+00:00",
+      "filled_price": 0.2523,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 106,
+      "at": "2026-06-04T02:05:00+00:00",
+      "filled_price": 0.1878,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 107,
+      "at": "2026-06-04T02:15:00+00:00",
+      "filled_price": 0.193,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 108,
+      "at": "2026-06-07T01:05:00+00:00",
+      "filled_price": 0.1872,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 109,
+      "at": "2026-06-07T06:40:00+00:00",
+      "filled_price": 0.191,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 110,
+      "at": "2026-06-11T03:05:00+00:00",
+      "filled_price": 0.23,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    },
+    {
+      "account": "nfi-x7-1x-cost15",
+      "trade_index": 197,
+      "archive_order_index": 111,
+      "at": "2026-06-11T03:35:00+00:00",
+      "filled_price": 0.236,
+      "full_month_tick": 1e-06,
+      "strict_past_observed_tick": 0.0001,
+      "recorded_fill_off_past_grid": false,
+      "not_a_counterfactual_replay": true
+    }
+  ],
+  "exchange_historical_tick_certified": false,
+  "causal_full_month_precision_proven": false,
+  "primary_financial_runs": 0,
+  "corrected_account_returns": null,
+  "scope": "Original native monthly heuristic versus known completed OHLC; not actual exchange rules",
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

@@ -1,0 +1,29 @@
+{
+  "scope": "new positioning-input mechanism; source gross event study transferred to explicit local native funded contract, not source portfolio replication",
+  "source_url": "https://tradewize.io/blog/how-to-read-the-long-short-ratio",
+  "source_method": "last five-minute UTC daily snapshot; own trailing365day rank; bottom10%; following30day price outcome; BTC/ETH/SOL; in-sample gross event study, no strategy account",
+  "universe": ["BTC/USDT:USDT", "ETH/USDT:USDT", "SOL/USDT:USDT"],
+  "window": ["2025-01-01T00:00:00Z", "2026-08-31T23:00:00Z"],
+  "raw_input_window": ["2024-01-01", "2026-08-31"],
+  "daily_snapshot": "exact23:55UTC; if absent/invalid keepUNKNOWN, never last available earlier snapshot",
+  "availability": "create_time plus5minutes proxy; final previous day snapshot available D00, native1h entry next D01; not certified historical transmission",
+  "rank_local_contract": "midrank (past365 strict-less +0.5past365equal)/365, exclude current from reference; exactly365 previous calendar observations; source does not disclose ties/current-inclusion; local extension frozen before results",
+  "entry_condition": "rank<=0.10, no shorts; top tail not reversed into shorts",
+  "holding_local_contract": "each valid low observation creates a30calendar-day opportunity beginning next day; each coin weight1/3 while ANY opportunity active; overlap does not pyramid; daily actual quantity rebalancing; cash in inactive sleeves; no pre-account opportunities inherited",
+  "unknown_policy": "no new opportunity on UNKNOWN rank, existing known opportunities expire normally; ratios/ranks remain UNKNOWN, not observed zero; record all unknowns and refuse claim of complete factor-input coverage",
+  "views": {
+    "LowCrowdMonth": "count_long_short_ratio",
+    "LowPositionMonth": "sum_toptrader_long_short_ratio",
+    "ConstantPositioningControl": "allthree1/3targets; matched native execution and risk, not frictionless B&H"
+  },
+  "native_margin": "3xcross for all; desired gross<=.99NAV, unfilled minimum deltas remain tracking error; native-.99marginstop/liquidation unchanged",
+  "capital": [1000, 500],
+  "cost_bps_per_side": [15, 8],
+  "planned_native_accounts": 12,
+  "combination": {"name":"crowd_plus_position","actual_wallets":["LowCrowdMonth_500","LowPositionMonth_500"]},
+  "gates": "bothcosts fullandcontinuous2025/2026slices positive,DD<=30%,naturalcloses>=20full>=5eachslice;crowd1000beatposition1000andconstant1000;combo beatbestactual1000. No acceptance with missing input coverage or independentOOSmissing",
+  "source_financial_engine": "none available or executed; no external account simulator",
+  "factor_registry": "single-market time-state strategy; not new cross-sectional factor claim",
+  "no_outcome_rescue": "no direction, window, costs, threshold, pool, holding or weights changes after outcomes",
+  "orders_deployment_services": false
+}

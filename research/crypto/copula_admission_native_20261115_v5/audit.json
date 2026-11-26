@@ -1,0 +1,75 @@
+{
+  "passed": true,
+  "scenarios": [
+    {
+      "case": "normal1000",
+      "native_exit": 0,
+      "complete_native_start": true,
+      "actual_trade_records_exact": true,
+      "hourly_nav_all_fields_exact": true,
+      "hourly_points": 50,
+      "filled_orders": 20,
+      "completed_phase_checks": 599,
+      "source20_funded_accounts": 0
+    },
+    {
+      "case": "normal500",
+      "native_exit": 0,
+      "complete_native_start": true,
+      "actual_trade_records_exact": true,
+      "hourly_nav_all_fields_exact": true,
+      "hourly_points": 50,
+      "filled_orders": 20,
+      "completed_phase_checks": 599,
+      "source20_funded_accounts": 0
+    },
+    {
+      "case": "under_minimum",
+      "native_exit": 0,
+      "complete_native_start": true,
+      "actual_trade_records_exact": true,
+      "hourly_nav_all_fields_exact": true,
+      "hourly_points": 50,
+      "filled_orders": 0,
+      "completed_phase_checks": 599,
+      "source20_funded_accounts": 0
+    },
+    {
+      "case": "one_leg_rejected",
+      "native_exit": 42,
+      "aborted_before_export": true,
+      "stage": "paired_phase",
+      "at": "2025-01-02 00:05:00+00:00",
+      "actual_filled_orders_before_abort": 1,
+      "financial_performance": null
+    },
+    {
+      "case": "missing_funding_exposed",
+      "native_exit": 42,
+      "aborted_before_export": true,
+      "stage": "missing_funding_while_held",
+      "at": "2025-01-03 11:00:00+00:00",
+      "actual_filled_orders_before_abort": 18,
+      "financial_performance": null
+    },
+    {
+      "case": "missing_funding_flat",
+      "native_exit": 0,
+      "complete_native_start": true,
+      "actual_trade_records_exact": true,
+      "hourly_nav_all_fields_exact": true,
+      "hourly_points": 50,
+      "filled_orders": 20,
+      "completed_phase_checks": 599,
+      "source20_funded_accounts": 0
+    }
+  ],
+  "actual_native_attempts": 6,
+  "complete_synthetic_accounts": 4,
+  "correctly_aborted_accounts": 2,
+  "accepted_fixture_orders": 60,
+  "accepted_fixture_hourly_points": 200,
+  "native_main_phases_preserved": 2396,
+  "source20_funded_accounts": 0,
+  "source_strategy_financial_performance": null
+}

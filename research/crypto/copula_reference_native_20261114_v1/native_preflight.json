@@ -1,0 +1,642 @@
+{
+  "passed_within_scope": true,
+  "native_strategy_resolver": true,
+  "native_dataprovider": true,
+  "unmodified_upstream_files": 595,
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "input_rows": 295497,
+  "input_records": [
+    {
+      "symbol": "BTC",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "ETH",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "BCH",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "XRP",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "EOS",
+      "rows": 4113,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2025-05-21 08:00:00+00:00"
+    },
+    {
+      "symbol": "LTC",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "TRX",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "ETC",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "LINK",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "XLM",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "ADA",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "XMR",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "DASH",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "ZEC",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "XTZ",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "ATOM",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "BNB",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "ONT",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "IOTA",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "symbol": "BAT",
+      "rows": 15336,
+      "first": "2024-12-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    }
+  ],
+  "source_columns": 20,
+  "formation_checks": [
+    {
+      "source_members": [
+        "BTC",
+        "ETH",
+        "BCH",
+        "XRP",
+        "EOS",
+        "LTC",
+        "TRX",
+        "ETC",
+        "LINK",
+        "XLM",
+        "ADA",
+        "XMR",
+        "DASH",
+        "ZEC",
+        "XTZ",
+        "ATOM",
+        "BNB",
+        "ONT",
+        "IOTA",
+        "BAT"
+      ],
+      "active_members": [
+        "BTC",
+        "ETH",
+        "BCH",
+        "XRP",
+        "EOS",
+        "LTC",
+        "TRX",
+        "ETC",
+        "LINK",
+        "XLM",
+        "ADA",
+        "XMR",
+        "DASH",
+        "ZEC",
+        "XTZ",
+        "ATOM",
+        "BNB",
+        "ONT",
+        "IOTA",
+        "BAT"
+      ],
+      "inactive_members": [],
+      "asof": "2025-01-03 00:00:00+00:00",
+      "first_completed_bar": "2024-12-13 00:00:00+00:00",
+      "last_completed_bar": "2025-01-02 23:00:00+00:00",
+      "rows": 504,
+      "not_a_stationarity_or_financial_result": true,
+      "beta": {
+        "ETH": 27.592897235432265,
+        "BCH": 206.08975434654306,
+        "XRP": 42865.98864055885,
+        "EOS": 110371.01646806713,
+        "LTC": 907.2005207888743,
+        "TRX": 372224.2428651577,
+        "ETC": 3431.788650650197,
+        "LINK": 4000.253232814536,
+        "XLM": 254099.60323690998,
+        "ADA": 102919.04718822656,
+        "XMR": 491.4824081932801,
+        "DASH": 2361.2859718176765,
+        "ZEC": 1630.730502132821,
+        "XTZ": 71638.63400482807,
+        "ATOM": 13301.022909634788,
+        "BNB": 140.22081523802456,
+        "ONT": 397056.70535377815,
+        "IOTA": 294895.7638302602,
+        "BAT": 390157.7193031615
+      },
+      "future_perturbation_and_prefix_exact": true
+    },
+    {
+      "source_members": [
+        "BTC",
+        "ETH",
+        "BCH",
+        "XRP",
+        "EOS",
+        "LTC",
+        "TRX",
+        "ETC",
+        "LINK",
+        "XLM",
+        "ADA",
+        "XMR",
+        "DASH",
+        "ZEC",
+        "XTZ",
+        "ATOM",
+        "BNB",
+        "ONT",
+        "IOTA",
+        "BAT"
+      ],
+      "active_members": [
+        "BTC",
+        "ETH",
+        "BCH",
+        "XRP",
+        "LTC",
+        "TRX",
+        "ETC",
+        "LINK",
+        "XLM",
+        "ADA",
+        "XMR",
+        "DASH",
+        "ZEC",
+        "XTZ",
+        "ATOM",
+        "BNB",
+        "ONT",
+        "IOTA",
+        "BAT"
+      ],
+      "inactive_members": [
+        "EOS"
+      ],
+      "asof": "2025-06-06 00:00:00+00:00",
+      "first_completed_bar": "2025-05-16 00:00:00+00:00",
+      "last_completed_bar": "2025-06-05 23:00:00+00:00",
+      "rows": 504,
+      "not_a_stationarity_or_financial_result": true,
+      "beta": {
+        "ETH": 41.45154809044568,
+        "BCH": 260.28509327246576,
+        "XRP": 46295.101236461065,
+        "LTC": 1128.5442608877615,
+        "TRX": 392069.52126433497,
+        "ETC": 5859.784380021049,
+        "LINK": 6989.285722824541,
+        "XLM": 376922.65689289424,
+        "ADA": 144845.10577527413,
+        "XMR": 295.84156260374994,
+        "DASH": 4602.531509865327,
+        "ZEC": 2195.116458265139,
+        "XTZ": 174574.61292516478,
+        "ATOM": 22689.304800041285,
+        "BNB": 160.24656727015508,
+        "ONT": 736481.0359008445,
+        "IOTA": 513780.58700110775,
+        "BAT": 747800.0676360655
+      },
+      "future_perturbation_and_prefix_exact": true
+    },
+    {
+      "source_members": [
+        "BTC",
+        "ETH",
+        "BCH",
+        "XRP",
+        "EOS",
+        "LTC",
+        "TRX",
+        "ETC",
+        "LINK",
+        "XLM",
+        "ADA",
+        "XMR",
+        "DASH",
+        "ZEC",
+        "XTZ",
+        "ATOM",
+        "BNB",
+        "ONT",
+        "IOTA",
+        "BAT"
+      ],
+      "active_members": [
+        "BTC",
+        "ETH",
+        "BCH",
+        "XRP",
+        "LTC",
+        "TRX",
+        "ETC",
+        "LINK",
+        "XLM",
+        "ADA",
+        "XMR",
+        "DASH",
+        "ZEC",
+        "XTZ",
+        "ATOM",
+        "BNB",
+        "ONT",
+        "IOTA",
+        "BAT"
+      ],
+      "inactive_members": [
+        "EOS"
+      ],
+      "asof": "2026-08-28 00:00:00+00:00",
+      "first_completed_bar": "2026-08-07 00:00:00+00:00",
+      "last_completed_bar": "2026-08-27 23:00:00+00:00",
+      "rows": 504,
+      "not_a_stationarity_or_financial_result": true,
+      "beta": {
+        "ETH": 32.70591811624771,
+        "BCH": 298.42301202455184,
+        "XRP": 58276.57836621084,
+        "LTC": 1468.1629121452127,
+        "TRX": 206569.82165207315,
+        "ETC": 10115.13744085924,
+        "LINK": 6965.025085505019,
+        "XLM": 403130.2177566975,
+        "ADA": 351260.64611850685,
+        "XMR": 168.27734542983876,
+        "DASH": 2039.4723477947268,
+        "ZEC": 111.82385932837924,
+        "XTZ": 328906.78314992675,
+        "ATOM": 47047.000074940406,
+        "BNB": 108.58230042005584,
+        "ONT": 1600838.4637117006,
+        "IOTA": 1851838.7997258804,
+        "BAT": 1072519.262497077
+      },
+      "future_perturbation_and_prefix_exact": true
+    }
+  ],
+  "scalar_formation_residual_cells": 27720,
+  "maximum_OLS_coefficient_difference": 1.1641532182693481e-09,
+  "copula_kernel_checks": [
+    {
+      "family": "gaussian",
+      "rotation": 0,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 9.237355325097951e-11,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "student",
+      "rotation": 0,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 1.607433075534459e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "clayton",
+      "rotation": 0,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 2.574168100899499e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "clayton",
+      "rotation": 90,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 2.945094723649788e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "clayton",
+      "rotation": 180,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 5.752902598743503e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "clayton",
+      "rotation": 270,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 4.4852016545249285e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "gumbel",
+      "rotation": 0,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 4.0933001432819083e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "gumbel",
+      "rotation": 90,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 3.336794729413839e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "gumbel",
+      "rotation": 180,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 1.8417461999931106e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "gumbel",
+      "rotation": 270,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 2.2361940077431086e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "frank",
+      "rotation": 0,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 4.418010401963102e-11,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "joe",
+      "rotation": 0,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 5.436182615170537e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "joe",
+      "rotation": 90,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 4.266314523881931e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "joe",
+      "rotation": 180,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 2.492874240367371e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "joe",
+      "rotation": 270,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 2.8038033006438923e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb1",
+      "rotation": 0,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 3.0973745790419116e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb1",
+      "rotation": 90,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 2.5101143386052627e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb1",
+      "rotation": 180,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 5.82475290222817e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb1",
+      "rotation": 270,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 3.8595404650010323e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb6",
+      "rotation": 0,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 5.568675520706279e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb6",
+      "rotation": 90,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 4.008653964326925e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb6",
+      "rotation": 180,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 2.444919267041712e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb6",
+      "rotation": 270,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 2.526316933426642e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb7",
+      "rotation": 0,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 2.9090108100149337e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb7",
+      "rotation": 90,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 2.8853130995543097e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb7",
+      "rotation": 180,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 5.660391044770563e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb7",
+      "rotation": 270,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 4.4376591290529177e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb8",
+      "rotation": 0,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 7.217615394239374e-11,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb8",
+      "rotation": 90,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 4.915234885771724e-11,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb8",
+      "rotation": 180,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 5.617595277840337e-11,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "bb8",
+      "rotation": 270,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 4.415906529331437e-11,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "tawn_alpha",
+      "rotation": 0,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 6.30147267699499e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "tawn_alpha",
+      "rotation": 90,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 2.598316006796608e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "tawn_alpha",
+      "rotation": 180,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 1.663340298829752e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "tawn_alpha",
+      "rotation": 270,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 4.2277920053734874e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "tawn_beta",
+      "rotation": 0,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 3.9811232088737825e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "tawn_beta",
+      "rotation": 90,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 6.079878822617957e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "tawn_beta",
+      "rotation": 180,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 3.1038760450741165e-10,
+      "uniform_margins_passed": true
+    },
+    {
+      "family": "tawn_beta",
+      "rotation": 270,
+      "probability_cells": 32,
+      "max_cdf_derivative_error": 1.6451617845802957e-10,
+      "uniform_margins_passed": true
+    }
+  ],
+  "kernel_probabilities_checked": 1248,
+  "source_threshold_state_tests": 3,
+  "actual_native_financial_startup_rejected": true,
+  "paper_literal_rotation_boundary_error_demonstrated": 0.39999999999999997,
+  "library_version": "0.7.5",
+  "full_rolling_models_fitted": 0,
+  "source_exact_replication": false,
+  "native_funded_accounts": 0,
+  "factor_analysis_calls": 0,
+  "goal_achieved": false
+}

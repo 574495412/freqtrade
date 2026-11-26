@@ -1,0 +1,55 @@
+{
+  "scope": "Two UTC days on the unchanged, reconciled annual simulated wallet path",
+  "account": {
+    "path": "user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_15bp/account_reconciled.json",
+    "sha256": "1f9dc0b2a3fd1850cfe12f82a0648a4c05801ca829de21a6f1de283be96d5e32"
+  },
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_15bp/account/five_minute_equity.parquet",
+      "sha256": "20c229d0fe6bfd4042e184952e37cb2e4dc5185f91c4890c46a48febd9989979"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_original_15bp/account/native_results/backtest-result-2026-11-26_03-13-52.zip",
+      "sha256": "0094e3baa1597af02b5bd1a9ab86d8b4689a271d7340a50b8c8143e8b86d0212"
+    }
+  ],
+  "start": "2025-10-10T00:00:00+00:00",
+  "end": "2025-10-12T00:00:00+00:00",
+  "marks": 577,
+  "initial_marked_equity_usdt": 4583.531407069481,
+  "ending_marked_equity_usdt": 6023.14388545271,
+  "marked_gain_usdt": 1439.6124783832283,
+  "marked_return": 0.3140836945423391,
+  "share_of_annual_marked_pnl": 0.1469065216230291,
+  "trough": {
+    "clock": "2025-10-10T21:25:00+00:00",
+    "marked_equity_usdt": 4239.315157999999,
+    "drawdown_from_annual_peak": 0.08218691571029169
+  },
+  "peak_to_trough_within_window": 0.08004856472761968,
+  "natural_closes_during_window": {
+    "trades": 32,
+    "net_realized_pnl_usdt": 849.29834037,
+    "profit_usdt_lte_minus_25": 1,
+    "profit_usdt_gte_25": 14,
+    "profit_usdt_gte_50": 10
+  },
+  "entry_cohort_eventual_trade_outcomes": {
+    "trades": 32,
+    "net_realized_pnl_usdt": 1780.35614433,
+    "profit_usdt_lte_minus_25": 0,
+    "profit_usdt_gte_25": 14,
+    "profit_usdt_gte_50": 9
+  },
+  "pengu": {
+    "trade_open": "2025-07-29 07:25:00+00:00",
+    "trade_close": "2025-10-10 21:20:00+00:00",
+    "net_realized_pnl_usdt": -986.5653578600001,
+    "entry_fills": 90,
+    "exit_fills": 70,
+    "maximum_held_stake_usdt": 3992.92475467
+  },
+  "new_native_accounts": 0,
+  "orders_enabled": false
+}

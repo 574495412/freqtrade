@@ -1,0 +1,8 @@
+{
+  "stage": "Actual native trade/order fixture before financial registration",
+  "failed": 2,
+  "passed": 5,
+  "error": "Pending native order safe_amount_after_fee is based on filled=0, so full exits were incorrectly rejected as partial",
+  "correction": "Validate intended order.amount before fill; native post-fill behavior remains delegated",
+  "native_financial_accounts": 0
+}

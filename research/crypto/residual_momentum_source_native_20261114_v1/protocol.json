@@ -1,0 +1,68 @@
+{
+  "frozen_utc": "2026-11-14T12:33:27.046219+00:00",
+  "before_local_factor_or_account_outputs": true,
+  "source_commit": "2c5cfd216d63c0c0546ed7f26e538bb5b89b9edd",
+  "source_formula_owner": "04_out_of_sample.ipynb cells4,6,7,8; no source portfolio/cost engine execution",
+  "source_universe": [
+    "ADA",
+    "BNB",
+    "BTC",
+    "DOGE",
+    "ETH",
+    "LINK",
+    "LTC",
+    "XRP"
+  ],
+  "window": [
+    "2025-01-01T00:00:00Z",
+    "2026-08-31T23:00:00Z"
+  ],
+  "observation_clock": "Source input native futures simple hourly close returns; source ret_1h cleaning unavailable. Score for decisionD00 uses native hourly bar labelledD-1h, availableD00. Execution/label beginsD01. Fixed168h decision grid anchored2025Jan1, no yearly resets.",
+  "source_beta": {
+    "window": 720,
+    "min_obs": 684,
+    "intercept_removed": false,
+    "market": "same8 equalweighted simple returns including each own asset"
+  },
+  "source_formation": {
+    "hours": 336,
+    "min_obs": 319,
+    "direction": "positive continuation",
+    "normalization": null
+  },
+  "controls": [
+    "positive raw336-hour sum of simple returns with319minobs",
+    "negative720hour return standarddeviation with684minobs; familiar control not a new alpha"
+  ],
+  "factor_groups": 4,
+  "factor_horizon_hours": 168,
+  "phase": "nonoverlapping168hour labels, complete endpoint within commonwindow; no partial tail or internal fill",
+  "gate": {
+    "ic_mean_gt": 0.03,
+    "ir_gt": 0.5,
+    "positive_ratio_gt": 0.55,
+    "requires": "source factor all,2025,2026throughAug; maxmeanabsPearson<=.99 on inspectedpeers; scope disclosed"
+  },
+  "financial_followup_if_admitted": {
+    "engine": "pinned native Freqtrade; source financialengine notused",
+    "capital": [
+      1000,
+      500
+    ],
+    "cost_bps_per_side": [
+      15,
+      8
+    ],
+    "targetgross": 1,
+    "positions": "source2long2short each.25 beforeactual99%cash/fee/minqty constraints",
+    "rebalance": "fixed168h actualquantitytargets,no free notionalreset",
+    "maximum_drawdown_gate": 0.3,
+    "combos": "actual500source+500raw independentwallets only, no scaled1000paths; all slices positive and beats actual1000component atbothcosts",
+    "promotion": "no service/paper/live action"
+  },
+  "if_factor_rejected": "stop before new financial accounts; no sign/horizon/pool/cost/weight rescue",
+  "preserve": "all old NFI/residual-recovery and other failures; not an author OOS replication or globalindependence proof",
+  "accepted_new_alphas": 0,
+  "financial_accounts": 0,
+  "orders_deployment_services": false
+}

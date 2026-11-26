@@ -1,0 +1,7 @@
+{
+  "question": "At the five dates with the greatest paired daily NAV advantage, how broadly did observed 14-only entries depend on early prints at their original limits?",
+  "scope": "Use all originally reported naturally closing 14-only first fills originating on the five fixed UTC dates, separately for each fee. Include longs and shorts. The dates, trades and realized PnL were observed before this execution diagnostic.",
+  "frozen_windows": "Reuse delays 0, 1, 5 and 15 seconds and the native 3-minute entry timeout. Keep the original limit fixed. Count publicly matched opposing aggressive prints at prices at least as favorable as each limit. Reuse the official checksum-verified USD-M aggTrades. No quote queue, hypothetical fill or account revaluation.",
+  "report": "Count complete first fills and large-profit first fills with insufficient documented opposing print quantity at each latency. Separately report minimum or maximum publicly traded price and number of prints touching the fixed historical limit. Retain missing archive or unsupported prices explicitly.",
+  "orders_enabled": false
+}

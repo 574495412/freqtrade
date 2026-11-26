@@ -1,0 +1,43 @@
+{
+  "fixed_audit_sha256": "2a406c2ff694b01a8bbf043da6acdfbcad56d2fdfd996e805ccb2b8a0d93eec7",
+  "verified_utc": "2026-11-25T14:26:47.107003+00:00",
+  "scope": "Baseline preflight, before candidate result",
+  "proved_net_value": {
+    "passed": true,
+    "maximum_nav_error_usdt": 3.730292519321665e-08,
+    "maximum_campaign_cash_error_usdt": 9.6159433e-09,
+    "maximum_native_funding_error_usdt": 0.0,
+    "maximum_hourly_count_error": 0,
+    "maximum_hourly_gross_to_nav": 0.9897476917328034,
+    "missing_rate_exposure": [
+      {
+        "pair": "AXS/USDT:USDT",
+        "slot_ms": 1782273600000,
+        "campaigns": [],
+        "status": "NO_GROSS_EXPOSURE",
+        "rate_imputed": false
+      },
+      {
+        "pair": "TRB/USDT:USDT",
+        "slot_ms": 1782273600000,
+        "campaigns": [],
+        "status": "NO_GROSS_EXPOSURE",
+        "rate_imputed": false
+      }
+    ]
+  },
+  "proved_campaign_counts": {
+    "control_independent_campaigns": 282,
+    "candidate_independent_campaigns": 282,
+    "control_natural_closes": 281,
+    "candidate_natural_closes": 281,
+    "control_additional_entry_fills": 79,
+    "candidate_additional_entry_fills": 79,
+    "control_native_rejected_signal_counter": 91,
+    "candidate_native_rejected_signal_counter": 91,
+    "matched_by_pair_direction_first_fill": 282,
+    "only_control_at_exact_first_fill_key": 0,
+    "only_candidate_at_exact_first_fill_key": 0,
+    "candidate_only_tags": {}
+  }
+}

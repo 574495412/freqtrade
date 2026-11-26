@@ -1,0 +1,12 @@
+{
+  "hypothesis": "The existing cross-sectional market panic definition can identify long first fills whose observed loss outweighs the loss of profitable opportunities.",
+  "rule_source": "Vibe-Trading/agent/research/crypto_panic_rebound_20261126_v1",
+  "clock": "For original first fill f, t is the UTC hour at or before f. Reuse the Vibe shock event test with closes from t-4h to t-1h, completed one hour before t. This is an hourly application of the existing threshold.",
+  "membership": "Same active prior-day turnover pool as the native account, excluding BTC. Use only positive-volume endpoint bars. Fewer than 64 valid peers is unknown and is reported separately.",
+  "screen": "Identify natural long campaigns that opened during the event. Keep shorts, position additions and exit logic outside the screen. Use actual net campaign PnL and the original five-minute NAV before first fill. Summarize observed coverage and losses and winners of 1% or more of that NAV.",
+  "primary_window": "Both uninterrupted native accounts, 2025-01-01 through 2026-11-25 23:55 UTC, at 15 bp per side. Keep signal observations intersecting the originating study's exceptional interval of 2025-10-10 through 2025-10-11 separate.",
+  "stress_window": "Both 2024 annual 15 bp accounts, with the four documented first fills in the April 13 stress peak to trough explicitly located by their original timestamps. 2024 is a development diagnostic.",
+  "advance": "On the 14-slot account require at least one of the two GALA/MANTA stress first fills at slots 11/12 to be identified. In each primary year, identified natural longs must include a loss of at least 1% of pre-entry NAV, no win of at least 1%, and have negative total observed net PnL.",
+  "scope": "Attribution and admission screen on already reconciled native Freqtrade fills. Policy PnL, wallet path, and delayed replacement fills are not estimated here.",
+  "orders_enabled": false
+}

@@ -1,0 +1,309 @@
+{
+  "passed": true,
+  "verified_at": "2026-11-17T15:34:26.114297+00:00",
+  "protocol_sha256": "bd5490f0a80ea8d3c190948ac3b3ac4bce2ea9a34f9c676f691b1ad9393a959a",
+  "source": {
+    "shape": [
+      4000,
+      231
+    ],
+    "source_frame_pickle_sha256": "74ee21b7f8d726b3e2ac264b6cb8c57c471b4ad39361f6ada171a46f3be1d690",
+    "old_reference_pickle_sha256": "74ee21b7f8d726b3e2ac264b6cb8c57c471b4ad39361f6ada171a46f3be1d690",
+    "old_pickle_loaded": false,
+    "native_strategy_resolver": true,
+    "native_indicator_regeneration": true,
+    "backtesting_constructed": false,
+    "wallets_constructed": false,
+    "serialized_reference_matches_prior_preflight": true
+  },
+  "slice_cases": {
+    "native_source": {
+      "shape": [
+        4000,
+        231
+      ],
+      "random_native_1000_row_slices": 100,
+      "boundary_slices": 6,
+      "direct_lazy_slices": 5
+    },
+    "native_analyzed": {
+      "shape": [
+        4000,
+        237
+      ],
+      "random_native_1000_row_slices": 100,
+      "boundary_slices": 6,
+      "direct_lazy_slices": 5
+    },
+    "enriched": {
+      "shape": [
+        9003,
+        235
+      ],
+      "random_native_1000_row_slices": 100,
+      "boundary_slices": 12,
+      "direct_lazy_slices": 5
+    }
+  },
+  "unsupported_and_corruption_rejections": [
+    "scalar_iloc",
+    "stepped_iloc",
+    "copy_api",
+    "column_api",
+    "cached_block_mutation_flush",
+    "corruption_rejected_before_unpickle"
+  ],
+  "additional_index_classes": [
+    "DatetimeIndex UTC",
+    "MultiIndex",
+    "nondefault RangeIndex"
+  ],
+  "empty_no_index_missing_key_clear_native_semantics": true,
+  "lastrefresh_original_object_preserved": true,
+  "chunk_serialized_byte_roundtrip": true,
+  "logical_slices_exact_including_numeric_bits": true,
+  "whole_concat_dataframe_pickle_byte_identity_claimed": false,
+  "lru_stats": {
+    "block_loads": 35,
+    "cache_hits": 0,
+    "compressed_read_bytes": 19711,
+    "decompressed_read_bytes": 27930,
+    "written_bytes": 19153,
+    "maximum_cached_blocks": 32,
+    "evictions": 3
+  },
+  "block_receipts": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000001-fa2eeafd95730bf66fd3ae8d3dd2588f366f9923ab5aa20581533e8f0197fb5f-000000000.pkl.zstd",
+      "start": 0,
+      "rows": 4000,
+      "compressed_bytes": 1813982,
+      "raw_bytes": 6981032,
+      "compressed_sha256": "3e7c72b789b9d96292650a7a7b26bcd6d942f03a3de3414bbf1e81fa22a213c2",
+      "raw_sha256": "67ab8692d805587680b643349bd1dba785f6b8a97f2207ab9d0ba9bc6be5de57"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000002-fa2eeafd95730bf66fd3ae8d3dd2588f366f9923ab5aa20581533e8f0197fb5f-000000000.pkl.zstd",
+      "start": 0,
+      "rows": 4000,
+      "compressed_bytes": 1813982,
+      "raw_bytes": 6981032,
+      "compressed_sha256": "3e7c72b789b9d96292650a7a7b26bcd6d942f03a3de3414bbf1e81fa22a213c2",
+      "raw_sha256": "67ab8692d805587680b643349bd1dba785f6b8a97f2207ab9d0ba9bc6be5de57"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000003-fa2eeafd95730bf66fd3ae8d3dd2588f366f9923ab5aa20581533e8f0197fb5f-000000000.pkl.zstd",
+      "start": 0,
+      "rows": 4000,
+      "compressed_bytes": 1814253,
+      "raw_bytes": 7173631,
+      "compressed_sha256": "7d822b2b6bd94555ce1b5244022f9e2232bdbe9b541d313891677776688752f8",
+      "raw_sha256": "1fc0a94162077336ccacc57f64700cc222c17c8587ea0a2746746390345efa8e"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000004-fa2eeafd95730bf66fd3ae8d3dd2588f366f9923ab5aa20581533e8f0197fb5f-000000000.pkl.zstd",
+      "start": 0,
+      "rows": 4096,
+      "compressed_bytes": 1822626,
+      "raw_bytes": 7237523,
+      "compressed_sha256": "011e9a74a38f10001b1c9f60d8feebf3832776020158c38657a347b53dabcfc5",
+      "raw_sha256": "4a35528e9317099f75866fe64d208ece975aaaa30b0b5de1432bca6fc9375950"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000004-fa2eeafd95730bf66fd3ae8d3dd2588f366f9923ab5aa20581533e8f0197fb5f-000004096.pkl.zstd",
+      "start": 4096,
+      "rows": 4096,
+      "compressed_bytes": 1819650,
+      "raw_bytes": 7236912,
+      "compressed_sha256": "eb27321a8bab97eac66e4c5be5a722fab4fccee1c03c2f3e72c324ce86abac75",
+      "raw_sha256": "5d96be893b505b126ee60739e4718b73340bb0d2bdf241c9c43258d1efe00e8f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000004-fa2eeafd95730bf66fd3ae8d3dd2588f366f9923ab5aa20581533e8f0197fb5f-000008192.pkl.zstd",
+      "start": 8192,
+      "rows": 811,
+      "compressed_bytes": 382998,
+      "raw_bytes": 1439306,
+      "compressed_sha256": "2f3dbb150f4f86e320b349312108fb1ef8fab9d08bafad7d33a5b9fb37a98037",
+      "raw_sha256": "1ac32899936488b0245b83921071f9c5053ee89b7d293c7cb2e1220437021e9a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000005-de1eeb454237b11b27f6b0d5c5eecf5bdbe2b6cb8a174db98ea4c0837788bb5b-000000000.pkl.zstd",
+      "start": 0,
+      "rows": 4096,
+      "compressed_bytes": 41271,
+      "raw_bytes": 148384,
+      "compressed_sha256": "44c099d4ed83b4b98d48ca20a7e8efc5763fc4e37950714ecf71829399c45c92",
+      "raw_sha256": "fbe7a05bd85697bbe7893d0a2fab0f3e0b6a39849446e1136afbd6e5e47161ab"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000005-de1eeb454237b11b27f6b0d5c5eecf5bdbe2b6cb8a174db98ea4c0837788bb5b-000004096.pkl.zstd",
+      "start": 4096,
+      "rows": 4096,
+      "compressed_bytes": 46158,
+      "raw_bytes": 148383,
+      "compressed_sha256": "5f9b0304a11546376c887c67867763a111272c7d3bed3d30612bfe13358cf8bc",
+      "raw_sha256": "db74cb7e600f175a5f9f88c41f980bb48cb09868d3b73a145fe4d0bd44564320"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000005-de1eeb454237b11b27f6b0d5c5eecf5bdbe2b6cb8a174db98ea4c0837788bb5b-000008192.pkl.zstd",
+      "start": 8192,
+      "rows": 811,
+      "compressed_bytes": 9564,
+      "raw_bytes": 31193,
+      "compressed_sha256": "7466600925224c510066d69ece72a7b8278eb33e1b428bbda9dd4cd137881c45",
+      "raw_sha256": "edbce4ac51e898cbb3f6caeee2edc36697c1190d349c9d0e1a4c599269b3d01c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000006-9324cc4430178e6c820ee169022ed9c754ce2cc38282e8325d514861572f70f1-000000000.pkl.zstd",
+      "start": 0,
+      "rows": 4096,
+      "compressed_bytes": 34690,
+      "raw_bytes": 199876,
+      "compressed_sha256": "18ae28035bd9000e0161adeb4eb02ca1f6a5996f6278a1d1cae1a831fbc9d024",
+      "raw_sha256": "b3fca15fcae3ee32397120892daee0702b2e66b2d70d2b32688af5ee2280cca0"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000006-9324cc4430178e6c820ee169022ed9c754ce2cc38282e8325d514861572f70f1-000004096.pkl.zstd",
+      "start": 4096,
+      "rows": 4096,
+      "compressed_bytes": 39309,
+      "raw_bytes": 199875,
+      "compressed_sha256": "bc555243a5579033dfd5d5c9d7be799d343760d15b7446ef288804052eb86f51",
+      "raw_sha256": "bf85e50449c9e2efc1c2170172409fa7f238a892118882dee999c0f61f747d14"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000006-9324cc4430178e6c820ee169022ed9c754ce2cc38282e8325d514861572f70f1-000008192.pkl.zstd",
+      "start": 8192,
+      "rows": 811,
+      "compressed_bytes": 17857,
+      "raw_bytes": 99119,
+      "compressed_sha256": "88679bf246c8007e5249adf784feea08e75d6dea8f1595fd3a8445b6e5b515bc",
+      "raw_sha256": "d8ec68f17ad62690ff70946fc5b94bc69933ca589cb431814667290c1f51b7b4"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000008-592cee0270627839dfb21775a3b59adf7a1ba6ebed1df2be31d44baf0f8916d5-000000000.pkl.zstd",
+      "start": 0,
+      "rows": 1,
+      "compressed_bytes": 776,
+      "raw_bytes": 1180,
+      "compressed_sha256": "dddfbaf7a7cd10029a9c6c1f83b39be4d85662bb90a0cbb2df16515bb65ccadf",
+      "raw_sha256": "77dc624392097a5f3df51c7a071ff732431cb88b37b7d237db3c975f0ae89de6"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000009-fa2eeafd95730bf66fd3ae8d3dd2588f366f9923ab5aa20581533e8f0197fb5f-000000000.pkl.zstd",
+      "start": 0,
+      "rows": 4096,
+      "compressed_bytes": 1822626,
+      "raw_bytes": 7237523,
+      "compressed_sha256": "011e9a74a38f10001b1c9f60d8feebf3832776020158c38657a347b53dabcfc5",
+      "raw_sha256": "4a35528e9317099f75866fe64d208ece975aaaa30b0b5de1432bca6fc9375950"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000009-fa2eeafd95730bf66fd3ae8d3dd2588f366f9923ab5aa20581533e8f0197fb5f-000004096.pkl.zstd",
+      "start": 4096,
+      "rows": 4096,
+      "compressed_bytes": 1819650,
+      "raw_bytes": 7236912,
+      "compressed_sha256": "eb27321a8bab97eac66e4c5be5a722fab4fccee1c03c2f3e72c324ce86abac75",
+      "raw_sha256": "5d96be893b505b126ee60739e4718b73340bb0d2bdf241c9c43258d1efe00e8f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000009-fa2eeafd95730bf66fd3ae8d3dd2588f366f9923ab5aa20581533e8f0197fb5f-000008192.pkl.zstd",
+      "start": 8192,
+      "rows": 811,
+      "compressed_bytes": 382998,
+      "raw_bytes": 1439306,
+      "compressed_sha256": "2f3dbb150f4f86e320b349312108fb1ef8fab9d08bafad7d33a5b9fb37a98037",
+      "raw_sha256": "1ac32899936488b0245b83921071f9c5053ee89b7d293c7cb2e1220437021e9a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/attempt5/native_blocks/0/000010-fa2eeafd95730bf66fd3ae8d3dd2588f366f9923ab5aa20581533e8f0197fb5f-000000000.pkl.zstd",
+      "start": 0,
+      "rows": 4000,
+      "compressed_bytes": 1813982,
+      "raw_bytes": 6981032,
+      "compressed_sha256": "3e7c72b789b9d96292650a7a7b26bcd6d942f03a3de3414bbf1e81fa22a213c2",
+      "raw_sha256": "67ab8692d805587680b643349bd1dba785f6b8a97f2207ab9d0ba9bc6be5de57"
+    }
+  ],
+  "benchmarks": [
+    {
+      "mode": "cold_each_read",
+      "queries": 100,
+      "legacy_full_seconds": 0.7265273329103366,
+      "block_seconds": 5.407715208013542,
+      "legacy_compressed_read_bytes": 186314600,
+      "block_compressed_read_bytes": 217614066,
+      "legacy_decompressed_read_bytes": 1589744400,
+      "block_decompressed_read_bytes": 864014816
+    },
+    {
+      "mode": "resident_lru",
+      "queries": 100,
+      "legacy_full_seconds": 0.011111708008684218,
+      "block_seconds": 0.14492191700264812,
+      "legacy_compressed_read_bytes": 1863146,
+      "block_compressed_read_bytes": 4025274,
+      "legacy_decompressed_read_bytes": 15897444,
+      "block_decompressed_read_bytes": 15913741
+    }
+  ],
+  "callbacks": {
+    "passed": true,
+    "fixtures": [
+      {
+        "provider": "direct",
+        "confirmations": [
+          true,
+          false,
+          true,
+          false
+        ],
+        "synthetic_custom_exit": "exit_long_normal_stoploss_doom ( 192 )",
+        "profit_target_state": {
+          "BTC/USDT:USDT": {
+            "rate": 110.0,
+            "profit": 0.1,
+            "sell_reason": "synthetic_readonly_parity",
+            "time_profit_reached": "2025-01-08T15:20:00+00:00"
+          }
+        }
+      },
+      {
+        "provider": "blocks",
+        "confirmations": [
+          true,
+          false,
+          true,
+          false
+        ],
+        "synthetic_custom_exit": "exit_long_normal_stoploss_doom ( 192 )",
+        "profit_target_state": {
+          "BTC/USDT:USDT": {
+            "rate": 110.0,
+            "profit": 0.1,
+            "sell_reason": "synthetic_readonly_parity",
+            "time_profit_reached": "2025-01-08T15:20:00+00:00"
+          }
+        }
+      }
+    ],
+    "scope": "Synthetic detached NFI callback parity, not strategy profit or matching proof"
+  },
+  "native_get_analyzed_dataframe_unmodified": true,
+  "resources": {
+    "peak_rss_bytes": 651706368,
+    "free_disk_bytes": 23347200000
+  },
+  "elapsed_seconds": 18.38164954201784,
+  "old_pickle_loaded": false,
+  "backtesting_start_called": false,
+  "native_accounts_completed": 0,
+  "full_account_parity_proven": false,
+  "full40_performance_proven": false,
+  "live_controller_modified": false,
+  "orders_enabled": false,
+  "financial_performance_proven": false,
+  "goal_complete": false
+}

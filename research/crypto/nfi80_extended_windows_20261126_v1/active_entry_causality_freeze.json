@@ -1,0 +1,38 @@
+{
+  "implementation": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/active_entry_causality.py",
+    "sha256": "fe7ea86c45c027dfb5bf32aad52880abce428abe909dd2ab2ddb41a935c6d194"
+  },
+  "observed_control": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_15bp_14_verified.json",
+    "sha256": "225917fb6bb4dfee06367bab476d931b55b0a7bef84a9da062fe6fff9d55270f"
+  },
+  "candidate_registration": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/short_rebuy_14_wallet_preflight.json",
+    "sha256": "189f5d957b40fd1a6c7dd75b235783683814cf6d4bc670fb713b61b897a70a83"
+  },
+  "candidate_plan": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/short_rebuy_cap_14/15bp/registration/plan.json",
+    "sha256": "ed5ffd8eae63d45b68cfa45abd5bec0e93973fd892403ea97ebf74b59fe5b9c1"
+  },
+  "samples": {
+    "2025_top_coins_winner": {
+      "pair": "ONDO/USDT:USDT",
+      "short": false,
+      "first_fill": "2025-10-10T21:40:00+00:00",
+      "expected_entry_tags": [
+        "145"
+      ]
+    },
+    "2026_near_short_rebuy": {
+      "pair": "NEAR/USDT:USDT",
+      "short": true,
+      "first_fill": "2026-08-14T07:45:00+00:00",
+      "expected_entry_tags": [
+        "562"
+      ]
+    }
+  },
+  "comparison": "Reuse the original warmup anchor. Compare the row ending at the actual first fill with inputs available then and with seven additional days. Use the native candle provider's closed-informative timeframe boundary in both phases.",
+  "orders_enabled": false
+}

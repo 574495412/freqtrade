@@ -1,0 +1,311 @@
+{
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/short_exit_price_band.py",
+    "sha256": "8e37f658763a57e2532f0b24ff1cc3f814b6e8972505654c6c465141550dfb75"
+  },
+  "native_exit_audit": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/near_short_exit_audit.json",
+    "sha256": "71b9c19480ef04172df23f5b12020b028b0adb5d3ef5afdd1b9e6e86809a3ef5"
+  },
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/annual_2025/registrations/markets.json",
+    "sha256": "c95603edd21ff1d6ab2be8cf45631f82c918819ab2af3b1ddeb34f5395b82b4f"
+  },
+  "native_strategy": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+    "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+  },
+  "source_rule": {
+    "minimum": "0.001",
+    "maximum": "0.01",
+    "pullback": "0.02",
+    "source_line": 1545
+  },
+  "by_cost": {
+    "8": {
+      "price_tick": "0.0010",
+      "first_fill_price": "1.6",
+      "near_price_band": {
+        "open_interval_lower_price": "1.595974420463629215507593925",
+        "closed_interval_upper_price": "1.596924807921018510471622702",
+        "accepted_tick_count": 1,
+        "accepted_tick_bounds": [
+          "1.5960",
+          "1.5960"
+        ],
+        "maximum_allowed_profit_ratio_exclusive": "0.001594467354597004",
+        "peak_profit_ratio": "0.021594467354597004",
+        "adjacent_ticks": [
+          {
+            "price": "1.5950",
+            "profit_to_initial_notional": "0.0022039673545970783",
+            "meets_profit_floor": true,
+            "meets_cached_peak_pullback": false,
+            "meets_this_band": false
+          },
+          {
+            "price": "1.5960",
+            "profit_to_initial_notional": "0.0015784673545970783",
+            "meets_profit_floor": true,
+            "meets_cached_peak_pullback": true,
+            "meets_this_band": true
+          },
+          {
+            "price": "1.5970",
+            "profit_to_initial_notional": "0.0009529673545970783",
+            "meets_profit_floor": false,
+            "meets_cached_peak_pullback": true,
+            "meets_this_band": false
+          }
+        ]
+      },
+      "by_first_fill_year": {
+        "2025": {
+          "all_natural_short_562": 106,
+          "branch_natural_closes": 36,
+          "branch_net_usdt": 96.63949408,
+          "branch_without_additions": 27
+        },
+        "2026": {
+          "all_natural_short_562": 73,
+          "branch_natural_closes": 23,
+          "branch_net_usdt": 204.04534166,
+          "branch_without_additions": 20
+        }
+      },
+      "full_account": {
+        "all_natural_short_562": 179,
+        "branch_natural_closes": 59,
+        "branch_net_usdt": 300.68483574,
+        "branch_without_additions": 47
+      }
+    },
+    "15": {
+      "price_tick": "0.0010",
+      "first_fill_price": "1.6",
+      "near_price_band": {
+        "open_interval_lower_price": "1.595952071892161776375436845",
+        "closed_interval_upper_price": "1.594690312298906719760359461",
+        "accepted_tick_count": 0,
+        "accepted_tick_bounds": [],
+        "maximum_allowed_profit_ratio_exclusive": "0.000210217354596913",
+        "peak_profit_ratio": "0.020210217354596913",
+        "adjacent_ticks": [
+          {
+            "price": "1.5950",
+            "profit_to_initial_notional": "0.0008061548545969249",
+            "meets_profit_floor": false,
+            "meets_cached_peak_pullback": false,
+            "meets_this_band": false
+          },
+          {
+            "price": "1.5960",
+            "profit_to_initial_notional": "0.0001802173545969249",
+            "meets_profit_floor": false,
+            "meets_cached_peak_pullback": true,
+            "meets_this_band": false
+          },
+          {
+            "price": "1.5970",
+            "profit_to_initial_notional": "-0.0004457201454030751",
+            "meets_profit_floor": false,
+            "meets_cached_peak_pullback": true,
+            "meets_this_band": false
+          }
+        ]
+      },
+      "by_first_fill_year": {
+        "2025": {
+          "all_natural_short_562": 105,
+          "branch_natural_closes": 36,
+          "branch_net_usdt": 90.68522116,
+          "branch_without_additions": 26
+        },
+        "2026": {
+          "all_natural_short_562": 72,
+          "branch_natural_closes": 23,
+          "branch_net_usdt": 220.21568286,
+          "branch_without_additions": 20
+        }
+      },
+      "full_account": {
+        "all_natural_short_562": 177,
+        "branch_natural_closes": 59,
+        "branch_net_usdt": 310.90090402,
+        "branch_without_additions": 46
+      }
+    }
+  },
+  "matched_first_fills_with_different_branch_membership": [
+    {
+      "pair": "1000BONK/USDT:USDT",
+      "first_fill": "2025-03-16T19:20:00+00:00",
+      "8bp": {
+        "exit": "exit_profit_short_rebuy_t_1_1_m",
+        "net_usdt": 3.84337031,
+        "additions": 1
+      },
+      "15bp": {
+        "exit": "exit_profit_short_rebuy_t_0_1_m",
+        "net_usdt": 1.69883513,
+        "additions": 1
+      }
+    },
+    {
+      "pair": "1MBABYDOGE/USDT:USDT",
+      "first_fill": "2025-01-24T02:05:00+00:00",
+      "8bp": {
+        "exit": "exit_profit_short_rebuy_t_0_1_m",
+        "net_usdt": 0.17634916,
+        "additions": 0
+      },
+      "15bp": {
+        "exit": "exit_short_rebuy_2_1_1",
+        "net_usdt": 13.28129694,
+        "additions": 0
+      }
+    },
+    {
+      "pair": "AVAX/USDT:USDT",
+      "first_fill": "2025-12-24T06:05:00+00:00",
+      "8bp": {
+        "exit": "exit_profit_short_rebuy_t_0_1_m",
+        "net_usdt": 1.51998903,
+        "additions": 1
+      },
+      "15bp": {
+        "exit": "exit_short_rebuy_u_1",
+        "net_usdt": 18.5569177,
+        "additions": 1
+      }
+    },
+    {
+      "pair": "FARTCOIN/USDT:USDT",
+      "first_fill": "2026-09-16T01:40:00+00:00",
+      "8bp": {
+        "exit": "exit_profit_short_rebuy_t_0_1_m",
+        "net_usdt": 4.0297824,
+        "additions": 0
+      },
+      "15bp": {
+        "exit": "exit_short_rebuy_1_1_1",
+        "net_usdt": 206.63565948999997,
+        "additions": 33
+      }
+    },
+    {
+      "pair": "HBAR/USDT:USDT",
+      "first_fill": "2026-07-12T06:30:00+00:00",
+      "8bp": {
+        "exit": "exit_short_rebuy_u_1",
+        "net_usdt": 23.9152709,
+        "additions": 0
+      },
+      "15bp": {
+        "exit": "exit_profit_short_rebuy_t_0_1_m",
+        "net_usdt": 7.91755415,
+        "additions": 0
+      }
+    },
+    {
+      "pair": "LTC/USDT:USDT",
+      "first_fill": "2026-10-17T13:10:00+00:00",
+      "8bp": {
+        "exit": "exit_profit_short_rebuy_t_1_1_m",
+        "net_usdt": 35.90009786,
+        "additions": 0
+      },
+      "15bp": {
+        "exit": "exit_profit_short_rebuy_t_0_1_m",
+        "net_usdt": 23.29377067,
+        "additions": 0
+      }
+    },
+    {
+      "pair": "NEAR/USDT:USDT",
+      "first_fill": "2026-08-14T07:45:00+00:00",
+      "8bp": {
+        "exit": "exit_profit_short_rebuy_t_0_1_m",
+        "net_usdt": 3.43979606,
+        "additions": 0
+      },
+      "15bp": {
+        "exit": "exit_bad_trade_broken_237pct",
+        "net_usdt": -5303.807329069999,
+        "additions": 47
+      }
+    },
+    {
+      "pair": "RENDER/USDT:USDT",
+      "first_fill": "2026-08-03T08:25:00+00:00",
+      "8bp": {
+        "exit": "exit_short_rebuy_u_1",
+        "net_usdt": 22.29150765,
+        "additions": 0
+      },
+      "15bp": {
+        "exit": "exit_profit_short_rebuy_t_0_1_m",
+        "net_usdt": 2.72687251,
+        "additions": 0
+      }
+    },
+    {
+      "pair": "SEI/USDT:USDT",
+      "first_fill": "2026-07-17T13:10:00+00:00",
+      "8bp": {
+        "exit": "exit_profit_short_rebuy_t_0_1_m",
+        "net_usdt": 2.29541723,
+        "additions": 0
+      },
+      "15bp": {
+        "exit": "exit_short_rebuy_o_5",
+        "net_usdt": 98.73729917,
+        "additions": 0
+      }
+    },
+    {
+      "pair": "SOL/USDT:USDT",
+      "first_fill": "2025-11-04T16:50:00+00:00",
+      "8bp": {
+        "exit": "exit_profit_short_rebuy_t_3_1_m",
+        "net_usdt": 21.90025824,
+        "additions": 0
+      },
+      "15bp": {
+        "exit": "exit_profit_short_rebuy_t_0_1_m",
+        "net_usdt": 5.1502422,
+        "additions": 0
+      }
+    },
+    {
+      "pair": "XLM/USDT:USDT",
+      "first_fill": "2025-11-09T10:05:00+00:00",
+      "8bp": {
+        "exit": "exit_profit_short_rebuy_t_1_1_m",
+        "net_usdt": 7.73904837,
+        "additions": 1
+      },
+      "15bp": {
+        "exit": "exit_profit_short_rebuy_t_0_1_m",
+        "net_usdt": 6.04183434,
+        "additions": 1
+      }
+    },
+    {
+      "pair": "XRP/USDT:USDT",
+      "first_fill": "2025-10-15T19:55:00+00:00",
+      "8bp": {
+        "exit": "exit_profit_short_rebuy_t_0_1_m",
+        "net_usdt": 0.56148593,
+        "additions": 0
+      },
+      "15bp": {
+        "exit": "exit_profit_short_rebuy_t_1_1_m",
+        "net_usdt": 7.7153871,
+        "additions": 0
+      }
+    }
+  ],
+  "scope": "Observed NEAR state at the early exit, moving only the current decision price. The previous cached peak and funding are fixed. This does not alter historical fee, candle, execution, or account data.",
+  "orders_enabled": false
+}

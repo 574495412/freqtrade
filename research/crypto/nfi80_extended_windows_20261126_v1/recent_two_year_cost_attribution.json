@@ -1,0 +1,151 @@
+{
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_cost_attribution.py",
+    "sha256": "44f895d84913bf460393762135b28a2043a2ef5d70879f1b5b1937e2c5b63c9b"
+  },
+  "verified_accounts": {
+    "15": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_15bp_12_verified.json",
+      "sha256": "0513832bce22a2125e51adc6a3c5931fd8793f02f38415920e097e1638410cfc"
+    },
+    "8": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_8bp_12_verified.json",
+      "sha256": "ff8bbdd7d765e24f926c2a7b97f15368ef2a38fa6b7c040ddc3ae994c5fef9d7"
+    }
+  },
+  "same_contract_checks": {
+    "matching_input_preflight": true,
+    "matching_config_excluding_cost": true,
+    "matching_strategy_sources": true,
+    "matching_market_input": true,
+    "matching_marks": true
+  },
+  "natural_campaign_groups": {
+    "same_fill_times_and_prices": {
+      "15bp": {
+        "count": 694,
+        "net_usdt": 42529.90424484582,
+        "gross_price_pnl_usdt": 46476.0930339,
+        "commissions_usdt": 4697.45446989735,
+        "funding_usdt": 751.265680843167,
+        "executed_notional_usdt": 3131636.3132649
+      },
+      "8bp": {
+        "count": 694,
+        "net_usdt": 52582.2538648724,
+        "gross_price_pnl_usdt": 54667.9840957,
+        "commissions_usdt": 2959.73453016888,
+        "funding_usdt": 874.0042993412827,
+        "executed_notional_usdt": 3699668.1627111
+      },
+      "8_minus_15": {
+        "count": 0,
+        "net_usdt": 10052.34962002658,
+        "gross_price_pnl_usdt": 8191.891061800001,
+        "commissions_usdt": -1737.7199397284694,
+        "funding_usdt": 122.73861849811567,
+        "executed_notional_usdt": 568031.8494462003
+      }
+    },
+    "matched_first_fills_with_different_paths": {
+      "15bp": {
+        "count": 183,
+        "net_usdt": 1246.4881995882608,
+        "gross_price_pnl_usdt": 2544.6847980000007,
+        "commissions_usdt": 1617.0459615489,
+        "funding_usdt": 318.84936313716116,
+        "executed_notional_usdt": 1078030.6410326
+      },
+      "8bp": {
+        "count": 183,
+        "net_usdt": 5685.778918916989,
+        "gross_price_pnl_usdt": 6311.8803641,
+        "commissions_usdt": 858.63798661544,
+        "funding_usdt": 232.53654143242917,
+        "executed_notional_usdt": 1073297.4832693
+      },
+      "8_minus_15": {
+        "count": 0,
+        "net_usdt": 4439.290719328728,
+        "gross_price_pnl_usdt": 3767.1955660999997,
+        "commissions_usdt": -758.4079749334601,
+        "funding_usdt": -86.31282170473199,
+        "executed_notional_usdt": -4733.157763299998
+      }
+    },
+    "unmatched_first_fills": {
+      "15bp": {
+        "count": 1,
+        "net_usdt": 12.31969333389,
+        "gross_price_pnl_usdt": 13.362,
+        "commissions_usdt": 1.008729,
+        "funding_usdt": -0.03357766611000001,
+        "executed_notional_usdt": 672.486
+      },
+      "8bp": {
+        "count": 19,
+        "net_usdt": 411.2582212473445,
+        "gross_price_pnl_usdt": 432.3490352,
+        "commissions_usdt": 19.5079915344,
+        "funding_usdt": -1.5828224182555006,
+        "executed_notional_usdt": 24384.989418
+      },
+      "8_minus_15": {
+        "count": 18,
+        "net_usdt": 398.93852791345455,
+        "gross_price_pnl_usdt": 418.9870352,
+        "commissions_usdt": 18.4992625344,
+        "funding_usdt": -1.5492447521455006,
+        "executed_notional_usdt": 23712.503418
+      }
+    }
+  },
+  "8_minus_15_terminal_nav_usdt": 11348.281819604577,
+  "pnl_components_usdt": {
+    "natural_price_pnl": 12378.0736631,
+    "natural_commissions_saved": 2477.6286521275297,
+    "natural_funding": 34.876552041238185,
+    "terminal_positions": -3542.7539803500003,
+    "execution_to_mark": 0.4569326498749433
+  },
+  "matching_path_fee_rate_effect_at_average_notional_usdt": 2390.9565665915998,
+  "matching_path_fee_notional_effect_usdt": -653.2366268631304,
+  "near_562_by_cost": {
+    "15": {
+      "first_fill": "2026-08-14T07:45:00+00:00",
+      "close": "2026-09-28T00:00:00+00:00",
+      "tag": "562",
+      "net_usdt": -5303.807329069999,
+      "prior_nav_usdt": 31185.347956434613,
+      "additional_filled_entries": 47,
+      "exit_reason": "exit_bad_trade_broken_237pct ( 562 )",
+      "filled_cash": {
+        "entry_cash": 37185.123,
+        "exit_cash": 42388.014,
+        "price_pnl": -5202.891,
+        "commission": 119.3597055,
+        "funding": 18.44337645985313,
+        "net_pnl": -5303.807329040147
+      }
+    },
+    "8": {
+      "first_fill": "2026-08-14T07:45:00+00:00",
+      "close": "2026-08-19T03:25:00+00:00",
+      "tag": "562",
+      "net_usdt": 3.43979606,
+      "prior_nav_usdt": 35169.147817976664,
+      "additional_filled_entries": 0,
+      "exit_reason": "exit_profit_short_rebuy_t_0_1_m ( 562 )",
+      "filled_cash": {
+        "entry_cash": 2179.2,
+        "exit_cash": 2173.752,
+        "price_pnl": 5.448,
+        "commission": 3.4823616,
+        "funding": 1.47415765913751,
+        "net_pnl": 3.43979605913751
+      }
+    }
+  },
+  "scope": "Observed native accounts, both uninterrupted, amounts and marks from each actual replay. The identical-path fee-rate component is symmetric at the average executed notional. All remaining sizes and order paths respond to the original wallet.",
+  "orders_enabled": false
+}

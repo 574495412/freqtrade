@@ -1,0 +1,30 @@
+{
+  "method": "fixed15m bins from existing3complete5m OHLCV; no interpolation,no new data downloads",
+  "rows": [
+    {
+      "pair": "BTC/USDT",
+      "input": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/candles/BTC_USDT-5m.feather",
+      "input_sha256": "366afbdd6214d8d5b502c9c12bb3794aac31581b83f97d15730f6f359062e638",
+      "input_complete_5m_rows_used": 201600,
+      "output": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_feature_native_20261117_v2/BTC_15m.parquet",
+      "output_sha256": "ac255b9cf584f59846a2d3cac6ffb618890bcd550956b1e1f4216b8669db6312",
+      "first": "2024-10-01 00:00:00+00:00",
+      "last": "2026-08-31 23:45:00+00:00",
+      "rows": 67200,
+      "all15m_have3sourcebars": true
+    },
+    {
+      "pair": "ETH/USDT",
+      "input": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/trendcore_source_native_20261117_v1/candles/ETH_USDT-5m.feather",
+      "input_sha256": "407c6748bed2d85fa9739f5e6ef7eba174f6b1ab7b8db84ffb71a65f6248793c",
+      "input_complete_5m_rows_used": 201600,
+      "output": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_feature_native_20261117_v2/ETH_15m.parquet",
+      "output_sha256": "ba0fe85466f23c4ccccd9814dc242c0b96297cf3b6d101444ad2d81e79339b77",
+      "first": "2024-10-01 00:00:00+00:00",
+      "last": "2026-08-31 23:45:00+00:00",
+      "rows": 67200,
+      "all15m_have3sourcebars": true
+    }
+  ],
+  "diagnostic_only_not_financial_window": true
+}

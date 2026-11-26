@@ -1,0 +1,60 @@
+{
+  "proof": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/short_rebuy_cap_14/8bp/account_reconciled.json",
+    "sha256": "d4836f02927979f376cf63d4f8f37c9491ddda9eacecd35e1ecc056d2a784ee6"
+  },
+  "control": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_8bp_14_verified.json",
+    "sha256": "94cf09438584c5a09406ba9ad83a38e7aa0fb7a25a9fb8b6b9c716ecafb50b58"
+  },
+  "periods": {
+    "continuous": {
+      "net_return": 47.736157695439864,
+      "drawdown": 0.2458565656384205,
+      "ending_equity": 48736.15769543986,
+      "marks": 199872
+    },
+    "2025": {
+      "net_return": 16.304547299600003,
+      "drawdown": 0.22216397798650656,
+      "ending_equity": 17304.547299600003,
+      "marks": 105121
+    },
+    "2026": {
+      "net_return": 1.8163786576818688,
+      "drawdown": 0.2458565656384205,
+      "ending_equity": 48736.15769543986,
+      "marks": 94752
+    }
+  },
+  "natural_trade_size": {
+    "natural_closes": 908,
+    "wins_at_least_25_usdt": 417,
+    "wins_at_least_50_usdt": 279,
+    "trades_with_prior_equity": 908,
+    "wins_at_least_1pct_of_equity": 145,
+    "losses_at_least_1pct_of_equity": 4,
+    "best_profit_fraction_of_prior_equity": 0.07822755625129617,
+    "worst_profit_fraction_of_prior_equity": -0.19676004769042563,
+    "single_entry_count": 815,
+    "single_entry_wins_at_least_10pct_of_margin": 276,
+    "median_opening_margin_usdt": 393.61225633333333
+  },
+  "verified_budget": {
+    "scoped_trades": 181,
+    "blocked_adjustment_requests": 50,
+    "maximum_filled_entry_to_first_stake": 1.9999995135667117,
+    "trace": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/short_rebuy_cap_14/8bp/account/blocked-short-rebuys.jsonl",
+      "sha256": "2de6b2d1a0726252c6fad09c08b0c1f1b91eba1796909be2200df96edb4dfef4"
+    }
+  },
+  "checks": {
+    "higher_return": false,
+    "no_higher_drawdown": true,
+    "no_fewer_large_winners": true,
+    "no_liquidations": true,
+    "cap_acted": true
+  },
+  "passed": false
+}

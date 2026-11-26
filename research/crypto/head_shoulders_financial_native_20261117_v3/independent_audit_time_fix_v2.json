@@ -1,0 +1,11 @@
+{
+  "frozen_at": "2026-11-17T15:57:46.643552+00:00",
+  "original_freeze_sha256": "6954bcffbf62a5306ca3af616db686da6a9a849d3dcac7017a8181fbd31d002c",
+  "failed_command": ".venv-paper/bin/python -B research/crypto/head_shoulders_financial_native_20261117_v3/test_independent_audit.py",
+  "failed_exit_code": 1,
+  "failure_log_sha256": "0dd01fddc8b60c9d87dd126cd752ad0f3912b5471ae168d74e23e7fd3a52d790",
+  "cause": "pandas Timestamp.value is nanoseconds even after as_unit(ms); helper misinterpreted the value as milliseconds",
+  "change": "Only ms scalar conversion changed to int(Timestamp.timestamp()*1000); v2 imports/receipt destinations renamed. Original protocol and economic/source/funding rules unchanged.",
+  "financial_accounts_run": 0,
+  "new_economic_results_observed": false
+}

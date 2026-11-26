@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "source_native_files": 595,
+  "grid_points": 5151,
+  "native_allocation_days": 608,
+  "independent_weight_cells": 1824,
+  "maximum_independent_weight_error": 2.4980018054066022e-15,
+  "real_input_prefix_checks": [
+    {
+      "cutoff": "2025-06-30T00:00Z",
+      "rows": 181,
+      "actual_refit": true,
+      "future_perturbed": true,
+      "exact": true
+    },
+    {
+      "cutoff": "2026-01-01T00:00Z",
+      "rows": 366,
+      "actual_refit": true,
+      "future_perturbed": true,
+      "exact": true
+    }
+  ],
+  "native_admission_passes": 2,
+  "initial_failed_probe_retained": 1,
+  "funded_native_accounts": 0,
+  "original_grid_inputs": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/candles/BTC_USDT-5m.feather",
+      "sha256": "366afbdd6214d8d5b502c9c12bb3794aac31581b83f97d15730f6f359062e638",
+      "complete_target_rows": 175104
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/candles/BTC_USDT-1h.feather",
+      "sha256": "beed6bde8f88040b0af3457543d9d9a6cd0d15716b521cec1614ebe9e14a3a76",
+      "complete_target_rows": 14592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/candles/BTC_USDT-1d.feather",
+      "sha256": "55ded0b005bc6e20c903d6e856db3de3f39008cab4316beb4bd65fa6094f9d1f",
+      "complete_target_rows": 608
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/candles/ETH_USDT-5m.feather",
+      "sha256": "407c6748bed2d85fa9739f5e6ef7eba174f6b1ab7b8db84ffb71a65f6248793c",
+      "complete_target_rows": 175104
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/candles/ETH_USDT-1h.feather",
+      "sha256": "1a7e97e71696dc76472fb89c5c474824085f0a4601fc6a4007c1911780d51957",
+      "complete_target_rows": 14592
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/universal_allocation_native_20261116_v1/candles/ETH_USDT-1d.feather",
+      "sha256": "8263f44836cc93c7d5cfdcaf77fdce87cc8d535e297a9d824bce2bea260ad34c",
+      "complete_target_rows": 608
+    }
+  ],
+  "first_decision_uniform": true,
+  "no_prewindow_fit": true,
+  "no_third_party_source_executed": true
+}

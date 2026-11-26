@@ -1,0 +1,25 @@
+{
+  "registered_at": "2026-11-14T15:41:10.299730+00:00",
+  "primary": "Shanaev/Vasenin/Stepanov2023 DOI10.1016/j.heliyon.2023.e14236",
+  "mechanism": "Deterministic15-minute calendar boundary, distinct from price trend/mean reversion and positioning.",
+  "source_limits": "Paper labels returns at0/15/30/45, but open/close timestamp convention and code unavailable (on request). Original financial sample BitfinexUSDspot2021 with rolling-volume fee tiers; not our Binance perpetual fixed-fee account.",
+  "interpretations": {
+    "BoundaryStartMinute": "enter minute0/15/30/45 OPEN, exit exactly1minute later OPEN",
+    "BoundaryEndMinute": "enter minute59/14/29/44 OPEN, exit exactly1minute later at boundary OPEN",
+    "ConstantMinuteControl": "always long, initial native valid entry; native stoploss/liquidation and terminal forced exit retained"
+  },
+  "inference": "These are frozen local interpretations, not claimed exact source replication. Do not choose a convention after returns.",
+  "account": "Each separate1000USDT,1x isolated,99%investable,one position,native lots/minimums,catastrophic99%stop. No external wallet.",
+  "cost_bps_per_side": [
+    15,
+    8
+  ],
+  "funding": "Unchanged upstream inclusive open<=event<=close hour-bucket settlement. Exact-boundary exposure is conditional; do independent event ownership diagnostic, not posthoc NAV correction.",
+  "comparison": "14592 native pre-order hourly marks Jan2025-Aug2026 inclusive; floatingPNL/funding/remainingexitfee; annual continuous slices no reset; terminal liquidation separate.",
+  "native_1m_limit": "OHLCV next-open historical fills and aggregate cost proxy; no authenticated minute-level execution/latency or private funding certification.",
+  "gate": "Both interpretations must have positive full and each continuous annual slice,full hourlyDD<=30%,full return exceed matched constant at BOTH fixed costs. If not, preserve rejection.",
+  "combination_admission": "Do not construct a putative new alpha combination from a rejected calendar leg; any future funded combination needs its own frozen actual500wallet run.",
+  "no_rescue": "No selection of timing/hold length/fees/leverage/deposit after economic output. No Bitfinexzero-fee substitution.",
+  "orders_enabled": false,
+  "production_eligible": false
+}

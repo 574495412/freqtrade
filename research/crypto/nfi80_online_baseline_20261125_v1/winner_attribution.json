@@ -1,0 +1,592 @@
+{
+  "scope": "Retrospective attribution from reconciled accounts. Mode differences reflect different trades.",
+  "archived_mode_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+    "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+  },
+  "top_coins_long_only_tags": [
+    "141",
+    "142",
+    "143",
+    "144",
+    "145"
+  ],
+  "start": "2026-01-01T00:00:00+00:00",
+  "end": "2026-11-09T05:00:00+00:00",
+  "initial_equity_usdt": 1000,
+  "sizing_diagnostic": "For single entry trades, divide native net realized profit by first-fill margin.",
+  "by_cost_bps_per_side": {
+    "15": {
+      "archived_fixed_boost_12": {
+        "report_receipt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/comparison_15bp.json",
+          "sha256": "f800f33c85aa3f36da1c9169c74da48d75d3bc941b66e33c34c0074088c153a8"
+        },
+        "native_export_receipt": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/native_results/backtest-result-2026-11-09_11-36-59.zip",
+          "sha256": "48381f6843d81002e70cdb18cd8a5e4105c11ad9716e8f2a11334b1e857ccf1e"
+        },
+        "all": {
+          "natural_closes": 304,
+          "net_profit_at_least_25": 24,
+          "net_profit_at_least_50": 2,
+          "net_profit_usdt": 2016.7706228499999,
+          "gross_gains_usdt": 2425.96812456,
+          "largest_winner_usdt": 57.87085365,
+          "largest_loss_usdt": -402.68639123,
+          "single_entry_trades": 271,
+          "single_entry_10pct_margin_win_count": 101,
+          "single_entry_10pct_margin_loss_count": 0,
+          "single_entry_median_net_profit_on_margin": 0.06318926623477153,
+          "median_initial_margin_usdt": 55.35779916666667
+        },
+        "modes": {
+          "top_coins_long": {
+            "natural_closes": 80,
+            "net_profit_at_least_25": 14,
+            "net_profit_at_least_50": 2,
+            "net_profit_usdt": 1056.9180096,
+            "gross_gains_usdt": 1056.9180096,
+            "largest_winner_usdt": 57.87085365,
+            "largest_loss_usdt": null,
+            "single_entry_trades": 72,
+            "single_entry_10pct_margin_win_count": 21,
+            "single_entry_10pct_margin_loss_count": 0,
+            "single_entry_median_net_profit_on_margin": 0.04016701351931247,
+            "median_initial_margin_usdt": 190.88773666666668
+          },
+          "other_long": {
+            "natural_closes": 154,
+            "net_profit_at_least_25": 10,
+            "net_profit_at_least_50": 0,
+            "net_profit_usdt": 1139.4378786,
+            "gross_gains_usdt": 1145.94898908,
+            "largest_winner_usdt": 40.42902631,
+            "largest_loss_usdt": -6.511110479999999,
+            "single_entry_trades": 136,
+            "single_entry_10pct_margin_win_count": 61,
+            "single_entry_10pct_margin_loss_count": 0,
+            "single_entry_median_net_profit_on_margin": 0.0820898363869162,
+            "median_initial_margin_usdt": 47.47206
+          },
+          "short": {
+            "natural_closes": 70,
+            "net_profit_at_least_25": 0,
+            "net_profit_at_least_50": 0,
+            "net_profit_usdt": -179.58526535000001,
+            "gross_gains_usdt": 223.10112588,
+            "largest_winner_usdt": 16.37276569,
+            "largest_loss_usdt": -402.68639123,
+            "single_entry_trades": 63,
+            "single_entry_10pct_margin_win_count": 19,
+            "single_entry_10pct_margin_loss_count": 0,
+            "single_entry_median_net_profit_on_margin": 0.06340281956253724,
+            "median_initial_margin_usdt": 33.62986
+          }
+        },
+        "top_five": [
+          {
+            "mode": "top_coins_long",
+            "pair": "ICP/USDT:USDT",
+            "tags": [
+              "142"
+            ],
+            "open": "2026-09-23 14:20:00+00:00",
+            "close": "2026-09-24 14:40:00+00:00",
+            "exit_reason": "exit_long_tc_d_8_1 ( 142 )",
+            "net_profit_usdt": 57.87085365,
+            "initial_margin_usdt": 228.72833333333332,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.2530113030013772
+          },
+          {
+            "mode": "top_coins_long",
+            "pair": "CRV/USDT:USDT",
+            "tags": [
+              "142"
+            ],
+            "open": "2026-10-15 02:25:00+00:00",
+            "close": "2026-10-15 04:30:00+00:00",
+            "exit_reason": "exit_long_tc_d_6_1 ( 142 )",
+            "net_profit_usdt": 55.56310283,
+            "initial_margin_usdt": 271.99332,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.20428113024981642
+          },
+          {
+            "mode": "top_coins_long",
+            "pair": "DYDX/USDT:USDT",
+            "tags": [
+              "141"
+            ],
+            "open": "2026-06-18 15:50:00+00:00",
+            "close": "2026-06-18 20:30:00+00:00",
+            "exit_reason": "exit_long_tc_d_7_1 ( 141 )",
+            "net_profit_usdt": 47.13306546,
+            "initial_margin_usdt": 201.10569333333333,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.23436962265348096
+          },
+          {
+            "mode": "top_coins_long",
+            "pair": "DASH/USDT:USDT",
+            "tags": [
+              "144"
+            ],
+            "open": "2026-08-22 07:50:00+00:00",
+            "close": "2026-08-22 20:10:00+00:00",
+            "exit_reason": "exit_long_tc_d_6_1 ( 144 )",
+            "net_profit_usdt": 42.82847422,
+            "initial_margin_usdt": 223.50510666666665,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.19162190456737066
+          },
+          {
+            "mode": "other_long",
+            "pair": "GTC/USDT:USDT",
+            "tags": [
+              "44",
+              "46"
+            ],
+            "open": "2026-10-30 03:15:00+00:00",
+            "close": "2026-10-30 06:15:00+00:00",
+            "exit_reason": "exit_long_quick_q_6 ( 44 46 )",
+            "net_profit_usdt": 40.42902631,
+            "initial_margin_usdt": 229.142052,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.17643652030313492
+          }
+        ]
+      },
+      "boost_14": {
+        "report_receipt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/comparison_15bp.json",
+          "sha256": "f800f33c85aa3f36da1c9169c74da48d75d3bc941b66e33c34c0074088c153a8"
+        },
+        "native_export_receipt": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_15bp/native_results/backtest-result-2026-11-25_15-57-59.zip",
+          "sha256": "7f276984d84678c00fb3b45f88b260c91b2f5f6ddf33ad8c52a223761799da91"
+        },
+        "all": {
+          "natural_closes": 308,
+          "net_profit_at_least_25": 27,
+          "net_profit_at_least_50": 2,
+          "net_profit_usdt": 2127.60008703,
+          "gross_gains_usdt": 2525.96094146,
+          "largest_winner_usdt": 59.60946299,
+          "largest_loss_usdt": -391.84974395,
+          "single_entry_trades": 275,
+          "single_entry_10pct_margin_win_count": 104,
+          "single_entry_10pct_margin_loss_count": 0,
+          "single_entry_median_net_profit_on_margin": 0.06573040313129132,
+          "median_initial_margin_usdt": 57.9005715
+        },
+        "modes": {
+          "top_coins_long": {
+            "natural_closes": 81,
+            "net_profit_at_least_25": 14,
+            "net_profit_at_least_50": 2,
+            "net_profit_usdt": 1092.22180411,
+            "gross_gains_usdt": 1092.22180411,
+            "largest_winner_usdt": 59.60946299,
+            "largest_loss_usdt": null,
+            "single_entry_trades": 73,
+            "single_entry_10pct_margin_win_count": 22,
+            "single_entry_10pct_margin_loss_count": 0,
+            "single_entry_median_net_profit_on_margin": 0.04168419899351297,
+            "median_initial_margin_usdt": 191.67940000000002
+          },
+          "other_long": {
+            "natural_closes": 155,
+            "net_profit_at_least_25": 13,
+            "net_profit_at_least_50": 0,
+            "net_profit_usdt": 1190.46258089,
+            "gross_gains_usdt": 1196.97369137,
+            "largest_winner_usdt": 41.78140377,
+            "largest_loss_usdt": -6.511110479999999,
+            "single_entry_trades": 137,
+            "single_entry_10pct_margin_win_count": 62,
+            "single_entry_10pct_margin_loss_count": 0,
+            "single_entry_median_net_profit_on_margin": 0.08370834660895787,
+            "median_initial_margin_usdt": 48.672149999999995
+          },
+          "short": {
+            "natural_closes": 72,
+            "net_profit_at_least_25": 0,
+            "net_profit_at_least_50": 0,
+            "net_profit_usdt": -155.08429797000005,
+            "gross_gains_usdt": 236.76544597999995,
+            "largest_winner_usdt": 16.77071905,
+            "largest_loss_usdt": -391.84974395,
+            "single_entry_trades": 65,
+            "single_entry_10pct_margin_win_count": 20,
+            "single_entry_10pct_margin_loss_count": 0,
+            "single_entry_median_net_profit_on_margin": 0.06904188195452346,
+            "median_initial_margin_usdt": 38.69168333333333
+          }
+        },
+        "top_five": [
+          {
+            "mode": "top_coins_long",
+            "pair": "ICP/USDT:USDT",
+            "tags": [
+              "142"
+            ],
+            "open": "2026-09-23 14:20:00+00:00",
+            "close": "2026-09-24 14:40:00+00:00",
+            "exit_reason": "exit_long_tc_d_8_1 ( 142 )",
+            "net_profit_usdt": 59.60946299,
+            "initial_margin_usdt": 235.6,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.2530113030135823
+          },
+          {
+            "mode": "top_coins_long",
+            "pair": "CRV/USDT:USDT",
+            "tags": [
+              "142"
+            ],
+            "open": "2026-10-15 02:25:00+00:00",
+            "close": "2026-10-15 04:30:00+00:00",
+            "exit_reason": "exit_long_tc_d_6_1 ( 142 )",
+            "net_profit_usdt": 57.42921096,
+            "initial_margin_usdt": 281.12832,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.20428113026819925
+          },
+          {
+            "mode": "top_coins_long",
+            "pair": "DYDX/USDT:USDT",
+            "tags": [
+              "141"
+            ],
+            "open": "2026-06-18 15:50:00+00:00",
+            "close": "2026-06-18 20:30:00+00:00",
+            "exit_reason": "exit_long_tc_d_7_1 ( 141 )",
+            "net_profit_usdt": 48.28172348,
+            "initial_margin_usdt": 206.00674666666666,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.23436962265184066
+          },
+          {
+            "mode": "top_coins_long",
+            "pair": "DASH/USDT:USDT",
+            "tags": [
+              "144"
+            ],
+            "open": "2026-08-22 07:50:00+00:00",
+            "close": "2026-08-22 20:10:00+00:00",
+            "exit_reason": "exit_long_tc_d_6_1 ( 144 )",
+            "net_profit_usdt": 43.87185933,
+            "initial_margin_usdt": 228.95012666666665,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.19162190459878614
+          },
+          {
+            "mode": "other_long",
+            "pair": "GTC/USDT:USDT",
+            "tags": [
+              "44",
+              "46"
+            ],
+            "open": "2026-10-30 03:15:00+00:00",
+            "close": "2026-10-30 06:15:00+00:00",
+            "exit_reason": "exit_long_quick_q_6 ( 44 46 )",
+            "net_profit_usdt": 41.78140377,
+            "initial_margin_usdt": 236.807004,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.17643652030663753
+          }
+        ]
+      }
+    },
+    "8": {
+      "archived_fixed_boost_12": {
+        "report_receipt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/comparison_8bp.json",
+          "sha256": "7ec32cc862787da7cb4b99ebf0850828790fd0df30959799849aaf4bf674943c"
+        },
+        "native_export_receipt": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_8bps/native_results/backtest-result-2026-11-09_12-01-25.zip",
+          "sha256": "9e0554593bc987ad467ad6462a437af89d333ea5b5b07ed54fbbb48e1f6c57b0"
+        },
+        "all": {
+          "natural_closes": 306,
+          "net_profit_at_least_25": 31,
+          "net_profit_at_least_50": 3,
+          "net_profit_usdt": 2691.70878507,
+          "gross_gains_usdt": 2698.23813091,
+          "largest_winner_usdt": 71.00205785,
+          "largest_loss_usdt": -6.529345839999999,
+          "single_entry_trades": 275,
+          "single_entry_10pct_margin_win_count": 101,
+          "single_entry_10pct_margin_loss_count": 0,
+          "single_entry_median_net_profit_on_margin": 0.060885370525385285,
+          "median_initial_margin_usdt": 68.0475
+        },
+        "modes": {
+          "top_coins_long": {
+            "natural_closes": 80,
+            "net_profit_at_least_25": 16,
+            "net_profit_at_least_50": 2,
+            "net_profit_usdt": 1209.67961888,
+            "gross_gains_usdt": 1209.67961888,
+            "largest_winner_usdt": 71.00205785,
+            "largest_loss_usdt": null,
+            "single_entry_trades": 73,
+            "single_entry_10pct_margin_win_count": 21,
+            "single_entry_10pct_margin_loss_count": 0,
+            "single_entry_median_net_profit_on_margin": 0.04156527434503213,
+            "median_initial_margin_usdt": 194.85056666666668
+          },
+          "other_long": {
+            "natural_closes": 155,
+            "net_profit_at_least_25": 15,
+            "net_profit_at_least_50": 1,
+            "net_profit_usdt": 1269.74412154,
+            "gross_gains_usdt": 1276.27346738,
+            "largest_winner_usdt": 50.76954539,
+            "largest_loss_usdt": -6.529345839999999,
+            "single_entry_trades": 137,
+            "single_entry_10pct_margin_win_count": 61,
+            "single_entry_10pct_margin_loss_count": 0,
+            "single_entry_median_net_profit_on_margin": 0.08446917399532983,
+            "median_initial_margin_usdt": 53.402077
+          },
+          "short": {
+            "natural_closes": 71,
+            "net_profit_at_least_25": 0,
+            "net_profit_at_least_50": 0,
+            "net_profit_usdt": 212.28504465,
+            "gross_gains_usdt": 212.28504465,
+            "largest_winner_usdt": 17.14420012,
+            "largest_loss_usdt": null,
+            "single_entry_trades": 65,
+            "single_entry_10pct_margin_win_count": 19,
+            "single_entry_10pct_margin_loss_count": 0,
+            "single_entry_median_net_profit_on_margin": 0.06022882472346401,
+            "median_initial_margin_usdt": 34.1373
+          }
+        },
+        "top_five": [
+          {
+            "mode": "top_coins_long",
+            "pair": "ICP/USDT:USDT",
+            "tags": [
+              "142"
+            ],
+            "open": "2026-09-23 14:20:00+00:00",
+            "close": "2026-09-24 14:40:00+00:00",
+            "exit_reason": "exit_long_tc_d_8_1 ( 142 )",
+            "net_profit_usdt": 71.00205785,
+            "initial_margin_usdt": 275.8483333333333,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.2573952758460265
+          },
+          {
+            "mode": "top_coins_long",
+            "pair": "CRV/USDT:USDT",
+            "tags": [
+              "142"
+            ],
+            "open": "2026-10-15 02:25:00+00:00",
+            "close": "2026-10-15 04:30:00+00:00",
+            "exit_reason": "exit_long_tc_d_6_1 ( 142 )",
+            "net_profit_usdt": 70.09574293,
+            "initial_margin_usdt": 335.98008,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.20863065134694891
+          },
+          {
+            "mode": "other_long",
+            "pair": "GTC/USDT:USDT",
+            "tags": [
+              "44",
+              "46"
+            ],
+            "open": "2026-10-30 03:15:00+00:00",
+            "close": "2026-10-30 06:15:00+00:00",
+            "exit_reason": "exit_long_quick_d_6_1 ( 44 46 )",
+            "net_profit_usdt": 50.76954539,
+            "initial_margin_usdt": 280.85859600000003,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.18076550304338912
+          },
+          {
+            "mode": "top_coins_long",
+            "pair": "APT/USDT:USDT",
+            "tags": [
+              "141",
+              "142"
+            ],
+            "open": "2026-10-07 02:15:00+00:00",
+            "close": "2026-10-09 06:10:00+00:00",
+            "exit_reason": "exit_long_tc_3_1_1 ( 141 142 )",
+            "net_profit_usdt": 49.24522412,
+            "initial_margin_usdt": 301.00676,
+            "entry_fills": 2,
+            "one_entry_net_profit_on_margin": null
+          },
+          {
+            "mode": "top_coins_long",
+            "pair": "DYDX/USDT:USDT",
+            "tags": [
+              "141"
+            ],
+            "open": "2026-06-18 15:50:00+00:00",
+            "close": "2026-06-18 20:30:00+00:00",
+            "exit_reason": "exit_long_tc_d_7_1 ( 141 )",
+            "net_profit_usdt": 49.10008947,
+            "initial_margin_usdt": 205.66326666666666,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.2387402002593884
+          }
+        ]
+      },
+      "boost_14": {
+        "report_receipt": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/comparison_8bp.json",
+          "sha256": "7ec32cc862787da7cb4b99ebf0850828790fd0df30959799849aaf4bf674943c"
+        },
+        "native_export_receipt": {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_8bp/native_results/backtest-result-2026-11-25_16-13-59.zip",
+          "sha256": "748b0b6e9978066c9247fa0809bc7e7d8fec7a57ff81a9fa5abf667a0382d99e"
+        },
+        "all": {
+          "natural_closes": 310,
+          "net_profit_at_least_25": 32,
+          "net_profit_at_least_50": 5,
+          "net_profit_usdt": 2797.49366223,
+          "gross_gains_usdt": 2804.02300807,
+          "largest_winner_usdt": 72.77079239,
+          "largest_loss_usdt": -6.529345839999999,
+          "single_entry_trades": 279,
+          "single_entry_10pct_margin_win_count": 104,
+          "single_entry_10pct_margin_loss_count": 0,
+          "single_entry_median_net_profit_on_margin": 0.0623133821305842,
+          "median_initial_margin_usdt": 70.10130000000001
+        },
+        "modes": {
+          "top_coins_long": {
+            "natural_closes": 81,
+            "net_profit_at_least_25": 16,
+            "net_profit_at_least_50": 4,
+            "net_profit_usdt": 1247.03292616,
+            "gross_gains_usdt": 1247.03292616,
+            "largest_winner_usdt": 72.77079239,
+            "largest_loss_usdt": null,
+            "single_entry_trades": 74,
+            "single_entry_10pct_margin_win_count": 22,
+            "single_entry_10pct_margin_loss_count": 0,
+            "single_entry_median_net_profit_on_margin": 0.042224253681544435,
+            "median_initial_margin_usdt": 195.8281266666667
+          },
+          "other_long": {
+            "natural_closes": 156,
+            "net_profit_at_least_25": 16,
+            "net_profit_at_least_50": 1,
+            "net_profit_usdt": 1322.99935624,
+            "gross_gains_usdt": 1329.52870208,
+            "largest_winner_usdt": 52.05452131,
+            "largest_loss_usdt": -6.529345839999999,
+            "single_entry_trades": 138,
+            "single_entry_10pct_margin_win_count": 62,
+            "single_entry_10pct_margin_loss_count": 0,
+            "single_entry_median_net_profit_on_margin": 0.08460161209951378,
+            "median_initial_margin_usdt": 54.96889566666666
+          },
+          "short": {
+            "natural_closes": 73,
+            "net_profit_at_least_25": 0,
+            "net_profit_at_least_50": 0,
+            "net_profit_usdt": 227.46137983,
+            "gross_gains_usdt": 227.46137983,
+            "largest_winner_usdt": 17.14420012,
+            "largest_loss_usdt": null,
+            "single_entry_trades": 67,
+            "single_entry_10pct_margin_win_count": 20,
+            "single_entry_10pct_margin_loss_count": 0,
+            "single_entry_median_net_profit_on_margin": 0.060747306990374735,
+            "median_initial_margin_usdt": 35.0053
+          }
+        },
+        "top_five": [
+          {
+            "mode": "top_coins_long",
+            "pair": "ICP/USDT:USDT",
+            "tags": [
+              "142"
+            ],
+            "open": "2026-09-23 14:20:00+00:00",
+            "close": "2026-09-24 14:40:00+00:00",
+            "exit_reason": "exit_long_tc_d_8_1 ( 142 )",
+            "net_profit_usdt": 72.77079239,
+            "initial_margin_usdt": 282.71999999999997,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.2573952758559706
+          },
+          {
+            "mode": "top_coins_long",
+            "pair": "CRV/USDT:USDT",
+            "tags": [
+              "142"
+            ],
+            "open": "2026-10-15 02:25:00+00:00",
+            "close": "2026-10-15 04:30:00+00:00",
+            "exit_reason": "exit_long_tc_d_6_1 ( 142 )",
+            "net_profit_usdt": 71.87089769,
+            "initial_margin_usdt": 344.48867999999993,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.20863065134680195
+          },
+          {
+            "mode": "other_long",
+            "pair": "GTC/USDT:USDT",
+            "tags": [
+              "44",
+              "46"
+            ],
+            "open": "2026-10-30 03:15:00+00:00",
+            "close": "2026-10-30 06:15:00+00:00",
+            "exit_reason": "exit_long_quick_d_6_1 ( 44 46 )",
+            "net_profit_usdt": 52.05452131,
+            "initial_margin_usdt": 287.96712,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.18076550305465428
+          },
+          {
+            "mode": "top_coins_long",
+            "pair": "APT/USDT:USDT",
+            "tags": [
+              "141",
+              "142"
+            ],
+            "open": "2026-10-07 02:15:00+00:00",
+            "close": "2026-10-09 06:10:00+00:00",
+            "exit_reason": "exit_long_tc_3_1_1 ( 141 142 )",
+            "net_profit_usdt": 50.494581260000004,
+            "initial_margin_usdt": 308.63704,
+            "entry_fills": 2,
+            "one_entry_net_profit_on_margin": null
+          },
+          {
+            "mode": "top_coins_long",
+            "pair": "DYDX/USDT:USDT",
+            "tags": [
+              "141"
+            ],
+            "open": "2026-06-18 15:50:00+00:00",
+            "close": "2026-06-18 20:30:00+00:00",
+            "exit_reason": "exit_long_tc_d_7_1 ( 141 )",
+            "net_profit_usdt": 50.34511643,
+            "initial_margin_usdt": 210.8782533333333,
+            "entry_fills": 1,
+            "one_entry_net_profit_on_margin": 0.23874020025393486
+          }
+        ]
+      }
+    }
+  },
+  "new_native_accounts": 0,
+  "orders_enabled": false
+}

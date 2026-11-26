@@ -1,0 +1,9 @@
+{
+  "hypothesis": "The already frozen lifetime-entry margin guard has meaningful risk coverage beyond the archived NEAR discovery trade when combined with 14 concurrent positions.",
+  "rule": "Preserve the original strategy's pure short-rebuy tag family and two-times filled first-entry margin budget. Inspect actual positive entry fills and accumulate filled margin throughout each position. Reductions do not restore the budget.",
+  "inputs": "Completed 15 bp continuous 2025-01-01 through 2026-11-25 accounts and 2024 annual accounts, plus all completed matched 8 bp accounts in the existing annual, 2026 discovery and 2026 later-reset windows. Keep independent restarts separate.",
+  "discovery_exclusion": "First fills in the January 1 through November 9 05:00 UTC 2026 discovery window can describe coverage only. The 2024 and 2025 results, or a first fill after that discovery window, must support the transfer.",
+  "advance": "For the 14-slot path require at least one natural loss of 1% or more of pre-entry NAV from outside the discovery window whose filled entry margin exceeded the budget. Require no natural win of 1% or more with such an exceedance across all completed 14-slot windows.",
+  "scope": "Observed filled-margin thresholds only. Actual strategy uses the proposed next margin before rounding and matching. Do not infer unchanged orders, account returns or the count of rejected requests from this diagnostic.",
+  "orders_enabled": false
+}

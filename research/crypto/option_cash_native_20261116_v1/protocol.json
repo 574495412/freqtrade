@@ -1,0 +1,61 @@
+{
+  "frozen_at": "2026-11-16T10:21:31.666075+00:00",
+  "scope": "Native option cash/premium/SSM component engineering,not historical account performance",
+  "reference_full_account_window": [
+    "2025-01-01T00:00:00Z",
+    "2026-08-31T23:00:00Z"
+  ],
+  "markets": [
+    "BTC",
+    "ETH"
+  ],
+  "synthetic_fixture_window": [
+    "2026-11-15T21:00:00Z",
+    "2026-11-16T04:00:00Z"
+  ],
+  "cases": [
+    "long_cash_and_unspendable_mark_profit",
+    "short_call_put_partial_reductions",
+    "maintenance_breach_no_invented_liquidation",
+    "pending_reservation_and_cancel"
+  ],
+  "actual_native_chain": "Native Configuration/StrategyResolver/Backtesting constructor\u2192native entry/exit methods/Order.close_bt_order\u2192local Wallets subclass;not Backtesting.start",
+  "cash_model": "Single-coin S:SM cash=initial+actual premium sales-buys-actual fee model;equity=cash+signed options mark;SMmargin_balance=cash",
+  "rules": "Current product-document margin formulas/model;not certified historical rulebook",
+  "pending_rule": "Explicit LOCAL conservative gross IM+fee for short entry;premium+fee for long;no unfilled sale credit",
+  "fee_rate": "0.0003",
+  "premium_cap": "0.125",
+  "native_percentage_fees": "0",
+  "margin_positions": "Separate pair requirements summed;no portfolio offsets;long mark gains cannot fund entries",
+  "atomic_backtest_limit_fills_only": true,
+  "native_futures_mode_is_order_trade_carrier_only": true,
+  "no_generic_perpetual_funding_or_liquidation": true,
+  "sources": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/btc_instruments.json",
+      "sha256": "a459dacba0c1dc169ff79a7a4d4066345a76b8156e0e22c321a8df9a0b9b4b02"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/option_premium_admission_native_20261116_v1/sources/eth_instruments.json",
+      "sha256": "8eb17d0082fad5f4cc1c7507144ed323334ec31aed908c1a4997504760a341cc"
+    }
+  ],
+  "goal_complete": false,
+  "new_historical_financial_accounts": 0,
+  "new_factors": 0,
+  "new_portfolios": 0,
+  "prohibitions": [
+    "No edits to parent seals,production,services,orders or deployment",
+    "No synthetic PnL as author/market returns",
+    "No time/window/weights rescues"
+  ],
+  "required_proofs": [
+    "Actual native constructor and native-created Trade/Order objects",
+    "Correct premium debit/credit and fees exactly once across refresh/partial reduction",
+    "No long marked-profit buying power;short sale premium not equity profit",
+    "Exact independent actual-order cash/margin/equity reconstruction",
+    "Pending reserves released only by actual fill/cancel;fee-only shortfall refuses fill",
+    "Explicit MM breach and blocked funding;no fabricated liquidation or completed account",
+    "Current native tree595 and parent option checkpoint72 unchanged"
+  ]
+}

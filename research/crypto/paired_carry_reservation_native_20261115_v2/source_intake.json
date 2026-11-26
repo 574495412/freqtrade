@@ -1,0 +1,90 @@
+{
+  "recorded_at": "2026-11-15T14:56:22.773046+00:00",
+  "recorded_after_financial_runs": true,
+  "github": [
+    {
+      "repository": "idreesm18/crypto-perp-funding-carry",
+      "commit": "06d05d08a88c107dc84b69dc21009864dbd9b878",
+      "fully_read_selected_files": [
+        "README.md",
+        "src/2_signal.py",
+        "src/3_portfolio.py",
+        "src/4_backtest.py"
+      ],
+      "captured_not_fully_read": [
+        "WRITEUP.md"
+      ],
+      "followup_read_sections": {
+        "src/1_data_pull.py": "funding archive function; calc_time/last_funding_rate mapping"
+      },
+      "license_file_in_pinned_tree": false,
+      "limitation": "Concurrent settled funding sets weight and same-event entitlement; archived data does not certify indicative values known beforehand."
+    },
+    {
+      "repository": "zwmjj/funding-rate-arb",
+      "commit": "b06dc3ac3453b08edfb430b527a1e0a408d42a63",
+      "fully_read_selected_files": [
+        "README.md"
+      ],
+      "selected_sections_read": [
+        "src/backtest.py:cash/entry/PnL",
+        "src/basis_trade.py",
+        "src/data_fetcher.py"
+      ],
+      "license_file_in_pinned_tree": false,
+      "limitation": "Fixed-notional returns, no complete collateral/liquidation wallet; rounded/forward-filled funding history not adopted."
+    }
+  ],
+  "source_blob_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/source_receipts.json",
+    "sha256": "1d04a94a256a626bf640d62b24a54808f3e7dd5123492f0065089cb7edbdc360"
+  },
+  "rest403_preserved": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_source_native_20261115_v1/source_capture_initial.json",
+    "sha256": "4dc176e5ad425e7dffb7f44ffe8fbde10de92c60372be9d68e1f953005e73f3b"
+  },
+  "source_financial_scripts_executed": false,
+  "external_engine_copied_to_product": false,
+  "source_account_replication": false,
+  "new_accepted_independent_alphas": 0,
+  "youtube": {
+    "metadata": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/youtube_metadata.json",
+      "sha256": "ae796b78e7ad09a3fc3076ee66ffdf14cfea1a805ef373ed2bc716d19d66f877"
+    },
+    "receipts": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/paired_carry_reservation_native_20261115_v2/followup_source_receipts.json",
+      "sha256": "9b8a7c15b91b9b346a5171dc905965ea2b1b44e6ddf3a7bd767ef6d495ab552e"
+    },
+    "author": "Hummingbot",
+    "video_id": "Ly8R5g3juxw",
+    "actual_page_http_status": 200,
+    "caption_http_status": 200,
+    "caption_bytes": 0,
+    "full_video_watched": false,
+    "full_transcript_read": false,
+    "rule_admitted": false,
+    "scope": "Cross-venue perpetual differential; distinct from this spot/perpetual baseline"
+  },
+  "x_and_douyin": {
+    "previous_intake": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/source_intake.json",
+      "sha256": "a524ab2c4bde9619a040c277100468fdad310d4d48de2fa64bf87d576d1121e4"
+    },
+    "explicitly_reused": true,
+    "new_complete_original_rules_admitted": false,
+    "new_posts_or_videos_claimed_read": false
+  },
+  "primary_docs": [
+    {
+      "url": "https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Get-Funding-Rate-History",
+      "read_scope": "Get Funding Rate History response fields: fundingTime, fundingRate, associated charge markPrice"
+    },
+    {
+      "url": "https://www.freqtrade.io/en/stable/leverage/",
+      "read_scope": "Spot/futures distinction and separate-account assumption"
+    }
+  ],
+  "local_study": "Unconditional equal-base spot long/perpetual short with segregated native wallets; not source threshold-rule reproduction",
+  "market": "crypto only; zero new equity factor_analysis, equity accounts or Vibe benches"
+}

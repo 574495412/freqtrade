@@ -1,0 +1,117 @@
+"""Verify source ownership, narrow native edits, retained failures and evidence."""
+
+import ast
+import hashlib
+import json
+from datetime import UTC, datetime
+from pathlib import Path
+
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[2]
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def read(path):
+    return json.loads(Path(path).read_text())
+
+
+def methods(path):
+    tree = ast.parse(Path(path).read_text())
+    cls = next(n for n in tree.body if isinstance(n, ast.ClassDef) and n.name == "Backtesting")
+    return {n.name: n for n in cls.body if isinstance(n, ast.FunctionDef)}
+
+
+def code(node):
+    return ast.dump(node, include_attributes=False)
+
+
+def main():
+    protocol = read(HERE / "protocol.json")
+    assert sha(HERE / "protocol.json") == (
+        "eb980e89c4c9322dbc16292c964966bfee1c7442a759a29c29b8045c0d2f8cc9"
+    )
+    for path, digest in protocol["inputs"].items():
+        assert sha(path) == digest, path
+    previous = HERE.parent / "nfi40_account_admission_20261117_v1"
+    for row in read(previous / "artifact_manifest.json")["files"]:
+        assert sha(row["path"]) == row["sha256"], row["path"]
+    manifest = read(ROOT / "deploy/upstream-source.json")
+    vendor = ROOT.parent / "CZ-Agent/vendor/freqtrade"
+    for name, digest in manifest["files"].items():
+        assert sha(vendor / name) == digest, name
+    assert manifest["commit"] == protocol["owners"]["engine_commit"]
+    baseline = ROOT / (
+        "research/equity/split_trade_native_20261116_v1/final_source_snapshot/"
+        "freqtrade/optimize/backtesting.py"
+    )
+    old_seal = read(ROOT / "research/equity/split_trade_native_20261116_v1/artifact_manifest.json")
+    assert old_seal["files"]["final_source_snapshot/freqtrade/optimize/backtesting.py"] == sha(
+        baseline
+    )
+    before = methods(baseline)
+    after = methods(ROOT / "freqtrade/optimize/backtesting.py")
+    added = {"normalize_entry_order_rate", "get_exit_order_precision"}
+    changed = {"_exit_trade", "get_valid_entry_price_and_stake", "_enter_trade"}
+    assert set(after) - set(before) == added
+    assert not set(before) - set(after)
+    unchanged = set(before) - changed
+    assert all(code(before[name]) == code(after[name]) for name in unchanged)
+    # No independent order constructor or wallet was introduced. The previous
+    # trade factory is byte-for-byte AST identical, including its default model.
+    assert code(before["_create_trade"]) == code(after["_create_trade"])
+    paths = [
+        ROOT / "freqtrade/optimize/backtesting.py",
+        ROOT / "freqtrade/optimize/dated_price_precision.py",
+        HERE / "test_rules.py",
+    ]
+    for path in paths:
+        snapshot = HERE / "final_source_snapshot" / path.relative_to(ROOT)
+        assert path.read_bytes() == snapshot.read_bytes(), path
+    receipts = read(HERE / "source_receipts.json")
+    assert len(receipts) == 3
+    for row in receipts:
+        assert row["status"] == 202 and row["bytes"] == 0
+        assert sha(row["path"]) == row["sha256"]
+    text = (HERE / "sources/web_notice_readback.txt").read_text()
+    assert all(s in text for s in ("CRVUSDT", "GALAUSDT", "06:30", "06:40", "06:31", "06:41"))
+    notices = read(HERE / "notice_events.json")
+    assert len(notices["events"]) == 2 and not notices["financial_rulebook_admitted"]
+    assert all(e["known_at"] is None for e in notices["events"])
+    comparisons = read(HERE / "notice_reconciliation.json")
+    assert comparisons["order_observations_total"] == 44
+    assert comparisons["observations_matching_announced_new_tick_before_effective"] == 18
+    assert "3 failed, 13 passed" in (HERE / "tests_initial.log").read_text()
+    assert "21 passed" in (HERE / "tests_final.log").read_text()
+    assert (HERE / "lint_final.log").read_text().strip() == "All checks passed!"
+    result = {
+        "verified_at": datetime.now(UTC).isoformat(),
+        "passed": True,
+        "official_vendor_files_unchanged": len(manifest["files"]),
+        "local_native_methods_added": sorted(added),
+        "local_native_methods_changed": sorted(changed),
+        "existing_native_methods_AST_unchanged": len(unchanged),
+        "previous_trade_factory_preserved": True,
+        "actual_native_order_path_test_cases_passed": 21,
+        "full_native_start_calls": 0,
+        "new_historical_financial_accounts": 0,
+        "synthetic_price_path_only": True,
+        "source_notices_fully_read_via_web_extraction": 2,
+        "direct_HTTP_article_downloads_succeeded": 0,
+        "dated_source_new_tick_before_effective_observations": 18,
+        "full_window_40pair_rules_admitted": False,
+        "corrected_returns": None,
+        "orders_enabled": False,
+        "production_eligible": False,
+        "goal_complete": False,
+        "source_hashes": {str(p): sha(p) for p in paths},
+    }
+    (HERE / "verification.json").write_text(json.dumps(result, indent=2) + "\n")
+    print("Verified native price hooks,21synthetic test cases;0full historical account starts")
+
+
+if __name__ == "__main__":
+    main()

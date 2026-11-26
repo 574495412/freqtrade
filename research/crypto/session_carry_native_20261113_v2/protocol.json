@@ -1,0 +1,23 @@
+{
+  "registered_at": "2026-11-13T16:03:16.176120+00:00",
+  "source_commit": "5693993e108f2b3668bd21b1dd36ae31f79d8fcd",
+  "selection_context": "Prior forced-rollover losses are known. This is an execution-policy follow-up of the same family, not independent alpha discovery or OOS.",
+  "fixed_direction_rules": "BTC08/20UTC reversal of previous SAME session; ETH05 reversal,17 long. No source hour/sign/holding horizon/fee/leverage retune.",
+  "boundary_carry": "Rows ending at boundary T select directions from actual T-24h/T-12h quotes. Native exit/entry flags close opposite side then reverse at native T open; same side carries actual quantity with no orders.",
+  "clock_matched_carry": "Same direction-change exits at T and entries at T+5min as original rollover. Same-direction positions persist. Isolates carry from moving all flips to boundary.",
+  "allocation_difference_from_paper": "At entry use native99% available cash, lot-rounded. Hold actual quantity until direction change, no free per-session notional reset. Short gross/equity may drift above1 while native leverage remains1. Report actual exposure.",
+  "controls": "BoundaryCarryLong uses same boundary/support,always long. Four15bps original SourceSessions/PassiveLong native accounts rerun with original byte-identical strategy; require full trade and hourlyNAV parity.",
+  "window": [
+    "2025-01-01T00:00:00Z",
+    "2026-08-31T23:00:00Z"
+  ],
+  "capital": "Each BTC/ETH wallet500; sum actual500+500=1000, no transfers/rebalancing/scaled1000 paths",
+  "cost_bps_per_side": [
+    15,
+    8
+  ],
+  "acceptance": "Primary boundary-carry source positive full and both continuous annual slices, hourlyDD<=50%, above matched boundary-long and old passive two-wallet combos, at BOTH costs. Clock-matched model attribution only; never promote the better timing after seeing outcomes. Numeric pass alone is not independent qualification.",
+  "native_contract": "Same pinned Backtesting/markets/1x isolated/5m/catastrophic99%stop/liquidation/fees/funding/observer; no core financial engine change",
+  "orders_enabled": false,
+  "production_eligible": false
+}

@@ -1,0 +1,865 @@
+{
+  "passed_registered_contract_checks": true,
+  "all_native_reference_common_OHLCV_exact": true,
+  "native_reference_accounts": 12,
+  "analytical_references": 2,
+  "references": [
+    {
+      "account": "trendcore_1000_conservative",
+      "capital": 1000,
+      "cost_bps": 20,
+      "calendar_hours": 14592,
+      "native_account": true,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/plan.json",
+        "sha256": "45d01166ecc2031b67dc785a39ddb421de5c5b35e409798a2face15061268337"
+      },
+      "cash_usdt_spot1x_contract_equal": true,
+      "execution_timeframe": "1h",
+      "detail_timeframe": "5m",
+      "order_types": {
+        "entry": "market",
+        "exit": "market",
+        "emergency_exit": "market",
+        "force_entry": "market",
+        "force_exit": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false
+      },
+      "data_comparison": {
+        "BTC/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "BTC/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        }
+      }
+    },
+    {
+      "account": "trendcore_1000_lower",
+      "capital": 1000,
+      "cost_bps": 13,
+      "calendar_hours": 14592,
+      "native_account": true,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/plan.json",
+        "sha256": "45d01166ecc2031b67dc785a39ddb421de5c5b35e409798a2face15061268337"
+      },
+      "cash_usdt_spot1x_contract_equal": true,
+      "execution_timeframe": "1h",
+      "detail_timeframe": "5m",
+      "order_types": {
+        "entry": "market",
+        "exit": "market",
+        "emergency_exit": "market",
+        "force_entry": "market",
+        "force_exit": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false
+      },
+      "data_comparison": {
+        "BTC/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "BTC/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        }
+      }
+    },
+    {
+      "account": "trendcore_500_conservative",
+      "capital": 500,
+      "cost_bps": 20,
+      "calendar_hours": 14592,
+      "native_account": true,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/plan.json",
+        "sha256": "45d01166ecc2031b67dc785a39ddb421de5c5b35e409798a2face15061268337"
+      },
+      "cash_usdt_spot1x_contract_equal": true,
+      "execution_timeframe": "1h",
+      "detail_timeframe": "5m",
+      "order_types": {
+        "entry": "market",
+        "exit": "market",
+        "emergency_exit": "market",
+        "force_entry": "market",
+        "force_exit": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false
+      },
+      "data_comparison": {
+        "BTC/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "BTC/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        }
+      }
+    },
+    {
+      "account": "trendcore_500_lower",
+      "capital": 500,
+      "cost_bps": 13,
+      "calendar_hours": 14592,
+      "native_account": true,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/plan.json",
+        "sha256": "45d01166ecc2031b67dc785a39ddb421de5c5b35e409798a2face15061268337"
+      },
+      "cash_usdt_spot1x_contract_equal": true,
+      "execution_timeframe": "1h",
+      "detail_timeframe": "5m",
+      "order_types": {
+        "entry": "market",
+        "exit": "market",
+        "emergency_exit": "market",
+        "force_entry": "market",
+        "force_exit": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false
+      },
+      "data_comparison": {
+        "BTC/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "BTC/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        }
+      }
+    },
+    {
+      "account": "crp_1000_conservative",
+      "capital": 1000,
+      "cost_bps": 20,
+      "calendar_hours": 14592,
+      "native_account": true,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/plan.json",
+        "sha256": "d8541b0c706766432fdb93af59576384c61ede9e37c5013b8067d3148a7c7948"
+      },
+      "cash_usdt_spot1x_contract_equal": true,
+      "execution_timeframe": "1h",
+      "detail_timeframe": "5m",
+      "order_types": {
+        "entry": "market",
+        "exit": "market",
+        "emergency_exit": "market",
+        "force_entry": "market",
+        "force_exit": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false
+      },
+      "data_comparison": {
+        "BTC/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "BTC/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        }
+      }
+    },
+    {
+      "account": "crp_1000_lower",
+      "capital": 1000,
+      "cost_bps": 13,
+      "calendar_hours": 14592,
+      "native_account": true,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/plan.json",
+        "sha256": "d8541b0c706766432fdb93af59576384c61ede9e37c5013b8067d3148a7c7948"
+      },
+      "cash_usdt_spot1x_contract_equal": true,
+      "execution_timeframe": "1h",
+      "detail_timeframe": "5m",
+      "order_types": {
+        "entry": "market",
+        "exit": "market",
+        "emergency_exit": "market",
+        "force_entry": "market",
+        "force_exit": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false
+      },
+      "data_comparison": {
+        "BTC/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "BTC/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        }
+      }
+    },
+    {
+      "account": "crp_500_conservative",
+      "capital": 500,
+      "cost_bps": 20,
+      "calendar_hours": 14592,
+      "native_account": true,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/plan.json",
+        "sha256": "d8541b0c706766432fdb93af59576384c61ede9e37c5013b8067d3148a7c7948"
+      },
+      "cash_usdt_spot1x_contract_equal": true,
+      "execution_timeframe": "1h",
+      "detail_timeframe": "5m",
+      "order_types": {
+        "entry": "market",
+        "exit": "market",
+        "emergency_exit": "market",
+        "force_entry": "market",
+        "force_exit": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false
+      },
+      "data_comparison": {
+        "BTC/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "BTC/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        }
+      }
+    },
+    {
+      "account": "crp_500_lower",
+      "capital": 500,
+      "cost_bps": 13,
+      "calendar_hours": 14592,
+      "native_account": true,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/plan.json",
+        "sha256": "d8541b0c706766432fdb93af59576384c61ede9e37c5013b8067d3148a7c7948"
+      },
+      "cash_usdt_spot1x_contract_equal": true,
+      "execution_timeframe": "1h",
+      "detail_timeframe": "5m",
+      "order_types": {
+        "entry": "market",
+        "exit": "market",
+        "emergency_exit": "market",
+        "force_entry": "market",
+        "force_exit": "market",
+        "stoploss": "market",
+        "stoploss_on_exchange": false
+      },
+      "data_comparison": {
+        "BTC/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "BTC/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        }
+      }
+    },
+    {
+      "account": "nfi_spot_1000_conservative",
+      "capital": 1000,
+      "cost_bps": 20,
+      "calendar_hours": 14592,
+      "native_account": true,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/plan.json",
+        "sha256": "71c4ca773254877d8196db4701ff743c39d685715c6abc4c87bdbb930dfea211"
+      },
+      "cash_usdt_spot1x_contract_equal": true,
+      "execution_timeframe": "5m",
+      "detail_timeframe": null,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "emergency_exit": "limit",
+        "force_entry": "limit",
+        "force_exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60,
+        "stoploss_on_exchange_limit_ratio": 0.99
+      },
+      "data_comparison": {
+        "BTC/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "BTC/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        }
+      }
+    },
+    {
+      "account": "nfi_spot_1000_lower",
+      "capital": 1000,
+      "cost_bps": 13,
+      "calendar_hours": 14592,
+      "native_account": true,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/plan.json",
+        "sha256": "71c4ca773254877d8196db4701ff743c39d685715c6abc4c87bdbb930dfea211"
+      },
+      "cash_usdt_spot1x_contract_equal": true,
+      "execution_timeframe": "5m",
+      "detail_timeframe": null,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "emergency_exit": "limit",
+        "force_entry": "limit",
+        "force_exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60,
+        "stoploss_on_exchange_limit_ratio": 0.99
+      },
+      "data_comparison": {
+        "BTC/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "BTC/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        }
+      }
+    },
+    {
+      "account": "nfi_spot_500_conservative",
+      "capital": 500,
+      "cost_bps": 20,
+      "calendar_hours": 14592,
+      "native_account": true,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/plan.json",
+        "sha256": "71c4ca773254877d8196db4701ff743c39d685715c6abc4c87bdbb930dfea211"
+      },
+      "cash_usdt_spot1x_contract_equal": true,
+      "execution_timeframe": "5m",
+      "detail_timeframe": null,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "emergency_exit": "limit",
+        "force_entry": "limit",
+        "force_exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60,
+        "stoploss_on_exchange_limit_ratio": 0.99
+      },
+      "data_comparison": {
+        "BTC/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "BTC/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        }
+      }
+    },
+    {
+      "account": "nfi_spot_500_lower",
+      "capital": 500,
+      "cost_bps": 13,
+      "calendar_hours": 14592,
+      "native_account": true,
+      "source_plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/plan.json",
+        "sha256": "71c4ca773254877d8196db4701ff743c39d685715c6abc4c87bdbb930dfea211"
+      },
+      "cash_usdt_spot1x_contract_equal": true,
+      "execution_timeframe": "5m",
+      "detail_timeframe": null,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "emergency_exit": "limit",
+        "force_entry": "limit",
+        "force_exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60,
+        "stoploss_on_exchange_limit_ratio": 0.99
+      },
+      "data_comparison": {
+        "BTC/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "BTC/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|5m": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        },
+        "ETH/USDT|1h": {
+          "same_calendar": true,
+          "all_fields_exact": true,
+          "max_abs_difference": {
+            "open": 0.0,
+            "high": 0.0,
+            "low": 0.0,
+            "close": 0.0,
+            "volume": 0.0
+          }
+        }
+      }
+    },
+    {
+      "account": "benchmark_1000_conservative",
+      "capital": 1000,
+      "cost_bps": 20,
+      "calendar_hours": 14592,
+      "native_account": false,
+      "evidence_type": "ANALYTICAL_BENCHMARK_REFERENCE_NOT_NATIVE_WALLET",
+      "native_execution_not_established": true
+    },
+    {
+      "account": "benchmark_1000_lower",
+      "capital": 1000,
+      "cost_bps": 13,
+      "calendar_hours": 14592,
+      "native_account": false,
+      "evidence_type": "ANALYTICAL_BENCHMARK_REFERENCE_NOT_NATIVE_WALLET",
+      "native_execution_not_established": true
+    }
+  ],
+  "execution_policy_difference": "NFI uses source limit orders on5m;wavelet market orders on15m with5m detail. Equal flat fee and native OHLCV matching are research assumptions,not equal authenticated venue fills or queue proof.",
+  "global_40perpetual_ranking_allowed": false,
+  "new_account_performance_proven": false
+}

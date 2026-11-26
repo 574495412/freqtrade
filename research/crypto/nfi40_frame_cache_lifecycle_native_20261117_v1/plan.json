@@ -1,0 +1,233 @@
+{
+  "schema": "nfi40-analyzed-cache-native-lifecycle-preparation.v1",
+  "prepared_at": "2026-11-17T16:01:50.082180+00:00",
+  "objective": "Technical native lifecycle parity of storage only; no alpha/riskpolicychange/newreturncandidate",
+  "status": "PREPARED_HELD_PRODUCER_NOT_IMPLEMENTED",
+  "native_start_authorized": false,
+  "producer_implemented": false,
+  "existing_controller_replacement_admitted": false,
+  "source_plan": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/plan.json",
+    "sha256": "7811964619044565a3927f2a4a03a43fdc8e04565b29d619d87593968650aaec"
+  },
+  "config_template": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/config_template.json",
+    "sha256": "a9b379045e3e1b86139b530a43fcb6a6c9e8d646f569601aba93813fc9d3b8e1"
+  },
+  "source_files": {
+    "NostalgiaForInfinityX8.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/sources/nfi-x8-1x/NostalgiaForInfinityX8.py",
+      "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+    }
+  },
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/data-receipts.json",
+    "sha256": "384c52dcedb9f3dd40e655d1a70687faf01e3383afecddf29c5db957dcd45c47"
+  },
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_wide_20261105/public-market-rules-40.json",
+    "sha256": "8a66b3b5a606fb7df68ac83ffe3510a6265f04ee808a7be9a0c5b7b3ff6c9a8d"
+  },
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles",
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "TRB/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "XRP/USDT:USDT",
+    "ADA/USDT:USDT",
+    "BNB/USDT:USDT",
+    "LINK/USDT:USDT",
+    "DOT/USDT:USDT",
+    "FIL/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "DYDX/USDT:USDT",
+    "LTC/USDT:USDT",
+    "BCH/USDT:USDT",
+    "ETC/USDT:USDT",
+    "GALA/USDT:USDT",
+    "SAND/USDT:USDT",
+    "UNI/USDT:USDT",
+    "IOTA/USDT:USDT",
+    "RUNE/USDT:USDT",
+    "AXS/USDT:USDT",
+    "AAVE/USDT:USDT",
+    "EGLD/USDT:USDT",
+    "ALGO/USDT:USDT",
+    "SNX/USDT:USDT",
+    "CRV/USDT:USDT",
+    "MASK/USDT:USDT",
+    "SUSHI/USDT:USDT",
+    "KSM/USDT:USDT",
+    "IOTX/USDT:USDT",
+    "MANA/USDT:USDT",
+    "NEO/USDT:USDT",
+    "GRT/USDT:USDT",
+    "TRX/USDT:USDT",
+    "CELO/USDT:USDT",
+    "SKL/USDT:USDT",
+    "THETA/USDT:USDT"
+  ],
+  "start": "2025-03-01T00:00:00Z",
+  "end": "2025-03-17T00:00:00Z",
+  "startup_candles": 800,
+  "expected_5m_rows_with_startup": 5408,
+  "capital": 1000,
+  "cost_bps_per_side": 15,
+  "timeframe": "5m",
+  "matching_timeframe": "5m",
+  "leverage": 1,
+  "max_open_trades": 6,
+  "tradable_balance_ratio": 0.99,
+  "stake_amount": "unlimited",
+  "historical_selection": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/historical_selection.json",
+    "sha256": "4381a590eab087579694bb53662f8aa58134fdfb5d057b65a2002c972c322931"
+  },
+  "fixture_contract": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_lifecycle_native_20261117_v1/fixtures.json",
+    "sha256": "7a1a32aaeadeb6357e5e8e1a0672fcb4c0c6506e240b494800109cd8be87dee6"
+  },
+  "variants": [
+    {
+      "name": "legacy_zstd_lru4",
+      "storage_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/zstd_storage.py",
+        "sha256": "d1498c52dd541bc1fe6d254e622410db894aa1bcd46f1fc42ea68a30b2fccabf"
+      },
+      "maximum_cached": 4
+    },
+    {
+      "name": "analyzed_blocks4096_lru32",
+      "storage_source": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_native_20261117_v1/frame_storage_v3.py",
+        "sha256": "890cf4b6adb251ace4e5031e2dbaebb57028590499acc34cb4df40ba0a145995"
+      },
+      "block_rows": 4096,
+      "maximum_cached": 32
+    }
+  ],
+  "native_owners": {
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/data/dataprovider.py": "3222d862fea2ca9dd566063b83845f99c421ba4f5eb20773ba5e64be68b0ba0e",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/optimize/backtesting.py": "1d45e0b34ddf30813bbdf51a20be6e8345a65b668f373f8ce2fbb6e93271b234",
+    "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/persistence/trade_model.py": "a011ca8686a205fd279ef665a2a3d5a1a4e3fb8cec9cbbac7f429eed0da85c2d"
+  },
+  "prior_technical_evidence": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_native_20261117_v1/small_probe_artifact_manifest.json",
+      "sha256": "f953696c71b27a728d0ce37f1de80903410e45b75866c07be35b02e401328f74"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_native_20261117_v1/full_width_artifact_manifest.json",
+      "sha256": "a669d5174b7ed090739dafc4101d83452dbebdf226a95f57456bc0769e6e97c6"
+    }
+  ],
+  "future_producer_contract": {
+    "actual_lifecycle": "Configuration -> pinnedBacktesting -> load_bt_data -> originaladvise_all_indicators -> originalft_advise_signals -> native_set_cached_df -> Backtesting.start -> ZIP -> explicitclear + nativecleanup",
+    "no_wallet_or_matching_stub": true,
+    "one_process_each_variant_serial": true,
+    "no_strategy_source_or_parameter_override": true,
+    "only_storage_variation": "private analyzed __cached_pairs mapping; originalDataProvidergetter/setter remainunmodified; raw/informative/indicator/row storage identical",
+    "source_callback_instrumentation": "wrappers onlyrecordbefore/after exactactualreturnandoriginalNFIprofit-targetstate; calloriginal exactlyonce; callbackerrorsinvalidatebothcomparisonandrun",
+    "order_capture": "readonly nativeorder_filled and exportedtrade snapshots; recordnon-minified creation/fill timestamps, side/qty/price/fees/funding/tag andorderstatus; no fabricatedfills",
+    "equality": "receipt_contract.py exact allsemanticrecords; every actual nativeeventtype required",
+    "canonicalization_allowlist": [
+      "isolated outputroot paths",
+      "realwallclock perf/RSS measurements",
+      "DataProvider lastrefresh wallclock excludedbetweenruns butoriginalobjectidentityverifiedwithinrun"
+    ],
+    "canonicalization_forbidden": [
+      "simulationtimestamps",
+      "signalvalues",
+      "callbackreturn",
+      "NFIprofit-targetstate",
+      "ordercreation/filldates",
+      "fees/qty/price/funding/NAV",
+      "sourcehashes"
+    ],
+    "numeric_encoding": "stable typed values with float.hex and explicitNaN tokens; framedigests requireexactdtype/index/columns/attrs/flags/freq/bitpatterns",
+    "metrics": "storagewrite/read/indicator/matchingandtracevalidationtimeseparate; totalinstrumentedwalltime isnotproductionperformance",
+    "unsupported_cache_API": "failclosed, preserveattempt, nofullframefallback",
+    "teardown": "nativecleanup islogging/dbrestoration; separate observedDPclear/reset withfreshstoreandemptinesschecks",
+    "repetition": "noautomaticretry; noextendwindoworretunefixturebasedoncoverage/return"
+  },
+  "predecessors": [
+    {
+      "plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/plan.json",
+        "sha256": "7811964619044565a3927f2a4a03a43fdc8e04565b29d619d87593968650aaec"
+      },
+      "execution_complete_path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/execution_complete.json",
+      "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1",
+      "candidate_names": [
+        "nfi40_x8_500_cost15",
+        "nfi40_x8_500_cost8"
+      ]
+    },
+    {
+      "plan": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/head_shoulders_financial_native_20261117_v3/plan.json",
+        "sha256": "38cf9e9f9452e479c212fbe092f9f03f7b1ca2ee382867822c3a30ba10d265b8"
+      },
+      "execution_complete_path": "/Users/chrise/GitHub/freqtrade/research/crypto/head_shoulders_financial_native_20261117_v3/execution_complete.json",
+      "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/head_shoulders_financial_native_20261117_v3",
+      "candidate_names": [
+        "hs40_1000_cost15",
+        "hs40_1000_cost8",
+        "hs40_500_cost15",
+        "hs40_500_cost8"
+      ]
+    }
+  ],
+  "shared_financial_lock": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/financial_worker.lock",
+  "release_files_required": [
+    "producer_freeze.json",
+    "execution_release.json"
+  ],
+  "resource_limits": {
+    "max_rss_bytes": 3221225472,
+    "minimum_system_available_bytes": 1610612736,
+    "minimum_free_disk_bytes": 5368709120,
+    "max_seconds_per_variant": 1800,
+    "workers": 1,
+    "abort_on_gap": true
+  },
+  "unresolved": [
+    "future nativeproducer/readonlycapture implementation and independentreview missing",
+    "realshortflatNFIactualentry/add/partial/fullcoverageUNKNOWN",
+    "syntheticnativefixturesnotimplemented/executed",
+    "storageimmutablecontractonallactualNFIcallbackpathsUNKNOWN",
+    "shortwindowprecisionisnativeinferredfromshortinputnotoldfullwindowtable;bothvariantsidenticalbutnofullaccountreturncomparison",
+    "fullnativehistoryparityand40assetperformanceunproven"
+  ],
+  "orders_enabled": false,
+  "new_financial_accounts_started": 0,
+  "goal_complete": false
+}

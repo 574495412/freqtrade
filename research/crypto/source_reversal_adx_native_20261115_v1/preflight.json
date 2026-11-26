@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "native_files": 595,
+  "plan": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/plan.json",
+    "sha256": "6515d918a0c9fd332648d9626b1d288620f4126db43b292b9f38aea654549404"
+  },
+  "source_exact_indicator_signal_rows": 1533568,
+  "actual_prefix_callbacks": 192,
+  "informative_availability_cells": 1408832,
+  "loaded": [
+    {
+      "strategy": "SourceReversal",
+      "timeframe": "5m",
+      "startup": 1000,
+      "roi": {
+        "0": 0.05,
+        "20": 0.04,
+        "30": 0.03,
+        "60": 0.01
+      },
+      "stoploss": -0.1,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "market",
+        "stoploss_on_exchange": false
+      },
+      "exit_profit_only": true
+    },
+    {
+      "strategy": "SourceADX",
+      "timeframe": "1h",
+      "startup": 1000,
+      "roi": {
+        "0": 0.01
+      },
+      "stoploss": -0.25,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": false,
+        "stoploss_on_exchange_interval": 60
+      },
+      "exit_profit_only": false
+    },
+    {
+      "strategy": "ReversalInADXTrend",
+      "timeframe": "5m",
+      "startup": 1000,
+      "roi": {
+        "0": 0.05,
+        "20": 0.04,
+        "30": 0.03,
+        "60": 0.01
+      },
+      "stoploss": -0.1,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "market",
+        "stoploss_on_exchange": false
+      },
+      "exit_profit_only": true
+    },
+    {
+      "strategy": "HoldEight",
+      "timeframe": "5m",
+      "startup": 1000,
+      "roi": {},
+      "stoploss": -0.99,
+      "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "market",
+        "stoploss_on_exchange": false
+      },
+      "exit_profit_only": false
+    }
+  ],
+  "financial_accounts_started": false,
+  "actual_native_source_classes": true,
+  "new_factor_analysis_calls": 0,
+  "bench_records": 0,
+  "original_preflight": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/preflight_before_precision.json",
+    "sha256": "50d9e111bc282e8cbe8c6ed3e3be6b311087ab2ffd353e40fb12c5415e371605"
+  },
+  "price_precision_note": "Source indicator/signal preflight unchanged; price tick setup is tested separately before any financial worker"
+}

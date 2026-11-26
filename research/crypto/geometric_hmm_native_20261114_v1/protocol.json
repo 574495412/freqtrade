@@ -1,0 +1,115 @@
+{
+  "frozen_utc": "2026-11-14T13:50:37.149675+00:00",
+  "before_local_models_or_account_outputs": true,
+  "source_repo": "benedictprimmer-web/regime_ensemble",
+  "source_commit": "da7f8c47eb682b6f103a4021664c48d934413be2",
+  "source_mode": "v5expanding,not defaultfullsamplefit",
+  "original_market": "SPYdaily2000--2025 price/equity zerocostreport;not crypto",
+  "local_market": "BTCUSDT perpetual2021Oct01--2026Aug31 dailyprices; continuousfundedwindow2025Jan1 00--2026Aug31 23UTC",
+  "model": {
+    "minimum_train_rows": 504,
+    "refit_rows": 252,
+    "geometric_window": 15,
+    "quantiles": [
+      0.7,
+      0.3
+    ],
+    "geometric_test_warmup": "source test-only ratio,first14rows zero as implemented;not silently carried trainprefix",
+    "HMM_states": 3,
+    "features": "source5ret20/ret5/std20sqrt252/252highDD/200MA distance;sourcepartialminimums retained",
+    "restart_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "iterations": 200,
+    "tol": 0.0001,
+    "selection": "highest training loglikelihood only; no strategy return orBIC search",
+    "state_labels": "highestret20mean momentum,lowestcrisis",
+    "test_feature_warmup": 250,
+    "filter": "source causalforward only,initialstartprobreset eachfold;notbackward/Viterbi",
+    "crisis": "Pcrisis>.5 zerosHMMcomponent only;mean canstillbe.5geometric,not automaticallcash",
+    "score_thresholds": {
+      "full": ">=.65",
+      "cash": "<=.35",
+      "mixed": ".5exposure"
+    },
+    "source_fallback": "geo/2mom and0crisis ifMarkovfit/filterthrows; recordeveryfailure",
+    "folds": "source504/252grid preserved incalendarbars;not Jan1annual",
+    "first_test_day": "allstateviews cash per sourceshift1perfold;constantgrosscontrolstays1",
+    "streaming": "allow1--4dayfeatureprefixes despite sourcefinancialsummary<5dayguard;fullfinalfolds>=5,sourcefullpredictionsunchanged"
+  },
+  "native_finances": {
+    "engine": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "classes": [
+      "SourceGeoHmmBTC",
+      "GeoOnlyBTC",
+      "HmmOnlyBTC",
+      "ConstantGrossBTC"
+    ],
+    "capital": [
+      1000,
+      500
+    ],
+    "cost_bps_per_side": [
+      15,
+      8
+    ],
+    "number_accounts": 16,
+    "native_margin": "3xcross for all,desiredgross<=.99 actualNAV from0/.5/1weights;not3xgrosspromise",
+    "position_qty": "actualnativeorder/cash/fees rounding dailyD01 target;nonfillabledeltas trackingerror,neverupsizemin",
+    "input": "D00target fromcompletedpreviousday,one native1hshift toD01;native5mdetail",
+    "source_difference": "sourcefreeconstantweightreturns/weight-changecosts notadopted;everyactualquantitychangepaysnativefee/funding/cash. No externalaccountsimulator.",
+    "risk": "native-.99disasterstop/liquidation pluscash sizing;30%historicalgate nothardstop"
+  },
+  "combinations": [
+    {
+      "name": "separate_components",
+      "actual_wallets": [
+        "GeoOnlyBTC_500",
+        "HmmOnlyBTC_500"
+      ]
+    },
+    {
+      "name": "source_plus_constant",
+      "actual_wallets": [
+        "SourceGeoHmmBTC_500",
+        "ConstantGrossBTC_500"
+      ]
+    }
+  ],
+  "gate": "bothcostspositivefulland2025/2026continuousslices,DD<=30%,>=20naturallycompletedcampaignsfull>=5eachslice;mainexceedsmatchedcontrols,combos exceedbestactual1000component. Separatecomponentcombo vs sourcecombined1000 explicitlytested. NumericpassnotPIT/OOS/deployment.",
+  "source_performance_reproduction": false,
+  "source_licence": "LICENSErequest404,no licenceclaimed;sourcecapturedlocally mathonly,no sourcefinancialengine",
+  "orders_deployment_services": false,
+  "input_records": [
+    {
+      "parent": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BTC_USDT_USDT-1d-futures.feather",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/candles/futures/BTC_USDT_USDT-1d-futures.feather",
+      "sha256": "52494e0b637b65d9a5ad53ac8b9c1385149645ba001d124460f9d0b2f15405be"
+    },
+    {
+      "parent": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+      "sha256": "63d02c11dddd890a19a57122beaaf68566264ac03fc7f2deb145de113baa36fd"
+    },
+    {
+      "parent": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BTC_USDT_USDT-5m-futures.feather",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/candles/futures/BTC_USDT_USDT-5m-futures.feather",
+      "sha256": "1b2aa3459498da24b5db7da63bd561283e6103b92af93c874e2238536637bb97"
+    },
+    {
+      "parent": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    {
+      "parent": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-funding_rate.feather",
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "ae262270503a4b0b4ff4a0f2d8962524aab3b330537241ddabe6b2d3e7406e44"
+    }
+  ],
+  "no_rescue": "fixedsourceparams/data/pool/lag/costs/gates/weights; retainfailure."
+}

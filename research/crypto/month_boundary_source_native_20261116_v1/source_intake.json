@@ -1,0 +1,78 @@
+{
+  "github": {
+    "TDZNBEER": {
+      "repository": "TDZNBEER/crypto-backtest-lab",
+      "commit": "8fc167de4b82fc03feb3b94c4eda4f9023d2fb25",
+      "license": "MIT",
+      "fully_read": [
+        "LICENSE",
+        "run_turnofmonth.py",
+        "TURNOFMONTH_FINDINGS.md"
+      ],
+      "read_sections": {
+        "README.md": "ownership,accuracy,costs,cache/DEMO fallback,data limitations"
+      },
+      "calendar_default": [
+        3,
+        2
+      ],
+      "author_negative_verdict_preserved": true,
+      "pooled18not_reproduced": true
+    },
+    "F1DevBin": {
+      "repository": "f1devbin/Crypto-Research-Labs",
+      "commit": "9d8b7f1c4ff667d5532687a837162c5b9559fe48",
+      "license": "MIT",
+      "fully_read": [
+        "LICENSE",
+        "hypotheses/H-016.yaml",
+        "src/crl/engine/rules.py",
+        "src/crl/engine/backtest.py"
+      ],
+      "read_sections": {
+        "src/crl/engine/protocol.py": "timing-rule call and result wiring",
+        "README.md": "method/data/limits and result status"
+      },
+      "calendar_default": [
+        2,
+        3
+      ],
+      "source_original_market": "BTCUSDT",
+      "local_ETH_extension": true,
+      "author_negative_verdict_preserved": true
+    }
+  },
+  "selected_git_blobs": 10,
+  "source_calendar_functions_executed_only": [
+    "TDZNis_tom",
+    "TDZNlast_dom",
+    "F1turn_of_month"
+  ],
+  "source_financial_engine_executed": false,
+  "original_article": {
+    "url": "https://valuelytica.substack.com/p/end-of-month-effect-in-bitcoin",
+    "read_scope": "original HTML narrative;not image performance table",
+    "instrument": "BTCE.DE",
+    "rule": "last5tradingdays / optionallyfirst15daytrend",
+    "github_rule_is_different": true,
+    "article_result_reproduced": false
+  },
+  "academic_context": {
+    "url": "https://www.inderscience.com/info/inarticle.php?artid=129336",
+    "read_scope": "publisher abstract/metadata only",
+    "full_paper_read": false,
+    "optimized_fourday_windows_not_transplanted": true
+  },
+  "social": {
+    "directed_search": true,
+    "new_complete_original_X_post": false,
+    "new_video_watched": false,
+    "new_full_transcript": false,
+    "new_complete_rules_admitted": false,
+    "unrelated_search_results_not_counted": true
+  },
+  "whole_repositories_audited": false,
+  "new_accepted_independent_alphas": 0,
+  "new_factor_analysis": 0,
+  "new_vibe_bench": 0
+}

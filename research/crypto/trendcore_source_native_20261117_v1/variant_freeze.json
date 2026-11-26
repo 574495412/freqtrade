@@ -1,0 +1,19 @@
+{
+  "frozen_at": "2026-11-16T20:23:29.260047+00:00",
+  "initial_protocol_sha256": "766f6918a66e6aab076b2ba09bece28133c9afb982b8c58ef8f4982bacec0d36",
+  "selected_variant": "trendcore_spot.target_weights(px1h,oi=None),default ASSET_VOL=.45,TARGET_VOL=.40,BAND=.05",
+  "default_oi_version": "NOT_ADMITTED:365dayOIprovenance/known_at not independently verified;do not claim default reproduction",
+  "why_before_performance": "Published optional noOI mode selected on input-contract availability,not local returns;no local performance computed",
+  "warmup": "2022-10-01T00:00Z to full2025-01-01 evaluation;fullsource2017/2019initialization not replicated",
+  "clock": "Each completed sixhour group of hourly OPEN-labelled candles becomes known at group_start+6hours;execute at next native1h candle OPEN after previous signal candle closes",
+  "risk_signal_dependency": "Source target_weights internally uses an unscaled virtual reference return solely as a volatility indicator. Independent local implementation may compute this signal component;source _backtest/backtest/run/stats are never invoked. This is an explicit prefinancial clarification of initial no-source-simulator requirement;only native Freqtrade accounts establish economic performance.",
+  "native_contract": "same pinned engine,snapshot rules,BTC/ETH spot,1h+5m detail,1000/actual500wallets,20/13bps per side,1%cash reserve",
+  "execution_band": "At sixhour execution compare target exposure with actual marked native quantity/NAV;abschange<=.05 keeps quantity exceptzero exits;venue minimums respected. Research adaptation,not exact source idealized band portfolio.",
+  "combinations": "Predeclared static separate actual500wallet sleeves:50%new+50%NFIspot and50%new+50%constantthirds;sum actual NAV,never scaled1000;no intersleeve transfers",
+  "historical_rule_limit": "snapshotmodel not certified historicalvenuecontract;cannotclearoriginal40",
+  "source_selection": "author headlines already seen;not independent OOS",
+  "source_code_license": "no top-level LICENSE path in pinned tree;READMEdata license separate;no redistribution/live admission",
+  "new_local_financial_results_seen": false,
+  "orders_enabled": false,
+  "production_eligible": false
+}

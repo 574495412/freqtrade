@@ -1,0 +1,260 @@
+{
+  "passed": true,
+  "case_count": 27,
+  "cases": [
+    {
+      "case": "original_source_AST_and_inherited_geometry_identity",
+      "passed": true,
+      "nodes": [
+        {
+          "source": "rolling_window.py",
+          "name": "rw_top",
+          "original_ast_sha256": "ccbc0d99c9ed844581760b34bbdb206296eea8600577636ef8d2698393aa9fda",
+          "source_line": 6,
+          "source_end_line": 18
+        },
+        {
+          "source": "rolling_window.py",
+          "name": "rw_bottom",
+          "original_ast_sha256": "48dbc5a0f61ddceac0e2fef7a4fe65d3053eb47c0a29c459fdc25edf40ef5ed1",
+          "source_line": 21,
+          "source_end_line": 33
+        },
+        {
+          "source": "head_shoulders.py",
+          "name": "HSPattern",
+          "original_ast_sha256": "303a2cd94d31477b2106f545477fdcd464e199f8e1c1e46b185c8c5233904006",
+          "source_line": 11,
+          "source_end_line": 41
+        },
+        {
+          "source": "head_shoulders.py",
+          "name": "compute_pattern_r2",
+          "original_ast_sha256": "531f739ba097b839037d92853c16a1d9f159654db3615ceb36abe56e713333ea",
+          "source_line": 43,
+          "source_end_line": 71
+        },
+        {
+          "source": "head_shoulders.py",
+          "name": "check_hs_pattern",
+          "original_ast_sha256": "8fa4baa922c0e91487a4c32c66f1c79a5a6006e84410ececdfa1a6a33c2948c4",
+          "source_line": 74,
+          "source_end_line": 175
+        },
+        {
+          "source": "head_shoulders.py",
+          "name": "check_ihs_pattern",
+          "original_ast_sha256": "13fcddf0dae0ddcb243aea6ab082bc37cf34e106a0a4b18971de9bf18c1b9ad3",
+          "source_line": 178,
+          "source_end_line": 276
+        },
+        {
+          "source": "head_shoulders.py",
+          "name": "find_hs_patterns",
+          "original_ast_sha256": "ac138e5cd7cb93cade9b3ee4d031467f30da2ce54b2e859460f935180c1b3b32",
+          "source_line": 279,
+          "source_end_line": 358
+        },
+        {
+          "source": "head_shoulders.py",
+          "name": "get_pattern_return",
+          "original_ast_sha256": "5e1563bac78ab1728db4c5006da9181dc42e22afff1044ea28c402e80f1a4c48",
+          "source_line": 361,
+          "source_end_line": 393
+        }
+      ],
+      "original_event_function_module": "HeadShouldersInputs"
+    },
+    {
+      "case": "native_trim_and_once_shift_00_event_lost_01_event_exact",
+      "passed": true,
+      "actual_owner_method": true
+    },
+    {
+      "case": "closed_hour_visibility_exact_initial_repeat_and_late_rejection",
+      "passed": true
+    },
+    {
+      "case": "market_rejected",
+      "passed": true
+    },
+    {
+      "case": "nonGTC_rejected",
+      "passed": true
+    },
+    {
+      "case": "invalid_tag_rejected",
+      "passed": true
+    },
+    {
+      "case": "source_self_terminal_mask",
+      "passed": true
+    },
+    {
+      "case": "existing_trade_rejected",
+      "passed": true
+    },
+    {
+      "case": "same_clock_closed_rejected",
+      "passed": true
+    },
+    {
+      "case": "long_strict_target_and_close_clock",
+      "passed": true
+    },
+    {
+      "case": "long_strict_stop_and_close_clock",
+      "passed": true
+    },
+    {
+      "case": "short_strict_target_and_close_clock",
+      "passed": true
+    },
+    {
+      "case": "short_strict_stop_and_close_clock",
+      "passed": true
+    },
+    {
+      "case": "break_plus_width_minus_one_expiry",
+      "passed": true
+    },
+    {
+      "case": "future_base_rows_ignored_exact_prefix",
+      "passed": true
+    },
+    {
+      "case": "reject_merged_conflict",
+      "passed": true
+    },
+    {
+      "case": "reject_merged_gap",
+      "passed": true
+    },
+    {
+      "case": "reject_merged_stale",
+      "passed": true
+    },
+    {
+      "case": "reject_merged_future",
+      "passed": true
+    },
+    {
+      "case": "reserved_suffix_collision",
+      "passed": true
+    },
+    {
+      "case": "native_1000rows_83h20m_sequential_progress",
+      "passed": true,
+      "callbacks": 102,
+      "max_rows": 1000
+    },
+    {
+      "case": "skipped_83h_history_fails_closed",
+      "passed": true
+    },
+    {
+      "case": "stale_hour_callback_independent_error",
+      "passed": true
+    },
+    {
+      "case": "first_source_decision_and_delayed_limit_requests_separate",
+      "passed": true,
+      "observations": [
+        {
+          "status": "SOURCE_DECISION_OBSERVED",
+          "event_id": "synthetic_1738404000000000000_True",
+          "pair": "BTC/USDT:USDT",
+          "at": "2025-02-01 12:00:00+00:00",
+          "source_reason": "hs_source_target",
+          "source_available": "2025-02-01 12:00:00+00:00",
+          "fill_status": "UNKNOWN"
+        }
+      ],
+      "requests": [
+        {
+          "status": "EXIT_REQUEST_CONFIRMED",
+          "event_id": "synthetic_1738404000000000000_True",
+          "pair": "BTC/USDT:USDT",
+          "at": "2025-02-01 12:00:00+00:00",
+          "reason": "hs_source_target",
+          "order_type": "limit",
+          "time_in_force": "GTC",
+          "source_available": "2025-02-01 12:00:00+00:00",
+          "request_delay_seconds": 0.0,
+          "fill_status": "UNKNOWN"
+        },
+        {
+          "status": "EXIT_REQUEST_CONFIRMED",
+          "event_id": "synthetic_1738404000000000000_True",
+          "pair": "BTC/USDT:USDT",
+          "at": "2025-02-01 12:05:00+00:00",
+          "reason": "hs_source_target",
+          "order_type": "limit",
+          "time_in_force": "GTC",
+          "source_available": "2025-02-01 12:00:00+00:00",
+          "request_delay_seconds": 300.0,
+          "fill_status": "UNKNOWN"
+        },
+        {
+          "status": "EXIT_REQUEST_CONFIRMED",
+          "event_id": "synthetic_1738404000000000000_True",
+          "pair": "BTC/USDT:USDT",
+          "at": "2025-02-01 12:10:00+00:00",
+          "reason": "hs_source_target",
+          "order_type": "limit",
+          "time_in_force": "GTC",
+          "source_available": "2025-02-01 12:00:00+00:00",
+          "request_delay_seconds": 600.0,
+          "fill_status": "UNKNOWN"
+        }
+      ]
+    },
+    {
+      "case": "native_entry_timeout_3m_before_source_callback",
+      "passed": true
+    },
+    {
+      "case": "native_exit_timeout_2m_before_source_callback",
+      "passed": true
+    },
+    {
+      "case": "native_noindex_empty_and_only5m_analyzed_cache",
+      "passed": true
+    }
+  ],
+  "source_metadata": "synthetic, not market-recognized patterns",
+  "actual_native_interfaces": [
+    "DataProvider",
+    "IStrategy.ft_bot_start",
+    "ft_advise_signals",
+    "Backtesting._get_ohlcv_as_lists unbound data conversion only",
+    "IStrategy.ft_check_timed_out",
+    "detached LocalTrade",
+    "detached unfilled Order"
+  ],
+  "backtesting_constructed": false,
+  "backtesting_start_called": false,
+  "wallet_constructed": false,
+  "orders_filled": 0,
+  "financial_accounts": 0,
+  "economic_result": "UNKNOWN",
+  "full_lifecycle_admission": false,
+  "future_required": [
+    "actual entry cancellation before fill in separately admitted native run",
+    "read-only raw Order creation/fill capture",
+    "LIMIT fill/delay/cost reconciliation",
+    "complete account native runner/resource lock/root release",
+    "independent full account audit"
+  ],
+  "started_by": ".venv-paper/bin/python -B probe_interfaces.py",
+  "finished_at": "2026-11-17T17:19:38.472363+00:00",
+  "seconds": 2.9863252089126036,
+  "frozen_files_before": 611,
+  "frozen_files_after": 611,
+  "implementation_freeze_sha256": "ca780607740e3a4cdabf2a0bd9cc669959a877731f35f0c55ebc636b90ed5b18",
+  "resources": {
+    "peak_rss_bytes": 299548672,
+    "free_disk_bytes": 18063360000
+  },
+  "guards": "Backtesting init/start/backtest, Wallets/Exchange init, network connect"
+}

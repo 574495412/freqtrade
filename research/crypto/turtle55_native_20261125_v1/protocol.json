@@ -1,0 +1,13 @@
+{
+  "hypothesis": "A 55-day long-short breakout with favorable-direction additions captures more large net wins without diluting NFI's full-window net account return.",
+  "source": "https://www.tradingblox.com/originalturtles/originalturtlerules.pdf",
+  "source_sections": ["Volatility", "System 2 Entry", "Adding Units", "Stop Placement", "System 2 Exit"],
+  "entry": "Strict completed UTC daily close beyond the high or low of the previous 55 days. Submit a native market order at the next UTC midnight. No prior-trade filter.",
+  "exit": "Strict completed close beyond the opposite 20-day high/low, executed the next UTC midnight. Fixed absolute 2N native protection from the last actual entry fill. No ROI target.",
+  "volatility": "Wilder true range initialized with its first 20-day mean. Freeze N at the entry decision for the campaign.",
+  "sizing": "1% of native total stake balance per N move, bounded by 1/4 of the native proposed initial stake and immediate venue/wallet limits. The first actual filled base quantity defines subsequent equal-quantity units, subject to live-at-clock historical wallet and venue constraints.",
+  "additions": "At most three additions. Both the last completed daily close and current midnight open must be at least 0.5 frozen N in the favorable direction from the last actual fill. Skip additions in the presence of an exit, a pending order, or insufficient available stake. An additional fill moves the whole-position protective stop to 2N from that fill.",
+  "adaptation": "Close-confirmed entries, additions and channel exits rather than the source's intraday trigger. One addition at most per UTC day. One native stop per campaign rather than per-unit gap-specific stops. Six slot and 1x cash bounds substitute for contract group limits. Uses the existing historical conditional precision rules, pinned native funding and 1h with 5m detail. Not a literal historical Turtle reproduction.",
+  "account_contract": "Same original ordered 40 Binance USDT perpetuals. UTC 2025-01-01 00:00 to 2026-08-31 23:00. 1x and six slots per wallet. Run 500 and 1000 USDT independent accounts with 15 and 8 bps per side. No orders enabled.",
+  "comparison": "Compare complete 1000 USDT variant accounts against original NFI1000 and frozen Donchian60. Compare actual 500 USDT variant + audited 500 USDT NFI, no rebalancing, to NFI1000. Require both costs higher net return, no greater marked drawdown, and positive returns in both consecutive calendar sections. Keep open marks, funding, failures, and historical-rule gaps. This same-window test is exploratory because NFI and Donchian60 outcomes were already known. No hyperopt or weight search."
+}

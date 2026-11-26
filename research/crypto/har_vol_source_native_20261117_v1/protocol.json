@@ -1,0 +1,48 @@
+{
+  "frozen_at": "2026-11-16T21:22:07.138760+00:00",
+  "source_commit": "80059675020e299e46eeed2a6a86b4a2eea1a9a7",
+  "hypothesis": "PublishedcanonicalHAR-RV730originexpandingOLS30dayrefitwithtrainonlyDuanSmearingmayimproveactualcostedvoltargetaccountversusnaiveRVandcomplementtrend;forecastaccuracyaloneisnotreturnproof",
+  "selected_models": [
+    "HAR",
+    "Naive"
+  ],
+  "source_sizing": {
+    "target_annual_vol": 0.4,
+    "cap": 1.0,
+    "band": 0.0,
+    "floor": 0.0
+  },
+  "source_features": "Sourceexactdaily_featuresfromraw1m;5minRV,7/30daymeans;sourceempty5mincloseffillpreservedasexplicitmodelimputation,notobservedzero;dropdaysmissing>10%minutes",
+  "training_contract": "SourcefullMLpast-featurevalidmaskretainedwhereknown;trainrows<swithtargetsrealisedatendday_s;forecasteligibilityonlyknownfeatures,nofuturetargetpresencefilter;explicitnativeintegrationextension",
+  "source_history_difference": "Localrawhistory2022Oct01notauthor2019;same730/30method,butdifferenttraininginitializationandnotauthorperformanceaccountreproduction",
+  "data_start": "2022-10-01",
+  "data_end": "2026-08-31",
+  "acquire_raw": "BTC/ETHspotmonthly1m94zipswithCHECKSUM;noexistingUMsubstitution;sourcefeaturecalculationallowed,sourceaccountbacktestforbidden",
+  "native_contract": "Fixedvendorc051e906,spotBTCETH2slots,1000andactual500wallets,20/13bpeachside,1h+5mdetail,Jan2025..Aug2026T23UTC,zero-interestcash",
+  "allocation": "Eachassetindependentpublishedwcap1scaledtohalfportfolio;99%actualmarkednativeNAV;dailydecisionDusesforecastfromD-1knownclose;executeD01UTCsamepublishedlocalclockasUP;noextraadhoctradingband",
+  "combinations": [
+    "actual500HAR+sealed500TrendCoreNoOI",
+    "actual500Naive+sealed500TrendCoreNoOI"
+  ],
+  "combination_contract": "sumactualwallets,nocrosssubsidyorscale1000",
+  "financial_gate": "Bothfees,fullandbothcontinuousannualspositive,DD<=30pct,Sharpe>.5,HARmustbeatNaive+TrendCore+NFIspot+CRP+buyhold+cash;fixedcombinationsbeatbestmatched1000withoutDDworsening",
+  "prediction_scope": "RecordQLIKE/MSEversusNaiveaftercompleteoutcomesonly;notfactorICoracceptedalpha,notindependentOOS",
+  "known_results": "Authorheadlineforecasts/negativeprofitconclusionandexistingcohortresultsknown;nonewlocalHARreturnseen",
+  "no_retuning": true,
+  "resource": {
+    "max_download_workers": 3,
+    "max_financial_workers": 1,
+    "min_free_before_financial_bytes": 1073741824,
+    "no_financial_environment_installs": true
+  },
+  "inputs": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/trendcore_source_native_20261117_v1/artifact_manifest.json": "21b148e72c52e2fa6ae209ac830954077721c5cf3f6bf55c40b7ebeb5d8b5d22",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_carry_matched_native_20261115_v1/artifact_manifest.json": "cde13b4e5666c7663de749ff1004e21677bb0f37e076ae07dc0624097492c6f7",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/universal_allocation_native_20261116_v1/artifact_manifest.json": "317c7ef2a9c4987bbda1e87d82d84d316d3f68b7f3b3097452cfa3497c8e1f66",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/simple_reversion_native_20261117_v1/artifact_manifest.json": "73712cbcc9039b5b76ef5d201695c68e66f1c6b471cd886d4246f43b3f9ed18d"
+  },
+  "new_financial_accounts": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

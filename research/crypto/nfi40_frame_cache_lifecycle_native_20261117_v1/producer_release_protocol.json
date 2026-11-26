@@ -1,0 +1,52 @@
+{
+  "schema": "nfi40-cache-lifecycle-producer-release.v1",
+  "status": "IMPLEMENTED_FOR_REVIEW_HELD_NO_EXECUTION",
+  "economic_plan_changed": false,
+  "existing_11_preparation_files_changed": false,
+  "root_release_created": false,
+  "native_accounts_started": 0,
+  "official_owner": "Pinned vendor freqtrade c051e9065c5b677f03817dd1f83cb980af1ed684 Configuration and Backtesting.start; local instrumentation and storage are research extensions",
+  "new_files": ["capture_native.py", "native_producer.py", "execute_pair.py", "test_producer_objects.py", "freeze_producer.py", "producer_release_protocol.json", "PRODUCER.md"],
+  "implemented_path": "One fresh native subprocess per fixed storage variant, serial; unchanged original NFI X8, ordered40, 1000 USDT, 15bp, 1x, 6slots, 2025-03-01 through 2025-03-16; native loading, indicators, signals, matching, funding, callbacks, trades, ZIP and cleanup",
+  "storage_only_difference": "Same sealed old500 raw/indicator/LazyTrim/RowBlocks adapter; replace only private analyzed mapping and its clear attachment with sealed 4096row/32block mapping",
+  "source_clock_precision_and_funding": "Unchanged native simulation clocks, short-window get_pair_precision, funding and order callbacks. No monthly-history correction, owner changes or historical-return certification",
+  "capture": {
+    "scope": "Actual original callbacks called exactly once; actual owner order transitions; native DP return slices; original target cache and custom-data values; hourly and final wallet; full trades; observed reset, clear and cleanup",
+    "exact_values": "float.hex and original raw LocalTrade annotation fields/Order mapped fields supplement rounded native JSON; simulation times remain exact",
+    "bounded_trace": "Full semantic payload in append-only JSONL; compact section lists retain SHA256 plus actual callback/event/phase coverage keys; compare all section descriptors and full JSONL SHA across completed processes",
+    "lastrefresh": "Value checked within each worker; original object identity additionally checked for blocks; real-wallclock refresh is excluded from between-worker equality as allowed by frozen plan",
+    "custom_data": "trade_id, cd_key, cd_type and serialized cd_value all retained. DB bookkeeping created_at/updated_at wallclocks excluded; fixed NFI reads get_custom_data values, not these metadata fields",
+    "mutation_policy": "Any source callback changing a borrowed analyzed-frame read is an error; block flush also checks cached immutable chunks; unknown trace value/API fails closed",
+    "error_policy": "Callback error retained and rethrown; outer native phase and final check abort even where native safe-wrapper suppresses it",
+    "resource_scope": "3GiB worker RSS, 1.5GiB system available, 5GiB free disk, 1800seconds; checks before native constructors and every250ms; retain actual abort/failure/terminal process receipts",
+    "not_performance_claim": "Instrumented trace time is measured separately; no production speedup or full-account parity from this preparation"
+  },
+  "execution_gate": {
+    "unchanged": "admission.py remains sealed and mandatory before output, worker native imports/constructors and lock acquisition",
+    "predecessors": "Both original NFI500 accounts and all four HS v3 accounts must have actual successful process/result completion receipts",
+    "release": "Root-reviewed execution_release must bind exact plan and producer_freeze hashes, explicitly authorize technical native start and prohibit existing-controller replacement",
+    "locks": "After release and predecessor validation, obtain same original shared financial lock plus study technical lock; revalidate release/dependencies under lock; hold through native start/export/cleanup",
+    "terminal": "Worker cannot claim its own future exit; controller Popen.wait observes code then binds receipt SHA. No timeout, silence or lockfile is terminal evidence",
+    "failure": "Preserve attempt and stop; no retry, widened window, changed parameters or old-output reuse"
+  },
+  "technical_recovery_branch": {
+    "status": "NOT_IMPLEMENTED_NOT_AUTHORIZED",
+    "known_circular_dependency": "If original NFI500 really fails its resource guard, the frozen success-only predecessor gate prevents this resource-repair technical replay. This implementation does not bypass that gate",
+    "minimum_future_requirements": [
+      "Separate versioned recovery protocol and producer freeze; preserve old gate and failed attempts",
+      "Bind original controller and worker identities, psutil create_time/status evidence and actual terminal failure process receipts; elapsed time or a lock file is insufficient",
+      "Both original controller and worker must be observed terminal; no running-process stop or replacement is implied",
+      "Root explicitly binds exact failure receipts plus producer freeze and releases only the already fixed short technical control",
+      "Acquire the shared worker lock and recheck evidence under it before any native constructor/start",
+      "Do not alter the original financial contract or restart a long account"
+    ]
+  },
+  "validation_limits": {
+    "permitted_now": "Static checks and detached official DataProvider/LocalTrade/Order interface fixtures; zero native Backtesting/Wallet/Exchange constructor or start, no shared lock or release",
+    "actual_lifecycle_coverage": "UNKNOWN until real future native runs observe entry, position_add, partial_exit, full_exit and all required callbacks/clear/cleanup; missing event means NOT_ADMITTED",
+    "supplemental_synthetic_native_fixture_producer": "NOT_IMPLEMENTED; frozen fixtures.json remains specification, not executed proof",
+    "full_window_financial_parity": false,
+    "running_controller_replacement_admitted": false,
+    "income_claims": false
+  }
+}

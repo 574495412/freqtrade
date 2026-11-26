@@ -1,0 +1,307 @@
+{
+  "actual_registry_views": 3,
+  "global_registry_modified": false,
+  "actual_factor_analysis_calls": 9,
+  "unique_decision_dates": 86,
+  "assets": 8,
+  "independent_ic_rows_including_reused_splits": 516,
+  "independent_group_nav_cells": 2064,
+  "maximum_group_nav_error": 1.5543122344752192e-15,
+  "label": "gross nativefutures01:00-to+168h01:00OPEN simple return; nofees/funding; nonoverlapping; completeendpointsonly",
+  "source_factor_admitted_to_financial_stage": false,
+  "receipts": [
+    {
+      "factor": "resmom14",
+      "split": "all",
+      "observations": 86,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.013843,
+        "ic_std": 0.357832,
+        "ir": 0.0387,
+        "ic_positive_ratio": 0.4884,
+        "ic_count": 86,
+        "n_groups": 4,
+        "long_short_spread": 0.1622,
+        "group_final_equity": {
+          "Group_1": 0.4003,
+          "Group_2": 0.6705,
+          "Group_3": 0.6802,
+          "Group_4": 0.5626
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1/predictive/resmom14/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "resmom14",
+      "split": "calendar2025",
+      "observations": 53,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.057951,
+        "ic_std": 0.34882,
+        "ir": 0.1661,
+        "ic_positive_ratio": 0.566,
+        "ic_count": 53,
+        "n_groups": 4,
+        "long_short_spread": 0.3125,
+        "group_final_equity": {
+          "Group_1": 0.6068,
+          "Group_2": 1.0663,
+          "Group_3": 0.7836,
+          "Group_4": 0.9193
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1/predictive/resmom14/calendar2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "resmom14",
+      "split": "calendar2026_through_aug",
+      "observations": 33,
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.056999,
+        "ic_std": 0.366056,
+        "ir": -0.1557,
+        "ic_positive_ratio": 0.3636,
+        "ic_count": 33,
+        "n_groups": 4,
+        "long_short_spread": -0.0478,
+        "group_final_equity": {
+          "Group_1": 0.6598,
+          "Group_2": 0.6289,
+          "Group_3": 0.868,
+          "Group_4": 0.612
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1/predictive/resmom14/calendar2026_through_aug/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "raw14",
+      "split": "all",
+      "observations": 86,
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.016334,
+        "ic_std": 0.385136,
+        "ir": -0.0424,
+        "ic_positive_ratio": 0.5,
+        "ic_count": 86,
+        "n_groups": 4,
+        "long_short_spread": 0.1245,
+        "group_final_equity": {
+          "Group_1": 0.4194,
+          "Group_2": 0.7065,
+          "Group_3": 0.638,
+          "Group_4": 0.5438
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1/predictive/raw14/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "raw14",
+      "split": "calendar2025",
+      "observations": 53,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.042677,
+        "ic_std": 0.38791,
+        "ir": 0.11,
+        "ic_positive_ratio": 0.566,
+        "ic_count": 53,
+        "n_groups": 4,
+        "long_short_spread": 0.3779,
+        "group_final_equity": {
+          "Group_1": 0.5455,
+          "Group_2": 1.0895,
+          "Group_3": 0.8468,
+          "Group_4": 0.9234
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1/predictive/raw14/calendar2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "raw14",
+      "split": "calendar2026_through_aug",
+      "observations": 33,
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.111111,
+        "ic_std": 0.366672,
+        "ir": -0.303,
+        "ic_positive_ratio": 0.3939,
+        "ic_count": 33,
+        "n_groups": 4,
+        "long_short_spread": -0.1799,
+        "group_final_equity": {
+          "Group_1": 0.7689,
+          "Group_2": 0.6484,
+          "Group_3": 0.7534,
+          "Group_4": 0.589
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1/predictive/raw14/calendar2026_through_aug/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "lowvol30",
+      "split": "all",
+      "observations": 86,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.178848,
+        "ic_std": 0.477488,
+        "ir": 0.3746,
+        "ic_positive_ratio": 0.6628,
+        "ic_count": 86,
+        "n_groups": 4,
+        "long_short_spread": 0.5379,
+        "group_final_equity": {
+          "Group_1": 0.3468,
+          "Group_2": 0.429,
+          "Group_3": 0.7631,
+          "Group_4": 0.8847
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1/predictive/lowvol30/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "lowvol30",
+      "split": "calendar2025",
+      "observations": 53,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.206199,
+        "ic_std": 0.501631,
+        "ir": 0.4111,
+        "ic_positive_ratio": 0.6604,
+        "ic_count": 53,
+        "n_groups": 4,
+        "long_short_spread": 0.6255,
+        "group_final_equity": {
+          "Group_1": 0.5202,
+          "Group_2": 0.6813,
+          "Group_3": 1.112,
+          "Group_4": 1.1457
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1/predictive/lowvol30/calendar2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "lowvol30",
+      "split": "calendar2026_through_aug",
+      "observations": 33,
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.134921,
+        "ic_std": 0.439859,
+        "ir": 0.3067,
+        "ic_positive_ratio": 0.6667,
+        "ic_count": 33,
+        "n_groups": 4,
+        "long_short_spread": 0.1055,
+        "group_final_equity": {
+          "Group_1": 0.6667,
+          "Group_2": 0.6298,
+          "Group_3": 0.6863,
+          "Group_4": 0.7722
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/residual_momentum_source_native_20261114_v1/predictive/lowvol30/calendar2026_through_aug/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    }
+  ],
+  "historical_funded_accounts": 0,
+  "accepted_new_alphas": 0,
+  "independent_oos_certified": false,
+  "group_curves_are_funded_returns": false,
+  "deduplication": [
+    {
+      "peer": "raw14",
+      "shared_assets": 8,
+      "observations": 86,
+      "mean_abs_pearson": 0.8882720586140476,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "lowvol30",
+      "shared_assets": 8,
+      "observations": 86,
+      "mean_abs_pearson": 0.3359266212431449,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "edge30",
+      "shared_assets": 6,
+      "observations": 86,
+      "mean_abs_pearson": 0.39970869059067277,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "amihud30",
+      "shared_assets": 6,
+      "observations": 86,
+      "mean_abs_pearson": 0.3299757905200396,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "lowvol63",
+      "shared_assets": 6,
+      "observations": 86,
+      "mean_abs_pearson": 0.4001728429059883,
+      "duplicate_gt_99": false
+    }
+  ]
+}

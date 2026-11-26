@@ -1,0 +1,524 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "schema": "freqtrade.native.positioning-month.v1",
+  "registered_at": "2026-11-14T14:54:31.231518+00:00",
+  "source_strategy_allocation_study": true,
+  "not_new_factor_screen": true,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+    "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+  },
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT"
+  ],
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/data_receipts.json",
+    "sha256": "4e387749da16c80171f84dc0a0872ea88b486a33fabe642a4b6116a8f60873e6"
+  },
+  "marks": {
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    "ETH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+    },
+    "SOL/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/candles/futures/SOL_USDT_USDT-1h-mark.feather",
+      "sha256": "c9e5089e38745a2f2d168b1190c9d866ca915225e2ffa22b52a1b2f7382e895b"
+    }
+  },
+  "candidates": [
+    {
+      "name": "LowCrowdMonth_1000",
+      "strategy": "LowCrowdMonth",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/LowCrowdMonth_1000.json",
+        "sha256": "4ce7690bc7916f60643760b6438bc67f1fbb4901ec965edb8c22ca164a28fc40"
+      },
+      "source_files": {
+        "PositioningPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/PositioningPortfolio.py",
+          "sha256": "3ab6926b431420bfb55de83fd337375a93e29d3cca0f6b55737aab43c0de66ef"
+        },
+        "Signals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/Signals.py",
+          "sha256": "bfe9a240b7db28e89cbd3e39b1e6e8bb8245c74e59d12558705cf9961f486e03"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    },
+    {
+      "name": "LowCrowdMonth_500",
+      "strategy": "LowCrowdMonth",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/LowCrowdMonth_500.json",
+        "sha256": "7570db9219edeaf2c4789bea62e77b155c04083d34d9286c235ceeb9c3f13211"
+      },
+      "source_files": {
+        "PositioningPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/PositioningPortfolio.py",
+          "sha256": "3ab6926b431420bfb55de83fd337375a93e29d3cca0f6b55737aab43c0de66ef"
+        },
+        "Signals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/Signals.py",
+          "sha256": "bfe9a240b7db28e89cbd3e39b1e6e8bb8245c74e59d12558705cf9961f486e03"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    },
+    {
+      "name": "LowPositionMonth_1000",
+      "strategy": "LowPositionMonth",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/LowPositionMonth_1000.json",
+        "sha256": "024521e74a17513ef02d07c0bfadb683a550e77c00e74d4bafb34d5d45864cba"
+      },
+      "source_files": {
+        "PositioningPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/PositioningPortfolio.py",
+          "sha256": "3ab6926b431420bfb55de83fd337375a93e29d3cca0f6b55737aab43c0de66ef"
+        },
+        "Signals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/Signals.py",
+          "sha256": "bfe9a240b7db28e89cbd3e39b1e6e8bb8245c74e59d12558705cf9961f486e03"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    },
+    {
+      "name": "LowPositionMonth_500",
+      "strategy": "LowPositionMonth",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/LowPositionMonth_500.json",
+        "sha256": "b5ee36a31fcfff93ab08bc47125f0334690412f5e7f838a441d0acb27e7dbe64"
+      },
+      "source_files": {
+        "PositioningPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/PositioningPortfolio.py",
+          "sha256": "3ab6926b431420bfb55de83fd337375a93e29d3cca0f6b55737aab43c0de66ef"
+        },
+        "Signals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/Signals.py",
+          "sha256": "bfe9a240b7db28e89cbd3e39b1e6e8bb8245c74e59d12558705cf9961f486e03"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    },
+    {
+      "name": "ConstantPositioningControl_1000",
+      "strategy": "ConstantPositioningControl",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/ConstantPositioningControl_1000.json",
+        "sha256": "d729a1e0742174d9afb8ed5da43f9ace195ab9359d330b16374969bb99894141"
+      },
+      "source_files": {
+        "PositioningPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/PositioningPortfolio.py",
+          "sha256": "3ab6926b431420bfb55de83fd337375a93e29d3cca0f6b55737aab43c0de66ef"
+        },
+        "Signals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/Signals.py",
+          "sha256": "bfe9a240b7db28e89cbd3e39b1e6e8bb8245c74e59d12558705cf9961f486e03"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    },
+    {
+      "name": "ConstantPositioningControl_500",
+      "strategy": "ConstantPositioningControl",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/ConstantPositioningControl_500.json",
+        "sha256": "f583153b15862b428365ba8e3603e0c8fb6a839f8102cc3e6bcbe4e9ee27a914"
+      },
+      "source_files": {
+        "PositioningPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/PositioningPortfolio.py",
+          "sha256": "3ab6926b431420bfb55de83fd337375a93e29d3cca0f6b55737aab43c0de66ef"
+        },
+        "Signals.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/Signals.py",
+          "sha256": "bfe9a240b7db28e89cbd3e39b1e6e8bb8245c74e59d12558705cf9961f486e03"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    }
+  ],
+  "allowed_leverage": 3.0,
+  "initial_equity_usdt": 1000,
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "runner_sha256": "474a145adb67bb14eac25b525b730eb036523f641142300e47d865aed856e1a8",
+  "runner_module": "research.crypto.positioning_month_native_20261114_v1.worker",
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/worker.py",
+      "sha256": "320ca42eb5cff4e2c1322fe3a326446a04e36bcd484795527644091ffa97fade"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/run.py",
+      "sha256": "37660d3a6d6580d5a722f585187a48877bf010fbd23bb4fd65ed12a4e6868322"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/dedup_cache.py",
+      "sha256": "375e72d7e4740dfda398dae30d57d0ff259f21c464cd70c6b06caf33baca4d5f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/prepare.py",
+      "sha256": "00cfe55cef74becf0f5fad9583d1e9587e470bb6b0e7910dda590a74e891e6b1"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/register.py",
+      "sha256": "9c5d78cff34f23f3fe34be5ce2ecbe3977962b26c05f4a2a89a668e33c5cc211"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/protocol.json",
+      "sha256": "43748ee652b945fbe1616b5c1862a8f7473db0b33ede98f38a3370e0e4d5de15"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/preflight.json",
+      "sha256": "035c8b9ece5d2bba3313a70e8fe2a98c4cc393e4118d755a2a169c66c850fac7"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/test_inputs.py",
+      "sha256": "2f52550e823f2341f79aecdb7745dd2b7d000195bdcf72ccb61839d774381878"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/tests_final.log",
+      "sha256": "82b57a32cf2a6790a70040cb9eb52b4e2571a7b283c95c69a982acd880870d84"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/native_input_binding.json",
+      "sha256": "edfd3cba8144ee882ede00a560e0e19e776a07d5690866b85213de086d8aea28"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/binance_positioning.py",
+      "sha256": "a9154048f07e34aca731ccc4bd5f56dc8207ed880188183cacfa493cd84532e8"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/raw_receipts.json",
+      "sha256": "1282a510c42c8a3859b8fb6358bf91f9daa8ca28204b55428f6df22f82dd0dc7"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/signal_capsule.json",
+      "sha256": "fd50216bfdd2283a1666a58f9a32527ca117b72ebc63fc9b00d4b74ba2c185ae"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/daily_BTCUSDT.parquet",
+      "sha256": "b0029f81fc528c07386ba4689a8da1a7e246b935df52e91199e282e7f51f4b38"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/daily_ETHUSDT.parquet",
+      "sha256": "33a4f5b941da29076c8cce6c3cae923cd4f75b2aa29b4250949307440b1a0025"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/daily_SOLUSDT.parquet",
+      "sha256": "7291ce29b6c6552fa58c1c1a940b1674516b80fb101930489954f34bbb6fa1c9"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_opportunities_LowPositionMonth_SOL.parquet",
+      "sha256": "38297209c5f5a7c5766853aaf3a6f7e18d55aab8279eb1ef2bf9b0e986af4ebd"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_features_LowPositionMonth_SOL.parquet",
+      "sha256": "2ea6f6b03181a1e9342c6d95d2b22374c43b09bc10d3a3220db978a47c251118"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_features_LowCrowdMonth_ETH.parquet",
+      "sha256": "63564f014b291adc957050e9eaad323e6d285e439e7e58455af9116fb23cf7eb"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_features_LowCrowdMonth_BTC.parquet",
+      "sha256": "ef08a169fa8bcd493d9695ca5307557468bcbc8db547739f0520c6345a44e779"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_weights_LowCrowdMonth.parquet",
+      "sha256": "1e893fbd72436fbe4a04ba6daecaeef8fa45567b1d4bd735b56d7b253766d6e5"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_features_ConstantPositioningControl_ETH.parquet",
+      "sha256": "ef7e93eaae348f504e223ef5ccd7c398d84a8300cc4329ba325f09a1e4277217"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_features_ConstantPositioningControl_BTC.parquet",
+      "sha256": "997585f6d6583cebf47e0acfb02e62ba09544afc2c31bb6ac8ec11f075bc08e2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_opportunities_ConstantPositioningControl_SOL.parquet",
+      "sha256": "783262c4fbbe8696c50ed46a67af6f8886573ddff0a20210782d5b8499dec004"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_weights_ConstantPositioningControl.parquet",
+      "sha256": "219ba2484573c27bffdfcc47f1b6aa0a4e5ebd42b52c8e81eaa856cd054c1b61"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_opportunities_LowCrowdMonth_SOL.parquet",
+      "sha256": "783262c4fbbe8696c50ed46a67af6f8886573ddff0a20210782d5b8499dec004"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_opportunities_LowCrowdMonth_BTC.parquet",
+      "sha256": "ff145441ac84eb2ce1213e88e9cdcdaf60f2aac74e76349ed7c7771511936a81"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_opportunities_ConstantPositioningControl_ETH.parquet",
+      "sha256": "cfac4d78b570a044dfaec08e66c716bc08451e5c6069a0cd139e19f1da16a91d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_opportunities_ConstantPositioningControl_BTC.parquet",
+      "sha256": "ff145441ac84eb2ce1213e88e9cdcdaf60f2aac74e76349ed7c7771511936a81"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_opportunities_LowCrowdMonth_ETH.parquet",
+      "sha256": "cfac4d78b570a044dfaec08e66c716bc08451e5c6069a0cd139e19f1da16a91d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_features_ConstantPositioningControl_SOL.parquet",
+      "sha256": "e74ea75ab98849e20f4e347803241c6f32184b85a5d2230574cd95a0ddb806b2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_weights_LowPositionMonth.parquet",
+      "sha256": "a959b1ec6c7eddba2c6657064c877d9a4f963295dda27a6816965700a387a69c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_features_LowPositionMonth_ETH.parquet",
+      "sha256": "c9c701df11a53814377552410c787df271ff6fed0e2cab64e506099ba40de137"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_features_LowCrowdMonth_SOL.parquet",
+      "sha256": "409d3a8c68efafd61f9dfc5b37d7c4a6e6ce441930de0cc431781dee37cb3eb1"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_features_LowPositionMonth_BTC.parquet",
+      "sha256": "2ef3055a887637fbb9b22525d904037778c8da4218bdb115529a13d7810dfdb6"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_opportunities_LowPositionMonth_ETH.parquet",
+      "sha256": "e42c027067dba86e8599e6aec099b2a34373ed55b995c136f0d30dca6c684600"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/positioning_month_native_20261114_v1/preflight_opportunities_LowPositionMonth_BTC.parquet",
+      "sha256": "f44241960dfb2dcb7cf5e0f4abe8d612444e53fa7b7524cb3a547565dee56ad0"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/x_prior_regime.html",
+      "sha256": "96c4ca083f8e54559f7c1fffd71466a28746c98057480322a27214575ce31662"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/douyin_prior_system.html",
+      "sha256": "af33b34fbc7f21ec50696177e6e9d0f3b7894592575299bf0390ba85c65e2a86"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/janorium_counterevidence.visible.txt",
+      "sha256": "0697b9fff464106deb602fa9c34ce764853cefba7b598874f8b9c745fc645d5b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/binance_market_data.visible.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/captions.json",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/binance_public_readme.md",
+      "sha256": "2e133d9945a9263a02781369078e72805eff074680f305cd5460016471c6caad"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/douyin_prior_system.visible.txt",
+      "sha256": "45dea390e91abb33bb7d36085a88290f67f21042450e70b37ac71f13fba19a74"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/janorium_counterevidence.html",
+      "sha256": "fe29582a3138556fc58c6d50d4596094b9a0df0ac4a2709ce733cf47c6edd015"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/x_prior_regime.visible.txt",
+      "sha256": "cda25dda1df34dcf3754b34fd074a5cf2025728c38ca930c15ab6b1c2e4ec619"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/coinversaa_coinversaa_smart_money_strategy.py",
+      "sha256": "c33ae767b6ea5908dc2c7a043c63c1915e43d37736bbe1f516b053916ba40451"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/youtube_ratio.html",
+      "sha256": "7f4274414273b5f032a228b69ef7e2cc9cc8c1f0ed826e2a9ff4bf06c39cbc98"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/native_strategy.md",
+      "sha256": "ddc89fdbeaa140d0c01604443925226126b7b6c2e20521454254431435036557"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/source_study.visible.txt",
+      "sha256": "13433fe88217ade26c0d7f84e019532c5837090cbb560fe7a2147daa6d2f3bc8"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/coinversaa_README.md",
+      "sha256": "e6b4a812754ec7082a0a608cef20ac78b7c3aa18f047064da345718cddf9d2d4"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/youtube_ratio.visible.txt",
+      "sha256": "53b23ac8ed9c7a084a0062e836bb485938b8fb493a95083b2b674aa2278a5caa"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/binance_market_data.html",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/source_study.html",
+      "sha256": "4497d2ec79c74ee6202d27615ef87f5c91ab7e56fc717204992de53ca6da9352"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/positioning_month_native_20261114_v1/source/coinversaa_coinversaa_client.py",
+      "sha256": "8062c58e7361a082e4158d73023a46af55a0a2c4558d285ea186d16a41672a7e"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false,
+  "frozen_combinations": [
+    {
+      "name": "crowd_plus_position",
+      "actual_wallets": [
+        "LowCrowdMonth_500",
+        "LowPositionMonth_500"
+      ]
+    }
+  ]
+}

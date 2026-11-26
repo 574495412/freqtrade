@@ -1,0 +1,191 @@
+{
+  "status": "PASSED_NARROW_NATIVE_FINAL_EXIT_CREATION_CLOCK_CONSTRAINT",
+  "fixture_cases": [
+    {
+      "case": "long_old_exit_cancel_source_exit_fixture",
+      "passed": true,
+      "built_in_timeout_precedes_source_force_exit_exception": true
+    },
+    {
+      "case": "long_old_exit_cancel_force_exit",
+      "passed": true,
+      "built_in_timeout_precedes_source_force_exit_exception": true
+    },
+    {
+      "case": "long_same_clock_new_final_exit",
+      "passed": true,
+      "real_native_exit_trade_and_try_close": true
+    },
+    {
+      "case": "long_out_of_contract_exit_replacement_False",
+      "passed": true,
+      "actual_config_inference_allowed": false
+    },
+    {
+      "case": "long_out_of_contract_exit_replacement_True",
+      "passed": true,
+      "actual_config_inference_allowed": false
+    },
+    {
+      "case": "short_old_exit_cancel_source_exit_fixture",
+      "passed": true,
+      "built_in_timeout_precedes_source_force_exit_exception": true
+    },
+    {
+      "case": "short_old_exit_cancel_force_exit",
+      "passed": true,
+      "built_in_timeout_precedes_source_force_exit_exception": true
+    },
+    {
+      "case": "short_same_clock_new_final_exit",
+      "passed": true,
+      "real_native_exit_trade_and_try_close": true
+    },
+    {
+      "case": "short_out_of_contract_exit_replacement_False",
+      "passed": true,
+      "actual_config_inference_allowed": false
+    },
+    {
+      "case": "short_out_of_contract_exit_replacement_True",
+      "passed": true,
+      "actual_config_inference_allowed": false
+    },
+    {
+      "case": "exit_timeout_age_seconds_120",
+      "passed": true,
+      "expired": true
+    },
+    {
+      "case": "exit_timeout_age_seconds_119",
+      "passed": true,
+      "expired": false
+    },
+    {
+      "case": "exit_timeout_age_seconds_0",
+      "passed": true,
+      "expired": false
+    },
+    {
+      "case": "exit_pending_counterexample_detail_1m_timeout_2",
+      "passed": true,
+      "actual_config_inference_allowed": false
+    },
+    {
+      "case": "exit_pending_counterexample_detail_none_timeout_10",
+      "passed": true,
+      "actual_config_inference_allowed": false
+    },
+    {
+      "case": "missing_effective_evidence",
+      "passed": true
+    },
+    {
+      "case": "detail_1m_rejected",
+      "passed": true
+    },
+    {
+      "case": "detail_unknown_null_rejected",
+      "passed": true
+    },
+    {
+      "case": "exit_timeout10_rejected",
+      "passed": true
+    },
+    {
+      "case": "timeout_missing_rejected",
+      "passed": true
+    },
+    {
+      "case": "timeout_unit_rejected",
+      "passed": true
+    }
+  ],
+  "fixture_case_count": 21,
+  "source_facts": {
+    "prohibited_overrides": [],
+    "source_order_clock_or_status_writes": [],
+    "source_Order_construction_count": 0,
+    "timeout_functions": {
+      "check_entry_timeout": {
+        "line": 5513,
+        "end_line": 5524,
+        "ast_sha256": "06e3ffae411e69f33af57cc0ab71af42cc4ade2ba6d509a74c6ad0c48549e710"
+      },
+      "check_exit_timeout": {
+        "line": 5528,
+        "end_line": 5542,
+        "ast_sha256": "07a511ae152c4b25d346acbffde0d5b7b62d4c6fe20ff4189eeb48a82bae645a"
+      }
+    },
+    "native_ordering_calls": [
+      [
+        1543,
+        "manage_open_orders"
+      ],
+      [
+        1569,
+        "_try_close_open_order"
+      ],
+      [
+        1574,
+        "_check_trade_exit"
+      ]
+    ],
+    "setattr_scope": "Two source setattr sites target strategy self and configuration parameters; frozen effective config has no timeout-method override keys."
+  },
+  "vendor_files_verified": 595,
+  "actual_15bp_exported_fills_examined": 683,
+  "actual_boundary_final_exits": [
+    {
+      "trade_index": 108,
+      "pair": "GALA/USDT:USDT",
+      "order_index": 18,
+      "order_id": null,
+      "fill_timestamp_ms": 1750377600000,
+      "inferred_creation_timestamp_ms": 1750377600000,
+      "inference": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT",
+      "creation_exported": false,
+      "funding_dates_sha256": "a232efac72de24e02db337938a95af7c918c472a80b339a9df254ba70c2ef78a",
+      "exit_reason": "exit_bad_trade_abandon_35d ( 120 )"
+    },
+    {
+      "trade_index": 127,
+      "pair": "CRV/USDT:USDT",
+      "order_index": 22,
+      "order_id": null,
+      "fill_timestamp_ms": 1757289600000,
+      "inferred_creation_timestamp_ms": 1757289600000,
+      "inference": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT",
+      "creation_exported": false,
+      "funding_dates_sha256": "11b6ca6c5c91277100725ddd8690ac6e4fabdbebfb8551b8a5bab4b86e4644ab",
+      "exit_reason": "exit_bad_trade_abandon_40d ( 120 )"
+    }
+  ],
+  "actual_effective_config_sha256": "543ddd3d0d999f0de80df33aaab27e8f6a29d5322baa17a30d63c4fa1728f719",
+  "freeze_sha256": "081aaf5e5f15eddd2b90e4bc1af23e0c18d07ce53a2977196fdba2f9ec51ea54",
+  "no_native_globals_changed": true,
+  "native_Backtesting_instances": 0,
+  "native_Backtesting_start_calls": 0,
+  "native_Wallet_instances": 0,
+  "native_Exchange_instances": 0,
+  "financial_recomputations": 0,
+  "full_matching_or_wallet_proof": false,
+  "source_custom_order_filled_executed": false,
+  "omitted_side_effects": [
+    "funding hook recorded only",
+    "liquidation price update no-op",
+    "after-fill stop update hook recorded only",
+    "source order_filled economics not executed",
+    "entry stake/precision metadata are fixture constants"
+  ],
+  "conclusion": "For the fixed successful15bp native5m/no-detail configuration, exit2min timeout cancels any older pending exit before ordinary fill processing. The two observed non-risk/non-force funding-boundary final exits were therefore newly created at their fill clock under this native source constraint. Exported creation metadata remains absent; no numeric funding/NAV audit is performed.",
+  "not_claimed": [
+    "venue intrabar execution",
+    "full-account or numerical funding audit",
+    "8bp applicability without its own terminal config/source evidence",
+    "changed detail or timeout contracts",
+    "global out-of-sample performance"
+  ],
+  "peak_rss_bytes_macos": 434749440
+}

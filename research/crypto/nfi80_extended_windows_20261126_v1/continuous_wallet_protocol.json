@@ -1,0 +1,15 @@
+{
+  "objective": "Compare the archived 12-slot NFI fixed boost and the already frozen 14-slot variant with unchanged class hashes across a single uninterrupted wallet.",
+  "window": {
+    "start_utc": "2024-01-01T00:00:00+00:00",
+    "end_exclusive_utc": "2026-11-09T05:05:00+00:00",
+    "last_mark_utc": "2026-11-09T05:00:00+00:00",
+    "pairlist_days": 1044,
+    "five_minute_marks": 300445
+  },
+  "wallet": "Each account starts empty with 1000 USDT, 3x isolated, same existing previous day turnover top-80 schedule and exact 15 and 8 bp per-side replay costs. Carry cash, positions, and fees across both New Year boundaries; only report terminal force closures separately from natural closes.",
+  "data": "Use pinned annual sources, scoped supplemental BNT carry feeds, existing market basics and tiers, and official Freqtrade timerange, matching, and cash engine. Use the frozen calendar as the entire decision schedule. BNT is available for marking or managing carried positions outside the dynamic pool. All applicable native inputs must cover continuing positions and funding before admitting the full account.",
+  "check": "Compare on the same complete marked time grid at both costs. Independently reconcile traded cash, funding and open position counts. Report account net return, maximum five-minute drawdown, annual cuts of the same account without resetting its balance, natural wins at least 1% of pre-entry mark equity, position counts, and path differences.",
+  "state_at_protocol_freeze": "Input adapter verified on native candle and historical pairlist call paths, with no continuous financial outcomes observed.",
+  "orders_enabled": false
+}

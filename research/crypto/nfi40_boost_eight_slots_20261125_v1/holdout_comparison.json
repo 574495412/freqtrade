@@ -1,0 +1,221 @@
+{
+  "accounts": {
+    "original": {
+      "periods": [
+        {
+          "name": "reserved-november-2026",
+          "net_return": 0.023759701112484377,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1023.7597011124844,
+          "hourly_mark_drawdown": 0.013384216003671012,
+          "cagr_365day": 0.5363939816311576,
+          "complete_24h_daily_nav_sharpe": 5.297345763154459,
+          "complete_24h_returns": 19,
+          "calendar_hours": 480
+        }
+      ],
+      "profits": {
+        "independent_entries": 12,
+        "natural_closes": 11,
+        "adds": 0,
+        "largest_winner_usdt": 6.37314378,
+        "largest_loss_usdt": null,
+        "top_five_profit_usdt": 17.715382990000002,
+        "top_five_fraction_of_gross_gains": 0.7814679678617383,
+        "exit_reasons": {
+          "exit_profit_long_tc_t_0_1_m ( 141 142 )": 1,
+          "exit_short_rebuy_3_1_1 ( 562 )": 1,
+          "exit_short_rebuy_o_1 ( 562 )": 1,
+          "exit_short_rebuy_2_1_1 ( 562 )": 4,
+          "exit_profit_short_rebuy_t_0_1_m ( 562 )": 2,
+          "exit_long_tc_o_3 ( 141 )": 2
+        }
+      },
+      "reconciliation": {
+        "passed": true,
+        "maximum_nav_error_usdt": 1.6203330233111046e-08,
+        "maximum_campaign_cash_error_usdt": 4.645840918e-09,
+        "maximum_native_funding_error_usdt": 0.0,
+        "maximum_hourly_count_error": 0,
+        "maximum_hourly_gross_to_nav": 0.3740043388657063,
+        "missing_rate_exposure": [
+          {
+            "pair": "AXS/USDT:USDT",
+            "slot_ms": 1782273600000,
+            "campaigns": [],
+            "status": "NO_GROSS_EXPOSURE",
+            "rate_imputed": false
+          },
+          {
+            "pair": "TRB/USDT:USDT",
+            "slot_ms": 1782273600000,
+            "campaigns": [],
+            "status": "NO_GROSS_EXPOSURE",
+            "rate_imputed": false
+          }
+        ]
+      },
+      "source_receipts": [
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_boost_eight_slots_20261125_v1/holdout_accounts/original/result.json",
+          "sha256": "c99340b9f4447a12fc8af59a1e6164efd3391cbd65247288d7c042aed49afc5f"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_boost_eight_slots_20261125_v1/holdout_accounts/original/native_results/backtest-result-2026-11-25_15-26-32.zip",
+          "sha256": "cf93c33cbf2f322e83d7c32e7b1b85373f707c1ee4497beff89364ed0303f94d"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_boost_eight_slots_20261125_v1/holdout_accounts/original/hourly_equity.parquet",
+          "sha256": "732f91ecec414df2b2f81d130bdfd8f7f86262b1e5a9dc2955d408c6874c755c"
+        }
+      ]
+    },
+    "fixed_boost": {
+      "periods": [
+        {
+          "name": "reserved-november-2026",
+          "net_return": 0.027162524806330524,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1027.1625248063306,
+          "hourly_mark_drawdown": 0.01611618693916217,
+          "cagr_365day": 0.6325189701420082,
+          "complete_24h_daily_nav_sharpe": 5.133644511446449,
+          "complete_24h_returns": 19,
+          "calendar_hours": 480
+        }
+      ],
+      "profits": {
+        "independent_entries": 12,
+        "natural_closes": 11,
+        "adds": 0,
+        "largest_winner_usdt": 7.96944688,
+        "largest_loss_usdt": null,
+        "top_five_profit_usdt": 20.84027107,
+        "top_five_fraction_of_gross_gains": 0.7993336205678069,
+        "exit_reasons": {
+          "exit_profit_long_tc_t_0_1_m ( 141 142 )": 1,
+          "exit_short_rebuy_3_1_1 ( 562 )": 1,
+          "exit_short_rebuy_o_1 ( 562 )": 1,
+          "exit_short_rebuy_2_1_1 ( 562 )": 4,
+          "exit_profit_short_rebuy_t_0_1_m ( 562 )": 2,
+          "exit_long_tc_o_3 ( 141 )": 2
+        }
+      },
+      "reconciliation": {
+        "passed": true,
+        "maximum_nav_error_usdt": 7.4377339842612855e-09,
+        "maximum_campaign_cash_error_usdt": 4.83060001e-09,
+        "maximum_native_funding_error_usdt": 0.0,
+        "maximum_hourly_count_error": 0,
+        "maximum_hourly_gross_to_nav": 0.45624510320482736,
+        "missing_rate_exposure": [
+          {
+            "pair": "AXS/USDT:USDT",
+            "slot_ms": 1782273600000,
+            "campaigns": [],
+            "status": "NO_GROSS_EXPOSURE",
+            "rate_imputed": false
+          },
+          {
+            "pair": "TRB/USDT:USDT",
+            "slot_ms": 1782273600000,
+            "campaigns": [],
+            "status": "NO_GROSS_EXPOSURE",
+            "rate_imputed": false
+          }
+        ]
+      },
+      "source_receipts": [
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_boost_eight_slots_20261125_v1/holdout_accounts/fixed_boost/result.json",
+          "sha256": "6aa73af336de4a6ea971f52468d56b791c6160b401f010909997d859dc367e58"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_boost_eight_slots_20261125_v1/holdout_accounts/fixed_boost/native_results/backtest-result-2026-11-25_15-27-33.zip",
+          "sha256": "ce03d7294f7edb5a0c4449d62808b8f561278f4122a83c94baaa2f4fe6e1eb85"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_boost_eight_slots_20261125_v1/holdout_accounts/fixed_boost/hourly_equity.parquet",
+          "sha256": "45cffd77fae0f6e052483aa0c5044c513c2dac403c83ff61bf46301b7d0b89f8"
+        }
+      ]
+    },
+    "candidate": {
+      "periods": [
+        {
+          "name": "reserved-november-2026",
+          "net_return": 0.029505144928638316,
+          "initial_marked_equity": 1000.0,
+          "ending_marked_equity": 1029.5051449286384,
+          "hourly_mark_drawdown": 0.016087594584626275,
+          "cagr_365day": 0.701969071292948,
+          "complete_24h_daily_nav_sharpe": 5.351471177067447,
+          "complete_24h_returns": 19,
+          "calendar_hours": 480
+        }
+      ],
+      "profits": {
+        "independent_entries": 14,
+        "natural_closes": 13,
+        "adds": 0,
+        "largest_winner_usdt": 7.98754976,
+        "largest_loss_usdt": null,
+        "top_five_profit_usdt": 20.85837395,
+        "top_five_fraction_of_gross_gains": 0.7341082387194569,
+        "exit_reasons": {
+          "exit_profit_long_tc_t_0_1_m ( 141 142 )": 1,
+          "exit_short_rebuy_3_1_1 ( 562 )": 1,
+          "exit_short_rebuy_o_1 ( 562 )": 1,
+          "exit_short_rebuy_2_1_1 ( 562 )": 5,
+          "exit_short_rebuy_1_1_1 ( 562 )": 1,
+          "exit_profit_short_rebuy_t_0_1_m ( 562 )": 2,
+          "exit_long_tc_o_3 ( 141 )": 2
+        }
+      },
+      "reconciliation": {
+        "passed": true,
+        "maximum_nav_error_usdt": 1.1559222912183031e-08,
+        "maximum_campaign_cash_error_usdt": 4.27686304e-09,
+        "maximum_native_funding_error_usdt": 0.0,
+        "maximum_hourly_count_error": 0,
+        "maximum_hourly_gross_to_nav": 0.4557699259124891,
+        "missing_rate_exposure": [
+          {
+            "pair": "AXS/USDT:USDT",
+            "slot_ms": 1782273600000,
+            "campaigns": [],
+            "status": "NO_GROSS_EXPOSURE",
+            "rate_imputed": false
+          },
+          {
+            "pair": "TRB/USDT:USDT",
+            "slot_ms": 1782273600000,
+            "campaigns": [],
+            "status": "NO_GROSS_EXPOSURE",
+            "rate_imputed": false
+          }
+        ]
+      },
+      "source_receipts": [
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_boost_eight_slots_20261125_v1/holdout_accounts/candidate/result.json",
+          "sha256": "9ea5db4eb2ea79119f82194ad88efae01893aeec4e4057644d24e53e32362db4"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_boost_eight_slots_20261125_v1/holdout_accounts/candidate/native_results/backtest-result-2026-11-25_15-27-54.zip",
+          "sha256": "31660603ad5a0ad04793e3d699c75fcb98ddd00ed1fdd8de69540e86b91f719f"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_boost_eight_slots_20261125_v1/holdout_accounts/candidate/hourly_equity.parquet",
+          "sha256": "fedc766ab81babfb23a3654154da709d2e49d340b635bc2f0843d07f6e53c8d7"
+        }
+      ]
+    }
+  },
+  "return_lift_over_boost": 0.0023426201223077925,
+  "return_lift_over_original": 0.005745443816153939,
+  "both_controls_exceeded": true,
+  "all_accounts_reconciled": true,
+  "validation_scope": "Twenty UTC days at 15bp. Limited observations remain.",
+  "orders_enabled": false
+}

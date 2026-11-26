@@ -1,0 +1,25 @@
+{
+  "frozen_at": "2026-11-15T18:33:55.018326+00:00",
+  "scope": "sourceinput and native integration before funds;no author result adoption",
+  "hypothesis": "prior known10calendar-day positive10year-yield change ANDpositiveDXYlogmomentum reducesBTCtargetfractionfrom1to.25",
+  "source_commit": "6f039e64d6d13227cdc5a79bbd9d78b093468cd0",
+  "lookback_calendar_days": 10,
+  "reduced": 0.25,
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-08-31T23:00:00Z",
+  "price_universe": [
+    "BTC/USDT",
+    "ETH/USDT"
+  ],
+  "source_traded_asset": "BTConly;ETHisnotimpliedsource signal",
+  "input_sources": [
+    "Yahoo^TNXdailyrawquote",
+    "YahooDX-Y.NYBdailyrawquote"
+  ],
+  "clock": "default actual snapshotobserved;historical research needs explicit local close/publication model and raw session evidence;no date-only lookahead",
+  "gaps": "missing latest data remainsunknown;fixtureendsJun15notforwardfilledthroughAug31;no shorteraccount",
+  "new_financial_runs": 0,
+  "no_parameter_rescue": true,
+  "orders_enabled": false,
+  "goal_complete": false
+}

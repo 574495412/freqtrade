@@ -1,0 +1,786 @@
+{
+  "price_inputs_bound": true,
+  "financial_settlement_certified": false,
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "BNB/USDT:USDT",
+    "XRP/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "ADA/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "LINK/USDT:USDT",
+    "TRX/USDT:USDT",
+    "DOT/USDT:USDT",
+    "LTC/USDT:USDT",
+    "BCH/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "APT/USDT:USDT",
+    "ARB/USDT:USDT",
+    "OP/USDT:USDT",
+    "SUI/USDT:USDT",
+    "INJ/USDT:USDT",
+    "TIA/USDT:USDT",
+    "SEI/USDT:USDT",
+    "RUNE/USDT:USDT",
+    "FIL/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "UNI/USDT:USDT",
+    "AAVE/USDT:USDT",
+    "ETC/USDT:USDT",
+    "XLM/USDT:USDT",
+    "ALGO/USDT:USDT"
+  ],
+  "source_links": [
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+      "sha256": "63d02c11dddd890a19a57122beaaf68566264ac03fc7f2deb145de113baa36fd"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/BTC_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BTC_USDT_USDT-5m-futures.feather",
+      "sha256": "1b2aa3459498da24b5db7da63bd561283e6103b92af93c874e2238536637bb97"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "ae262270503a4b0b4ff4a0f2d8962524aab3b330537241ddabe6b2d3e7406e44"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BTC_USDT_USDT-1d-futures.feather",
+      "sha256": "52494e0b637b65d9a5ad53ac8b9c1385149645ba001d124460f9d0b2f15405be",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/ETH_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ETH_USDT_USDT-1h-futures.feather",
+      "sha256": "0fa2b282ecf3828d17f9f7dd2b3c0dfc09d86e4a32e2527109b38c3574d063f5"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/ETH_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ETH_USDT_USDT-5m-futures.feather",
+      "sha256": "281eec14adadd01491868be303f4750c0dba87d1935ea14bbe4a7a7099ce6d40"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/ETH_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ETH_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "2fcbe119e9d3e3e6e8c2203bfef2c237c9763f3f47612e6a8084e1a0c5f6545d"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ETH_USDT_USDT-1d-futures.feather",
+      "sha256": "90ce908efe7abb7e209b25f6d5b38b512a86dd3c9538f8bf82ea7370e532eb00",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/SOL_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SOL_USDT_USDT-1h-futures.feather",
+      "sha256": "9b30ec9dc518f6705a3b764a625da454a4e9f5396bdfd9eefb51034c3ce26250"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/SOL_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SOL_USDT_USDT-5m-futures.feather",
+      "sha256": "6077e3730ddbe5d7f43cb8e58f7ba985533843a3d510beb6d1655e403c24b305"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/SOL_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SOL_USDT_USDT-1h-mark.feather",
+      "sha256": "c9e5089e38745a2f2d168b1190c9d866ca915225e2ffa22b52a1b2f7382e895b"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/SOL_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SOL_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "b279cd4d70f505484c5627d951a4a538743c659751bc7cc4fb73aebdb5ba5a83"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SOL_USDT_USDT-1d-futures.feather",
+      "sha256": "86661ee609ddbba45492610f605c16db453457e4ff9f8e09e1dd39699f6e0504",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/BNB_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BNB_USDT_USDT-1h-futures.feather",
+      "sha256": "9848bb6e4910b4f999e016df0f6e1a0abe637fa5828732f00f90b499b237e4ad"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/BNB_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BNB_USDT_USDT-5m-futures.feather",
+      "sha256": "1a83dcd09c66344dc7ca612b145db26a965d92f510dbd4b9e736230ee089edda"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/BNB_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BNB_USDT_USDT-1h-mark.feather",
+      "sha256": "aa19bfe19bc1b7ffe90e9d6a5bb5da1f806f8f5aa3f67e6a6405e62a91a392be"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/BNB_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BNB_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "87a4a6786b9dc210a6210bf83922145ba0249e0b9d1253c52dfb517d64f31df6"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BNB_USDT_USDT-1d-futures.feather",
+      "sha256": "b016620fa6c2d0cabd967869ed0aa8fea94e52abbcd9d1cbb663692c2bc28bcc",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/XRP_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/XRP_USDT_USDT-1h-futures.feather",
+      "sha256": "bcd716795e52f472ede3f47067fbec2bce7756da99dbcfc4f3c475362563b73e"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/XRP_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/XRP_USDT_USDT-5m-futures.feather",
+      "sha256": "7c0aba62d70451d3bef3b7c91ce80f1d96e142b0b1cdd550afc67fe8ebfc84d6"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/XRP_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/XRP_USDT_USDT-1h-mark.feather",
+      "sha256": "e821b1b0b56da2a98337e49c605661aa8d62e4a383550c64c94edc060d41c89a"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/XRP_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/XRP_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "77d51fdfcb5a7a8675688340110d47e9c1e2fd340fe6d2525744112d679ca1da"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/XRP_USDT_USDT-1d-futures.feather",
+      "sha256": "b14ce632edba6c77bf15c749ad2eb61cec5b04b9937ee029ad22172ed28cc01e",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/DOGE_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/DOGE_USDT_USDT-1h-futures.feather",
+      "sha256": "4f9c3813375e151d7751601d219431ed4f1eaf0c53400c0b0285d92ec5459104"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/DOGE_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/DOGE_USDT_USDT-5m-futures.feather",
+      "sha256": "ae6f2ced89e8a287001b6b5c6dfb0f2cc4e4a4491ea0455370d61f4caa2ef33f"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/DOGE_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/DOGE_USDT_USDT-1h-mark.feather",
+      "sha256": "1acea3fba1b5f6035dc9ec3d3e1d814ff43081cd2439106433a52bb2ddccbb25"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/DOGE_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/DOGE_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "9df302ed0d51a291db0cc77467da3d9c6239e8d71b8688687ce97784b48b0613"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/DOGE_USDT_USDT-1d-futures.feather",
+      "sha256": "e0a6f47848bc3d4d8469e85b3e99c79d0411e1d15dcc773a25523832a9b085fc",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/ADA_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ADA_USDT_USDT-1h-futures.feather",
+      "sha256": "0fa26bcf1aaa8f1db9742d4c9ef64645f861548b8e84135393ae8b852a1080b8"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/ADA_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ADA_USDT_USDT-5m-futures.feather",
+      "sha256": "4d3a35290f5910a9b565644bc1da9dfde6ce09f3f9b9f2a66af778e771c1f15d"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/ADA_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ADA_USDT_USDT-1h-mark.feather",
+      "sha256": "dc3b578e04fa23c3c58e64b64916eb17c7471aee910d7334b279840bd58dd7be"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/ADA_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ADA_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "6f70b1f3c4461e87c18a686ac2526a3d1c5862db521148fa3cf17a45d5b33371"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ADA_USDT_USDT-1d-futures.feather",
+      "sha256": "52205c45bc41516253c014f9b2c407d10d44de2b66da65634bd2c99e9494206b",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/AVAX_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/AVAX_USDT_USDT-1h-futures.feather",
+      "sha256": "f97e8b0ce1b7ced9d9336819f061601c14a7ac2cf410849f8664bcf334161766"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/AVAX_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/AVAX_USDT_USDT-5m-futures.feather",
+      "sha256": "d9c2046f5376baedb0c2f29b2d037fd9b1da39f4167ac8e5129e018211f6cd6c"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/AVAX_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/AVAX_USDT_USDT-1h-mark.feather",
+      "sha256": "e7deb6537e934eb2775cc6bc31fe036335002f6898d869af6da636133d6a1d46"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/AVAX_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/AVAX_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "201db8ee8c92d8b2bc2c2c5ed230350da35f34668d536ca83d0abe5a07cf0b81"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/AVAX_USDT_USDT-1d-futures.feather",
+      "sha256": "4ff9fe0fda238c5d190a93418bdc33219d8e42affa4565912a10db827fe12925",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/LINK_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/LINK_USDT_USDT-1h-futures.feather",
+      "sha256": "31e8d909108de47143ce40391fa7e05dcc7e62ae6ec1dc17b645e4e2fa90f403"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/LINK_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/LINK_USDT_USDT-5m-futures.feather",
+      "sha256": "571d05b49927e1a3e948163c712eb87621d30c1d55a6dd58471cbd79d6d7ce8e"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/LINK_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/LINK_USDT_USDT-1h-mark.feather",
+      "sha256": "1a982092bca60cba7b74254c4c63254493565badf87bdd1913a86785f56549cd"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/LINK_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/LINK_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "09cd2a460552ee3768192ade6fbb238d7cb05b6457ffdf5fdb32fa96c86437a4"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/LINK_USDT_USDT-1d-futures.feather",
+      "sha256": "63279ec945b5832017a0ff26e8fef6856a66c6f5aa262b77299bac9ac5bb4d43",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/TRX_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/TRX_USDT_USDT-1h-futures.feather",
+      "sha256": "adac17f95093b22b002a451789ec6b70fbe005badd20aa920045c5fda0823356"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/TRX_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/TRX_USDT_USDT-5m-futures.feather",
+      "sha256": "8a0b74d8211e3bc1be63ff1631aac079a04f4fa3f82f3bfd6a6a6510c1011f1c"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/TRX_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/TRX_USDT_USDT-1h-mark.feather",
+      "sha256": "53e8caee9894e6a5ace2e24a228966fe1aa69570184f871368857120b6690118"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/TRX_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/TRX_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "963236321a3dbe659d4acc58b3f5a7ecb89500a3ed52ed072fb9a22735fd5437"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/TRX_USDT_USDT-1d-futures.feather",
+      "sha256": "65b70c17fff4b670b17eadcbd5cc289c9723ead8202e60da4e7d72d5885c0997",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/DOT_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/DOT_USDT_USDT-1h-futures.feather",
+      "sha256": "8113ea515e01651ff083b0322b15a76bd69c9a803b3be5f5f9989eb3c5002ee8"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/DOT_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/DOT_USDT_USDT-5m-futures.feather",
+      "sha256": "3b93602105f4e0f9c810b05ef4d5655af5907076855c262a27d3b63e0fcaa9c8"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/DOT_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/DOT_USDT_USDT-1h-mark.feather",
+      "sha256": "045ce00af8852a27fdaeb3bda7d7719642b3bde0186c178e462686d99c5c0afa"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/DOT_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/DOT_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "8c6773ae2f5e831124761c2e532e88e7c6c5e6cedc18a05027e2497c0f339b85"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/DOT_USDT_USDT-1d-futures.feather",
+      "sha256": "f02c0fd7f5888ad8a7bec0d5d5c584d156cd8c557b33ee91993fd0b66438788e",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/LTC_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/LTC_USDT_USDT-1h-futures.feather",
+      "sha256": "27f91c76b42ddff19bb435b5c64de304d9e656e0835ddcee2009276867fa0895"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/LTC_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/LTC_USDT_USDT-5m-futures.feather",
+      "sha256": "a837c95d7af0fbb6be3cd318d248a68ecf3442107003f8b8794e78a6ccb145e5"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/LTC_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/LTC_USDT_USDT-1h-mark.feather",
+      "sha256": "05e04be247cc13f8127c7a809f8b1032e974586e60bdfddd07ba6d5a8ae581e1"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/LTC_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/LTC_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "5604c01aa627eee2fef5767724e022388cb9d1e184d149c968ff46853a1b77bb"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/LTC_USDT_USDT-1d-futures.feather",
+      "sha256": "423bd71ca835b7b852310549278c5600de1702c626d1341efa32d659daeb410e",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/BCH_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BCH_USDT_USDT-1h-futures.feather",
+      "sha256": "1f78e301b624d5e4d3489c7516c340b5923aff8ed30064f4819688023ce99735"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/BCH_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BCH_USDT_USDT-5m-futures.feather",
+      "sha256": "2fb7c149786a0d0f3a0e2066fbc79bffb95c9aff1497417e210e5fa7e222a4e6"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/BCH_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BCH_USDT_USDT-1h-mark.feather",
+      "sha256": "c8abf623f885bd41c6608124a0271f0dea7cee66337deb0e5adc863407daa988"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/BCH_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BCH_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "dbcd38c7d8b7d781b9de3af0571f066e4e576021bf8548f33b76addfa6abe67c"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BCH_USDT_USDT-1d-futures.feather",
+      "sha256": "8249ed7ca725d52b365e11c3c63fa119ed0ff65c4cae8e12e361a35e016e449c",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/NEAR_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/NEAR_USDT_USDT-1h-futures.feather",
+      "sha256": "fbf6fb5416063924713431ba7a3d0e3624c9813a43af8ad17a0aaeab9a7135fb"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/NEAR_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/NEAR_USDT_USDT-5m-futures.feather",
+      "sha256": "f8a392e1da14dc8fc905f00f2490b83cf475ef396cd0e4e19046daa3e072c685"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/NEAR_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/NEAR_USDT_USDT-1h-mark.feather",
+      "sha256": "bb5c568f61c0914eabb32b8070b433589734e07640ed60831ac8c661118f024f"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/NEAR_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/NEAR_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "98cf822bb09d9b1823ae31e8eff20093369ed73a14ab4a4c61a1c49c09d180db"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/NEAR_USDT_USDT-1d-futures.feather",
+      "sha256": "b38aabcd6a50f6a9f17877caabe7ffc39afe5d76211860f13d9b472765e2f9af",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/APT_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/APT_USDT_USDT-1h-futures.feather",
+      "sha256": "8559381c54d88053313d4573de803fbb9e6b4f706b0b16181dff9b71baab766d"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/APT_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/APT_USDT_USDT-5m-futures.feather",
+      "sha256": "00be671f6a6a9823120c25d6237caeb389ee5f55e4db5cc416c253fd040ce68f"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/APT_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/APT_USDT_USDT-1h-mark.feather",
+      "sha256": "93f02e62b5fd857578ff85f3aec8516cc556a46b050948348ba6040789a40a55"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/APT_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/APT_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "67bb8ce9e650b5cd3a577f8672780c074842a09e3044d8c4b54618707b3769db"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/APT_USDT_USDT-1d-futures.feather",
+      "sha256": "2d8ec0e29e687b6c7ba32ad6a22178911b7d302d279cfaeb648e18ad8c9c10b5",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/ARB_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ARB_USDT_USDT-1h-futures.feather",
+      "sha256": "b44492e6d50af0f632cce0a9a6a8db2a4e6f5553b9e31585c5a1149450ed8b79"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/ARB_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ARB_USDT_USDT-5m-futures.feather",
+      "sha256": "966848c7847e45617acd5d9b16736ae322550bdfc94f14e0199300cf80cf5c33"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/ARB_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ARB_USDT_USDT-1h-mark.feather",
+      "sha256": "3fcac125e2e2a8ebd821c3e59ef024e2069fcf99a640c9c032b42062321a3aee"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/ARB_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ARB_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "3c6386c52829a0bda4d0e1adb558809a3d9b227dd8d5f42610ce54c32780e960"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ARB_USDT_USDT-1d-futures.feather",
+      "sha256": "4c6ad26076cad55492b436a422d8f699ce09225bf32f535cff47214cfd213373",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/OP_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/OP_USDT_USDT-1h-futures.feather",
+      "sha256": "bfbc861ea217c28cb02266e675d6e53b4525c9935ded528eabbf5c738eb96a85"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/OP_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/OP_USDT_USDT-5m-futures.feather",
+      "sha256": "f158f817fe2e0c94a428b31d77bce734edc6faf20364b0a5549bc3c6840da80d"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/OP_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/OP_USDT_USDT-1h-mark.feather",
+      "sha256": "e0b453723e556ea85a0fc81b220690d7e00681b5415954f1096378d6558e91aa"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/OP_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/OP_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "51bc3dace9c6b178f0c2ecb5acab68b6eacb42bba5c222835b30305586da07b0"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/OP_USDT_USDT-1d-futures.feather",
+      "sha256": "f5b89312cf8da9fdc89f1f4a73b64fc18ad16d78372d38b59698a1209f0f0976",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/SUI_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SUI_USDT_USDT-1h-futures.feather",
+      "sha256": "6c175dfa0a52467907b3ead768b2a875e76a62e7dd19aca5b4725f73889ca7aa"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/SUI_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SUI_USDT_USDT-5m-futures.feather",
+      "sha256": "9ce4b1400855a12b9807fe5dc834b4eec4b8330b6cd0013a54615a56ba01d9fe"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/SUI_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SUI_USDT_USDT-1h-mark.feather",
+      "sha256": "1dfe3dba4bfde9ca1c2eb4c9e55f6b6d5628d8752b3a40ebd2be814f004bc57d"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/SUI_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SUI_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "478ae9dc177558d82d54b993002172fa4d9e5e82d559e39b2806c4b96ecb9dcc"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SUI_USDT_USDT-1d-futures.feather",
+      "sha256": "94fd39585465ce8701da372cc386e9e5cc26028c4fadf35136edc5ae8cc517fd",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/INJ_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/INJ_USDT_USDT-1h-futures.feather",
+      "sha256": "ed46614a678650697f902a262c64bbdb8f60ce97b9821bb42b9ee26447387d64"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/INJ_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/INJ_USDT_USDT-5m-futures.feather",
+      "sha256": "e07354e533816b256a0a97fee86893ec01071de0c6b102c8dca28b1c24cbe4c6"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/INJ_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/INJ_USDT_USDT-1h-mark.feather",
+      "sha256": "926fa40bc6d8eee3fab6c55ce72dcb1e4c2de85a8e01dada37f261b288a7ff0d"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/INJ_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/INJ_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "ef6a198f3d15113cb856ee343b8f7854cd6b332fe8c275684b41dad5a275f758"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/INJ_USDT_USDT-1d-futures.feather",
+      "sha256": "1b9708195110037ff2b7fbade60c2c69edbd7da02ef75460eda8628ed27fa38d",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/TIA_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/TIA_USDT_USDT-1h-futures.feather",
+      "sha256": "602e4ff992bce636d4fe659a41fe6bebf1f96fe082aaf7d73d6ebe649cc7e11e"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/TIA_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/TIA_USDT_USDT-5m-futures.feather",
+      "sha256": "1f275f532b7f933587bf73628e77f71e33aebbdcc1159135498f22d879f2048d"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/TIA_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/TIA_USDT_USDT-1h-mark.feather",
+      "sha256": "a9fc91890389867fb4094d5e8ffd38abb5f837a5c8583f0662e8f5bfd0dddff1"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/TIA_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/TIA_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "557e462ac556eb603ded478af9aa812975d5b9f9c10c3aa04ec0e635d63896c4"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/TIA_USDT_USDT-1d-futures.feather",
+      "sha256": "75852c709d49aecca31bd9e3f7f07fd3334f0995a168bab016e996591b2e6741",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/SEI_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SEI_USDT_USDT-1h-futures.feather",
+      "sha256": "82c4873ba999a0f711e2e78d0358d9f8991164eb4c6a132cbb6eab5170ed8b1d"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/SEI_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SEI_USDT_USDT-5m-futures.feather",
+      "sha256": "e163c6b7990a5d64735ea9c1c8be306340326cb7ab79ec8a0cd94dcf8deffb5a"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/SEI_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SEI_USDT_USDT-1h-mark.feather",
+      "sha256": "a8fe2c8b1cf3e6398f607011d2d01da6fc25b940a7b6f0e0c3ac3d8f076ceb39"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/SEI_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SEI_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "249d8c88916ae335eabea04e6f055394a9399a64b150db425a224645aa5cf7b8"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SEI_USDT_USDT-1d-futures.feather",
+      "sha256": "45c7de36da0178cca56b950536b00aa5dae500abc6da8ddcfcf82b2611e80e4c",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/RUNE_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/RUNE_USDT_USDT-1h-futures.feather",
+      "sha256": "9cc5c1c68e2ed1bb3d2ca80689967b113b3e043fd24b008a974d1dd5a1adebdd"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/RUNE_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/RUNE_USDT_USDT-5m-futures.feather",
+      "sha256": "08ae814fad15ed6949e0aba529ddf40ef39dc741e1863cad8004e1fb7190d865"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/RUNE_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/RUNE_USDT_USDT-1h-mark.feather",
+      "sha256": "e551a3c2aa5e48bcfe600ee45024520566ae5b22b70d143afa7278c3112d51c4"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/RUNE_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/RUNE_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "f48a31392f13ea49945aad4874a406b058820e038bc6f1cd668f545ffc6d2764"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/RUNE_USDT_USDT-1d-futures.feather",
+      "sha256": "66c0b6f2b9a5aa9e6461fd74f09eddb0ab04365f15292e599452e954cbf87222",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/FIL_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/FIL_USDT_USDT-1h-futures.feather",
+      "sha256": "e91760bc2417470737e8963c6683a8713131e9ebeacaa446ade5961a9065f725"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/FIL_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/FIL_USDT_USDT-5m-futures.feather",
+      "sha256": "0d1fad45ddc94ff0990bade9e2475a10a1f1e3d188a3f5996a4ccdd5e97bba51"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/FIL_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/FIL_USDT_USDT-1h-mark.feather",
+      "sha256": "005cb9c910940ebc32877f86acfba18ffef040110fbdd68765936e9fbe81751c"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/FIL_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/FIL_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "8009a93fc0e80d05ed4a4786fe4d11967c036de14837c008a62704ebbcd580f7"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/FIL_USDT_USDT-1d-futures.feather",
+      "sha256": "b4e9bac5bd6ad97a6042679b37e2212b5862af4b512fb4547bba9df361755e19",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/ATOM_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ATOM_USDT_USDT-1h-futures.feather",
+      "sha256": "defc0a8bcbfa83969eaba8eb9efcda20c2b37d81c595819ad0fe3ea6c0a827a3"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/ATOM_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ATOM_USDT_USDT-5m-futures.feather",
+      "sha256": "2799232f4b6cb2f29fda13faf098bd629c071c5b313bf662b468125f2a295290"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/ATOM_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ATOM_USDT_USDT-1h-mark.feather",
+      "sha256": "01aa0fb297b66261581a00ae85b9260ed84ea73cf2faea9f839068c348fa61bd"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/ATOM_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ATOM_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "424a9e66d9341f1bbeceebe5dd8eb6bc392e2214e221be0d0307f9b017e81eaa"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ATOM_USDT_USDT-1d-futures.feather",
+      "sha256": "388889d52d00fbd94b06362357372ae0f17f3a855ea4efe722556235504d9db2",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/UNI_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/UNI_USDT_USDT-1h-futures.feather",
+      "sha256": "677c6df872944ed166d9db655427ccb57d64bc35d52cc3e30bf18e67af57d7fc"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/UNI_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/UNI_USDT_USDT-5m-futures.feather",
+      "sha256": "4c1ffdd5ee222459f296623134b95c349806d441c22507ee5cc8b27976f42d4c"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/UNI_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/UNI_USDT_USDT-1h-mark.feather",
+      "sha256": "af4e27b504902bae1816ff9ba606957665b1d188cce9a262994427bbe0ba896c"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/UNI_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/UNI_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "d3e416012d627759394dc70c2353e2ec003c4d2ef149cd78166013511d43a28e"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/UNI_USDT_USDT-1d-futures.feather",
+      "sha256": "21294909d03953b99252406d36f28c04b17265c6e26014663b3416b397a2ba30",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/AAVE_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/AAVE_USDT_USDT-1h-futures.feather",
+      "sha256": "08042bc04c9e672744b19f7586440d08662e30db205838be3db8288588dde771"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/AAVE_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/AAVE_USDT_USDT-5m-futures.feather",
+      "sha256": "2701487f9ff3edd42dfe243da171e10d794573f68deddf4a18a9d2b6924c21a8"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/AAVE_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/AAVE_USDT_USDT-1h-mark.feather",
+      "sha256": "38bdccdaec7e348a6056390666b715e5c18df0b9c0f79feb5795d9371d2a87fb"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/AAVE_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/AAVE_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "01a989c403f44f4de0476cb8260a7a7189ef24a18e7b92efa86e03714f0e68bb"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/AAVE_USDT_USDT-1d-futures.feather",
+      "sha256": "0f95609582bfaaf9042c36044257dcfd56de77f433942b6b8d20d5440f090074",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/ETC_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ETC_USDT_USDT-1h-futures.feather",
+      "sha256": "c2b157c8f9efe83e5ad62ff3a1628ca582db583a7b8a35071aa9b3ff8eafa71a"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/ETC_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ETC_USDT_USDT-5m-futures.feather",
+      "sha256": "e5a668da9c69eeb5b6cce39537137c9119bdca73566b00bf7ae58d431bc9240e"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/ETC_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ETC_USDT_USDT-1h-mark.feather",
+      "sha256": "b8e72f8b8af30610257028b5227a668c2a2875c8c9aeb2f00f1b9755735a5d6b"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/ETC_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ETC_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "78831599f58ac51a6298bd13ab95643a144218240098f688d60a60b536f0fc4b"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ETC_USDT_USDT-1d-futures.feather",
+      "sha256": "99c9324d0e5a3cb431818e4d22b7a5dfc2308dd557fdd8fedb02d6ac9d236845",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/XLM_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/XLM_USDT_USDT-1h-futures.feather",
+      "sha256": "3fe0df6838a4edc640d232327d6f64376d33966c7135a7f3550c156244d094de"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/XLM_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/XLM_USDT_USDT-5m-futures.feather",
+      "sha256": "06c4d51b451c5fd9258d5191074ba35bd63d5f1a5755c7b28a20540c3d66bc02"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/XLM_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/XLM_USDT_USDT-1h-mark.feather",
+      "sha256": "8ca7d69b4b25532e547310e91a68604949beccf81f1ce4883a6c71d61071b628"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/XLM_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/XLM_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "6b4f7c63ffc1e0b36b2c0f96b03669da67883517ab19cd48468735af136b9902"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/XLM_USDT_USDT-1d-futures.feather",
+      "sha256": "605ce8582a5f739dd014c97e5531ecc9d9f11f170285f323a740999a3afc5910",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/ALGO_USDT_USDT-1h-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ALGO_USDT_USDT-1h-futures.feather",
+      "sha256": "399dffa987efe5a1cb23d1957b107c78b3703e28e14d04c0280da9dbcb705bf1"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/taker_flow_native_20261114_v1/candles/futures/ALGO_USDT_USDT-5m-futures.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ALGO_USDT_USDT-5m-futures.feather",
+      "sha256": "9367ae342e072fe2aeb27e0f511fd913d763b50c4c7301407e112bbd3478c1fe"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/ALGO_USDT_USDT-1h-mark.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ALGO_USDT_USDT-1h-mark.feather",
+      "sha256": "38a72f320fa0419d7c80e093db3ac8d5b8c0a3fd736720fdd0bc3844c17bf6fc"
+    },
+    {
+      "source": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/candles/futures/ALGO_USDT_USDT-1h-funding_rate.feather",
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ALGO_USDT_USDT-1h-funding_rate.feather",
+      "sha256": "53ea04ee053847a3eb78d8fad9531accfa46f71328c4080316fbec5494a88468"
+    },
+    {
+      "target": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ALGO_USDT_USDT-1d-futures.feather",
+      "sha256": "eb94b7f5851ba7620382048edbc9b60951103977b6a23b84754e2de25a92beb3",
+      "daily_splice": "original before2024Dec1, canonical5m-derived thereafter"
+    }
+  ],
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/data_receipts.json",
+    "sha256": "f793b3211695dc0b3f82fb9b22f4b2ee0be75814a6bbe921591e575f5afcf00c"
+  },
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+    "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+  },
+  "funding_limit": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/funding_cross_section_native_20261114_v1/input_admission.json",
+    "sha256": "87658520d53ca60890772e8b0844eec4dc110e8a612d31931247d8e030d951a2"
+  },
+  "funding_events": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/funding_cross_section_native_20261114_v1/funding_events.parquet",
+    "sha256": "b23710bddceae9a6ad0c079a05c63d68912eca07a01039e351e4f07afe58a789"
+  },
+  "protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/protocol.json",
+    "sha256": "89fe7c138f672e0604dd087e51b3e9ce9647db42492d0ceeb8efb24e0e1a5b2b"
+  },
+  "old_data_changed": false,
+  "frozen_metadata_historical_rule_certification": false,
+  "supplied_funding_events_at_rebalance_hour01": 0
+}

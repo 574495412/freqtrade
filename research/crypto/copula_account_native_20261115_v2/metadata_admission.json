@@ -1,0 +1,215 @@
+{
+  "freqtrade_reference": {
+    "repo": "freqtrade/freqtrade",
+    "tag": "2025.4",
+    "commit": "b11119dbe52451c6821981ba32b5df90aa166e68",
+    "resource": "freqtrade/exchange/binance_leverage_tiers.json",
+    "sha256": "0e549ac37e24b7aaea865094bd442b6ad7fd737fc41817561d55eb14ca3dbddb",
+    "EOS_brackets": [
+      {
+        "tier": 1.0,
+        "symbol": "EOS/USDT:USDT",
+        "currency": "USDT",
+        "minNotional": 0.0,
+        "maxNotional": 10000.0,
+        "maintenanceMarginRate": 0.005,
+        "maxLeverage": 75.0,
+        "info": {
+          "bracket": 1,
+          "initialLeverage": 75,
+          "notionalCap": 10000,
+          "notionalFloor": 0,
+          "maintMarginRatio": 0.005,
+          "cum": 0.0
+        }
+      },
+      {
+        "tier": 2.0,
+        "symbol": "EOS/USDT:USDT",
+        "currency": "USDT",
+        "minNotional": 10000.0,
+        "maxNotional": 50000.0,
+        "maintenanceMarginRate": 0.01,
+        "maxLeverage": 50.0,
+        "info": {
+          "bracket": 2,
+          "initialLeverage": 50,
+          "notionalCap": 50000,
+          "notionalFloor": 10000,
+          "maintMarginRatio": 0.01,
+          "cum": 50.0
+        }
+      },
+      {
+        "tier": 3.0,
+        "symbol": "EOS/USDT:USDT",
+        "currency": "USDT",
+        "minNotional": 50000.0,
+        "maxNotional": 80000.0,
+        "maintenanceMarginRate": 0.015,
+        "maxLeverage": 40.0,
+        "info": {
+          "bracket": 3,
+          "initialLeverage": 40,
+          "notionalCap": 80000,
+          "notionalFloor": 50000,
+          "maintMarginRatio": 0.015,
+          "cum": 300.0
+        }
+      },
+      {
+        "tier": 4.0,
+        "symbol": "EOS/USDT:USDT",
+        "currency": "USDT",
+        "minNotional": 80000.0,
+        "maxNotional": 250000.0,
+        "maintenanceMarginRate": 0.02,
+        "maxLeverage": 25.0,
+        "info": {
+          "bracket": 4,
+          "initialLeverage": 25,
+          "notionalCap": 250000,
+          "notionalFloor": 80000,
+          "maintMarginRatio": 0.02,
+          "cum": 700.0
+        }
+      },
+      {
+        "tier": 5.0,
+        "symbol": "EOS/USDT:USDT",
+        "currency": "USDT",
+        "minNotional": 250000.0,
+        "maxNotional": 500000.0,
+        "maintenanceMarginRate": 0.025,
+        "maxLeverage": 20.0,
+        "info": {
+          "bracket": 5,
+          "initialLeverage": 20,
+          "notionalCap": 500000,
+          "notionalFloor": 250000,
+          "maintMarginRatio": 0.025,
+          "cum": 1950.0
+        }
+      },
+      {
+        "tier": 6.0,
+        "symbol": "EOS/USDT:USDT",
+        "currency": "USDT",
+        "minNotional": 500000.0,
+        "maxNotional": 2000000.0,
+        "maintenanceMarginRate": 0.05,
+        "maxLeverage": 10.0,
+        "info": {
+          "bracket": 6,
+          "initialLeverage": 10,
+          "notionalCap": 2000000,
+          "notionalFloor": 500000,
+          "maintMarginRatio": 0.05,
+          "cum": 14450.0
+        }
+      },
+      {
+        "tier": 7.0,
+        "symbol": "EOS/USDT:USDT",
+        "currency": "USDT",
+        "minNotional": 2000000.0,
+        "maxNotional": 3000000.0,
+        "maintenanceMarginRate": 0.1,
+        "maxLeverage": 5.0,
+        "info": {
+          "bracket": 7,
+          "initialLeverage": 5,
+          "notionalCap": 3000000,
+          "notionalFloor": 2000000,
+          "maintMarginRatio": 0.1,
+          "cum": 114450.0
+        }
+      },
+      {
+        "tier": 8.0,
+        "symbol": "EOS/USDT:USDT",
+        "currency": "USDT",
+        "minNotional": 3000000.0,
+        "maxNotional": 4000000.0,
+        "maintenanceMarginRate": 0.125,
+        "maxLeverage": 4.0,
+        "info": {
+          "bracket": 8,
+          "initialLeverage": 4,
+          "notionalCap": 4000000,
+          "notionalFloor": 3000000,
+          "maintMarginRatio": 0.125,
+          "cum": 189450.0
+        }
+      },
+      {
+        "tier": 9.0,
+        "symbol": "EOS/USDT:USDT",
+        "currency": "USDT",
+        "minNotional": 4000000.0,
+        "maxNotional": 5000000.0,
+        "maintenanceMarginRate": 0.25,
+        "maxLeverage": 2.0,
+        "info": {
+          "bracket": 9,
+          "initialLeverage": 2,
+          "notionalCap": 5000000,
+          "notionalFloor": 4000000,
+          "maintMarginRatio": 0.25,
+          "cum": 689450.0
+        }
+      },
+      {
+        "tier": 10.0,
+        "symbol": "EOS/USDT:USDT",
+        "currency": "USDT",
+        "minNotional": 5000000.0,
+        "maxNotional": 6000000.0,
+        "maintenanceMarginRate": 0.5,
+        "maxLeverage": 1.0,
+        "info": {
+          "bracket": 10,
+          "initialLeverage": 1,
+          "notionalCap": 6000000,
+          "notionalFloor": 5000000,
+          "maintMarginRatio": 0.5,
+          "cum": 1939450.0
+        }
+      }
+    ],
+    "scope": "Pinned upstream historical cached leverage reference, not certified per-day privateBinancespecification. Native researchengine remainsc051e9065c5b677f03817dd1f83cb980af1ed684; old core not replaced."
+  },
+  "ccxt": {
+    "repo": "ccxt/ccxt",
+    "tag": "v4.4.75",
+    "tag_object": "2012582def808fe01b96395264bbfef400bb739b",
+    "peeled_commit": "e14a08febaf02f1a072bc1b21b12b49d5cee9fd5",
+    "commit_time": "2025-04-13T13:25:58Z",
+    "actual_response_fixture": "/Users/chrise/GitHub/freqtrade/research/crypto/copula_account_native_20261115_v2/sources/ccxt_response_binance_peeled.json",
+    "EOS_in_fixture": false,
+    "correction": "Raw paths using annotated tag object returned404; git-tree and peeled-commit blob exist. Do not call those files absent. Captured fixture has noEOSentry."
+  },
+  "other_paths": {
+    "python_binance_tag": "v1.0.28",
+    "python_binance_commit": "ea4006f6e143b155cbbd9d1141bcaa2aae00d50e",
+    "source_tree_scope": "Inspected tagged test filenames and currenttree; no EOS exchangeInfo fixture obtained. Not proof no other source exists.",
+    "grep_app": "HTTP429 response retained; no verifiedcode result",
+    "gh_cli": "Not installed; no account/auth changed",
+    "archive_index": "PublicCDX2024-2025 query returnedHTTP200 emptyarray",
+    "other_market_leads": "Spot and other-exchange rules not admitted as BinanceUSDTperpetual specifications",
+    "github_api": "Someunauthenticatedmetadatarequests403ratelimited; originalresponses or traceback scope preserved"
+  },
+  "unresolved": [
+    "EOS quantity tick/lot and minimum order rules for actualnominatedJan2025week",
+    "Account-wide price/mark/funding preparation and nativepaired execution",
+    "Initialcapital/grossbudget/weeklyquantitypolicy/costmatrix/combination freeze before any fundedresults"
+  ],
+  "EOS_not_deleted": true,
+  "EOS_nonzero_hourly_decisions": {
+    "10": 103,
+    "15": 107,
+    "20": 154
+  },
+  "financial_admission": false,
+  "native_funded_accounts": 0
+}

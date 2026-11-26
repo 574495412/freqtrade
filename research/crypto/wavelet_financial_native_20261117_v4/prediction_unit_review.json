@@ -1,0 +1,18 @@
+{
+  "recorded_at": "2026-11-17T01:18:36.516584+00:00",
+  "before_new_wallet_results": true,
+  "scope": "Source prediction units and account policy interpretation,not an intervention",
+  "observations": [
+    "CPU DWT labels reconstruct the rolling128 median/IQR normalized sixbar gain stream",
+    "Actual source class scale_results=False leaves that normalized prediction without mapping back to raw percent gain",
+    "Entry/exit targets are based on raw percent sixbar profit/loss rolling40 statistics; the source compares these different representations directly",
+    "Source curr_target uses predicted_gain/100 as a price multiplier,although prediction is not certified as a raw price-return percent; current active BaseStrategy exit policy does not consume that target"
+  ],
+  "interpretation": "Evaluate the frozen rule as an account strategy. Do not claim calibrated90minute raw-percent forecasts or repair/retune the mapping from observed returns.",
+  "source_model_policy_or_parameters_changed": false,
+  "predictive_power_or_profit_proven": false,
+  "source_files": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_source_native_20261117_v1/sources/nateemma_strategies/TSPredict/TSPredict.py": "3568998f610a3eee66a8c0c1093617d83809ed38185de7a6b2dcd067d965c9e6",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_source_native_20261117_v1/sources/nateemma_strategies/TSPredict/TS_Wavelet.py": "cd0199466d41822e41319189ae4e1facdc2beca81bda4edfcadd1746904236c7"
+  }
+}

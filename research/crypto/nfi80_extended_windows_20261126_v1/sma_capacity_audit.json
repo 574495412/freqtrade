@@ -1,0 +1,506 @@
+{
+  "protocol": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/sma_capacity_protocol.json",
+    "sha256": "979acba68675ee87b4058ddbee0d345c6e6f0b64a47fac962e6d07ea5c3efc99"
+  },
+  "manifest": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_inputs_20261126/shards.json",
+    "sha256": "e3a837dc8ab9f11834069fac31b3c91c8baf7e8ead2589fb7e9aefa3043ba255"
+  },
+  "preflight": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_native_preflight.json",
+    "sha256": "db528013092edf7606eb9d414c4f597a5d30f4820e621036fb07cb1b899d5462"
+  },
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/sma_capacity_audit.py",
+    "sha256": "af5e56f07372b3c2ccd6bbc14be08802c2dd6b23d260e0c8dd3894b4c40380f4"
+  },
+  "sections": {
+    "15": {
+      "2025": {
+        "control_12_refs": {
+          ".zip": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_15bp/account/native_results/backtest-result-2026-11-26_03-43-40.zip",
+            "sha256": "e5198abfa84ab2b9f04c56aa764abfb8fb153dd50c9218856494609097a508b9"
+          },
+          ".parquet": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_15bp/account/five_minute_equity.parquet",
+            "sha256": "306593cbb7350d4ea6a629a6c4a7a2d8206aa5952ddaa2744e9564aa6a600b93"
+          }
+        },
+        "reconciliation": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/boost14_2025_15bp_frozen_basis.json",
+          "sha256": "227215bbd5372e898e5e17f99b1d5f2e9d2519d03f0cdc6df2d49211bc6fc15e"
+        },
+        "entry_filter_audit": {
+          "refs": {
+            ".zip": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_15bp/account/native_results/backtest-result-2026-11-26_04-13-52.zip",
+              "sha256": "75f7093a6ff60d84210e9b50c1ea459aea7dc300aadf16e73f4909831bfe6837"
+            },
+            ".parquet": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_15bp/account/five_minute_equity.parquet",
+              "sha256": "6641530ab64384ba4cd694290e165134b24cc3180c656db07220f07374cf8d4d"
+            },
+            "initial_entry_checks": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_15bp/account/initial_entry_checks.json",
+              "sha256": "48e4004d1f18fe8a8905540347126208769d220ae2a8cb759e19b26648d0901f"
+            },
+            "plan": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_15bp/account/registered_plan.json",
+              "sha256": "d4f1a0c2e5c6bb1185b433516ee8797f437bbb920750ca9588e0cb93f30b69fa"
+            }
+          },
+          "entries_audited": 571,
+          "definite": [
+            {
+              "pair": "TIA/USDT:USDT",
+              "clock": "2025-03-10T19:05:00+00:00",
+              "state": "defensive",
+              "btc_daily_candle_open": "2025-03-09T00:00:00+00:00",
+              "btc_close": 80688.8,
+              "sma_200": 83255.88100000001,
+              "open_trade_count_lower": 12,
+              "open_trade_count_upper": 12,
+              "same_bar_all_exits": 0,
+              "recorded_net_pnl_usdt": 12.65524716,
+              "naturally_closed": true
+            }
+          ],
+          "unresolved": []
+        },
+        "fourteen_slot_max_drawdown": {
+          "peak": "2025-02-03T00:55:00+00:00",
+          "trough": "2025-02-03T02:10:00+00:00",
+          "fourteen_slot_drawdown": 0.22723721029167765,
+          "btc_state_at_trough": {
+            "state": "open",
+            "btc_daily_candle_open": "2025-02-02T00:00:00+00:00",
+            "btc_close": 97664.5,
+            "sma_200": 77860.06450000001
+          },
+          "same_interval": {
+            "12": {
+              "marked_nav_return_same_interval": -0.21253912190816493,
+              "open_campaigns": 12,
+              "trade_price_gross_notional_to_marked_nav": 2.3490827683521025
+            },
+            "14": {
+              "marked_nav_return_same_interval": -0.22723721029167765,
+              "open_campaigns": 14,
+              "trade_price_gross_notional_to_marked_nav": 3.0570724045298974
+            }
+          }
+        }
+      },
+      "2026_to_nov09": {
+        "control_12_refs": {
+          ".zip": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/native_results/backtest-result-2026-11-09_11-36-59.zip",
+            "sha256": "48381f6843d81002e70cdb18cd8a5e4105c11ad9716e8f2a11334b1e857ccf1e"
+          },
+          ".parquet": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/five_minute_equity.parquet",
+            "sha256": "ccfa92f02e0bf5109869bf1a17462bb523db061464ccea2a762ca05fdf28d068"
+          }
+        },
+        "reconciliation": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/comparison_15bp.json",
+          "sha256": "f800f33c85aa3f36da1c9169c74da48d75d3bc941b66e33c34c0074088c153a8"
+        },
+        "entry_filter_audit": {
+          "refs": {
+            ".zip": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_15bp/native_results/backtest-result-2026-11-25_15-57-59.zip",
+              "sha256": "7f276984d84678c00fb3b45f88b260c91b2f5f6ddf33ad8c52a223761799da91"
+            },
+            ".parquet": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_15bp/five_minute_equity.parquet",
+              "sha256": "33155f67fc938ec146e4bcdb76bd9767b8d513fa1ff25d14b2f209579718c8cb"
+            },
+            "initial_entry_checks": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_15bp/initial_entry_checks.json",
+              "sha256": "53a0db6940e8936497fac333ae6ea4c1b3d1dfa88996c3a058be9bdd6bad0b0c"
+            },
+            "plan": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_15bp/registered_plan.json",
+              "sha256": "d12d43c421d1172ae177bd27e10d16f70be0cb6b22fe69a5b591429288793e16"
+            }
+          },
+          "entries_audited": 312,
+          "definite": [
+            {
+              "pair": "INJ/USDT:USDT",
+              "clock": "2026-06-04T02:05:00+00:00",
+              "state": "defensive",
+              "btc_daily_candle_open": "2026-06-03T00:00:00+00:00",
+              "btc_close": 64117.7,
+              "sma_200": 79082.637,
+              "open_trade_count_lower": 12,
+              "open_trade_count_upper": 12,
+              "same_bar_all_exits": 0,
+              "recorded_net_pnl_usdt": 25.2558423,
+              "naturally_closed": true
+            },
+            {
+              "pair": "DOT/USDT:USDT",
+              "clock": "2026-06-04T02:05:00+00:00",
+              "state": "defensive",
+              "btc_daily_candle_open": "2026-06-03T00:00:00+00:00",
+              "btc_close": 64117.7,
+              "sma_200": 79082.637,
+              "open_trade_count_lower": 13,
+              "open_trade_count_upper": 13,
+              "same_bar_all_exits": 0,
+              "recorded_net_pnl_usdt": 11.8760526,
+              "naturally_closed": true
+            },
+            {
+              "pair": "VIRTUAL/USDT:USDT",
+              "clock": "2026-06-04T02:10:00+00:00",
+              "state": "defensive",
+              "btc_daily_candle_open": "2026-06-03T00:00:00+00:00",
+              "btc_close": 64117.7,
+              "sma_200": 79082.637,
+              "open_trade_count_lower": 13,
+              "open_trade_count_upper": 13,
+              "same_bar_all_exits": 1,
+              "recorded_net_pnl_usdt": 5.00618082,
+              "naturally_closed": true
+            }
+          ],
+          "unresolved": []
+        },
+        "fourteen_slot_max_drawdown": {
+          "peak": "2026-09-15T19:05:00+00:00",
+          "trough": "2026-10-08T17:50:00+00:00",
+          "fourteen_slot_drawdown": 0.16100634370563172,
+          "btc_state_at_trough": {
+            "state": "open",
+            "btc_daily_candle_open": "2026-10-07T00:00:00+00:00",
+            "btc_close": 83281.9,
+            "sma_200": 71731.4955
+          },
+          "same_interval": {
+            "12": {
+              "marked_nav_return_same_interval": -0.1683228894097153,
+              "open_campaigns": 12,
+              "trade_price_gross_notional_to_marked_nav": 3.3359046357795
+            },
+            "14": {
+              "marked_nav_return_same_interval": -0.16100634370563172,
+              "open_campaigns": 12,
+              "trade_price_gross_notional_to_marked_nav": 3.3360265169915015
+            }
+          }
+        }
+      },
+      "2026_nov10_to_nov25_restart": {
+        "control_12_refs": {
+          ".zip": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/fixed_boost_12_15bp/native_results/backtest-result-2026-11-26_02-06-52.zip",
+            "sha256": "aa105183c0086c579da5dfe042830dffdb5722a959c89dcff0b17a915184e1ec"
+          },
+          ".parquet": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/fixed_boost_12_15bp/five_minute_equity.parquet",
+            "sha256": "27ce74f3bb53103e1b3ffdf2ea2365f1e77162653ffd5636992188f011e19864"
+          }
+        },
+        "reconciliation": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_window_15bp_controls.json",
+          "sha256": "dff0a4289ff0718ce6f33eb05617a79fbfb7475aaa8d593a4af7097fc8521fe1"
+        },
+        "entry_filter_audit": {
+          "refs": {
+            ".zip": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/boost_14_15bp/native_results/backtest-result-2026-11-26_02-07-32.zip",
+              "sha256": "108abae48b4f26da624fcf04bd72432592f8355b6d426d670a28f4819a083aa9"
+            },
+            ".parquet": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/boost_14_15bp/five_minute_equity.parquet",
+              "sha256": "27ce74f3bb53103e1b3ffdf2ea2365f1e77162653ffd5636992188f011e19864"
+            },
+            "initial_entry_checks": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/boost_14_15bp/initial_entry_checks.json",
+              "sha256": "39640d62e3336b05ef4ffeb47d18ebbf99bd919262152b3167d71e3dae8e4e42"
+            },
+            "plan": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/boost_14_15bp/registered_plan.json",
+              "sha256": "a9ccfa71ffd659be44d7514c7de95be911ba2e1bd8779eb9410ed51d07c6bf1a"
+            }
+          },
+          "entries_audited": 15,
+          "definite": [],
+          "unresolved": []
+        },
+        "fourteen_slot_max_drawdown": {
+          "peak": "2026-11-20T07:40:00+00:00",
+          "trough": "2026-11-21T04:30:00+00:00",
+          "fourteen_slot_drawdown": 0.05736826297890085,
+          "btc_state_at_trough": {
+            "state": "defensive",
+            "btc_daily_candle_open": "2026-11-20T00:00:00+00:00",
+            "btc_close": 58915.0,
+            "sma_200": 72555.4695
+          },
+          "same_interval": {
+            "12": {
+              "marked_nav_return_same_interval": -0.05736826297890085,
+              "open_campaigns": 3,
+              "trade_price_gross_notional_to_marked_nav": 0.5912326550697571
+            },
+            "14": {
+              "marked_nav_return_same_interval": -0.05736826297890085,
+              "open_campaigns": 3,
+              "trade_price_gross_notional_to_marked_nav": 0.5912326550697571
+            }
+          }
+        }
+      }
+    },
+    "8": {
+      "2025": {
+        "control_12_refs": {
+          ".zip": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account/native_results/backtest-result-2026-11-26_06-18-38.zip",
+            "sha256": "1f31af687addc90c0a9c647bff4d1b9875d52e26801a5b6d4cab0074c0b8b602"
+          },
+          ".parquet": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_fixed_boost_12_8bp/account/five_minute_equity.parquet",
+            "sha256": "53092eecf9423a1633ae4a53d4c092434012978504bdb90baa047c07f7ff663e"
+          }
+        },
+        "reconciliation": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/annual_2025_boost14_8bp_verified.json",
+          "sha256": "a925c4e20733e341e912ae9d185bf340ef324cae4fcfaf55dfddad8cf2ce0888"
+        },
+        "entry_filter_audit": {
+          "refs": {
+            ".zip": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_8bp/account/native_results/backtest-result-2026-11-26_07-11-19.zip",
+              "sha256": "c9b99bb62402da28263181c3d4cbc096fd161d476779f50a852d32836c2378b4"
+            },
+            ".parquet": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_8bp/account/five_minute_equity.parquet",
+              "sha256": "81cc68f2c68dd108fb09d2a85e163c676a220f69f9ab177796ff61a101ffadb6"
+            },
+            "initial_entry_checks": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_8bp/account/initial_entry_checks.json",
+              "sha256": "77275ea1a00b2f39cd483169071ed700074560ffc3b4211dea35d29858c2601e"
+            },
+            "plan": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/bounded_native_blocks/annual_boost_14_8bp/account/registered_plan.json",
+              "sha256": "7dbe14aae44334c781921089a2b626895367ecfb9b5aa896afdd530a6f8a0681"
+            }
+          },
+          "entries_audited": 588,
+          "definite": [
+            {
+              "pair": "TIA/USDT:USDT",
+              "clock": "2025-03-10T19:05:00+00:00",
+              "state": "defensive",
+              "btc_daily_candle_open": "2025-03-09T00:00:00+00:00",
+              "btc_close": 80688.8,
+              "sma_200": 83255.88100000001,
+              "open_trade_count_lower": 12,
+              "open_trade_count_upper": 12,
+              "same_bar_all_exits": 0,
+              "recorded_net_pnl_usdt": 14.55869787,
+              "naturally_closed": true
+            }
+          ],
+          "unresolved": []
+        },
+        "fourteen_slot_max_drawdown": {
+          "peak": "2025-02-03T00:55:00+00:00",
+          "trough": "2025-02-03T02:10:00+00:00",
+          "fourteen_slot_drawdown": 0.22216397798650656,
+          "btc_state_at_trough": {
+            "state": "open",
+            "btc_daily_candle_open": "2025-02-02T00:00:00+00:00",
+            "btc_close": 97664.5,
+            "sma_200": 77860.06450000001
+          },
+          "same_interval": {
+            "12": {
+              "marked_nav_return_same_interval": -0.20392539448055302,
+              "open_campaigns": 12,
+              "trade_price_gross_notional_to_marked_nav": 2.780826163508625
+            },
+            "14": {
+              "marked_nav_return_same_interval": -0.22216397798650656,
+              "open_campaigns": 14,
+              "trade_price_gross_notional_to_marked_nav": 3.278945869176027
+            }
+          }
+        }
+      },
+      "2026_to_nov09": {
+        "control_12_refs": {
+          ".zip": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_8bps/native_results/backtest-result-2026-11-09_12-01-25.zip",
+            "sha256": "9e0554593bc987ad467ad6462a437af89d333ea5b5b07ed54fbbb48e1f6c57b0"
+          },
+          ".parquet": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_8bps/five_minute_equity.parquet",
+            "sha256": "ea4c30a4a757fcd5d1eeb51286c9b3451fa4dade4781353fc319dd9b8c973de1"
+          }
+        },
+        "reconciliation": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/comparison_8bp.json",
+          "sha256": "7ec32cc862787da7cb4b99ebf0850828790fd0df30959799849aaf4bf674943c"
+        },
+        "entry_filter_audit": {
+          "refs": {
+            ".zip": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_8bp/native_results/backtest-result-2026-11-25_16-13-59.zip",
+              "sha256": "748b0b6e9978066c9247fa0809bc7e7d8fec7a57ff81a9fa5abf667a0382d99e"
+            },
+            ".parquet": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_8bp/five_minute_equity.parquet",
+              "sha256": "da58bb9b0908124675a9cbe956ed93359303388039de4ab7288953235579ae4f"
+            },
+            "initial_entry_checks": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_8bp/initial_entry_checks.json",
+              "sha256": "67cf28ecfffee952ce84d6297610110fc2645c8552f7c48294b5b51b22493303"
+            },
+            "plan": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_baseline_20261125_v1/cost_8bp/registered_plan.json",
+              "sha256": "d12d43c421d1172ae177bd27e10d16f70be0cb6b22fe69a5b591429288793e16"
+            }
+          },
+          "entries_audited": 314,
+          "definite": [
+            {
+              "pair": "INJ/USDT:USDT",
+              "clock": "2026-06-04T02:05:00+00:00",
+              "state": "defensive",
+              "btc_daily_candle_open": "2026-06-03T00:00:00+00:00",
+              "btc_close": 64117.7,
+              "sma_200": 79082.637,
+              "open_trade_count_lower": 12,
+              "open_trade_count_upper": 12,
+              "same_bar_all_exits": 0,
+              "recorded_net_pnl_usdt": 26.38008864,
+              "naturally_closed": true
+            },
+            {
+              "pair": "DOT/USDT:USDT",
+              "clock": "2026-06-04T02:05:00+00:00",
+              "state": "defensive",
+              "btc_daily_candle_open": "2026-06-03T00:00:00+00:00",
+              "btc_close": 64117.7,
+              "sma_200": 79082.637,
+              "open_trade_count_lower": 13,
+              "open_trade_count_upper": 13,
+              "same_bar_all_exits": 0,
+              "recorded_net_pnl_usdt": 12.59058992,
+              "naturally_closed": true
+            },
+            {
+              "pair": "VIRTUAL/USDT:USDT",
+              "clock": "2026-06-04T02:10:00+00:00",
+              "state": "defensive",
+              "btc_daily_candle_open": "2026-06-03T00:00:00+00:00",
+              "btc_close": 64117.7,
+              "sma_200": 79082.637,
+              "open_trade_count_lower": 13,
+              "open_trade_count_upper": 13,
+              "same_bar_all_exits": 1,
+              "recorded_net_pnl_usdt": 5.26053384,
+              "naturally_closed": true
+            }
+          ],
+          "unresolved": []
+        },
+        "fourteen_slot_max_drawdown": {
+          "peak": "2026-10-08T09:55:00+00:00",
+          "trough": "2026-10-08T17:50:00+00:00",
+          "fourteen_slot_drawdown": 0.15563836585043345,
+          "btc_state_at_trough": {
+            "state": "open",
+            "btc_daily_candle_open": "2026-10-07T00:00:00+00:00",
+            "btc_close": 83281.9,
+            "sma_200": 71731.4955
+          },
+          "same_interval": {
+            "12": {
+              "marked_nav_return_same_interval": -0.15564100476546672,
+              "open_campaigns": 11,
+              "trade_price_gross_notional_to_marked_nav": 3.323516165794675
+            },
+            "14": {
+              "marked_nav_return_same_interval": -0.15563836585043345,
+              "open_campaigns": 11,
+              "trade_price_gross_notional_to_marked_nav": 3.323497453104408
+            }
+          }
+        }
+      },
+      "2026_nov10_to_nov25_restart": {
+        "control_12_refs": {
+          ".zip": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/fixed_boost_12_8bp/native_results/backtest-result-2026-11-26_02-08-53.zip",
+            "sha256": "77d8540e8f62e11f8ae85a59b90df2a10a8665a19f9873398330d982bd25d274"
+          },
+          ".parquet": {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/fixed_boost_12_8bp/five_minute_equity.parquet",
+            "sha256": "f2663175f9e995827b86cef382a407689642a35b6a6504cb158fc48db04a06db"
+          }
+        },
+        "reconciliation": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_window_8bp_controls.json",
+          "sha256": "3032e339448f48c1c3c081e0c8c2e5af020577b2ba937741785906d8c77c5216"
+        },
+        "entry_filter_audit": {
+          "refs": {
+            ".zip": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/boost_14_8bp/native_results/backtest-result-2026-11-26_02-10-10.zip",
+              "sha256": "a68d36aca336b04d77908a0531f9dd9449155cb0b0dc28378c33cbd09b477cbe"
+            },
+            ".parquet": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/boost_14_8bp/five_minute_equity.parquet",
+              "sha256": "f2663175f9e995827b86cef382a407689642a35b6a6504cb158fc48db04a06db"
+            },
+            "initial_entry_checks": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/boost_14_8bp/initial_entry_checks.json",
+              "sha256": "39640d62e3336b05ef4ffeb47d18ebbf99bd919262152b3167d71e3dae8e4e42"
+            },
+            "plan": {
+              "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts/boost_14_8bp/registered_plan.json",
+              "sha256": "a9ccfa71ffd659be44d7514c7de95be911ba2e1bd8779eb9410ed51d07c6bf1a"
+            }
+          },
+          "entries_audited": 15,
+          "definite": [],
+          "unresolved": []
+        },
+        "fourteen_slot_max_drawdown": {
+          "peak": "2026-11-20T07:40:00+00:00",
+          "trough": "2026-11-21T04:30:00+00:00",
+          "fourteen_slot_drawdown": 0.055761446551437444,
+          "btc_state_at_trough": {
+            "state": "defensive",
+            "btc_daily_candle_open": "2026-11-20T00:00:00+00:00",
+            "btc_close": 58915.0,
+            "sma_200": 72555.4695
+          },
+          "same_interval": {
+            "12": {
+              "marked_nav_return_same_interval": -0.055761446551437444,
+              "open_campaigns": 3,
+              "trade_price_gross_notional_to_marked_nav": 0.5896792203355828
+            },
+            "14": {
+              "marked_nav_return_same_interval": -0.055761446551437444,
+              "open_campaigns": 3,
+              "trade_price_gross_notional_to_marked_nav": 0.5896792203355828
+            }
+          }
+        }
+      }
+    }
+  },
+  "new_native_wallet_results": 0,
+  "orders_enabled": false
+}

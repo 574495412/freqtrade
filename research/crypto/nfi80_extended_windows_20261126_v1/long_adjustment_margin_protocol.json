@@ -1,0 +1,10 @@
+{
+  "hypothesis": "The earlier 2x concurrent entry-margin rule may apply to large long-position losses in the Top Coins and Rebuy modes. Test whether it would have reached the three drawdown campaigns and whether it also reaches protected winners.",
+  "source": "The archived NFI X8 class puts tag 145 in long_top_coins_mode_tags and tag 63 in long_rebuy_mode_tags. Use its runtime trade scope, and report pure tag 145 and pure tag 63 separately within their respective pure families.",
+  "accounts": "Use the independently reconciled 15 bp 12-slot continuous window from 2025-01-01 up to 2026-11-25 23:55 UTC and the already reconciled 8 bp 12-slot reset windows (2025, 2026 through November 9 and November 10–25). Each path uses the archived rules.",
+  "scope": "Replay the filled orders for each campaign through weighted-entry-basis accounting. A reduction frees the proportional concurrent acquisition margin. A positive fill is a hit when reconstructed concurrent entry margin exceeds 2x its first fill. Track lifetime entry turnover separately as context. A known drawdown campaign is reached only if the first affected fill precedes its marked drawdown trough.",
+  "tails": "Use net realized profit at natural close divided by marked account equity five minutes before first fill. Count 1% winners and losses among campaigns with known prior NAV. Keep terminal positions visible and exclude artificial terminal closes from economic counts.",
+  "advance": "Prioritize native candidate validation only if at least one of the three known drawdown campaigns crosses before the trough and the recorded crossings select no known 1% natural winner in either cost scope. This is a fixed prioritization condition, not proof of altered account performance.",
+  "known_before_audit": "The three drawdown campaigns (WLD, APT and PHA), their tags and number of fills, plus the held-margin rule from the already archived scalp audit, are known. The pure-family exposure and tail relation are to be computed without fitting.",
+  "orders_enabled": false
+}

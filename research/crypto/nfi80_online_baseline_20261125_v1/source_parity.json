@@ -1,0 +1,33 @@
+{
+  "scope": "Archived deployment and native historical control, not current cloud observation",
+  "matching_explicit_config_fields": [
+    "nfi_parameters",
+    "grinding_enable",
+    "unfilledtimeout",
+    "order_types",
+    "tradable_balance_ratio",
+    "stake_amount",
+    "trading_mode",
+    "margin_mode",
+    "timeframe",
+    "max_open_trades"
+  ],
+  "same_upstream_strategy_bytes": {
+    "path": "/Users/chrise/GitHub/freqtrade/deploy/strategy/nfi-x8/NostalgiaForInfinityX8.py",
+    "sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3"
+  },
+  "regional_archive": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/deployment/aliyun-public-20261111T145059Z/candidate/futures-config.private.json",
+    "sha256": "726f69ee3164824c333971f7f59ae240bd025e4e4bb977195158e22f82f419c5"
+  },
+  "historical_effective_config": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/effective_config.json",
+    "sha256": "157239e00b5b4ecd444f3340d07f2abf2e814100453cb4454259325836c3d440"
+  },
+  "operational_differences": {
+    "exchange_execution": "offline native historical fills, no signed exchange activity",
+    "funding_mode": "virtual 1000 USDT at start; archived production uses available-balance funding",
+    "universe": "frozen historical daily whitelist instead of live RemotePairList freshness and expiry"
+  },
+  "orders_enabled": false
+}

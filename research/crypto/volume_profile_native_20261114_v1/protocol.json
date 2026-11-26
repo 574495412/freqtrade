@@ -1,0 +1,61 @@
+{
+  "frozen_utc": "2026-11-14T11:31:17.344063+00:00",
+  "before_local_signals": true,
+  "before_financial_accounts": true,
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "source_repository": "VernonCM/bot-volume-profile-bybit",
+  "source_commit": "b213ff69f18bc0907249cbc8a0ea20146ccd199c",
+  "source_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/mechanism_source_intake_20261114_v1/source_receipts.json",
+    "sha256": "a76adae6d13c1adeae4fcfc658fc4d6391503dd2a11b9f3ca32dd7a03a70ce97"
+  },
+  "source_license": "No license file present in inspected pinned tree; source retained for local reading/pure-rule comparison; own implementation, no third-party financial engine execution",
+  "market": "BTC/USDT:USDT Binance perpetual; source is Bybit, venue adaptation explicit",
+  "window": [
+    "2025-01-01T00:00:00Z",
+    "2026-08-31T23:00:00Z"
+  ],
+  "timeframe": "15m",
+  "detail": "5m",
+  "profiles": "100equal-width bins of latest completed UTC day; each candle volume split equally among touched inclusive bins (not overlap-length weighting); zero-range candle uses left search minus1; POC first maximum,70percent contiguous value area, upper neighbour on ties",
+  "volume_mean": "20previous15mbars,shift1",
+  "policies": [
+    "ProfileBreakout",
+    "ProfileFade",
+    "ProfileNoVolume"
+  ],
+  "breakout": "first qualifying close outside previous day area; volume>=1.5previous20mean; pending signal at next15mopen; reset latch only on processed flat bar inside area; stop opposite area end,target signal_close plus/minus one stop distance",
+  "fade": "flat-only outside excursion; freeze initial area; count subsequent processed flat bars; update high/low excursion extreme; expire count>32; enter after recross frozen bound; target opposite frozen bound; stop excursion extreme",
+  "no_volume": "Matched3x breakout ablation; volume multiplier0, not independent source alpha",
+  "state": "Native funded position controls whether source state machine advances; no updates while held. Initial flat Jan1; firstdecision after firstcompleted financial15mbar. No same-row reversal after native exit",
+  "risk": "1percent currentnativeflatcash divided by entry-to-sourceSL distance; maximum3xnotional,99percentnativeavailablemargin; actualnativequantity rounding/minimum retained; no minimum upsizing, noDCA",
+  "leverage": 3,
+  "capital": [
+    1000,
+    500
+  ],
+  "cost_bps_per_side": [
+    15,
+    8
+  ],
+  "accounts": 12,
+  "funding": "Native actual events; exclude normal entries exactly00/08/16UTC; state still advances and blocked intents retained; mechanical exits active",
+  "local_execution_changes": [
+    "Native adverse gap/precision/fee/funding/liquidation handling replaces source simplified account",
+    "Native stops/targets active in entrybar; source checks exits before entry and omits entrybar protection",
+    "Native sourcelevels as persisted tradecustomdata;stoppriority before target on ambiguous5mdetail; native limit clamp for TP gaps",
+    "Source entry commission removes quantity without full cash debit; do not copy. Native fees debitactualwallet",
+    "Backtest-only local subclass adds funded-state signal hook before native backtest_loop; all accounting/fills/margin remain native"
+  ],
+  "controls": "Existing byte-exact SMA10/20 andHoldBTC1000/500 at15/8bps are contextual1x; NoVolume is matched3x attribution. All commonclock/data/fee comparisons explicit",
+  "combinations": "Actual500Breakout+500Fade,eachsource500+sealedSMA500,NoVolume500+SMA500; no scaling/transfers/resets",
+  "gates": "Each source candidate positive full/2025/2026slice,DD<=.5,min20completedtradesfull/min5eachslice,bothcosts; sourcebreakoutbeatsNoVolume; anymixbeatsappropriateactual1000components andSMA. Ifcandidatepasses require same-input incumbentNFI followup; no global superiority/OOS from this screen",
+  "no_rescue": "No source bins,VA,threshold,hold,stop,target,leverage,pool,window,cost,weights changes afterlocaloutcomes; keepfailedaccountsunknowns",
+  "resource": "One financialworker,3GiBRSS,3600s,>=2GiBfree; no repeatedfinishedaccounts",
+  "orders": false,
+  "deployment": false,
+  "service_changes": false,
+  "independent_oos": false,
+  "new_factor_analysis_calls": 0,
+  "accepted_independent_factors": 0
+}

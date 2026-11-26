@@ -1,0 +1,20 @@
+{
+  "command": ".venv-paper/bin/python -B -m research.crypto.nfi40_dca_creation_clock_proof_20261118_v1.prove_clock",
+  "observed_exec_session": 44703,
+  "observed_wait_exit_code": 0,
+  "observed_stdout": {
+    "status": "PASSED_NARROW_NATIVE_DCA_CREATION_CLOCK_CONSTRAINT",
+    "cases": 22,
+    "boundary_DCA": 3,
+    "fills_examined": 683
+  },
+  "log_sha256": "12aad781bc76b25d971c8d5ab23c21f3245a6a4584ccedc63b95ebae0acc23a6",
+  "validation_sha256": "5b5df77dd18153d62872197b9cd02004cdb7df85d4ecdf5b34e4edb89e850b13",
+  "freeze_sha256": "145a63b445f23dcff089ffea9880ac42b1255915daae2c8f2b74badf9ca889e8",
+  "post_run_frozen_files_verified": 56,
+  "actual_financial_predecessor_process_result_binding_verified": true,
+  "static_check_command": "/Users/chrise/GitHub/Vibe-Trading/.venv/bin/ruff check --select E9,F63,F7,F82 research/crypto/nfi40_dca_creation_clock_proof_20261118_v1/prove_clock.py",
+  "static_check_exit_code": 0,
+  "static_check_log_sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
+  "native_accounts_started": 0
+}

@@ -1,0 +1,206 @@
+{
+  "status": "PASSED_NARROW_NATIVE_DCA_CREATION_CLOCK_CONSTRAINT",
+  "fixture_cases": [
+    {
+      "case": "long_old_initial",
+      "passed": true,
+      "canceled_before_fill": true,
+      "native_initial_trade_removal_required": true
+    },
+    {
+      "case": "long_old_dca",
+      "passed": true,
+      "canceled_before_fill": true,
+      "native_initial_trade_removal_required": false
+    },
+    {
+      "case": "long_same_clock_new_dca",
+      "passed": true,
+      "real_native_enter_trade_and_try_close": true
+    },
+    {
+      "case": "long_expiry_precedes_replace",
+      "passed": true
+    },
+    {
+      "case": "short_old_initial",
+      "passed": true,
+      "canceled_before_fill": true,
+      "native_initial_trade_removal_required": true
+    },
+    {
+      "case": "short_old_dca",
+      "passed": true,
+      "canceled_before_fill": true,
+      "native_initial_trade_removal_required": false
+    },
+    {
+      "case": "short_same_clock_new_dca",
+      "passed": true,
+      "real_native_enter_trade_and_try_close": true
+    },
+    {
+      "case": "short_expiry_precedes_replace",
+      "passed": true
+    },
+    {
+      "case": "out_of_contract_replace_False",
+      "passed": true,
+      "actual_config_inference_allowed": false
+    },
+    {
+      "case": "out_of_contract_replace_True",
+      "passed": true,
+      "actual_config_inference_allowed": false
+    },
+    {
+      "case": "native_5m_no_detail_grid",
+      "passed": true
+    },
+    {
+      "case": "detail_1m_allows_pending_counterexample",
+      "passed": true,
+      "actual_config_inference_allowed": false
+    },
+    {
+      "case": "timeout_10m_allows_pending_counterexample",
+      "passed": true,
+      "actual_config_inference_allowed": false
+    },
+    {
+      "case": "timeout_age_seconds_180",
+      "passed": true,
+      "expired": true
+    },
+    {
+      "case": "timeout_age_seconds_179",
+      "passed": true,
+      "expired": false
+    },
+    {
+      "case": "timeout_age_seconds_0",
+      "passed": true,
+      "expired": false
+    },
+    {
+      "case": "missing_effective_evidence",
+      "passed": true
+    },
+    {
+      "case": "detail_1m_rejected",
+      "passed": true
+    },
+    {
+      "case": "detail_unknown_null_rejected",
+      "passed": true
+    },
+    {
+      "case": "entry_timeout10_rejected",
+      "passed": true
+    },
+    {
+      "case": "timeout_missing_rejected",
+      "passed": true
+    },
+    {
+      "case": "timeout_unit_rejected",
+      "passed": true
+    }
+  ],
+  "fixture_case_count": 22,
+  "source_facts": {
+    "prohibited_overrides": [],
+    "source_order_clock_or_status_writes": [],
+    "source_Order_construction_count": 0,
+    "timeout_functions": {
+      "check_entry_timeout": {
+        "line": 5513,
+        "end_line": 5524,
+        "ast_sha256": "06e3ffae411e69f33af57cc0ab71af42cc4ade2ba6d509a74c6ad0c48549e710"
+      },
+      "check_exit_timeout": {
+        "line": 5528,
+        "end_line": 5542,
+        "ast_sha256": "07a511ae152c4b25d346acbffde0d5b7b62d4c6fe20ff4189eeb48a82bae645a"
+      }
+    },
+    "native_ordering_calls": [
+      [
+        1543,
+        "manage_open_orders"
+      ],
+      [
+        1569,
+        "_try_close_open_order"
+      ],
+      [
+        1574,
+        "_check_trade_exit"
+      ]
+    ],
+    "setattr_scope": "Two source setattr sites target strategy self and configuration parameters; frozen effective config has no timeout-method override keys."
+  },
+  "vendor_files_verified": 595,
+  "actual_15bp_exported_fills_examined": 683,
+  "actual_boundary_DCA": [
+    {
+      "trade_index": 127,
+      "pair": "CRV/USDT:USDT",
+      "order_index": 11,
+      "order_id": null,
+      "fill_timestamp_ms": 1754841600000,
+      "inferred_creation_timestamp_ms": 1754841600000,
+      "inference": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT",
+      "creation_exported": false,
+      "funding_dates_sha256": "11b6ca6c5c91277100725ddd8690ac6e4fabdbebfb8551b8a5bab4b86e4644ab"
+    },
+    {
+      "trade_index": 127,
+      "pair": "CRV/USDT:USDT",
+      "order_index": 13,
+      "order_id": null,
+      "fill_timestamp_ms": 1755043200000,
+      "inferred_creation_timestamp_ms": 1755043200000,
+      "inference": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT",
+      "creation_exported": false,
+      "funding_dates_sha256": "11b6ca6c5c91277100725ddd8690ac6e4fabdbebfb8551b8a5bab4b86e4644ab"
+    },
+    {
+      "trade_index": 279,
+      "pair": "XRP/USDT:USDT",
+      "order_index": 3,
+      "order_id": null,
+      "fill_timestamp_ms": 1787472000000,
+      "inferred_creation_timestamp_ms": 1787472000000,
+      "inference": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT",
+      "creation_exported": false,
+      "funding_dates_sha256": "8e8b88053fac5a77b584b6e7f1e7e091ad30f82db0f3d19ec04030828ec1a066"
+    }
+  ],
+  "actual_effective_config_sha256": "543ddd3d0d999f0de80df33aaab27e8f6a29d5322baa17a30d63c4fa1728f719",
+  "freeze_sha256": "145a63b445f23dcff089ffea9880ac42b1255915daae2c8f2b74badf9ca889e8",
+  "no_native_globals_changed": true,
+  "native_Backtesting_instances": 0,
+  "native_Backtesting_start_calls": 0,
+  "native_Wallet_instances": 0,
+  "native_Exchange_instances": 0,
+  "financial_recomputations": 0,
+  "full_matching_or_wallet_proof": false,
+  "source_custom_order_filled_executed": false,
+  "omitted_side_effects": [
+    "funding hook recorded only",
+    "liquidation price update no-op",
+    "after-fill stop update hook recorded only",
+    "source order_filled economics not executed",
+    "entry stake/precision metadata are fixture constants"
+  ],
+  "conclusion": "For this fixed successful 15bp native configuration and source, any additional-entry fill at F cannot be a pending order created at an earlier 5m clock: earlier open entries are canceled before fill. Replacement is also a new order dated its actual source row. Thus the three funding-boundary DCA creations are uniquely F under the audited native path; minified creation metadata remains absent.",
+  "not_claimed": [
+    "venue intrabar execution",
+    "full-account or numerical funding audit",
+    "8bp applicability without its own terminal config/source evidence",
+    "changed detail or timeout contracts",
+    "global out-of-sample performance"
+  ],
+  "peak_rss_bytes_macos": 436879360
+}

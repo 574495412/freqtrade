@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "accounts": [
+    {
+      "account": "wavelet_1000_conservative",
+      "native_trades": 184,
+      "entry_masks_and_closed_bar_maturity_passed": true,
+      "liquidity_quote_headroom_passed": true,
+      "maximum_trade_quote_to_prior_candle_quote_volume": 0.00016068787115708951,
+      "exit_clock_and_active_custom_exit_contract_passed": true,
+      "source_callback_errors_in_log": 0,
+      "exit_reasons": {
+        "unclog_12h": 69,
+        "trailing_stop_loss": 50,
+        "take_profit": 20,
+        "unclog_1d": 40,
+        "roi": 2,
+        "model_exit ": 3
+      },
+      "native_archive_sha256": "8b7dda9cb856bd371a39d3ab2b19989aea58fb29417fb7b76eab43d273446d00"
+    },
+    {
+      "account": "wavelet_1000_lower",
+      "native_trades": 190,
+      "entry_masks_and_closed_bar_maturity_passed": true,
+      "liquidity_quote_headroom_passed": true,
+      "maximum_trade_quote_to_prior_candle_quote_volume": 0.00016068787115708951,
+      "exit_clock_and_active_custom_exit_contract_passed": true,
+      "source_callback_errors_in_log": 0,
+      "exit_reasons": {
+        "unclog_12h": 75,
+        "take_profit": 24,
+        "trailing_stop_loss": 47,
+        "unclog_1d": 38,
+        "roi": 3,
+        "model_exit ": 3
+      },
+      "native_archive_sha256": "8a9e96c0ee2558b4c48b229116e1283433c799cd9c90a79297455d55cfe96d88"
+    },
+    {
+      "account": "wavelet_500_conservative",
+      "native_trades": 184,
+      "entry_masks_and_closed_bar_maturity_passed": true,
+      "liquidity_quote_headroom_passed": true,
+      "maximum_trade_quote_to_prior_candle_quote_volume": 8.01908995107761e-05,
+      "exit_clock_and_active_custom_exit_contract_passed": true,
+      "source_callback_errors_in_log": 0,
+      "exit_reasons": {
+        "unclog_12h": 69,
+        "trailing_stop_loss": 50,
+        "take_profit": 20,
+        "unclog_1d": 40,
+        "roi": 2,
+        "model_exit ": 3
+      },
+      "native_archive_sha256": "8c929c76ce7c250b21b1abfecc1402971d02cb87844ed84e7f1ab7f6acd55dc8"
+    },
+    {
+      "account": "wavelet_500_lower",
+      "native_trades": 190,
+      "entry_masks_and_closed_bar_maturity_passed": true,
+      "liquidity_quote_headroom_passed": true,
+      "maximum_trade_quote_to_prior_candle_quote_volume": 8.01908995107761e-05,
+      "exit_clock_and_active_custom_exit_contract_passed": true,
+      "source_callback_errors_in_log": 0,
+      "exit_reasons": {
+        "unclog_12h": 75,
+        "take_profit": 24,
+        "trailing_stop_loss": 47,
+        "unclog_1d": 38,
+        "roi": 3,
+        "model_exit ": 3
+      },
+      "native_archive_sha256": "bafde75a153bb9f4e568a356663d53f44eb33742356480c7ce52d6049fb2b20b"
+    }
+  ],
+  "source_calculator_model_or_engine_imported": false,
+  "protective_orders_or_live_execution_proven": false,
+  "goal_complete": false
+}

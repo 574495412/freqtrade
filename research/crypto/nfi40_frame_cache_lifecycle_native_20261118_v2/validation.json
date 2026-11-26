@@ -1,0 +1,70 @@
+{
+  "status": "TECHNICAL_V2_OBJECT_TESTED_EXECUTION_HELD",
+  "validated_at": "2026-11-17T16:53:19.799718+00:00",
+  "producer_freeze_sha256": "17b5bf971aa2fab63eeecd20b24523207f4aa817c2db59a71d2d217c61e5df9b",
+  "plan_sha256": "ee004aa7474f1bb6605b2cb04c2806f68d05334327d73199e82c0c7eae8f40d9",
+  "economic_plan_byte_identical_to_v1": true,
+  "all_v1_sealed_files_unchanged": true,
+  "terminal_resource_probe": {
+    "terminal_exit_code": 0,
+    "passed": true,
+    "checks": [
+      "successful_final_sample_written_and_controller_sha_identity_bound",
+      "actual_controller_terminal_copy_requires_bound_resource_receipt",
+      "first_breach_only_at_final_sample_rejects_and_preserves_receipt",
+      "controller_recomputes_all_seven_current_or_historical_bounds",
+      "missing_digest_identity_numeric_fields_and_nan_reject",
+      "monitor_thread_not_terminal_rejects",
+      "cross_block_eviction_capacity_path_gate_rejects_missing_real_evidence"
+    ],
+    "synthetic_resource_and_receipt_objects_only": true,
+    "native_accounts_started": 0,
+    "subprocesses_started": 0,
+    "financial_lock_acquired": false,
+    "actual_native_path_coverage": "UNKNOWN",
+    "execution_replacement_admitted": false
+  },
+  "provider_object_probe": {
+    "terminal_exit_code": 0,
+    "observed_exec_session": 28630,
+    "passed": true,
+    "checks": [
+      "constructor_and_controller_denial_precede_native_import_or_process",
+      "actual_official_DP_object_slice_noindex_missing_clear_callback_semantics_equal",
+      "synthetic_official_DP_4096_boundary_read_counter_records_actual_slice",
+      "source_borrowed_frame_mutation_is_recorded_and_rejected",
+      "detached_native_raw_fields_preserve_sub_8_decimal_values",
+      "synthetic_order_callback_stage_classification_and_unfilled_rejection"
+    ],
+    "actual_native_accounts_started": 0,
+    "actual_lifecycle_coverage": "UNKNOWN",
+    "synthetic_fixtures_only": true,
+    "actual_native_DP_object_used": true,
+    "native_Backtesting_imported": false,
+    "shared_financial_lock_acquired": false,
+    "release_created": false,
+    "execution_replacement_admitted": false
+  },
+  "actual_admission_probe": {
+    "terminal_exit_code": 1,
+    "expected_reason": "HELD: root technical replay release is absent"
+  },
+  "static_checks": {
+    "terminal_exit_code": 0,
+    "selector": "E9,F63,F7,F82",
+    "full_rule_lint_claim": false
+  },
+  "actual_native_accounts_started": 0,
+  "actual_native_cache_lifecycle_evidence": "UNKNOWN",
+  "complete_cache_lifecycle_certified": false,
+  "execution_replacement_admitted": false,
+  "financial_lock_acquired": false,
+  "release_created": false,
+  "technical_recovery_branch": "NOT_IMPLEMENTED_OLD_SUCCESS_PREDECESSOR_GATE_UNCHANGED",
+  "remaining": [
+    "Real short native entry/add/partial/full and callback/cache evidence unexecuted",
+    "Actual eviction/crossblock future replay coverage may be absent; then admission fails without retry",
+    "8192-boundary9003row synthetic native matching fixture producer not implemented",
+    "Full-window financial parity and original runner replacement not admitted"
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "passed": true,
+  "source": "native ZIP _wallet.feather and actual orders",
+  "actual_native_balance_rows": 350168,
+  "common_initial_cash_hour_separate": true,
+  "quote_convention": "native quote cash minus remaining entry fee reserve equals economic cash,within realized-PnL rounding",
+  "private_exchange_cash_certified": false,
+  "candidate_calculator_imported": false,
+  "accounts": [
+    {
+      "account": "up_1000_conservative",
+      "actual_wallet_rows": 43771,
+      "actual_wallet_clocks": 14591,
+      "maximum_native_balance_error": 1.7053025658242404e-13,
+      "maximum_entry_fee_reserve_identity_error_usdt": 3.757236299861688e-08,
+      "minimum_independently_reconstructed_economic_cash": 266.47990998160003,
+      "missing_initial_zero_base_balances": 2,
+      "passed": true
+    },
+    {
+      "account": "crp_1000_conservative",
+      "actual_wallet_rows": 43771,
+      "actual_wallet_clocks": 14591,
+      "maximum_native_balance_error": 1.7053025658242404e-13,
+      "maximum_entry_fee_reserve_identity_error_usdt": 4.130208708374994e-08,
+      "minimum_independently_reconstructed_economic_cash": 242.77914520619998,
+      "missing_initial_zero_base_balances": 2,
+      "passed": true
+    },
+    {
+      "account": "up_1000_lower",
+      "actual_wallet_rows": 43771,
+      "actual_wallet_clocks": 14591,
+      "maximum_native_balance_error": 1.7053025658242404e-13,
+      "maximum_entry_fee_reserve_identity_error_usdt": 1.759934775691363e-08,
+      "minimum_independently_reconstructed_economic_cash": 266.8247072487401,
+      "missing_initial_zero_base_balances": 2,
+      "passed": true
+    },
+    {
+      "account": "crp_1000_lower",
+      "actual_wallet_rows": 43771,
+      "actual_wallet_clocks": 14591,
+      "maximum_native_balance_error": 2.2737367544323206e-13,
+      "maximum_entry_fee_reserve_identity_error_usdt": 2.1186053800192894e-08,
+      "minimum_independently_reconstructed_economic_cash": 243.42980923507997,
+      "missing_initial_zero_base_balances": 2,
+      "passed": true
+    },
+    {
+      "account": "up_500_conservative",
+      "actual_wallet_rows": 43771,
+      "actual_wallet_clocks": 14591,
+      "maximum_native_balance_error": 5.684341886080802e-14,
+      "maximum_entry_fee_reserve_identity_error_usdt": 1.2753332612192025e-08,
+      "minimum_independently_reconstructed_economic_cash": 133.7525964488,
+      "missing_initial_zero_base_balances": 2,
+      "passed": true
+    },
+    {
+      "account": "crp_500_conservative",
+      "actual_wallet_rows": 43771,
+      "actual_wallet_clocks": 14591,
+      "maximum_native_balance_error": 8.526512829121202e-14,
+      "maximum_entry_fee_reserve_identity_error_usdt": 1.349519607174443e-08,
+      "minimum_independently_reconstructed_economic_cash": 124.90066368640001,
+      "missing_initial_zero_base_balances": 2,
+      "passed": true
+    },
+    {
+      "account": "up_500_lower",
+      "actual_wallet_rows": 43771,
+      "actual_wallet_clocks": 14591,
+      "maximum_native_balance_error": 5.684341886080802e-14,
+      "maximum_entry_fee_reserve_identity_error_usdt": 1.2125894954806427e-08,
+      "minimum_independently_reconstructed_economic_cash": 133.68594159772,
+      "missing_initial_zero_base_balances": 2,
+      "passed": true
+    },
+    {
+      "account": "crp_500_lower",
+      "actual_wallet_rows": 43771,
+      "actual_wallet_clocks": 14591,
+      "maximum_native_balance_error": 8.526512829121202e-14,
+      "maximum_entry_fee_reserve_identity_error_usdt": 9.867335393209942e-09,
+      "minimum_independently_reconstructed_economic_cash": 122.10801323202998,
+      "missing_initial_zero_base_balances": 2,
+      "passed": true
+    }
+  ]
+}

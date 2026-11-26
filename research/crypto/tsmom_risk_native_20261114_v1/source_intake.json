@@ -1,0 +1,82 @@
+{
+  "financial_parameters_remain_frozen": true,
+  "adopted_strategy": {
+    "platform": "GitHub",
+    "url": "https://github.com/cagriKarakulak/aqr-tsmom-crypto/tree/f067ed1f63377175af7e6adef882ddb6a0417dc8",
+    "manifest": "source_manifest.json",
+    "actual_content": "Seven pinned source files; exact signal/volatility methods and inspected allocation loop",
+    "is_official_aqr_implementation": false,
+    "source_return_claims_adopted": false,
+    "source_differences": [
+      "Code uses fixed .95 sample covariance + .05 diagonal, not Ledoit-Wolf",
+      "Source target weights mark next close-to-close return; native execution preserves extra source lag",
+      "Local29 pool is not source532 universe or PIT certification; top100 filter is nonbinding",
+      "Common observed history yields426-1033 covariance observations, not full3years",
+      "Source self-managed fee option; native trading/funding/quantity/margin model rather than source free weight return account"
+    ]
+  },
+  "native_owner": {
+    "url": "https://www.freqtrade.io/en/stable/strategy-callbacks/",
+    "pinned_implementation": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+    "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "interfaces": ["IStrategy.adjust_trade_position", "IStrategy.bot_loop_start", "position_adjustment_enable", "native Trade/Order/Wallets/Backtesting"],
+    "clock_gate_is_local_extension": true,
+    "official_core_modified": false
+  },
+  "social_discovery": [
+    {
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=1ni8FWe_Cxc",
+      "title": "Rob Carver on MatLab, Trend Following in Crypto, & Seasonality Strategies | Systematic Investor292",
+      "content_read": "Search-exposed title/description only; direct video fetch failed",
+      "video_watched": false,
+      "decision": "No rule or return admitted from video metadata"
+    },
+    {
+      "platform": "Publisher transcript; distinct episode366, not a transcript match for292",
+      "url": "https://www.toptradersunplugged.com/podcast/the-strategy-did-not-fail-the-investors-did-ft-rob-carver/",
+      "content_read": "Publisher episode page/transcript metadata and crypto question timestamp30:19",
+      "decision": "Context only, no source-faithful implemented crypto rule or comparable full account supplied"
+    },
+    {
+      "platform": "X/Twitter",
+      "url": "https://x.com/10xResearch/status/2056179154715127933",
+      "content_read": "Search-exposed post text about CPI, ETF flows and30day moving average; direct fetch403",
+      "decision": "No original machine-readable signal/data/position-size/cost account; do not adopt market calls or quoted levels"
+    },
+    {
+      "platform": "Douyin",
+      "url": "https://www.douyin.com/shipin/7644368945084237874",
+      "content_read": "Readable page AI transcript, not a watched or word-for-word verified video",
+      "mechanism": "Equal-weight baseline, linear factor combination, portfolio risk optimization; risk of overfit",
+      "decision": "No exact factor panel, optimizer constraints or funded account artifacts; no claimed alpha/return admitted"
+    }
+  ],
+  "different_mechanism_input_candidate": {
+    "title": "Beyond Anonymous Order Flow: Wallet Identity as a Feature for Short-Horizon Return Prediction",
+    "url": "https://arxiv.org/html/2611.05218v1",
+    "authors": ["Jingqiu Ding", "Daojing Zhai"],
+    "version": "v1 submitted2026-11-03",
+    "mechanism": "Previously scored pseudonymous wallet groups in consensus-ordered Hyperliquid Level4 messages",
+    "actual_content_read": "Primary abstract/HTML data pipeline and selection/data limitations",
+    "admission": false,
+    "gaps": [
+      "Binance OHLCV/taker-volume histories do not contain wallet identities or message ordering",
+      "One-second prediction and markout evidence is not a full costed portfolio account",
+      "Primary paper discloses result-informed choice of top-decile focus, volatility scaling and July window",
+      "No admitted full2025Jan-2026Aug venue-consistent record or Freqtrade execution/latency/fee contract here"
+    ],
+    "raw_wallet_data_downloaded": false,
+    "wallet_to_natural_person_linkage": false,
+    "factor_analysis_calls": 0,
+    "native_funded_accounts": 0,
+    "source_return_or_r2_adopted_as_our_return": false
+  },
+  "funding_gap_followup": {
+    "query": "site.binance.com TIAUSDT 2026-06-24 funding",
+    "exact_gap_closure_evidence_found": false,
+    "decision": "An unrelated Binance listing notice and price history do not prove missing04:00 event was canceled/zero. Preserve UNKNOWN."
+  },
+  "new_social_source_accepted_alphas": 0,
+  "orders_or_deployment_authorized": false
+}

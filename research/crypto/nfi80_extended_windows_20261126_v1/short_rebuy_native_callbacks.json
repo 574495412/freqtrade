@@ -1,0 +1,30 @@
+{
+  "freeze": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/short_rebuy_native_callbacks_freeze.json",
+    "sha256": "702919e1669382b27c567cdd1e1b191cd31deddc1074981f68fb7c55e34cf3e3"
+  },
+  "analysis": {
+    "historical_requests_reproduced": 1476,
+    "by_pair": {
+      "NEAR/USDT:USDT": 1351,
+      "FARTCOIN/USDT:USDT": 125
+    },
+    "native_callback_view_checks": [
+      {
+        "pair": "FARTCOIN/USDT:USDT",
+        "event_time": "2026-09-18T19:45:00+00:00",
+        "last_visible": "2026-09-18T19:40:00+00:00"
+      },
+      {
+        "pair": "NEAR/USDT:USDT",
+        "event_time": "2026-08-21T23:15:00+00:00",
+        "last_visible": "2026-08-21T23:10:00+00:00"
+      }
+    ],
+    "clean_cache": true,
+    "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "new_wallet_accounts": 0
+  },
+  "scope": "Replay the cap on actual request values from the earlier twelve-slot native account and native filled-order prefixes. The original request-generating strategy branch is supplied the recorded request. Candle slicing is checked at the same first request clocks. This is a callback diagnostic only.",
+  "orders_enabled": false
+}

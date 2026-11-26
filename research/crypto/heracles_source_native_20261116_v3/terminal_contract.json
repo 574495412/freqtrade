@@ -1,0 +1,10 @@
+{
+  "frozen_before_v3_financial": "2026-11-16T14:15:51.911098+00:00",
+  "native_owner": "Backtesting.handle_left_open,lines1282-1304",
+  "native_signature": "dict[str,list[LocalTrade]]",
+  "actual_rule": "Native terminal force exit uses last main-bar row OPEN and row label,not final close. With4h bars it can use20UTC after the actual detail loop has completed23:55.",
+  "correction_to_parent_text": "Earlier terminal contract incorrectly said finalclose;none of the financial code altered the native owner.",
+  "primary_rule": "Exclude proven post-loop force exit orders from common-hour reconciliation regardless of assigned label;historical fills use original timestamps strictly before mark.",
+  "native_unchanged": true,
+  "window_unchanged": true
+}

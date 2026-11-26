@@ -1,0 +1,11 @@
+{
+  "question": "Does the end-of-week distance to the intraday weekly high predict next-week relative returns within the existing 40-perpetual universe better than same-week plain momentum?",
+  "source": "https://quantitative.cz/wp-content/uploads/2023/09/impact_of_size_and_volume_on_cryptocurrency_momentum_and_reversal.pdf",
+  "source_pdf_sha256": "e91db8b5898dcda9fc292d2daedf241d82a87b83b0e9b24a73e9cb1216ea75a6",
+  "original_definition": "Section 2.2 eq. (2), log of weekly close minus log of maximum intraday high over that week. Larger is stronger. Section 3.1 equal-weight quintiles.",
+  "local_universe": "Existing ordered forty Binance USDT perpetual cohort. The source uses dynamic market cap and global USD turnover membership, missing from the pinned venue files. These tests apply to the fixed local universe only.",
+  "clock": "Weeks end at Monday 00:00 UTC following seven completed daily bars. Labels are simple returns from Monday 00:05 open to the next Monday 00:05 open in pinned native 5m futures bars. Use only complete non-overlapping labels in the original account window. Calibration slices omit labels that span the UTC 2025/26 boundary.",
+  "control": "Conventional one-week close-to-close log return using the same weeks, universe, and forward labels.",
+  "gate": "Continue to native financial research if full-window mean Rank IC is > 0.03, full-window positive IC fraction > 0.55, both contiguous year sections have positive mean Rank IC, and full-window Rank IC exceeds that of the conventional control. Five gross group-curve outputs are diagnostic and no funded returns are claimed.",
+  "pre_result": "Fixed source horizon, sign, clock, comparison and gate selected before viewing the factor results. Prior NFI and Turtle outcomes known. No parameter search or orders."
+}

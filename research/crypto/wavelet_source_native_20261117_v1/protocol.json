@@ -1,0 +1,37 @@
+{
+  "frozen_at": "2026-11-16T22:56:54.273510+00:00",
+  "scope": "Crypto wavelet-regression source admission and chronology; no financial parameter search",
+  "selected_legacy_source": {
+    "repository": "rmallarapu-bc/nateemma",
+    "commit": "221ee52b9cd04e26089adc7ff955a74a1fa3e3fd",
+    "upstream_owner": "nateemma/strategies",
+    "upstream_current_commit_observed": "9bb7dab5df53203e69f60336749551a40767af0b",
+    "strategy": "binanceus/DWT_Predict.py",
+    "timeframe": "5m",
+    "model_window": 128,
+    "lookahead_bars": 6,
+    "backtest_prediction_method": "add_jumping_predictions",
+    "jump_buffer_rows": 974,
+    "not_equivalent_to_current_upstream_TS_Wavelet_DWT": true
+  },
+  "requirements": [
+    "Preserve original strategy functions/defaults and source warning; no swapping jumping/rolling paths to rescue",
+    "Trace actual training feature/label row indices and output assignment windows through unmodified source AST methods with explicitly labelled diagnostic stand-ins",
+    "Separate future labels for supervised training from their availability at each historical decision; record any in-window train/predict reuse",
+    "Read source normalization and coefficient-window clocks; no imaginary online model contract",
+    "Do not execute or import downloaded model/pickle files, external scripts, source top-level side effects or financial engines",
+    "If source contract fails, preserve failure and do not report financial PnL or native accounts"
+  ],
+  "observations_already_seen": [
+    "Author warns limited lookahead for jumping predictions",
+    "Current upstream README performance statements seen, not adopted; current upstream is a separate version and workflow"
+  ],
+  "inputs": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/permutation_entropy_source_native_20261117_v1/artifact_manifest.json": "df4fa110d046bb3f809dad3a6b5b5ec1204ed4a3f787448627bb735355e66b18"
+  },
+  "financial_engine_executions": 0,
+  "new_native_wallets": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

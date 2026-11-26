@@ -1,0 +1,22 @@
+{
+  "schema": "copula.reference.hourly.formation.v2",
+  "frozen_before_nomination_or_account_returns": true,
+  "source_input_checkpoint": "copula_reference_native_20261114_v1",
+  "source_universe_policy": "All20paper members in original order; EOS remains in source pool with explicit dated terminal status; no A substitution.",
+  "formation_hours": 504,
+  "trading_hours": 168,
+  "source_first_trading_anchor": "2021-01-22T00:00:00Z",
+  "first_overlapping_week": "2024-12-27T00:00:00Z",
+  "last_decision": "2026-08-31T23:00:00Z",
+  "regression": "Raw BTC close on each alt close through origin, no intercept; actual previous504completed hourly bars only.",
+  "source_stationarity_view": "ADF residual p<.10, regression=c, autolag=AIC, statsmodels default maxlag; explicit local numerical convention because author code/lag recipe not obtained. Not adjusted EG critical-value proof.",
+  "ranking": "Kendall tau of raw BTC/alt price levels among passing residualADF; descending tau, source order stable tie; nominate top2; <2=>no trading for entire week.",
+  "copula_model": "Normal/Student-t/Cauchy margins trainingMLE+AIC; all39family/rotation kernels from sealedv1, constrained two-parameter Tawn; minimum trainingAIC, stable family-order tie.",
+  "source_entry_thresholds": [0.10, 0.15, 0.20],
+  "source_exit_threshold": 0.10,
+  "candidate_scope": "Hourly EG-labelled source-ADF view, all3published thresholds; source5m and KSS variants not silently relabelled as reproduced.",
+  "execution_universe_note": "A source member never selected into any nonzero target need not be enabled for exchange execution. Source selection still uses full20; only inspect causal nominations, not accountprofit, to determine necessary execution metadata. If EOS selected, unresolved EOS market specs remain required.",
+  "native_accounts": 0,
+  "returns": "UNKNOWN",
+  "orders_enabled": false
+}

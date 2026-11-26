@@ -1,0 +1,87 @@
+{
+  "prior_plan": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/plan.json",
+    "sha256": "7811964619044565a3927f2a4a03a43fdc8e04565b29d619d87593968650aaec"
+  },
+  "prior_preflight": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/preflight.json",
+    "sha256": "7ff62b62769913cd445e0ead59b000effd97942bbb133572ef94ba9778314188"
+  },
+  "legacy_storage": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/zstd_storage.py",
+    "sha256": "d1498c52dd541bc1fe6d254e622410db894aa1bcd46f1fc42ea68a30b2fccabf"
+  },
+  "native_dataprovider": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/data/dataprovider.py",
+    "sha256": "3222d862fea2ca9dd566063b83845f99c421ba4f5eb20773ba5e64be68b0ba0e"
+  },
+  "native_backtesting": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/optimize/backtesting.py",
+    "sha256": "1d45e0b34ddf30813bbdf51a20be6e8345a65b668f373f8ce2fbb6e93271b234"
+  },
+  "schema": "freqtrade.full_width_storage_benchmark.v1",
+  "frozen_at": "2026-11-17T15:43:03.051900+00:00",
+  "scope": "New nonfinancial full-width phase; existing live financial controller unchanged",
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_frame_cache_native_20261117_v1/full_width",
+  "small_probe_manifest": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_frame_cache_native_20261117_v1/small_probe_artifact_manifest.json",
+    "sha256": "f953696c71b27a728d0ce37f1de80903410e45b75866c07be35b02e401328f74"
+  },
+  "actual_pair": "BTC/USDT:USDT",
+  "source_contract": {
+    "configured_context_pairs": 40,
+    "actual_base_pairs_loaded": 1,
+    "native_timerange": "2025-01-01T00:00:00Z to 2026-09-01T00:00:00Z minus1second",
+    "warmup": 800,
+    "calendar_expected_rows": 175904,
+    "actual_native_loaded_rows_recorded_without_forcing_count": true,
+    "indicator_columns": 231,
+    "analyzed_columns": 237,
+    "historical_precision_returned_series_unused": true,
+    "historical_precision_gaps_unchanged": true,
+    "no_old_pickle_read": true
+  },
+  "mode_order": [
+    "blocks32",
+    "legacy4",
+    "legacy6"
+  ],
+  "cache_aliases": 6,
+  "actual_assets": 1,
+  "cycles": 10,
+  "first_slice_end": 172032,
+  "slice_window": 1000,
+  "query_order": "Each of ten consecutive 5m maxindices: aliases0 through5; identical frozen windows in each mode",
+  "native_interfaces": "Original DataProvider _set_cached_df and get_analyzed_dataframe; source history/load precision sideeffect/advise_all_indicators/ft_advise_signals, no Backtesting or Wallets construction",
+  "memory_design": "Use one source frame object for six assignments; do not manufacture six in-memory copies. Legacy disk reload naturally creates separate frames. Release each mode before next.",
+  "measurement": {
+    "timing": "source setup+indicator computation, native signals, mapping write, first cycle, remaining9 cycles, exact validation separately",
+    "legacy_reader": "original writer/eviction including byte serialization check; instrumented reader keeps compressed stream+buffered pickle load, adds own-generated file SHA and compressed/decompressed byte counters",
+    "block_reader": "frozen v3 storage unchanged",
+    "initial_read_cache_clear": "legacy alias references discarded once after all writes outside timing; blocks naturally cold, no clearing during timed60reads",
+    "proof": "exact native slices including dtype/index/columns/attrs/flags/calendar/numericbits; no market returns or six-asset claim"
+  },
+  "resource_limits": {
+    "max_rss_bytes": 3221225472,
+    "min_available_bytes": 1610612736,
+    "startup_headroom_bytes": 1073741824,
+    "min_disk_bytes": 2147483648,
+    "poll_seconds": 0.25,
+    "max_seconds": 1200,
+    "enforcement": "worker phase checks plus separate parent supervisor polls own worker; terminate on observed breach, preserve partial receipts"
+  },
+  "resource_snapshot_before_freeze": {
+    "total": 17179869184,
+    "available": 3586342912,
+    "percent": 79.1,
+    "used": 6036488192,
+    "free": 253788160,
+    "active": 3357048832,
+    "inactive": 3303702528,
+    "wired": 2679439360
+  },
+  "financial_accounts": 0,
+  "execution_replacement_admitted": false,
+  "full40_performance_proven": false,
+  "goal_complete": false
+}

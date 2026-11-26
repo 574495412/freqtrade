@@ -1,0 +1,76 @@
+{
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_compare.py",
+    "sha256": "9d437b7ea493747a980415f5ff0679f599db3fd4992af8c346df47e0609077a0"
+  },
+  "preflight": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_extended_windows_20261126_v1/recent_two_year_native_preflight.json",
+    "sha256": "db528013092edf7606eb9d414c4f597a5d30f4820e621036fb07cb1b899d5462"
+  },
+  "cost_bps_per_side": 8,
+  "account": {
+    "proof": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_12_8bp/account_reconciled.json",
+      "sha256": "d22c004740fa2a309013421cca0529d56d903e37f6f52d4e94f7bf59b22bf478"
+    },
+    "execution": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_12_8bp/completion.json",
+      "sha256": "2e54d875c0de8575110154fcba37215cb5a60c785def7a02a26a6233347e67a3"
+    },
+    "registered_plan": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_12_8bp/registration/plan.json",
+      "sha256": "1d4d84fc6747cb6c1012353a37379f0f29c2e779efb708500924e11bbfe73181"
+    },
+    "effective_config": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/recent_two_year_native_20261126/full_12_8bp/account/effective_config.json",
+      "sha256": "5f64dbe92a4907837b66401249037617ba1008a587380c9707e3055842e29533"
+    },
+    "periods": {
+      "continuous": {
+        "net_return": 44.0254128246731,
+        "drawdown": 0.24925306546144121,
+        "ending_equity": 45025.4128246731,
+        "marks": 199872
+      },
+      "2025": {
+        "net_return": 15.455747346679999,
+        "drawdown": 0.20392539448055302,
+        "ending_equity": 16455.74734668,
+        "marks": 105121
+      },
+      "2026": {
+        "net_return": 1.7361511984903633,
+        "drawdown": 0.24925306546144121,
+        "ending_equity": 45025.4128246731,
+        "marks": 94752
+      }
+    },
+    "large_trades": {
+      "natural_closes": 896,
+      "wins_at_least_25_usdt": 403,
+      "wins_at_least_50_usdt": 261,
+      "trades_with_prior_equity": 896,
+      "wins_at_least_1pct_of_equity": 142,
+      "losses_at_least_1pct_of_equity": 4,
+      "best_profit_fraction_of_prior_equity": 0.07822694403110282,
+      "worst_profit_fraction_of_prior_equity": -0.1968237901060301,
+      "single_entry_count": 803,
+      "single_entry_wins_at_least_10pct_of_margin": 267,
+      "median_opening_margin_usdt": 379.8693333333333
+    },
+    "five_minute_nav_reconciliation": {
+      "passed": true,
+      "maximum_nav_error_usdt": 1.7010097508318722e-07,
+      "maximum_funding_error_usdt": 0.0,
+      "maximum_position_count_error": 0,
+      "peak_gross_notional_to_equity": 3.3244405385623876
+    },
+    "carry_at_2026_utc_midnight": {
+      "marked_nav_usdt": 16455.74734668,
+      "open_trades": 0
+    },
+    "slots_reached": 12,
+    "liquidations": 0
+  },
+  "orders_enabled": false
+}

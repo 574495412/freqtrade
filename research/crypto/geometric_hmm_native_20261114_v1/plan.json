@@ -1,0 +1,481 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "schema": "freqtrade.native.geometric-hmm.v1",
+  "registered_at": "2026-11-14T14:18:52.787453+00:00",
+  "source_strategy_allocation_study": true,
+  "not_new_factor_screen": true,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+    "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+  },
+  "pairs": [
+    "BTC/USDT:USDT"
+  ],
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/data_receipts.json",
+    "sha256": "2b251635c47dbb322df9330471957d6377f85554c64505ed02aaa77043cc2ec6"
+  },
+  "marks": {
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    }
+  },
+  "candidates": [
+    {
+      "name": "SourceGeoHmmBTC_1000",
+      "strategy": "SourceGeoHmmBTC",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/SourceGeoHmmBTC_1000.json",
+        "sha256": "039e0aa043c299580a8e07a68f3afd7c7f06aa7191f8001325fa68c1e53cc3bd"
+      },
+      "source_files": {
+        "GeoHmmPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/GeoHmmPortfolio.py",
+          "sha256": "c038d0f3ce5d9e27a03ad3b47977304b0e53625aa027a402f77bb395de4f7a87"
+        },
+        "CausalGeoHMM.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/CausalGeoHMM.py",
+          "sha256": "f1ae8e2f593de86cfb4d5d45a486551394e7dc5501045cbb8099f0ad340dbca0"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    },
+    {
+      "name": "SourceGeoHmmBTC_500",
+      "strategy": "SourceGeoHmmBTC",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/SourceGeoHmmBTC_500.json",
+        "sha256": "e7958199b285af00e774252d95a1c5a3f0e015b318ee4b63e32f378a025e31a5"
+      },
+      "source_files": {
+        "GeoHmmPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/GeoHmmPortfolio.py",
+          "sha256": "c038d0f3ce5d9e27a03ad3b47977304b0e53625aa027a402f77bb395de4f7a87"
+        },
+        "CausalGeoHMM.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/CausalGeoHMM.py",
+          "sha256": "f1ae8e2f593de86cfb4d5d45a486551394e7dc5501045cbb8099f0ad340dbca0"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    },
+    {
+      "name": "GeoOnlyBTC_1000",
+      "strategy": "GeoOnlyBTC",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/GeoOnlyBTC_1000.json",
+        "sha256": "27a4db1b3358f7cb694c0bb73e38e61350e75db867af559085560e934dc23b0f"
+      },
+      "source_files": {
+        "GeoHmmPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/GeoHmmPortfolio.py",
+          "sha256": "c038d0f3ce5d9e27a03ad3b47977304b0e53625aa027a402f77bb395de4f7a87"
+        },
+        "CausalGeoHMM.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/CausalGeoHMM.py",
+          "sha256": "f1ae8e2f593de86cfb4d5d45a486551394e7dc5501045cbb8099f0ad340dbca0"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    },
+    {
+      "name": "GeoOnlyBTC_500",
+      "strategy": "GeoOnlyBTC",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/GeoOnlyBTC_500.json",
+        "sha256": "089e164234f9322ba1a123d365483b76a962105aed46d55743d8f5fa2d88effe"
+      },
+      "source_files": {
+        "GeoHmmPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/GeoHmmPortfolio.py",
+          "sha256": "c038d0f3ce5d9e27a03ad3b47977304b0e53625aa027a402f77bb395de4f7a87"
+        },
+        "CausalGeoHMM.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/CausalGeoHMM.py",
+          "sha256": "f1ae8e2f593de86cfb4d5d45a486551394e7dc5501045cbb8099f0ad340dbca0"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    },
+    {
+      "name": "HmmOnlyBTC_1000",
+      "strategy": "HmmOnlyBTC",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/HmmOnlyBTC_1000.json",
+        "sha256": "5518306a2d3e371c341aee71e458acae06682dbb87c0e89a40aef429ba32bae7"
+      },
+      "source_files": {
+        "GeoHmmPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/GeoHmmPortfolio.py",
+          "sha256": "c038d0f3ce5d9e27a03ad3b47977304b0e53625aa027a402f77bb395de4f7a87"
+        },
+        "CausalGeoHMM.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/CausalGeoHMM.py",
+          "sha256": "f1ae8e2f593de86cfb4d5d45a486551394e7dc5501045cbb8099f0ad340dbca0"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    },
+    {
+      "name": "HmmOnlyBTC_500",
+      "strategy": "HmmOnlyBTC",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/HmmOnlyBTC_500.json",
+        "sha256": "0844b8b320d4c31796a34ca3b5d0b07eeda6d548fa55332dad4af82526e50dc2"
+      },
+      "source_files": {
+        "GeoHmmPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/GeoHmmPortfolio.py",
+          "sha256": "c038d0f3ce5d9e27a03ad3b47977304b0e53625aa027a402f77bb395de4f7a87"
+        },
+        "CausalGeoHMM.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/CausalGeoHMM.py",
+          "sha256": "f1ae8e2f593de86cfb4d5d45a486551394e7dc5501045cbb8099f0ad340dbca0"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    },
+    {
+      "name": "ConstantGrossBTC_1000",
+      "strategy": "ConstantGrossBTC",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/ConstantGrossBTC_1000.json",
+        "sha256": "96056a5e882ea18019523a200514695d4ad61fe4713bbf2434c6751a15513e58"
+      },
+      "source_files": {
+        "GeoHmmPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/GeoHmmPortfolio.py",
+          "sha256": "c038d0f3ce5d9e27a03ad3b47977304b0e53625aa027a402f77bb395de4f7a87"
+        },
+        "CausalGeoHMM.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/CausalGeoHMM.py",
+          "sha256": "f1ae8e2f593de86cfb4d5d45a486551394e7dc5501045cbb8099f0ad340dbca0"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    },
+    {
+      "name": "ConstantGrossBTC_500",
+      "strategy": "ConstantGrossBTC",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/ConstantGrossBTC_500.json",
+        "sha256": "65d9a7f8ef26076ef875a1512017bfe6a20df74d0930fda3d2eccc6174543d7b"
+      },
+      "source_files": {
+        "GeoHmmPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/GeoHmmPortfolio.py",
+          "sha256": "c038d0f3ce5d9e27a03ad3b47977304b0e53625aa027a402f77bb395de4f7a87"
+        },
+        "CausalGeoHMM.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/CausalGeoHMM.py",
+          "sha256": "f1ae8e2f593de86cfb4d5d45a486551394e7dc5501045cbb8099f0ad340dbca0"
+        },
+        "NativeQuantityPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeQuantityPortfolio.py",
+          "sha256": "6db03536a2f6fe8760ac1ca6bfe3bf52ce2809f30a0a196cf79c3e5e36bbc257"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        }
+      }
+    }
+  ],
+  "allowed_leverage": 3.0,
+  "initial_equity_usdt": 1000,
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "runner_sha256": "474a145adb67bb14eac25b525b730eb036523f641142300e47d865aed856e1a8",
+  "runner_module": "research.crypto.geometric_hmm_native_20261114_v1.worker",
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/worker.py",
+      "sha256": "320ca42eb5cff4e2c1322fe3a326446a04e36bcd484795527644091ffa97fade"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/prepare.py",
+      "sha256": "357ad40650015843286034d73eb78ca87317ba67d9b93b77a4de0d19ee9f21e9"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/register.py",
+      "sha256": "c10dded6bdb7bc69cc00ebc67f26cadfd065e1682aba50c6523c2568f1e81d41"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/protocol.json",
+      "sha256": "5ef7be126d51f45197ba5c62372ebc4c4dea13e6997bce30c67178703712733f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/preflight.json",
+      "sha256": "f57a14e4e933cab2d003e80fe5e4ba9e1eaa73f0607b3877936111b95dfead23"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/test_contract.py",
+      "sha256": "21786cebc6a30a20375c15f8553c2296d9f90e99563803b13646084187094b79"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/tests_final.log",
+      "sha256": "cfd88f428ccffc13c39ac6d9e54f5c5970cd0ade401e1c98224d75d161b42863"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/run.py",
+      "sha256": "d799b4fe3c701596c6890eb674762dc605d3553932cbbe8f008bd8d34c2a63dd"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/source/run.py",
+      "sha256": "3118c1d05d8a9103431bd0674be7477e523fba0ee7bb081796d9739062883074"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/source/LICENSE",
+      "sha256": "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/source/requirements.txt",
+      "sha256": "b8e2a639945c9f3987643c55eff533a5efe187c709ccee5c7af3b31fa99e2eb3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/source/README.md",
+      "sha256": "3df772ef01726adc8382d4f9b01bfabb802fc095e93ff58212173b81d4d1b588"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/source/src/geometric.py",
+      "sha256": "16562849fff181c6e52e34d95e495b852f54d8b08553464dd75f02149a1ab337"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/source/src/markov.py",
+      "sha256": "16453f594dd53c961bb1c0664316ad2041b80c2a503b77eef93a49a405a86de3"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/source/src/ensemble.py",
+      "sha256": "5033d90d6fa7faa01d10744e8e28b0c8f4beabe173ae1f9fa1c89936719d9fb6"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/source/src/backtest.py",
+      "sha256": "41e8a4ada17b9e2b0b48ef0913c571d29e450a3c4fcd8a373cba496599e3183b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/geometric_hmm_native_20261114_v1/source/src/expanding.py",
+      "sha256": "19cb0d45817e62e7153192da5f4531f58a57a6d57aca461ba4822c2367b50666"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/model_capsule.json",
+      "sha256": "054701739c5818b696ac94a1b0a1e6f1addd25cf11a84649f97813958ade9d5b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/native_model_features.parquet",
+      "sha256": "68e1036a957479d554b28c9fe609f6742bc79ffc3445a34696fa068256fd8534"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/models/fold_2.npz",
+      "sha256": "8f82a868bd205d7a984cd684dfdcafba51e5f91d7d9a3f3f6e3022ee52f8cbcb"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/models/fold_3.npz",
+      "sha256": "9000cf1331e32aa0cf229bb2bb910ca94c996f934416f715c94df791ae796b59"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/models/fold_1.npz",
+      "sha256": "8aa3f046fade03084e8980c2b758fb5bf58761f7b906175fe1df5daef21787cb"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/models/fold_0.npz",
+      "sha256": "bce04ec1f0145acc45adb0c948861356916a39cae503745fb8d74e6145fb71aa"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/models/fold_4.npz",
+      "sha256": "d9afceb3f273fef99c1d37fbe86622982e2990b22d0e28d2c1cfffe3f801bea1"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/models/fold_5.npz",
+      "sha256": "6c71dc406e2dbd384b26702b644d48ca2a7b7d49d0caf84de17b94d8dc503c7c"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/preflight_features_ConstantGrossBTC.parquet",
+      "sha256": "17140b7bfa0de5b9651100c38cef415aabad657c60744603ca8a90cd5507dc13"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/preflight_features_SourceGeoHmmBTC.parquet",
+      "sha256": "321dceae1d6f18f32881ffbcc2827dd8e674d5a08711d597f7720e6783b71f2e"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/preflight_weights_SourceGeoHmmBTC.parquet",
+      "sha256": "2c7b3afc2f92aecd4413f8c8245e62df5718066600f5ae6a82e2d050400ae983"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/preflight_features_HmmOnlyBTC.parquet",
+      "sha256": "1c2f97e44ff4e4a6531179115b5c0fe9f72e55d97214241c4f9fa8b3e73f0939"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/preflight_weights_HmmOnlyBTC.parquet",
+      "sha256": "680ee8e74536615c3213a621c866039fb7e1e2142010ce89f73c89130bb9d50f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/preflight_weights_GeoOnlyBTC.parquet",
+      "sha256": "afeffb7868f69d97fabf8d8a790f6d3892d1e6a91fd7151d68d71b0072819223"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/preflight_features_GeoOnlyBTC.parquet",
+      "sha256": "b7e24dd658fc8a566f113690580b0192f7db3d67f0298138a686364ebcb3bfa8"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/geometric_hmm_native_20261114_v1/preflight_weights_ConstantGrossBTC.parquet",
+      "sha256": "7815f7ac0aeaab0a7780a757915dd4ff9d4867b93108613ab49ef7bb7a606490"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false,
+  "frozen_combinations": [
+    {
+      "name": "separate_components",
+      "actual_wallets": [
+        "GeoOnlyBTC_500",
+        "HmmOnlyBTC_500"
+      ]
+    },
+    {
+      "name": "source_plus_constant",
+      "actual_wallets": [
+        "SourceGeoHmmBTC_500",
+        "ConstantGrossBTC_500"
+      ]
+    }
+  ]
+}
