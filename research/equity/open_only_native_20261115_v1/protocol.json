@@ -1,0 +1,29 @@
+{
+  "frozen_utc": "2026-11-15T03:15:00.797018+00:00",
+  "scope": "Local next-session-open execution chronology; synthetic native integration only",
+  "target_window": [
+    "2025-01-01",
+    "2026-08-31"
+  ],
+  "original_universe": "503 US and 11 HK; preserve all previous input rejections",
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "source_files": {
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_sessions.py": "17d86ee807f843c100bdc805ccf3b099099e3cb29916acbd7c7533e22b8a5a46",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_backtesting.py": "a56a27d185f7e242f5f821d5042e076ac8d13aadc712fd33483386817cd26d73",
+    "/Users/chrise/GitHub/freqtrade/research/equity/session_routing_native_20261115_v1/protocol.json": "7114a5bf7d82e4ea2635dd11645031a430e7b4c9a8dfeadba942f5d8f5c0420e"
+  },
+  "execution": "Previous completed signal at exact next session open, point-price market orders only; no daily high/low or close in fill/exit logic; no same-session re-entry after exit",
+  "terminal": "Observed held-quantity close marks, no invented force exit",
+  "fixtures": "ABC/USD and ABC/HKD only; synthetic quotes, fees, dividends, cash sessions; diagnostic alternating completed-close flags; no alpha",
+  "financial_admission": false,
+  "full_historical_accounts": 0,
+  "factor_analysis_calls": 0,
+  "bench_records": 0,
+  "no_parameter_rescue": true,
+  "unresolved": [
+    "full stock constructor/load/start/result lifecycle",
+    "complete historical nominal prices/security identities/lot/tick/fee/tax/dividend/action/delisting contracts",
+    "actual opening auction liquidity and slippage",
+    "paired borrow and funding"
+  ]
+}

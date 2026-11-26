@@ -1,0 +1,31 @@
+{
+  "frozen_at": "2026-11-15T19:38:32.462299+00:00",
+  "scope": "Split notice revision input and source semantics only;not economic preregistration",
+  "original_universe": {
+    "US": 503,
+    "HK": 11
+  },
+  "account_window": [
+    "2025-01-01",
+    "2026-08-31"
+  ],
+  "currencies": [
+    "USD",
+    "HKD"
+  ],
+  "parent_plan": "/Users/chrise/GitHub/freqtrade/research/equity/native_session_admission_20261114_v1/plan.json",
+  "parent_plan_sha256": "37260e09706ffa2ec1c8d745f9be4c14d9a2d10f52c497bf5bfbcf648c847e7c",
+  "no_price_split_correction_or_share_mutation": true,
+  "no_strategy_sign_or_weights_adopted": true,
+  "source_mechanism": "Anticipation/attention around upcoming split;not effective split bookkeeping",
+  "input_gates": [
+    "Both supplied publication and observation clocks required",
+    "Visible publication orders revisions;future amendments do not rewrite earlier views",
+    "Old/new price factor is reciprocal of new/old quantity factor",
+    "No absence-as-zero,no implicit execution on planned date,no share-class alias"
+  ],
+  "no_new_accounts": true,
+  "no_new_factor_analysis": true,
+  "production_enabled": false,
+  "goal_complete": false
+}

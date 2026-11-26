@@ -1,0 +1,26 @@
+--- upstream/freqtrade/optimize/backtesting.py
++++ local/freqtrade/optimize/backtesting.py
+@@ -1213,7 +1213,7 @@
+             if trade is None:
+                 # Enter trade
+                 self.trade_id_counter += 1
+-                trade = LocalTrade(
++                trade = self._create_trade(
+                     id=self.trade_id_counter,
+                     pair=pair,
+                     base_currency=base_currency,
+@@ -1279,6 +1279,14 @@
+ 
+         return trade
+ 
++    def _create_trade(self, **kwargs) -> LocalTrade:
++        """Construct the native trade; explicit subclasses can extend its model.
++
++        Default behavior is unchanged. This seam does not admit a new market,
++        execution model, or financial account by itself.
++        """
++        return LocalTrade(**kwargs)
++
+     def handle_left_open(
+         self, open_trades: dict[str, list[LocalTrade]], data: dict[str, list[tuple]]
+     ) -> None:

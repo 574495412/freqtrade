@@ -1,0 +1,68 @@
+{
+  "recorded_utc": "2026-11-14T09:01:18.609832+00:00",
+  "scope": "HK/US equity source learning and execution integration only",
+  "github": {
+    "repository": "https://github.com/OpenSourceAP/CrossSection",
+    "commit": "9f053398c4995651d822e90d81526d0644c6f3e5",
+    "code_read": "sources/PayoutYield.py",
+    "code_sha256": "fcb69a6bf93355e9fe182fd071fa598b31556c868894e467a40727ca3b0acb14",
+    "license": "GPL-2.0",
+    "license_sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+    "findings": [
+      "Pinned Python already uses positive decrease in preferred-stock value, not its level. It substitutes zero for unknown preferred-stock reductions; this is a source convention, not observed zero data.",
+      "PayoutYield is gross payouts, not NetPayoutYield; common-stock issuance is not subtracted by this file.",
+      "Maintainer comments dated 2026-10-20 document correction and sensitivity to portfolio sorting/targets. The March issue body alone is outdated. No source performance is adopted as local evidence."
+    ],
+    "issue": "https://github.com/OpenSourceAP/CrossSection/issues/207",
+    "issue_comment_receipt": "sources/payout_comments.json",
+    "deduplication_scope": "Read existing core_equity_npy24m metadata and compute definition; this is a share-level/24-month-average SEC adaptation, not cash-flow payout yield. Not an all-factor deduplication claim.",
+    "existing_factor_path": "/Users/chrise/GitHub/Vibe-Trading/agent/src/factors/zoo/core/equity_npy24m.py",
+    "existing_factor_sha256": "de336c089374a2d8d6ac4f712083504c8f4a37a4c55f6c6009461c4ac0412d43",
+    "admission": "No same-accession fiscal flow, historical firm market-cap, preferred-stock and announcement-clock panel admitted. No new score, Registry definition, FA, or account run."
+  },
+  "youtube": {
+    "url": "https://www.youtube.com/watch?v=UlFQNUtOACw",
+    "publisher": "QuantConnect",
+    "title": "Liquid Value Stocks Tutorial - Emitting Insights with Fundamental Data in QuantConnect",
+    "watch_html_status": 200,
+    "playability_status": "OK",
+    "metadata_and_publisher_description_read": true,
+    "caption_track_list_observed": true,
+    "caption_request_status": 200,
+    "caption_bytes": 0,
+    "transcript_read": false,
+    "video_watched": false,
+    "adopted_strategy_rules": false,
+    "limitation": "Readable watch HTML and a caption-track URL do not establish an accessible transcript. A liquid-value description is not a shareholder-payout strategy."
+  },
+  "x_twitter": {
+    "queries": [
+      "site.x.com shareholder yield quantitative backtest",
+      "site.x.com \"shareholder yield\" \"backtest\""
+    ],
+    "qualifying_primary_post_obtained": false,
+    "rules_adopted": false,
+    "status": "Search returned unrelated/secondary pages; no source post was read."
+  },
+  "douyin": {
+    "queries": [
+      "site.douyin.com 股东回报率 量化 回购 策略"
+    ],
+    "qualifying_primary_video_obtained": false,
+    "video_watched": false,
+    "transcript_read": false,
+    "rules_adopted": false
+  },
+  "execution_sources": {
+    "hkex": "sources/hkex_overview.html",
+    "historical_phase1_date": "2025-08-04",
+    "historical_phase2_date": "2026-08-03",
+    "ordinary_securities_only": true,
+    "etp_excluded": true,
+    "individual_security_board_lots_certified": false,
+    "launch_caveat": "Pre-launch circulars are targeted launch announcements; current HKEX overview reports final implementation dates. No independent historical first-seen archive is certified."
+  },
+  "accepted_new_alphas": 0,
+  "complete_financial_accounts": 0,
+  "higher_return_established": false
+}

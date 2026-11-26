@@ -1,0 +1,189 @@
+{
+  "passed": true,
+  "actual_native_starts": 12,
+  "actual_native_zip": 12,
+  "synthetic_fills": 36,
+  "actual_boundaries": 168,
+  "independent_scalar_checks": 1344,
+  "default_parent_paths_exact": 2,
+  "counterfactuals": [
+    {
+      "market": "XNYS",
+      "left": "paid",
+      "right": "pending",
+      "before": "2025-01-06T21:00:00+00:00",
+      "equal_financial_snapshots": 5
+    },
+    {
+      "market": "XNYS",
+      "left": "delayed",
+      "right": "pending",
+      "before": "2025-01-09T21:00:00+00:00",
+      "equal_financial_snapshots": 11
+    },
+    {
+      "market": "XNYS",
+      "left": "future1",
+      "right": "future999",
+      "before": "2025-01-10T14:00:00+00:00",
+      "equal_financial_snapshots": 12
+    },
+    {
+      "market": "XNYS",
+      "left": "future1",
+      "right": "paid",
+      "before": "2025-01-10T14:00:00+00:00",
+      "equal_financial_snapshots": 12
+    },
+    {
+      "market": "XHKG",
+      "left": "paid",
+      "right": "pending",
+      "before": "2025-01-06T08:00:00+00:00",
+      "equal_financial_snapshots": 5
+    },
+    {
+      "market": "XHKG",
+      "left": "delayed",
+      "right": "pending",
+      "before": "2025-01-09T08:00:00+00:00",
+      "equal_financial_snapshots": 11
+    },
+    {
+      "market": "XHKG",
+      "left": "future1",
+      "right": "future999",
+      "before": "2025-01-10T01:00:00+00:00",
+      "equal_financial_snapshots": 12
+    },
+    {
+      "market": "XHKG",
+      "left": "future1",
+      "right": "paid",
+      "before": "2025-01-10T01:00:00+00:00",
+      "equal_financial_snapshots": 12
+    }
+  ],
+  "independent_fee_oracle": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/equity/start_lifecycle_native_20261115_v1/audit_trace.py",
+    "sha256": "1db83a168a6b4c8da3f0cddda8ef7848ea5cf14c9b92cd8f340a44516f6ac729"
+  },
+  "candidate_accounting_imported": false,
+  "cases": [
+    {
+      "case": "XNYS_none",
+      "fills": 3,
+      "snapshots": 14,
+      "final_fixture_nav": "1001.8",
+      "paid": "0",
+      "unpaid": "0",
+      "passed": true
+    },
+    {
+      "case": "XNYS_pending",
+      "fills": 3,
+      "snapshots": 14,
+      "final_fixture_nav": "1055.8",
+      "paid": "0",
+      "unpaid": "54.00",
+      "passed": true
+    },
+    {
+      "case": "XNYS_paid",
+      "fills": 3,
+      "snapshots": 14,
+      "final_fixture_nav": "1055.8",
+      "paid": "54.00",
+      "unpaid": "0",
+      "passed": true
+    },
+    {
+      "case": "XNYS_delayed",
+      "fills": 3,
+      "snapshots": 14,
+      "final_fixture_nav": "1055.8",
+      "paid": "54.00",
+      "unpaid": "0",
+      "passed": true
+    },
+    {
+      "case": "XNYS_future1",
+      "fills": 3,
+      "snapshots": 14,
+      "final_fixture_nav": "1061.2",
+      "paid": "54.00",
+      "unpaid": "5.40",
+      "passed": true
+    },
+    {
+      "case": "XNYS_future999",
+      "fills": 3,
+      "snapshots": 14,
+      "final_fixture_nav": "6450.400000000001",
+      "paid": "54.00",
+      "unpaid": "5394.60",
+      "passed": true
+    },
+    {
+      "case": "XHKG_none",
+      "fills": 3,
+      "snapshots": 14,
+      "final_fixture_nav": "1001.8",
+      "paid": "0",
+      "unpaid": "0",
+      "passed": true
+    },
+    {
+      "case": "XHKG_pending",
+      "fills": 3,
+      "snapshots": 14,
+      "final_fixture_nav": "1055.8",
+      "paid": "0",
+      "unpaid": "54.00",
+      "passed": true
+    },
+    {
+      "case": "XHKG_paid",
+      "fills": 3,
+      "snapshots": 14,
+      "final_fixture_nav": "1055.8",
+      "paid": "54.00",
+      "unpaid": "0",
+      "passed": true
+    },
+    {
+      "case": "XHKG_delayed",
+      "fills": 3,
+      "snapshots": 14,
+      "final_fixture_nav": "1055.8",
+      "paid": "54.00",
+      "unpaid": "0",
+      "passed": true
+    },
+    {
+      "case": "XHKG_future1",
+      "fills": 3,
+      "snapshots": 14,
+      "final_fixture_nav": "1061.2",
+      "paid": "54.00",
+      "unpaid": "5.40",
+      "passed": true
+    },
+    {
+      "case": "XHKG_future999",
+      "fills": 3,
+      "snapshots": 14,
+      "final_fixture_nav": "6450.400000000001",
+      "paid": "54.00",
+      "unpaid": "5394.60",
+      "passed": true
+    }
+  ],
+  "native_zip_scope": "one closed trade/two fills; remaining actual native open Trade/Order retained in trace sidecar",
+  "historical_accounts": 0,
+  "factor_analysis": 0,
+  "bench": 0,
+  "financial_performance": null,
+  "broker_credit_certified": false,
+  "production_eligible": false
+}

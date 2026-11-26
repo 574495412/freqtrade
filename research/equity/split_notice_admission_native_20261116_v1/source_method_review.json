@@ -1,0 +1,77 @@
+{
+  "reviewed_at": "2026-11-15T19:44:09.975097+00:00",
+  "pinned_github_commit": "cfc33067942ae481f3015f2953fc978e10db8392",
+  "fully_read_selected_files": [
+    "EODHDUpcomingSplitsAlgorithm.py",
+    "EODHDUpcomingSplits.cs",
+    "README.md"
+  ],
+  "license": "Selected source headers Apache-2.0;Apache original license text retained;two guessed root license paths404",
+  "exact_raw_sha256": {
+    "EODHDUpcomingSplitsAlgorithm.py": "21e2ff88ff4f87995c70eb0d7379c063970b5d84ad2dd1a153fa0fdd40c18a39",
+    "EODHDUpcomingSplits.cs": "8d45698a9150befd28e1c759c71050925e2a485ef71aef4dd46c25dbc06609b5",
+    "README.md": "0ecf83b5379edb7e17089391a38896027627375b02847ab4853e1e4efc4ca23c"
+  },
+  "git_blob_verified": false,
+  "full_repository_audited": false,
+  "sample_contract": {
+    "universe": "AAPL in selected sample",
+    "start": "2021-10-25",
+    "end": "2021-10-30",
+    "long": "source old/new factor<1 AND split_date<=slice.time+3 calendar days",
+    "short": "source old/new factor>1 AND same upper time bound",
+    "exit": "target missing from slice AND invested;not an explicit split-plus-one timer",
+    "full_strategy_or_QC_runtime_reproduced": false,
+    "return_claim_adopted": false
+  },
+  "adapter_contract": {
+    "ratio": "old shares/new shares",
+    "source": "local alternative/eodhd/upcomingsplits/YYYYMMDD.csv",
+    "Time": "input file date minus one day",
+    "EndTime": "Time plus one day",
+    "fields": [
+      "SID",
+      "ticker",
+      "split date",
+      "optionable",
+      "ratio"
+    ],
+    "source_has_no_document_publication_and_observation_receipts": true
+  },
+  "current_docs_variant": {
+    "url": "https://www.quantconnect.com/docs/v2/writing-algorithms/datasets/eod-historical-data/upcoming-splits",
+    "read_scope": "Selected dataset description and current example2 Python model;not whole website",
+    "dataset": "US upcoming split alerts over next7days;described since2010,daily",
+    "method": "Different constant positive2day insight and equal-weight portfolio;10percent reserve",
+    "not_same_as_pinned_sample": true,
+    "author_return_comparable": false
+  },
+  "issuer_read_scope": "Captured original ORLY release article;SEC10Q selected split paragraph via web text only",
+  "issuer_facts": {
+    "source": "https://corporate.oreillyauto.com/2025/03/13/oreilly-automotive-inc-board-of-directors-approves-15-for-1-stock-split-subject-to-shareholder-approval-of-an-increase-in-the-number-of-authorized-shares-of-common-stock/",
+    "original_release_is_conditional": true,
+    "old_shares": 1,
+    "new_shares": 15,
+    "record_date": "2025-06-02",
+    "planned_distribution": "2025-06-09 after close",
+    "planned_postsplit_trading": "2025-06-10 market open",
+    "SEC_later_paragraph_confirms_effected_date": "2025-06-10",
+    "precise_historical_first_seen_certified": false,
+    "current_issuer_bytes_acquired": true,
+    "SEC_original_bytes_acquired": false
+  },
+  "admission": {
+    "complete_daily_upcoming_split_history_acquired": false,
+    "all_original_securities_events_certified": false,
+    "historical_HK_events_admitted": 0,
+    "paper_forward": false,
+    "independent_oos": false,
+    "new_accepted_alpha": 0
+  },
+  "required_next": [
+    "Dated complete source history and original availability/revision provenance",
+    "Keep original long/short,holding and data-universe contract or explicitly freeze local adaptation",
+    "Registry and actual factor_analysis for cross-sectional factors before combinations",
+    "Complete native Freqtrade stock account including unit changes,pending orders,fractionals,cash,fees,dividends and terminal holdings"
+  ]
+}

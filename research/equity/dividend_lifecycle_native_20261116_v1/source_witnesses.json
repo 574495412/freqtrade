@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "synthetic_only": true,
+  "source_account_engine_executed": false,
+  "reviewed_modules": [
+    "data.py",
+    "strategy.py"
+  ],
+  "baseline_witness": {
+    "capture_gross_bps": 0.0,
+    "source_price_only_bah_bps": -1000.0000000000002,
+    "same_entitled_holding_total_return_bps": 0,
+    "conclusion": "source baseline omits entitled cash; not fair total-return control"
+  },
+  "fallback_control_witness": {
+    "planted_event_bps": 1000,
+    "source_bootstrap_bps": 1000.0000000000001,
+    "conclusion": "resamples event returns; does not remove planted ex-event mean"
+  },
+  "event_price_witness": {
+    "ex_open_values": [
+      100.0,
+      999.0
+    ],
+    "exact_event_output": true,
+    "conclusion": "source extracts closes,not an actual ex-open entry or eligibility proof"
+  },
+  "missing_contracts": [
+    "announcement clock",
+    "tax/withholding",
+    "payment availability",
+    "whole-account capital allocation",
+    "settlement",
+    "historical company actions"
+  ],
+  "author_negative_verdict_preserved": true,
+  "historical_replication": false,
+  "new_accepted_alpha": 0,
+  "account_returns_admitted": false
+}

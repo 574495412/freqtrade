@@ -1,0 +1,64 @@
+{
+  "source_sha256": "e41207907b55c5ae6868ee6bc367e222b2f1bdadc2d7d9eed5791d34e0577015",
+  "source_statement_lines": [
+    256,
+    330
+  ],
+  "synthetic_input": [
+    {
+      "permno": 1,
+      "datadate": "2018-06-28 00:00:00",
+      "customer1": 10
+    },
+    {
+      "permno": 1,
+      "datadate": "2021-06-28 00:00:00",
+      "customer1": 20
+    },
+    {
+      "permno": 2,
+      "datadate": "2019-06-28 00:00:00",
+      "customer1": 30
+    }
+  ],
+  "source_lastentry_rows": [
+    {
+      "permno": 1,
+      "datadate": "2018-06-28 00:00:00",
+      "customer1": 10,
+      "next_permno": 1.0,
+      "next_year": 2021.0,
+      "current_year": 2018,
+      "diffpermno": 0.0,
+      "dyear": 3.0,
+      "lastentry": false
+    },
+    {
+      "permno": 1,
+      "datadate": "2021-06-28 00:00:00",
+      "customer1": 20,
+      "next_permno": 2.0,
+      "next_year": 2019.0,
+      "current_year": 2021,
+      "diffpermno": 1.0,
+      "dyear": -2.0,
+      "lastentry": true
+    },
+    {
+      "permno": 2,
+      "datadate": "2019-06-28 00:00:00",
+      "customer1": 30,
+      "next_permno": NaN,
+      "next_year": NaN,
+      "current_year": 2019,
+      "diffpermno": NaN,
+      "dyear": NaN,
+      "lastentry": true
+    }
+  ],
+  "observed_stale_months_after_first_12": 23,
+  "conclusion": "In this fixed Python source, a same-supplier multi-year annual gap does not insert the advertised 12-month stop. Do not adopt the comment as verified staleness protection.",
+  "source_financial_engine_executed": false,
+  "real_factor_values": 0,
+  "economic_hypothesis_tested": false
+}

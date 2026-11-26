@@ -1,0 +1,49 @@
+{
+  "github": {
+    "repo": "OpenSourceAP/CrossSection",
+    "commit": "9f053398c4995651d822e90d81526d0644c6f3e5",
+    "license": "GPL-2.0",
+    "files_read": [
+      "DivSeason.py",
+      "save_standardized.py"
+    ],
+    "helpers_read": "asrol wrapper and stata_multi_lag wrapper; not every helper function",
+    "source_strategy_engine_executed": false,
+    "source_factor_executed": false,
+    "rule": "regular cash distributions cd1=1,cd2=2; monthly aggregation by frequency; first sorted code if ambiguous; forward-fill frequency only on source master; monthly code2 excluded, retain codes<6; current source month paid sum>0 permits zero; prediction uses calendar lags2/5/8/11 for codes0/1/3,5/11 for code4,11 for code5; output month labels not shifted by save function",
+    "timing": "source month t state predicts next holding month; never relabel lags as same-month3/6/9/12 or trade using a not-yet-completed month",
+    "missingness": "source zero fill assumes complete distributions/master input; absence of local input is not proof of zero dividend"
+  },
+  "x": {
+    "url": "https://x.com/TheIdeaFarm/status/2048024226947649871?s=20",
+    "post_body_read": true,
+    "direct_http_status": 200,
+    "web_status": 403,
+    "evidence": "behavioral dividend-demand discussion, no complete implementable account rules or local return evidence"
+  },
+  "youtube": {
+    "url": "https://www.youtube.com/watch?v=PXaE8Bo06Ps",
+    "author": "The Meb Faber Show",
+    "metadata_and_author_show_notes_read": true,
+    "caption_http_status": 200,
+    "caption_bytes": 0,
+    "video_watched": false,
+    "full_transcript_read": false,
+    "show_notes": "https://www.themebfabershow.com/episodes/E2rpGXk3LrY",
+    "adoption": "source lead only; no performance imported"
+  },
+  "douyin": {
+    "url": "https://www.douyin.com/video/7562173571624127803",
+    "direct_http_status": 200,
+    "actual_body": "JavaScript challenge;0visible non-script text lines",
+    "search_index_summary_only": true,
+    "full_video_rules_read": false,
+    "performance_adopted": false
+  },
+  "native_source": "Freqtrade pinned backtesting docs; current LEAN docs are an external comparison, not native implementation",
+  "lean_difference": "LEAN documents raw/split-adjusted backtest dividend cashbook credit on ex-date; this local contract keeps an unpaid claim until supplied payment cash availability",
+  "sec_source": "web tool read current Investor.gov ordinary/special dividend rules; direct downloaded response403 preserved, not claimed as successful local document",
+  "new_registry": 0,
+  "factor_analysis": 0,
+  "financial_accounts": 0
+}

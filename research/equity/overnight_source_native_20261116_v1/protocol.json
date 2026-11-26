@@ -1,0 +1,75 @@
+{
+  "frozen_at": "2026-11-16T14:59:45.351347+00:00",
+  "task": "US/HK equity: sourced overnight signal and existing path-efficiency; conditional native quote diagnostics",
+  "account_target_window": [
+    "2025-01-01",
+    "2026-08-31"
+  ],
+  "warmup_start": "2024-01-01",
+  "source_queue": "Original 503 US and 11 HK; keep every rejected input and original identity",
+  "factors": {
+    "local_quote_overnight126": {
+      "direction": "positive product of last126 observed open/previous-close ratios minus1, minimum131 complete rows; trailing20 dollar volume>=USD10M",
+      "formation": "126 completed venue sessions; source arithmetic, nominal-only adaptation of adjusted source prices",
+      "markets": [
+        "XNYS"
+      ],
+      "source_commit": "785e0ab2b10a95416d508935b2f2f5e619f8ebe2"
+    },
+    "core_path_efficiency_63": {
+      "direction": "existing native positive signed return displacement / absolute return path, cross-sectional zscore",
+      "formation": "63 sessions; existing local formula, not Kaufman or FIP replication",
+      "markets": [
+        "XNYS",
+        "XHKG"
+      ]
+    }
+  },
+  "new_registry_definitions": 1,
+  "source_reproduction": false,
+  "primary_label": {
+    "holding_sessions": 5,
+    "entry": "next scheduled session open after completed decision close",
+    "exit": "5 session opens after entry",
+    "anchors": "every fifth entry session starting first target-window session; no overlap",
+    "minimum_observations": 52
+  },
+  "secondary_label": {
+    "holding_sessions": 1,
+    "anchors": "every entry session",
+    "entry": "next session close after completed observation close",
+    "exit": "following session open",
+    "purpose": "conditional pure overnight quote prediction only; cannot rescue five-session primary or certify source close-auction execution"
+  },
+  "slices": [
+    "all",
+    "2025 entries",
+    "2026 entries"
+  ],
+  "gates": {
+    "all_primary_ic_mean_gt": 0.03,
+    "all_primary_ir_gt": 0.5,
+    "all_primary_positive_ratio_gt": 0.55,
+    "both_years_primary_ic_mean_gt": 0,
+    "minimum_assets_per_ic": 5,
+    "minimum_observations": 52,
+    "duplicate_abs_pearson_gt": 0.99
+  },
+  "combo": "Only if >=2 distinct primary factors pass all unchanged gates AND complete historical input/account admission: supported native signal equal score weights and actual funded wallets. No forced blend of failures.",
+  "quotes": "Existing nominal OHLCV only; split/dividend units/lifecycle/historical availability not certified. Conditional diagnostics only, not accepted alpha. No label outlier clipping or dividend/split adjustment invented.",
+  "contract": "USD/HKD separate; no crypto accounts or label NAV treated as full stock accounts",
+  "preserve": "No sign,lookback,label horizon,anchors,pool,costs,window or weights tuning after outcomes",
+  "production_eligible": false,
+  "real_orders_enabled": false,
+  "accepted_new_mechanisms": 0,
+  "rejected_before_calculation": {
+    "core_equity_max_month": "owning total_return field and original calendar-month unit contract unavailable in nominal OHLCV bridge; no 7-session or raw-price replacement"
+  },
+  "resource_policy": {
+    "minimum_free_bytes": 536870912,
+    "planned_max_new_bytes": 83886080,
+    "reason": "diagnostics reuse existing inputs; no financial native runs, no large downloads"
+  },
+  "source_55_percent_return": "Unverified author claim, noncomparable zero cost fractional model; not a local account outcome",
+  "before_new_outcomes": "Source code read; no new factor values, label outputs or economic results computed before this protocol"
+}

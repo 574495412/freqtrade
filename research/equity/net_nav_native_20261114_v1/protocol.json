@@ -1,0 +1,30 @@
+{
+  "created_utc": "2026-11-14T12:17:06.289108+00:00",
+  "scope": "HK/US equity native net NAV reporting component and customer-link source admission; not financial strategy evidence",
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "unchanged_parent_modules": {
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/equity_provider.py": "a8e057f5e2664af487d038ce326e6b1a39b6fafa46b0d9840648acf62df2e838",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/equity_fees.py": "1e3ebd10813f31a164c509d9eed4aaebb71415dd8453df10cf3994d2adfc624e",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/equity_execution.py": "01fc15b0143463efd0e759ce350947db270358392361331c8bf10ffb42fecb5b",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/history/equity.py": "bb597a2ca2125c3fd0e3c0680594835c6b03357a38c54168121a3a43c8e39971",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/equity_wallets.py": "2c4344e93013cd8c9a8b9e666eaea69963b28f8e426ada059550f3b88c62bbd5",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/equity_fee_wallets.py": "be487c5d5b95c5a1ffd6849fde685b7662c747fcc2f806c1d56741ea559faee3",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_execution.py": "94fddda2742d947316aefdc86b967305252b2e449dcbb57facaefb8e8356c3ce",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_fee_execution.py": "7fd144d60bc1d50d8b6040b17b36bfbea9c18249c18d04480d748cb484a60de4",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_backtesting.py": "a56a27d185f7e242f5f821d5042e076ac8d13aadc712fd33483386817cd26d73"
+  },
+  "original_scope": {
+    "us_inputs": 503,
+    "hk_inputs": 11,
+    "start": "2025-01-01",
+    "end": "2026-08-31",
+    "currencies": "separate USD and HKD; no combined FX account"
+  },
+  "tests": "actual native synthetic fills; independent Decimal audit; missing marks/grids/currency reject; fee attribution and settlement release parity",
+  "historical_strategy_accounts": 0,
+  "bench_records": 0,
+  "factor_analysis_calls": 0,
+  "accepted_new_alphas": 0,
+  "performance": null,
+  "orders_deployment_services": false
+}

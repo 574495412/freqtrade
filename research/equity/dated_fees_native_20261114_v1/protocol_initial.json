@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-11-14T10:59:35.040426+00:00",
+  "scope": "HK/US stocks; native dated-fee component and source/input readiness; no funded performance",
+  "stage": "after synthetic component checks; before source inventory and native trace; no new factor scores/account returns",
+  "window": [
+    "2025-01-01",
+    "2026-08-31"
+  ],
+  "universe": {
+    "US": 503,
+    "HK": 11,
+    "unchanged": true
+  },
+  "parent_plan": "/Users/chrise/GitHub/freqtrade/research/equity/native_session_admission_20261114_v1/plan.json",
+  "parent_plan_sha256": "37260e09706ffa2ec1c8d745f9be4c14d9a2d10f52c497bf5bfbcf648c847e7c",
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "native_manifest_sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64",
+  "legacy_modules_unchanged": {
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/equity_execution.py": true,
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_execution.py": true,
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/history/equity.py": true,
+    "/Users/chrise/GitHub/freqtrade/freqtrade/equity_wallets.py": true,
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_backtesting.py": true
+  },
+  "implementation": {
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/equity_fees.py": "1e3ebd10813f31a164c509d9eed4aaebb71415dd8453df10cf3994d2adfc624e",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/equity_fee_wallets.py": "f03603cea61b24082b37a32965b2e7115ff9054093dc1dad58cd01eea7b96261",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_fee_execution.py": "7fd144d60bc1d50d8b6040b17b36bfbea9c18249c18d04480d748cb484a60de4"
+  },
+  "financial_accounts": 0,
+  "factor_analysis_calls": 0,
+  "new_registry_definitions": 0,
+  "net_performance": null,
+  "charging_unit": "atomic native Order; no daily aggregation/netting",
+  "native_trade_percentages": "explicit zero; dated quote fees in native wallet overlay; native per-trade PnL remains gross",
+  "historical_fees": "Explicit source/effective date/side/rounding and applicability required; current tables not silently applied backwards",
+  "missing_support": [
+    "complete stock execution lifecycle",
+    "historical instrument master and lot coverage",
+    "complete fee/tax/broker charging applicability",
+    "dividend rights/payment and other corporate actions",
+    "delisting and terminal valuation",
+    "short borrow/collateral/recall if needed"
+  ],
+  "no_rescue": "retain original universe/window; no posterior signal/cost/weight tuning; unsupported accounts UNKNOWN",
+  "orders": false,
+  "deployment": false,
+  "services_changed": false
+}

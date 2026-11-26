@@ -1,0 +1,48 @@
+{
+  "frozen_utc": "2026-11-15T04:32:28.697899+00:00",
+  "scope": "Unchanged parent synthetic fixtures through actual inherited Backtesting.start, strict native disk load and net NAV snapshot envelope",
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "parent_manifest": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/equity/open_only_native_20261115_v1/artifact_manifest.json",
+    "sha256": "a1f44b34731307c308ade5fb4c3225c1ddea3035feac92315b97ddf8730899c2"
+  },
+  "cases": [
+    "XNYS_base",
+    "XHKG_base",
+    "XNYS_extrema",
+    "XHKG_extrema",
+    "XNYS_held",
+    "XHKG_held"
+  ],
+  "unchanged": [
+    "source quote/signal rules",
+    "1000 original capital",
+    "seven Jan2-Jan10 2025 execution sessions",
+    "fees",
+    "dividends",
+    "T+1/T+2 settlement",
+    "orders",
+    "sizing",
+    "native matcher",
+    "Trade/Order"
+  ],
+  "execution": "completed_close_next_open_v1",
+  "financial_target": {
+    "markets": [
+      "US",
+      "HK"
+    ],
+    "original_inputs": [
+      503,
+      11
+    ],
+    "start": "2025-01-01",
+    "end": "2026-08-31",
+    "currencies_separate": true
+  },
+  "synthetic_only": true,
+  "historical_equity_accounts": 0,
+  "bench_records": 0,
+  "orders_enabled": false,
+  "services_changed": false
+}

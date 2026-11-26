@@ -1,0 +1,10 @@
+{
+  "synthetic_arithmetic_only": true,
+  "method": "Two exact parsed source assignment AST nodes, no imports/downloader/algorithm/account execution",
+  "source_beta": 0.7032454736929895,
+  "same_sample_ols": 0.7004436988973998,
+  "ratio": 1.0040000000000002,
+  "expected_ratio": 1.004,
+  "finding": "np.cov sample covariance / np.var population variance inflates same-window OLS by n/(n-1); 252 source prices supply251 returns. Native proxy uses252 returns and sample/sample, equal-weight cohort market, no source leverage or short sleeves.",
+  "native_proxy_equals_source": false
+}

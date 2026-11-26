@@ -1,0 +1,46 @@
+{
+  "recorded_utc": "2026-11-14T14:10:23.199458+00:00",
+  "scope": "HK/US only: same-currency cash dividend native component plus dividend-seasonality source/input admission",
+  "original_universe": {
+    "US": 503,
+    "HK": 11
+  },
+  "account_window": [
+    "2025-01-01",
+    "2026-08-31"
+  ],
+  "currency": "separate USD and HKD; no FX or curve scaling",
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "native_owner": "Configuration, IStrategy, DataProvider, Backtesting, Trade/Order, Wallets and native results; full equity lifecycle remains incomplete",
+  "local_extensions": [
+    "freqtrade/data/equity_dividends.py",
+    "freqtrade/equity_dividend_wallets.py",
+    "freqtrade/equity_wallets.py",
+    "freqtrade/equity_fee_wallets.py",
+    "freqtrade/optimize/equity_nav.py"
+  ],
+  "component_test_contract": "fictional ABC, DPS10, withholding10%, synthetic dated fees/calendars; not investor tax or historical broker validation",
+  "account_admission": "not enabled; no historical strategy return claimed",
+  "research_gates_inherited": {
+    "IC_gt": 0.03,
+    "IR_gt": 0.5,
+    "positive_ratio_gt": 0.55,
+    "minimum_months": 24,
+    "dedup_mean_abs_pearson_gt": 0.99
+  },
+  "frozen_economic_candidate_parameters": null,
+  "financial_results_observed": false,
+  "dividend_method": "actual native fills strictly before explicit ex-open; net claim accrual; supplied broker credit clock; cumulative settled cash only after payment; fee-exclusive native trade statistics remain separate",
+  "source_candidate": "OpenSourceAP DivSeason; source code read, original distribution inputs unavailable in audited514CSVs; no proxy",
+  "parent_receipt": "/Users/chrise/GitHub/freqtrade/research/equity/net_nav_native_20261114_v1/verification.json",
+  "parent_receipt_sha256": "0c13a31a756a417c05f0d1bd020aa2843d1fd6f34c0bdb4ccf55e40eb438d12a",
+  "historical_accounts": 0,
+  "combination_accounts": 0,
+  "bench_records": 0,
+  "factor_analysis_calls": 0,
+  "accepted_new_factors": 0,
+  "performance": null,
+  "deployment": false,
+  "orders": false,
+  "services_changed": false
+}

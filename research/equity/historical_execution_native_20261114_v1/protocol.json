@@ -1,0 +1,31 @@
+{
+  "frozen_at_utc": "2026-11-14T08:58:03.108028+00:00",
+  "scope": "HK/US stocks only; execution component and conditional input diagnostics",
+  "target_window": [
+    "2025-01-01",
+    "2026-08-31"
+  ],
+  "universe_count": 514,
+  "parent_plan": "/Users/chrise/GitHub/freqtrade/research/equity/native_session_admission_20261114_v1/plan.json",
+  "parent_plan_sha256": "37260e09706ffa2ec1c8d745f9be4c14d9a2d10f52c497bf5bfbcf648c847e7c",
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "native_source_files_verified": 595,
+  "us": "503 retained; no historical instrument precision contract supplied; NOT_PROBED",
+  "hk": "10 ordinary-equity conditional quote-grid probes; 2800 ETP retained UNKNOWN",
+  "exact_price_policy": "Never silently round prices; count binary-near-grid separately",
+  "board_lot_history": "UNKNOWN for real securities; synthetic fixture lots are not history",
+  "financial_backtests": 0,
+  "factor_analysis_calls": 0,
+  "new_alpha_definitions": 0,
+  "return_metrics": null,
+  "historical_first_seen_certified": false,
+  "source_rule_scope": "HKEX ordinary Applicable Securities table; not ETP or auction rules",
+  "implementation": {
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/equity_execution.py": "01fc15b0143463efd0e759ce350947db270358392361331c8bf10ffb42fecb5b",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_execution.py": "94fddda2742d947316aefdc86b967305252b2e449dcbb57facaefb8e8356c3ce",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/history/equity.py": "bb597a2ca2125c3fd0e3c0680594835c6b03357a38c54168121a3a43c8e39971",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/equity_wallets.py": "2c4344e93013cd8c9a8b9e666eaea69963b28f8e426ada059550f3b88c62bbd5",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_backtesting.py": "a56a27d185f7e242f5f821d5042e076ac8d13aadc712fd33483386817cd26d73"
+  },
+  "source_receipts_sha256": "14b168658f018b76ac07a83b18dac1d005cd0d8253fb717c6e5d8042fcac42b5"
+}

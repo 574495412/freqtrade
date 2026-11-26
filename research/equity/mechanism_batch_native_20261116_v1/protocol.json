@@ -1,0 +1,70 @@
+{
+  "frozen_at": "2026-11-16T13:13:20.148012+00:00",
+  "task": "HK/US equity only; existing mechanisms through native Registry/Freqtrade diagnostic bridge",
+  "account_target_window": [
+    "2025-01-01",
+    "2026-08-31"
+  ],
+  "warmup_start": "2024-01-01",
+  "source_queue": "Original 503 US and 11 HK; keep every rejected input and original identity",
+  "factors": {
+    "academic_bab": {
+      "direction": "native negative beta, cross-sectional zscore",
+      "formation": "252 sessions; equal-weight market; original paper 5y correlation/shrinkage not reproduced",
+      "markets": [
+        "XNYS",
+        "XHKG"
+      ]
+    },
+    "academic_illiq": {
+      "direction": "native positive illiquidity, cross-sectional zscore",
+      "formation": "21 full sessions abs return / nominal close * share volume",
+      "markets": [
+        "XNYS",
+        "XHKG"
+      ]
+    },
+    "alpha101_006": {
+      "direction": "native negative corr(open,volume,10)",
+      "formation": "10 full sessions",
+      "markets": [
+        "XNYS"
+      ],
+      "HK": "excluded by current owning metadata; no silent transfer"
+    }
+  },
+  "new_registry_definitions": 0,
+  "source_reproduction": false,
+  "primary_label": {
+    "holding_sessions": 5,
+    "entry": "next scheduled session open after completed decision close",
+    "exit": "5 session opens after entry",
+    "anchors": "every fifth entry session starting first target-window session; no overlap",
+    "minimum_observations": 52
+  },
+  "secondary_label": {
+    "holding_sessions": 1,
+    "anchors": "every entry session",
+    "purpose": "secondary only; cannot rescue primary"
+  },
+  "slices": [
+    "all",
+    "2025 entries",
+    "2026 entries"
+  ],
+  "gates": {
+    "all_primary_ic_mean_gt": 0.03,
+    "all_primary_ir_gt": 0.5,
+    "all_primary_positive_ratio_gt": 0.55,
+    "both_years_primary_ic_mean_gt": 0,
+    "minimum_assets_per_ic": 5,
+    "minimum_observations": 52,
+    "duplicate_abs_pearson_gt": 0.99
+  },
+  "combo": "Only if at least two distinct primary factors pass numeric gates AND full historical input/account admission passes: supported native signal equal weight standardized scores; never blend failed factors. No account return if finance support closed.",
+  "quotes": "Existing nominal OHLCV only; split/dividend units/lifecycle/historical availability not certified. Conditional diagnostics only, not accepted alpha. No label outlier clipping or dividend/split adjustment invented.",
+  "contract": "USD/HKD separate; no crypto accounts or label NAV treated as full stock accounts",
+  "preserve": "No sign,lookback,label horizon,anchors,pool,costs,window or weights tuning after outcomes",
+  "production_eligible": false,
+  "real_orders_enabled": false
+}

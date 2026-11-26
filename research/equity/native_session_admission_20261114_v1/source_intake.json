@@ -1,0 +1,80 @@
+{
+  "scope": "Latest user request is HK/US equities through Freqtrade; crypto campaigns are separate",
+  "github": {
+    "repository": "https://github.com/QuantConnect/Lean",
+    "commit": "78de2ccd1e8d1544bd69f1b0494493f56559ec12",
+    "license": "Apache-2.0",
+    "files": [
+      {
+        "path": "/Users/chrise/GitHub/freqtrade/research/equity/native_session_admission_20261114_v1/sources/BasePairsTradingAlphaModel.py",
+        "sha256": "4946e12eb3ef36dbb7695bf754bd58408915c397a8a50c5f233a6e5fa076f166",
+        "url": "https://github.com/QuantConnect/Lean/blob/78de2ccd1e8d1544bd69f1b0494493f56559ec12/Algorithm.Framework/Alphas/BasePairsTradingAlphaModel.py"
+      },
+      {
+        "path": "/Users/chrise/GitHub/freqtrade/research/equity/native_session_admission_20261114_v1/sources/PearsonCorrelationPairsTradingAlphaModel.py",
+        "sha256": "9cb269d82d8cbd7bd44ccc98c7168a17b9bc2603f2fffa1a8814a2916b2b890e",
+        "url": "https://github.com/QuantConnect/Lean/blob/78de2ccd1e8d1544bd69f1b0494493f56559ec12/Algorithm.Framework/Alphas/PearsonCorrelationPairsTradingAlphaModel.py"
+      },
+      {
+        "path": "/Users/chrise/GitHub/freqtrade/research/equity/native_session_admission_20261114_v1/sources/LEAN_LICENSE",
+        "sha256": "522cf0a716ce03f67d46f8fceb5bf78c5b84400ec5cd8d14bf9f02cddc1cb6ba",
+        "url": "https://github.com/QuantConnect/Lean/blob/78de2ccd1e8d1544bd69f1b0494493f56559ec12/LICENSE"
+      }
+    ],
+    "rule_audit": {
+      "base_defaults": {
+        "lookback": "1",
+        "resolution": "Resolution.DAILY",
+        "threshold": "1"
+      },
+      "pearson_defaults": {
+        "lookback": "15",
+        "resolution": "Resolution.MINUTE",
+        "threshold": "1",
+        "minimum_correlation": "0.5"
+      },
+      "ema_500_in_actual_code": true,
+      "percent_threshold_actual": true,
+      "misleading_two_std_comment_present": true,
+      "insight_group_actual": true,
+      "source_executed_in_lean": false,
+      "source_executed_in_freqtrade": false
+    },
+    "decision": "Input/execution admission pending; not an accepted factor or reproduced portfolio",
+    "requirements": [
+      "source minute histories",
+      "500 observations of ratio indicator",
+      "documented historical universe and pair-selection clocks",
+      "borrow availability/cost/recall and short dividend liability",
+      "two-leg group sizing and partial-fill handling in native account"
+    ]
+  },
+  "social_leads": [
+    {
+      "platform": "YouTube",
+      "url": "https://www.youtube.com/watch?v=uhuwErm1no8",
+      "owner": "QuantConnect",
+      "evidence": "Search-exposed title/description only; video fetch failed",
+      "mechanism": "pairs relative-price convergence",
+      "decision": "Discovery lead only; current pinned GitHub model is not proved to be the video code"
+    },
+    {
+      "platform": "X/Twitter",
+      "url": "https://x.com/MatiasScalbi/status/2063042609816252666",
+      "evidence": "Readable social summary; original historical paper/account not verified here",
+      "mechanism": "normalized-price distance pairs",
+      "decision": "Do not adopt quoted returns or conflate with QC percentage bands"
+    },
+    {
+      "platform": "Douyin",
+      "url": "https://www.douyin.com/video/7673858811899284751",
+      "evidence": "Search-exposed text only; direct page has no readable lines; video not watched",
+      "mechanism": "index-weight-concentrated SPMO momentum",
+      "decision": "No admission: exact historical holdings files, publication clocks and reconstruction unavailable; retrospective weights are not point-in-time inputs"
+    }
+  ],
+  "newly_accepted_alphas": 0,
+  "factor_analysis_calls": 0,
+  "native_funded_accounts": 0,
+  "observed_higher_comparable_equity_return": null
+}

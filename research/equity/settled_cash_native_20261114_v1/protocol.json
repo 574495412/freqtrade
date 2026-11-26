@@ -1,0 +1,26 @@
+{
+  "recorded_utc": "2026-11-13T21:00:27.247886+00:00",
+  "record_type": "Component validation and input-admission record, not a funded backtest protocol",
+  "scope": "HK/US stocks only",
+  "parent_plan": "/Users/chrise/GitHub/freqtrade/research/equity/native_session_admission_20261114_v1/plan.json",
+  "parent_plan_sha256": "37260e09706ffa2ec1c8d745f9be4c14d9a2d10f52c497bf5bfbcf648c847e7c",
+  "inherited_financial_target_window": [
+    "2025-01-01",
+    "2026-08-31"
+  ],
+  "original_input_count": 514,
+  "universe": "503 US and 11 HK; no outcome-based exclusions",
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "source_commit": "9f053398c4995651d822e90d81526d0644c6f3e5",
+  "component": "Native Wallets subclass using native filled orders, not an independent account engine",
+  "cash_policy": "Single-currency cash-only; segregate unsettled net sales and reserve remaining entry fees; constant quote commissions",
+  "synthetic_fixture_fee_rate": 0.01,
+  "fixture_prices_and_release_clocks": "synthetic declared test inputs; not broker observations",
+  "historical_account_policy": "UNIMPLEMENTED: EquityBacktesting remains closed",
+  "native_funded_accounts": 0,
+  "factor_analysis_calls": 0,
+  "factor_admission": "RDAbility source input missing; no score or sign/window changes",
+  "oos": false,
+  "orders_authorized": false,
+  "deployment_authorized": false
+}

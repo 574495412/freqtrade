@@ -1,0 +1,41 @@
+{
+  "scope": "Reviewed source method control-flow only;not actual QC runtime or profit",
+  "source_path": "/Users/chrise/GitHub/freqtrade/research/equity/split_notice_admission_native_20261116_v1/sources/EODHDUpcomingSplitsAlgorithm.py",
+  "cases": {
+    "forward_factor_old_over_new": [
+      [
+        "set_holdings",
+        "SYNTHETIC",
+        1
+      ]
+    ],
+    "reverse_source_requests_short": [
+      [
+        "set_holdings",
+        "SYNTHETIC",
+        -1
+      ]
+    ],
+    "missing_observation_before_planned_date": [
+      [
+        "liquidate",
+        "SYNTHETIC"
+      ]
+    ],
+    "past_split_date_if_still_in_data": [
+      [
+        "set_holdings",
+        "SYNTHETIC",
+        1
+      ]
+    ]
+  },
+  "source_account_executed": false,
+  "stub_call_is_not_fill": true,
+  "observed_semantics": [
+    "Missing target data exits invested position immediately,not an explicit split-plus-one-day timer",
+    "Only upper split-date bound exists;feed must prevent stale observations",
+    "Reverse branch needs borrow/short-account support",
+    "Source initialization/API spelling and actual dataset behavior not runtime-verified"
+  ]
+}

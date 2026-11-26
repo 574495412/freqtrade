@@ -1,0 +1,44 @@
+{
+  "frozen_at": "2026-11-15T15:00:29.789901+00:00",
+  "scope": "Synthetic native net-result integration,not historical alpha research",
+  "parent_manifest": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/equity/start_lifecycle_native_20261115_v1/artifact_manifest.json",
+    "sha256": "b6028e0211b5f0905958dde481f0dff7e4a2b171557b83fa15aa439919b3a2e0"
+  },
+  "goal_market": "HK/US equities",
+  "original_target_universe": {
+    "us": 503,
+    "hk": 11
+  },
+  "original_target_window": [
+    "2025-01-01",
+    "2026-08-31"
+  ],
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "changes": [
+    "Read-only native NAV net-result overlay",
+    "No change to producer signals,fees,dividends,wallets,orders,quotes,capital or session clocks"
+  ],
+  "cases": [
+    "XNYS_base",
+    "XNYS_extrema",
+    "XNYS_held",
+    "XHKG_base",
+    "XHKG_extrema",
+    "XHKG_held"
+  ],
+  "acceptance": [
+    "Six full inherited native starts/ZIPs complete",
+    "All original economic paths exact",
+    "Every net-boundary ratio/DD independently reconstructed",
+    "Missing boundary or incoherent accounting rejected",
+    "Historical stock constructor still closed"
+  ],
+  "no_returns_optimization": true,
+  "new_registry_factors": 0,
+  "factor_analysis_calls": 0,
+  "historical_accounts": 0,
+  "bench": 0,
+  "orders_enabled": false,
+  "services_changed": false
+}

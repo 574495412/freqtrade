@@ -1,0 +1,41 @@
+{
+  "frozen_utc": "2026-11-13T18:54:08.942702+00:00",
+  "market_scope": "HK/US equity",
+  "parent_plan": "/Users/chrise/GitHub/freqtrade/research/equity/native_session_admission_20261114_v1/plan.json",
+  "parent_plan_sha256": "37260e09706ffa2ec1c8d745f9be4c14d9a2d10f52c497bf5bfbcf648c847e7c",
+  "account_window": [
+    "2025-01-01",
+    "2026-08-31"
+  ],
+  "warmup_start": "2024-01-01",
+  "universe": "Unchanged parent 503 US + 11 HK inputs; rejected names retained",
+  "source_definition": "RR = 1 - calendar days since latest 52-week maximum closing price / 364",
+  "local_adaptation": "Provider nominal quote closes, not certified CRSP split/dividend-adjusted prices; (t-364 days,t] window, latest exact tied maximum",
+  "source_reproduction": false,
+  "high52w_already_present": true,
+  "predictive_clock": "Last session close before each calendar-month first session open; next month first-session OPEN/OPEN price-only label",
+  "incomplete_terminal_label": "Exclude August 2026 decision: next monthly open is outside frozen window",
+  "factor_gates": {
+    "ic_mean_gt": 0.03,
+    "ir_gt": 0.5,
+    "positive_ratio_gt": 0.55,
+    "minimum_full_observations": 24,
+    "duplicate_mean_abs_pearson_gt": 0.99
+  },
+  "compare": [
+    "academic_high52w",
+    "quote_momentum_252_21",
+    "quote_reversal_5"
+  ],
+  "no_sign_window_universe_or_weight_rescue": true,
+  "known_limits": [
+    "Fewer than 24 monthly observations in this window",
+    "Quote-only corporate-action/return-label ambiguity",
+    "Incomplete source universe and historical availability certification",
+    "Native stock financial account unfinished"
+  ],
+  "native_funded_accounts": 0,
+  "source_strategy_reproduced": false,
+  "production_enabled": false,
+  "live_orders_authorized": false
+}

@@ -1,0 +1,42 @@
+{
+  "frozen_utc": "2026-11-15T02:00:26.299988+00:00",
+  "scope": "HK/US daily input/session routing only",
+  "account_target_window": [
+    "2025-01-01",
+    "2026-08-31"
+  ],
+  "original_universe": "503 US + 11 HK; no result-based removals",
+  "parent_inputs": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/inputs.json",
+  "parent_inputs_sha256": "06231db0aa4fe7e1270a2a084dbc73ad1a7406ec0bb1b7e645ec2bcb0033d5b0",
+  "parent_admission": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/native_admission.json",
+  "parent_admission_sha256": "f0647f8c4a91d22dbb0bae94b6f4ac0254edfe039175970a223eecc55053675a",
+  "signal": "technical custody flags only: previous completed close > open; not an alpha or financial candidate",
+  "clocks": "lag full-grid signals once; map target session labels to exact software-calendar opens; callback cache keeps session labels and completed-close visibility",
+  "financial_admission": false,
+  "full_account_runs": 0,
+  "no_parameter_search": true,
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "local_components": {
+    "/Users/chrise/GitHub/freqtrade/freqtrade/equity_wallets.py": "4b7742733a6b53b6afc408697e3a89b4e1e7fe6d2374bf73693b4ece23a5f164",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/equity_fee_wallets.py": "d6b94ae02266f7313f2742ee6e9d52bb32be3cc6fea2a0c4d25512461ca6ea30",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/equity_dividend_wallets.py": "9ae696def331ddf23200d8e0ddbf7b8376df9061c8a96ed7d10a2d04bbd88481",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/equity_provider.py": "a8e057f5e2664af487d038ce326e6b1a39b6fafa46b0d9840648acf62df2e838",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/equity_dividends.py": "5390258b1ec224826322ce25f5ccb2518a06b60857812bf29ee6a5b1edc5d65e",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/equity_fees.py": "1e3ebd10813f31a164c509d9eed4aaebb71415dd8453df10cf3994d2adfc624e",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/equity_execution.py": "01fc15b0143463efd0e759ce350947db270358392361331c8bf10ffb42fecb5b",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_sessions.py": "7ca570e795cedd57ff053e58ac6d42518a296e7b3c330ac018cf5ac559a32398",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_nav.py": "8c4b249bba23c3d9f778ef9ea5573efb8501a0e278db1a81b680a3fe3e959c80",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_execution.py": "94fddda2742d947316aefdc86b967305252b2e449dcbb57facaefb8e8356c3ce",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_fee_execution.py": "7fd144d60bc1d50d8b6040b17b36bfbea9c18249c18d04480d748cb484a60de4",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_backtesting.py": "a56a27d185f7e242f5f821d5042e076ac8d13aadc712fd33483386817cd26d73",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/history/equity.py": "bb597a2ca2125c3fd0e3c0680594835c6b03357a38c54168121a3a43c8e39971"
+  },
+  "no_orders_deployment_services": true,
+  "unresolved": [
+    "full native initialization/load/backtest/result lifecycle",
+    "daily fill chronology and closing auctions",
+    "historical execution/fee/dividend coverage",
+    "nominal quote units, actions and delistings",
+    "borrow and paired-leg funding for short strategies"
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "scenarios": [
+    {
+      "name": "XNYS_base",
+      "market": "XNYS",
+      "checked_scalars": 84,
+      "fills": 4,
+      "snapshots": 14,
+      "terminal_held": false,
+      "historical_accounts": 0,
+      "passed": true
+    },
+    {
+      "name": "XHKG_base",
+      "market": "XHKG",
+      "checked_scalars": 84,
+      "fills": 4,
+      "snapshots": 14,
+      "terminal_held": false,
+      "historical_accounts": 0,
+      "passed": true
+    },
+    {
+      "name": "XNYS_extrema",
+      "market": "XNYS",
+      "checked_scalars": 84,
+      "fills": 4,
+      "snapshots": 14,
+      "terminal_held": false,
+      "historical_accounts": 0,
+      "passed": true
+    },
+    {
+      "name": "XHKG_extrema",
+      "market": "XHKG",
+      "checked_scalars": 84,
+      "fills": 4,
+      "snapshots": 14,
+      "terminal_held": false,
+      "historical_accounts": 0,
+      "passed": true
+    },
+    {
+      "name": "XNYS_held",
+      "market": "XNYS",
+      "checked_scalars": 84,
+      "fills": 3,
+      "snapshots": 14,
+      "terminal_held": true,
+      "historical_accounts": 0,
+      "passed": true
+    },
+    {
+      "name": "XHKG_held",
+      "market": "XHKG",
+      "checked_scalars": 84,
+      "fills": 3,
+      "snapshots": 14,
+      "terminal_held": true,
+      "historical_accounts": 0,
+      "passed": true
+    }
+  ],
+  "scalar_checks": 504,
+  "native_synthetic_fills": 22,
+  "exact_future_daily_extrema_invariance": [
+    "XNYS",
+    "XHKG"
+  ],
+  "exact_prior_backtest_financial_paths": 6,
+  "native_start_lifecycles": 6,
+  "native_zip_exports": 6,
+  "historical_accounts": 0,
+  "strategy_performance": null
+}

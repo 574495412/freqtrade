@@ -1,0 +1,39 @@
+{
+  "scope": "Synthetic native start dividend/fee/settlement/NAV lifecycle validation;no strategy return",
+  "created_at": "2026-11-15T16:28:03.930793+00:00",
+  "cases": [
+    "none",
+    "pending",
+    "paid",
+    "delayed",
+    "future1",
+    "future999"
+  ],
+  "markets": [
+    "XNYS",
+    "XHKG"
+  ],
+  "actual_native_starts": 12,
+  "historical_accounts": 0,
+  "factor_analysis": 0,
+  "bench": 0,
+  "initial_cash": 1000,
+  "terminal_held": true,
+  "gates": [
+    "Actual inherited native start exits0 and oneZIP per case",
+    "Defaultnone complete financial traces equal parent held main",
+    "Independent actual orders reconstruct every open/close cash/settlement/fees/entitlements/paid/NAV",
+    "Exopen sales keep preexisting entitlement;exopen buys do not receive it",
+    "Unknown payment remains claim not buyingpower",
+    "Known payment transfers claim to settledcash exactly once at first observed boundary",
+    "Delayed notice/payment do not change earlier boundaries",
+    "Future amount1vs999 and truncatedfuture event have identical earlier financial state",
+    "All original owners and sealed parent paths unchanged"
+  ],
+  "prohibitions": [
+    "No production changes;no real stock admission",
+    "No thresholds/weights/newaccountperformance",
+    "No tax or broker credit certification",
+    "No orders/services/deployment"
+  ]
+}
