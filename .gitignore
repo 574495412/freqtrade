@@ -126,3 +126,33 @@ docker-compose-*.yml
 # Local paper deployment environment, ledgers and secrets
 /.venv-paper/
 /user_data/deployment/
+
+# Research-only dependency installs, checkouts, market inputs and run outputs.
+/research/*/*/dependencies/
+/research/*/*/source_git
+/research/*/*/upstream.git
+/research/*/*/sources/*.git/
+/research/*/*/raw/
+/research/*/*/inputs/
+/research/*/*/native_history/
+/research/*/*/warmup_archives/
+/research/*/*/runs/
+/research/*/*/native_evidence/
+/research/*/*/audited_complete_accounts/
+/research/*/*/numerical_outputs/
+/research/*/*/technical_revalidation_v3/native_history/
+
+/research/**/*.feather
+/research/**/*.parquet
+/research/**/*.zip
+/research/**/*.CHECKSUM
+/research/**/*.dylib
+/research/**/*.pkl
+/research/**/*.bin
+/research/**/*.lock
+/research/**/.process*.json
+/research/**/*_process.json
+/research/**/active_process.json
+/research/**/*_process_status.json
+/research/**/download_checkpoint.json
+/research/**/raw_receipts.json

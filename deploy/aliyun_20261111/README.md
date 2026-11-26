@@ -1,8 +1,150 @@
 # Alibaba Cloud ECS migration preparation
 
-Status: **CORE LIVE RESTORED; NONCORE REFRESH RESOURCE GATED**.
+This runbook includes the November 15 recovery and November 16 bounded selector
+acceptance. The status and measurements in those sections are historical observations.
 
-Latest verification: **2026-11-13 10:11:46 Shanghai**. Both native workers were
+## November 16 bounded daily-input backend
+
+At the November 16 acceptance, the live publisher used `deploy/nfi80_selected/light_selector.py`; the
+original pandas/CCXT publisher and pinned historical RuleBook remain the parity
+reference. Both are local input-preparation extensions. Native Freqtrade still
+owns signals, accounts, orders and position management. The policy hash, frozen
+candidate universe, structural blacklist, minimum 60 closed daily rows, previous
+completed UTC-day turnover ranking, tie order, 80-pair count, contract identity
+checks and expiry gate are retained. No financial setting or running worker was
+changed to fit memory.
+
+Full admission now shares the pure funding validator with native wallet-class
+selection. A release-pinned 104-KiB input projection avoids deserializing the
+4-MiB historical schedule and 5-MiB market archive every day. Every refresh still
+hashes the original source files and eligible seed inputs. The projection is
+generated from those exact archives and checked against them in validation.
+The original same-day shortcut stays lightweight too.
+
+The first second-day runtime attempt failed after 12.456 seconds because a
+public reader inherited a 10-second local request-budget wait. This was a failed
+verification, not an OOM or a successful full refresh. Its log and partial input
+cache were preserved. Unsigned public readers now wait within the remaining
+bounded preparation budget; signed diagnostics keep their original timeout, and
+shared quotas, leases and cooldowns are unchanged. A fresh second-day cache is
+used for the follow-up runtime acceptance.
+
+Closed public JSON inputs are saved per UTC day and contract under private
+`closed-daily-cache/` directories. A failed or bounded attempt retains completed
+pairs; a later attempt repeats source/current-market gates and fetches missing
+pairs. No partial result replaces the consumer snapshot. A job that crosses UTC
+midnight must retry the new day instead of relabeling old inputs or extending
+their expiry. Successful candidate snapshots are published atomically.
+
+The selector child is bounded to 64/80 MiB MemoryHigh/MemoryMax and 32 MiB swap,
+inside the unchanged aggregate 832/900-MiB and 256-MiB swap budgets. Admission
+requires 80 MiB effective aggregate headroom, 480 MiB host availability and full
+pressure avg10 below 1%. It retries nonblocking admission within seconds 75–165
+of a five-minute interval, releasing the compute lock while waiting. Work has a
+135-second maximum preparation deadline, shortened late in the window to leave
+time before the next candle. The service has a 210-second overall runtime bound;
+the existing timer remains at second 75. Boot/failure restarts remain disabled.
+
+Local validation: **92 tests passed**, targeted Ruff checks passed, and all
+result fields matched the unmodified RuleBook on three captured complete runs
+(November 9, 10 and 11; 267 candidate frames each). Synthetic boundary fixtures
+also compare native CCXT/Freqtrade market filtering, ties, blacklist matching,
+minimum history, malformed data, interrupted retries and UTC rollover. These
+are input/operational checks, not return or backtest evidence.
+
+The first ECS nonpublishing full recomputation on November 16 completed 268
+public GETs in **91.039 seconds**, without loading pandas/NumPy/CCXT/SQLAlchemy.
+Its peak RSS was **59.5 MiB**; sampled child memory peaked at **63.9 MiB** and
+aggregate memory at **828.8 MiB**. Maximum sampled full pressure avg10 was
+**0.02%**, minimum host availability **603.2 MiB**, and no OOM kill was added.
+Both original native PIDs (spot 14955/futures 14981) retained RUNNING heartbeats
+through the workload and the subsequent 90-second observation. The consumer
+snapshot was unchanged during this verification. Private receipts are on ECS
+under `user_data/deployment/refresh-memory-20261116/`.
+
+Final acceptance: **2026-11-16 21:24:40 Shanghai**, execution source
+`80917bd14dee6842dae91b9155058e307163d367`. The selector-only unit was promoted;
+the existing timer was restored and a new natural timer trigger completed with
+exit code zero. The observed 80-pair pool had decision day November 16, closed inputs
+through November 15, and expired **November 17 at 08:00 Shanghai**. The native
+futures consumer's actual logged whitelist matched that pool. Both original
+market PIDs retained fresh RUNNING heartbeats without observer faults, and
+authenticated exchange GET reconciliation and fresh notification delivery passed.
+
+After the public-wait correction, a fresh nonpublishing November 15 input run
+completed in **91.149 seconds** with peak RSS **59.3 MiB**, sampled child memory
+**63.9 MiB**, aggregate memory **831.9 MiB**, maximum sampled full pressure
+avg10 **0%**, and zero additional OOM kills. Its workload did not replace the
+current November 16 consumer snapshot. At final acceptance group RAM was
+**794.9 MiB** and swap **73.9 MiB**. The unchanged aggregate limits were verified
+as 832/900 MiB plus 256 MiB swap. Local live and paper LaunchAgents remain
+disabled, and no matching local live trading process was found.
+
+The final private receipt is
+`user_data/deployment/refresh-memory-20261116/final.private.json` on ECS. The
+initial budget-wait failure log and partial cache remain archived in the same
+private incident directory. Verification-script failures (systemd's formatted
+monotonic timestamp and the earlier failed budget-wait workload) remain in Cloud
+Assistant history and are not counted as successful acceptance.
+
+Validation covers two real closed-input decision days, the native/current-day
+timer, and offline UTC-boundary cases. It is not a recording of the next natural
+UTC midnight transition, which has not yet occurred at this acceptance time.
+
+Closed-day data cannot be published before the UTC cutover. The expiry guard
+continues to reject stale new-entry inputs during preparation or a source/API
+outage; this change does not promise an uninterrupted pool or guaranteed future
+availability. In particular, it never solves an expired pool by extending old
+data's validity.
+
+## November 15 operational recovery
+
+Latest verification: **2026-11-15 10:19:32 Shanghai**. Spot PID 14955 and futures
+PID 14981 completed native analysis and reported RUNNING with no observer faults.
+Three final observations from 10:17:56 to 10:19:17 retained both PIDs and fresh
+heartbeats. Authenticated GET-only account/ledger reconciliation passed after
+startup, notification health returned HTTP 200 with fresh delivery receipts, and
+the selector timer was active. Local trading LaunchAgents remain disabled and no
+matching local live process was found.
+
+The incident began with both old PIDs still present but heartbeats more than six
+hours old, aggregate full memory pressure around 89%, an expired November 13
+pool and notification health HTTP 503. Kernel evidence showed the futures process
+in `mem_cgroup_handle_over_high`, approximately 839 MiB of anonymous memory, and
+zero swap use despite an existing 1-GiB swap file. Host `vm.swappiness=0` prevented
+effective anonymous-page reclamation under this cgroup pressure. On the user's
+repair/deployment instruction, fresh exchange GETs and native ledgers first
+confirmed both accounts flat with no open orders. Runtime admission was withdrawn,
+the stalled workers stopped through systemd, and both SQLite ledgers passed
+integrity checks and were backed up without resetting history.
+
+The operational repair sets `vm.swappiness=60`, persisted in
+`/etc/sysctl.d/99-z-freqtrade-memory.conf` after the existing Alibaba/sysctl
+definitions that set zero. Aggregate MemoryHigh/MemoryMax remain **832/900 MiB**,
+and MemorySwapMax remains **256 MiB**. No strategy, capital, leverage, request
+budget, credential or account-mode change was made. The pinned native selector
+completed a full standalone recomputation in 110 seconds before sequential spot
+and futures startup. The 80-pair pool uses closed inputs through November 14 and
+expires **November 16 at 08:00 Shanghai**. ECS source remains `da1184efc`.
+
+Final aggregate RAM was **770.3 MiB**, swap **50.4 MiB**, full pressure avg10 **0**,
+host CPU **7.5%**, and host available memory **612.3 MiB**. The historical
+`oom_kill=1` counter did not increase. Automatic boot/failure restarts remain
+disabled. Private receipts, account observations and original-ledger backups are
+on ECS under `user_data/deployment/incident-20261115/`, including
+`final.private.json`; failed maintenance/verification attempts remain in Cloud
+Assistant history. An early verifier incorrectly treated ExecStartPre's zero
+MainPID as an exit; another applied a stricter 90-second heartbeat limit than the
+existing observer's 180-second contract. Neither is reported as a successful
+acceptance attempt. Final verification used the unchanged observer contract.
+
+That recovery restored both live services; it does **not** establish reliable
+unattended cross-day selection alongside both resident workers. The existing
+selector memory gate is retained and may defer a new-day refresh; snapshot expiry
+still blocks new futures entries. Operational recovery is not strategy-return or
+live/backtest-parity evidence.
+
+Previous verification: **2026-11-13 10:11:46 Shanghai**. Both native workers were
 RUNNING without observer faults after more than 90 stable seconds. Spot PID
 3015 was retained; futures PID 5434 completed fresh 80-pair analysis. Current
 group RAM was 785.3 MiB, host CPU 3.5%, swap zero, and aggregate hard/soft limits
@@ -376,7 +518,7 @@ capacity budget. The same-day selector shortcut is insufficient capacity evidenc
 | Spot | 600 / 650 MiB | 256 MiB | 60% of one CPU |
 | Futures | 575 / 600 MiB | 256 MiB | 60% of one CPU |
 | Notifications | 80 / 120 MiB | 64 MiB | 10% of one CPU |
-| Selector | 400 / 450 MiB | 128 MiB | 40% of one CPU |
+| Selector (bounded JSON backend) | 64 / 80 MiB | 32 MiB | 40% of one CPU |
 
 These are child ceilings, additionally constrained by the aggregate slice.
 If native cycles cannot finish within them, preserve/reconcile the latest account
