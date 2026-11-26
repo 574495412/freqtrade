@@ -480,6 +480,45 @@ class Backtesting:
                 return precision, TICK_SIZE
         return self.exchange.get_precision_price(pair), self.precision_mode_price
 
+    def normalize_entry_order_rate(
+        self, pair: str, current_time: datetime, rate: float, order_type: str
+    ) -> float:
+        """Local extension seam; preserve upstream entry prices by default."""
+        return rate
+
+    def get_exit_order_precision(
+        self, trade: LocalTrade, current_time: datetime
+    ) -> tuple[float | None, int]:
+        """Local extension seam; preserve stored trade precision by default."""
+        return trade.price_precision, trade.precision_mode_price
+
+    def get_entry_amount_precision(self, pair: str, current_time: datetime) -> float | None:
+        """Local extension seam; upstream static amount precision by default."""
+        return self.exchange.get_precision_amount(pair)
+
+    def get_exit_amount_precision(self, trade: LocalTrade, current_time: datetime) -> float | None:
+        """Local extension seam; upstream stored amount precision by default."""
+        return trade.amount_precision
+
+    def get_order_stake_limits(self, pair, current_time, price, stoploss, leverage):
+        """Local extension seam; keep upstream exchange sizing by default."""
+        return (
+            self.exchange.get_min_pair_stake_amount(pair, price, stoploss, leverage),
+            self.exchange.get_max_pair_stake_amount(pair, price, leverage),
+        )
+
+    def validate_order_amount(self, pair, current_time, amount, price, trade, is_exit):
+        """Opt-in final-order rule validation; upstream admission by default."""
+        return True
+
+    def update_trade_amount_precision(self, trade, order_precision):
+        """Opt-in position accounting precision; preserve upstream by default."""
+
+    def can_reduce_position(self, trade, current_time, amount, price, min_stake):
+        """Local extension seam; upstream remaining-stake protection by default."""
+        remaining = (trade.amount - amount) * price
+        return not (min_stake and remaining != 0 and remaining < min_stake)
+
     def disable_database_use(self):
         disable_database_use(self.timeframe)
 
@@ -720,11 +759,8 @@ class Backtesting:
     ) -> LocalTrade:
         current_rate: float = row[OPEN_IDX]
         current_profit = trade.calc_profit_ratio(current_rate)
-        min_stake = self.exchange.get_min_pair_stake_amount(
-            trade.pair, current_rate, 0.0, trade.leverage
-        )
-        max_stake = self.exchange.get_max_pair_stake_amount(
-            trade.pair, current_rate, trade.leverage
+        min_stake, max_stake = self.get_order_stake_limits(
+            trade.pair, current_time, current_rate, 0.0, trade.leverage
         )
         stake_available = self.wallets.get_available_stake_amount()
         stake_amount, order_tag = self.strategy._adjust_trade_position_internal(
@@ -768,14 +804,13 @@ class Backtesting:
                         / FtPrecise(trade.stake_amount)
                     )
                 ),
-                trade.amount_precision,
+                self.get_exit_amount_precision(trade, current_time),
                 self.precision_mode,
                 trade.contract_size,
             )
             if amount == 0.0:
                 return trade
-            remaining = (trade.amount - amount) * current_rate
-            if min_stake and remaining != 0 and remaining < min_stake:
+            if not self.can_reduce_position(trade, current_time, amount, current_rate, min_stake):
                 # Remaining stake is too low to be sold.
                 return trade
             exit_ = ExitCheckTuple(ExitType.PARTIAL_EXIT, order_tag)
@@ -944,16 +979,24 @@ class Backtesting:
         self.order_id_counter += 1
         exit_candle_time = sell_row[DATE_IDX].to_pydatetime()
         order_type = self.strategy.order_types["exit"]
-        close_rate = price_to_precision(
-            close_rate, trade.price_precision, trade.precision_mode_price
+        price_precision, precision_mode_price = self.get_exit_order_precision(
+            trade, exit_candle_time
         )
+        close_rate = price_to_precision(close_rate, price_precision, precision_mode_price)
         # amount = amount or trade.amount
+        amount_precision = self.get_exit_amount_precision(trade, exit_candle_time)
         amount = amount_to_contract_precision(
-            amount or trade.amount, trade.amount_precision, self.precision_mode, trade.contract_size
+            amount or trade.amount, amount_precision, self.precision_mode, trade.contract_size
         )
+        if not self.validate_order_amount(
+            trade.pair, exit_candle_time, amount, close_rate, trade, True
+        ):
+            return None
 
         if self.handle_similar_order(trade, close_rate, amount, trade.exit_side, exit_candle_time):
             return None
+
+        self.update_trade_amount_precision(trade, amount_precision)
 
         order = Order(
             id=self.order_id_counter,
@@ -1060,6 +1103,7 @@ class Backtesting:
             else:
                 propose_rate = min(propose_rate, row[HIGH_IDX])
 
+        propose_rate = self.normalize_entry_order_rate(pair, current_time, propose_rate, order_type)
         pos_adjust = trade is not None
         leverage = trade.leverage if trade else 1.0
         if not pos_adjust:
@@ -1087,15 +1131,10 @@ class Backtesting:
             # Cap leverage between 1.0 and max_leverage.
             leverage = min(max(leverage, 1.0), max_leverage)
 
-        min_stake_amount = (
-            self.exchange.get_min_pair_stake_amount(
-                pair, propose_rate, -0.05 if not pos_adjust else 0.0, leverage=leverage
-            )
-            or 0
+        min_stake_amount, max_stake_amount = self.get_order_stake_limits(
+            pair, current_time, propose_rate, -0.05 if not pos_adjust else 0.0, leverage
         )
-        max_stake_amount = self.exchange.get_max_pair_stake_amount(
-            pair, propose_rate, leverage=leverage
-        )
+        min_stake_amount = min_stake_amount or 0
         stake_available = self.wallets.get_available_stake_amount()
 
         if not pos_adjust:
@@ -1167,6 +1206,10 @@ class Backtesting:
 
         # replace proposed rate if another rate was requested
         propose_rate = requested_rate if requested_rate else propose_rate
+        if requested_rate:
+            propose_rate = self.normalize_entry_order_rate(
+                pair, current_time, propose_rate, order_type
+            )
         stake_amount = requested_stake if requested_stake else stake_amount
 
         if not stake_amount:
@@ -1181,12 +1224,16 @@ class Backtesting:
             amount_p = (stake_amount / propose_rate) * leverage
 
             contract_size = self.exchange.get_contract_size(pair)
-            precision_amount = self.exchange.get_precision_amount(pair)
+            precision_amount = self.get_entry_amount_precision(pair, current_time)
             amount = amount_to_contract_precision(
                 amount_p, precision_amount, self.precision_mode, contract_size
             )
             if not amount:
                 # No amount left after truncating to precision.
+                return trade
+            if not self.validate_order_amount(
+                pair, current_time, amount, propose_rate, trade, False
+            ):
                 return trade
             # Backcalculate actual stake amount.
             stake_amount = amount * propose_rate / leverage
@@ -1213,7 +1260,7 @@ class Backtesting:
             if trade is None:
                 # Enter trade
                 self.trade_id_counter += 1
-                trade = LocalTrade(
+                trade = self._create_trade(
                     id=self.trade_id_counter,
                     pair=pair,
                     base_currency=base_currency,
@@ -1247,6 +1294,8 @@ class Backtesting:
             ):
                 return None
 
+            self.update_trade_amount_precision(trade, precision_amount)
+
             trade.adjust_stop_loss(trade.open_rate, self.strategy.stoploss, initial=True)
 
             order = Order(
@@ -1278,6 +1327,14 @@ class Backtesting:
             trade.recalc_trade_from_orders()
 
         return trade
+
+    def _create_trade(self, **kwargs) -> LocalTrade:
+        """Construct the native trade; explicit subclasses can extend its model.
+
+        Default behavior is unchanged. This seam does not admit a new market,
+        execution model, or financial account by itself.
+        """
+        return LocalTrade(**kwargs)
 
     def handle_left_open(
         self, open_trades: dict[str, list[LocalTrade]], data: dict[str, list[tuple]]
