@@ -1,0 +1,23 @@
+{
+  "status": "SOURCE_EVIDENCE_REJECTED_BEFORE_NATIVE_FINANCE",
+  "source_commit": "9e142d1412a43600598e742460b111ccfb7da01b",
+  "source_hashes_checked": 12,
+  "native_accounts": 0,
+  "native_returns": null,
+  "native_drawdown": null,
+  "accepted_new_alphas": 0,
+  "accepted_combinations": 0,
+  "sentiment_family_economically_rejected": false,
+  "goal_achieved": false,
+  "goal_status": "active",
+  "orders_enabled": false,
+  "services_changed": false,
+  "reasons": [
+    "Actual source pure-function future backfill failure",
+    "Actual early published entries fail a finite RSI>50 condition",
+    "Same-bar-close execution without modeled fees/slippage",
+    "32 absent published hourly clocks",
+    "Exact source CMC historical input not obtained; anonymous endpoint HTTP401",
+    "Two provider indices have different input methodologies; no silent substitution"
+  ]
+}

@@ -1,0 +1,313 @@
+{
+  "actual_registry_views": 3,
+  "global_registry_modified": false,
+  "actual_factor_analysis_calls": 9,
+  "local_cross_project_diagnostic": true,
+  "freqtrade_upstream_feature": false,
+  "run_after_frozen_native_accounts": true,
+  "source_sign_or_window_changed": false,
+  "label": "gross 01:00-to-next01:00 futures OPEN return; no fees/funding; 607 full daily labels",
+  "local_group_count": 3,
+  "minimum_native_ic_assets": 5,
+  "observed_assets": 6,
+  "independent_ic_rows": 3642,
+  "independent_group_nav_cells": 10926,
+  "independent_oos_certified": false,
+  "group_curves_are_funded_account_returns": false,
+  "receipts": [
+    {
+      "factor": "edge30",
+      "split": "all",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.069428,
+        "ic_std": 0.474697,
+        "ir": -0.1463,
+        "ic_positive_ratio": 0.4316,
+        "ic_count": 607,
+        "n_groups": 3,
+        "long_short_spread": -0.4498,
+        "group_final_equity": {
+          "Group_1": 0.7561,
+          "Group_2": 1.0703,
+          "Group_3": 0.3063
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/predictive/edge30/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "edge30",
+      "split": "calendar2025",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.065988,
+        "ic_std": 0.47135,
+        "ir": -0.14,
+        "ic_positive_ratio": 0.4521,
+        "ic_count": 365,
+        "n_groups": 3,
+        "long_short_spread": -0.4616,
+        "group_final_equity": {
+          "Group_1": 0.9433,
+          "Group_2": 1.2207,
+          "Group_3": 0.4817
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/predictive/edge30/calendar2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "edge30",
+      "split": "calendar2026_through_aug30",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.074616,
+        "ic_std": 0.480633,
+        "ir": -0.1552,
+        "ic_positive_ratio": 0.4008,
+        "ic_count": 242,
+        "n_groups": 3,
+        "long_short_spread": -0.1656,
+        "group_final_equity": {
+          "Group_1": 0.8015,
+          "Group_2": 0.8767,
+          "Group_3": 0.636
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/predictive/edge30/calendar2026_through_aug30/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "amihud30",
+      "split": "all",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.047494,
+        "ic_std": 0.461556,
+        "ir": -0.1029,
+        "ic_positive_ratio": 0.4629,
+        "ic_count": 607,
+        "n_groups": 3,
+        "long_short_spread": -0.1709,
+        "group_final_equity": {
+          "Group_1": 0.7981,
+          "Group_2": 0.4913,
+          "Group_3": 0.6271
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/predictive/amihud30/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "amihud30",
+      "split": "calendar2025",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.036086,
+        "ic_std": 0.437978,
+        "ir": -0.0824,
+        "ic_positive_ratio": 0.4685,
+        "ic_count": 365,
+        "n_groups": 3,
+        "long_short_spread": -0.0476,
+        "group_final_equity": {
+          "Group_1": 0.9322,
+          "Group_2": 0.6675,
+          "Group_3": 0.8845
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/predictive/amihud30/calendar2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "amihud30",
+      "split": "calendar2026_through_aug30",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.064699,
+        "ic_std": 0.495436,
+        "ir": -0.1306,
+        "ic_positive_ratio": 0.4545,
+        "ic_count": 242,
+        "n_groups": 3,
+        "long_short_spread": -0.1471,
+        "group_final_equity": {
+          "Group_1": 0.8561,
+          "Group_2": 0.7359,
+          "Group_3": 0.709
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/predictive/amihud30/calendar2026_through_aug30/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "lowvol63",
+      "split": "all",
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.053236,
+        "ic_std": 0.509713,
+        "ir": 0.1044,
+        "ic_positive_ratio": 0.5585,
+        "ic_count": 607,
+        "n_groups": 3,
+        "long_short_spread": 0.2528,
+        "group_final_equity": {
+          "Group_1": 0.6636,
+          "Group_2": 0.3987,
+          "Group_3": 0.9164
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/predictive/lowvol63/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "lowvol63",
+      "split": "calendar2025",
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.061448,
+        "ic_std": 0.536158,
+        "ir": 0.1146,
+        "ic_positive_ratio": 0.5479,
+        "ic_count": 365,
+        "n_groups": 3,
+        "long_short_spread": 0.2838,
+        "group_final_equity": {
+          "Group_1": 0.843,
+          "Group_2": 0.5727,
+          "Group_3": 1.1268
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/predictive/lowvol63/calendar2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "lowvol63",
+      "split": "calendar2026_through_aug30",
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.04085,
+        "ic_std": 0.467819,
+        "ir": 0.0873,
+        "ic_positive_ratio": 0.5744,
+        "ic_count": 242,
+        "n_groups": 3,
+        "long_short_spread": 0.0261,
+        "group_final_equity": {
+          "Group_1": 0.7872,
+          "Group_2": 0.6961,
+          "Group_3": 0.8133
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/spread_liquidity_native_20261114_v1/predictive/lowvol63/calendar2026_through_aug30/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    }
+  ],
+  "occupancy": {
+    "edge30": {
+      "long_days": {
+        "BTC/USDT:USDT": 0,
+        "ETH/USDT:USDT": 0,
+        "BNB/USDT:USDT": 1,
+        "XRP/USDT:USDT": 112,
+        "LTC/USDT:USDT": 336,
+        "DOGE/USDT:USDT": 158
+      },
+      "short_days": {
+        "BTC/USDT:USDT": 493,
+        "ETH/USDT:USDT": 71,
+        "BNB/USDT:USDT": 25,
+        "XRP/USDT:USDT": 2,
+        "LTC/USDT:USDT": 2,
+        "DOGE/USDT:USDT": 14
+      },
+      "daily_pair_target_changes": 201
+    },
+    "amihud30": {
+      "long_days": {
+        "BTC/USDT:USDT": 0,
+        "ETH/USDT:USDT": 0,
+        "BNB/USDT:USDT": 0,
+        "XRP/USDT:USDT": 0,
+        "LTC/USDT:USDT": 607,
+        "DOGE/USDT:USDT": 0
+      },
+      "short_days": {
+        "BTC/USDT:USDT": 606,
+        "ETH/USDT:USDT": 1,
+        "BNB/USDT:USDT": 0,
+        "XRP/USDT:USDT": 0,
+        "LTC/USDT:USDT": 0,
+        "DOGE/USDT:USDT": 0
+      },
+      "daily_pair_target_changes": 2
+    },
+    "lowvol63": {
+      "long_days": {
+        "BTC/USDT:USDT": 371,
+        "ETH/USDT:USDT": 0,
+        "BNB/USDT:USDT": 230,
+        "XRP/USDT:USDT": 0,
+        "LTC/USDT:USDT": 6,
+        "DOGE/USDT:USDT": 0
+      },
+      "short_days": {
+        "BTC/USDT:USDT": 0,
+        "ETH/USDT:USDT": 117,
+        "BNB/USDT:USDT": 0,
+        "XRP/USDT:USDT": 140,
+        "LTC/USDT:USDT": 75,
+        "DOGE/USDT:USDT": 275
+      },
+      "daily_pair_target_changes": 36
+    }
+  },
+  "owner_manifest_sha256": "04128757ff2ee9af8b9b02a53d8cf0289515c7bccbce9e23fc8a5fe1281a7a05"
+}

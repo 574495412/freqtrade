@@ -1,0 +1,956 @@
+{
+  "actual_factor_analysis_calls": 24,
+  "isolated_registry_views": 1,
+  "existing_registry_definition_used": "academic_high52w",
+  "global_registry_modified": false,
+  "source_strategy_reproduced": false,
+  "source_prices_certified": false,
+  "full_original_universe_admitted": false,
+  "new_accepted_independent_alphas": 0,
+  "native_funded_accounts": 0,
+  "financial_net_return": null,
+  "independent_oos": false,
+  "independent_ic_rows": 298,
+  "independent_group_nav_cells": 894,
+  "scoped_dedup": [
+    {
+      "market": "XNYS",
+      "left": "recency",
+      "right": "academic_high52w",
+      "dates": 19,
+      "mean_abs_cross_sectional_pearson": 0.6066240750724288,
+      "duplicate": false
+    },
+    {
+      "market": "XNYS",
+      "left": "recency",
+      "right": "quote_momentum_252_21",
+      "dates": 18,
+      "mean_abs_cross_sectional_pearson": 0.616061320240232,
+      "duplicate": false
+    },
+    {
+      "market": "XNYS",
+      "left": "recency",
+      "right": "quote_reversal_5",
+      "dates": 19,
+      "mean_abs_cross_sectional_pearson": 0.11716110664356631,
+      "duplicate": false
+    },
+    {
+      "market": "XHKG",
+      "left": "recency",
+      "right": "academic_high52w",
+      "dates": 18,
+      "mean_abs_cross_sectional_pearson": 0.5843740238635555,
+      "duplicate": false
+    },
+    {
+      "market": "XHKG",
+      "left": "recency",
+      "right": "quote_momentum_252_21",
+      "dates": 18,
+      "mean_abs_cross_sectional_pearson": 0.38443245637944523,
+      "duplicate": false
+    },
+    {
+      "market": "XHKG",
+      "left": "recency",
+      "right": "quote_reversal_5",
+      "dates": 19,
+      "mean_abs_cross_sectional_pearson": 0.3183916050116252,
+      "duplicate": false
+    }
+  ],
+  "all_registry_independence_claim": false,
+  "results": [
+    {
+      "market": "XNYS",
+      "factor": "recency",
+      "split": "all",
+      "response": {
+        "status": "ok",
+        "ic_mean": 0.008569,
+        "ic_std": 0.120646,
+        "ir": 0.071,
+        "ic_positive_ratio": 0.5789,
+        "ic_count": 19,
+        "n_groups": 3,
+        "long_short_spread": 0.0163,
+        "group_final_equity": {
+          "Group_1": 1.1574,
+          "Group_2": 1.3323,
+          "Group_3": 1.1737
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XNYS/recency/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 19,
+        "group_nav_cells": 57,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 475,
+      "declared_assets": 503,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XNYS",
+      "factor": "recency",
+      "split": "2025",
+      "response": {
+        "status": "ok",
+        "ic_mean": 0.013984,
+        "ic_std": 0.118488,
+        "ir": 0.118,
+        "ic_positive_ratio": 0.5,
+        "ic_count": 12,
+        "n_groups": 3,
+        "long_short_spread": 0.0706,
+        "group_final_equity": {
+          "Group_1": 1.0198,
+          "Group_2": 1.1039,
+          "Group_3": 1.0904
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XNYS/recency/2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 12,
+        "group_nav_cells": 36,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 475,
+      "declared_assets": 503,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XNYS",
+      "factor": "recency",
+      "split": "2026",
+      "response": {
+        "status": "ok",
+        "ic_mean": -0.000714,
+        "ic_std": 0.133297,
+        "ir": -0.0054,
+        "ic_positive_ratio": 0.7143,
+        "ic_count": 7,
+        "n_groups": 3,
+        "long_short_spread": -0.0585,
+        "group_final_equity": {
+          "Group_1": 1.1349,
+          "Group_2": 1.2069,
+          "Group_3": 1.0764
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XNYS/recency/2026/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 7,
+        "group_nav_cells": 21,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 475,
+      "declared_assets": 503,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XNYS",
+      "factor": "academic_high52w",
+      "split": "all",
+      "response": {
+        "status": "ok",
+        "ic_mean": -0.006063,
+        "ic_std": 0.154583,
+        "ir": -0.0392,
+        "ic_positive_ratio": 0.6316,
+        "ic_count": 19,
+        "n_groups": 3,
+        "long_short_spread": -0.071,
+        "group_final_equity": {
+          "Group_1": 1.2502,
+          "Group_2": 1.228,
+          "Group_3": 1.1792
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XNYS/academic_high52w/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 19,
+        "group_nav_cells": 57,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 475,
+      "declared_assets": 503,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XNYS",
+      "factor": "academic_high52w",
+      "split": "2025",
+      "response": {
+        "status": "ok",
+        "ic_mean": -0.003517,
+        "ic_std": 0.153818,
+        "ir": -0.0229,
+        "ic_positive_ratio": 0.5833,
+        "ic_count": 12,
+        "n_groups": 3,
+        "long_short_spread": 0.0161,
+        "group_final_equity": {
+          "Group_1": 1.0614,
+          "Group_2": 1.0733,
+          "Group_3": 1.0775
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XNYS/academic_high52w/2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 12,
+        "group_nav_cells": 36,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 475,
+      "declared_assets": 503,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XNYS",
+      "factor": "academic_high52w",
+      "split": "2026",
+      "response": {
+        "status": "ok",
+        "ic_mean": -0.010428,
+        "ic_std": 0.168154,
+        "ir": -0.062,
+        "ic_positive_ratio": 0.7143,
+        "ic_count": 7,
+        "n_groups": 3,
+        "long_short_spread": -0.0834,
+        "group_final_equity": {
+          "Group_1": 1.1778,
+          "Group_2": 1.1441,
+          "Group_3": 1.0944
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XNYS/academic_high52w/2026/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 7,
+        "group_nav_cells": 21,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 475,
+      "declared_assets": 503,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XNYS",
+      "factor": "quote_momentum_252_21",
+      "split": "all",
+      "response": {
+        "status": "ok",
+        "ic_mean": 0.006589,
+        "ic_std": 0.140814,
+        "ir": 0.0468,
+        "ic_positive_ratio": 0.6111,
+        "ic_count": 18,
+        "n_groups": 3,
+        "long_short_spread": 0.0084,
+        "group_final_equity": {
+          "Group_1": 1.2066,
+          "Group_2": 1.1876,
+          "Group_3": 1.215
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XNYS/quote_momentum_252_21/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 18,
+        "group_nav_cells": 54,
+        "maximum_group_nav_error": 4.440892098500626e-16
+      },
+      "minimum_valid_assets": 0,
+      "declared_assets": 503,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XNYS",
+      "factor": "quote_momentum_252_21",
+      "split": "2025",
+      "response": {
+        "status": "ok",
+        "ic_mean": -0.020775,
+        "ic_std": 0.136072,
+        "ir": -0.1527,
+        "ic_positive_ratio": 0.4545,
+        "ic_count": 11,
+        "n_groups": 3,
+        "long_short_spread": -0.0264,
+        "group_final_equity": {
+          "Group_1": 1.071,
+          "Group_2": 1.0558,
+          "Group_3": 1.0446
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XNYS/quote_momentum_252_21/2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 11,
+        "group_nav_cells": 33,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 0,
+      "declared_assets": 503,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XNYS",
+      "factor": "quote_momentum_252_21",
+      "split": "2026",
+      "response": {
+        "status": "ok",
+        "ic_mean": 0.04959,
+        "ic_std": 0.14762,
+        "ir": 0.3359,
+        "ic_positive_ratio": 0.8571,
+        "ic_count": 7,
+        "n_groups": 3,
+        "long_short_spread": 0.0366,
+        "group_final_equity": {
+          "Group_1": 1.1266,
+          "Group_2": 1.1248,
+          "Group_3": 1.1632
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XNYS/quote_momentum_252_21/2026/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 7,
+        "group_nav_cells": 21,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 475,
+      "declared_assets": 503,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XNYS",
+      "factor": "quote_reversal_5",
+      "split": "all",
+      "response": {
+        "status": "ok",
+        "ic_mean": -0.029743,
+        "ic_std": 0.143757,
+        "ir": -0.2069,
+        "ic_positive_ratio": 0.4737,
+        "ic_count": 19,
+        "n_groups": 3,
+        "long_short_spread": -0.1503,
+        "group_final_equity": {
+          "Group_1": 1.2957,
+          "Group_2": 1.2193,
+          "Group_3": 1.1454
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XNYS/quote_reversal_5/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 19,
+        "group_nav_cells": 57,
+        "maximum_group_nav_error": 4.440892098500626e-16
+      },
+      "minimum_valid_assets": 475,
+      "declared_assets": 503,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XNYS",
+      "factor": "quote_reversal_5",
+      "split": "2025",
+      "response": {
+        "status": "ok",
+        "ic_mean": -0.054065,
+        "ic_std": 0.142195,
+        "ir": -0.3802,
+        "ic_positive_ratio": 0.4167,
+        "ic_count": 12,
+        "n_groups": 3,
+        "long_short_spread": -0.1423,
+        "group_final_equity": {
+          "Group_1": 1.1436,
+          "Group_2": 1.0725,
+          "Group_3": 1.0013
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XNYS/quote_reversal_5/2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 12,
+        "group_nav_cells": 36,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 475,
+      "declared_assets": 503,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XNYS",
+      "factor": "quote_reversal_5",
+      "split": "2026",
+      "response": {
+        "status": "ok",
+        "ic_mean": 0.011952,
+        "ic_std": 0.14737,
+        "ir": 0.0811,
+        "ic_positive_ratio": 0.5714,
+        "ic_count": 7,
+        "n_groups": 3,
+        "long_short_spread": 0.0109,
+        "group_final_equity": {
+          "Group_1": 1.1329,
+          "Group_2": 1.1369,
+          "Group_3": 1.1438
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XNYS/quote_reversal_5/2026/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 7,
+        "group_nav_cells": 21,
+        "maximum_group_nav_error": 4.440892098500626e-16
+      },
+      "minimum_valid_assets": 475,
+      "declared_assets": 503,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XHKG",
+      "factor": "recency",
+      "split": "all",
+      "response": {
+        "status": "ok",
+        "ic_mean": -0.028602,
+        "ic_std": 0.52352,
+        "ir": -0.0546,
+        "ic_positive_ratio": 0.5263,
+        "ic_count": 19,
+        "n_groups": 3,
+        "long_short_spread": 0.1182,
+        "group_final_equity": {
+          "Group_1": 1.4147,
+          "Group_2": 1.393,
+          "Group_3": 1.5329
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XHKG/recency/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 19,
+        "group_nav_cells": 57,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 11,
+      "declared_assets": 11,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XHKG",
+      "factor": "recency",
+      "split": "2025",
+      "response": {
+        "status": "ok",
+        "ic_mean": -0.140847,
+        "ic_std": 0.578406,
+        "ir": -0.2435,
+        "ic_positive_ratio": 0.5,
+        "ic_count": 12,
+        "n_groups": 3,
+        "long_short_spread": -0.0859,
+        "group_final_equity": {
+          "Group_1": 1.3994,
+          "Group_2": 1.2514,
+          "Group_3": 1.3135
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XHKG/recency/2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 12,
+        "group_nav_cells": 36,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 11,
+      "declared_assets": 11,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XHKG",
+      "factor": "recency",
+      "split": "2026",
+      "response": {
+        "status": "ok",
+        "ic_mean": 0.163817,
+        "ic_std": 0.374802,
+        "ir": 0.4371,
+        "ic_positive_ratio": 0.5714,
+        "ic_count": 7,
+        "n_groups": 3,
+        "long_short_spread": 0.1561,
+        "group_final_equity": {
+          "Group_1": 1.0109,
+          "Group_2": 1.1131,
+          "Group_3": 1.167
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XHKG/recency/2026/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 7,
+        "group_nav_cells": 21,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 11,
+      "declared_assets": 11,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XHKG",
+      "factor": "academic_high52w",
+      "split": "all",
+      "response": {
+        "status": "ok",
+        "ic_mean": -0.023627,
+        "ic_std": 0.400584,
+        "ir": -0.059,
+        "ic_positive_ratio": 0.5556,
+        "ic_count": 18,
+        "n_groups": 3,
+        "long_short_spread": 0.0583,
+        "group_final_equity": {
+          "Group_1": 1.4559,
+          "Group_2": 1.463,
+          "Group_3": 1.5142
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XHKG/academic_high52w/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 18,
+        "group_nav_cells": 54,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 0,
+      "declared_assets": 11,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XHKG",
+      "factor": "academic_high52w",
+      "split": "2025",
+      "response": {
+        "status": "ok",
+        "ic_mean": -0.186583,
+        "ic_std": 0.397959,
+        "ir": -0.4688,
+        "ic_positive_ratio": 0.4545,
+        "ic_count": 11,
+        "n_groups": 3,
+        "long_short_spread": -0.2664,
+        "group_final_equity": {
+          "Group_1": 1.5389,
+          "Group_2": 1.2335,
+          "Group_3": 1.2725
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XHKG/academic_high52w/2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 11,
+        "group_nav_cells": 33,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 0,
+      "declared_assets": 11,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XHKG",
+      "factor": "academic_high52w",
+      "split": "2026",
+      "response": {
+        "status": "ok",
+        "ic_mean": 0.232447,
+        "ic_std": 0.255969,
+        "ir": 0.9081,
+        "ic_positive_ratio": 0.7143,
+        "ic_count": 7,
+        "n_groups": 3,
+        "long_short_spread": 0.2439,
+        "group_final_equity": {
+          "Group_1": 0.946,
+          "Group_2": 1.1861,
+          "Group_3": 1.1899
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XHKG/academic_high52w/2026/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 7,
+        "group_nav_cells": 21,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 11,
+      "declared_assets": 11,
+      "numeric_gate": true,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XHKG",
+      "factor": "quote_momentum_252_21",
+      "split": "all",
+      "response": {
+        "status": "ok",
+        "ic_mean": -0.022727,
+        "ic_std": 0.317367,
+        "ir": -0.0716,
+        "ic_positive_ratio": 0.6111,
+        "ic_count": 18,
+        "n_groups": 3,
+        "long_short_spread": -0.1917,
+        "group_final_equity": {
+          "Group_1": 1.612,
+          "Group_2": 1.3917,
+          "Group_3": 1.4203
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XHKG/quote_momentum_252_21/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 18,
+        "group_nav_cells": 54,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 0,
+      "declared_assets": 11,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XHKG",
+      "factor": "quote_momentum_252_21",
+      "split": "2025",
+      "response": {
+        "status": "ok",
+        "ic_mean": -0.057025,
+        "ic_std": 0.231777,
+        "ir": -0.246,
+        "ic_positive_ratio": 0.5455,
+        "ic_count": 11,
+        "n_groups": 3,
+        "long_short_spread": -0.1171,
+        "group_final_equity": {
+          "Group_1": 1.441,
+          "Group_2": 1.2826,
+          "Group_3": 1.3239
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XHKG/quote_momentum_252_21/2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 11,
+        "group_nav_cells": 33,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 0,
+      "declared_assets": 11,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XHKG",
+      "factor": "quote_momentum_252_21",
+      "split": "2026",
+      "response": {
+        "status": "ok",
+        "ic_mean": 0.031169,
+        "ic_std": 0.436233,
+        "ir": 0.0714,
+        "ic_positive_ratio": 0.7143,
+        "ic_count": 7,
+        "n_groups": 3,
+        "long_short_spread": -0.0458,
+        "group_final_equity": {
+          "Group_1": 1.1187,
+          "Group_2": 1.0851,
+          "Group_3": 1.0729
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XHKG/quote_momentum_252_21/2026/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 7,
+        "group_nav_cells": 21,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 11,
+      "declared_assets": 11,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XHKG",
+      "factor": "quote_reversal_5",
+      "split": "all",
+      "response": {
+        "status": "ok",
+        "ic_mean": 0.055024,
+        "ic_std": 0.32069,
+        "ir": 0.1716,
+        "ic_positive_ratio": 0.4737,
+        "ic_count": 19,
+        "n_groups": 3,
+        "long_short_spread": 0.0057,
+        "group_final_equity": {
+          "Group_1": 1.4158,
+          "Group_2": 1.5539,
+          "Group_3": 1.4215
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XHKG/quote_reversal_5/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 19,
+        "group_nav_cells": 57,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 11,
+      "declared_assets": 11,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XHKG",
+      "factor": "quote_reversal_5",
+      "split": "2025",
+      "response": {
+        "status": "ok",
+        "ic_mean": 0.011364,
+        "ic_std": 0.288865,
+        "ir": 0.0393,
+        "ic_positive_ratio": 0.4167,
+        "ic_count": 12,
+        "n_groups": 3,
+        "long_short_spread": -0.0021,
+        "group_final_equity": {
+          "Group_1": 1.3076,
+          "Group_2": 1.391,
+          "Group_3": 1.3055
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XHKG/quote_reversal_5/2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 12,
+        "group_nav_cells": 36,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 11,
+      "declared_assets": 11,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    },
+    {
+      "market": "XHKG",
+      "factor": "quote_reversal_5",
+      "split": "2026",
+      "response": {
+        "status": "ok",
+        "ic_mean": 0.12987,
+        "ic_std": 0.38105,
+        "ir": 0.3408,
+        "ic_positive_ratio": 0.5714,
+        "ic_count": 7,
+        "n_groups": 3,
+        "long_short_spread": 0.0061,
+        "group_final_equity": {
+          "Group_1": 1.0828,
+          "Group_2": 1.1171,
+          "Group_3": 1.0889
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/predictive/XHKG/quote_reversal_5/2026/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "independent_audit": {
+        "ic_rows": 7,
+        "group_nav_cells": 21,
+        "maximum_group_nav_error": 2.220446049250313e-16
+      },
+      "minimum_valid_assets": 11,
+      "declared_assets": 11,
+      "numeric_gate": false,
+      "minimum_observations_gate": false,
+      "source_adjustment_gate": false,
+      "admission_passed": false
+    }
+  ]
+}

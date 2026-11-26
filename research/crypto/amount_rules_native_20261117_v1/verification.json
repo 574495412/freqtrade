@@ -1,0 +1,135 @@
+{
+  "verified_at": "2026-11-16T20:08:14.461169+00:00",
+  "passed": true,
+  "new_synthetic_native_completed": 3,
+  "new_expected_rejections": 2,
+  "native_operation_regressions_identical": 2,
+  "actual_native_ZIPs_verified": 5,
+  "unit_and_existing_price_regression_cases": 33,
+  "official_vendor_files_unchanged": 595,
+  "native_methods_added": [
+    "can_reduce_position",
+    "get_entry_amount_precision",
+    "get_exit_amount_precision",
+    "get_order_stake_limits",
+    "update_trade_amount_precision",
+    "validate_order_amount"
+  ],
+  "native_methods_changed": [
+    "_check_adjust_trade_for_candle",
+    "_enter_trade",
+    "_exit_trade",
+    "get_valid_entry_price_and_stake"
+  ],
+  "preexisting_other_methods_AST_unchanged": 55,
+  "evidence": [
+    {
+      "case": "fine_DCA",
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/fine_DCA/native_results/backtest-result-2026-11-16_19-57-36.zip",
+      "sha256": "50df1a2b4c8059ddefa161673a623a90c1d50b44870daf5c64de79111349c504",
+      "independent_cash_errors": [
+        "1E-16",
+        "0.000000",
+        "0.000000"
+      ],
+      "synthetic_only": true
+    },
+    {
+      "case": "notional_fall",
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/notional_fall/native_results/backtest-result-2026-11-16_19-57-37.zip",
+      "sha256": "613f002bdcef71ea57a45bbda6b753536265644aaa7398037ed0dde4b8d0dddd",
+      "independent_cash_errors": [
+        "0.000000",
+        "0.000000",
+        "0.000000"
+      ],
+      "synthetic_only": true
+    },
+    {
+      "case": "post_round",
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/post_round/native_results/backtest-result-2026-11-16_19-57-38.zip",
+      "sha256": "7848fd9d36cf378e4efc9bceaa81dc3de28123cbf64cd49f91a632f151d3abe8",
+      "independent_cash_errors": [
+        "0",
+        "0"
+      ],
+      "synthetic_only": true
+    },
+    {
+      "case": "coarse_dust",
+      "expected_rejected": true,
+      "error": "Unsupported dated close amount: nonpositive_or_nonfinite"
+    },
+    {
+      "case": "unknown",
+      "expected_rejected": true,
+      "error": "Incomplete known amount rule coverage for FAKEONE/USDT:USDT"
+    },
+    {
+      "case": "legacy_continue",
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/continue/native_results/backtest-result-2026-11-16_19-59-56.zip",
+      "sha256": "fa1cae820c62cc4fe2787f55a865ccb048e18c6dcc6deab71358f5505b328356",
+      "default_native_result_identical": true,
+      "prior_actual_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/continue/audited_v2/native_results/backtest-result-2026-11-16_19-23-00.zip",
+      "prior_actual_zip_sha256": "9a3d4ae6f05b9ef4424c3db40190a7b6e8e79749647d4669d0728cc52010ec92"
+    },
+    {
+      "case": "legacy_stop",
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/stop/native_results/backtest-result-2026-11-16_19-59-57.zip",
+      "sha256": "e5cf236597bc8d35b9a9da1bd1aa1c2f94c4a905be92d6d617fff66de201fcd7",
+      "default_native_result_identical": true,
+      "prior_actual_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/stop/audited/native_results/backtest-result-2026-11-16_19-23-22.zip",
+      "prior_actual_zip_sha256": "d0156792a0df9d0d4c223504797b77e187921f7c7ddad91ce06789ef3714a35c"
+    }
+  ],
+  "native_artifact_hashes": {
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/fine_DCA/amount_trace.json": "b7c437a3771d9af34abbaa097af1c93b28b31d703025d624a8ba117ae6c7a0b9",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/fine_DCA/result.json": "0a09448d73e5e0dbdd5f2d23fe3c52f61061e186c6fcb5693160fc38c39f5796",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/fine_DCA/config.json": "72fd369c7cb6cce65685dd4094d054e49f6b74ff40049da690711672c8d4606c",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/fine_DCA/producer_receipt.json": "540c3646c4851b56a308d11c6203b932c7e1dcae043c7c951ad15dbbf173f012",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/fine_DCA/native_stats.json": "3daaffccb9ce0a09834531274ebd328812eaac411d1dff319c41b46151685b76",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/fine_DCA/native_results/backtest-result-2026-11-16_19-57-36.meta.json": "79b3ba7d35043417c721ff96e17f1ad0005da0a0fa8f002d9e38ecd662fa9385",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/fine_DCA/native_results/.last_result.json": "e685bdd89a46d2893e89f20997dd4dd80beff918a505d09ff69b781b7d9a30fc",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/fine_DCA/native_results/backtest-result-2026-11-16_19-57-36.zip": "50df1a2b4c8059ddefa161673a623a90c1d50b44870daf5c64de79111349c504",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/notional_fall/amount_trace.json": "e391556a1bdd7c972113d1def3db75ac913173ada99b87891e873c8b19380e02",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/notional_fall/result.json": "8ff0691a2a4bc76d8da73216bdd60f04334e2b0c5cdd8db12881c1a4114b3f61",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/notional_fall/config.json": "07eebdeb6ab4a7ea6b243b962d6ec29bf1c11089c8aaf1d49730292d9428da54",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/notional_fall/producer_receipt.json": "540c3646c4851b56a308d11c6203b932c7e1dcae043c7c951ad15dbbf173f012",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/notional_fall/native_stats.json": "f9a72db8919a8095cbb89f121701a5cb03556162ed90553a78fcf7a3dece2898",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/notional_fall/native_results/backtest-result-2026-11-16_19-57-37.meta.json": "f8b9319d139e582dcb53cd95e93f3ace8ec553d6365259f9e296da0ee6b1b628",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/notional_fall/native_results/.last_result.json": "101b5a2f08c33285bd463f523ec19d160d6eb16bab74ea50533dc06b490801b3",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/notional_fall/native_results/backtest-result-2026-11-16_19-57-37.zip": "613f002bdcef71ea57a45bbda6b753536265644aaa7398037ed0dde4b8d0dddd",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/post_round/amount_trace.json": "51c944d235c3fae4f7617990c81d63f8a12cf3584a9e8ea2543d8b18cae8b35d",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/post_round/result.json": "e23ed9224499b1aa2c489e1077ede606823c183a03ca437725c3504470281923",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/post_round/config.json": "5631ad88795dbfa83f459e2d1ca6137d64ea7f3dea467990bbf4b9d57ddb3aa9",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/post_round/producer_receipt.json": "540c3646c4851b56a308d11c6203b932c7e1dcae043c7c951ad15dbbf173f012",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/post_round/native_stats.json": "a2e5c8c7629efd8eb01f60c1aa038a35cc015fc629d0ea964b15a8a2ba47e249",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/post_round/native_results/backtest-result-2026-11-16_19-57-38.zip": "7848fd9d36cf378e4efc9bceaa81dc3de28123cbf64cd49f91a632f151d3abe8",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/post_round/native_results/backtest-result-2026-11-16_19-57-38.meta.json": "5daa97ce5d63c6f457215cc507498a085b4b20f998d0307d23e6c6789d194904",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/post_round/native_results/.last_result.json": "ab2a4b9b8f04fbc423be21315b32c46ef142e89afcb6b81e261c00dcd9c7ab07",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/coarse_dust/config.json": "e4d79dc9ab4c6e6b1f9b5d914edc183e16a905da35b2d4fa700c499ebcd41223",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/coarse_dust/producer_receipt.json": "540c3646c4851b56a308d11c6203b932c7e1dcae043c7c951ad15dbbf173f012",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/coarse_dust/failure.json": "b6df66fbb8ad079774ce4f4b30a0a0196088dd845ae899cd90b44369657437f0",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/unknown/config.json": "be6f4782074693dcc0622385e85c00388c62b6156d28ebeb80ce142e6557bb8d",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/unknown/producer_receipt.json": "540c3646c4851b56a308d11c6203b932c7e1dcae043c7c951ad15dbbf173f012",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/runs/unknown/failure.json": "4668572a0adfac861df843ec0631ff264ae276e6516fb2f9b74b555b21c76cf8",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/continue/result.json": "260f2f41242edb3a8ea337631835f28cac84f2cc23150acf1a65365e2fae9f1a",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/continue/config.json": "18ffce96b8f5b075060ef5108021deb5e2e8cd0853dfe6a764688b84d4e04776",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/continue/producer.json": "19cc1a10a7f5ff60e940900935fbe887ef1361f68880440824c8f215cbd8007e",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/continue/native_results/backtest-result-2026-11-16_19-59-56.zip": "fa1cae820c62cc4fe2787f55a865ccb048e18c6dcc6deab71358f5505b328356",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/continue/native_results/backtest-result-2026-11-16_19-59-56.meta.json": "e23df651fd257470c5174ccde8df77497c5fd33dc81485ef3a9ff5e42531c563",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/continue/native_results/.last_result.json": "6b30c75d0cc9d0605c85b36237b1f19c88aff360cdcb4b61013bcc1e0f9f2858",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/stop/result.json": "3763b146f693e73e704638621342b1fdf6733422f75a7800a15b3b5fb2872b50",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/stop/config.json": "80541d6391d5896da658eac5574933087e55c40e1542c2f1a70ccd86923cf2e5",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/stop/producer.json": "66043df53c9ba5216c8dc4f624734fe2f39c7d7f7a858813a7c4e543f878d2ac",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/stop/native_results/backtest-result-2026-11-16_19-59-57.zip": "e5cf236597bc8d35b9a9da1bd1aa1c2f94c4a905be92d6d617fff66de201fcd7",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/stop/native_results/.last_result.json": "f82801c7fa98620231e1bff64e29ea880aff9f4b42533d5fa359473884045b41",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/amount_rules_native_20261117_v1/operation_regression/stop/native_results/backtest-result-2026-11-16_19-59-57.meta.json": "d8f28c34579a77692b7895b4f31e9b2a2c9d45d9607bf3a62030eef3556c8901"
+  },
+  "new_historical_strategy_accounts": 0,
+  "corrected_NFI_returns": null,
+  "full40_historical_amount_rules_admitted": false,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

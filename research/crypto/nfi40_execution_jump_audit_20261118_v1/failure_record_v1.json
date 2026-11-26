@@ -1,0 +1,11 @@
+{
+  "attempt": 1,
+  "terminal_exit_code": 1,
+  "log_sha256": "b3a5ec3323c4e85f6cde2bc5b1293eb33de90a1280a9603df03252b0570e6cfd",
+  "freeze_sha256": "3d0759b251a5e645d21d22d91e4fc55f5d267b7c4cb31fd22239b0d56900eed0",
+  "retained_original": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_execution_jump_audit_20261118_v1/audit_jumps.py",
+  "cause": "Timestamp.value always exposes nanoseconds even after as_unit(ms), causing selected clock keys to use nanoseconds as milliseconds and fail finite mark lookup",
+  "failed_before_any_result_files_written": true,
+  "correction": "New version only replaces timestamp scalar conversion with integer ns//1000000 and new freeze filename; no financial/source/data/threshold change",
+  "new_native_accounts_started": 0
+}

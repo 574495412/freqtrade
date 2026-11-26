@@ -1,0 +1,95 @@
+"""Freeze identical research matrix with native callback clock gate only."""
+import copy
+import hashlib
+import json
+import sys
+from datetime import UTC, datetime
+from pathlib import Path
+
+import pandas as pd
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[2]
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def ref(path):
+    return {'path':str(path),'sha256':sha(path)}
+
+
+def save(path,value):
+    Path(path).write_text(json.dumps(value,indent=2,default=str)+'\n')
+
+
+def main():
+    revision = HERE/'v002'
+    revision.mkdir(exist_ok=False)
+    old = json.loads((HERE/'plan.json').read_text())
+    out = Path(old['output_root'])/'v002'
+    out.mkdir(exist_ok=False)
+    sys.path.insert(0, old['engine_source'])
+    sys.path.insert(0, str(HERE))
+    import freqtrade
+    from freqtrade.data.dataprovider import DataProvider
+    from freqtrade.enums import RunMode, CandleType
+    from freqtrade.resolvers import ExchangeResolver, StrategyResolver
+    assert Path(freqtrade.__file__).resolve() == Path(old['engine_source'])/'freqtrade/__init__.py'
+    snapshot = json.loads(Path(old['market_snapshot']['path']).read_text())
+    checked = []
+    candidates = []
+    for prior in old['candidates']:
+        strategy = 'Clocked'+prior['strategy']
+        raw = json.loads(Path(prior['config']['path']).read_text())
+        raw['strategy'] = strategy
+        config_path = revision/(prior['name']+'.json')
+        save(config_path, raw)
+        new = copy.deepcopy(prior)
+        new.update(strategy=strategy, config=ref(config_path))
+        new['source_files']['ClockedPortfolio.py'] = ref(HERE/'ClockedPortfolio.py')
+        candidates.append(new)
+        if prior['capital'] != 1000:
+            continue
+        config = copy.deepcopy(raw)
+        config.update(strategy_path=str(HERE), user_data_dir=out, datadir=Path(old['datadir']),
+                      runmode=RunMode.BACKTEST, candle_type_def=CandleType.FUTURES,
+                      timeframe='1h',startup_candle_count=72,timerange='1735689600-1788220799')
+        owner = StrategyResolver.load_strategy(config)
+        exchange = ExchangeResolver.load_exchange(config, validate=False, load_leverage_tiers=False)
+        try:
+            exchange._markets=snapshot['markets'];exchange._leverage_tiers=snapshot['leverage_tiers']
+            exchange._api.set_markets(snapshot['markets'],snapshot['currencies'])
+            exchange._api_async.set_markets(snapshot['markets'],snapshot['currencies'])
+            owner.dp = DataProvider(config,exchange)
+            owner.bot_start()
+            expected = pd.read_parquet(Path(old['output_root'])/f'preflight_weights_{prior["strategy"]}.parquet')
+            pd.testing.assert_frame_equal(owner.research_weights,expected,check_exact=True)
+            owner.research_weights.to_parquet(out/f'preflight_weights_{strategy}.parquet')
+            for hour in [0,1,2,8,23]:
+                owner.bot_loop_start(pd.Timestamp('2025-01-01T00:00Z')+pd.Timedelta(hours=hour))
+                assert owner.position_adjustment_enable == (hour == 1)
+            checked.append(dict(strategy=strategy, exact_source_weight_cells=expected.size))
+        finally:
+            exchange.close()
+    preflight = dict(passed=True,exact_original_risk_weights=True,actual_native_strategies=checked,
+                     source_native_flag_use='Only Backtesting._check_trade_exit gates adjustment; stop/exit processing unchanged',
+                     pure_no_op_hours_skipped=True,technical_change_after_v1_output_disclosed=True,
+                     full_financial_parity_required_before_remaining_matrix=True)
+    save(revision/'preflight.json',preflight)
+    plan = copy.deepcopy(old)
+    plan.update(schema='freqtrade.native.tsmom-risk-quantity.v2',output_root=str(out),
+                registered_at=datetime.now(UTC).isoformat(),candidates=candidates,
+                technical_change='Native adjustment flag enabled only01 hour; original adjust callback pureNone at otherhours',
+                original_frozen_plan=ref(HERE/'plan.json'),
+                alpha_parameters_changed=False,financial_output_already_observed=True)
+    plan['additional_source_seals'] += [ref(p) for p in [HERE/'ClockedPortfolio.py',HERE/'test_clocked.py',
+        HERE/'clocked_tests.log',HERE/'technical_interruption.json',HERE/'register_clocked.py',
+        HERE/'run_clocked.py',HERE/'compare_first.py',revision/'preflight.json']]
+    save(revision/'plan.json',plan)
+    print('CLOCKED MATRIX FROZEN; exact original weights; full financial parity required',flush=True)
+
+
+if __name__ == '__main__':
+    main()

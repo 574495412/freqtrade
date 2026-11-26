@@ -1,0 +1,42 @@
+{
+  "completed_at": "2026-11-13T15:36:09.835343+00:00",
+  "commands": [
+    {
+      "command": [
+        ".venv-paper/bin/python",
+        "-B",
+        "-m",
+        "research.crypto.sentiment_source_admission_20261113_v1.audit_source"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"audit_completed\": true, \"source_files_checked\": 12, \"future_backfilled_hours\": 24, \"actual_invalid_rsi_entries\": 2, \"source_missing_hours\": 32, \"native_accounts\": 0}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/chrise/GitHub/Vibe-Trading/.venv/bin/ruff",
+        "check",
+        "research/crypto/sentiment_source_admission_20261113_v1/audit_source.py"
+      ],
+      "exit_code": 0,
+      "stdout": "All checks passed!\n",
+      "stderr": ""
+    }
+  ],
+  "sealed_artifacts": {
+    "audit_source.py": "e3cdc8c51e44865264cb598d2380913c8eea50a59bbfd2edc4a19238b389145c",
+    "README.md": "b5ff37c7ec6518123849ad356894471462a4576ca5178059fa866f4b950dc46a",
+    "source_manifest.json": "9e0f20d8b6c41936462bd20d7f4812b92532039062790611f6fdcfd4f7b6e7aa",
+    "status.json": "b11e248ccf38b1f3b0e2dfaa7ff6eac3ccef72cbcb21ddc4669b416601a579cf",
+    "function_checks.json": "2d39f98be957330289da5d7c31c3c19b7b491c254319e6c06027ee967284a361",
+    "source_artifact_audit.json": "430445c0877bf37ca498253d7f01c482ef15f7540fdb8cdaf9e70cf0626b4d12",
+    "provider/receipts.json": "8a9d316c80568d76c00a619cca8792a4ed5d7a2ebc01192b612ba755828691db",
+    "provider/early_price_receipts.json": "0e1a881b3954ec68278d7b734b4a241ed0a6611a5dc5799c15a5ccd18f3b1643"
+  },
+  "native_accounts": 0,
+  "source_financial_simulator_executed": false,
+  "interpretation": "Completed source admission review; no native financial run or accepted alpha",
+  "orders_enabled": false,
+  "services_changed": false,
+  "goal_achieved": false
+}

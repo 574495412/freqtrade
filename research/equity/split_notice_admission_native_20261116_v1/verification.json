@@ -1,0 +1,63 @@
+{
+  "passed": true,
+  "evidence_tier": "Source control-flow/native input technical only",
+  "pinned_native_engine": {
+    "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "verified_files": 595,
+    "manifest_sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "actual_native_data_provider_path": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/data/dataprovider.py",
+  "source_method_witnesses": 4,
+  "unique_boundary_tests": 38,
+  "original_and_staged_files_checked": 1028,
+  "parents": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/equity/short_position_admission_native_20261116_v1/artifact_manifest.json",
+      "sha256": "ea36ad8a4f2a662cc7d76406cf16a9437ea62db393d1f285d5bf82a9405bd6c8",
+      "verified_paths": 31
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/equity/dividend_lifecycle_native_20261116_v1/artifact_manifest.json",
+      "sha256": "e1bed5162ab44d45ba4bf8c01bb6a4810baa033410a0ab30c02f9c708dc37426",
+      "verified_paths": 377
+    }
+  ],
+  "actual_issuer_bytes_bound": true,
+  "actual_sec_http403_rejected": true,
+  "actual_issuer_historical_view": {
+    "status": "unknown",
+    "pair": "ORLY/USD",
+    "security_id": "CIK0000898173-common",
+    "event_id": "ORLY2025",
+    "revision_id": null,
+    "notice_state": null,
+    "old_shares": null,
+    "new_shares": null,
+    "price_factor": null,
+    "quantity_factor": null,
+    "direction": null,
+    "planned_trade_open": null,
+    "record_at": null,
+    "distribution_at": null,
+    "published_at": null,
+    "observed_at": null,
+    "source_sha256": null,
+    "execution_confirmed": null
+  },
+  "historical_first_seen_certified": false,
+  "split_execution_integrated": false,
+  "source_QC_account_executed": false,
+  "historical_stock_accounts": 0,
+  "funded_synthetic_accounts": 0,
+  "accepted_independent_alphas": 0,
+  "new_factor_analysis": 0,
+  "new_registry_definitions": 0,
+  "new_portfolio_accounts": 0,
+  "bench": 0,
+  "stock_net_return": null,
+  "stock_cagr": null,
+  "higher_comparable_return_established": false,
+  "goal_complete": false,
+  "production_eligible": false,
+  "real_orders_enabled": false
+}

@@ -1,0 +1,46 @@
+{
+  "verified_utc": "2026-11-14T11:07:08.799635+00:00",
+  "passed": true,
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "native_original_files_verified": 595,
+  "python": "3.12.14",
+  "native_runtime_paths": {
+    "Backtesting": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/optimize/backtesting.py",
+    "LocalTrade": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/persistence/trade_model.py",
+    "Order": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/persistence/trade_model.py",
+    "Wallets": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/wallets.py",
+    "EquityFeeWallets": "/Users/chrise/GitHub/freqtrade/freqtrade/equity_fee_wallets.py"
+  },
+  "unique_component_checks": 150,
+  "check_logs": {
+    "tests_final.log": {
+      "passed": 41,
+      "sha256": "d1dab1b8af15e64a92cf8abb4ea2059888ee7ba0f20c0f8aead3763223c1590d"
+    },
+    "execution_regression.log": {
+      "passed": 46,
+      "sha256": "2230e448aa2dc533dbf22f993de155943095da729076b8800df46815bb51c1d1"
+    },
+    "settlement_regression.log": {
+      "passed": 33,
+      "sha256": "cd0b96cc2b36385c24578ed0e3bbb8df331ac6f65d7b214eaee0afef4ed78da4"
+    },
+    "history_provider_regression.log": {
+      "passed": 30,
+      "sha256": "079f65ace248916b5be98b2823715910b8d62da94028c47d892837b87c065f62"
+    }
+  },
+  "legacy_modules_byte_identical": true,
+  "new_modules_sha256": {
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/equity_fees.py": "1e3ebd10813f31a164c509d9eed4aaebb71415dd8453df10cf3994d2adfc624e",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/equity_fee_wallets.py": "be487c5d5b95c5a1ffd6849fde685b7662c747fcc2f806c1d56741ea559faee3",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_fee_execution.py": "7fd144d60bc1d50d8b6040b17b36bfbea9c18249c18d04480d748cb484a60de4"
+  },
+  "native_synthetic_fills": 8,
+  "synthetic_snapshots": 10,
+  "financial_accounts": 0,
+  "net_performance": null,
+  "factor_analysis_calls": 0,
+  "accepted_new_alphas": 0,
+  "objective_achieved": false
+}

@@ -1,0 +1,72 @@
+"""Full pinned-source/raw-data reconciliation; no account or signal calculator."""
+import hashlib
+import io
+import json
+from datetime import UTC, datetime
+from pathlib import Path
+from zipfile import ZipFile
+
+import numpy as np
+import pandas as pd
+
+HERE=Path(__file__).absolute().parent
+ROOT=HERE.parents[2]
+
+
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def save(p,x):Path(p).write_text(json.dumps(x,indent=2,allow_nan=False)+'\n')
+
+
+def main():
+    cached=ROOT/'user_data/crypto_quant/oi_cascade_source_native_20261113_v1/raw_receipts.json'
+    receipts=json.loads((HERE/'warmup_receipts.json').read_text())+json.loads(cached.read_text())
+    receipts.sort(key=lambda r:r['day']);assert len(receipts)==974
+    expected=pd.date_range('2024-01-01','2026-08-31',freq='D',tz='UTC')
+    assert [r['day']for r in receipts]==[str(d.date())for d in expected]
+    source=HERE/'source/data/intraday/BTCUSDT_oi_daily.parquet';author=pd.read_parquet(source).iloc[:,0];author.index=author.index.tz_localize('UTC')
+    frames=[];rows=[];total=0;zero=0;missing=0;duplicates=0;unsorted=[]
+    for r in receipts:
+        path=Path(r['path']);assert sha(path)==r['sha256']
+        checksum=path.with_suffix('.CHECKSUM');assert sha(checksum)==r['checksum_sha256']
+        digest,name=checksum.read_text().strip().split();assert digest==r['sha256']and name==path.name
+        with ZipFile(path)as z:
+            assert z.testzip()is None and len(z.namelist())==1
+            d=pd.read_csv(io.BytesIO(z.read(z.namelist()[0])))
+        day=pd.Timestamp(r['day'],tz='UTC');d['observed_at']=pd.to_datetime(d.create_time,utc=True)
+        assert d.symbol.eq('BTCUSDT').all()and d.observed_at.dt.floor('D').eq(day).all()
+        assert np.isfinite(d.sum_open_interest_value).all()
+        duplicates+=int(d.observed_at.duplicated().sum());assert not d.observed_at.duplicated().any()
+        if not d.observed_at.is_monotonic_increasing:unsorted.append(r['day'])
+        missing+=len(pd.date_range(day,periods=288,freq='5min').difference(d.observed_at))
+        zero+=int(d.sum_open_interest_value.le(0).sum());total+=len(d)
+        d=d.sort_values('observed_at');frames.append(d[['observed_at','sum_open_interest_value']])
+        last=d.iloc[-1];a=float(author.loc[day]);tolerance=max(1e-5,abs(a)*1e-12)
+        exact=d.loc[(d.sum_open_interest_value-a).abs().le(tolerance)]
+        rows.append(dict(day=r['day'],author=a,raw_rows=len(d),latest_time=str(last.observed_at),latest_value=float(last.sum_open_interest_value),last_matches=bool(abs(a-last.sum_open_interest_value)<=tolerance),same_day_matches=exact.observed_at.astype(str).tolist(),short_end=last.observed_at!=day+pd.Timedelta(hours=23,minutes=55)))
+    allraw=pd.concat(frames,ignore_index=True).sort_values('observed_at');assert not allraw.observed_at.duplicated().any()
+    unresolved=[];next_midnight=[]
+    for r in rows:
+        if r['last_matches']:continue
+        day=pd.Timestamp(r['day'],tz='UTC');tolerance=max(1e-5,r['author']*1e-12)
+        around=allraw.loc[allraw.observed_at.between(day-pd.Timedelta(days=1),day+pd.Timedelta(days=2),inclusive='left')]
+        exact=around.loc[(around.sum_open_interest_value-r['author']).abs().le(tolerance)]
+        r['adjacent_day_matches']=exact.observed_at.astype(str).tolist()
+        if exact.empty:
+            error=(around.sum_open_interest_value-r['author']).abs();i=error.idxmin()
+            unresolved.append(dict(day=r['day'],author=r['author'],nearest_time=str(around.at[i,'observed_at']),nearest_value=float(around.at[i,'sum_open_interest_value']),absolute_error=float(error.loc[i]),search_window='previous/current/next UTCcalendar days;notproofallotherdataabsence'))
+        if exact.observed_at.eq(day+pd.Timedelta(days=1)).any():next_midnight.append(r['day'])
+    short=[r['day']for r in rows if r['short_end']]
+    result=dict(created_at=datetime.now(UTC).isoformat(),raw_integrity_passed=True,strict_source_input_admitted=False,verified_daily_archives=len(receipts),new_archives=362,reused_archives=612,raw_rows=total,raw_missing_5minute_timestamps=missing,raw_nonpositive_rows=zero,duplicate_times=duplicates,unsorted_archive_count=len(unsorted),unsorted_days=unsorted,sorted_last_value_matches=sum(r['last_matches']for r in rows),normal2355_matches=sum(r['last_matches']and not r['short_end']for r in rows),short_end_days=short,next_midnight_matches=next_midnight,unresolved=unresolved,source_parquet=dict(path=str(source),sha256=sha(source)),source_rows=rows,availability_is_proxy_not_historical_publication_receipt=True,default_overlay_full_window_status='NOT_ADMITTED',native_financial_accounts=0,new_profit_result=False,orders_enabled=False)
+    assert result['sorted_last_value_matches']==966 and result['normal2355_matches']==965
+    assert short==['2024-02-16']and len(next_midnight)==7 and len(unresolved)==1 and unresolved[0]['day']=='2024-03-11'
+    save(HERE/'raw_receipts.json',receipts);save(HERE/'reconciliation.json',result)
+    # Structural dependence only; no uncertain value is replaced or optimized.
+    labels=pd.date_range('2024-12-31T18:00Z','2026-08-31T18:00Z',freq='6h')
+    interval_start=pd.Timestamp('2024-03-11',tz='UTC')+pd.Timedelta(days=1)
+    interval_end=pd.Timestamp('2024-03-11',tz='UTC')+pd.Timedelta(days=365)
+    affected=labels[(labels.floor('D')>=interval_start)&(labels.floor('D')<=interval_end)]+pd.Timedelta(hours=6)
+    save(HERE/'dependency_scope.json',dict(unverified_source_day='2024-03-11',rolling_rows=365,source_shift_days=1,possible_fullwindow_execution_clocks=len(affected),first_possible_clock=str(affected.min()),last_possible_clock=str(affected.max()),structural_dependency_not_proven_actual_trade_impact=True,full_account_window_cannot_be_certified=True,parameter_changes=0,imputation=False,financial_runs=0))
+    print(json.dumps({k:v for k,v in result.items()if k not in ['source_rows','unsorted_days','source_parquet']}))
+
+
+if __name__=='__main__':main()

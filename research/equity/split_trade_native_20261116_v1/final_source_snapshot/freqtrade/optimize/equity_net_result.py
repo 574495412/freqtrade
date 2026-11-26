@@ -1,0 +1,199 @@
+"""Net-boundary reporting for local synthetic native equity lifecycles.
+
+This module does not create orders, cash flows, marks or historical admission.
+The native ZIP remains a gross-trade diagnostic; this separate result binds the
+already captured fee/dividend-aware native NAV boundaries. Synthetic numbers
+are never strategy performance, annualized returns or bench evidence.
+"""
+
+from dataclasses import asdict
+from datetime import datetime
+from decimal import Decimal
+from math import isclose, isfinite
+from numbers import Real
+
+import pandas as pd
+
+from freqtrade.data.history.equity import EquityAdmissionError
+from freqtrade.data.metrics import calculate_max_drawdown_from_balance
+from freqtrade.optimize.equity_fixture_lifecycle import EquityFixtureLifecycleMixin
+from freqtrade.optimize.equity_nav import EquityMark, EquityNavSnapshot, capture_equity_nav
+
+
+def _number(value):
+    if isinstance(value, bool) or not isinstance(value, (Real, Decimal)):
+        raise EquityAdmissionError("Numeric account amount required")
+    try:
+        result = float(value)
+    except (ValueError, TypeError, OverflowError) as exc:
+        raise EquityAdmissionError("Finite numeric native NAV required") from exc
+    if not isfinite(result):
+        raise EquityAdmissionError("Finite numeric native NAV required")
+    return result
+
+
+def _check_accounting(s, kind):
+    numbers = [
+        _number(v)
+        for v in (
+            s.initial_cash,
+            s.free_cash,
+            s.unsettled_receivable,
+            s.total_cash,
+            s.market_value,
+            s.net_nav,
+            s.execution_fees,
+            s.dividend_receivable,
+            s.paid_dividends,
+            s.closed_trade_net_cash_profit,
+        )
+    ]
+    if numbers[0] <= 0 or numbers[5] <= 0 or any(v < -1e-8 for v in numbers[1:5]):
+        raise EquityAdmissionError("Positive NAV and nonnegative cash/holdings required")
+    if any(v < 0 for v in numbers[6:9]):
+        raise EquityAdmissionError("Negative accumulated fee or dividend balance")
+    if type(s.filled_orders) is not int or s.filled_orders < 0:
+        raise EquityAdmissionError("Nonnegative actual filled-order count required")
+    value, seen = 0.0, set()
+    for pair, quantity, mark in s.holdings:
+        if pair in seen or pair != mark.pair or mark.currency != s.currency:
+            raise EquityAdmissionError("Unique same-currency held security required")
+        if mark.at != s.at or mark.kind != kind or _number(quantity) <= 0:
+            raise EquityAdmissionError("Exact current mark and positive held quantity required")
+        seen.add(pair)
+        value += _number(quantity) * _number(mark.price)
+    for actual, wanted in (
+        (value, s.market_value),
+        (s.free_cash + s.unsettled_receivable, s.total_cash),
+        (s.total_cash + s.market_value + float(s.dividend_receivable), s.net_nav),
+    ):
+        if not isclose(_number(actual), _number(wanted), rel_tol=0, abs_tol=1e-8):
+            raise EquityAdmissionError("Native holdings/cash/net NAV do not reconcile")
+
+
+def synthetic_net_result(opens, closes, *, expected_opens, expected_closes):
+    """Validate a complete native boundary grid and report its net changes.
+
+    Inputs are typed snapshots from the owning native wallet observer. No
+    interpolation, curve scaling, external flows or fee add-backs occur. This
+    interface alone does not authenticate a historical source or broker account.
+    """
+    opens, closes = tuple(opens), tuple(closes)
+    expected_opens, expected_closes = tuple(expected_opens), tuple(expected_closes)
+    if not opens or len(opens) != len(closes) or len(opens) != len(expected_opens):
+        raise EquityAdmissionError("Complete paired native boundaries required")
+    if len(closes) != len(expected_closes):
+        raise EquityAdmissionError("Complete paired native boundaries required")
+    if not all(isinstance(s, EquityNavSnapshot) for s in (*opens, *closes)):
+        raise EquityAdmissionError("Typed native NAV snapshots required")
+    snapshots = tuple(s for pair in zip(opens, closes, strict=True) for s in pair)
+    first, last = snapshots[0], snapshots[-1]
+    if (
+        first.market not in {"XNYS", "XHKG"}
+        or first.currency != {"XNYS": "USD", "XHKG": "HKD"}[first.market]
+    ):
+        raise EquityAdmissionError("Single declared equity market and currency required")
+    previous = None
+    for index, s in enumerate(snapshots):
+        kind = "open" if index % 2 == 0 else "close"
+        expected = (expected_opens if kind == "open" else expected_closes)[index // 2]
+        if (
+            not isinstance(s.at, datetime)
+            or not isinstance(expected, datetime)
+            or s.at.tzinfo is None
+            or s.at.utcoffset() is None
+            or expected.tzinfo is None
+            or expected.utcoffset() is None
+            or s.at != expected
+            or s.mark_kind != kind
+            or s.market != first.market
+            or s.currency != first.currency
+            or s.initial_cash != first.initial_cash
+            or (previous is not None and s.at <= previous.at)
+        ):
+            raise EquityAdmissionError("Exact increasing full-window native clock required")
+        _check_accounting(s, kind)
+        if previous is not None and (
+            s.filled_orders < previous.filled_orders
+            or s.execution_fees < previous.execution_fees
+            or s.dividend_receivable + s.paid_dividends
+            < previous.dividend_receivable + previous.paid_dividends
+        ):
+            raise EquityAdmissionError("Native filled history, fees or dividends disappeared")
+        previous = s
+    if (
+        first.holdings
+        or first.filled_orders
+        or first.execution_fees
+        or first.paid_dividends
+        or first.dividend_receivable
+        or first.unsettled_receivable
+        or first.net_nav != first.initial_cash
+    ):
+        raise EquityAdmissionError("Untouched flat initial native boundary required")
+    frame = pd.DataFrame(
+        {"date": [s.at for s in snapshots], "net_nav": [s.net_nav for s in snapshots]}
+    )
+    drawdown = calculate_max_drawdown_from_balance(frame, balance_col="net_nav", relative=True)
+    return {
+        "scope": "synthetic native net-result integration only",
+        "market": first.market,
+        "currency": first.currency,
+        "start": first.at.isoformat(),
+        "end": last.at.isoformat(),
+        "boundary_sampling": (
+            "before-open-event and completed-session close; not intraday worst loss"
+        ),
+        "snapshots": len(snapshots),
+        "initial_cash": first.initial_cash,
+        "final_net_nav": last.net_nav,
+        "synthetic_net_change_ratio": last.net_nav / first.net_nav - 1,
+        "synthetic_sampled_max_drawdown": drawdown.relative_account_drawdown,
+        "execution_fees": str(last.execution_fees),
+        "paid_dividends": str(last.paid_dividends),
+        "terminal_dividend_receivable": str(last.dividend_receivable),
+        "terminal_unsettled_sale_proceeds": last.unsettled_receivable,
+        "terminal_holdings": [asdict(mark) | {"quantity": q} for _, q, mark in last.holdings],
+        "closed_trade_net_cash_profit": str(last.closed_trade_net_cash_profit),
+        "filled_orders": last.filled_orders,
+        "native_zip_statistics": "gross-trade diagnostic, excluded from net metrics",
+        "financial_strategy_performance": None,
+        "cagr": None,
+        "sharpe": None,
+        "historical_equity_accounts": 0,
+        "bench_records": 0,
+    }
+
+
+class EquityFixtureNetResultMixin:
+    """Compose before the synthetic lifecycle; leave ordinary stock entry closed."""
+
+    def _fixture_capture(self, at, kind, label):
+        # Re-observe the current native wallet, and prove the parent boundary
+        # is unchanged. update() is idempotent at the same completed clock.
+        original = super()._fixture_capture(at, kind, label)
+        marks = [row[2] for row in original["holdings"]]
+        typed = capture_equity_nav(
+            self.wallets, [EquityMark(**m) for m in marks], at=at, mark_kind=kind
+        )
+        if asdict(typed) != original:
+            raise EquityAdmissionError("Read-only net reporting changed the native boundary")
+        target = self._equity_net_opens if kind == "open" else self._equity_net_closes
+        target.append(typed)
+        return original
+
+    def start(self):
+        if not isinstance(self, EquityFixtureLifecycleMixin):
+            raise EquityAdmissionError("Synthetic native lifecycle owner required")
+        self._require_fixture_lifecycle()
+        self.equity_net_result_completed = False
+        self._equity_net_opens, self._equity_net_closes = [], []
+        super().start()
+        plan = self.equity_session_plan
+        self.equity_net_result = synthetic_net_result(
+            self._equity_net_opens,
+            self._equity_net_closes,
+            expected_opens=plan.opens,
+            expected_closes=plan.closes,
+        )
+        self.equity_net_result_completed = True

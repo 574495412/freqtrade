@@ -1,0 +1,58 @@
+{
+  "recorded_utc": "2026-11-14T09:33:59.544975+00:00",
+  "counts": {
+    "state_tests_passed": 6,
+    "native_prefix_refits": 18,
+    "source_daily_method_calls": 630,
+    "source_threshold_cells": 1260,
+    "funded_model_accounts": 12,
+    "native_lifecycles": 320,
+    "native_fills": 640,
+    "hourly_account_points": 175104
+  },
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "native_source_files_verified": 595,
+  "all_source_and_artifact_hash_checks_passed": true,
+  "lint_checks": [
+    {
+      "command": [
+        "/Users/chrise/GitHub/Vibe-Trading/.venv/bin/ruff",
+        "check",
+        "/Users/chrise/GitHub/freqtrade/freqtrade/data/onchain.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/onchain_hash_native_20261114_v1/OnchainInputs.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "/Users/chrise/GitHub/Vibe-Trading/.venv/bin/ruff",
+        "check",
+        "--select",
+        "E9,F63,F7,F82",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/onchain_hash_native_20261114_v1/test_inputs.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/onchain_hash_native_20261114_v1/prepare_v2.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/onchain_hash_native_20261114_v1/OnchainInputs.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/onchain_hash_native_20261114_v1/MiningPortfolio.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/onchain_hash_native_20261114_v1/audit_rejection.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/onchain_hash_native_20261114_v1/prepare.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/run.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualRules.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/DualPortfolio.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/verify_inputs.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/prepare_native.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/reconcile.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/test_rules.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/report.py",
+        "/Users/chrise/GitHub/freqtrade/research/crypto/dual_thrust_native_20261114_v1/analyze.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "higher_return_objective_achieved": false,
+  "accepted_new_factors": 0,
+  "independent_oos": false,
+  "private_exchange_settlement": false,
+  "orders": false,
+  "deployment": false,
+  "service_changes": false
+}

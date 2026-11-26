@@ -1,0 +1,105 @@
+"""Local mining-state IStrategy, explicit conditional clock and actual holdings."""
+import json
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+from OnchainInputs import DailyHashSource,MetricClock,require_complete_metric_clock
+
+from freqtrade.data.history import load_pair_history
+from freqtrade.enums import CandleType,RunMode
+from freqtrade.strategy import IStrategy
+
+
+class MiningPortfolio(IStrategy):
+    INTERFACE_VERSION=3
+    timeframe='1h';startup_candle_count=72;can_short=False
+    minimal_roi={};stoploss=-.99;use_exit_signal=True
+    position_adjustment_enable=False
+    order_types={'entry':'market','exit':'market','stoploss':'market','stoploss_on_exchange':False}
+    mode=None;delay_hours=0
+
+    def bot_start(self,**kwargs):
+        if self.config.get('runmode')!=RunMode.BACKTEST:raise ValueError('Research strategy only; no live/dry-run service')
+        pair='BTC/USDT:USDT'
+        if self.config['exchange']['pair_whitelist']!=[pair]:raise ValueError('Frozen BTC instrument changed')
+        required=self.mode not in ['hold','price_daily']
+        clock=MetricClock(self.config.get('research_metric_clock','snapshot_observed'))
+        if clock==MetricClock.COMPLETION_MODEL and not self.config.get('research_allow_completion_model',False):
+            raise ValueError('Conditional model must be explicitly identified')
+        source_root=Path(self.config['research_metric_root'])
+        raw=pd.read_parquet(source_root/'hash_daily.parquet')
+        receipt=json.loads(Path(self.config['research_metric_receipt']).read_text())
+        source=DailyHashSource(raw,pd.Timestamp(receipt['captured_at']))
+        candles=self.dp.get_pair_dataframe(pair,'1h','futures')
+        hours=pd.DatetimeIndex(candles.date).as_unit('ns')
+        mapped=source.asof_hours(hours,clock=clock,delay_hours=self.delay_hours,max_age_hours=72)
+        funded=mapped.loc[mapped.clock.ge(pd.Timestamp('2025-01-01T00:00Z'))]
+        if required:require_complete_metric_clock(funded)
+        price=load_pair_history('BTC/USDT','1d',Path(self.config['datadir']),fill_up_missing=False,
+                               drop_incomplete=False,candle_type=CandleType.SPOT).set_index('date').close
+        if not np.isfinite(price).all() or price.le(0).any():raise ValueError('Invalid source price')
+        price_ratio=price.rolling(10,min_periods=10).mean()/price.rolling(20,min_periods=20).mean()-1
+        aligned=price_ratio.reindex(pd.DatetimeIndex(mapped.metric_day)).to_numpy()
+        daily=price_ratio.reindex(hours.floor('D')-pd.Timedelta(days=1)).to_numpy()
+        if self.mode=='hold':state=np.ones(len(hours),dtype=int)
+        elif self.mode=='price_daily':state=(daily>0).astype(int)
+        elif self.mode=='hash':state=(mapped.hash_ratio.to_numpy()>0).astype(int)
+        elif self.mode=='hash_price':state=((mapped.hash_ratio.to_numpy()>0)&(aligned>0)).astype(int)
+        elif self.mode=='price_matched':state=(aligned>0).astype(int)
+        else:raise ValueError('Unknown frozen strategy mode')
+        if not np.isfinite(daily).all():raise ValueError('Missing daily price warmup')
+        if required and not np.isfinite(aligned).all():raise ValueError('Missing aligned completed-day price')
+        mapped['price_ratio_matched']=aligned;mapped['price_ratio_daily']=daily
+        mapped['decision_date']=mapped.clock;mapped['target_weight']=state
+        mapped['source_signal']=state;mapped['source_volatility']=np.nan
+        self.research_features={pair:mapped}
+        selected=mapped.clock.ge(pd.Timestamp('2025-01-01T00:00Z'))
+        weights=mapped.loc[selected].set_index('clock')[['target_weight']].rename(columns={'target_weight':pair})
+        self.research_weights=weights.astype(float)
+        self._targets={str(d):{pair:int(v)} for d,v in weights[pair].items()}
+        self.research_allocation_diagnostics=dict(mode=self.mode,delay_hours=self.delay_hours,
+            source_clock=str(clock),historical_pit_certified=False,
+            conditional=required,states=int((state==1).sum()),state_rows=len(state),
+            signal_field='Local long/flat state, not a cross-sectional alpha',source_volatility_field='Not applicable/NaN',
+            cash_policy='Native unlimited99percent, retain actual quantity until exit')
+        self.research_trace={'accepted':[]}
+
+    def populate_indicators(self,dataframe,metadata):
+        fields=self.research_features[metadata['pair']].set_index('clock')
+        for field in ['target_weight','source_signal','source_volatility']:
+            dataframe[field]=fields[field].reindex(pd.DatetimeIndex(dataframe.date)).to_numpy()
+        return dataframe
+
+    def populate_entry_trend(self,dataframe,metadata):
+        execute=dataframe.date+pd.Timedelta(hours=1)
+        permitted=~execute.dt.hour.isin([0,8,16]) & execute.ge(pd.Timestamp('2025-01-01T00:00Z'))
+        dataframe['enter_long']=(permitted&dataframe.target_weight.gt(0)&dataframe.volume.gt(0)).astype(int)
+        dataframe['enter_short']=0
+        return dataframe
+
+    def populate_exit_trend(self,dataframe,metadata):
+        permitted=~(dataframe.date+pd.Timedelta(hours=1)).dt.hour.isin([0,8,16])
+        dataframe['exit_long']=(permitted&dataframe.target_weight.le(0)).astype(int)
+        dataframe['exit_short']=0;dataframe['exit_tag']='local_completed_state_false'
+        return dataframe
+
+    def leverage(self,**kwargs):return 1.
+
+    def custom_stake_amount(self,pair,current_time,current_rate,proposed_stake,min_stake,max_stake,leverage,entry_tag,side,**kwargs):
+        return proposed_stake if proposed_stake>=(min_stake or 0) and proposed_stake<=max_stake else 0.
+
+    def confirm_trade_entry(self,pair,order_type,amount,rate,time_in_force,current_time,entry_tag,side,**kwargs):
+        when=pd.Timestamp(current_time)
+        if when.minute or when.second or when.hour in [0,8,16] or when<pd.Timestamp('2025-01-01T00:00Z'):return False
+        self.research_trace['accepted'].append(dict(clock=str(when),amount=amount,rate=rate,pair=pair))
+        return True
+
+
+class HashOnly(MiningPortfolio):mode='hash'
+class HashAndPrice(MiningPortfolio):mode='hash_price'
+class PriceAtHashClock(MiningPortfolio):mode='price_matched'
+class PriceDaily(MiningPortfolio):mode='price_daily'
+class HoldBTC(MiningPortfolio):mode='hold'
+class HashAndPriceDelay24(HashAndPrice):delay_hours=24
+class PriceAtHashClockDelay24(PriceAtHashClock):delay_hours=24

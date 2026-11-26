@@ -1,0 +1,68 @@
+{
+  "scope": "Descriptive diagnostic using already completed native accounts. No new account return, implied fills, or shared-wallet backtest.",
+  "window_utc": [
+    "2025-01-01T00:00:00+00:00",
+    "2026-08-31T23:00:00+00:00"
+  ],
+  "account_contract": "NFI1000 vs Donchian500, same underlying 40-pair frozen research universe and 1x leverage. These two allocations are compared for occupancy only and never summed for performance.",
+  "entry_overlap_definition": "First filled time of each Donchian position. NFI interval includes both entry and exit endpoints so ties conservatively count occupied. Ignores pending orders, cash reserved for NFI adds, and future path effects.",
+  "hourly_overlap_definition": "Count holdings in independent native account observations on identical labeled hours. More than six combined implies those exact position snapshots cannot fit the original six-slot limit.",
+  "cases": [
+    {
+      "cost_bps_per_side": 15,
+      "native_nfi_archive": "user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15/native_results/backtest-result-2026-11-05_13-13-57.zip",
+      "native_nfi_archive_sha256": "e2ff3c9a7de5960375b63270e2ce1ee35a4eca47a43a28ad1ad2cc3a08624fb3",
+      "native_donchian_archive": "user_data/crypto_quant/donchian60_tail_native_20261125_v1/dc60_500_cost15/native_results/backtest-result-2026-11-25_13-04-45.zip",
+      "native_donchian_archive_sha256": "1b9472f2dee6192896edcacfd8df61971f80c12d8adc57c6eecb7f00fc5080b5",
+      "hours_total": 14592,
+      "hours_nfi_less_than_six_open": 14537,
+      "hours_sum_of_independent_wallet_positions_exceeds_six": 7746,
+      "peak_sum_of_independent_wallet_positions": 12,
+      "hourly_mark_return_correlation_nfi1000_vs_donchian500": -0.09201339660483701,
+      "trend_entry_diagnostics": {
+        "both_slot_and_pair_clear": 72,
+        "entries": 73,
+        "nfi_same_clock_fill_or_exit": 0,
+        "nfi_six_or_more_already_occupied_or_tied": 0,
+        "same_pair_occupied_or_tied": 1,
+        "same_pair_opposite_direction": 0
+      },
+      "native_nfi_excludes_forced_close": {
+        "completed": 281,
+        "wins": 277,
+        "net_profit_median_winner_usdt": 2.32925205,
+        "largest_win_usdt": 61.248297,
+        "wins_over_20_usdt": 13,
+        "wins_over_50_usdt": 1
+      }
+    },
+    {
+      "cost_bps_per_side": 8,
+      "native_nfi_archive": "user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x8-1x-cost8/native_results/backtest-result-2026-11-05_12-46-45.zip",
+      "native_nfi_archive_sha256": "80e731e8528e6c95a424e71ae8867b1fe48f914ecbb4569e34c8f131f9743c73",
+      "native_donchian_archive": "user_data/crypto_quant/donchian60_tail_native_20261125_v1/dc60_500_cost8/native_results/backtest-result-2026-11-25_13-06-53.zip",
+      "native_donchian_archive_sha256": "c3539c2812b3a9bc6dcf460af6b79291c5f010de2f6dd7ca5ee8a7d92e2f1ad3",
+      "hours_total": 14592,
+      "hours_nfi_less_than_six_open": 14543,
+      "hours_sum_of_independent_wallet_positions_exceeds_six": 7446,
+      "peak_sum_of_independent_wallet_positions": 12,
+      "hourly_mark_return_correlation_nfi1000_vs_donchian500": -0.05591331464198684,
+      "trend_entry_diagnostics": {
+        "both_slot_and_pair_clear": 72,
+        "entries": 73,
+        "nfi_same_clock_fill_or_exit": 0,
+        "nfi_six_or_more_already_occupied_or_tied": 0,
+        "same_pair_occupied_or_tied": 1,
+        "same_pair_opposite_direction": 0
+      },
+      "native_nfi_excludes_forced_close": {
+        "completed": 286,
+        "wins": 282,
+        "net_profit_median_winner_usdt": 2.5206749100000003,
+        "largest_win_usdt": 62.112936,
+        "wins_over_20_usdt": 13,
+        "wins_over_50_usdt": 1
+      }
+    }
+  ]
+}

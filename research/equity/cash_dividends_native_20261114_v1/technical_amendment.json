@@ -1,0 +1,22 @@
+{
+  "scope": "default-zero hooks in existing LOCAL equity components; no upstream native file edits",
+  "reason": "paid dividends must be present before settled-cash and dated-fee validation; unpaid net claims must enter NAV once",
+  "prior_bytes_preserved": {
+    "/Users/chrise/GitHub/freqtrade/research/equity/cash_dividends_native_20261114_v1/owner_before/equity_wallets.py": "2c4344e93013cd8c9a8b9e666eaea69963b28f8e426ada059550f3b88c62bbd5",
+    "/Users/chrise/GitHub/freqtrade/research/equity/cash_dividends_native_20261114_v1/owner_before/equity_fee_wallets.py": "be487c5d5b95c5a1ffd6849fde685b7662c747fcc2f806c1d56741ea559faee3",
+    "/Users/chrise/GitHub/freqtrade/research/equity/cash_dividends_native_20261114_v1/owner_before/equity_nav.py": "070d8719c81f9798156962a47a76d01759026eaaf3fccf671a8ae56de03a7c83"
+  },
+  "current_bytes": {
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/equity_dividends.py": "5390258b1ec224826322ce25f5ccb2518a06b60857812bf29ee6a5b1edc5d65e",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/equity_dividend_wallets.py": "9ae696def331ddf23200d8e0ddbf7b8376df9061c8a96ed7d10a2d04bbd88481",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/equity_wallets.py": "4b7742733a6b53b6afc408697e3a89b4e1e7fe6d2374bf73693b4ece23a5f164",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/equity_fee_wallets.py": "d6b94ae02266f7313f2742ee6e9d52bb32be3cc6fea2a0c4d25512461ca6ea30",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_nav.py": "8c4b249bba23c3d9f778ef9ea5573efb8501a0e278db1a81b680a3fe3e959c80"
+  },
+  "old_reports_and_receipts_unchanged": true,
+  "old_hash_receipts_do_not_certify_current_revised_local_modules": true,
+  "no_economic_parameter_rescue": true,
+  "current_regressions": 197,
+  "new_dividend_checks": 40,
+  "old_component_checks": 157
+}

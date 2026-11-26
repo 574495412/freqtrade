@@ -1,0 +1,9 @@
+{
+  "native_initialization": "normal1000/technical1: native liquidation initialization KeyError maintAmt; original fixture and log retained",
+  "native_exit_tag": "normal1000/technical2: native signal exit passes custom exit_tag rather than literal exit_signal; source class initially rejected it; old source snapshot and fatal receipt retained",
+  "fix": "Allow only literal exit_signal or frozen copula_neutral_or_week_boundary; other risk/exit events still fatal; no state/threshold/weight/cost changes",
+  "read_only_observer": "observed1 adds49actual native hourly pre-event captures and1known initial flat mark; no funding, orders or wallet mutation",
+  "audit_initial": "Default=str sidecar uses numeric strings for empty-account numpy balances and space datetimes; native ZIP uses numeric/ISO equivalents. Normalize only4wallet balance fields and2drawdown clocks, discard no fields, audit actual ZIP as primary",
+  "source_dates": "Joh5 archived UI year is not metadata observation date; pinned HEAD commit is2021May6, not2025. No historical execution admission based on archive date",
+  "no_economic_rescue": true
+}

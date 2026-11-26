@@ -1,0 +1,122 @@
+"""Actual native IStrategy and native one-candle lag; never starts an account."""
+import hashlib
+import inspect
+import json
+import os
+import shutil
+import sys
+import threading
+import time
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[2]
+OUT = ROOT / 'user_data/crypto_quant/copula_execution_native_20261115_v3'
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def save(name, value):
+    (HERE / name).write_text(json.dumps(value, indent=2, default=str) + '\n')
+
+
+def main():
+    assert not (HERE / 'native_preflight.json').exists()
+    assert shutil.disk_usage(ROOT).free >= 2 * 1024**3
+    engine = ROOT.parent / 'CZ-Agent/vendor/freqtrade'
+    manifest = json.loads((engine.parent / 'FREQTRADE_SOURCE.json').read_text())
+    assert manifest['commit'] == 'c051e9065c5b677f03817dd1f83cb980af1ed684'
+    for relative, digest in manifest['files'].items(): assert sha(engine / relative) == digest
+    sys.path.insert(0, str(engine))
+    import pandas as pd
+    import psutil
+    from freqtrade.configuration import TimeRange
+    from freqtrade.data.dataprovider import DataProvider
+    from freqtrade.enums import CandleType, RunMode
+    from freqtrade.optimize.backtesting import Backtesting, HEADERS
+    from freqtrade.persistence import Trade
+    from freqtrade.resolvers import StrategyResolver
+    started, done = time.monotonic(), threading.Event()
+
+    def monitor():
+        maximum = 0
+        while not done.wait(5):
+            rss = psutil.Process().memory_info().rss
+            maximum = max(maximum, rss)
+            state = dict(pid=os.getpid(), elapsed=time.monotonic()-started, rss=rss, maximum_rss=maximum)
+            save('native_preflight_progress.json', state)
+            if rss > 3 * 1024**3 or state['elapsed'] > 3600:
+                save('native_preflight_resource_failure.json', state)
+                os._exit(73)
+    threading.Thread(target=monitor, daemon=True).start()
+    paths = [HERE / 'execution_protocol.json', HERE / 'ExecutionInputs.py', ROOT / 'freqtrade/data/copula_execution.py', Path(__file__),
+             HERE / 'input_admission.json', HERE / 'input_reconciliation.json', OUT / 'data_receipts.json']
+    frozen = {str(p): sha(p) for p in paths}
+    save('execution_implementation_freeze.json', frozen)
+    parent = json.loads((ROOT / 'research/crypto/pairs_cointegration_native_20261114_v1/plan.json').read_text())
+    raw = json.loads(Path(parent['candidates'][0]['config']['path']).read_text())
+    a = json.loads((HERE / 'input_admission.json').read_text())
+    pairs = [s + '/USDT:USDT' for s in a['source20']]
+    start, end = pd.Timestamp('2025-01-01T00:00Z'), pd.Timestamp('2026-09-01T00:00Z')
+    userdir = OUT / 'preflight_userdir'
+    userdir.mkdir(exist_ok=True)
+    records = []
+    Trade.use_db = False
+    try:
+        for strategy_name in ['ExecutionInputs', 'ExecutionInputs15', 'ExecutionInputs20']:
+            config = dict(raw, strategy=strategy_name, strategy_path=str(HERE), research_root=str(ROOT),
+                user_data_dir=userdir, datadir=OUT / 'candles', timeframe='5m', runmode=RunMode.BACKTEST,
+                candle_type_def=CandleType.FUTURES, research_diagnostic_only=True)
+            config['exchange'] = dict(raw['exchange'], pair_whitelist=pairs)
+            provider = DataProvider(config, None)
+            strategy = StrategyResolver.load_strategy(config)
+            strategy.dp = provider
+            strategy.bot_start()
+            adapter = object.__new__(Backtesting)
+            adapter.strategy, adapter.dataprovider, adapter.config = strategy, provider, config
+            adapter.timeframe, adapter.required_startup = '5m', 0
+            adapter.timerange = TimeRange.parse_timerange(f'{int(start.timestamp())}-{int(end.timestamp())-1}')
+            adapter._set_progress_step = lambda *args: None
+            adapter._increment_progress = adapter.check_abort = lambda: None
+            expected, actual = [], []
+            for intent in strategy.research_intents:
+                if intent['action'] == 'budget': continue
+                for i, (symbol, _) in enumerate(intent['legs']):
+                    expected.append((symbol + '/USDT:USDT', intent['at'], intent['action'], int(intent['state']) * (-1 if i == 0 else 1)))
+            for pair in pairs:
+                frame = provider.get_pair_dataframe(pair, '5m', 'futures')
+                if frame.empty: raise ValueError('Missing full source execution input')
+                advised = strategy.advise_indicators(frame.copy(), {'pair': pair})
+                rows = adapter._get_ohlcv_as_lists({pair: advised})[pair]
+                # Sparse events from the ACTUAL native shifted header rows.
+                for row in rows:
+                    for field, action, direction in [('enter_long','entry',1),('enter_short','entry',-1),('exit_long','exit',1),('exit_short','exit',-1)]:
+                        if row[HEADERS.index(field)] == 1:
+                            actual.append((pair, pd.Timestamp(row[0]), action, direction))
+                print('NATIVE_SIGNAL', strategy_name, pair, len(rows), flush=True)
+            assert sorted(expected) == sorted(actual)
+            try: strategy.ft_bot_start()
+            except ValueError as exc: guard = str(exc)
+            else: raise AssertionError('Incomplete funded strategy admitted')
+            records.append(dict(strategy=strategy_name, alpha=strategy.entry_alpha,
+                intent_count=len(strategy.research_intents), native_shifted_leg_flags=len(actual),
+                weekly_flat_budget_intents=sum(r['action']=='budget' for r in strategy.research_intents),
+                entry_intents=sum(r['action']=='entry' for r in strategy.research_intents),
+                exit_intents=sum(r['action']=='exit' for r in strategy.research_intents),
+                EOS_native_flags=sum(r[0]=='EOS/USDT:USDT' for r in actual),
+                exact_native_lag_and_intent_reconciliation=True, funded_start_guard=guard))
+        assert not Trade.get_trades_proxy()
+        for p, expected in frozen.items(): assert sha(p) == expected, p
+        save('native_preflight.json', dict(passed=True, native_commit=manifest['commit'], original_files_verified=len(manifest['files']),
+            actual_native_strategy_resolver=True, actual_native_header_converter=inspect.getfile(Backtesting),
+            records=records, source_members=20, native_conversion_calls=60, actual_native_fills=0,
+            actual_native_wallet_accounts=0, financial_returns='UNKNOWN', execution_matrix_registered=False))
+        print('PREFLIGHT PASS:3views,60actualnative conversions;0fundedaccounts', flush=True)
+    finally:
+        done.set()
+
+
+if __name__ == '__main__':
+    main()

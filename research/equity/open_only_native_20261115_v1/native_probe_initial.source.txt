@@ -1,0 +1,145 @@
+"""Real native initialization and backtest loop on explicit synthetic inputs.
+
+Never start a financial account. The full stock start/load/result lifecycle
+remains closed. Native default trade statistics are not fee-overlay net NAV.
+"""
+import argparse
+import hashlib
+import json
+import socket
+from copy import deepcopy
+from dataclasses import asdict
+from pathlib import Path
+
+from bootstrap import HERE, ROOT, boot
+
+boot()
+from test_sessions import routed
+from freqtrade.commands.optimize_commands import setup_optimize_configuration
+from freqtrade.data.equity_provider import EquityDataProvider
+from freqtrade.enums import RunMode
+from freqtrade.equity_dividend_wallets import EquityDividendWallets
+from freqtrade.optimize.backtesting import Backtesting
+from freqtrade.optimize.equity_fee_execution import EquityFeeFillMixin
+from freqtrade.optimize.equity_nav import EquityMark, capture_equity_nav
+from freqtrade.optimize.equity_open_only import EquityOpenOnlyMixin
+from freqtrade.optimize.equity_sessions import EquitySessionRoutingMixin
+from freqtrade.persistence import LocalTrade, Trade
+from freqtrade.resolvers import ExchangeResolver
+
+
+class OpenProbe(EquityOpenOnlyMixin, EquitySessionRoutingMixin, EquityFeeFillMixin, Backtesting):
+    def handle_left_open(self, open_trades, data):
+        # Mark held shares instead of inventing an executable terminal sale.
+        assert not any(t.has_open_orders for t in LocalTrade.bt_trades_open)
+
+    def _time_generator(self, start_date, end_date):
+        plan = self.equity_session_plan
+        self.open_snapshots, self.close_snapshots = [], []
+        pair = plan.pairs[0]
+        raw = self.dataprovider._equity_raw[pair].set_index('date')
+        digest = hashlib.sha256(raw.to_csv().encode()).hexdigest()
+        for current in super()._time_generator(start_date, end_date):
+            held = self.wallets.get_owned(pair, 'ABC')
+            label = plan.labels[len(self.open_snapshots)]
+            marks = [EquityMark(pair, plan.currency, current, float(raw.loc[label, 'open']),
+                                'open', digest)] if held else []
+            self.open_snapshots.append(asdict(capture_equity_nav(self.wallets, marks, at=current, mark_kind='open')))
+            yield current
+            closed = plan.closes[len(self.close_snapshots)]
+            self.wallets.advance(closed)
+            self.dataprovider._set_dataframe_max_date(closed)
+            held = self.wallets.get_owned(pair, 'ABC')
+            marks = [EquityMark(pair, plan.currency, closed, float(raw.loc[label, 'close']),
+                                'close', digest)] if held else []
+            self.close_snapshots.append(asdict(capture_equity_nav(self.wallets, marks, at=closed, mark_kind='close')))
+
+
+def save(path, value):
+    Path(path).write_text(json.dumps(value, indent=2, default=str, allow_nan=False) + '\n')
+
+
+def run(market, output, *, future_extrema=False):
+    old = Trade.use_db
+    Trade.use_db = False
+    LocalTrade.reset_trades()
+    reference, pair, source = routed(market)
+    if future_extrema:
+        source['high'], source['low'] = source.open * 100, source.open * .001
+    plan, original_wallet = reference.equity_session_plan, reference.wallets
+    raw = json.loads((ROOT / 'user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/normal1000/config.json').read_text())
+    raw.update(strategy='OpenClockProbe', strategy_path=str(HERE), timeframe='1d', timeframe_detail='',
+               dry_run_wallet=1000, stake_amount=600, stake_currency=plan.currency,
+               max_open_trades=1, tradable_balance_ratio=1., fee=0., trading_mode='spot',
+               margin_mode='', position_adjustment_enable=False, trailing_stop=False,
+               minimal_roi={}, stoploss=-.99, synthetic_equity_fixture=True,
+               equity_execution_model='completed_close_next_open_v1',
+               user_data_dir=str(output), datadir=str(output), db_url='sqlite://')
+    raw.pop('timerange', None)
+    raw['exchange'].update(pair_whitelist=[pair], pair_blacklist=[], key='', secret='', password='')
+    raw['pairlists'] = [{'method': 'StaticPairList'}]
+    output.mkdir(parents=True, exist_ok=False)
+    save(output / 'config.json', raw)
+    config = setup_optimize_configuration({'config': [str(output / 'config.json')]}, RunMode.BACKTEST)
+    exchange = ExchangeResolver.load_exchange(config, validate=False, load_leverage_tiers=False)
+    template = json.loads((ROOT / 'user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/normal1000/synthetic_markets_maintenance_fixed.json').read_text())
+    meta = deepcopy(next(iter(template['markets'].values())))
+    meta.update(id='ABC'+plan.currency, symbol=pair, base='ABC', quote=plan.currency,
+                baseId='ABC', quoteId=plan.currency, settle=None, settleId=None,
+                type='spot', spot=True, swap=False, future=False, contract=False,
+                linear=None, inverse=None, contractSize=None, active=True)
+    meta['precision'] = {'amount': 1., 'price': .01}
+    meta['limits']['amount'] = {'min': 1., 'max': 1e9}
+    meta['limits']['cost'] = {'min': 1., 'max': 1e12}
+    currencies = {c: {'id': c, 'code': c, 'precision': 8} for c in ['ABC', plan.currency]}
+    exchange._markets = {pair: meta}
+    exchange._api.set_markets({pair: meta}, currencies)
+    exchange._api_async.set_markets({pair: meta}, currencies)
+    exchange.validate_config(config)
+    account = None
+    try:
+        account = OpenProbe(config, exchange=exchange)
+        account.equity_session_plan = plan
+        account.equity_execution_contract = reference.equity_execution_contract
+        account.dataprovider = EquityDataProvider(config, reference.dataprovider.schedules)
+        account.dataprovider._equity_raw[pair] = source.copy(deep=True)
+        account.wallets = EquityDividendWallets(config, exchange, fees=original_wallet.fees,
+            dividends=original_wallet.dividends, asof=plan.opens[0])
+        account._set_strategy(account.strategylist[0])
+        account._require_open_only()
+        processed = account.strategy.advise_all_indicators({pair: source})
+        result = account.backtest(processed, plan.opens[0], plan.opens[-1])
+        orders = [dict(trade_id=t.id, pair=t.pair, order_id=o.order_id,
+                       at=o.order_filled_utc.isoformat(), side=o.ft_order_side,
+                       price=o.safe_price, quantity=o.safe_filled, is_open=t.is_open)
+                  for t in Trade.get_trades_proxy() for o in t.orders if o.safe_filled]
+        assert all(o['price'] == 100 and o['quantity'] % 1 == 0 for o in orders)
+        assert len(account.open_snapshots) == len(account.close_snapshots) == len(plan.opens)
+        record = dict(market=market, synthetic_only=True, native_constructor=True,
+            native_backtest=True, native_start=False, orders=orders,
+            opens=account.open_snapshots, closes=account.close_snapshots,
+            native_closed_trade_count=len(result['results']),
+            native_trade_stats_are_overlay_gross=True, historical_accounts=0,
+            factor_analysis_calls=0, bench_records=0, future_extrema=future_extrema,
+            terminal='held shares at exact close, no force sale')
+        save(output / 'native_trace.json', record)
+        print(market, 'NATIVE LOOP', len(orders), 'fills;', len(plan.opens), 'sessions; 0 historical accounts', flush=True)
+        return record
+    finally:
+        if account is not None:
+            account.cleanup()
+        exchange.close()
+        LocalTrade.reset_trades()
+        Trade.use_db = old
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--market', choices=['XNYS', 'XHKG'], required=True)
+    parser.add_argument('--attempt', required=True)
+    parser.add_argument('--future-extrema', action='store_true')
+    args = parser.parse_args()
+    def offline(*a, **kw):
+        raise RuntimeError('Synthetic native integration is offline')
+    socket.socket.connect = offline
+    run(args.market, HERE / 'runs' / args.attempt, future_extrema=args.future_extrema)

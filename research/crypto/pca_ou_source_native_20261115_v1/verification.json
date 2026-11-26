@@ -1,0 +1,101 @@
+{
+  "passed": true,
+  "native_original_files": 595,
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "extra_upstream_python_files": [],
+  "pinned_source_files": 10,
+  "source_tree_paths": 17,
+  "original_prices_and_native_rows_unchanged": true,
+  "exact_mature_forward_label_cells": 607880,
+  "complete_1h_nonoverlap_labels": 14590,
+  "complete_24h_nonoverlap_labels": 607,
+  "labels_overlap_across_horizons": true,
+  "source_score_witnesses": [
+    {
+      "at": "2025-01-01 00:00:00+00:00",
+      "source_valid": 40,
+      "source_assets": 40,
+      "max_score_error": 3.375077994860476e-14,
+      "prefix_and_future_perturbation_exact": true
+    },
+    {
+      "at": "2026-01-01 00:00:00+00:00",
+      "source_valid": 40,
+      "source_assets": 40,
+      "max_score_error": 7.571721027943568e-14,
+      "prefix_and_future_perturbation_exact": true
+    },
+    {
+      "at": "2026-08-01 00:00:00+00:00",
+      "source_valid": 40,
+      "source_assets": 40,
+      "max_score_error": 4.6629367034256575e-14,
+      "prefix_and_future_perturbation_exact": true
+    }
+  ],
+  "additional_source_invalid_ou_witnesses": [
+    {
+      "at": "2025-03-12 16:00:00+00:00",
+      "pair": "IOTA/USDT:USDT",
+      "source_invalid": true,
+      "local_nan_retained": true
+    },
+    {
+      "at": "2026-05-18 04:00:00+00:00",
+      "pair": "DYDX/USDT:USDT",
+      "source_invalid": true,
+      "local_nan_retained": true
+    }
+  ],
+  "local_prefix_and_future_perturbation_boundaries": 3,
+  "independent_native_indicator_mapping_cells": 5253120,
+  "distinct_component_checks": 16,
+  "distinct_native_factor_analysis_measurements": 24,
+  "actual_total_factor_analysis_calls": 28,
+  "initial_completed_calls": 4,
+  "audited_review_calls": 24,
+  "technical_duplicate_calls": 4,
+  "initial_artifact_replays": [
+    {
+      "horizon_hours": 1,
+      "factor": "pca_ou_reversal",
+      "split": "all",
+      "all_five_artifacts_exact": true
+    },
+    {
+      "horizon_hours": 1,
+      "factor": "pca_ou_reversal",
+      "split": "calendar2025",
+      "all_five_artifacts_exact": true
+    },
+    {
+      "horizon_hours": 1,
+      "factor": "pca_ou_reversal",
+      "split": "calendar2026_through_aug",
+      "all_five_artifacts_exact": true
+    },
+    {
+      "horizon_hours": 1,
+      "factor": "reversal1",
+      "split": "all",
+      "all_five_artifacts_exact": true
+    }
+  ],
+  "reconstructed_ic_rows": 121576,
+  "reconstructed_group_cells": 607880,
+  "all_submitted_csv_writer_bytes_exact": true,
+  "submitted_csv_rows_including_reused_splits": 121576,
+  "max_pandas_default_csv_factor_numeric_delta": 4.440892098500626e-16,
+  "csv_tie_witnesses": "csv_reversal_control_precision_witnesses.json",
+  "financial_or_external_account_engine_executed": false,
+  "funded_accounts": 0,
+  "combination_accounts": 0,
+  "new_accepted_independent_alphas": 0,
+  "vibe_benches": 0,
+  "global_registry_modified": false,
+  "frozen_predictive_admission": "REJECT_BOTH_LABEL_HORIZONS",
+  "source_account_replication": false,
+  "independent_oos": false,
+  "orders_enabled": false,
+  "services_changed": false
+}

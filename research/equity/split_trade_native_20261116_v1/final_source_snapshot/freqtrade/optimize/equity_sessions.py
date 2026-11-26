@@ -1,0 +1,175 @@
+"""Local daily-session routing into native Backtesting, not account admission.
+
+Native Strategy/Trade/Order/Wallets still own trading. This component only maps
+session labels to opens and completed signals to the following session. Daily
+OHLC extrema remain bar data, not timestamped intraday/auction observations.
+"""
+
+from datetime import datetime
+
+import pandas as pd
+
+from freqtrade.data.equity_provider import EquityDataProvider, EquitySchedule
+from freqtrade.data.history.equity import EquityAdmissionError
+from freqtrade.enums import BacktestState, RunMode, TradingMode
+from freqtrade.equity_dividend_wallets import EquityDividendWallets
+from freqtrade.optimize.backtesting import HEADERS
+from freqtrade.persistence import Trade
+
+
+class EquityDailySessionPlan:
+    """One market, fixed universe and contiguous declared execution sessions.
+
+    A preceding session is mandatory even for the first execution. Complete
+    source frames are retained for indicators and callback caches; they are
+    never retimestamped to look like already-observed opening information.
+    """
+
+    def __init__(self, schedules, *, first_label, last_label):
+        if not schedules or any(not isinstance(s, EquitySchedule) for s in schedules.values()):
+            raise EquityAdmissionError("Explicit native equity schedules required")
+        first, last = pd.Timestamp(first_label), pd.Timestamp(last_label)
+        if any(t.tzinfo is None or t != t.normalize() for t in (first, last)) or first > last:
+            raise EquityAdmissionError("Ordered timezone-aware midnight session labels required")
+        pairs = tuple(schedules)
+        reference = schedules[pairs[0]]
+        frame = reference.frame
+        if first not in frame.index or last not in frame.index or first == frame.index[0]:
+            raise EquityAdmissionError(
+                "Exact window endpoints and preceding signal session required"
+            )
+        currency = {"XNYS": "USD", "XHKG": "HKD"}[reference.contract.calendar]
+        for pair, schedule in schedules.items():
+            if (
+                pair != schedule.contract.pair
+                or not pair.endswith("/" + currency)
+                or schedule.contract.calendar != reference.contract.calendar
+                or not schedule.frame.equals(frame)
+            ):
+                raise EquityAdmissionError(
+                    "One currency/calendar and identical complete grids required"
+                )
+        selected = frame.loc[first:last]
+        self.pairs, self.currency = pairs, currency
+        self.market = reference.contract.calendar
+        self.labels = tuple(selected.index)
+        self.opens = tuple(t.to_pydatetime() for t in selected.open)
+        self.closes = tuple(t.to_pydatetime() for t in selected.close)
+        self.cash_sessions = tuple(
+            (label.date(), row.open, row.close,
+             None if pd.isna(row.break_start) else row.break_start,
+             None if pd.isna(row.break_end) else row.break_end)
+            for label, row in selected.iterrows()
+        )
+        self._schedules = dict(schedules)
+        self._frames = {p: s.frame.copy(deep=True) for p, s in schedules.items()}
+        self._contracts = {p: s.contract for p, s in schedules.items()}
+
+    def require_provider(self, provider):
+        if not isinstance(provider, EquityDataProvider) or tuple(provider.schedules) != self.pairs:
+            raise EquityAdmissionError("Fixed native equity provider/universe required")
+        for pair in self.pairs:
+            current = provider.schedules[pair]
+            if current.contract != self._contracts[pair] or not current.frame.equals(
+                self._frames[pair]
+            ):
+                raise EquityAdmissionError("Bound session contract or schedule changed")
+
+    def rows(self, pair, analyzed):
+        """Use native header layout; lag on the full grid BEFORE window selection."""
+        if pair not in self.pairs:
+            raise EquityAdmissionError("Unknown session-plan security")
+        schedule = self._schedules[pair]
+        if not schedule.frame.equals(self._frames[pair]):
+            raise EquityAdmissionError("Bound session schedule changed")
+        schedule.contract.validate(analyzed)
+        result = analyzed.copy(deep=True)
+        for column in HEADERS[5:]:
+            tag = column in {"enter_tag", "exit_tag"}
+            if column not in result:
+                result[column] = None if tag else 0
+            if not tag and not result[column].dropna().isin([0, 1]).all():
+                raise EquityAdmissionError("Native daily entry/exit flags must be binary")
+            if column in {"enter_short", "exit_short"} and result[column].fillna(0).any():
+                raise EquityAdmissionError("Daily cash routing does not admit short flags")
+            result[column] = result[column].where(
+                result[column].notna(), None if tag else 0
+            ).shift(1)
+        result = result.set_index("date").loc[list(self.labels)].reset_index()
+        result["date"] = list(self.opens)
+        return result[HEADERS].values.tolist()
+
+
+class EquitySessionRoutingMixin:
+    """Supported local override points, exercised with the native pair generator.
+
+    Does not enable EquityBacktesting.__init__, replace native backtest_loop,
+    model daily-bar fill chronology, or supply missing lifecycle contracts.
+    """
+
+    equity_session_plan: EquityDailySessionPlan
+
+    def _require_session_routing(self):
+        plan = getattr(self, "equity_session_plan", None)
+        if (
+            not isinstance(plan, EquityDailySessionPlan)
+            or self.timeframe != "1d"
+            or self.timeframe_detail_td
+            or self.dynamic_pairlist
+            or self.trading_mode != TradingMode.SPOT
+            or self.config.get("runmode") != RunMode.BACKTEST
+            or self.config.get("dry_run") is not True
+            or self.config.get("stake_currency") != plan.currency
+            or self._can_short
+            or Trade.use_db
+        ):
+            raise EquityAdmissionError("Isolated daily long-only fixed-universe routing required")
+        plan.require_provider(self.dataprovider)
+        return plan
+
+    def _get_ohlcv_as_lists(self, processed):
+        plan = self._require_session_routing()
+        if tuple(processed) != plan.pairs:
+            raise EquityAdmissionError("Processed universe differs from declared session plan")
+        self._set_progress_step(BacktestState.CONVERT, len(processed))
+        result = {}
+        for pair, frame in processed.items():
+            self.check_abort()
+            analyzed = self.strategy.ft_advise_signals(frame.copy(deep=True), {"pair": pair})
+            result[pair] = plan.rows(pair, analyzed)
+            self.dataprovider._set_cached_df(
+                pair, "1d", analyzed, self.config["candle_type_def"]
+            )
+            self._increment_progress()
+        return result
+
+    def _time_generator(self, start_date: datetime, end_date: datetime):
+        plan = self._require_session_routing()
+        if (start_date, end_date) != (plan.opens[0], plan.opens[-1]):
+            raise EquityAdmissionError(
+                "Native generator must cover exact declared first/last opens"
+            )
+        wallet = self.wallets
+        if (
+            not isinstance(wallet, EquityDividendWallets)
+            or wallet.contract.market != plan.market
+            or wallet.contract.currency != plan.currency
+            or tuple(
+                (s.label, s.opens, s.closes, s.break_start, s.break_end)
+                for s in wallet.contract.sessions
+            ) != plan.cash_sessions
+            or set(wallet.dividends.pairs) != set(plan.pairs)
+            or wallet.asof != plan.opens[0]
+            or Trade.get_trades_proxy()
+        ):
+            raise EquityAdmissionError(
+                "Matching fee/dividend/cash wallet and untouched flat clock required"
+            )
+        for current in plan.opens:
+            # These must precede native bot_loop_start, sizing and wallet capture.
+            plan.require_provider(self.dataprovider)
+            if self.wallets is not wallet:
+                raise EquityAdmissionError("Native wallet switched during session routing")
+            wallet.advance(current)
+            self.dataprovider._set_dataframe_max_date(current)
+            yield current

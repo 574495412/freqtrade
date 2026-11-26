@@ -1,0 +1,50 @@
+{
+  "checked_utc": "2026-11-13T19:08:19.073021+00:00",
+  "native": {
+    "commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+    "verified_files": 595,
+    "manifest_sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "actual_runtime_owners": {
+    "DataProvider": {
+      "path": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/data/dataprovider.py",
+      "sha256": "3222d862fea2ca9dd566063b83845f99c421ba4f5eb20773ba5e64be68b0ba0e"
+    },
+    "EquityDataProvider": {
+      "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/equity_provider.py",
+      "sha256": "a8e057f5e2664af487d038ce326e6b1a39b6fafa46b0d9840648acf62df2e838"
+    },
+    "IStrategy": {
+      "path": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/strategy/interface.py",
+      "sha256": "5d0faa6da85bd223bcea2281bd173c7ffc54c3a9647ae136e4ebc7d5685dea02"
+    },
+    "Backtesting": {
+      "path": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/optimize/backtesting.py",
+      "sha256": "1d45e0b34ddf30813bbdf51a20be6e8345a65b668f373f8ce2fbb6e93271b234"
+    }
+  },
+  "stock_account_gate_before_native_init": true,
+  "stock_account_gate_reason": "History admission only: native equity execution clocks, quantity/lot/tick rules, cash settlement, side-specific fees/taxes, dividend entitlements/payment, corporate actions and (for shorts) borrow/recall are not integrated. No complete equity account return is certified.",
+  "old_equity_receipt_unchanged": true,
+  "old_equity_receipt_artifacts": 1050,
+  "input_source_and_staging_pairs_verified": 514,
+  "source_documents_verified": 3,
+  "exact_revalidation": {
+    "reason": "Timezone-naive schedule clocks now reject before native research",
+    "exact_admission_records": true,
+    "exact_native_exposures": true,
+    "original_features_sha256": "1720b77ac0dad5d1c715dfc2d1b14e801cef7273a777b27c2fd1812d7f5b35be",
+    "revalidated_features_sha256": "1720b77ac0dad5d1c715dfc2d1b14e801cef7273a777b27c2fd1812d7f5b35be",
+    "current_implementation_freeze": "/Users/chrise/GitHub/freqtrade/research/equity/high_recency_native_20261114_v1/technical_revalidation_v3/implementation_freeze.json",
+    "current_implementation_freeze_sha256": "f3cbc48929dc7605076ec43bca0d2a20ea3d66b80b598c347911ad5d1bb41aa0",
+    "actual_native_passes": 2,
+    "actual_factor_analysis_calls": 24,
+    "factor_analysis_calls_reused": 24,
+    "additional_factor_analysis_calls": 0,
+    "funded_accounts": 0
+  },
+  "actual_funded_accounts": 0,
+  "return_metrics": null,
+  "source_paper_reproduced": false,
+  "passed": true
+}

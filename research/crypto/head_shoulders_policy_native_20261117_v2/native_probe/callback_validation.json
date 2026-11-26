@@ -1,0 +1,188 @@
+{
+  "passed": true,
+  "fixture_kind": "SYNTHETIC_NATIVE_CALLBACK_INTERFACE_ONLY",
+  "cases": [
+    {
+      "case": "long_target_equal",
+      "passed": true,
+      "expected_reason": null
+    },
+    {
+      "case": "long_stop_equal",
+      "passed": true,
+      "expected_reason": null
+    },
+    {
+      "case": "long_target_cross",
+      "passed": true,
+      "expected_reason": "hs_source_target"
+    },
+    {
+      "case": "long_stop_cross",
+      "passed": true,
+      "expected_reason": "hs_source_stop"
+    },
+    {
+      "case": "long_expiry_width_minus_one_close_available",
+      "passed": true
+    },
+    {
+      "case": "long_future_rows_filtered_until_close",
+      "passed": true
+    },
+    {
+      "case": "long_exact_next_hour_entry_and_repeat_rejection",
+      "passed": true
+    },
+    {
+      "case": "long_early_and_late_detail_entry_rejected",
+      "passed": true
+    },
+    {
+      "case": "long_self_terminal_zero_duration_mask",
+      "passed": true
+    },
+    {
+      "case": "short_target_equal",
+      "passed": true,
+      "expected_reason": null
+    },
+    {
+      "case": "short_stop_equal",
+      "passed": true,
+      "expected_reason": null
+    },
+    {
+      "case": "short_target_cross",
+      "passed": true,
+      "expected_reason": "hs_source_target"
+    },
+    {
+      "case": "short_stop_cross",
+      "passed": true,
+      "expected_reason": "hs_source_stop"
+    },
+    {
+      "case": "short_expiry_width_minus_one_close_available",
+      "passed": true
+    },
+    {
+      "case": "short_future_rows_filtered_until_close",
+      "passed": true
+    },
+    {
+      "case": "short_exact_next_hour_entry_and_repeat_rejection",
+      "passed": true
+    },
+    {
+      "case": "short_early_and_late_detail_entry_rejected",
+      "passed": true
+    },
+    {
+      "case": "short_self_terminal_zero_duration_mask",
+      "passed": true
+    },
+    {
+      "case": "exit_empty_history_policy_error",
+      "passed": true,
+      "expected_policy_errors": 1
+    },
+    {
+      "case": "exit_stale_history_policy_error",
+      "passed": true,
+      "expected_policy_errors": 1
+    },
+    {
+      "case": "exit_missing_middle_history_policy_error",
+      "passed": true,
+      "expected_policy_errors": 1
+    },
+    {
+      "case": "exit_stale_after_seen_history_policy_error",
+      "passed": true,
+      "expected_policy_errors": 1
+    },
+    {
+      "case": "delayed_callback_scans_closed_rows_in_order_and_keeps_first_exit",
+      "passed": true
+    },
+    {
+      "case": "cached_exit_cannot_be_observed_before_its_source_close",
+      "passed": true
+    },
+    {
+      "case": "entry_reject_open",
+      "passed": true
+    },
+    {
+      "case": "entry_reject_closed_now",
+      "passed": true
+    },
+    {
+      "case": "entry_reject_bot_loop_block",
+      "passed": true
+    },
+    {
+      "case": "entry_reject_unknown_tag",
+      "passed": true
+    },
+    {
+      "case": "entry_reject_wrong_side",
+      "passed": true
+    },
+    {
+      "case": "entry_reject_wrong_pair",
+      "passed": true
+    },
+    {
+      "case": "entry_reject_nonmarket",
+      "passed": true
+    },
+    {
+      "case": "entry_missing_confirmation_rejected",
+      "passed": true
+    },
+    {
+      "case": "entry_exception_safely_false_under_native_wrapper",
+      "passed": true
+    },
+    {
+      "case": "exit_invalid_tag_has_independent_policy_error_reason",
+      "passed": true
+    },
+    {
+      "case": "native_should_exit_policy_error_keeps_separate_reason",
+      "passed": true
+    },
+    {
+      "case": "native_should_exit_source_distinct_type",
+      "passed": true,
+      "native_exit_type": "custom_exit"
+    },
+    {
+      "case": "native_should_exit_catastrophe_distinct_type",
+      "passed": true,
+      "native_exit_type": "stop_loss"
+    },
+    {
+      "case": "native_should_exit_liquidation_distinct_type",
+      "passed": true,
+      "native_exit_type": "liquidation"
+    }
+  ],
+  "case_count": 38,
+  "native_provider_class": "freqtrade.data.dataprovider.DataProvider",
+  "strategy_class": "HeadShouldersStrategy.HeadShouldersStrategy",
+  "fresh_strategy_ft_bot_start_per_case": true,
+  "caller_provider_mutated": false,
+  "detached_trade_objects": 36,
+  "synthetic_records_are_author_recognized_patterns": false,
+  "market_source_recognition_run": false,
+  "backtesting_start_called": false,
+  "orders_created": 0,
+  "fills_created": 0,
+  "wallets_created": 0,
+  "native_accounts_completed": 0,
+  "financial_performance_proven": false,
+  "native_trade_globals_restored": true
+}

@@ -1,0 +1,32 @@
+{
+  "preserved": [
+    {
+      "evidence": "prepare_initial_failed.log",
+      "stage": "before download request plan",
+      "reason": "pandas timezone-mixed date_range endpoints",
+      "correction": "Normalize request-plan endpoints toUTC; no economic rules changed."
+    },
+    {
+      "evidence": [
+        "prepare_terminal_bucket_failed.log",
+        "download_terminal_bucket_failed.json",
+        "eos_terminal_raw_rows.json"
+      ],
+      "stage": "all132officialtasks returned;1EOSMay grid rejected",
+      "reason": "Officialarchive contains terminal09:00zero-volume bar beyond ordinary tradable domain",
+      "correction": "Retainrawarchive and response; quarantine1terminal observation explicitly; reverify cachedSHA; no postterminal ffill."
+    },
+    {
+      "stage": "GitHubsourcepin",
+      "reason": "Unauthenticated REST rate limit403; original tool traceback retained in chat, originalHTTPbody not captured",
+      "correction": "git ls-remote HEAD, then fetch explicitcommit rawfiles; capturemanifest retains statuses."
+    },
+    {
+      "stage": "optional scientific package import",
+      "reason": "0.7.5Pythonpackage importsMatplotlib; paperenvironment lackedit. DifferentVibePythoncannotloadcp312wheel. Directkernelprobe emittednanobind teardown warnings.",
+      "correction": "Install plottingimportrequirements in study-onlytarget; use normal documented0.7.5package inPython3.12. Directkernel/Vibepaths notused for subsequentchecks.",
+      "transaction_runtime_environment_modified": false
+    }
+  ],
+  "native_accounts_before_or_after_corrections": 0
+}

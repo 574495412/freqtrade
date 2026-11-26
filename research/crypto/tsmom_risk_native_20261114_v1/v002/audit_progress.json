@@ -1,0 +1,67 @@
+{
+  "successfully_audited": 6,
+  "planned_unique_accounts": 12,
+  "overall_completion_claim": false,
+  "records": [
+    {
+      "account": "CovarianceRiskTS_1000_15bps",
+      "maximum_nav_error": 1.1150996215292253e-07,
+      "filled_orders": 3677,
+      "tia_gap_exposure": [],
+      "budget_error": 1.1368683772161603e-13
+    },
+    {
+      "account": "CovarianceRiskTS_500_15bps",
+      "maximum_nav_error": 8.65528022586659e-08,
+      "filled_orders": 2138,
+      "tia_gap_exposure": [],
+      "budget_error": 0.0
+    },
+    {
+      "account": "DiagonalRiskTS_1000_15bps",
+      "maximum_nav_error": 1.321170657320181e-07,
+      "filled_orders": 4401,
+      "tia_gap_exposure": [
+        {
+          "pair": "TIA/USDT:USDT",
+          "trade_id": null,
+          "side": "short",
+          "quantity": 26.0,
+          "event": "2026-06-24T04:00Z",
+          "unknown_funding_rate": null
+        }
+      ],
+      "budget_error": 1.1368683772161603e-13
+    },
+    {
+      "account": "DiagonalRiskTS_500_15bps",
+      "maximum_nav_error": 8.362178505194606e-08,
+      "filled_orders": 2751,
+      "tia_gap_exposure": [],
+      "budget_error": 1.1368683772161603e-13
+    },
+    {
+      "account": "GrossOneRiskTS_1000_15bps",
+      "maximum_nav_error": 1.6736134966777172e-07,
+      "filled_orders": 4542,
+      "tia_gap_exposure": [
+        {
+          "pair": "TIA/USDT:USDT",
+          "trade_id": null,
+          "side": "short",
+          "quantity": 24.0,
+          "event": "2026-06-24T04:00Z",
+          "unknown_funding_rate": null
+        }
+      ],
+      "budget_error": 2.2737367544323206e-13
+    },
+    {
+      "account": "GrossOneRiskTS_500_15bps",
+      "maximum_nav_error": 5.5599571169295814e-08,
+      "filled_orders": 2884,
+      "tia_gap_exposure": [],
+      "budget_error": 5.684341886080802e-14
+    }
+  ]
+}

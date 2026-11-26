@@ -1,0 +1,80 @@
+{
+  "parsed_snapshot_rows": 700,
+  "current_completion_missing_rows": 1,
+  "same_value_archive_clock_rows": 600,
+  "original_missing_preserved": true,
+  "restored_actual_provider_clock_records": [
+    {
+      "date": "2026-04-02 00:00:00+00:00",
+      "HashRate": "964379542.6953608",
+      "completion_current": NaN,
+      "completion_archived": "1775211617.0",
+      "AssetEODCompletionTime": "1775211617"
+    }
+  ],
+  "strict_historical_pit_admitted": false,
+  "conditional_completion_models_complete": false,
+  "prior_day_not_ready_at01_days": 608,
+  "prior_day01_decisions": 608,
+  "clocks": [
+    {
+      "clock": "snapshot_observed",
+      "delay_hours": 0,
+      "status_counts": {
+        "UNAVAILABLE": 14592
+      },
+      "maximum_age_hours": null,
+      "observed_before_decision_hours": 0
+    },
+    {
+      "clock": "completion_model",
+      "delay_hours": 0,
+      "status_counts": {
+        "KNOWN": 14546,
+        "STALE": 46
+      },
+      "maximum_age_hours": 118.0,
+      "observed_before_decision_hours": 0
+    },
+    {
+      "clock": "completion_model",
+      "delay_hours": 24,
+      "status_counts": {
+        "KNOWN": 14522,
+        "STALE": 70
+      },
+      "maximum_age_hours": 142.0,
+      "observed_before_decision_hours": 0
+    }
+  ],
+  "source_api": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/onchain_hash_native_20261114_v1/sources/community_api.json",
+    "sha256": "756089e1a032f0658a74a11c9a22ab4a1def8e84295c070d1022eb69362d1ed9"
+  },
+  "source_archive": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/onchain_hash_native_20261114_v1/sources/btc.csv",
+    "sha256": "06495ff8e643432e6948b7b4686ce44fc106217287dabdc1b38351d9ddec46c3"
+  },
+  "source_receipt": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/onchain_hash_native_20261114_v1/sources/community_api_receipt.json",
+    "sha256": "a3fb7ae39f73ae11a97d4af8e3f3d86af26432c5c4b0844cb13f8150a7d2ae9e"
+  },
+  "metrics": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/onchain_hash_native_20261114_v1/v002/hash_daily.parquet",
+    "sha256": "217ec42ec2f014fbe2b2a74c06302857b9cf283102f5d1040ca4b8ca3ec0d1bb"
+  },
+  "owner_module": {
+    "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/onchain.py",
+    "sha256": "c8f73c5cbf1389216283d67dd149fe85396a4222e3cf1c1f6ba58f3f11cf4a73"
+  },
+  "native_input_copy": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/onchain_hash_native_20261114_v1/OnchainInputs.py",
+    "sha256": "c8f73c5cbf1389216283d67dd149fe85396a4222e3cf1c1f6ba58f3f11cf4a73"
+  },
+  "parent_failure": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/onchain_hash_native_20261114_v1/initial_input_failure.json",
+    "sha256": "a2d5f3b80f40232a1cc050314e7168e326081b84256c1268d8cbb55abf3145a3"
+  },
+  "rule": "Maximum of actually reported completion times for exact same raw HashRate; no interpolation or current-null overwrite",
+  "caveat": "Only conditional calculation-time models; no proof of original historical value version or release."
+}

@@ -1,0 +1,13 @@
+{
+  "stage": "preflight before financial registration",
+  "failure": "KeyError:user_data_dir in StrategyResolver fixture",
+  "original_evidence": "preflight_initial_failed.log",
+  "cause": "Direct raw config lacked native normalized user_data_dir and candle_type_def; strategy economic rules unchanged.",
+  "correction": "Supply actual OUT Path and native CandleType.FUTURES to fixture DataProvider.",
+  "financial_accounts_before_correction": 0,
+  "second_fixture_failure": {
+    "evidence": "preflight_second_failed.log",
+    "failure": "DataProvider historical analyzed retrieval empty without current index",
+    "correction": "Use official _set_dataframe_max_index and verify exact 1000-row causal slice ending before requested index."
+  }
+}

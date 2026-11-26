@@ -1,0 +1,113 @@
+"""Local next-session-open model for native stock backtest integration.
+
+This is a deliberately narrow execution model, not opening-auction evidence.
+Indicators/callbacks retain the original completed OHLCV. Only the execution
+row is reduced to its observed opening price before native order/exit logic.
+The complete EquityBacktesting admission gate remains closed.
+"""
+
+from math import isfinite
+
+import pandas as pd
+
+from freqtrade.data.history.equity import EquityAdmissionError
+from freqtrade.enums import ExitType
+from freqtrade.optimize.backtesting import CLOSE_IDX, DATE_IDX, HIGH_IDX, LOW_IDX, OPEN_IDX
+from freqtrade.persistence import LocalTrade
+from freqtrade.strategy import IStrategy
+
+
+class EquityOpenOnlyMixin:
+    """Compose before session routing and fee-fill mixins, then Backtesting.
+
+    Native strategy callbacks, Trade/Order creation, entry/exit confirmation,
+    sizing and fills still execute. Unsupported exit mechanisms reject before
+    native exit-order mutation. A row never supplies its future daily extrema.
+    """
+
+    def _require_open_only(self):
+        plan = self._require_session_routing()
+        strategy = self.strategy
+        if (
+            self.config.get("equity_execution_model") != "completed_close_next_open_v1"
+            or self.fee != 0
+            or strategy.minimal_roi
+            or strategy.trailing_stop
+            or strategy.use_custom_stoploss
+            or strategy.position_adjustment_enable
+            or not strategy.use_exit_signal
+            or strategy.exit_profit_only
+            or strategy.order_types.get("entry") != "market"
+            or strategy.order_types.get("exit") != "market"
+            or strategy.order_types.get("stoploss_on_exchange")
+            or self._position_stacking
+            or self.enable_protections
+            or type(strategy).custom_exit is not IStrategy.custom_exit
+        ):
+            raise EquityAdmissionError("Explicit market-at-open signal-only model required")
+        return plan
+
+    def backtest_loop(self, row, pair, current_time, trade_dir, can_enter):
+        plan = self._require_open_only()
+        if (
+            pair not in plan.pairs
+            or current_time not in plan.opens
+            or pd.Timestamp(row[DATE_IDX]) != pd.Timestamp(current_time)
+            or self.wallets.asof != current_time
+            or trade_dir not in (None, "long")
+        ):
+            raise EquityAdmissionError("Exact declared native opening boundary required")
+        if any(t.has_open_orders for t in LocalTrade.bt_trades_open):
+            raise EquityAdmissionError("Carried or unfilled orders not admitted at open")
+        price = row[OPEN_IDX]
+        if isinstance(price, bool) or not isfinite(price) or price <= 0:
+            raise EquityAdmissionError("Positive finite opening quote required")
+        execution_row = list(row)
+        execution_row[DATE_IDX] = pd.Timestamp(current_time)
+        for index in (HIGH_IDX, LOW_IDX, CLOSE_IDX):
+            execution_row[index] = price
+        if getattr(self, "_equity_open_context", None) is not None:
+            raise EquityAdmissionError("Nested native opening loop unsupported")
+        self._equity_open_context = (pair, current_time, price)
+        try:
+            result = super().backtest_loop(
+                execution_row, pair, current_time, trade_dir, can_enter
+            )
+            if any(t.has_open_orders for t in LocalTrade.bt_trades_open):
+                raise EquityAdmissionError("Opening market order did not fill atomically")
+            return result
+        finally:
+            self._equity_open_context = None
+
+    def _require_open_row(self, pair, row, current_time):
+        context = getattr(self, "_equity_open_context", None)
+        if (
+            context != (pair, current_time, row[OPEN_IDX])
+            or any(row[i] != row[OPEN_IDX] for i in (HIGH_IDX, LOW_IDX, CLOSE_IDX))
+        ):
+            raise EquityAdmissionError("Native order requires active opening point-price row")
+
+    def _enter_trade(
+        self, pair, row, direction, stake_amount=None, trade=None,
+        requested_rate=None, requested_stake=None, entry_tag1=None,
+    ):
+        self._require_open_row(pair, row, row[DATE_IDX].to_pydatetime())
+        if direction != "long" or any(
+            v is not None
+            for v in (stake_amount, trade, requested_rate, requested_stake, entry_tag1)
+        ):
+            raise EquityAdmissionError("Only ordinary native long entries supported")
+        return super()._enter_trade(pair, row, direction)
+
+    def _get_exit_for_signal(self, trade, row, exit_, current_time, amount=None):
+        self._require_open_row(trade.pair, row, current_time)
+        if exit_.exit_flag and (exit_.exit_type != ExitType.EXIT_SIGNAL or amount is not None):
+            raise EquityAdmissionError("Only prior completed exit signals admitted at open")
+        return super()._get_exit_for_signal(trade, row, exit_, current_time, amount)
+
+    def _try_close_open_order(self, order, trade, current_date, row):
+        if order:
+            self._require_open_row(trade.pair, row, current_date)
+            if order.order_type != "market" or order.ft_price != row[OPEN_IDX]:
+                raise EquityAdmissionError("Exact opening-price market fill required")
+        return super()._try_close_open_order(order, trade, current_date, row)

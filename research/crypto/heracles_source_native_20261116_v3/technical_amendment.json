@@ -1,0 +1,32 @@
+{
+  "recorded_at": "2026-11-16T14:01:59.336290+00:00",
+  "stage": "Before any financial native start",
+  "initial_failure": "Native preflight source-risk assertion failed: inherited MAMA config stoploss-.99 andemptyROI override Heracles source",
+  "repair": "Remove inherited strategy risk/exit/order overrides;load source stoploss-.256,originalROI andpinned native IStrategy defaultlimit order types",
+  "original_financial_protocol_unchanged": true,
+  "source_modified": false,
+  "financial_runs_before_correction": 0,
+  "preserved": "preflight_initial.log andpreflight_v1 source/config/plan plus native preflight output",
+  "second_issue": {
+    "native_fields": [
+      "open_count",
+      "high_count",
+      "low_count",
+      "close_count",
+      "max_count"
+    ],
+    "observed_rows_BTC": [
+      3749,
+      1830
+    ],
+    "observed_rows_ETH": [
+      3749,
+      2846
+    ],
+    "cause": "Original ta.dropna operated on native nullable price-precision helpers and deleted otherwise complete OHLCV rows",
+    "repair": "Explicit supported IStrategy subclass passes original six OHLCV fields to unchanged source and restores untouched native helpers;rejects any actual OHLCV row loss;native dataframe check remains enabled",
+    "scope": "Technical input namespace adaptation,not exact unadapted source class;math/parameters/risks unchanged",
+    "evidence": "native_shape_diagnostic.json,preflight_review.log,preflight_shape_probe.log",
+    "financial_runs_before_correction": 0
+  }
+}

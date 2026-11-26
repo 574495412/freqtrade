@@ -1,0 +1,111 @@
+{
+  "same_trade_prices_and_times": true,
+  "native_market_precision": {
+    "amount": 0.001,
+    "price": 0.1,
+    "base": 1e-08,
+    "quote": 1e-08
+  },
+  "actual_native_trade_pairs": [
+    {
+      "i": 0,
+      "open": "2025-01-01 20:00:00+00:00",
+      "same_price_time_side": true,
+      "amount15": 0.01,
+      "amount8": 0.01,
+      "profit15": -107.67609763,
+      "profit8": -106.41775663,
+      "funding15": -10.36765262696307,
+      "funding8": -10.36765262696307
+    },
+    {
+      "i": 1,
+      "open": "2025-02-26 19:00:00+00:00",
+      "same_price_time_side": true,
+      "amount15": 0.01,
+      "amount8": 0.01,
+      "profit15": -86.66611521,
+      "profit8": -85.42833461,
+      "funding15": 0.1882717919061228,
+      "funding8": 0.1882717919061228
+    },
+    {
+      "i": 2,
+      "open": "2025-03-02 17:20:00+00:00",
+      "same_price_time_side": true,
+      "amount15": 0.008,
+      "amount8": 0.008,
+      "profit15": -76.01924949,
+      "profit8": -75.03609389,
+      "funding15": 0.008312511563297592,
+      "funding8": 0.008312511563297592
+    },
+    {
+      "i": 3,
+      "open": "2025-03-04 02:00:00+00:00",
+      "same_price_time_side": true,
+      "amount15": 0.008,
+      "amount8": 0.008,
+      "profit15": -68.6679195,
+      "profit8": -67.68767422,
+      "funding15": 0.11580610029062378,
+      "funding8": 0.11580610029062378
+    },
+    {
+      "i": 4,
+      "open": "2025-03-06 02:00:00+00:00",
+      "same_price_time_side": true,
+      "amount15": 0.007,
+      "amount8": 0.007,
+      "profit15": -65.70376357,
+      "profit8": -64.85651976,
+      "funding15": -0.18614111938076305,
+      "funding8": -0.18614111938076305
+    },
+    {
+      "i": 5,
+      "open": "2025-03-09 22:00:00+00:00",
+      "same_price_time_side": true,
+      "amount15": 0.007,
+      "amount8": 0.007,
+      "profit15": -56.79970842,
+      "profit8": -55.95777474,
+      "funding15": 2.278435180294988,
+      "funding8": 2.278435180294988
+    },
+    {
+      "i": 6,
+      "open": "2025-04-22 13:40:00+00:00",
+      "same_price_time_side": true,
+      "amount15": 0.005,
+      "amount8": 0.006,
+      "profit15": -63.60903703,
+      "profit8": -75.61408126,
+      "funding15": -17.419602782754083,
+      "funding8": -20.9035233393049
+    },
+    {
+      "i": 7,
+      "open": "2025-11-23 02:00:00+00:00",
+      "same_price_time_side": true,
+      "amount15": 0.005,
+      "amount8": 0.005,
+      "profit15": -48.24242283,
+      "profit8": -47.67160328,
+      "funding15": -4.100738075659112,
+      "funding8": -4.100738075659112
+    },
+    {
+      "i": 8,
+      "open": "2026-01-31 18:40:00+00:00",
+      "same_price_time_side": true,
+      "amount15": 0.005,
+      "amount8": 0.005,
+      "profit15": -2.11975152,
+      "profit8": -1.57349182,
+      "funding15": 4.2958049828598455,
+      "funding8": 4.2958049828598455
+    }
+  ],
+  "interpretation": "Fees change cash and later rounded quantities even with identical price/time paths. This is an actual native account comparison, not a fixed-path fee subtraction; no assumption that fewer bps always improves a discretely sized path."
+}

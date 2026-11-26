@@ -1,0 +1,102 @@
+{
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "native_source_files_verified": 595,
+  "raw_metric_rows": 700,
+  "strict_historical_pit_admitted": false,
+  "native_strategy_resolver": true,
+  "native_data_provider": true,
+  "raw_api_sha256": "756089e1a032f0658a74a11c9a22ab4a1def8e84295c070d1022eb69362d1ed9",
+  "native_clock_owner_sha256": "c8f73c5cbf1389216283d67dd149fe85396a4222e3cf1c1f6ba58f3f11cf4a73",
+  "same_value_clock_reconciliation": true,
+  "episodes": [
+    {
+      "clock": "snapshot_observed",
+      "lag_hours": 0,
+      "bad_hours": 14592,
+      "episodes": [
+        {
+          "start": "2025-01-01 00:00:00+00:00",
+          "end": "2026-08-31 23:00:00+00:00",
+          "hours": 14592,
+          "maximum_age_hours": null
+        }
+      ]
+    },
+    {
+      "clock": "completion_model",
+      "lag_hours": 0,
+      "bad_hours": 46,
+      "episodes": [
+        {
+          "start": "2025-05-04 01:00:00+00:00",
+          "end": "2025-05-05 22:00:00+00:00",
+          "hours": 46,
+          "maximum_age_hours": 118.0
+        }
+      ]
+    },
+    {
+      "clock": "completion_model",
+      "lag_hours": 24,
+      "bad_hours": 70,
+      "episodes": [
+        {
+          "start": "2025-05-04 01:00:00+00:00",
+          "end": "2025-05-06 22:00:00+00:00",
+          "hours": 70,
+          "maximum_age_hours": 142.0
+        }
+      ]
+    }
+  ],
+  "native_rejections": [
+    {
+      "strategy": "HashOnly",
+      "clock": "snapshot_observed",
+      "lag_hours": 0,
+      "status": "REJECTED_BEFORE_STATES_AND_ACCOUNT",
+      "reason": "Unadmitted metric clock at 14592 decision hours"
+    },
+    {
+      "strategy": "HashOnly",
+      "clock": "completion_model",
+      "lag_hours": 0,
+      "status": "REJECTED_BEFORE_STATES_AND_ACCOUNT",
+      "reason": "Unadmitted metric clock at 46 decision hours"
+    },
+    {
+      "strategy": "HashAndPrice",
+      "clock": "completion_model",
+      "lag_hours": 0,
+      "status": "REJECTED_BEFORE_STATES_AND_ACCOUNT",
+      "reason": "Unadmitted metric clock at 46 decision hours"
+    },
+    {
+      "strategy": "PriceAtHashClock",
+      "clock": "completion_model",
+      "lag_hours": 0,
+      "status": "REJECTED_BEFORE_STATES_AND_ACCOUNT",
+      "reason": "Unadmitted metric clock at 46 decision hours"
+    },
+    {
+      "strategy": "HashAndPriceDelay24",
+      "clock": "completion_model",
+      "lag_hours": 24,
+      "status": "REJECTED_BEFORE_STATES_AND_ACCOUNT",
+      "reason": "Unadmitted metric clock at 70 decision hours"
+    },
+    {
+      "strategy": "PriceAtHashClockDelay24",
+      "clock": "completion_model",
+      "lag_hours": 24,
+      "status": "REJECTED_BEFORE_STATES_AND_ACCOUNT",
+      "reason": "Unadmitted metric clock at 70 decision hours"
+    }
+  ],
+  "planned_accounts": 28,
+  "executed_financial_accounts": 0,
+  "accepted_new_factors": 0,
+  "financial_metrics": null,
+  "objective_achieved": false,
+  "no_gate_relaxation": true
+}

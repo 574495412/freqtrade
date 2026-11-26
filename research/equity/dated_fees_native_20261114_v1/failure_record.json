@@ -1,0 +1,22 @@
+{
+  "technical_failures_retained": [
+    {
+      "artifact": "native_probe_initial.log",
+      "reason": "syntax error prevented execution; no fills"
+    },
+    {
+      "artifact": "native_probe_v2.log",
+      "reason": "closed native trade retained last amount; snapshot now reads native wallet holdings; no strategy backtest"
+    },
+    {
+      "artifact": "source_receipts.json",
+      "reason": "SEC direct403 responses preserved; Douyin200 is block HTML, not original video"
+    },
+    {
+      "tool_attempt": "bs4/pdftotext unavailable",
+      "resolution": "stdlib HTMLParser and existing native DocReaderTool; no installation"
+    }
+  ],
+  "risk_sizing_change": "sizing_amendment.json preserves old source/protocol; uses native available stake and checks BACKTEST mode",
+  "financial_failures_relabelled_as_success": false
+}

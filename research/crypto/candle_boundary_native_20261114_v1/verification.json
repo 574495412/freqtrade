@@ -1,0 +1,89 @@
+{
+  "passed_within_scope": true,
+  "actual_successful_native_accounts": 6,
+  "actual_hourly_points": 87552,
+  "evidence": [
+    {
+      "account": "BoundaryStartMinute_15bps",
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/candle_boundary_native_20261114_v1/BoundaryStartMinute_15bps/native_results/backtest-result-2026-11-14_15-41-26.zip",
+      "native_zip_sha256": "876011c5c358adf8c3c75a69ef1f1e8f4f78273e3fca721eecf415c2f652ee31",
+      "actual_trades": 1132,
+      "hourly_points": 14592,
+      "maximum_nav_error": 0,
+      "maximum_funding_error": 0.0
+    },
+    {
+      "account": "BoundaryEndMinute_15bps",
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/candle_boundary_native_20261114_v1/BoundaryEndMinute_15bps/native_results/backtest-result-2026-11-14_15-41-46.zip",
+      "native_zip_sha256": "26079095932c129a35068f7f02929c719596617d59ea9c7127f36be06fa5a19b",
+      "actual_trades": 1132,
+      "hourly_points": 14592,
+      "maximum_nav_error": 0,
+      "maximum_funding_error": 0.0
+    },
+    {
+      "account": "ConstantMinuteControl_15bps",
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/candle_boundary_native_20261114_v1/ConstantMinuteControl_15bps/native_results/backtest-result-2026-11-14_15-43-05.zip",
+      "native_zip_sha256": "0494249c014dd9f2e5a8a62cc3eafa9431623a1a0b769a0dbbee4ee7e7be30c9",
+      "actual_trades": 1,
+      "hourly_points": 14592,
+      "maximum_nav_error": 2.2737367544323206e-13,
+      "maximum_funding_error": 0.0
+    },
+    {
+      "account": "BoundaryStartMinute_8bps",
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/candle_boundary_native_20261114_v1/BoundaryStartMinute_8bps/native_results/backtest-result-2026-11-14_15-43-26.zip",
+      "native_zip_sha256": "77145655d6c62456d7acab695a563ed86809588e4ec32a575117b105dc9aa751",
+      "actual_trades": 2116,
+      "hourly_points": 14592,
+      "maximum_nav_error": 0,
+      "maximum_funding_error": 0.0
+    },
+    {
+      "account": "BoundaryEndMinute_8bps",
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/candle_boundary_native_20261114_v1/BoundaryEndMinute_8bps/native_results/backtest-result-2026-11-14_15-43-46.zip",
+      "native_zip_sha256": "6ac3981f85d3998390c6367963c424952cbbe504edaccd473e07ee9b24d4eff9",
+      "actual_trades": 2031,
+      "hourly_points": 14592,
+      "maximum_nav_error": 0,
+      "maximum_funding_error": 0.0
+    },
+    {
+      "account": "ConstantMinuteControl_8bps",
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/candle_boundary_native_20261114_v1/ConstantMinuteControl_8bps/native_results/backtest-result-2026-11-14_15-45-08.zip",
+      "native_zip_sha256": "4873602b6d9d1bf55ed48f6c81a7a6d8916c8aab56a2785569760d0b8b6c4240",
+      "actual_trades": 1,
+      "hourly_points": 14592,
+      "maximum_nav_error": 2.2737367544323206e-13,
+      "maximum_funding_error": 0.0
+    }
+  ],
+  "source_minute_label_resolved": false,
+  "source_exact_replication": false,
+  "numeric_gates": [
+    {
+      "account": "BoundaryStartMinute",
+      "cost_bps_per_side": 15,
+      "passed": false
+    },
+    {
+      "account": "BoundaryEndMinute",
+      "cost_bps_per_side": 15,
+      "passed": false
+    },
+    {
+      "account": "BoundaryStartMinute",
+      "cost_bps_per_side": 8,
+      "passed": false
+    },
+    {
+      "account": "BoundaryEndMinute",
+      "cost_bps_per_side": 8,
+      "passed": false
+    }
+  ],
+  "new_accepted_alpha": false,
+  "goal_achieved": false,
+  "orders_enabled": false,
+  "services_changed": false
+}

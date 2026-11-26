@@ -1,0 +1,12 @@
+{
+  "provider_tests_initial": {"passed": 24, "failed": 3},
+  "failures": [
+    "XNYS exact frame test required datetime64[us] but native Feather stores datetime64[ms]; timestamps/numeric values unchanged",
+    "XHKG same native Feather datetime unit mismatch",
+    "Invalid-break fixture attempted aware timestamp assignment into naive NaT column before reaching code under test"
+  ],
+  "correction": "Preserve exact timestamp/numeric comparison, allow storage datetime units; construct timezone-aware NaT break fixtures",
+  "financial_accounts_started": 0,
+  "alpha_results_seen_before_correction": false,
+  "lint_initial_errors": 33
+}

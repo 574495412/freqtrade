@@ -1,0 +1,180 @@
+{
+  "schema": "freqtrade.crypto.nfi40_idle_capacity_diagnostic.v1",
+  "computed_at": "2026-11-17T15:16:42.058520+00:00",
+  "protocol_sha256": "ae266b0d73bdf626fb8a5738fe999343cda686917b89779bc19d1b828881b1fd",
+  "passed": true,
+  "scope": "Read-only aggregates from two archived native accounts and fixed source-event metadata. No source-forward returns, new account simulation or strategy financial start.",
+  "input_hashes_matched_mainline_contract": true,
+  "source_event_hash_matched_sealed_v1_manifest": true,
+  "original_ordered_pool_matched": true,
+  "all_source_events": 1891,
+  "shared_window_nonselfterminal_source_events": 1014,
+  "shared_window_distinct_event_clocks": 789,
+  "accounts": [
+    {
+      "account": "nfi-x8-1x-cost15",
+      "cost_bps_per_side": 15,
+      "hourly_rows": 14592,
+      "hourly_calendar_verified": true,
+      "flat_hours": 6145,
+      "flat_hour_fraction": 0.42112116228070173,
+      "open_trade_hour_counts": {
+        "0": 6145,
+        "1": 5326,
+        "2": 1952,
+        "3": 616,
+        "4": 354,
+        "5": 144,
+        "6": 55
+      },
+      "archived_gross_ratio_observation_count": 14591,
+      "archived_gross_ratio_quantiles": {
+        "0.0": 0.0,
+        "0.5": 0.006497637114672148,
+        "0.9": 0.1460446665143559,
+        "0.95": 0.20450607916992464,
+        "0.99": 0.3629725052660389,
+        "1.0": 0.989744309282119
+      },
+      "native_zip_member": "backtest-result-2026-11-05_13-13-57.json",
+      "native_campaigns": 282,
+      "native_rejected_signals": 91,
+      "multi_entry_campaigns": 43,
+      "maximum_entry_orders_in_campaign": 12,
+      "entry_order_count_distribution": {
+        "1": 239,
+        "2": 33,
+        "3": 6,
+        "8": 1,
+        "9": 2,
+        "12": 1
+      },
+      "exit_order_count_distribution": {
+        "1": 266,
+        "2": 10,
+        "3": 2,
+        "7": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1
+      },
+      "native_serialized_cumulative_entry_notional_to_first_entry_quantiles": {
+        "0.0": 0.9999999999999998,
+        "0.5": 1.0,
+        "0.9": 1.9281158304021888,
+        "0.99": 9.042567654505099,
+        "1.0": 13.990087430636212
+      },
+      "max_stake_amount_semantics": "CUMULATIVE_ENTRY_NOTIONAL_NOT_PEAK_CONCURRENT_CAPITAL",
+      "window_nonselfterminal_source_events": 1014,
+      "potential_events_during_old_nfi_flat_hour": 363,
+      "distinct_potential_entry_clocks_during_old_nfi_flat_hour": 299,
+      "potential_is_not_a_fill_or_return": true,
+      "same_clock_nfi_signals_not_subtracted": true,
+      "cash_minimum_rule_and_aux_occupancy_gates_not_applied": true,
+      "inputs": [
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15/hourly_equity.parquet",
+          "sha256": "43b2f8ba81621adef48080f17fb67e9ea985f3e95db616bbeb711886cf3c2fa2",
+          "expected_from": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/input_hashes.json",
+          "bytes": 596158
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_cost15_20261105_v001/nfi-x8-1x-cost15/native_results/backtest-result-2026-11-05_13-13-57.zip",
+          "sha256": "e2ff3c9a7de5960375b63270e2ce1ee35a4eca47a43a28ad1ad2cc3a08624fb3",
+          "expected_from": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/input_hashes.json",
+          "bytes": 3794094
+        }
+      ]
+    },
+    {
+      "account": "nfi-x8-1x-cost8",
+      "cost_bps_per_side": 8,
+      "hourly_rows": 14592,
+      "hourly_calendar_verified": true,
+      "flat_hours": 6467,
+      "flat_hour_fraction": 0.44318804824561403,
+      "open_trade_hour_counts": {
+        "0": 6467,
+        "1": 5073,
+        "2": 1886,
+        "3": 612,
+        "4": 357,
+        "5": 148,
+        "6": 49
+      },
+      "archived_gross_ratio_observation_count": 14591,
+      "archived_gross_ratio_quantiles": {
+        "0.0": 0.0,
+        "0.5": 0.005427796786326164,
+        "0.9": 0.14527890992403725,
+        "0.95": 0.2030042220630402,
+        "0.99": 0.3601679521041815,
+        "1.0": 0.98911309739702
+      },
+      "native_zip_member": "backtest-result-2026-11-05_12-46-45.json",
+      "native_campaigns": 286,
+      "native_rejected_signals": 89,
+      "multi_entry_campaigns": 39,
+      "maximum_entry_orders_in_campaign": 12,
+      "entry_order_count_distribution": {
+        "1": 247,
+        "2": 30,
+        "3": 5,
+        "8": 1,
+        "9": 2,
+        "12": 1
+      },
+      "exit_order_count_distribution": {
+        "1": 270,
+        "2": 10,
+        "3": 2,
+        "7": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1
+      },
+      "native_serialized_cumulative_entry_notional_to_first_entry_quantiles": {
+        "0.0": 0.9999999999999998,
+        "0.5": 1.0,
+        "0.9": 1.633086057134566,
+        "0.99": 8.991717476263874,
+        "1.0": 13.990087430636212
+      },
+      "max_stake_amount_semantics": "CUMULATIVE_ENTRY_NOTIONAL_NOT_PEAK_CONCURRENT_CAPITAL",
+      "window_nonselfterminal_source_events": 1014,
+      "potential_events_during_old_nfi_flat_hour": 381,
+      "distinct_potential_entry_clocks_during_old_nfi_flat_hour": 314,
+      "potential_is_not_a_fill_or_return": true,
+      "same_clock_nfi_signals_not_subtracted": true,
+      "cash_minimum_rule_and_aux_occupancy_gates_not_applied": true,
+      "inputs": [
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x8-1x-cost8/hourly_equity.parquet",
+          "sha256": "b753e652a1c1301f00ef1ea2301e22fa226b9bde6361ff3b9fd31404d2bb8c21",
+          "expected_from": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/input_hashes.json",
+          "bytes": 581426
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/wide_strategy_comparison_20261105_v001/nfi-x8-1x-cost8/native_results/backtest-result-2026-11-05_12-46-45.zip",
+          "sha256": "80e731e8528e6c95a424e71ae8867b1fe48f914ecbb4569e34c8f131f9743c73",
+          "expected_from": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_account_admission_20261117_v1/input_hashes.json",
+          "bytes": 3794566
+        }
+      ]
+    }
+  ],
+  "semantic_correction": "Initial verbal inspection described max_stake_amount/first fill as peak capital. Native recalc_trade_from_orders sums every entry without subtracting exits; this receipt explicitly corrects it to cumulative entry turnover. It is not used to size the reserve.",
+  "native_semantics_reference": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/persistence/trade_model.py",
+    "sha256": "a011ca8686a205fd279ef665a2a3d5a1a4e3fb8cec9cbbac7f429eed0da85c2d",
+    "function": "LocalTrade.recalc_trade_from_orders",
+    "lines": "1267-1318"
+  },
+  "market_returns_computed": false,
+  "source_return_helper_called": false,
+  "new_financial_accounts": 0,
+  "historical_execution_certified": false,
+  "financial_performance_proven": false,
+  "goal_complete": false
+}

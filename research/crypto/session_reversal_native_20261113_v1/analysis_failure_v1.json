@@ -1,0 +1,7 @@
+{
+  "stage": "Post-native indicator equality audit",
+  "error": "assert_frame_equal compares datetime64[ms,UTC] with datetime64[us,UTC] indexes as unequal dtypes",
+  "correction": "Normalize both labels to nanoseconds; no clocks/rows/values dropped or filled",
+  "native_accounts_already_completed": 12,
+  "financial_artifacts_or_rules_changed": false
+}

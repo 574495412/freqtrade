@@ -1,0 +1,148 @@
+"""Local Copula execution preparation; no matching, wallet or return simulator.
+
+The source's reference-beta quantities and per-coin notional prose do not fully
+specify one identical portfolio. This module explicitly uses the beta-ratio
+interpretation with a common gross budget and fixed weekly coin units.
+"""
+
+from math import isclose, isfinite, nextafter
+
+import pandas as pd
+
+from freqtrade.exchange import amount_to_contract_precision
+from freqtrade.persistence import Trade
+from freqtrade.wallets import Wallets
+
+
+def _positive(value):
+    if isinstance(value, bool) or not isfinite(value) or value <= 0:
+        raise ValueError("Finite positive execution value required")
+    return float(value)
+
+
+def intent_schedule(forecasts, alpha):
+    """Hourly completed decisions -> explicit native five-minute fill intents.
+
+    Ordinary transitions fill at T+5m. Weekly old positions exit at T+5m, the
+    flat wallet budgets at T+10m, and new positions may enter at T+10m. These
+    are prospective intents, never evidence of an actual funded fill.
+    """
+    if alpha not in (10, 15, 20):
+        raise ValueError("All and only the three frozen source thresholds")
+    times = pd.DatetimeIndex(forecasts.index)
+    if (
+        times.tz is None or times.empty or times.has_duplicates
+        or not times.as_unit("ns").equals(
+            pd.date_range(times[0], times[-1], freq="h").as_unit("ns")
+        )
+        or not times.equals(times.floor("h"))
+    ):
+        raise ValueError("Complete ordered timezone-aware hourly decision grid required")
+    rows, previous, prior_week, prior_legs = [], 0, None, None
+    for stamp, row in forecasts.iterrows():
+        state, week = row[f"state_{alpha}"], row.week
+        if state not in (-1, 0, 1):
+            raise ValueError("Exact source state required")
+        fitted = row.model_status == "FITTED"
+        if not fitted and state != 0:
+            raise ValueError("Non-fitted source week cannot have an active state")
+        legs = None
+        if fitted:
+            if row.symbol1 == row.symbol2 or "BTC" in (row.symbol1, row.symbol2):
+                raise ValueError("Two distinct nominated altcoin legs required")
+            legs = ((row.symbol1, _positive(row.beta1)), (row.symbol2, _positive(row.beta2)))
+        boundary = prior_week is not None and week != prior_week
+        if prior_week == week and legs != prior_legs:
+            raise ValueError("Weekly nominees/betas cannot change inside the trading week")
+        if not boundary and previous and state and state != previous:
+            raise ValueError("No same-week direct reversal in the frozen source state")
+        if previous and (boundary or state != previous):
+            rows.append(dict(action="exit", at=stamp + pd.Timedelta(minutes=5),
+                             decision_time=stamp, week=prior_week, state=previous, legs=prior_legs))
+        if fitted and (prior_week is None or boundary):
+            rows.append(dict(action="budget", at=stamp + pd.Timedelta(minutes=10 if boundary else 5),
+                             decision_time=stamp, week=week, state=0, legs=legs))
+        if state and (not previous or boundary):
+            rows.append(dict(action="entry", at=stamp + pd.Timedelta(minutes=10 if boundary else 5),
+                             decision_time=stamp, week=week, state=int(state), legs=legs))
+        previous, prior_week, prior_legs = int(state), week, legs
+    priority = {"exit": 0, "budget": 1, "entry": 2}
+    return sorted(rows, key=lambda r: (r["at"], priority[r["action"]]))
+
+
+def freeze_weekly_units(wallets, exchange, legs, rates):
+    """Read actual flat native wallet; native total stake already applies .99.
+
+    The returned fixed units are not refitted at each signal or scaled from a
+    different capital curve. Original beta ratios remain visible after rounding.
+    """
+    if not isinstance(wallets, Wallets) or Trade.get_trades_proxy(is_open=True):
+        raise ValueError("Actual flat native Wallets required for weekly budget")
+    if wallets._config.get("tradable_balance_ratio") != .99:
+        raise ValueError("Frozen native tradable balance ratio must be .99")
+    if len(legs) != 2 or len({p for p, _ in legs}) != 2 or set(rates) != {p for p, _ in legs}:
+        raise ValueError("Exact two-leg price and beta contract required")
+    budget = _positive(wallets.get_total_stake_amount())
+    denominator = sum(_positive(beta) * _positive(rates[pair]) for pair, beta in legs)
+    scale = budget / denominator
+    units = {pair: exchange.amount_to_precision(pair, scale * beta) for pair, beta in legs}
+    gross = sum(units[pair] * rates[pair] for pair, _ in legs)
+    if gross > budget + 1e-8 or any(q < 0 or not isfinite(q) for q in units.values()):
+        raise ValueError("Native rounded quantities exceed the frozen gross budget")
+    return dict(native_gross_budget=budget, scale=scale, quantities=units,
+                gross_at_week_open=gross, leverage=3., sizing="reference_beta_ratio")
+
+
+def native_stake_for_quantity(exchange, pair, quantity, rate):
+    """Find a float stake whose native amount rounding preserves fixed units."""
+    quantity, rate = _positive(quantity), _positive(rate)
+    precision, mode = exchange.get_precision_amount(pair), exchange.precisionMode
+    size = exchange.get_contract_size(pair)
+    stake = quantity * rate / 3.
+    for _ in range(16):
+        actual = amount_to_contract_precision(stake / rate * 3., precision, mode, size)
+        if actual == quantity:
+            return stake
+        if actual > quantity:
+            break
+        stake = nextafter(stake, float("inf"))
+    raise ValueError("Fixed quantity cannot be preserved by native stake conversion")
+
+
+def joint_entry_admission(wallets, exchange, frozen, rates, fee):
+    """Both legs must pass native precision, minima, caps and joint cash checks.
+
+    This is a preflight decision, not atomic exchange execution. A later native
+    fill audit still must reject missing legs or any unintended quantity change.
+    """
+    if not isinstance(wallets, Wallets) or Trade.get_trades_proxy(is_open=True):
+        raise ValueError("Entry preflight requires a flat native wallet")
+    if isinstance(fee, bool) or not isfinite(fee) or not 0 <= fee < 1:
+        raise ValueError("Explicit finite aggregate per-side cost required")
+    quantities = frozen["quantities"]
+    if len(quantities) != 2 or set(rates) != set(quantities):
+        raise ValueError("Exact frozen two-leg prices required")
+    reasons, stakes = [], {}
+    for pair, quantity in quantities.items():
+        rate = _positive(rates[pair])
+        if quantity <= 0:
+            reasons.append(dict(pair=pair, reason="native_rounding_zero"))
+            continue
+        stake = native_stake_for_quantity(exchange, pair, quantity, rate)
+        minimum = exchange.get_min_pair_stake_amount(pair, rate, -.05, leverage=3.) or 0.
+        maximum = exchange.get_max_pair_stake_amount(pair, rate, leverage=3.)
+        if not minimum <= stake <= maximum:
+            reasons.append(dict(pair=pair, reason="native_stake_bounds", minimum=minimum,
+                                maximum=maximum, required=stake))
+        if not isclose(exchange.amount_to_precision(pair, quantity), quantity, abs_tol=1e-12):
+            raise ValueError("Frozen coin quantity changed precision")
+        stakes[pair] = stake
+    required = sum(stakes.values()) + sum(quantities[p] * rates[p] * fee for p in quantities)
+    available = wallets.get_available_stake_amount()
+    if required > available + 1e-8:
+        reasons.append(dict(reason="native_joint_margin_and_cost", required=required,
+                            available=available))
+    return dict(status="REJECT_BOTH" if reasons else "ADMIT_BOTH", reasons=reasons,
+                requested_stakes=stakes, required_margin_and_entry_cost=required,
+                native_available_stake=available, quantities=dict(quantities),
+                native_fills=0)

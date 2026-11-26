@@ -1,0 +1,941 @@
+{
+  "accounts": [
+    {
+      "account": "RollingRF_1000",
+      "strategy": "RollingRF",
+      "capital": 1000,
+      "cost_bps_per_side": 15,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.9381215261700002,
+          "maximum_hourly_mark_drawdown": 0.9381215261700002,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 61.878473829999734,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.9075745816800005,
+          "maximum_hourly_mark_drawdown": 0.9104741611500003,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 92.4254183199995,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.3305037190552791,
+          "maximum_hourly_mark_drawdown": 0.33437157885043484,
+          "initial_usdt": 92.4254183199995,
+          "ending_usdt": 61.878473829999734,
+          "observations": 5832
+        }
+      ],
+      "trades": 1111,
+      "funding_usdt": -1.950781867236586,
+      "model": {
+        "passed": true,
+        "native_windows": 87,
+        "train_rows_min": 700,
+        "train_rows_max": 700,
+        "feature_counts": [
+          65
+        ],
+        "mature_training_labels": 60900,
+        "prediction_rows": 14592,
+        "independent_probability_max_error": 0.0,
+        "fully_mature_diagnostic_rows": 14572,
+        "tail_unknown_rows": 20,
+        "brier_score": 0.299413270867558,
+        "auc": 0.5162747556416218,
+        "direction_accuracy": 0.5253225363711227,
+        "scope": "Overlapping20hour historical rolling labels, not independent OOS or net account returns"
+      },
+      "separate_terminal_return": -0.9381215261699999
+    },
+    {
+      "account": "RollingRF_1000",
+      "strategy": "RollingRF",
+      "capital": 1000,
+      "cost_bps_per_side": 8,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.9362370955400002,
+          "maximum_hourly_mark_drawdown": 0.9363814076184861,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 63.76290445999973,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.8290821300699986,
+          "maximum_hourly_mark_drawdown": 0.8312465359952956,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 170.9178699300013,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.6269383389454036,
+          "maximum_hourly_mark_drawdown": 0.6276777987373678,
+          "initial_usdt": 170.9178699300013,
+          "ending_usdt": 63.76290445999973,
+          "observations": 5832
+        }
+      ],
+      "trades": 2162,
+      "funding_usdt": -2.768103613568888,
+      "model": {
+        "passed": true,
+        "native_windows": 87,
+        "train_rows_min": 700,
+        "train_rows_max": 700,
+        "feature_counts": [
+          65
+        ],
+        "mature_training_labels": 60900,
+        "prediction_rows": 14592,
+        "independent_probability_max_error": 0.0,
+        "fully_mature_diagnostic_rows": 14572,
+        "tail_unknown_rows": 20,
+        "brier_score": 0.299413270867558,
+        "auc": 0.5162747556416218,
+        "direction_accuracy": 0.5253225363711227,
+        "scope": "Overlapping20hour historical rolling labels, not independent OOS or net account returns"
+      },
+      "separate_terminal_return": -0.93623709554
+    },
+    {
+      "account": "RollingRF_500",
+      "strategy": "RollingRF",
+      "capital": 500,
+      "cost_bps_per_side": 15,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.8789509932600006,
+          "maximum_hourly_mark_drawdown": 0.8793959379673423,
+          "initial_usdt": 500.0,
+          "ending_usdt": 60.52450336999971,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.8153850811200003,
+          "maximum_hourly_mark_drawdown": 0.819362087008569,
+          "initial_usdt": 500.0,
+          "ending_usdt": 92.30745943999983,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.3443162260430226,
+          "maximum_hourly_mark_drawdown": 0.35050528162955563,
+          "initial_usdt": 92.30745943999983,
+          "ending_usdt": 60.52450336999971,
+          "observations": 5832
+        }
+      ],
+      "trades": 766,
+      "funding_usdt": -0.8709042639191045,
+      "model": {
+        "passed": true,
+        "native_windows": 87,
+        "train_rows_min": 700,
+        "train_rows_max": 700,
+        "feature_counts": [
+          65
+        ],
+        "mature_training_labels": 60900,
+        "prediction_rows": 14592,
+        "independent_probability_max_error": 0.0,
+        "fully_mature_diagnostic_rows": 14572,
+        "tail_unknown_rows": 20,
+        "brier_score": 0.299413270867558,
+        "auc": 0.5162747556416218,
+        "direction_accuracy": 0.5253225363711227,
+        "scope": "Overlapping20hour historical rolling labels, not independent OOS or net account returns"
+      },
+      "separate_terminal_return": -0.87895099326
+    },
+    {
+      "account": "RollingRF_500",
+      "strategy": "RollingRF",
+      "capital": 500,
+      "cost_bps_per_side": 8,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.8780521671799985,
+          "maximum_hourly_mark_drawdown": 0.8782123237845222,
+          "initial_usdt": 500.0,
+          "ending_usdt": 60.973916410000754,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.790959995279999,
+          "maximum_hourly_mark_drawdown": 0.795128428364548,
+          "initial_usdt": 500.0,
+          "ending_usdt": 104.52000236000049,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.41662920940255066,
+          "maximum_hourly_mark_drawdown": 0.417573930038784,
+          "initial_usdt": 104.52000236000049,
+          "ending_usdt": 60.973916410000754,
+          "observations": 5832
+        }
+      ],
+      "trades": 1618,
+      "funding_usdt": -1.4293814216368492,
+      "model": {
+        "passed": true,
+        "native_windows": 87,
+        "train_rows_min": 700,
+        "train_rows_max": 700,
+        "feature_counts": [
+          65
+        ],
+        "mature_training_labels": 60900,
+        "prediction_rows": 14592,
+        "independent_probability_max_error": 0.0,
+        "fully_mature_diagnostic_rows": 14572,
+        "tail_unknown_rows": 20,
+        "brier_score": 0.299413270867558,
+        "auc": 0.5162747556416218,
+        "direction_accuracy": 0.5253225363711227,
+        "scope": "Overlapping20hour historical rolling labels, not independent OOS or net account returns"
+      },
+      "separate_terminal_return": -0.87805216718
+    },
+    {
+      "account": "RollingPrior_1000",
+      "strategy": "RollingPrior",
+      "capital": 1000,
+      "cost_bps_per_side": 15,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.9172781301400008,
+          "maximum_hourly_mark_drawdown": 0.9186581186785178,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 82.72186985999917,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.7069577388200005,
+          "maximum_hourly_mark_drawdown": 0.711754040334445,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 293.0422611799995,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.7177135150169083,
+          "maximum_hourly_mark_drawdown": 0.7206698798021157,
+          "initial_usdt": 293.0422611799995,
+          "ending_usdt": 82.72186985999917,
+          "observations": 5832
+        }
+      ],
+      "trades": 885,
+      "funding_usdt": -3.073219801910816,
+      "model": {
+        "passed": true,
+        "native_windows": 87,
+        "train_rows_min": 700,
+        "train_rows_max": 700,
+        "feature_counts": [
+          65
+        ],
+        "mature_training_labels": 60900,
+        "prediction_rows": 14592,
+        "independent_probability_max_error": 0.0,
+        "fully_mature_diagnostic_rows": 14572,
+        "tail_unknown_rows": 20,
+        "brier_score": 0.2536850117922546,
+        "auc": 0.49658050457148645,
+        "direction_accuracy": 0.5013038704364535,
+        "scope": "Overlapping20hour historical rolling labels, not independent OOS or net account returns"
+      },
+      "separate_terminal_return": -0.91727813014
+    },
+    {
+      "account": "RollingPrior_1000",
+      "strategy": "RollingPrior",
+      "capital": 1000,
+      "cost_bps_per_side": 8,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.8244722166699996,
+          "maximum_hourly_mark_drawdown": 0.8291269894640262,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 175.52778333000037,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.5156629693999999,
+          "maximum_hourly_mark_drawdown": 0.5296662852851122,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 484.33703060000016,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.6375916515973281,
+          "maximum_hourly_mark_drawdown": 0.6431425055864636,
+          "initial_usdt": 484.33703060000016,
+          "ending_usdt": 175.52778333000037,
+          "observations": 5832
+        }
+      ],
+      "trades": 885,
+      "funding_usdt": -3.35817599247552,
+      "model": {
+        "passed": true,
+        "native_windows": 87,
+        "train_rows_min": 700,
+        "train_rows_max": 700,
+        "feature_counts": [
+          65
+        ],
+        "mature_training_labels": 60900,
+        "prediction_rows": 14592,
+        "independent_probability_max_error": 0.0,
+        "fully_mature_diagnostic_rows": 14572,
+        "tail_unknown_rows": 20,
+        "brier_score": 0.2536850117922546,
+        "auc": 0.49658050457148645,
+        "direction_accuracy": 0.5013038704364535,
+        "scope": "Overlapping20hour historical rolling labels, not independent OOS or net account returns"
+      },
+      "separate_terminal_return": -0.82447221667
+    },
+    {
+      "account": "RollingPrior_500",
+      "strategy": "RollingPrior",
+      "capital": 500,
+      "cost_bps_per_side": 15,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.8738840378600009,
+          "maximum_hourly_mark_drawdown": 0.8753879710674799,
+          "initial_usdt": 500.0,
+          "ending_usdt": 63.05798106999953,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.6701274132800004,
+          "maximum_hourly_mark_drawdown": 0.6746423747390417,
+          "initial_usdt": 500.0,
+          "ending_usdt": 164.9362933599998,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.6176828047641072,
+          "maximum_hourly_mark_drawdown": 0.6193101933559431,
+          "initial_usdt": 164.9362933599998,
+          "ending_usdt": 63.05798106999953,
+          "observations": 5832
+        }
+      ],
+      "trades": 762,
+      "funding_usdt": -1.4843901257616035,
+      "model": {
+        "passed": true,
+        "native_windows": 87,
+        "train_rows_min": 700,
+        "train_rows_max": 700,
+        "feature_counts": [
+          65
+        ],
+        "mature_training_labels": 60900,
+        "prediction_rows": 14592,
+        "independent_probability_max_error": 0.0,
+        "fully_mature_diagnostic_rows": 14572,
+        "tail_unknown_rows": 20,
+        "brier_score": 0.2536850117922546,
+        "auc": 0.49658050457148645,
+        "direction_accuracy": 0.5013038704364535,
+        "scope": "Overlapping20hour historical rolling labels, not independent OOS or net account returns"
+      },
+      "separate_terminal_return": -0.87388403786
+    },
+    {
+      "account": "RollingPrior_500",
+      "strategy": "RollingPrior",
+      "capital": 500,
+      "cost_bps_per_side": 8,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.7865224778400002,
+          "maximum_hourly_mark_drawdown": 0.7915240208560709,
+          "initial_usdt": 500.0,
+          "ending_usdt": 106.7387610799999,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.4823275120999997,
+          "maximum_hourly_mark_drawdown": 0.49526853963747797,
+          "initial_usdt": 500.0,
+          "ending_usdt": 258.83624395000015,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.5876204991576882,
+          "maximum_hourly_mark_drawdown": 0.5925932834034802,
+          "initial_usdt": 258.83624395000015,
+          "ending_usdt": 106.7387610799999,
+          "observations": 5832
+        }
+      ],
+      "trades": 885,
+      "funding_usdt": -1.5615913486710717,
+      "model": {
+        "passed": true,
+        "native_windows": 87,
+        "train_rows_min": 700,
+        "train_rows_max": 700,
+        "feature_counts": [
+          65
+        ],
+        "mature_training_labels": 60900,
+        "prediction_rows": 14592,
+        "independent_probability_max_error": 0.0,
+        "fully_mature_diagnostic_rows": 14572,
+        "tail_unknown_rows": 20,
+        "brier_score": 0.2536850117922546,
+        "auc": 0.49658050457148645,
+        "direction_accuracy": 0.5013038704364535,
+        "scope": "Overlapping20hour historical rolling labels, not independent OOS or net account returns"
+      },
+      "separate_terminal_return": -0.78652247784
+    },
+    {
+      "account": "SmaPriceBTC_1000",
+      "strategy": "SmaPriceBTC",
+      "capital": 1000,
+      "cost_bps_per_side": 15,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.14838378672932073,
+          "maximum_hourly_mark_drawdown": 0.4127257573068448,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 851.6162132706793,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.1523716756700001,
+          "maximum_hourly_mark_drawdown": 0.34196264668172893,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 847.6283243299999,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.004704761304232585,
+          "maximum_hourly_mark_drawdown": 0.17038995190023348,
+          "initial_usdt": 847.6283243299999,
+          "ending_usdt": 851.6162132706793,
+          "observations": 5832
+        }
+      ],
+      "trades": 18,
+      "funding_usdt": -33.445382646069525,
+      "model": null,
+      "separate_terminal_return": -0.14838478523000004
+    },
+    {
+      "account": "SmaPriceBTC_1000",
+      "strategy": "SmaPriceBTC",
+      "capital": 1000,
+      "cost_bps_per_side": 8,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.11702789413425274,
+          "maximum_hourly_mark_drawdown": 0.40272523796053444,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 882.9721058657473,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.13736512033000003,
+          "maximum_hourly_mark_drawdown": 0.33470113086018566,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 862.6348796699999,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.0235757058693562,
+          "maximum_hourly_mark_drawdown": 0.16551350292224185,
+          "initial_usdt": 862.6348796699999,
+          "ending_usdt": 882.9721058657473,
+          "observations": 5832
+        }
+      ],
+      "trades": 18,
+      "funding_usdt": -33.55326126269097,
+      "model": null,
+      "separate_terminal_return": -0.11702899324999998
+    },
+    {
+      "account": "SmaPriceBTC_500",
+      "strategy": "SmaPriceBTC",
+      "capital": 500,
+      "cost_bps_per_side": 15,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.13132751772932072,
+          "maximum_hourly_mark_drawdown": 0.3946760644004481,
+          "initial_usdt": 500.0,
+          "ending_usdt": 434.33624113533966,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.14141237927999994,
+          "maximum_hourly_mark_drawdown": 0.3280599802862462,
+          "initial_usdt": 500.0,
+          "ending_usdt": 429.29381036,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.011745873463936407,
+          "maximum_hourly_mark_drawdown": 0.15529419614246537,
+          "initial_usdt": 429.29381036,
+          "ending_usdt": 434.33624113533966,
+          "observations": 5832
+        }
+      ],
+      "trades": 18,
+      "funding_usdt": -15.869871507782944,
+      "model": null,
+      "separate_terminal_return": -0.13132851622000002
+    },
+    {
+      "account": "SmaPriceBTC_500",
+      "strategy": "SmaPriceBTC",
+      "capital": 500,
+      "cost_bps_per_side": 8,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.11918019214932063,
+          "maximum_hourly_mark_drawdown": 0.3915040239361628,
+          "initial_usdt": 500.0,
+          "ending_usdt": 440.4099039253397,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.12725288526,
+          "maximum_hourly_mark_drawdown": 0.32128266030680835,
+          "initial_usdt": 500.0,
+          "ending_usdt": 436.37355737,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": 0.009249750556991732,
+          "maximum_hourly_mark_drawdown": 0.15944652502541076,
+          "initial_usdt": 436.37355737,
+          "ending_usdt": 440.4099039253397,
+          "observations": 5832
+        }
+      ],
+      "trades": 18,
+      "funding_usdt": -15.80190222969317,
+      "model": null,
+      "separate_terminal_return": -0.11918119134000003
+    },
+    {
+      "account": "HoldBTC_1000",
+      "strategy": "HoldBTC",
+      "capital": 1000,
+      "cost_bps_per_side": 15,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.2268097660905264,
+          "maximum_hourly_mark_drawdown": 0.5443063743807296,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 773.1902339094736,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.12375316854192087,
+          "maximum_hourly_mark_drawdown": 0.3489437157459671,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 876.2468314580791,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.11761137826554968,
+          "maximum_hourly_mark_drawdown": 0.406192241232693,
+          "initial_usdt": 876.2468314580791,
+          "ending_usdt": 773.1902339094736,
+          "observations": 5832
+        }
+      ],
+      "trades": 1,
+      "funding_usdt": -66.19688659052628,
+      "model": null,
+      "separate_terminal_return": -0.22681076459
+    },
+    {
+      "account": "HoldBTC_1000",
+      "strategy": "HoldBTC",
+      "capital": 1000,
+      "cost_bps_per_side": 8,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.2255992889905265,
+          "maximum_hourly_mark_drawdown": 0.5440190575143647,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 774.4007110094735,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.12247936524192093,
+          "maximum_hourly_mark_drawdown": 0.34876139488411,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 877.520634758079,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.11751281925926937,
+          "maximum_hourly_mark_drawdown": 0.40591535586224303,
+          "initial_usdt": 877.520634758079,
+          "ending_usdt": 774.4007110094735,
+          "observations": 5832
+        }
+      ],
+      "trades": 1,
+      "funding_usdt": -66.19688659052628,
+      "model": null,
+      "separate_terminal_return": -0.22560028819
+    },
+    {
+      "account": "HoldBTC_500",
+      "strategy": "HoldBTC",
+      "capital": 500,
+      "cost_bps_per_side": 15,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.2268097660905264,
+          "maximum_hourly_mark_drawdown": 0.5443063743807296,
+          "initial_usdt": 500.0,
+          "ending_usdt": 386.5951169547368,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.12375316854192087,
+          "maximum_hourly_mark_drawdown": 0.3489437157459671,
+          "initial_usdt": 500.0,
+          "ending_usdt": 438.12341572903955,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.11761137826554968,
+          "maximum_hourly_mark_drawdown": 0.406192241232693,
+          "initial_usdt": 438.12341572903955,
+          "ending_usdt": 386.5951169547368,
+          "observations": 5832
+        }
+      ],
+      "trades": 1,
+      "funding_usdt": -33.09844329526314,
+      "model": null,
+      "separate_terminal_return": -0.2268107646
+    },
+    {
+      "account": "HoldBTC_500",
+      "strategy": "HoldBTC",
+      "capital": 500,
+      "cost_bps_per_side": 8,
+      "periods": [
+        {
+          "name": "continuous",
+          "net_return": -0.2255992889905265,
+          "maximum_hourly_mark_drawdown": 0.5440190575143647,
+          "initial_usdt": 500.0,
+          "ending_usdt": 387.20035550473676,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.12247936524192093,
+          "maximum_hourly_mark_drawdown": 0.34876139488411,
+          "initial_usdt": 500.0,
+          "ending_usdt": 438.7603173790395,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.11751281925926937,
+          "maximum_hourly_mark_drawdown": 0.40591535586224303,
+          "initial_usdt": 438.7603173790395,
+          "ending_usdt": 387.20035550473676,
+          "observations": 5832
+        }
+      ],
+      "trades": 1,
+      "funding_usdt": -33.09844329526314,
+      "model": null,
+      "separate_terminal_return": -0.2256002882
+    }
+  ],
+  "combinations": [
+    {
+      "cost_bps_per_side": 15,
+      "rf_mix": [
+        {
+          "name": "continuous",
+          "net_return": -0.5051392554946607,
+          "maximum_hourly_mark_drawdown": 0.5515788162672107,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 494.86074450533937,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.4783987302000001,
+          "maximum_hourly_mark_drawdown": 0.480043477552324,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 521.6012697999998,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.05126621970248213,
+          "maximum_hourly_mark_drawdown": 0.1843886330281985,
+          "initial_usdt": 521.6012697999998,
+          "ending_usdt": 494.86074450533937,
+          "observations": 5832
+        }
+      ],
+      "prior_mix": [
+        {
+          "name": "continuous",
+          "net_return": -0.5026057777946609,
+          "maximum_hourly_mark_drawdown": 0.5639530930023458,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 497.3942222053392,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.40576989628000026,
+          "maximum_hourly_mark_drawdown": 0.426760025352184,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 594.2301037199998,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.162960242014749,
+          "maximum_hourly_mark_drawdown": 0.27496144303199327,
+          "initial_usdt": 594.2301037199998,
+          "ending_usdt": 497.3942222053392,
+          "observations": 5832
+        }
+      ],
+      "gates": {
+        "rf_positive_each_slice": false,
+        "combo_positive_each_slice": false,
+        "rf_beats_all_matched_controls": false,
+        "rf_mix_beats_prior_mix": false,
+        "rf_mix_beats_best_1000_component": false,
+        "drawdown": false
+      },
+      "necessary_gate_passed": false
+    },
+    {
+      "cost_bps_per_side": 8,
+      "rf_mix": [
+        {
+          "name": "continuous",
+          "net_return": -0.49861617966465954,
+          "maximum_hourly_mark_drawdown": 0.5467059621706409,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 501.38382033534043,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.45910644026999947,
+          "maximum_hourly_mark_drawdown": 0.4613924286782051,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 540.8935597300006,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.07304531304529183,
+          "maximum_hourly_mark_drawdown": 0.1916587461873584,
+          "initial_usdt": 540.8935597300006,
+          "ending_usdt": 501.38382033534043,
+          "observations": 5832
+        }
+      ],
+      "prior_mix": [
+        {
+          "name": "continuous",
+          "net_return": -0.45285133499466046,
+          "maximum_hourly_mark_drawdown": 0.5349891827228226,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 547.1486650053396,
+          "observations": 14592
+        },
+        {
+          "name": "calendar-2025",
+          "net_return": -0.3047901986799998,
+          "maximum_hourly_mark_drawdown": 0.35619638617239163,
+          "initial_usdt": 1000.0,
+          "ending_usdt": 695.2098013200002,
+          "observations": 8761
+        },
+        {
+          "name": "calendar-2026-through-august",
+          "net_return": -0.21297331544166354,
+          "maximum_hourly_mark_drawdown": 0.30980567896402783,
+          "initial_usdt": 695.2098013200002,
+          "ending_usdt": 547.1486650053396,
+          "observations": 5832
+        }
+      ],
+      "gates": {
+        "rf_positive_each_slice": false,
+        "combo_positive_each_slice": false,
+        "rf_beats_all_matched_controls": false,
+        "rf_mix_beats_prior_mix": false,
+        "rf_mix_beats_best_1000_component": false,
+        "drawdown": false
+      },
+      "necessary_gate_passed": false
+    }
+  ],
+  "complete_native_accounts": 16,
+  "model_window_fits": 696,
+  "actual_native_trades": 9150,
+  "actual_native_fills": 18300,
+  "account_hour_points": 233472,
+  "maximum_independent_nav_error_usdt": 2.614397232036936e-07,
+  "all_model_and_account_checks_passed": true,
+  "cross_capital_cost_predictions_exact": true,
+  "incumbent_followup_required": false,
+  "accepted_new_factors": 0,
+  "independent_oos": false,
+  "private_settlement": false,
+  "objective_achieved": false,
+  "evidence": [
+    {
+      "account": "RollingRF_1000_15bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/RollingRF_1000_15bps/native_results/backtest-result-2026-11-14_10-44-24.zip",
+      "sha256": "11e8052e21ff66ed1e5c72f3705c6567acff702332b6ee30571b89f428c1c328"
+    },
+    {
+      "account": "RollingRF_1000_8bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/RollingRF_1000_8bps/native_results/backtest-result-2026-11-14_10-46-16.zip",
+      "sha256": "bbd521394ca2c51623f785852d040ac6812294057b33fb260f846459921db73d"
+    },
+    {
+      "account": "RollingRF_500_15bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/RollingRF_500_15bps/native_results/backtest-result-2026-11-14_10-44-51.zip",
+      "sha256": "0a12407c287faeac55755f4253b3b22fc517cc090371c014cc7c57dbb72fded6"
+    },
+    {
+      "account": "RollingRF_500_8bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/RollingRF_500_8bps/native_results/backtest-result-2026-11-14_10-46-43.zip",
+      "sha256": "eb096f374a7718a29bbf224feb3f9038aea0cf791e86281838f40754d47f75dd"
+    },
+    {
+      "account": "RollingPrior_1000_15bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/RollingPrior_1000_15bps/native_results/backtest-result-2026-11-14_10-45-01.zip",
+      "sha256": "999f6645b1fb6cf0b59c3b4034d5a4d5b3d1c3d433e9a7ed44d3357fdc97cce8"
+    },
+    {
+      "account": "RollingPrior_1000_8bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/RollingPrior_1000_8bps/native_results/backtest-result-2026-11-14_10-46-54.zip",
+      "sha256": "4811d480727a580b1e18b82b0907504ecfb64af02cbbe422d80a64be4f16cd50"
+    },
+    {
+      "account": "RollingPrior_500_15bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/RollingPrior_500_15bps/native_results/backtest-result-2026-11-14_10-45-11.zip",
+      "sha256": "e33ccfacc1afe20c60c2490b9e9101f437c98a24d70e08c13f85517bfaded2d2"
+    },
+    {
+      "account": "RollingPrior_500_8bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/RollingPrior_500_8bps/native_results/backtest-result-2026-11-14_10-47-04.zip",
+      "sha256": "9b16f36cffa8b4b2981901015d926104345112c9f8dc865440ce42ff82964da2"
+    },
+    {
+      "account": "SmaPriceBTC_1000_15bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/SmaPriceBTC_1000_15bps/native_results/backtest-result-2026-11-14_10-45-19.zip",
+      "sha256": "040d2f0d44b94f3685b3f3f863db1ebf19203ac39f0f0eb7a76c31f805930f48"
+    },
+    {
+      "account": "SmaPriceBTC_1000_8bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/SmaPriceBTC_1000_8bps/native_results/backtest-result-2026-11-14_10-47-12.zip",
+      "sha256": "e6126ffdd220bfc8d34f26728ee68e3e428560f13e3550c0158f0f388cb783b9"
+    },
+    {
+      "account": "SmaPriceBTC_500_15bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/SmaPriceBTC_500_15bps/native_results/backtest-result-2026-11-14_10-45-26.zip",
+      "sha256": "4dc0c582efca198d72b815e8f2ba5499daf15e38bae2626cab28ee76b956917b"
+    },
+    {
+      "account": "SmaPriceBTC_500_8bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/SmaPriceBTC_500_8bps/native_results/backtest-result-2026-11-14_10-47-20.zip",
+      "sha256": "993b6f16c1d1163d759e6a5b1752878795a156a1ab4ac3ee8f0d56d8372945a7"
+    },
+    {
+      "account": "HoldBTC_1000_15bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/HoldBTC_1000_15bps/native_results/backtest-result-2026-11-14_10-45-37.zip",
+      "sha256": "9727105986fb4cf1756bdd4c5e846b663bdc1572467ae1dda3c644b758ff9d63"
+    },
+    {
+      "account": "HoldBTC_1000_8bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/HoldBTC_1000_8bps/native_results/backtest-result-2026-11-14_10-47-31.zip",
+      "sha256": "056930d322e94206863ffab26420ef2a131965cbec1b2813e7b8ef89d2ecab57"
+    },
+    {
+      "account": "HoldBTC_500_15bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/HoldBTC_500_15bps/native_results/backtest-result-2026-11-14_10-45-48.zip",
+      "sha256": "b37cf309c52a8352ad6e8018a4fa210d0dd21ecfb77a9c3579fb855c7c7f5118"
+    },
+    {
+      "account": "HoldBTC_500_8bps",
+      "archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/freqai_rf_native_20261114_v1/v002/HoldBTC_500_8bps/native_results/backtest-result-2026-11-14_10-47-42.zip",
+      "sha256": "c05d5300f466f50c3ae445c592f89fd5813f8576f785696553464dd8e723af01"
+    }
+  ]
+}

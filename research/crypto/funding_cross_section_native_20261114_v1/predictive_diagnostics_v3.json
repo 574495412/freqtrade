@@ -1,0 +1,96 @@
+{
+  "actual_registry_views": 1,
+  "global_registry_modified": false,
+  "actual_factor_analysis_calls_this_attempt": 3,
+  "actual_factor_analysis_calls_including_preserved_attempts": 5,
+  "unique_raw_factor_diagnostics": 3,
+  "independent_bin_audit_percentile_roundoff_corrected": true,
+  "independent_ic_rows": 240,
+  "independent_group_nav_cells": 720,
+  "maximum_group_nav_error": 9.43689570931383e-16,
+  "unique_decision_dates": 120,
+  "assets": 29,
+  "unknown_factor_cells": 1,
+  "native_funded_accounts": 0,
+  "source_returns_reproduced": false,
+  "independent_oos_certified": false,
+  "protocol_sha256": "96238dd70c91c0ab2c42d4366cf77a0ea6f4993ef09447d34b98915f5e4e3391",
+  "owners_sha256": "812f9a61c5d4df49d1ee7bea66fbe9d9471cf7071256c43a5cda29cd055e3223",
+  "receipts": [
+    {
+      "split": "all",
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.017368,
+        "ic_std": 0.208356,
+        "ir": 0.0834,
+        "ic_positive_ratio": 0.525,
+        "ic_count": 120,
+        "n_groups": 3,
+        "long_short_spread": 0.1299,
+        "group_final_equity": {
+          "Group_1": 0.1022,
+          "Group_2": 0.1214,
+          "Group_3": 0.2321
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/funding_cross_section_native_20261114_v1/predictive_v3/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "split": "calendar2025",
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.006605,
+        "ic_std": 0.211553,
+        "ir": 0.0312,
+        "ic_positive_ratio": 0.5068,
+        "ic_count": 73,
+        "n_groups": 3,
+        "long_short_spread": 0.095,
+        "group_final_equity": {
+          "Group_1": 0.205,
+          "Group_2": 0.2334,
+          "Group_3": 0.3
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/funding_cross_section_native_20261114_v1/predictive_v3/calendar2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "split": "calendar2026_through_aug24",
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.034087,
+        "ic_std": 0.204415,
+        "ir": 0.1668,
+        "ic_positive_ratio": 0.5532,
+        "ic_count": 47,
+        "n_groups": 3,
+        "long_short_spread": 0.2752,
+        "group_final_equity": {
+          "Group_1": 0.4985,
+          "Group_2": 0.52,
+          "Group_3": 0.7737
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/funding_cross_section_native_20261114_v1/predictive_v3/calendar2026_through_aug24/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+"""Local causal TrendCore spot signals, not an upstream Freqtrade feature.
+
+Formula reference: 0x-boss/quant_crypto_strategy d62416ea, trendcore_spot.py.
+Source default OI strength0.5 is supported through independently verified daily closes. The unscaled reference
+path below is solely an input to the source volatility brake: its returns are
+never reported as research account performance. Native fills/wallets own that.
+"""
+
+import numpy as np
+import pandas as pd
+
+
+def _reference_risk_returns(weights, returns):
+    """Source's fixed 10bp/5% virtual signal recurrence, not an account ledger."""
+    held = np.zeros(2)
+    values = []
+    targets = weights.shift(1).fillna(0).to_numpy()
+    moves = returns.fillna(0).to_numpy()
+    for target, move in zip(targets, moves, strict=True):
+        selected = np.where((np.abs(target - held) <= 0.05) & (target != 0), held, target)
+        result = float(selected @ move - np.abs(selected - held).sum() * 0.001)
+        if not np.isfinite(result) or result <= -1:
+            raise ValueError("Invalid risk-indicator recurrence")
+        values.append(result)
+        held = selected * (1 + move) / (1 + result)
+    return pd.Series(values, index=weights.index)
+
+
+def trendcore_weights(hourly, oi_daily):
+    """Return weights indexed by first knowable execution OPEN, in UTC.
+
+    Input indices are hourly candle OPEN times. Incomplete final sixhour bins
+    are discarded; a bin labelled00:00 first becomes observable at06:00.
+    Initialization is the frozen supplied history, not the author's full history.
+    """
+    expected_columns = ["BTC/USDT", "ETH/USDT"]
+    if list(hourly.columns) != expected_columns or hourly.empty:
+        raise ValueError("Fixed BTC/ETH spot input required")
+    ix = hourly.index
+    if not isinstance(ix, pd.DatetimeIndex) or str(ix.tz) != "UTC":
+        raise ValueError("UTC hourly OPEN timestamps required")
+    if (
+        not ix.as_unit("ns").equals(pd.date_range(ix[0], ix[-1], freq="h").as_unit("ns"))
+        or ix[0].hour % 6
+    ):
+        raise ValueError(
+            "Complete contiguous hourly input beginning on a sixhour boundary required"
+        )
+    if not np.isfinite(hourly.to_numpy()).all() or not hourly.gt(0).all().all():
+        raise ValueError("Finite positive prices required")
+    counts = hourly.resample("6h").count()
+    complete = counts.eq(6).all(axis=1)
+    price = hourly.resample("6h").last().loc[complete]
+    if price.empty:
+        return pd.DataFrame(columns=expected_columns, index=pd.DatetimeIndex([], tz="UTC"))
+    score = _trend_scores(price)
+    variance = np.log(hourly).diff().pow(2).resample("6h").sum().reindex(price.index)
+    accumulated = price * 0
+    for gate in (100, 150, 200):
+        gated = (score * (price > price.rolling(gate * 4).mean())).fillna(0)
+        for span in (20, 30, 60):
+            annual_vol = variance.ewm(span=span * 4, min_periods=10).mean().pow(0.5) * np.sqrt(1460)
+            accumulated += (gated * 0.45 / annual_vol).div(2).fillna(0).clip(upper=1)
+    unscaled = accumulated / 9
+    risk_returns = _reference_risk_returns(unscaled, price.pct_change(fill_method=None))
+    brake = (
+        (0.40 / (risk_returns.ewm(span=120, min_periods=10).std() * np.sqrt(1460)))
+        .clip(upper=1)
+        .fillna(0)
+    )
+    weights = unscaled.mul(brake, axis=0)
+    weights = apply_oi_before_cap(weights, oi_daily)
+    if (
+        not np.isfinite(weights.to_numpy()).all()
+        or weights.lt(0).any().any()
+        or weights.sum(axis=1).gt(1 + 1e-12).any()
+    ):
+        raise ValueError("Invalid unlevered long-only source weights")
+    weights.index += pd.Timedelta(hours=6)
+    return weights
+
+
+def _trend_scores(price):
+    momentum = (
+        sum(
+            (price / price.shift(n * 4) > 1).astype(float).where(price.shift(n * 4).notna())
+            for n in (14, 30, 60, 90, 180)
+        )
+        / 5
+    )
+    moving_average = (
+        sum(
+            (price > price.rolling(n * 4).mean())
+            .astype(float)
+            .where(price.rolling(n * 4).mean().notna())
+            for n in (20, 50, 100, 200)
+        )
+        / 4
+    )
+    deviation = np.log(price).diff().ewm(span=120, min_periods=10).std()
+    forecasts = []
+    for fast, slow, scale in ((8, 32, 10.6), (16, 64, 7.5), (32, 128, 5.3), (64, 256, 3.75)):
+        raw = (
+            price.ewm(span=fast * 4, min_periods=fast * 4).mean()
+            - price.ewm(span=slow * 4, min_periods=slow * 4).mean()
+        ) / (price * deviation)
+        forecasts.append((raw * scale).clip(-20, 20))
+    ewmac = (sum(forecasts) / 4).clip(lower=0).div(10).clip(upper=1)
+    return (momentum + moving_average + ewmac) / 3
+
+
+def oi_multiplier(labels, daily):
+    """Source daily shift evaluated at original sixhour LEFT labels, not execution."""
+    ix=daily.index
+    if not isinstance(ix,pd.DatetimeIndex) or str(ix.tz)!='UTC' or daily.empty:
+        raise ValueError('Nonempty UTC daily OI required')
+    if not ix.as_unit('ns').equals(pd.date_range(ix[0],ix[-1],freq='D').as_unit('ns')) or not ix.equals(ix.normalize()):
+        raise ValueError('Contiguous midnight UTC daily OI required;no missingday fill')
+    values=daily['sum_open_interest_value']
+    if not np.isfinite(values).all()or not values.gt(0).all():
+        raise ValueError('Finite positive USD OI required')
+    observed=pd.DatetimeIndex(daily['observed_at'])
+    available=pd.DatetimeIndex(daily['availability_proxy'])
+    if not observed.equals(ix+pd.Timedelta(hours=23,minutes=55))or not available.equals(ix+pd.Timedelta(days=1)):
+        raise ValueError('Exact23:55 sample and frozen5minute availability proxy required')
+    # A missing current input day is not the source's legitimate initial warm-up.
+    matured=labels[labels>=ix[0]+pd.Timedelta(days=365)]
+    if len(matured)and matured.max().floor('D')>ix[-1]:
+        raise ValueError('OI calendar ends before mature signal labels')
+    x=np.log(values)
+    shifted=((x-x.rolling(365).mean())/x.rolling(365).std()).shift(1)
+    return (1-.5*shifted.reindex(labels,method='ffill').clip(0,2)/2).fillna(1.)
+
+
+def apply_oi_before_cap(uncapped,daily):
+    """Apply source overlay before hard cap; it need not commute with the cap."""
+    scaled=uncapped.mul(oi_multiplier(uncapped.index,daily),axis=0)
+    return scaled.mul((1/scaled.sum(axis=1)).clip(upper=1).fillna(1),axis=0)

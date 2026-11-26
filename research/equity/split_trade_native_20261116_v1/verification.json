@@ -1,0 +1,51 @@
+{
+  "verified_at": "2026-11-16T16:05:12.544304+00:00",
+  "passed": true,
+  "unchanged_frozen_producer_paths": 39,
+  "unchanged_original_input_paths": 1542,
+  "parent_seals": [
+    {
+      "name": "overnight_source_native_20261116_v1",
+      "unchanged_paths": 204
+    },
+    {
+      "name": "dividend_lifecycle_native_20261116_v1",
+      "unchanged_paths": 377
+    }
+  ],
+  "actual_native_start_attempts": 22,
+  "completed_synthetic_native_lifecycles": 20,
+  "native_zip": 20,
+  "expected_fractional_rejections": 2,
+  "completed_native_fills": 60,
+  "partial_rejection_fills": 2,
+  "native_boundaries": 280,
+  "independent_scalar_checks": 2240,
+  "new_unique_component_tests": 23,
+  "existing_regression_tests": 77,
+  "original_pool": {
+    "US": 503,
+    "HK": 11
+  },
+  "historical_equity_accounts": 0,
+  "portfolio_accounts": 0,
+  "factor_analysis_calls": 0,
+  "bench_records": 0,
+  "new_accepted_alphas": 0,
+  "historical_net_return": null,
+  "production_eligible": false,
+  "orders_enabled": false,
+  "services_changed": false,
+  "goal_complete": false,
+  "core_seam": {
+    "passed": true,
+    "original_core_sha256": "1d45e0b34ddf30813bbdf51a20be6e8345a65b668f373f8ce2fbb6e93271b234",
+    "local_core_sha256": "dacf9a5eff1cd9be1bd28698d5418daac2d6034918be50b76fdecfa0a08fdc60",
+    "changed_call_sites": 1,
+    "new_methods": 1,
+    "all_other_native_ast_exact": true,
+    "default_factory": "LocalTrade(**kwargs)",
+    "scope": "AST equality plus explicit native fixture financial parity; not all strategy execution modes"
+  },
+  "scope": "Synthetic native engineering and source checks; no historical account admission"
+}

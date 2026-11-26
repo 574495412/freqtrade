@@ -1,0 +1,24 @@
+{
+  "scope": "Technical source/fixture/audit corrections only; no historical economic result rescue",
+  "preserved_failures": [
+    "native_us_initial.log",
+    "native_hk_v2.log",
+    "tests_initial.log",
+    "tests_v2.log",
+    "trace_audit_initial.log",
+    "calendar_audit_initial.log",
+    "calendar_audit_v2.log"
+  ],
+  "native_order_field": {
+    "prior_owner": "/Users/chrise/GitHub/freqtrade/research/equity/open_only_native_20261115_v1/equity_execution_before_native_loop.source.txt",
+    "prior_sha256": "94fddda2742d947316aefdc86b967305252b2e449dcbb57facaefb8e8356c3ce",
+    "current_owner": "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_execution.py",
+    "current_sha256": "ea66c6f76fb03876381eba4e417a21660e4a47ccb06b6aa791986484c258fa31",
+    "reason": "Actual native Backtesting _enter_trade and _exit_trade set amount but do not set live placement mirror ft_amount; unset mirror allowed, nonmatching present mirror still rejects"
+  },
+  "fixture_cash_tail": "Append Jan13/14 synthetic settlement dates only; preserve Jan2-10 seven trading sessions, source signals, quantities, prices and fees",
+  "unit_fixture": "Align trade creation with first opening boundary; declare no-margin spot exchange no liquidation price, matching native Exchange semantics",
+  "audit": "Counterfactual input provenance hashes differ; compare all economics/clocks/marks after excluding only mark source_sha256",
+  "pdf_parser": "Exclude calendar-title Dec from month headers by left table position; initial overstrict vertical cutoff removed after inspecting exact header coordinates",
+  "financial_admission": false
+}

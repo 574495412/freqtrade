@@ -1,0 +1,112 @@
+"""Local research-only failure boundaries around native Copula pair phases.
+
+All original native events are yielded unchanged. This does not guarantee
+atomic exchange execution, close a failed leg, price an unknown funding event,
+or admit the source20 historical account's still-missing market specification.
+"""
+
+from dataclasses import dataclass
+from datetime import datetime
+
+import pandas as pd
+
+from freqtrade.enums import RunMode, TradingMode
+from freqtrade.persistence import Trade
+
+
+class CopulaAccountAdmissionError(RuntimeError):
+    """A failed native phase must not become an accepted result ZIP."""
+
+
+@dataclass(frozen=True)
+class MissingFundingEvent:
+    pair: str
+    at: datetime
+    source_sha256: str
+
+    def __post_init__(self):
+        stamp = pd.Timestamp(self.at)
+        if (
+            not self.pair.endswith('/USDT:USDT')
+            or stamp.tzinfo is None
+            or stamp != stamp.floor('h')
+            or len(self.source_sha256) != 64
+            or any(c not in '0123456789abcdef' for c in self.source_sha256)
+        ):
+            raise ValueError('Exact hourly funding-gap clock, USDT future and source required')
+
+
+class CopulaRunAdmissionMixin:
+    """Compose before Backtesting and explicitly configure before start()."""
+
+    def setup_copula_run_admission(self, *, pairs, gaps):
+        if (
+            self.config.get('runmode') != RunMode.BACKTEST
+            or self.config.get('dry_run') is not True
+            or self.trading_mode != TradingMode.FUTURES
+            or self.timeframe != '5m'
+            or self.timeframe_detail_td
+            or self.dynamic_pairlist
+            or self._position_stacking
+            or Trade.use_db
+            or not isinstance(pairs, tuple)
+            or tuple(self.config['exchange']['pair_whitelist']) != pairs
+            or len(set(pairs)) != len(pairs)
+            or not isinstance(gaps, tuple)
+        ):
+            raise ValueError('Isolated fixed-universe native5minute backtest required')
+        self._copula_admission_pairs = pairs
+        self._copula_admission_gaps = {}
+        for gap in gaps:
+            if not isinstance(gap, MissingFundingEvent) or gap.pair not in pairs:
+                raise ValueError('Undeclared or untyped funding-gap event')
+            key = (gap.pair, pd.Timestamp(gap.at))
+            if key in self._copula_admission_gaps:
+                raise ValueError('Duplicate funding-gap event')
+            self._copula_admission_gaps[key] = gap
+        self.copula_admission_failure = None
+        self.copula_phase_checks = 0
+        self.copula_gap_checks = []
+
+    def _copula_abort(self, stage, at, error):
+        self.copula_admission_failure = dict(stage=stage, at=str(at), error=str(error))
+        raise CopulaAccountAdmissionError(str(self.copula_admission_failure))
+
+    def _copula_require_context(self, at):
+        if not hasattr(self, '_copula_admission_pairs'):
+            raise CopulaAccountAdmissionError('Native run-admission setup was not supplied')
+        if tuple(self.config['exchange']['pair_whitelist']) != self._copula_admission_pairs:
+            self._copula_abort('context', at, 'Frozen native pair universe changed')
+        if getattr(self.strategy, '_fatal_error', None):
+            self._copula_abort('strategy_callback', at, self.strategy._fatal_error)
+
+    def _copula_before_phase(self, at):
+        self._copula_require_context(at)
+        for (pair, stamp), gap in self._copula_admission_gaps.items():
+            if stamp == pd.Timestamp(at):
+                try:
+                    actual = self.strategy._actual()
+                except Exception as error:
+                    self._copula_abort('funding_inventory', at, error)
+                quantity = actual.get(pair, {}).get('quantity', 0.)
+                self.copula_gap_checks.append(dict(pair=pair, at=str(at),
+                    quantity_before_event=quantity, rate=None,
+                    source_sha256=gap.source_sha256, exposed=quantity > 0))
+                if quantity > 0:
+                    self._copula_abort('missing_funding_while_held', at,
+                                       f'Unknown funding for held {pair}: {quantity}')
+
+    def _time_pair_generator_det(self, current_time, pairs):
+        # The native outer generator already called bot_loop_start, but no
+        # pair event at this clock has yet reached native backtest_loop.
+        self._copula_before_phase(current_time)
+        for event in super()._time_pair_generator_det(current_time, pairs):
+            yield event
+        # This code runs only after the whole phase was consumed. No lookahead,
+        # iterator prefetch, matcher replacement or asynchronous late check.
+        self._copula_require_context(current_time)
+        try:
+            self.strategy._check_actual()
+        except Exception as error:
+            self._copula_abort('paired_phase', current_time, error)
+        self.copula_phase_checks += 1

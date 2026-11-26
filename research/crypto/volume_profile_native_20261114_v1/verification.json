@@ -1,0 +1,144 @@
+{
+  "verified_utc": "2026-11-14T12:04:12.649624+00:00",
+  "passed": true,
+  "native_upstream_files_verified": 595,
+  "financial_source_config_seals_unchanged": true,
+  "new_complete_accounts": 12,
+  "reused_context_accounts": 8,
+  "native_lifecycles": 5174,
+  "native_fills": 10348,
+  "native_account_hours": 175104,
+  "actual_funded_state_rows": 700404,
+  "maximum_NAV_error_USDT": 1.0831115559994942e-07,
+  "stop_semantics": {
+    "passed": true,
+    "absolute_source_stop_level_max_error": 0.10000000000582077,
+    "stop_fills_independently_checked": 2916,
+    "native_entrybar_custom_stop_special_fills": 0,
+    "stop_fill_max_error": 0.0,
+    "scope": "Native labels some fixed absolute custom stops trailing_stop_loss. Entrybar trade_duration0 uses native pessimistic custom-stop formula, not an invented direct sourceSL fill. Source account not replicated.",
+    "records": [
+      {
+        "account": "ProfileBreakout_1000_15bps",
+        "entrybar_native_custom_stop_special_fills": 0
+      },
+      {
+        "account": "ProfileBreakout_1000_8bps",
+        "entrybar_native_custom_stop_special_fills": 0
+      },
+      {
+        "account": "ProfileBreakout_500_15bps",
+        "entrybar_native_custom_stop_special_fills": 0
+      },
+      {
+        "account": "ProfileBreakout_500_8bps",
+        "entrybar_native_custom_stop_special_fills": 0
+      },
+      {
+        "account": "ProfileFade_1000_15bps",
+        "entrybar_native_custom_stop_special_fills": 0
+      },
+      {
+        "account": "ProfileFade_1000_8bps",
+        "entrybar_native_custom_stop_special_fills": 0
+      },
+      {
+        "account": "ProfileFade_500_15bps",
+        "entrybar_native_custom_stop_special_fills": 0
+      },
+      {
+        "account": "ProfileFade_500_8bps",
+        "entrybar_native_custom_stop_special_fills": 0
+      },
+      {
+        "account": "ProfileNoVolume_1000_15bps",
+        "entrybar_native_custom_stop_special_fills": 0
+      },
+      {
+        "account": "ProfileNoVolume_1000_8bps",
+        "entrybar_native_custom_stop_special_fills": 0
+      },
+      {
+        "account": "ProfileNoVolume_500_15bps",
+        "entrybar_native_custom_stop_special_fills": 0
+      },
+      {
+        "account": "ProfileNoVolume_500_8bps",
+        "entrybar_native_custom_stop_special_fills": 0
+      }
+    ]
+  },
+  "unique_tests": 13,
+  "native_preflight_strategy_classes": 3,
+  "native_preflight_feature_rows": 175680,
+  "source_profile_comparison_rows": 58560,
+  "future_prefix_checks": 6,
+  "source_and_combo_gates_failed": true,
+  "accepted_new_independent_factors": 0,
+  "objective_achieved": false,
+  "private_exchange_settlement": false,
+  "independent_oos": false,
+  "orders_services_deployments": false,
+  "accounts": [
+    {
+      "account": "ProfileBreakout_1000_15bps",
+      "receipt_sha256": "03b606ef49d43a2c687b84ba7c79521f39c2b229e88a440449bcf96499c2ef03",
+      "audit_sha256": "e1ffa01e9ca8d3a16caba454f76bbf1e7a97dde58e1bb1788b576d089da066fb"
+    },
+    {
+      "account": "ProfileBreakout_1000_8bps",
+      "receipt_sha256": "34ca44ec9578dd18e9c9c42ad37ec0a9ac85d07126e06a441bad97ad39f5736d",
+      "audit_sha256": "297e078c462ee880be22ae9375d8260d5191b8ef52d30d218fc16d847609b684"
+    },
+    {
+      "account": "ProfileBreakout_500_15bps",
+      "receipt_sha256": "86b33821d90cd5e1ada6b1af3a25ada9236c7e82d1029f8896ddd17a6d2bac39",
+      "audit_sha256": "4ad715e23f0baaddd8bf94dce1b99771cf9a8a4d01f2b55ea49405476f4c3021"
+    },
+    {
+      "account": "ProfileBreakout_500_8bps",
+      "receipt_sha256": "4ae9256f7c954a74d007b85c9fa38e86574570d856de7dc75a7cd2e07ba8c5dd",
+      "audit_sha256": "baf75d53485e196c448350be43a8f0de71acd2d31789c0cc27a92c8c99928d0a"
+    },
+    {
+      "account": "ProfileFade_1000_15bps",
+      "receipt_sha256": "352945d8bf83f154a5184083d2a94b367faa18a2aaf7b59b001132a50677f162",
+      "audit_sha256": "3a990f0c86e0f6620ec7242a112ba13e465bbf765739512acbff9412fad09fd0"
+    },
+    {
+      "account": "ProfileFade_1000_8bps",
+      "receipt_sha256": "fc9ecc7fd7e14301b1b678827f4aa0f75db8a4f5a6406c02561e1ee7c38c94a1",
+      "audit_sha256": "ac81ed9ecae9099ded13bbb3f48663aec19dfd59953580d25921a0f0ec99f5ab"
+    },
+    {
+      "account": "ProfileFade_500_15bps",
+      "receipt_sha256": "e611ac609bc1b80edb6efa28d9596524385d735bfa607152e14a6deca725e2e2",
+      "audit_sha256": "3599ff5486f3ae36a2e40dff0b60b801316ceecb9c78cee73c9aebc4c769bdbf"
+    },
+    {
+      "account": "ProfileFade_500_8bps",
+      "receipt_sha256": "97d9c4697135a7f042f3b6168767216a446cf47e9d10c48120f9651dca158773",
+      "audit_sha256": "e9cafa4c93838d4aabb685148dcd81bedd7373c6e9da171f2815503de8f35a62"
+    },
+    {
+      "account": "ProfileNoVolume_1000_15bps",
+      "receipt_sha256": "c89213388f7a3637e3242bdda5f58d5c26da5c14474b4f05012e948a040027ea",
+      "audit_sha256": "55cade45e8708382d2aae90c97b0102f7fda6a66d0dd0b1b8928eefded5320f5"
+    },
+    {
+      "account": "ProfileNoVolume_1000_8bps",
+      "receipt_sha256": "9903b81ef5709be73cfb8d7f7d2855250019ad4489f7df29acbe646cfbdc8c18",
+      "audit_sha256": "2c8d2695e261d785cd24a236810bab9d7bff121c0428cb62167ebec7701cb7f6"
+    },
+    {
+      "account": "ProfileNoVolume_500_15bps",
+      "receipt_sha256": "f2f7dba6181da8666ca9835752a1de1f501a8c453a915acaf8aad8afd88b60df",
+      "audit_sha256": "753fbeccdd9025f632453b7ecd592fafeca5223152b64bebe2367d89f8cfcc67"
+    },
+    {
+      "account": "ProfileNoVolume_500_8bps",
+      "receipt_sha256": "e1af244866034c571f1d1b8e58d52acabd318509eb5797174e23f6b8b2634f97",
+      "audit_sha256": "135a08182d62cd02fd608d7b1e63f8032b0eba298a6a6068deb449917024a094"
+    }
+  ]
+}

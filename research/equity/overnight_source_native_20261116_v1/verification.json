@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "frozen_paths": 34,
+  "unchanged_frozen_paths": 32,
+  "post_run_owning_document_changes": [
+    {
+      "path": "/Users/chrise/GitHub/Vibe-Trading/agent/src/skills/factor-research/SKILL.md",
+      "initial_sha256": "3f9c69c1f0250720fcb00552b531cebb649dfb8487354b3c0a3420212ba0e7ea",
+      "current_sha256": "30cdc2990a9d3933b8dde3b5ed3d75983b90b433bfb97b9380dd35efc3654ed7"
+    },
+    {
+      "path": "/Users/chrise/GitHub/Vibe-Trading/agent/src/skills/strategy-dev-manager/SKILL.md",
+      "initial_sha256": "b37de37be91655c00aae78909776827605a3a2674b1175dadb0f7d28f5df417e",
+      "current_sha256": "cb3472d86720297b66b0bd89cc81a19a1f7c0a92f1067f1139e14a84574c6de9"
+    }
+  ],
+  "scope": "Code/input/result verification; owner docs changed after completed execution",
+  "unchanged_input_paths": 1542,
+  "unchanged_parent_paths": 236,
+  "actual_native_quote_cells_bound_to_staged_inputs": 1622470,
+  "native_source_files_verified": 595,
+  "original_security_queue": 514,
+  "admitted": 486,
+  "rejected_preserved": 28,
+  "actual_factor_analysis_calls": 18,
+  "unique_tests": 11,
+  "completed_child_processes": 3,
+  "independent_audit": {
+    "status": "passed",
+    "independent_candidate_imports": false,
+    "score_checks": [
+      {
+        "market": "XNYS",
+        "factor": "core_path_efficiency_63",
+        "finite_cells": 287375,
+        "max_abs_error": 4.440892098500626e-15
+      },
+      {
+        "market": "XNYS",
+        "factor": "local_quote_overnight126",
+        "finite_cells": 255550,
+        "max_abs_error": 0.0
+      },
+      {
+        "market": "XHKG",
+        "factor": "core_path_efficiency_63",
+        "finite_cells": 6501,
+        "max_abs_error": 9.992007221626409e-16
+      }
+    ],
+    "source_score_cells": 549426,
+    "label_cells_including_overlapping_slices": 956936,
+    "diagnostic_calls": 18,
+    "ic_rows_including_overlapping_slices": 2968,
+    "group_nav_cells": 8904,
+    "max_group_nav_error": 1.1102230246251565e-15,
+    "audited_financial_accounts": 0
+  },
+  "historical_accounts": 0,
+  "portfolio_accounts": 0,
+  "bench_records": 0,
+  "new_isolated_research_definitions": 1,
+  "accepted_independent_alphas": 0,
+  "new_financial_account_returns": null,
+  "author_performance_reproduced": false,
+  "independent_oos": false,
+  "production_eligible": false,
+  "orders_enabled": false,
+  "goal_complete": false
+}

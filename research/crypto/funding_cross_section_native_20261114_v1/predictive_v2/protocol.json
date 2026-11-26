@@ -1,0 +1,18 @@
+{
+  "before_new_predictive_outputs": true,
+  "native_funded_accounts_started": false,
+  "factor": "native rank of negative trailing7completedUTCday mean; raw order/ties preserved before CSV",
+  "observations": "source every5calendar-days,2023-01-09 phase; decision within2025Jan1--2026Aug24",
+  "labels": "actual native perp 01:00 OPEN to7days-later01:00 OPEN simple return",
+  "source_difference": "Original H5 uses daily spot log returns, all daily observations; here native perp simple returns on source decision grid",
+  "missing": "retain TIA 2026Jun24 UNKNOWN and7following unknown factor days; no zero replacement",
+  "groups": 3,
+  "positive_gate": {
+    "ic_mean_gt": 0.03,
+    "ir_gt": 0.5,
+    "positive_ratio_gt": 0.55
+  },
+  "dependence": "Seven-day labels sampled everyfive days overlap; IR descriptive,not independent significance or OOS",
+  "financial_input_admission": false,
+  "financial_returns": null
+}

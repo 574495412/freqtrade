@@ -1,0 +1,88 @@
+{
+  "schema": "native-cache-lifecycle-fixtures.v1",
+  "executed": false,
+  "actual_native_lifecycle_coverage": "UNKNOWN",
+  "real_nfi_case": {
+    "id": "NFI40_MARCH_FIXED",
+    "source_unchanged": true,
+    "expected_archived_example_only": {
+      "pair": "XRP/USDT:USDT",
+      "events": [
+        "entry",
+        "position_add",
+        "partial_exit",
+        "full_exit"
+      ]
+    },
+    "required_observed_events": [
+      "entry",
+      "position_add",
+      "partial_exit",
+      "full_exit"
+    ],
+    "required_callbacks": [
+      "confirm_trade_entry",
+      "custom_exit",
+      "adjust_trade_position",
+      "order_filled"
+    ],
+    "mandatory_actual_native_start_and_zip": true,
+    "no_coverage_from_old_archive": true
+  },
+  "supplemental_mechanical_cases": [
+    {
+      "id": "MECHANICAL_FOUR_FILL_NATIVE",
+      "synthetic": true,
+      "source": "Future separate minimal IStrategy using supported callbacks, never replace or edit NFI",
+      "pool_context": "sameordered40; onlyBTC has scheduled entry",
+      "ohlcv": "5m consistent OHLC all100, volume1000, include1000precedingrows; no outcome selection",
+      "initial_wallet": 1000,
+      "entry_clock": "2025-03-03T12:05:00Z",
+      "entry_stake": 100,
+      "position_add_clock": "2025-03-03T12:10:00Z",
+      "position_add_stake": 50,
+      "partial_exit_clock": "2025-03-03T12:15:00Z",
+      "partial_negative_stake": -50,
+      "full_exit_clock": "2025-03-03T12:20:00Z",
+      "fees": 0.0015,
+      "funding": "synthetic hourly zero rows explicitly labeled; no real funding result",
+      "expected_native_events": [
+        "entry",
+        "position_add",
+        "partial_exit",
+        "full_exit"
+      ],
+      "cannot_certify_real_NFI": true
+    },
+    {
+      "id": "BLOCK_BOUNDARY_AND_EVICTION_NATIVE",
+      "synthetic": true,
+      "source": "Same mechanical IStrategy; use only supported DP reads",
+      "base_rows": 9003,
+      "timeframe": "5m",
+      "pairs": 40,
+      "entry_fill_row": 4096,
+      "position_add_fill_row": 4097,
+      "partial_exit_fill_row": 8192,
+      "full_exit_fill_row": 8193,
+      "native_read_windows": "1000rows around4096 and8192; deterministicreadall40aftercacheassignment for32blockLRUpressure",
+      "require_observed_block_eviction": true,
+      "cannot_certify_real_NFI": true
+    },
+    {
+      "id": "RESET_CLEAR_TEARDOWN_NATIVE",
+      "synthetic": true,
+      "required_events": [
+        "actualBacktesting.reset_backtest invokes nativeDPclear",
+        "samecacheadapter receives actual_set_cached_df",
+        "nativeget_analyzed_dataframe slice beforecleanup",
+        "actualBacktesting.cleanup",
+        "explicitpostcleanupnativeDPclear",
+        "emptyget/noindex/missingkey and preservedrefresh semantics"
+      ],
+      "cleanup_is_not_cache_clear": true,
+      "cannot_certify_real_NFI": true
+    }
+  ],
+  "incomplete_coverage_policy": "RecordmissingcategoriesandremainNOTADMITTED; neverreplaceactualeventevidencewithdetachedTradecallbacksor slice-onlytests"
+}

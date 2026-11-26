@@ -1,0 +1,161 @@
+"""Native order hooks, quantity bookkeeping and unsupported-rule rejection."""
+
+import importlib.util
+from dataclasses import replace
+from decimal import Decimal as D
+from pathlib import Path
+from types import SimpleNamespace
+
+import pytest
+
+from freqtrade.optimize.backtesting import Backtesting
+from freqtrade.optimize.dated_amount_rules import AmountRule, AmountRuleBook, DatedAmountMixin
+from freqtrade.persistence import LocalTrade, Trade
+
+
+HERE = Path(__file__).resolve().parent
+spec = importlib.util.spec_from_file_location(
+    "old_price_hook_fixture", HERE.parent / "dated_precision_native_20261117_v1/test_rules.py"
+)
+base = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(base)
+
+
+class NativeAmount(DatedAmountMixin, base.NativeDated):
+    pass
+
+
+@pytest.fixture(autouse=True)
+def isolated():
+    old = Trade.use_db
+    Trade.use_db = False
+    LocalTrade.reset_trades()
+    yield
+    LocalTrade.reset_trades()
+    Trade.use_db = old
+
+
+def book():
+    before = AmountRule(
+        base.PAIR, base.START, base.AT, base.START, D(1), D(1), D(1000), D(5), "a" * 64, True
+    )
+    after = replace(
+        before, valid_from=base.AT, valid_until=base.END, step=D("0.1"), minimum=D("0.1")
+    )
+    return AmountRuleBook((base.PAIR,), (before, after))
+
+
+def account(rules=None):
+    seed = base.engine()
+    e = NativeAmount.__new__(NativeAmount)
+    e.__dict__.update(seed.__dict__)
+    e.config["research_dated_amount_rules"] = True
+    e.setup_dated_amount_rules(rules or book())
+    return e
+
+
+def test_actual_native_initial_orders_use_dated_quantity_step():
+    e = account()
+    e.wallets.get_trade_stake_amount = lambda *a, **k: 150
+    coarse = e._enter_trade(base.PAIR, base.row(base.START), "long")
+    fine = e._enter_trade(base.PAIR, base.row(base.AT), "long")
+    assert coarse.orders[-1].amount == 1.0
+    assert fine.orders[-1].amount == 1.5
+    assert coarse.amount_precision == 1.0 and fine.amount_precision == 0.1
+
+
+def test_final_rounded_order_notional_and_maximum_are_checked():
+    e = account()
+    rows = book()
+    tightened = replace(rows.rules[1], minimum_notional=D(51))
+    e = account(replace(rows, rules=(rows.rules[0], tightened)))
+    assert not e.validate_order_amount(base.PAIR, base.AT, 0.4, 100, None, False)
+    assert e.amount_rule_trace[-1]["reason"] == "minimum_notional_after_rounding"
+    assert not e.validate_order_amount(base.PAIR, base.AT, 1001, 100, None, False)
+    assert e.amount_rule_trace[-1]["reason"] == "quantity_bounds_or_grid"
+
+
+def test_native_short_entry_uses_same_dated_quantity_contract():
+    e = account()
+    e.wallets.get_trade_stake_amount = lambda *a, **k: 150
+    e.strategy.custom_entry_price = lambda **k: 102.125
+    coarse = e._enter_trade(base.PAIR, base.row(base.START), "short")
+    fine = e._enter_trade(base.PAIR, base.row(base.AT), "short")
+    assert coarse.is_short and fine.is_short
+    assert coarse.orders[-1].side == fine.orders[-1].side == "sell"
+    assert coarse.orders[-1].amount == 1.0 and fine.orders[-1].amount == 1.4
+
+
+def test_past_only_accounting_lattice_retains_finer_dca_and_partial_quantities():
+    e = account()
+    trade = SimpleNamespace(amount_precision=1.0)
+    e.update_trade_amount_precision(trade, 0.1)
+    assert trade.amount_precision == 0.1
+    e.update_trade_amount_precision(trade, 1.0)
+    assert trade.amount_precision == 0.1
+    trade.amount_precision = 0.2
+    e.update_trade_amount_precision(trade, 0.3)
+    assert trade.amount_precision == 0.1
+
+
+def test_reduce_only_minimum_notional_exemption_is_explicit():
+    original = book()
+    rule = replace(original.rules[1], minimum_notional=D(50))
+    e = account(replace(original, rules=(original.rules[0], rule)))
+    trade = SimpleNamespace(pair=base.PAIR, amount=1.0)
+    assert e.validate_order_amount(base.PAIR, base.AT, 0.1, 100, trade, True)
+    assert e.can_reduce_position(trade, base.AT, 0.6, 100, 50)
+    strict = replace(rule, reduce_only_notional_exempt=False)
+    e = account(replace(original, rules=(original.rules[0], strict)))
+    with pytest.raises(ValueError, match="minimum_notional"):
+        e.validate_order_amount(base.PAIR, base.AT, 0.1, 100, trade, True)
+    assert not e.can_reduce_position(trade, base.AT, 0.6, 100, 50)
+
+
+def test_unknown_late_or_overlapping_rule_never_falls_back():
+    rules = book()
+    with pytest.raises(ValueError, match="Unknown"):
+        rules.rule_at(base.PAIR, base.END)
+    late = replace(rules.rules[1], known_at=base.END)
+    bad = replace(rules, rules=(rules.rules[0], late))
+    with pytest.raises(ValueError, match="Incomplete"):
+        bad.validate_window(base.START, base.END)
+    with pytest.raises(ValueError, match="overlapping"):
+        replace(rules, rules=(*rules.rules, rules.rules[-1]))
+
+
+def test_nonzero_affine_quantity_grid_does_not_silently_use_zero_grid():
+    with pytest.raises(ValueError, match="affine"):
+        replace(book().rules[0], minimum=D("0.5"))
+
+
+def test_native_default_hooks_preserve_preexisting_exchange_and_trade_values():
+    plain = Backtesting.__new__(Backtesting)
+    plain.exchange = SimpleNamespace(
+        get_precision_amount=lambda p: 0.3,
+        get_min_pair_stake_amount=lambda *a: 12.0,
+        get_max_pair_stake_amount=lambda *a: 900.0,
+    )
+    trade = SimpleNamespace(amount_precision=0.2, amount=1.0)
+    assert plain.get_entry_amount_precision(base.PAIR, base.AT) == 0.3
+    assert plain.get_exit_amount_precision(trade, base.AT) == 0.2
+    assert plain.get_order_stake_limits(base.PAIR, base.AT, 100, -0.05, 1) == (12, 900)
+    plain.update_trade_amount_precision(trade, 0.1)
+    assert trade.amount_precision == 0.2
+    assert plain.validate_order_amount(base.PAIR, base.AT, 0.1, 100, trade, False)
+    assert not plain.can_reduce_position(trade, base.AT, 0.6, 100, 50)
+
+
+@pytest.mark.parametrize("fault", ["flag", "book", "precision", "contract"])
+def test_amount_context_drift_is_rejected(fault):
+    e = account()
+    if fault == "flag":
+        e.config["research_dated_amount_rules"] = False
+    elif fault == "book":
+        e._amount_book = book()
+    elif fault == "precision":
+        e.precision_mode = 2
+    else:
+        e.exchange.get_contract_size = lambda p: 10
+    with pytest.raises(ValueError, match="context"):
+        e.get_entry_amount_precision(base.PAIR, base.AT)

@@ -1,0 +1,56 @@
+{
+  "status": "SOURCE_SEMANTICS_DIAGNOSTIC_ONLY",
+  "window": {
+    "start": "2025-01-01 00:00:00+00:00",
+    "end": "2026-08-31 23:00:00+00:00"
+  },
+  "data_receipts": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/SOL_USDT_USDT-1h-futures.feather",
+      "sha256": "9acc5e0a2aa20e718d7e4c4a342aedb97475b9e5557b617f04213d45e889cefa",
+      "rows": 27048,
+      "first": "2023-08-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_data_v002/candles/futures/BTC_USDT_USDT-1h-futures.feather",
+      "sha256": "7fddcb56cfb30c9274ac9fbf7219be4254c7f4e393966104bb2de47ef9729a20",
+      "rows": 27048,
+      "first": "2023-08-01 00:00:00+00:00",
+      "last": "2026-08-31 23:00:00+00:00"
+    }
+  ],
+  "history_contract": "current-inclusive; existing prehistory; no missing rows",
+  "synthetic_checks": {
+    "random_valid_ohlc_histories": 1000,
+    "equality_long_short_possible": true,
+    "opposite_channel_exit_impossible_under_valid_ohlc": true,
+    "atr_trail_exit_possible": true,
+    "max_hold_exit_possible": true,
+    "max_hold_preserves_loss_counter": true
+  },
+  "counts": {
+    "bars": 14592,
+    "close_at_48_high": 0,
+    "close_at_48_low": 1,
+    "variance_ratio_pass": 2948,
+    "high_and_vr": 0,
+    "low_and_vr": 0,
+    "flat_long_order_probes": 0,
+    "flat_short_order_probes": 0,
+    "opposite_channel_long_exit": 0,
+    "opposite_channel_short_exit": 0
+  },
+  "independent_flat_probes": [],
+  "scope": "Fresh source-default instance and flat mock context each bar. No positions, cooldown replay, fills, funding, fees or PnL. Probes are not native trades or an original-window reproduction.",
+  "native_financial_wallets": 0,
+  "source_financial_runs": 0,
+  "sdk_reference": "PyPI flint-trading 1.1.0, not verified author dependency",
+  "production_eligible": false,
+  "inputs": {
+    "protocol.json": "509cfae77dad34cb0246b540c646cff12595127eb73b8825583e1431db1212f2",
+    "source/donchian_surfer.py": "59a547de1ff14ad399c9bd845f97f9ea77a2be0d52e7e77568521c1d09abcd34",
+    "sdk_selected/flint/indicators.py": "1418198318db440f10b9374fb9c95588cf54719a56ca52a3e65dd224445b5e25",
+    "diagnose.py": "61e8c788ae7c533c5073df5470368d5d4d5955bf6793ba130497ef9a133c7bb5"
+  }
+}

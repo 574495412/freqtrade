@@ -1,0 +1,21 @@
+{
+  "vibe_head": "915f2713e2d5476a26663c69f32c5a9a1d4bea64",
+  "vibe_upstream": "https://github.com/HKUDS/Vibe-Trading.git",
+  "current_worktree_sources": {
+    "/Users/chrise/GitHub/Vibe-Trading/agent/src/skills/factor-research/SKILL.md": "bcb8b004d66c50abf88b3f84a028cd7ca703b2678f9b59591aa937c7a3844072",
+    "/Users/chrise/GitHub/Vibe-Trading/agent/src/skills/strategy-dev-manager/SKILL.md": "1010fd3ad5ceb0bf83e0e4c84d89d2293ef4fa1d7da4e05e70c6cf1e6805ddc9",
+    "/Users/chrise/GitHub/Vibe-Trading/agent/src/factors/registry.py": "35c75468f7548c5f60b233d4c135924dcb210c5ef204a045d3fa9cd00702a722",
+    "/Users/chrise/GitHub/Vibe-Trading/agent/src/tools/factor_analysis_tool.py": "bdba14f96992593589e1bf31ed6a11d7fd8092edc9ba4ca39fe34054bc05745b",
+    "/Users/chrise/GitHub/Vibe-Trading/agent/src/tools/backtest_tool.py": "8f2cea58c478ce19497161b4f9e280e815210b9d6278227579dbfc4bc75c7b46",
+    "/Users/chrise/GitHub/Vibe-Trading/agent/src/tools/autopilot_tool.py": "fda61828260eeef3ff9620ac5af63705b3b43943e102f7f6ffab65a3d61df85c",
+    "/Users/chrise/GitHub/Vibe-Trading/agent/src/factors/zoo/core/sec_drift_eps_surprise.py": "123a7102e95966d453e12f4f257c6d039d2c1856136fd395e6c943d6bc2cf91f",
+    "/Users/chrise/GitHub/Vibe-Trading/agent/src/factors/zoo/core/sue_monthly.py": "eb5687de2cc6287b072f1a5bff9bd2a3f3ecd8670aeda5595f24771faf35d6b0"
+  },
+  "workflow": "Input admission then Registry and actual factor_analysis; accepted strategies use hypothesis/config/SignalEngine/native backtest/bench readback. No result registration as substitute. This checkpoint calls none because input is unknown.",
+  "local_extensions": [
+    "freqtrade/data/equity_earnings.py",
+    "freqtrade/data/equity_earnings_provider.py"
+  ],
+  "new_independent_factor_claim": false,
+  "existing_eps_definitions": "SEC drift-adjusted monthly EPS and QC monthly SUE are time-series expectations, not analyst consensus"
+}

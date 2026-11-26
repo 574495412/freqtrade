@@ -1,0 +1,21 @@
+{
+  "economic_parameters_changed_after_results": false,
+  "funded_accounts": 0,
+  "records": [
+    {
+      "evidence": "model_audit_initial_failed.log",
+      "failure": "PandasindexfrequencyNone versus Hour in exactreplay assertion",
+      "cause": "Parquetdoesnotretainfreqmetadata; complete explicitdategrid already checked",
+      "correction": "Ignorefreqmetadata only; keep exactdatevalues/modelvalues and fullcalendar checks; no signal/model/accountchange."
+    },
+    {
+      "evidence": "sources/ccxt_fixture_probe.json",
+      "failure": "404rawURLs usedannotatedtagobject asifcommit",
+      "correction": "Peeltagwithgit and retrieve actualpinnedblob. NoEOSin retrievedfixture."
+    },
+    {
+      "failure": "GitHubcommit.patch publicrequestProxyError",
+      "scope": "Originaltooltraceback retainedinchat; noHTTPresponsebody wasreceived. Do not claimHTTP404or tagabsence."
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "native_verified_files": 595,
+  "native_amount_owner": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/exchange/exchange_utils.py",
+  "native_price_owner": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/exchange/exchange_utils.py",
+  "local_extension": true,
+  "checks": {
+    "tests_final.log": {
+      "passed": 46,
+      "sha256": "3f2b9bf0f9994ee3bfdc4756306f4a5d0e14942863e5016bae1507f829e2dfc3"
+    },
+    "settlement_regression.log": {
+      "passed": 33,
+      "sha256": "68e07fd8d82ac807c4ff1b0e8bcda2d546c2b6d782aebf71654023561b02ec3d"
+    },
+    "history_provider_regression.log": {
+      "passed": 30,
+      "sha256": "368a0f6bf97c6404fce903b6f5b895894a5cde03eb8e0224476ae992a19751ca"
+    }
+  },
+  "unique_checks_passed": 109,
+  "production_ruff_passed": true,
+  "source_captures_verified": 9,
+  "source_clock_or_master_certification": false,
+  "environment": {
+    "pandas": "3.0.6",
+    "numpy": "2.5.4",
+    "ccxt": "4.5.89",
+    "pytest": "9.1.1"
+  },
+  "financial_accounts": 0,
+  "new_validated_alphas": 0,
+  "return_metrics": null,
+  "objective_achieved": false,
+  "independent_oos": false,
+  "orders": false,
+  "deployment": false,
+  "initial_failure": "tests_initial.log: decorator syntax prevented collection; fixed before execution; no failed financial runs relabeled."
+}

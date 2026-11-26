@@ -1,0 +1,79 @@
+{
+  "original_inputs_sha256": "476f0172e6bdb70e9045f22fc56db88ef2e46493090d06d19bdbdd56d4ae266f",
+  "current_inputs_sha256": "640114b9969987b64b3de59c4a3ab5812af102f58613bfad0e3028334f3fac45",
+  "changes": [
+    {
+      "case": "normal1000",
+      "original": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/normal1000/synthetic_markets.json",
+        "sha256": "8ed31623aad0f43aba99bf49666881654b5d34eefedf247a9722d06f66757dcc"
+      },
+      "current": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/normal1000/synthetic_markets_maintenance_fixed.json",
+        "sha256": "22ea88ff1623b79c8a2d92656bd5e408e02f721b93605b4d4cb7500596e1ffdc"
+      },
+      "only_added_field": "leverage_tiers[each_pair][0].maintAmt=0.0"
+    },
+    {
+      "case": "normal500",
+      "original": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/normal500/synthetic_markets.json",
+        "sha256": "8ed31623aad0f43aba99bf49666881654b5d34eefedf247a9722d06f66757dcc"
+      },
+      "current": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/normal500/synthetic_markets_maintenance_fixed.json",
+        "sha256": "22ea88ff1623b79c8a2d92656bd5e408e02f721b93605b4d4cb7500596e1ffdc"
+      },
+      "only_added_field": "leverage_tiers[each_pair][0].maintAmt=0.0"
+    },
+    {
+      "case": "under_minimum",
+      "original": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/under_minimum/synthetic_markets.json",
+        "sha256": "0b20b3ca37cfe8b664abf8bcec668538414f934bf3551a987870db4866baf5d8"
+      },
+      "current": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/under_minimum/synthetic_markets_maintenance_fixed.json",
+        "sha256": "18f55e23421eb9a0bc4ae182e8541d1ff941c1038e6b9fcd6a9623ade4a3d270"
+      },
+      "only_added_field": "leverage_tiers[each_pair][0].maintAmt=0.0"
+    },
+    {
+      "case": "one_leg_rejected",
+      "original": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/one_leg_rejected/synthetic_markets.json",
+        "sha256": "8ed31623aad0f43aba99bf49666881654b5d34eefedf247a9722d06f66757dcc"
+      },
+      "current": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/one_leg_rejected/synthetic_markets_maintenance_fixed.json",
+        "sha256": "22ea88ff1623b79c8a2d92656bd5e408e02f721b93605b4d4cb7500596e1ffdc"
+      },
+      "only_added_field": "leverage_tiers[each_pair][0].maintAmt=0.0"
+    },
+    {
+      "case": "missing_funding_exposed",
+      "original": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/missing_funding_exposed/synthetic_markets.json",
+        "sha256": "8ed31623aad0f43aba99bf49666881654b5d34eefedf247a9722d06f66757dcc"
+      },
+      "current": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/missing_funding_exposed/synthetic_markets_maintenance_fixed.json",
+        "sha256": "22ea88ff1623b79c8a2d92656bd5e408e02f721b93605b4d4cb7500596e1ffdc"
+      },
+      "only_added_field": "leverage_tiers[each_pair][0].maintAmt=0.0"
+    },
+    {
+      "case": "missing_funding_flat",
+      "original": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/missing_funding_flat/synthetic_markets.json",
+        "sha256": "8ed31623aad0f43aba99bf49666881654b5d34eefedf247a9722d06f66757dcc"
+      },
+      "current": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/copula_fills_native_20261115_v4/fixtures/missing_funding_flat/synthetic_markets_maintenance_fixed.json",
+        "sha256": "22ea88ff1623b79c8a2d92656bd5e408e02f721b93605b4d4cb7500596e1ffdc"
+      },
+      "only_added_field": "leverage_tiers[each_pair][0].maintAmt=0.0"
+    }
+  ],
+  "cause": "Native liquidation initialization requires normalized maintAmt field; synthetic first tier offset is explicitly zero. No price, state, costs, sizing or source research contract changed."
+}

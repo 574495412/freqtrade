@@ -1,0 +1,724 @@
+{
+  "engine_source": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade",
+  "engine_manifest": {
+    "path": "/Users/chrise/GitHub/CZ-Agent/vendor/FREQTRADE_SOURCE.json",
+    "sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64"
+  },
+  "engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "environment": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/environment.json",
+    "sha256": "deb85c13c1064d3d1c3b3014db6154a1f72688fc5dac20bbf2ac3da9c016eef2"
+  },
+  "research_support": {
+    "research/__init__.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/__init__.py",
+      "sha256": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a"
+    },
+    "research/data.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/data.py",
+      "sha256": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0"
+    },
+    "research/strategies.py": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/strategy_comparison_20261105/support/strategies.py",
+      "sha256": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc"
+    }
+  },
+  "storage_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi_original_storage.py",
+    "sha256": "f0799b40a22f7b682de38ea79e7aca1a5ba6e3440fb5c9ad68c3ff7c87d78cf0"
+  },
+  "observer_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py",
+    "sha256": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "start": "2025-01-01T00:00:00Z",
+  "end": "2026-09-01T00:00:00Z",
+  "comparison_end": "2026-08-31T23:00:00Z",
+  "periods": [
+    {
+      "name": "continuous",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    },
+    {
+      "name": "calendar-2025",
+      "start": "2025-01-01T00:00:00Z",
+      "end": "2026-01-01T00:00:00Z"
+    },
+    {
+      "name": "calendar-2026-through-august",
+      "start": "2026-01-01T00:00:00Z",
+      "end": "2026-08-31T23:00:00Z"
+    }
+  ],
+  "memory_guard_bytes": 3221225472,
+  "wall_guard_seconds": 3600,
+  "schema": "freqtrade.native.tsmom-risk-quantity.v2",
+  "registered_at": "2026-11-13T19:40:42.429050+00:00",
+  "source_strategy_allocation_study": true,
+  "not_new_factor_screen": true,
+  "market_snapshot": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/matched_strategy_comparison_20261105_v002/input_review/public-market-rules.json",
+    "sha256": "55c15247912b73616e3c66deb4c6074eb92f1c810e2ec9eb15992ec007b77fa9"
+  },
+  "pairs": [
+    "BTC/USDT:USDT",
+    "ETH/USDT:USDT",
+    "SOL/USDT:USDT",
+    "BNB/USDT:USDT",
+    "XRP/USDT:USDT",
+    "DOGE/USDT:USDT",
+    "ADA/USDT:USDT",
+    "AVAX/USDT:USDT",
+    "LINK/USDT:USDT",
+    "TRX/USDT:USDT",
+    "DOT/USDT:USDT",
+    "LTC/USDT:USDT",
+    "BCH/USDT:USDT",
+    "NEAR/USDT:USDT",
+    "APT/USDT:USDT",
+    "ARB/USDT:USDT",
+    "OP/USDT:USDT",
+    "SUI/USDT:USDT",
+    "INJ/USDT:USDT",
+    "TIA/USDT:USDT",
+    "SEI/USDT:USDT",
+    "RUNE/USDT:USDT",
+    "FIL/USDT:USDT",
+    "ATOM/USDT:USDT",
+    "UNI/USDT:USDT",
+    "AAVE/USDT:USDT",
+    "ETC/USDT:USDT",
+    "XLM/USDT:USDT",
+    "ALGO/USDT:USDT"
+  ],
+  "output_root": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/v002",
+  "datadir": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles",
+  "data_receipts": {
+    "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/data_receipts.json",
+    "sha256": "f793b3211695dc0b3f82fb9b22f4b2ee0be75814a6bbe921591e575f5afcf00c"
+  },
+  "marks": {
+    "BTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BTC_USDT_USDT-1h-mark.feather",
+      "sha256": "128e4034f643cc51c6a1e4b1bee01bb7eb1d53f60502072bfc96427417a1a84b"
+    },
+    "ETH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ETH_USDT_USDT-1h-mark.feather",
+      "sha256": "23143be666eb5ae4dd8a9b68a20f7ff78260a6f3344a5d385e9b2a2dd1a07764"
+    },
+    "SOL/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SOL_USDT_USDT-1h-mark.feather",
+      "sha256": "c9e5089e38745a2f2d168b1190c9d866ca915225e2ffa22b52a1b2f7382e895b"
+    },
+    "BNB/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BNB_USDT_USDT-1h-mark.feather",
+      "sha256": "aa19bfe19bc1b7ffe90e9d6a5bb5da1f806f8f5aa3f67e6a6405e62a91a392be"
+    },
+    "XRP/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/XRP_USDT_USDT-1h-mark.feather",
+      "sha256": "e821b1b0b56da2a98337e49c605661aa8d62e4a383550c64c94edc060d41c89a"
+    },
+    "DOGE/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/DOGE_USDT_USDT-1h-mark.feather",
+      "sha256": "1acea3fba1b5f6035dc9ec3d3e1d814ff43081cd2439106433a52bb2ddccbb25"
+    },
+    "ADA/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ADA_USDT_USDT-1h-mark.feather",
+      "sha256": "dc3b578e04fa23c3c58e64b64916eb17c7471aee910d7334b279840bd58dd7be"
+    },
+    "AVAX/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/AVAX_USDT_USDT-1h-mark.feather",
+      "sha256": "e7deb6537e934eb2775cc6bc31fe036335002f6898d869af6da636133d6a1d46"
+    },
+    "LINK/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/LINK_USDT_USDT-1h-mark.feather",
+      "sha256": "1a982092bca60cba7b74254c4c63254493565badf87bdd1913a86785f56549cd"
+    },
+    "TRX/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/TRX_USDT_USDT-1h-mark.feather",
+      "sha256": "53e8caee9894e6a5ace2e24a228966fe1aa69570184f871368857120b6690118"
+    },
+    "DOT/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/DOT_USDT_USDT-1h-mark.feather",
+      "sha256": "045ce00af8852a27fdaeb3bda7d7719642b3bde0186c178e462686d99c5c0afa"
+    },
+    "LTC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/LTC_USDT_USDT-1h-mark.feather",
+      "sha256": "05e04be247cc13f8127c7a809f8b1032e974586e60bdfddd07ba6d5a8ae581e1"
+    },
+    "BCH/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/BCH_USDT_USDT-1h-mark.feather",
+      "sha256": "c8abf623f885bd41c6608124a0271f0dea7cee66337deb0e5adc863407daa988"
+    },
+    "NEAR/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/NEAR_USDT_USDT-1h-mark.feather",
+      "sha256": "bb5c568f61c0914eabb32b8070b433589734e07640ed60831ac8c661118f024f"
+    },
+    "APT/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/APT_USDT_USDT-1h-mark.feather",
+      "sha256": "93f02e62b5fd857578ff85f3aec8516cc556a46b050948348ba6040789a40a55"
+    },
+    "ARB/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ARB_USDT_USDT-1h-mark.feather",
+      "sha256": "3fcac125e2e2a8ebd821c3e59ef024e2069fcf99a640c9c032b42062321a3aee"
+    },
+    "OP/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/OP_USDT_USDT-1h-mark.feather",
+      "sha256": "e0b453723e556ea85a0fc81b220690d7e00681b5415954f1096378d6558e91aa"
+    },
+    "SUI/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SUI_USDT_USDT-1h-mark.feather",
+      "sha256": "1dfe3dba4bfde9ca1c2eb4c9e55f6b6d5628d8752b3a40ebd2be814f004bc57d"
+    },
+    "INJ/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/INJ_USDT_USDT-1h-mark.feather",
+      "sha256": "926fa40bc6d8eee3fab6c55ce72dcb1e4c2de85a8e01dada37f261b288a7ff0d"
+    },
+    "TIA/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/TIA_USDT_USDT-1h-mark.feather",
+      "sha256": "a9fc91890389867fb4094d5e8ffd38abb5f837a5c8583f0662e8f5bfd0dddff1"
+    },
+    "SEI/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/SEI_USDT_USDT-1h-mark.feather",
+      "sha256": "a8fe2c8b1cf3e6398f607011d2d01da6fc25b940a7b6f0e0c3ac3d8f076ceb39"
+    },
+    "RUNE/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/RUNE_USDT_USDT-1h-mark.feather",
+      "sha256": "e551a3c2aa5e48bcfe600ee45024520566ae5b22b70d143afa7278c3112d51c4"
+    },
+    "FIL/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/FIL_USDT_USDT-1h-mark.feather",
+      "sha256": "005cb9c910940ebc32877f86acfba18ffef040110fbdd68765936e9fbe81751c"
+    },
+    "ATOM/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ATOM_USDT_USDT-1h-mark.feather",
+      "sha256": "01aa0fb297b66261581a00ae85b9260ed84ea73cf2faea9f839068c348fa61bd"
+    },
+    "UNI/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/UNI_USDT_USDT-1h-mark.feather",
+      "sha256": "af4e27b504902bae1816ff9ba606957665b1d188cce9a262994427bbe0ba896c"
+    },
+    "AAVE/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/AAVE_USDT_USDT-1h-mark.feather",
+      "sha256": "38bdccdaec7e348a6056390666b715e5c18df0b9c0f79feb5795d9371d2a87fb"
+    },
+    "ETC/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ETC_USDT_USDT-1h-mark.feather",
+      "sha256": "b8e72f8b8af30610257028b5227a668c2a2875c8c9aeb2f00f1b9755735a5d6b"
+    },
+    "XLM/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/XLM_USDT_USDT-1h-mark.feather",
+      "sha256": "8ca7d69b4b25532e547310e91a68604949beccf81f1ce4883a6c71d61071b628"
+    },
+    "ALGO/USDT:USDT": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/candles/futures/ALGO_USDT_USDT-1h-mark.feather",
+      "sha256": "38a72f320fa0419d7c80e093db3ac8d5b8c0a3fd736720fdd0bc3844c17bf6fc"
+    }
+  },
+  "candidates": [
+    {
+      "name": "CovarianceRiskTS_1000",
+      "strategy": "ClockedCovarianceRiskTS",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT",
+        "BNB/USDT:USDT",
+        "XRP/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "ADA/USDT:USDT",
+        "AVAX/USDT:USDT",
+        "LINK/USDT:USDT",
+        "TRX/USDT:USDT",
+        "DOT/USDT:USDT",
+        "LTC/USDT:USDT",
+        "BCH/USDT:USDT",
+        "NEAR/USDT:USDT",
+        "APT/USDT:USDT",
+        "ARB/USDT:USDT",
+        "OP/USDT:USDT",
+        "SUI/USDT:USDT",
+        "INJ/USDT:USDT",
+        "TIA/USDT:USDT",
+        "SEI/USDT:USDT",
+        "RUNE/USDT:USDT",
+        "FIL/USDT:USDT",
+        "ATOM/USDT:USDT",
+        "UNI/USDT:USDT",
+        "AAVE/USDT:USDT",
+        "ETC/USDT:USDT",
+        "XLM/USDT:USDT",
+        "ALGO/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/v002/CovarianceRiskTS_1000.json",
+        "sha256": "19d9c65bb137d3e6aaf98d5b0614876b0eb3ca834f2435334896d59ec0c28e54"
+      },
+      "source_files": {
+        "TSMomPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/TSMomPortfolio.py",
+          "sha256": "f06b07dad48dddabd6dc6ef6a330aacf2a9d11a44a8354de251ad90ab564b3bf"
+        },
+        "RiskWeights.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/RiskWeights.py",
+          "sha256": "f49d7f19ea8af822b8e0d38df99a3a4e81da0d97c4ca13e4e78e368372d3df43"
+        },
+        "AuthorMath.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/AuthorMath.py",
+          "sha256": "577b6300348014315ffbc5b7f3cb0aed2d749dc47bf5a5ec483705015288396d"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        },
+        "ClockedPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/ClockedPortfolio.py",
+          "sha256": "aec077a1734f0a766eda35ca93969f5fb4ecec6a709c2c7588f75743d992005a"
+        }
+      }
+    },
+    {
+      "name": "CovarianceRiskTS_500",
+      "strategy": "ClockedCovarianceRiskTS",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT",
+        "BNB/USDT:USDT",
+        "XRP/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "ADA/USDT:USDT",
+        "AVAX/USDT:USDT",
+        "LINK/USDT:USDT",
+        "TRX/USDT:USDT",
+        "DOT/USDT:USDT",
+        "LTC/USDT:USDT",
+        "BCH/USDT:USDT",
+        "NEAR/USDT:USDT",
+        "APT/USDT:USDT",
+        "ARB/USDT:USDT",
+        "OP/USDT:USDT",
+        "SUI/USDT:USDT",
+        "INJ/USDT:USDT",
+        "TIA/USDT:USDT",
+        "SEI/USDT:USDT",
+        "RUNE/USDT:USDT",
+        "FIL/USDT:USDT",
+        "ATOM/USDT:USDT",
+        "UNI/USDT:USDT",
+        "AAVE/USDT:USDT",
+        "ETC/USDT:USDT",
+        "XLM/USDT:USDT",
+        "ALGO/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/v002/CovarianceRiskTS_500.json",
+        "sha256": "8da2993da1082d19f749df876f53f7b3c4116a8e76b9211f5aed47caf2927092"
+      },
+      "source_files": {
+        "TSMomPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/TSMomPortfolio.py",
+          "sha256": "f06b07dad48dddabd6dc6ef6a330aacf2a9d11a44a8354de251ad90ab564b3bf"
+        },
+        "RiskWeights.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/RiskWeights.py",
+          "sha256": "f49d7f19ea8af822b8e0d38df99a3a4e81da0d97c4ca13e4e78e368372d3df43"
+        },
+        "AuthorMath.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/AuthorMath.py",
+          "sha256": "577b6300348014315ffbc5b7f3cb0aed2d749dc47bf5a5ec483705015288396d"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        },
+        "ClockedPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/ClockedPortfolio.py",
+          "sha256": "aec077a1734f0a766eda35ca93969f5fb4ecec6a709c2c7588f75743d992005a"
+        }
+      }
+    },
+    {
+      "name": "DiagonalRiskTS_1000",
+      "strategy": "ClockedDiagonalRiskTS",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT",
+        "BNB/USDT:USDT",
+        "XRP/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "ADA/USDT:USDT",
+        "AVAX/USDT:USDT",
+        "LINK/USDT:USDT",
+        "TRX/USDT:USDT",
+        "DOT/USDT:USDT",
+        "LTC/USDT:USDT",
+        "BCH/USDT:USDT",
+        "NEAR/USDT:USDT",
+        "APT/USDT:USDT",
+        "ARB/USDT:USDT",
+        "OP/USDT:USDT",
+        "SUI/USDT:USDT",
+        "INJ/USDT:USDT",
+        "TIA/USDT:USDT",
+        "SEI/USDT:USDT",
+        "RUNE/USDT:USDT",
+        "FIL/USDT:USDT",
+        "ATOM/USDT:USDT",
+        "UNI/USDT:USDT",
+        "AAVE/USDT:USDT",
+        "ETC/USDT:USDT",
+        "XLM/USDT:USDT",
+        "ALGO/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/v002/DiagonalRiskTS_1000.json",
+        "sha256": "9912f83d4203dec46c07046fb3e5126db7f22cf51f08551db5c836074831e1c7"
+      },
+      "source_files": {
+        "TSMomPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/TSMomPortfolio.py",
+          "sha256": "f06b07dad48dddabd6dc6ef6a330aacf2a9d11a44a8354de251ad90ab564b3bf"
+        },
+        "RiskWeights.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/RiskWeights.py",
+          "sha256": "f49d7f19ea8af822b8e0d38df99a3a4e81da0d97c4ca13e4e78e368372d3df43"
+        },
+        "AuthorMath.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/AuthorMath.py",
+          "sha256": "577b6300348014315ffbc5b7f3cb0aed2d749dc47bf5a5ec483705015288396d"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        },
+        "ClockedPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/ClockedPortfolio.py",
+          "sha256": "aec077a1734f0a766eda35ca93969f5fb4ecec6a709c2c7588f75743d992005a"
+        }
+      }
+    },
+    {
+      "name": "DiagonalRiskTS_500",
+      "strategy": "ClockedDiagonalRiskTS",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT",
+        "BNB/USDT:USDT",
+        "XRP/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "ADA/USDT:USDT",
+        "AVAX/USDT:USDT",
+        "LINK/USDT:USDT",
+        "TRX/USDT:USDT",
+        "DOT/USDT:USDT",
+        "LTC/USDT:USDT",
+        "BCH/USDT:USDT",
+        "NEAR/USDT:USDT",
+        "APT/USDT:USDT",
+        "ARB/USDT:USDT",
+        "OP/USDT:USDT",
+        "SUI/USDT:USDT",
+        "INJ/USDT:USDT",
+        "TIA/USDT:USDT",
+        "SEI/USDT:USDT",
+        "RUNE/USDT:USDT",
+        "FIL/USDT:USDT",
+        "ATOM/USDT:USDT",
+        "UNI/USDT:USDT",
+        "AAVE/USDT:USDT",
+        "ETC/USDT:USDT",
+        "XLM/USDT:USDT",
+        "ALGO/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/v002/DiagonalRiskTS_500.json",
+        "sha256": "cdcd1fa272f63bab543f540a0146fd821fc76814c807c757c35457e74227129d"
+      },
+      "source_files": {
+        "TSMomPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/TSMomPortfolio.py",
+          "sha256": "f06b07dad48dddabd6dc6ef6a330aacf2a9d11a44a8354de251ad90ab564b3bf"
+        },
+        "RiskWeights.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/RiskWeights.py",
+          "sha256": "f49d7f19ea8af822b8e0d38df99a3a4e81da0d97c4ca13e4e78e368372d3df43"
+        },
+        "AuthorMath.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/AuthorMath.py",
+          "sha256": "577b6300348014315ffbc5b7f3cb0aed2d749dc47bf5a5ec483705015288396d"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        },
+        "ClockedPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/ClockedPortfolio.py",
+          "sha256": "aec077a1734f0a766eda35ca93969f5fb4ecec6a709c2c7588f75743d992005a"
+        }
+      }
+    },
+    {
+      "name": "GrossOneRiskTS_1000",
+      "strategy": "ClockedGrossOneRiskTS",
+      "capital": 1000,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT",
+        "BNB/USDT:USDT",
+        "XRP/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "ADA/USDT:USDT",
+        "AVAX/USDT:USDT",
+        "LINK/USDT:USDT",
+        "TRX/USDT:USDT",
+        "DOT/USDT:USDT",
+        "LTC/USDT:USDT",
+        "BCH/USDT:USDT",
+        "NEAR/USDT:USDT",
+        "APT/USDT:USDT",
+        "ARB/USDT:USDT",
+        "OP/USDT:USDT",
+        "SUI/USDT:USDT",
+        "INJ/USDT:USDT",
+        "TIA/USDT:USDT",
+        "SEI/USDT:USDT",
+        "RUNE/USDT:USDT",
+        "FIL/USDT:USDT",
+        "ATOM/USDT:USDT",
+        "UNI/USDT:USDT",
+        "AAVE/USDT:USDT",
+        "ETC/USDT:USDT",
+        "XLM/USDT:USDT",
+        "ALGO/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/v002/GrossOneRiskTS_1000.json",
+        "sha256": "58b737e61ab7c0f528fbdd15ea83e88adccf3fd2aa878978d65d9b3ff0eb76f4"
+      },
+      "source_files": {
+        "TSMomPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/TSMomPortfolio.py",
+          "sha256": "f06b07dad48dddabd6dc6ef6a330aacf2a9d11a44a8354de251ad90ab564b3bf"
+        },
+        "RiskWeights.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/RiskWeights.py",
+          "sha256": "f49d7f19ea8af822b8e0d38df99a3a4e81da0d97c4ca13e4e78e368372d3df43"
+        },
+        "AuthorMath.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/AuthorMath.py",
+          "sha256": "577b6300348014315ffbc5b7f3cb0aed2d749dc47bf5a5ec483705015288396d"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        },
+        "ClockedPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/ClockedPortfolio.py",
+          "sha256": "aec077a1734f0a766eda35ca93969f5fb4ecec6a709c2c7588f75743d992005a"
+        }
+      }
+    },
+    {
+      "name": "GrossOneRiskTS_500",
+      "strategy": "ClockedGrossOneRiskTS",
+      "capital": 500,
+      "pairs": [
+        "BTC/USDT:USDT",
+        "ETH/USDT:USDT",
+        "SOL/USDT:USDT",
+        "BNB/USDT:USDT",
+        "XRP/USDT:USDT",
+        "DOGE/USDT:USDT",
+        "ADA/USDT:USDT",
+        "AVAX/USDT:USDT",
+        "LINK/USDT:USDT",
+        "TRX/USDT:USDT",
+        "DOT/USDT:USDT",
+        "LTC/USDT:USDT",
+        "BCH/USDT:USDT",
+        "NEAR/USDT:USDT",
+        "APT/USDT:USDT",
+        "ARB/USDT:USDT",
+        "OP/USDT:USDT",
+        "SUI/USDT:USDT",
+        "INJ/USDT:USDT",
+        "TIA/USDT:USDT",
+        "SEI/USDT:USDT",
+        "RUNE/USDT:USDT",
+        "FIL/USDT:USDT",
+        "ATOM/USDT:USDT",
+        "UNI/USDT:USDT",
+        "AAVE/USDT:USDT",
+        "ETC/USDT:USDT",
+        "XLM/USDT:USDT",
+        "ALGO/USDT:USDT"
+      ],
+      "config": {
+        "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/v002/GrossOneRiskTS_500.json",
+        "sha256": "d4374fd50b55ad07fa609c8974d1c47264e69756244748842f18bbebd20c26b9"
+      },
+      "source_files": {
+        "TSMomPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/TSMomPortfolio.py",
+          "sha256": "f06b07dad48dddabd6dc6ef6a330aacf2a9d11a44a8354de251ad90ab564b3bf"
+        },
+        "RiskWeights.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/RiskWeights.py",
+          "sha256": "f49d7f19ea8af822b8e0d38df99a3a4e81da0d97c4ca13e4e78e368372d3df43"
+        },
+        "AuthorMath.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/AuthorMath.py",
+          "sha256": "577b6300348014315ffbc5b7f3cb0aed2d749dc47bf5a5ec483705015288396d"
+        },
+        "NativeAllocations.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/NativeAllocations.py",
+          "sha256": "303eaf98eb9908573f5939e7bb199149a076faab40e3576568aca89aab238244"
+        },
+        "ClockedPortfolio.py": {
+          "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/ClockedPortfolio.py",
+          "sha256": "aec077a1734f0a766eda35ca93969f5fb4ecec6a709c2c7588f75743d992005a"
+        }
+      }
+    }
+  ],
+  "allowed_leverage": 3.0,
+  "initial_equity_usdt": 1000,
+  "total_cost_bps_per_side": [
+    15,
+    8
+  ],
+  "runner_sha256": "474a145adb67bb14eac25b525b730eb036523f641142300e47d865aed856e1a8",
+  "runner_module": "research.crypto.tsmom_risk_native_20261114_v1.native_runner",
+  "additional_source_seals": [
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/protocol.json",
+      "sha256": "89fe7c138f672e0604dd087e51b3e9ce9647db42492d0ceeb8efb24e0e1a5b2b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/source_manifest.json",
+      "sha256": "f9972759a6688eef32563ef45545c828809e1ec67caebe7f93c635a85386d7c2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/input_admission.json",
+      "sha256": "985bcfabdaaadf6fe8effb8692db7a86843551bc4b5c62441ab7712b305af6db"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/preflight.py",
+      "sha256": "d18a23b199ad455112ac3e07db3a58429fbca8a33faf95b209b001b7f506ff96"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/preflight.json",
+      "sha256": "668c3f5ec6b0d8c42f15861b82814d53522ed6e010df0b42813f116fe5785ae9"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/config_templates.json",
+      "sha256": "fa9a2542f67977c7f93ea0c20846cf0df104a2a6cdb2ed47279a5b4e381b48c0"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/run.py",
+      "sha256": "fc835f6fcd6097992cae0b904b3959c8a19644c3b732c5acaa9b9cae48b3942f"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/test_tsmom.py",
+      "sha256": "27ea8bc62bfbd30751a67afe9567c3773b254a36138ae9429ed9bc8f1a9bf170"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/tests_v2.log",
+      "sha256": "8c395c0cc922b89302af35684baf9a2969ea19377b60b27c3ac67a9fc9b2a76a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/complete_inputs.py",
+      "sha256": "51fff0511dde0e76bb711298bf8ef749e374a5e848e74f04c986c2786f17ee44"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/register.py",
+      "sha256": "5a2745f32b5ae600d9317ebf34deaca43684d15cae8f73a47bb44655da9377b0"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/source/README.md",
+      "sha256": "bf1c2e8a2bc15e2d40d4e31105210625015effd5c4bc22eeafda2e765ebc5383"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/source/LICENSE",
+      "sha256": "f86b431094a363ebac757326e1622ef9fb10da4611e4eb83ca681b3d9e96b442"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/source/config/config.py",
+      "sha256": "860122614b26a946cbaf351c111decbcd6900b69447f0b3b5ecfcde8ec8b208b"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/source/core/tsmom_engine.py",
+      "sha256": "7089f34303618323e47c68b9a329aafdde96ae4eb40212f62bd4d68fae735621"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/source/core/data.py",
+      "sha256": "dce2989107b8339e5fee30e05f36a31b9e070b3b4d80f53385a2a799aba427e8"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/source/tools/backtest.py",
+      "sha256": "950908a860a5638cb075032c5fbde86f0e72ffb3c34aab0d4f4eee3b83a945db"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/source/tsmom_strategy.pine",
+      "sha256": "cdc9cf616fae4f57c0e1ec9f227691dba48a6e183a49c6cfdec73815642121e2"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/band_trend_native_20261113_v1/observe_clock.py",
+      "sha256": "f2bb297fca1ec753d9a010c39ff45506dccc0aadadf067f069de2e8a8d7b638d"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/skew_vol_native_20261113_v1/clock_fix.py",
+      "sha256": "3569781b7f1e30319cb0f2aed0a2c12587f0448de154f5575415b6f1684df8ce"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/ClockedPortfolio.py",
+      "sha256": "aec077a1734f0a766eda35ca93969f5fb4ecec6a709c2c7588f75743d992005a"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/test_clocked.py",
+      "sha256": "92024b9a63f756017d991edbcc3261ab62979f88f40f1d44ef26eea1614a14d9"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/clocked_tests.log",
+      "sha256": "0e36896a973bff9595ccb474180400b516ba214aba2f60e650c9328907711253"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/technical_interruption.json",
+      "sha256": "2f9074dd4717dfd45e81d1e5686440fdbcf8bf56bb154b4a97ea6971361a3e24"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/register_clocked.py",
+      "sha256": "eb8fd022e44e7de86712954c191956dd710effba25accbfcd0bba753ea621396"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/run_clocked.py",
+      "sha256": "2a72f47e08a66f8854bc148dd467018edc62593137ed3ea1d970131502f3d9b8"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/compare_first.py",
+      "sha256": "3e8ba4df328593e3092e1d023d4329c8c215783e7e607c9f7591ec6d239e06ea"
+    },
+    {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/v002/preflight.json",
+      "sha256": "cac6bf187a3f11ac9d578ec17f2bbd78ed4d80b84862f83311a2446bd7ea4e12"
+    }
+  ],
+  "orders_enabled": false,
+  "production_eligible": false,
+  "technical_change": "Native adjustment flag enabled only01 hour; original adjust callback pureNone at otherhours",
+  "original_frozen_plan": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/plan.json",
+    "sha256": "2ae8e68e40207d83e907387621190c8c701a53df2e4631f510366c6549979fba"
+  },
+  "alpha_parameters_changed": false,
+  "financial_output_already_observed": true
+}

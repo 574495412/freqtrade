@@ -1,0 +1,33 @@
+{
+  "verified_at": "2026-11-16T17:18:08.751261+00:00",
+  "passed": true,
+  "official_vendor_files_unchanged": 595,
+  "local_native_methods_added": [
+    "get_exit_order_precision",
+    "normalize_entry_order_rate"
+  ],
+  "local_native_methods_changed": [
+    "_enter_trade",
+    "_exit_trade",
+    "get_valid_entry_price_and_stake"
+  ],
+  "existing_native_methods_AST_unchanged": 54,
+  "previous_trade_factory_preserved": true,
+  "actual_native_order_path_test_cases_passed": 21,
+  "full_native_start_calls": 0,
+  "new_historical_financial_accounts": 0,
+  "synthetic_price_path_only": true,
+  "source_notices_fully_read_via_web_extraction": 2,
+  "direct_HTTP_article_downloads_succeeded": 0,
+  "dated_source_new_tick_before_effective_observations": 18,
+  "full_window_40pair_rules_admitted": false,
+  "corrected_returns": null,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false,
+  "source_hashes": {
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/backtesting.py": "a5fa1efa624d0bcfef81be3f0d3a51dd50003986927dd0756da1ec6370e320ce",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/dated_price_precision.py": "4631bdb5ec9f1cfcef7d82eba750f591bb30663ce5b9d46e01abe67daaf46507",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/dated_precision_native_20261117_v1/test_rules.py": "1b1d5079135c583fe2ac27458529fd9004fa6a3d4b345ae24da534d430c25768"
+  }
+}

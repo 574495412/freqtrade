@@ -1,0 +1,11 @@
+{
+  "owner": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/SignedJumpInputs.py",
+  "original_frozen_sha256": "3391c85dc0c5b58925471d1b6b3937121c9296e147ae956262c075530c66ec58",
+  "preserved_source": "/Users/chrise/GitHub/freqtrade/research/crypto/signed_jump_native_20261114_v1/SignedJumpInputs_before_entry_guard.source.txt",
+  "new_sha256": "652fb6c763893a6e4ae71d285443904c828f4252281252aec6c2c16e51d316f5",
+  "only_inserted_block": "    def ft_bot_start(self,**kwargs):\n        # Native Backtesting calls this lifecycle method directly. A loop\n        # callback exception alone is swallowed by its safe wrapper.\n        raise ValueError('Input-only class cannot start a native financial backtest')\n\n",
+  "after_predictive_results_seen": true,
+  "factor_math_input_window_direction_costs_unchanged": true,
+  "financial_accounts_before_and_after": 0,
+  "reason": "Native backtest wraps bot_loop_start with supress_error=True; explicit ft_bot_start lifecycle rejection required before matching loop. Diagnostic directbot_start remains identical."
+}

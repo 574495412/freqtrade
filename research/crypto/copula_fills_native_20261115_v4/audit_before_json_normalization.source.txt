@@ -1,0 +1,218 @@
+"""Independent exported-fill/funding/NAV audit; no strategy/helper imports.
+
+Actual Backtesting owns orders, positions, wallets and primary observed NAV.
+These calculations reconcile its output and deny admission on missing funding
+exposure or a failed paired holding. They never create a substitute account.
+"""
+import json
+import zipfile
+from collections import defaultdict
+from decimal import Decimal as D, ROUND_FLOOR
+from pathlib import Path
+
+import pandas as pd
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[2]
+OUT = ROOT / 'user_data/crypto_quant/copula_fills_native_20261115_v4'
+EPS = D('0.0000001')
+
+
+def clock(value):
+    return pd.Timestamp(value, unit='ms', tz='UTC')
+
+
+def quantity_before(trades, pair, at):
+    """Unsigned actual filled quantity immediately before all events at at."""
+    result = D(0)
+    for trade in trades:
+        if trade['pair'] == pair:
+            for order in trade['orders']:
+                if clock(order['order_filled_timestamp']) < at:
+                    result += D(str(order['amount'])) * (1 if order['ft_is_entry'] else -1)
+    return result
+
+
+def funding_coverage(trades, pairs, expected, supplied):
+    rows = []
+    for pair in pairs:
+        for at in expected.difference(supplied[pair].index):
+            quantity = quantity_before(trades, pair, at)
+            if quantity < 0:
+                raise ValueError('Native unsigned inventory became negative')
+            rows.append(dict(pair=pair, at=str(at), held_before_event=str(quantity),
+                             exposed=quantity > 0, observed_rate=None))
+    return rows
+
+
+def cash(trade, funds, *, at=None):
+    entries = [o for o in trade['orders'] if o['ft_is_entry']]
+    exits = [o for o in trade['orders'] if not o['ft_is_entry']]
+    assert len(entries) == len(exits) == 1
+    entry, exit_ = entries[0], exits[0]
+    quantity = D(str(entry['amount']))
+    assert quantity == D(str(exit_['amount'])) > 0
+    opened, closed = clock(entry['order_filled_timestamp']), clock(exit_['order_filled_timestamp'])
+    active = funds.loc[(funds.index >= opened) & (funds.index <= closed)]
+    if at is not None:
+        active = active.loc[active.index < at]
+    sign = -1 if trade['is_short'] else 1
+    funding = sum((-sign * quantity * D(str(row.rate)) * D(str(row.mark))
+                   for row in active.itertuples()), D(0))
+    if at is not None:
+        return funding
+    entry_gross = quantity * D(str(entry['safe_price']))
+    exit_gross = quantity * D(str(exit_['safe_price']))
+    profit = sign * (exit_gross - entry_gross) - entry_gross * D(str(trade['fee_open'])) - exit_gross * D(str(trade['fee_close'])) + funding
+    return profit, funding
+
+
+def audit_case(case, attempt='observed1'):
+    directory = OUT / 'runs' / case['name'] / attempt
+    receipt = json.loads((directory / 'native_fixture_result.json').read_text())
+    saved = json.loads((directory / 'native_stats.json').read_text())
+    trace = json.loads((directory / 'strategy_trace.json').read_text())
+    archive = Path(receipt['native_zips'][0]['path'])
+    with zipfile.ZipFile(archive) as z:
+        name = next(n for n in z.namelist() if n.endswith('.json') and not n.endswith('_config.json'))
+        stats = json.loads(z.read(name))['strategy'][case['strategy']]
+    assert json.dumps(saved, sort_keys=True) == json.dumps(stats, sort_keys=True)
+    protocol = json.loads((HERE / 'fixture_protocol.json').read_text())
+    expected = pd.date_range(protocol['start'], protocol['end_exclusive'], freq='h', inclusive='left')
+    pairs = protocol['pairs']
+    funds, marks, prices = {}, {}, {}
+    for pair in pairs:
+        stem = pair.replace('/', '_').replace(':', '_')
+        data = Path(case['datadir']) / 'futures'
+        marks[pair] = pd.read_feather(data / (stem + '-1h-mark.feather')).set_index('date').open
+        prices[pair] = pd.read_feather(data / (stem + '-5m-futures.feather')).set_index('date').open
+        f = pd.read_feather(data / (stem + '-1h-funding_rate.feather')).set_index('date')
+        funds[pair] = pd.DataFrame({'rate': f.funding_rate, 'mark': marks[pair].reindex(f.index)})
+        assert funds[pair].notna().all().all()
+    trades = stats['trades']
+    aggregate, maximum_cash_error, maximum_fund_error = D(0), D(0), D(0)
+    profit_by_id = {}
+    for i, trade in enumerate(trades):
+        profit, fund = cash(trade, funds[trade['pair']])
+        profit_by_id[i] = profit
+        maximum_cash_error = max(maximum_cash_error, abs(profit - D(str(trade['profit_abs']))))
+        maximum_fund_error = max(maximum_fund_error, abs(fund - D(str(trade['funding_fees']))))
+        aggregate += profit
+        assert trade['leverage'] == 3. and trade['fee_open'] == trade['fee_close'] == .0015
+        assert all(D(str(o['safe_price'])) == D(str(prices[trade['pair']].loc[clock(o['order_filled_timestamp'])])) for o in trade['orders'])
+    assert maximum_cash_error < EPS and maximum_fund_error < EPS
+    assert abs(aggregate - D(str(stats['profit_total_abs']))) < EPS
+    assert abs(D(str(case['capital'])) + aggregate - D(str(receipt['native_wallet_final_balance']))) < EPS
+
+    # Verify actual paired entry/exit groups, never infer fills from intended flags.
+    groups = defaultdict(list)
+    for trade in trades:
+        groups[trade['open_timestamp']].append(trade)
+    paired = True
+    for group in groups.values():
+        paired &= len(group) == 2 and {t['pair'] for t in group} == set(pairs)
+        if len(group) == 2:
+            paired &= {t['is_short'] for t in group} == {True, False}
+            paired &= group[0]['close_timestamp'] == group[1]['close_timestamp']
+    coverage = funding_coverage(trades, pairs, expected, funds)
+    exposed = [r for r in coverage if r['exposed']]
+
+    # Primary hourly NAV is captured from actual native state. Independent
+    # reconstruction is strictly before every fill/funding event at that hour.
+    frame = pd.read_parquet(directory / 'hourly_equity.parquet')
+    assert pd.DatetimeIndex(frame.date).as_unit('ns').equals(expected.as_unit('ns'))
+    max_nav_error, nav_scalars = D(0), 0
+    for row in frame.itertuples():
+        at = row.date
+        nav, realized, gross, opened_count = D(str(case['capital'])), D(0), D(0), 0
+        for i, trade in enumerate(trades):
+            if clock(trade['close_timestamp']) < at:
+                nav += profit_by_id[i]
+                realized += profit_by_id[i]
+            elif clock(trade['open_timestamp']) < at:
+                opened_count += 1
+                entry = trade['orders'][0]
+                quantity = D(str(entry['amount']))
+                mark = D(str(marks[trade['pair']].loc[at]))
+                entry_price = D(str(entry['safe_price']))
+                sign = -1 if trade['is_short'] else 1
+                nav += sign * quantity * (mark - entry_price) - quantity * entry_price * D(str(trade['fee_open'])) - quantity * mark * D(str(trade['fee_close'])) + cash(trade, funds[trade['pair']], at=at)
+                gross += quantity * mark
+        max_nav_error = max(max_nav_error, abs(nav - D(str(row.hourly_mark_equity))))
+        assert opened_count == row.open_trades
+        assert abs(realized - D(str(row.closed_realized_pnl))) < EPS
+        assert abs(gross - D(str(row.gross))) < EPS
+        nav_scalars += 4
+    assert max_nav_error < D('0.000001')
+
+    # Independently check .99 on actual flat weekly cash once, fixed beta-ratio
+    # units and native .1 flooring; no amount scaled from another account.
+    budget_error, quantities_checked = D(0), 0
+    budgets = []
+    for budget in trace['budgets']:
+        at = pd.Timestamp(budget['at'])
+        assert all(not (clock(t['open_timestamp']) < at <= clock(t['close_timestamp'])) for t in trades)
+        balance = D(str(case['capital'])) + sum((profit_by_id[i] for i, t in enumerate(trades) if clock(t['close_timestamp']) < at), D(0))
+        expected_budget = D('.99') * balance
+        budget_error = max(budget_error, abs(expected_budget - D(str(budget['native_gross_budget']))))
+        denominator = 10 * D(str(prices[pairs[0]].loc[at])) + 20 * D(str(prices[pairs[1]].loc[at]))
+        k = expected_budget / denominator
+        quantities = {}
+        for pair, beta in zip(pairs, [10, 20]):
+            q = (k * beta / D('.1')).to_integral_value(rounding=ROUND_FLOOR) * D('.1')
+            quantities[pair] = q
+            assert abs(q - D(str(budget['quantities'][pair]))) < EPS
+            quantities_checked += 1
+        budgets.append((at, quantities))
+    assert budget_error < EPS
+    for trade in trades:
+        at = clock(trade['open_timestamp'])
+        eligible = [(t, q) for t, q in budgets if t <= at]
+        assert eligible
+        assert D(str(trade['amount'])) == eligible[-1][1][trade['pair']]
+    expected_errors = []
+    if not paired or receipt['fatal_pair_error']:
+        expected_errors.append('native_paired_holding_failure')
+    if exposed:
+        expected_errors.append('missing_funding_while_held')
+    if case['name'] == 'one_leg_rejected':
+        assert not paired and receipt['fatal_pair_error'] and len(trades) == 1
+        assert receipt['fatal_pair_error']['at'] == '2025-01-02 00:10:00+00:00'
+    elif case['name'] == 'missing_funding_exposed':
+        assert paired and len(exposed) == 1 and exposed[0]['at'] == '2025-01-03 11:00:00+00:00'
+    else:
+        assert paired and not exposed and receipt['fatal_pair_error'] is None
+    if case['name'] == 'under_minimum':
+        assert len(trades) == 0 and trace['admissions'] and all(a['status'] == 'REJECT_BOTH' for a in trace['admissions'])
+    if case['name'] == 'missing_funding_flat':
+        assert len(coverage) == 1 and not coverage[0]['exposed']
+    return dict(case=case['name'], attempt=attempt, technical_audit_passed=True,
+        native_start_completed=True, native_trades=len(trades), native_orders=sum(len(t['orders']) for t in trades),
+        hourly_points=len(frame), independently_checked_nav_scalars=nav_scalars,
+        maximum_cash_error_usdt=str(maximum_cash_error), maximum_funding_error_usdt=str(maximum_fund_error),
+        maximum_nav_error_usdt=str(max_nav_error), weekly_budget_error_usdt=str(budget_error),
+        weekly_quantity_cells=quantities_checked, paired_holding_valid=paired,
+        missing_funding_events=coverage, fixture_account_admitted=not expected_errors,
+        denial_reasons=expected_errors, source20_funded_accounts=0,
+        source_strategy_returns=None)
+
+
+def main():
+    inputs = json.loads((HERE / 'fixture_inputs_maintenance_fixed.json').read_text())
+    rows = [audit_case(case) for case in inputs['cases']]
+    one = pd.read_parquet(OUT / 'runs/normal1000/observed1/hourly_equity.parquet')
+    half = pd.read_parquet(OUT / 'runs/normal500/observed1/hourly_equity.parquet')
+    assert not one.hourly_mark_equity.div(2).equals(half.hourly_mark_equity)
+    result = dict(passed=True, cases=rows, native_runs=6,
+        hourly_points=sum(r['hourly_points'] for r in rows),
+        independent_nav_scalars=sum(r['independently_checked_nav_scalars'] for r in rows),
+        filled_orders=sum(r['native_orders'] for r in rows),
+        negative_cases_correctly_denied=['one_leg_rejected', 'missing_funding_exposed'],
+        cash_sizes_actually_separate=True, half_account_is_scaled_curve=False,
+        source20_funded_accounts=0, source_strategy_returns=None)
+    (HERE / 'fixture_audit.json').write_text(json.dumps(result, indent=2, allow_nan=False) + '\n')
+    print('AUDITED6native fixtures;', result['hourly_points'], 'hourly points;', result['filled_orders'], 'actual fills; source20 financial accounts0')
+
+
+if __name__ == '__main__':
+    main()

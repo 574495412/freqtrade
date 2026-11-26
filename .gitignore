@@ -156,3 +156,19 @@ docker-compose-*.yml
 /research/**/*_process_status.json
 /research/**/download_checkpoint.json
 /research/**/raw_receipts.json
+
+# Materialized factor-analysis inputs, outputs and host resource samples.
+/research/*/*/predictive*/**/factor.csv
+/research/*/*/predictive*/**/returns.csv
+/research/*/*/predictive*/**/group_equity.csv
+/research/*/*/predictive*/**/ic_series.csv
+/research/*/*/predictive*/**/ic_summary.json
+/research/*/*/predictive*/**/native_response.json
+/research/*/*/predictive*/**/native_result.json
+/research/*/*/predictive*/**/label_clocks.json
+/research/*/*/predictive*/**/excluded_terminal_anchors.json
+/research/*/*/predictive*/**/full607_*.csv
+/research/*/*/resource_receipts/
+/research/*/*/audit_completed_*/
+/research/*/*/native_rechecks/
+/research/*/*/*_dirty_state.txt

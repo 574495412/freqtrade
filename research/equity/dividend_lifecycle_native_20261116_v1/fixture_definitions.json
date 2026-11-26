@@ -1,0 +1,27 @@
+{
+  "synthetic": true,
+  "security": "ABC",
+  "sessions": "Jan2,3,6,7,8,9,10 2025 inherited synthetic clocks;not certified exchange calendar",
+  "ordinary_cash_per_share": "10",
+  "withholding": "0.1 explicit arbitrary fixture,not investor tax advice",
+  "ex_session_index": 1,
+  "payment_cases": {
+    "pending": null,
+    "paid": "Jan6 close;notice 1minute before",
+    "delayed": "Jan9 close;notice 1minute before"
+  },
+  "same_open_buy_excluded": {
+    "ex_session_index": 4,
+    "amount": "3"
+  },
+  "future_perturbation": {
+    "ex_session_index": 6,
+    "announced": "Jan9 close",
+    "amounts": [
+      "1",
+      "999"
+    ]
+  },
+  "terminal": "held6shares;no force sale",
+  "price": "nominal fixture unchanged;not a price-drop economic experiment"
+}

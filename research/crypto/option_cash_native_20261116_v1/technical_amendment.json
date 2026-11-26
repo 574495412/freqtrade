@@ -1,0 +1,27 @@
+{
+  "recorded_at": "2026-11-16T13:33:45.233291+00:00",
+  "original_protocol_unchanged": "d5de018d3126e177995a0078df8d360412eb9343852522626ae6770dd9433b1f",
+  "full_start_protocol_unchanged": "aa43a759f6a1c30f7c1f6ffbf0993d0d56faa54123a44d23a0b58986048dc01c",
+  "retained_initial_attempts": [
+    "BTC_short_initial",
+    "BTC_short_second",
+    "BTC_short_debug",
+    "BTC_start_initial"
+  ],
+  "representation_corrections": [
+    "Encode timedelta when recording contract, before first native fill",
+    "Preserve exact desired native amount through floating stake/price conversion and verify upstream rounding exactly;never scale actual cash flows from requested quantity",
+    "Use original option minimum amount times premium instead of generic futures5percent-stop reserve minimum",
+    "Pass explicit datadir through native configuration CLI override;raw config field alone was ignored",
+    "Use direct FullPremiumProbe native constructor, replacing debug runtime class reassignment"
+  ],
+  "not_changed": [
+    "Coin initial capital",
+    "Option identity/minimum quantities",
+    "Synthetic price/mark paths",
+    "Fee/margin rules",
+    "Entry/exit sides and clocks",
+    "Original full comparison window"
+  ],
+  "primary_evidence": "Final10separate processes only;debug fills and unit fixtures are not independent strategy samples"
+}

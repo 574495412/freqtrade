@@ -1,0 +1,302 @@
+{
+  "actual_registry_views": 3,
+  "global_registry_modified": false,
+  "actual_factor_analysis_calls": 9,
+  "unique_four_hour_labels": 3647,
+  "assets": 29,
+  "independent_ic_rows": 21882,
+  "independent_group_nav_cells": 65646,
+  "maximum_group_nav_error": 3.1086244689504383e-15,
+  "scoped_dedup": [
+    {
+      "left": "cvd_20",
+      "right": "taker_imbalance_ma_20",
+      "dates": 3647,
+      "mean_abs_daily_pearson": 0.8655108879374859,
+      "duplicate": false
+    },
+    {
+      "left": "cvd_20",
+      "right": "avg_trade_size_z_20",
+      "dates": 3647,
+      "mean_abs_daily_pearson": 0.16713838937241163,
+      "duplicate": false
+    },
+    {
+      "left": "taker_imbalance_ma_20",
+      "right": "avg_trade_size_z_20",
+      "dates": 3647,
+      "mean_abs_daily_pearson": 0.16080306603179503,
+      "duplicate": false
+    },
+    {
+      "left": "cvd_20",
+      "right": "prior_funding7",
+      "dates": 608,
+      "mean_abs_daily_pearson": 0.1768107241021065,
+      "duplicate": false
+    },
+    {
+      "left": "taker_imbalance_ma_20",
+      "right": "prior_funding7",
+      "dates": 608,
+      "mean_abs_daily_pearson": 0.17409908117341488,
+      "duplicate": false
+    },
+    {
+      "left": "avg_trade_size_z_20",
+      "right": "prior_funding7",
+      "dates": 608,
+      "mean_abs_daily_pearson": 0.16190396256294845,
+      "duplicate": false
+    }
+  ],
+  "all_registry_dedup_claim": false,
+  "unknown_factor_cells": {
+    "cvd_20": 0,
+    "taker_imbalance_ma_20": 0,
+    "avg_trade_size_z_20": 0
+  },
+  "native_funded_accounts": 0,
+  "net_return_evidence": null,
+  "independent_oos_certified": false,
+  "source_strategy_reproduced": false,
+  "protocol_sha256": "b3d7c6062b7e2cc1aeed81e95b0c09d9925ada1575086e7406cbb2b55bcd022e",
+  "owners_sha256": "58b701d5a8369a2abf628a243e0a4da0befbecdc6563c228cd1d31a435fd06db",
+  "receipts": [
+    {
+      "factor": "cvd_20",
+      "split": "all",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.003469,
+        "ic_std": 0.2084,
+        "ir": -0.0166,
+        "ic_positive_ratio": 0.4883,
+        "ic_count": 3647,
+        "n_groups": 3,
+        "long_short_spread": -0.0043,
+        "group_final_equity": {
+          "Group_1": 0.3673,
+          "Group_2": 0.2596,
+          "Group_3": 0.363
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/taker_flow_native_20261114_v1/predictive/cvd_20/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "cvd_20",
+      "split": "calendar2025",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.006879,
+        "ic_std": 0.20798,
+        "ir": -0.0331,
+        "ic_positive_ratio": 0.4785,
+        "ic_count": 2190,
+        "n_groups": 3,
+        "long_short_spread": -0.0987,
+        "group_final_equity": {
+          "Group_1": 0.5013,
+          "Group_2": 0.4574,
+          "Group_3": 0.4027
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/taker_flow_native_20261114_v1/predictive/cvd_20/calendar2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "cvd_20",
+      "split": "calendar2026_through_aug31",
+      "result": {
+        "status": "ok",
+        "ic_mean": 0.001655,
+        "ic_std": 0.208997,
+        "ir": 0.0079,
+        "ic_positive_ratio": 0.5031,
+        "ic_count": 1457,
+        "n_groups": 3,
+        "long_short_spread": 0.1689,
+        "group_final_equity": {
+          "Group_1": 0.7326,
+          "Group_2": 0.5676,
+          "Group_3": 0.9015
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/taker_flow_native_20261114_v1/predictive/cvd_20/calendar2026_through_aug31/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "taker_imbalance_ma_20",
+      "split": "all",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.000644,
+        "ic_std": 0.205107,
+        "ir": -0.0031,
+        "ic_positive_ratio": 0.5001,
+        "ic_count": 3647,
+        "n_groups": 3,
+        "long_short_spread": 0.0879,
+        "group_final_equity": {
+          "Group_1": 0.2695,
+          "Group_2": 0.3732,
+          "Group_3": 0.3575
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/taker_flow_native_20261114_v1/predictive/taker_imbalance_ma_20/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "taker_imbalance_ma_20",
+      "split": "calendar2025",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.000857,
+        "ic_std": 0.206608,
+        "ir": -0.0042,
+        "ic_positive_ratio": 0.4982,
+        "ic_count": 2190,
+        "n_groups": 3,
+        "long_short_spread": 0.0016,
+        "group_final_equity": {
+          "Group_1": 0.4186,
+          "Group_2": 0.534,
+          "Group_3": 0.4202
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/taker_flow_native_20261114_v1/predictive/taker_imbalance_ma_20/calendar2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "taker_imbalance_ma_20",
+      "split": "calendar2026_through_aug31",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.000324,
+        "ic_std": 0.202899,
+        "ir": -0.0016,
+        "ic_positive_ratio": 0.5031,
+        "ic_count": 1457,
+        "n_groups": 3,
+        "long_short_spread": 0.2069,
+        "group_final_equity": {
+          "Group_1": 0.6438,
+          "Group_2": 0.6988,
+          "Group_3": 0.8507
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/taker_flow_native_20261114_v1/predictive/taker_imbalance_ma_20/calendar2026_through_aug31/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "avg_trade_size_z_20",
+      "split": "all",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.003402,
+        "ic_std": 0.205994,
+        "ir": -0.0165,
+        "ic_positive_ratio": 0.4938,
+        "ic_count": 3647,
+        "n_groups": 3,
+        "long_short_spread": -0.0339,
+        "group_final_equity": {
+          "Group_1": 0.35,
+          "Group_2": 0.3196,
+          "Group_3": 0.3161
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/taker_flow_native_20261114_v1/predictive/avg_trade_size_z_20/all/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "avg_trade_size_z_20",
+      "split": "calendar2025",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.001675,
+        "ic_std": 0.207459,
+        "ir": -0.0081,
+        "ic_positive_ratio": 0.4918,
+        "ic_count": 2190,
+        "n_groups": 3,
+        "long_short_spread": 0.0265,
+        "group_final_equity": {
+          "Group_1": 0.4376,
+          "Group_2": 0.4541,
+          "Group_3": 0.464
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/taker_flow_native_20261114_v1/predictive/avg_trade_size_z_20/calendar2025/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    },
+    {
+      "factor": "avg_trade_size_z_20",
+      "split": "calendar2026_through_aug31",
+      "result": {
+        "status": "ok",
+        "ic_mean": -0.005998,
+        "ic_std": 0.203815,
+        "ir": -0.0294,
+        "ic_positive_ratio": 0.4969,
+        "ic_count": 1457,
+        "n_groups": 3,
+        "long_short_spread": -0.1187,
+        "group_final_equity": {
+          "Group_1": 0.7999,
+          "Group_2": 0.7037,
+          "Group_3": 0.6812
+        },
+        "output_dir": "/Users/chrise/GitHub/freqtrade/research/crypto/taker_flow_native_20261114_v1/predictive/avg_trade_size_z_20/calendar2026_through_aug31/native",
+        "files": [
+          "ic_series.csv",
+          "ic_summary.json",
+          "group_equity.csv"
+        ]
+      },
+      "positive_gate": false
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "verified_at": "2026-11-17T14:29:55.987696+00:00",
+  "passed": true,
+  "scope": "Completed8nativeaccounts,codeandinputintegrity,exportedfillcashfundingNAVandindependentsignedstateaudit;notprofitabilityapproval",
+  "freezes": [
+    {
+      "file": "implementation_freeze.json",
+      "file_references_checked": 28
+    },
+    {
+      "file": "registration_attempt2_freeze.json",
+      "file_references_checked": 46
+    },
+    {
+      "file": "registration_attempt3_freeze.json",
+      "file_references_checked": 60
+    },
+    {
+      "file": "execution_audit_freeze.json",
+      "file_references_checked": 3
+    }
+  ],
+  "native_accounts": 8,
+  "native_trades": 1248,
+  "filled_orders": 2496,
+  "hour_points": 116736,
+  "maximum_nav_error_usdt": 5.9391368267824873e-08,
+  "maximum_cash_error_usdt": 4.998553615e-09,
+  "maximum_funding_error_usdt": 0.0,
+  "dual_owned_events": 0,
+  "open_trades_at_common_endpoint": 0,
+  "hypothetical_terminal_force_exits": 0,
+  "same_complete_window": true,
+  "financial_promotion_gate_passed": false,
+  "native_runner_derived_from": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_financial_native_20261117_v4/native_runner.py",
+    "sha256": "36c62b04e56e346ab80bcba03438b8febfdb5962c54125c57e6fc04731e72817"
+  },
+  "native_runner": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/native_runner.py",
+    "sha256": "cbe977bef4bfd19e300812219bd5f98ff1bdc0301a90732ce3dac6a3efbfe761"
+  },
+  "unit_only_audit_correction": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/hawkes_source_native_20261117_v1/audit_time_unit_correction.json",
+    "sha256": "1b2e30646012b4def3dd9d3ad6d6b6cfbeba4879243d313f565b92e5ad5c0afe"
+  },
+  "orders_enabled": false,
+  "goal_complete": false
+}

@@ -1,0 +1,25 @@
+{
+  "scope": "Technical integration corrections only; original economic fixtures unchanged",
+  "initial_failure": "Configuration ignored JSON datadir; explicitly passed CLI datadir; technical1 preserved",
+  "precision": {
+    "prior_owner": "/Users/chrise/GitHub/freqtrade/research/equity/start_lifecycle_native_20261115_v1/runs/technical2/source_snapshot/freqtrade/optimize/equity_fixture_lifecycle.py",
+    "prior_sha256": "448cebe7955ba288b7a78acbde98083faee9d9d08067774fd25f93dd3d0304e7",
+    "current_owner": "/Users/chrise/GitHub/freqtrade/freqtrade/optimize/equity_fixture_lifecycle.py",
+    "current_sha256": "468a4b74fbf9b312330a3b522a08e15a7d4c0a9ae0c6439ad58d16ae60825ba9",
+    "reason": "Stop future-month empirical precision inference and incidental input-column mutation; explicit synthetic metadata tick plus dated fill validation retained"
+  },
+  "tests": {
+    "initial_isolated": "13 pass/1 failure: native precision helper appended5columns",
+    "initial_multicollection": "249 pass/41 failures due dynamic bootstrap reload/class identities; original failure log preserved",
+    "final_isolated": 14,
+    "final_unchanged_parent_entry": 276,
+    "unique_total": 290
+  },
+  "audit_correction": "Compare parsed timezone-aware clocks rather than ISO strings differing only space vs T",
+  "lint": "Initial external archived source runtime globals excluded from local-script semantic lint; archived source unchanged and not executed",
+  "economic_rules_changed": false,
+  "technical_successes_not_independent_candidates": [
+    "technical2"
+  ],
+  "historical_stock_accounts": 0
+}

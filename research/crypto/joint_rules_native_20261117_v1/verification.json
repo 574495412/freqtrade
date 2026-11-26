@@ -1,0 +1,129 @@
+{
+  "verified_at": "2026-11-17T14:38:00.910486+00:00",
+  "passed": true,
+  "combined_mro_native_completed": 2,
+  "actual_zip_cash_audits_passed": 2,
+  "expected_rejected_cases": 3,
+  "official_vendor_files_unchanged": 595,
+  "local_native_modules_unchanged": true,
+  "evidence": [
+    {
+      "case": "continue",
+      "completed": true,
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/joint_rules_native_20261117_v1/runs/continue/native_results/backtest-result-2026-11-17_14-37-47.zip",
+      "native_zip_sha256": "789975a0ed0c05b3e78d005cc3536de94e07510a52a828b95a234624b3604632",
+      "trades": [
+        {
+          "pair": "FAKEONE/USDT:USDT",
+          "quantities": [
+            "1.0",
+            "0.6",
+            "1.2",
+            "0.4"
+          ],
+          "fills": [
+            1777441200000,
+            1777441860000,
+            1777442460000,
+            1777443000000
+          ],
+          "funding_usdt": "-0.1600",
+          "pnl_usdt": "2.96059100"
+        },
+        {
+          "pair": "FAKETWO/USDT:USDT",
+          "quantities": [
+            "0.5",
+            "0.5"
+          ],
+          "fills": [
+            1777442580000,
+            1777443000000
+          ],
+          "funding_usdt": "0.000",
+          "pnl_usdt": "-0.1550075"
+        }
+      ],
+      "final_wallet": "1002.80558350",
+      "maximum_cash_error_usdt": "0E-8",
+      "blocked_new_entry_calls": 3,
+      "old_pending_price_preserved": true,
+      "below_opening_notional_remainder_closed": true,
+      "synthetic_only": true
+    },
+    {
+      "case": "stop",
+      "completed": true,
+      "native_zip": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/joint_rules_native_20261117_v1/runs/stop/native_results/backtest-result-2026-11-17_14-37-49.zip",
+      "native_zip_sha256": "680a38c34e60c67acb410463a704f1bac4431e600ebb46e7f90ae1a749c8ae11",
+      "trades": [
+        {
+          "pair": "FAKEONE/USDT:USDT",
+          "quantities": [
+            "1.0",
+            "0.6",
+            "1.2",
+            "0.4"
+          ],
+          "fills": [
+            1777441200000,
+            1777441860000,
+            1777442580000,
+            1777443000000
+          ],
+          "funding_usdt": "-0.1600",
+          "pnl_usdt": "2.96059100"
+        },
+        {
+          "pair": "FAKETWO/USDT:USDT",
+          "quantities": [
+            "0.5",
+            "0.5"
+          ],
+          "fills": [
+            1777442580000,
+            1777443000000
+          ],
+          "funding_usdt": "0.000",
+          "pnl_usdt": "-0.1550075"
+        }
+      ],
+      "final_wallet": "1002.80558350",
+      "maximum_cash_error_usdt": "0E-8",
+      "blocked_new_entry_calls": 3,
+      "old_pending_price_preserved": true,
+      "below_opening_notional_remainder_closed": true,
+      "synthetic_only": true
+    },
+    {
+      "case": "coarse_dust",
+      "expected_rejected": true,
+      "error": "Unsupported dated close amount: nonpositive_or_nonfinite",
+      "native_start_attempted": true,
+      "open_trades_preserved": 2,
+      "failure_sha256": "1943f7f60d92a4ce7f18f5f5d0d5500196edbbe036f54873ad580c7cddd285c3"
+    },
+    {
+      "case": "unknown_amount",
+      "expected_rejected": true,
+      "error": "Incomplete known amount rule coverage for FAKEONE/USDT:USDT",
+      "native_start_attempted": false,
+      "open_trades_preserved": 0,
+      "failure_sha256": "6c76be9d9c04667bf85b5263d9a83b06325db6464a9a543831ba6876ccadc488"
+    },
+    {
+      "case": "unknown_pending",
+      "expected_rejected": true,
+      "error": "Unknown pending matching policy at reachable old order",
+      "native_start_attempted": true,
+      "open_trades_preserved": 1,
+      "failure_sha256": "399249563d8d10c46137738c74d5d06ec7069e7122f030198aa5ee364a4126d5"
+    }
+  ],
+  "synthetic_only": true,
+  "new_historical_strategy_accounts": 0,
+  "corrected_NFI_returns": null,
+  "full40_historical_rules_admitted": false,
+  "orders_enabled": false,
+  "goal_complete": false
+}

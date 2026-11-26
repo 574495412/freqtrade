@@ -1,0 +1,98 @@
+{
+  "accounts": {
+    "short_rebuy_cap_12": {
+      "periods": {
+        "continuous": {
+          "net_return": 0.02014792638222307,
+          "drawdown": 0.055761446551437444,
+          "ending_equity": 1020.147926382223,
+          "marks": 4608
+        }
+      },
+      "profits": {
+        "independent_entries": 15,
+        "natural_closes": 13,
+        "adds": 7,
+        "largest_winner_usdt": 19.82807835,
+        "largest_loss_usdt": null,
+        "top_five_profit_usdt": 49.45075446,
+        "top_five_fraction_of_gross_gains": 0.8613814760025531,
+        "exit_reasons": {
+          "exit_profit_short_rebuy_t_0_1_m ( 562 )": 2,
+          "exit_short_rebuy_1_1_1 ( 562 )": 1,
+          "exit_long_normal_d_3_2 ( 5 )": 1,
+          "exit_profit_long_rebuy_t_0_1_m ( 62 )": 1,
+          "exit_long_tc_d_6_1 ( 141 142 )": 1,
+          "exit_profit_short_rebuy_t_1_1_m ( 562 )": 1,
+          "exit_short_rebuy_w_1_1 ( 562 )": 1,
+          "exit_short_rebuy_o_2 ( 562 )": 1,
+          "exit_profit_long_normal_t_1_1_m ( 2 )": 1,
+          "exit_long_rapid_rpd_6 ( 102 )": 1,
+          "exit_long_rapid_rpd_2 ( 102 )": 1,
+          "exit_long_tc_o_3 ( 141 )": 1
+        },
+        "top_five_profit_as_fraction_of_full_net_pnl": 2.45438431339672
+      },
+      "cash": {
+        "archive_sha256": "cc9799470f77ac54009fd41c720307287283993eeaa02ea1d00d10bce6d0d633",
+        "trades": 15,
+        "filled_orders": 43,
+        "maximum_cash_error_usdt": 4.5512669996e-09,
+        "aggregate_cash_error_usdt": 2.2896946548e-09
+      },
+      "five_minute_nav_reconciliation": {
+        "passed": true,
+        "maximum_nav_error_usdt": 7.181142791523598e-09,
+        "maximum_funding_error_usdt": 0.0,
+        "maximum_position_count_error": 0,
+        "peak_gross_notional_to_equity": 1.1124471794988346
+      },
+      "pool": {
+        "decision_days_checked": 16,
+        "accepted_entry_requests": 15
+      },
+      "sizing": {
+        "stake_trace_sha256": "a5d3b42af9fc3bfa54c82d3383a8f3f0508de659b4693e2f7d31835795dc6988",
+        "attempted_stakes_by_multiplier": {
+          "1.25": 2
+        },
+        "matched_filled_top_coin_campaigns": 2,
+        "top_coin_native_pnl_usdt": 31.87533126
+      },
+      "max_observed_positions": 5,
+      "marks_at_active_ceiling": 0,
+      "liquidations": 0,
+      "native_model_funding_usdt": 16.725969839889704,
+      "sources": [
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts_diagnostic_cap/short_rebuy_cap_12_8bp/result.json",
+          "sha256": "19ec2a468623ae5defb48e914b5d176f56bad5b12a6208726249f33ac677816f"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts_diagnostic_cap/short_rebuy_cap_12_8bp/native_results/backtest-result-2026-11-26_02-10-48.zip",
+          "sha256": "cc9799470f77ac54009fd41c720307287283993eeaa02ea1d00d10bce6d0d633"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts_diagnostic_cap/short_rebuy_cap_12_8bp/five_minute_equity.parquet",
+          "sha256": "f2663175f9e995827b86cef382a407689642a35b6a6504cb158fc48db04a06db"
+        },
+        {
+          "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_extended_windows_20261126_v1/accounts_diagnostic_cap/short_rebuy_cap_12_8bp/effective_config.json",
+          "sha256": "184498e8aa5e8280e889e2677ffcc9750776737f9ba6dbe995709cba84c7624a"
+        }
+      ],
+      "short_rebuy_cap": {
+        "scoped_trades": 6,
+        "blocked_adjustment_requests": 0,
+        "maximum_filled_entry_to_first_stake": 1.9907509497917706,
+        "trace": null
+      }
+    }
+  },
+  "cost_bps_per_side": 8,
+  "all_roles_complete": false,
+  "scope": "cap_diagnostic",
+  "orders_enabled": false,
+  "production_eligible": false,
+  "window_is_restart": true
+}

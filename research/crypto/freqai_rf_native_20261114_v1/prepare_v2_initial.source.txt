@@ -1,0 +1,81 @@
+"""Data-only restoration of the originally requested 80-hour model warmup.
+
+Every added hour uses twelve already-frozen actual 5m bars. Existing 1h values,
+all model/account parameters and financial comparison boundaries are retained.
+"""
+import json
+import os
+from datetime import UTC,datetime
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+import prepare
+from bootstrap import boot
+from prepare import HERE,OUT,ROOT,ref,save,sha
+
+V2=HERE/'v002';NEW=OUT/'v002'
+
+
+def main():
+    assert not NEW.exists(),'Preserve original preparation'
+    V2.mkdir();NEW.mkdir();directory=NEW/'candles';(directory/'futures').mkdir(parents=True)
+    plan=json.loads((HERE/'plan.json').read_text());old=pd.read_feather(OUT/'candles/futures/BTC_USDT_USDT-1h-futures.feather')
+    requested=pd.Timestamp('2024-11-28T16:00Z');first=pd.Timestamp(old.date.iloc[0])
+    assert first==pd.Timestamp('2024-12-01T00:00Z')
+    amendment=dict(recorded_utc=datetime.now(UTC).isoformat(),parent_plan=ref(HERE/'plan.json'),parent_results=ref(HERE/'results.json'),
+         original_financial_outcomes_observed=True,original_train_rows_min=683,source_1h_first=str(first),
+         originally_requested_warmup_start=str(requested),missing_source_hours=56,
+         correction='Append only56actual earlier hours derived from672frozen5minute bars; do not modify any existing hourly values',
+         model_features_labels_split_thresholds_risk_pool_account_window_cost_capital_weights_changed=False,
+         independent_oos=False,no_alpha_rescue_claim=True)
+    save(V2/'data_contract_amendment.json',amendment)
+    bars=pd.read_feather(OUT/'candles/futures/BTC_USDT_USDT-5m-futures.feather')
+    prefix=bars.loc[bars.date.ge(requested)&bars.date.lt(first)].copy()
+    assert pd.DatetimeIndex(prefix.date).as_unit('ns').equals(pd.date_range(requested,first-pd.Timedelta(minutes=5),freq='5min').as_unit('ns'))
+    assert len(prefix)==672 and np.isfinite(prefix.select_dtypes('number')).all().all()
+    earlier=prefix.groupby(prefix.date.dt.floor('h')).agg(open=('open','first'),high=('high','max'),low=('low','min'),close=('close','last'),volume=('volume','sum')).reset_index()
+    assert len(earlier)==56
+    overlap=bars.loc[bars.date.ge(first)].groupby(bars.loc[bars.date.ge(first),'date'].dt.floor('h')).agg(open=('open','first'),high=('high','max'),low=('low','min'),close=('close','last'),volume=('volume','sum')).reset_index()
+    assert pd.DatetimeIndex(overlap.date).equals(pd.DatetimeIndex(old.date))
+    np.testing.assert_array_equal(overlap[['open','high','low','close']].to_numpy(),old[['open','high','low','close']].to_numpy())
+    volume_error=float(np.max(np.abs(overlap.volume.to_numpy()-old.volume.to_numpy())))
+    assert np.allclose(overlap.volume,old.volume,rtol=1e-12,atol=1e-10)
+    joined=pd.concat([earlier,old],ignore_index=True)
+    pd.testing.assert_frame_equal(joined.iloc[56:].reset_index(drop=True),old,check_exact=True,check_dtype=False)
+    receipts={}
+    for name,digest in json.loads((OUT/'data_receipts.json').read_text()).items():
+        path=directory/name
+        if name.endswith('-1h-futures.feather'):joined.to_feather(path)
+        else:assert sha(OUT/'candles'/name)==digest;os.link(OUT/'candles'/name,path)
+        receipts[name]=sha(path)
+    save(NEW/'data_receipts.json',receipts)
+    save(V2/'input_prefix_audit.json',dict(passed=True,added_hours=56,actual_five_minute_bars=672,existing_hour_rows_preserved=len(old),
+         all_existing_ohlc_exactly_match_5m_aggregation=True,overlap_volume_max_float_error=volume_error,
+         original_existing_volume_values_preserved=True,interpolation_or_zero_fill=False,new_receipts=ref(NEW/'data_receipts.json')))
+    prepare.OUT=NEW
+    checks=[]
+    start=pd.Timestamp('2025-01-01T00:00Z');cutoff=start+pd.Timedelta(days=3)
+    for strategy in ['RollingRF','RollingPrior']:
+        original,record=prepare.native_component(strategy,start,'corrected_original')
+        assert record['training_rows']==700
+        def changed(frame):
+            f=frame.copy();f.loc[f.date.ge(cutoff),['open','high','low','close','volume']]*=11;return f
+        for variant,modify in [('corrected_future',changed),('corrected_truncate',lambda f:f.loc[f.date.lt(cutoff)].copy())]:
+            actual,test=prepare.native_component(strategy,start,variant,modify);assert test['training_rows']==700
+            columns=['date','&-direction','up','down','do_predict','target_weight','source_signal']
+            pd.testing.assert_frame_equal(original.loc[original.date.lt(cutoff),columns].reset_index(drop=True),actual.loc[actual.date.lt(cutoff),columns].reset_index(drop=True),check_exact=True)
+        checks.append(dict(strategy=strategy,actual_component_fits=3,first_training_rows=700,prefix_checks_passed=True))
+    plan.update(schema='freqtrade.native.freqai-rf.data-v2',output_root=str(NEW),datadir=str(directory),data_receipts=ref(NEW/'data_receipts.json'))
+    plan['marks']={'BTC/USDT:USDT':ref(directory/'futures/BTC_USDT_USDT-1h-mark.feather')}
+    plan['additional_source_seals'] += [ref(V2/'data_contract_amendment.json'),ref(V2/'input_prefix_audit.json')]
+    save(V2/'plan.json',plan);save(V2/'preflight.json',dict(passed=True,checks=checks,additional_native_component_fits=6,requested_training_warmup_complete=True,financial_accounts=0))
+    source=(HERE/'run.py').read_text().replace("plan_path=HERE/'plan.json'","plan_path=HERE/'v002/plan.json'")
+    source=source.replace("HERE/'execution_complete.json'","HERE/'v002/execution_complete.json'")
+    (HERE/'run_v2.py').write_text(source)
+    save(V2/'runtime_source_freeze.json',{str(p):sha(p) for p in HERE.glob('*.py')})
+    print(json.dumps(dict(new_hours=56,existing_hourly_values_unchanged=True,first_model_training_rows=700,preflight=checks)))
+
+
+if __name__=='__main__':main()

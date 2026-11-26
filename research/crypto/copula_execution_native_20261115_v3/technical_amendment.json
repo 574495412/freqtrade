@@ -1,0 +1,17 @@
+{
+  "preserved_inputs_and_initial_owners": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/copula_reference_native_20261114_v1/source_intake.json": "ee24019444de00b93d54ea14f4ee180fe394de5ec38cbf9430bfde0c9aee8af4",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/copula_execution_native_20261115_v3/execution_protocol.json": "54c20950f209eed2e47d3e3fa8ecd9bace4698e900787796d33914ef731f79d0",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/copula_execution_native_20261115_v3/copula_execution_initial.source.txt": "4e544b26033e89927aae0fb70a7f0c1847b8ee687ce03160262baaca4b11a415",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/copula_execution_native_20261115_v3/preflight_initial/native_preflight.source.txt": "161826769070a080c7c90cb183ed6cdd13466d4f7a1e53bcb2e765550b463c62",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/copula_execution_native_20261115_v3/preflight_initial/native_preflight_revalidated.source.txt": "0c2198ea3a8a19e036eadbc12a1e870bc4dcb74681610bfe4cbfcf0f6ab307d7"
+  },
+  "current_owner": {
+    "path": "/Users/chrise/GitHub/freqtrade/freqtrade/data/copula_execution.py",
+    "sha256": "15d9377eb4b7e51685b88b93f88a22adf39d51d0e3e2bec9c1b7b5fa13473eb0"
+  },
+  "changes": "Separate weekly input validation, literal dictionaries and formatting; reject unknown source cash weeks, non-backtest wallets and missing native order minima. Sparse native flags exported for independent audit. No source forecasts, prices, alpha signs/thresholds, financial parameters or parent modules changed.",
+  "initial_test_failure": "500capital beta ratio after independent quantity flooring was incorrectly asserted exact; independent Decimal floors replace that assertion, without modifying sizing.",
+  "provider_failure": "DataProviderfunding loader requires an Exchange for fundingtimeframe; initial missing-exchange failure retained. Offline native ExchangeResolver now supplies declared native1hfundingtimeframe; no network/account transport.",
+  "financial_runs": 0
+}

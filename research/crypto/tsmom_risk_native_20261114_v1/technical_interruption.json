@@ -1,0 +1,30 @@
+{
+  "at_utc": "2026-11-13T19:37:14.788591+00:00",
+  "worker": {
+    "pid": 91027,
+    "account": "CovarianceRiskTS_500_15bps",
+    "command": [
+      "/Users/chrise/GitHub/freqtrade/.venv-paper/bin/python",
+      "-B",
+      "-m",
+      "research.crypto.tsmom_risk_native_20261114_v1.native_runner",
+      "--plan",
+      "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/plan.json",
+      "--candidate",
+      "CovarianceRiskTS_500",
+      "--cost-bps",
+      "15",
+      "--output",
+      "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/CovarianceRiskTS_500_15bps"
+    ],
+    "started_at": "2026-11-13T19:36:01.154504+00:00"
+  },
+  "observed_command": "/Users/chrise/GitHub/freqtrade/.venv-paper/bin/python -B -m research.crypto.tsmom_risk_native_20261114_v1.native_runner --plan /Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/plan.json --candidate CovarianceRiskTS_500 --cost-bps 15 --output /Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/CovarianceRiskTS_500_15bps",
+  "reason": "Verified unnecessary native safety-wrapper deep copies at every5m callback outside01; existing callback is a pure no-op there. Preserve first complete native account for full parity with clock-gated native strategy.",
+  "signal": "SIGINT",
+  "not_observation_timeout": true,
+  "no_signal_risk_cost_universe_window_change": true,
+  "completed_native_account": "CovarianceRiskTS_1000_15bps",
+  "interrupted_partial_return_used": false,
+  "clock_flag_unit_tests_passed": 3
+}

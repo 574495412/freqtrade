@@ -1,0 +1,137 @@
+"""Full20 public execution-input preparation; never fit/price a wallet."""
+import hashlib,json,os,shutil,zipfile
+from concurrent.futures import ThreadPoolExecutor,as_completed
+from datetime import UTC,datetime
+from pathlib import Path
+import numpy as np
+import pandas as pd
+import requests
+HERE=Path(__file__).resolve().parent;ROOT=HERE.parents[2];OUT=ROOT/'user_data/crypto_quant/copula_execution_native_20261115_v3'
+V1=ROOT/'research/crypto/copula_reference_native_20261114_v1';V2=ROOT/'research/crypto/copula_account_native_20261115_v2'
+START=pd.Timestamp('2024-12-01',tz='UTC');END=pd.Timestamp('2026-09-01',tz='UTC');TERMINAL=pd.Timestamp('2025-05-21 09:00',tz='UTC')
+SYMBOLS=['BTC','ETH','BCH','XRP','EOS','LTC','TRX','ETC','LINK','XLM','ADA','XMR','DASH','ZEC','XTZ','ATOM','BNB','ONT','IOTA','BAT']
+KINDS={'price5m':('klines','5m','5m-futures','5min'),'mark1h':('markPriceKlines','1h','1h-mark','h'),'funding':('fundingRate',None,'1h-funding_rate',None)}
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def ref(p):return {'path':str(p),'sha256':sha(p)}
+def save(p,v):
+    p=Path(p);p.parent.mkdir(parents=True,exist_ok=True);t=p.with_suffix(p.suffix+'.writing');t.write_text(json.dumps(v,indent=2,default=str,ensure_ascii=False)+'\n');t.replace(p)
+def boundary(symbol):return TERMINAL if symbol=='EOS'else END
+def grid(symbol,kind,month=None):
+    begin=START if month is None else pd.Timestamp(month+'-01',tz='UTC');finish=boundary(symbol)
+    if month is not None:finish=min(finish,begin+pd.offsets.MonthBegin(1))
+    return pd.date_range(begin,finish,freq=KINDS[kind][3],inclusive='left')
+def prices_valid(f):
+    assert np.isfinite(f[['open','high','low','close','volume']]).all().all()and f[['open','high','low','close']].gt(0).all().all()and f.volume.ge(0).all()
+    assert f.high.ge(f[['open','close','low']].max(axis=1)).all()and f.low.le(f[['open','close','high']].min(axis=1)).all()
+def task(item):
+    symbol,kind,month=item;folder,interval,suffix,freq=KINDS[kind]
+    name=f'{symbol}USDT-fundingRate-{month}.zip'if kind=='funding'else f'{symbol}USDT-{interval}-{month}.zip'
+    url=f'https://data.binance.vision/data/futures/um/monthly/{folder}/{symbol}USDT/'+(''if kind=='funding'else interval+'/')+name
+    path=OUT/'archives'/kind/name;check=path.with_suffix('.zip.CHECKSUM');target=OUT/'monthly'/kind/f'{symbol}_{month}.parquet'
+    try:
+        assert shutil.disk_usage(ROOT).free>=2*1024**3,'Need2GiBfree before public input task'
+        path.parent.mkdir(parents=True,exist_ok=True);target.parent.mkdir(parents=True,exist_ok=True)
+        for p,u in [(path,url),(check,url+'.CHECKSUM')]:
+            if p.exists():continue
+            for attempt in range(3):
+                try:r=requests.get(u,timeout=30)
+                except requests.RequestException as e:
+                    p.with_name(p.name+f'.attempt{attempt}.error').write_text(repr(e));continue
+                if r.status_code==200:
+                    tmp=p.with_suffix(p.suffix+'.download');tmp.write_bytes(r.content);tmp.replace(p);break
+                p.with_name(p.name+f'.attempt{attempt}.HTTP{r.status_code}').write_bytes(r.content)
+            if not p.exists():raise RuntimeError('Request retries exhausted:'+u)
+        assert check.read_text().split()[0]==sha(path),'OfficialSHA conflict'
+        with zipfile.ZipFile(path)as z:raw=pd.read_csv(z.open(z.namelist()[0]))
+        if kind=='funding':
+            f=raw.copy();f['event_time']=pd.to_datetime(f.calc_time,unit='ms',utc=True);f['date']=f.event_time.dt.floor('h');f['symbol']=symbol
+            assert np.isfinite(f.last_funding_rate).all()and f.funding_interval_hours.isin([1,2,4,8]).all()
+            assert not f.date.duplicated().any()and (f.event_time-f.date).dt.total_seconds().between(0,1).all()
+            tail=f.date.ge(boundary(symbol));quarantined=int(tail.sum());f=f.loc[~tail].reset_index(drop=True)
+        else:
+            date=pd.to_datetime(raw.open_time,unit='ms',utc=True);tail=date.ge(boundary(symbol));quarantined=int(tail.sum())
+            raw=raw.loc[~tail].reset_index(drop=True);date=date.loc[~tail].reset_index(drop=True)
+            if 'volume'not in raw:raw['volume']=0.
+            f=raw[['open','high','low','close','volume']].astype(float);f.insert(0,'date',date)
+            assert pd.DatetimeIndex(date).as_unit('ns').equals(grid(symbol,kind,month).as_unit('ns')),(symbol,kind,month,len(f))
+            prices_valid(f)
+        f.to_parquet(target,index=False)
+        return {'passed':True,'symbol':symbol,'kind':kind,'month':month,'url':url,'archive':ref(path),'checksum':ref(check),'prepared':ref(target),'rows':len(f),'postterminal_observations_quarantined':quarantined}
+    except Exception as e:return {'passed':False,'symbol':symbol,'kind':kind,'month':month,'url':url,'error':repr(e)}
+def main():
+    assert not(HERE/'input_admission.json').exists()
+    for d in ['archives','monthly','candles/futures']:(OUT/d).mkdir(parents=True,exist_ok=True)
+    first=json.loads((V1/'input_admission.json').read_text());v1files=json.loads(Path(first['data_receipts']['path']).read_text())
+    wide=json.loads((ROOT/'research/crypto/strategy_comparison_wide_20261105/plan.json').read_text());f=json.loads((ROOT/'research/crypto/funding_cross_section_native_20261114_v1/input_admission.json').read_text())
+    options=[(Path(wide['datadir']),json.loads(Path(wide['data_receipts']['path']).read_text())),(Path(f['data_receipts']['path']).parent/'candles',json.loads(Path(f['data_receipts']['path']).read_text()))]
+    reuse=[];todo=[];bases={}
+    for symbol in SYMBOLS:
+        name=f'futures/{symbol}_USDT_USDT-1h-futures.feather';p=Path(first['data_receipts']['path']).parent/'candles'/name;assert sha(p)==v1files[name];t=OUT/'candles'/name
+        if not t.exists():os.link(p,t)
+        reuse.append({'symbol':symbol,'kind':'price1h','source':ref(p),'target':str(t),'full_domain':True})
+        for kind in ['price5m','mark1h']:
+            suffix=KINDS[kind][2];relative=f'futures/{symbol}_USDT_USDT-{suffix}.feather';found=None
+            for base,checks in options:
+                p=base/relative
+                if not p.exists()or relative not in checks:continue
+                assert sha(p)==checks[relative],p
+                frame=pd.read_feather(p);frame=frame.loc[frame.date.ge(START)&frame.date.lt(boundary(symbol))].reset_index(drop=True)
+                if frame.empty:continue
+                prices_valid(frame);found=(p,frame);break
+            missing=[]
+            for stamp in pd.date_range(START,boundary(symbol),freq='MS',inclusive='left'):
+                month=stamp.strftime('%Y-%m');expected=grid(symbol,kind,month)
+                if found is None:missing.append(month);continue
+                selected=found[1].loc[found[1].date.isin(expected)]
+                if not pd.DatetimeIndex(selected.date).as_unit('ns').equals(expected.as_unit('ns')):missing.append(month)
+            target=OUT/'candles'/relative
+            if found:
+                p,frame=found;bases[(symbol,kind)]=(p,frame);reuse.append({'symbol':symbol,'kind':kind,'source':ref(p),'target':str(target),'full_domain':not missing})
+                if not missing and not target.exists():os.link(p,target)
+            todo.extend((symbol,kind,m)for m in missing)
+    # Reuse complete checksummed public funding ZIPs from the prior source29
+    # study. Its TIA issue is not erased; TIA is not in this distinct source20pool.
+    oldreceipts=json.loads(Path(f['public_receipts']['path']).read_text());known={Path(r['path']).name:r for r in oldreceipts if '/fundingRate/'in r['url']}
+    for symbol in SYMBOLS:
+        for stamp in pd.date_range(START,boundary(symbol),freq='MS',inclusive='left'):
+            month=stamp.strftime('%Y-%m');name=f'{symbol}USDT-fundingRate-{month}.zip';p=OUT/'archives/funding'/name;c=p.with_suffix('.zip.CHECKSUM');p.parent.mkdir(parents=True,exist_ok=True)
+            if name in known:
+                r=known[name];old=Path(r['path']);check=old.with_suffix('.CHECKSUM');assert sha(old)==r['sha256']and sha(check)==r['checksum_sha256']and check.read_text().split()[0]==sha(old)
+                if not p.exists():os.link(old,p)
+                if not c.exists():os.link(check,c)
+            todo.append((symbol,'funding',month))
+    save(HERE/'input_request_plan.json',{'registered_at':datetime.now(UTC).isoformat(),'source20':SYMBOLS,'start':str(START),'end':str(END),'EOS_terminal':str(TERMINAL),'reused':reuse,'tasks':todo,'minimum_free_bytes':2*1024**3,'economic_returns_seen':False,'native_accounts':0})
+    rows=[]
+    with ThreadPoolExecutor(max_workers=4)as pool:
+        futures={pool.submit(task,t):t for t in todo}
+        for future in as_completed(futures):
+            row=future.result();rows.append(row);save(HERE/'download_checkpoint.json',{'completed':len(rows),'total':len(todo),'outcomes':rows})
+            if not row['passed']or len(rows)%25==0:print('CAPTURE',len(rows),'/',len(todo),'last',row['symbol'],row['kind'],row['month'],row.get('error','OK'),flush=True)
+    if any(not r['passed']for r in rows):raise RuntimeError('Retain task failures; no financial/data admission')
+    funding=[];issues=[];price_rows=[]
+    for symbol in SYMBOLS:
+        for kind in ['price5m','mark1h']:
+            suffix=KINDS[kind][2];target=OUT/f'candles/futures/{symbol}_USDT_USDT-{suffix}.feather';selected=[r for r in rows if r['symbol']==symbol and r['kind']==kind]
+            if selected:
+                pieces=[pd.read_parquet(r['prepared']['path'])for r in sorted(selected,key=lambda r:r['month'])];new=pd.concat(pieces,ignore_index=True)
+                if (symbol,kind)in bases:
+                    old=bases[(symbol,kind)][1];shared=pd.DatetimeIndex(old.date).intersection(pd.DatetimeIndex(new.date))
+                    if len(shared):assert np.allclose(old.set_index('date').loc[shared].to_numpy(),new.set_index('date').loc[shared].to_numpy(),rtol=0,atol=1e-7),'Overlapping native/publicprice conflict'
+                    frame=pd.concat([new,old.loc[~old.date.isin(new.date)]],ignore_index=True).sort_values('date').reset_index(drop=True)
+                else:frame=new.sort_values('date').reset_index(drop=True)
+                frame.to_feather(target)
+            frame=pd.read_feather(target);frame=frame.loc[frame.date.ge(START)&frame.date.lt(boundary(symbol))]
+            assert pd.DatetimeIndex(frame.date).as_unit('ns').equals(grid(symbol,kind).as_unit('ns'));prices_valid(frame)
+            price_rows.append({'symbol':symbol,'kind':kind,'domain_rows':len(frame),'target':ref(target)})
+        pieces=[pd.read_parquet(r['prepared']['path'])for r in sorted(rows,key=lambda r:r['month'])if r['symbol']==symbol and r['kind']=='funding'];raw=pd.concat(pieces,ignore_index=True).sort_values('date').reset_index(drop=True)
+        assert not raw.date.duplicated().any()and raw.date.is_monotonic_increasing
+        delta=raw.date.diff().dt.total_seconds().div(3600);plausible=delta.eq(raw.funding_interval_hours)|delta.eq(raw.funding_interval_hours.shift(1))|delta.isna()
+        for row in raw.loc[~plausible].itertuples():issues.append({'symbol':symbol,'kind':'cadence_gap','event_time':str(row.event_time),'delta_hours':float(delta.loc[row.Index])})
+        midnight=pd.DatetimeIndex(raw.loc[raw.date.dt.hour.eq(0),'date']);days=pd.date_range(START,boundary(symbol).floor('D'),freq='D',inclusive='left')
+        for d in days.difference(midnight):issues.append({'symbol':symbol,'kind':'missing_midnight_event','time':str(d)})
+        native=raw[['date','last_funding_rate']].rename(columns={'last_funding_rate':'funding_rate'});native.to_feather(OUT/f'candles/futures/{symbol}_USDT_USDT-1h-funding_rate.feather');funding.append(raw)
+    events=pd.concat(funding,ignore_index=True);events.to_parquet(OUT/'public_funding_events.parquet',index=False)
+    data={str(p.relative_to(OUT/'candles')):sha(p)for p in sorted((OUT/'candles/futures').glob('*.feather'))};assert len(data)==80;save(OUT/'data_receipts.json',data)
+    save(HERE/'input_admission.json',{'passed_price_inputs':True,'funding_cadence_no_detected_gaps':not issues,'source20':SYMBOLS,'raw_receipts':rows,'reused':reuse,'data_receipts':ref(OUT/'data_receipts.json'),'price_records':price_rows,'funding_events':ref(OUT/'public_funding_events.parquet'),'funding_rows':len(events),'issues':issues,'EOS_terminal':str(TERMINAL),'postterminal_raw_observations_quarantined':sum(r['postterminal_observations_quarantined']for r in rows),'private_settlement_certified':False,'funded_account_admission':False,'native_accounts':0,'remaining':['EOS market amount/minimum order specification','Native paired execution preflight and actual funded matrix'],'no_old_files_modified':True})
+    print('STAGED80nativefiles',sum(r['domain_rows']for r in price_rows),'price rows;',len(events),'publicfunding events;issues',issues,flush=True)
+if __name__=='__main__':main()

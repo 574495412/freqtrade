@@ -1,0 +1,65 @@
+"""Prove native DataProvider preserves sealed quote, mark and funding inputs."""
+import hashlib
+import json
+import sys
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[2]
+OUT = ROOT / 'user_data/crypto_quant/copula_execution_native_20261115_v3'
+sys.path.insert(0, str(ROOT.parent / 'CZ-Agent/vendor/freqtrade'))
+from freqtrade.data.dataprovider import DataProvider
+from freqtrade.enums import CandleType, RunMode
+
+
+def main():
+    rec = json.loads((OUT / 'data_receipts.json').read_text())
+    a = json.loads((HERE / 'input_admission.json').read_text())
+    cfg = dict(timeframe='5m', runmode=RunMode.BACKTEST, datadir=OUT / 'candles',
+               trading_mode='futures', candle_type_def=CandleType.FUTURES,
+               dataformat_ohlcv='feather', startup_candle_count=0)
+    provider = DataProvider(cfg, None)
+    rows, scalar_cells, checks = [], 0, 0
+    start, end = pd.Timestamp('2025-01-01T00:00Z'), pd.Timestamp('2026-09-01T00:00Z')
+    for symbol in a['source20']:
+        terminal = pd.Timestamp('2025-05-21T09:00Z') if symbol == 'EOS' else end
+        for timeframe, kind, suffix, frequency in [
+            ('5m', 'futures', '5m-futures', '5min'),
+            ('1h', 'futures', '1h-futures', 'h'),
+            ('1h', 'mark', '1h-mark', 'h'),
+            ('1h', 'funding_rate', '1h-funding_rate', None),
+        ]:
+            relative = f'futures/{symbol}_USDT_USDT-{suffix}.feather'
+            path = OUT / 'candles' / relative
+            assert hashlib.sha256(path.read_bytes()).hexdigest() == rec[relative]
+            sealed = pd.read_feather(path)
+            actual = provider.get_pair_dataframe(symbol + '/USDT:USDT', timeframe, kind)
+            sealed = sealed.loc[sealed.date.ge(start) & sealed.date.lt(terminal)].reset_index(drop=True)
+            actual = actual.loc[actual.date.ge(start) & actual.date.lt(terminal)].reset_index(drop=True)
+            np.testing.assert_array_equal(pd.DatetimeIndex(actual.date), pd.DatetimeIndex(sealed.date))
+            if frequency:
+                expected_grid = pd.date_range(start, terminal, freq=frequency, inclusive='left')
+                np.testing.assert_array_equal(pd.DatetimeIndex(actual.date), expected_grid)
+                cols = ['open', 'high', 'low', 'close', 'volume']
+                np.testing.assert_array_equal(actual[cols].to_numpy(), sealed[cols].to_numpy())
+                scalar_cells += len(actual) * 5
+            else:
+                np.testing.assert_array_equal(actual.open, sealed.funding_rate)
+                scalar_cells += len(actual)
+            rows.append(dict(symbol=symbol, kind=kind, timeframe=timeframe, rows=len(actual), exact_values=True))
+            checks += 1
+        print('NATIVE_PROVIDER', symbol, checks, flush=True)
+    output = dict(passed=True, native_data_provider_checks=checks, records=rows,
+                  target_domain_start=str(start), target_domain_end_exclusive=str(end),
+                  EOS_terminal_exclusive='2025-05-21T09:00Z', independent_exact_value_cells=scalar_cells,
+                  zero_filled_or_interpolated_target_cells=0, source_timestamps_preserved=True,
+                  native_funded_accounts=0, private_funding_settlement_certified=False)
+    (HERE / 'native_provider_verification.json').write_text(json.dumps(output, indent=2) + '\n')
+    print('VERIFIED80nativeprovider reads;', scalar_cells, 'exact value cells;0accounts')
+
+
+if __name__ == '__main__':
+    main()

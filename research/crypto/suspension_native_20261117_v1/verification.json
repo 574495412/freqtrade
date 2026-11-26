@@ -1,0 +1,80 @@
+{
+  "verified_at": "2026-11-16T19:28:05.163049+00:00",
+  "passed": true,
+  "audited_native_start_completed": 2,
+  "expected_native_start_rejections": 2,
+  "original_engine_completed_aux_export_failed": 1,
+  "original_archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/continue/native_results/backtest-result-2026-11-16_19-20-42.zip",
+  "original_runner_sha_missing_retained": true,
+  "original_and_audited_continue_trades_identical": true,
+  "prestart_nameerror_attempt_retained": true,
+  "official_vendor_files_checked": 595,
+  "evidence": [
+    {
+      "case": "continue",
+      "actual_archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/continue/audited_v2/native_results/backtest-result-2026-11-16_19-23-00.zip",
+      "archive_sha256": "9a3d4ae6f05b9ef4424c3db40190a7b6e8e79749647d4669d0728cc52010ec92",
+      "native_completed": true,
+      "first_exit_ms": 1777442400000,
+      "new_entry_ms": 1777442460000,
+      "independent_cash_error": [
+        "0E-8",
+        "0E-7"
+      ],
+      "funding_retained": true,
+      "synthetic_only": true
+    },
+    {
+      "case": "stop",
+      "actual_archive": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/stop/audited/native_results/backtest-result-2026-11-16_19-23-22.zip",
+      "archive_sha256": "d0156792a0df9d0d4c223504797b77e187921f7c7ddad91ce06789ef3714a35c",
+      "native_completed": true,
+      "first_exit_ms": 1777442520000,
+      "new_entry_ms": 1777442460000,
+      "independent_cash_error": [
+        "0E-8",
+        "0E-7"
+      ],
+      "funding_retained": true,
+      "synthetic_only": true
+    },
+    {
+      "case": "unknown",
+      "expected_rejected": true,
+      "error": "Unknown pending matching policy at reachable old order"
+    },
+    {
+      "case": "missing_detail",
+      "expected_rejected": true,
+      "error": "Missing genuine1m input around operation window"
+    }
+  ],
+  "verified_artifact_hashes": {
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/continue/audited_v2/operation_trace.json": "883a153ae3dff62db43517ed44e90db99304248bbefcef618dc0784999e73c09",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/continue/audited_v2/result.json": "672b62bc3e36ccf7a40428444f4938a0aae46312a2d4fe0be19c4195196af932",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/continue/audited_v2/config.json": "b0c6c8d7319796c95972435dcd3509ad7c208cf5e08cf9de551cec47fa390cd2",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/continue/audited_v2/producer_receipt.json": "b87649582579d200a3a968199d5e8cecc24746159736824e344571c874a496b1",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/continue/audited_v2/native_stats.json": "1d8536258e92736cb42886ca6ab1eb9b434d42c238b234bd5dd02e4d31917350",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/continue/audited_v2/native_results/backtest-result-2026-11-16_19-23-00.zip": "9a3d4ae6f05b9ef4424c3db40190a7b6e8e79749647d4669d0728cc52010ec92",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/continue/audited_v2/native_results/.last_result.json": "1c08fc359baeb75a3923feee6e4f085a7c8b71a65c57d0d829431191ce65a352",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/continue/audited_v2/native_results/backtest-result-2026-11-16_19-23-00.meta.json": "4900a642584da7d551decff0d5374b72570cc5f3bb558c06eb090495d9b9e11c",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/stop/audited/operation_trace.json": "883a153ae3dff62db43517ed44e90db99304248bbefcef618dc0784999e73c09",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/stop/audited/result.json": "6ea26a02eb6774dc509b4ad0c92fb9615adf1bff292a4f076fa12e8e347dccd9",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/stop/audited/config.json": "c5c1b32caac69546b5a548ac8ed45809e897d165cfb0fe453c737aa9ec1c5be7",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/stop/audited/producer_receipt.json": "b87649582579d200a3a968199d5e8cecc24746159736824e344571c874a496b1",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/stop/audited/native_stats.json": "a2edbda4ee46ec534e48688e5df2fbb40e2fa99e2041af6872f37e503bb5f224",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/stop/audited/native_results/backtest-result-2026-11-16_19-23-22.zip": "d0156792a0df9d0d4c223504797b77e187921f7c7ddad91ce06789ef3714a35c",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/stop/audited/native_results/backtest-result-2026-11-16_19-23-22.meta.json": "35b15e487418e5f184fee509d571125fc428a748c4095f4a17537eda1dd995e3",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/stop/audited/native_results/.last_result.json": "5d894e8b4185b8519030be074b743164e680ecc8c40e768e5218ba18da006946",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/unknown/audited/config.json": "71c46a05fb77791faf5b2db5948cb1f55cb50c25022dff74c163d46d86c6879e",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/unknown/audited/producer_receipt.json": "b87649582579d200a3a968199d5e8cecc24746159736824e344571c874a496b1",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/unknown/audited/failure.json": "7835a77aec653f791284a102127acdcf8eba5b675f4e6bf1a2f2c4871d10384a",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/missing_detail/audited/config.json": "f67813361eb9311f02e0796b6f3f7f815caa2ac41a3953e54caa420ecddfceb8",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/missing_detail/audited/producer_receipt.json": "b87649582579d200a3a968199d5e8cecc24746159736824e344571c874a496b1",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/suspension_native_20261117_v1/runs/missing_detail/audited/failure.json": "2c3a8306111a54678f6b983fbf047ce3e06ba6fe248f19e42f217f290f8d6647"
+  },
+  "new_historical_strategy_accounts": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

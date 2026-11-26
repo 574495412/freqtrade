@@ -1,0 +1,33 @@
+"""Local BACKTEST-only funded-state signal hook on native Backtesting.
+
+It changes no wallet, order matching, fee, funding or margin arithmetic. Native
+IStrategy feature frames supply already-completed observations; a local strategy
+can advance its flat-only state before the unmodified native candle loop.
+"""
+
+from freqtrade.enums import RunMode
+from freqtrade.optimize.backtesting import Backtesting
+from freqtrade.persistence import LocalTrade, Trade
+
+
+class VolumeProfileBacktesting(Backtesting):
+    def backtest_loop(self, row, pair, current_time, trade_dir, can_enter):
+        callback = getattr(self.strategy, "native_profile_step", None)
+        if callback is not None:
+            if (
+                self.config.get("runmode") != RunMode.BACKTEST
+                or not self.config.get("dry_run")
+                or Trade.use_db
+            ):
+                raise ValueError("Funded profile hook is BACKTEST only")
+            if self.timeframe != "15m" or self.config["exchange"]["pair_whitelist"] != [
+                "BTC/USDT:USDT"
+            ]:
+                raise ValueError("Frozen profile clock/pair changed")
+            if current_time.minute % 15 == 0 and current_time.second == 0:
+                direction = callback(
+                    pair, current_time, bool(LocalTrade.bt_trades_open_pp[pair]), can_enter
+                )
+                if direction is not None:
+                    trade_dir = direction
+        return super().backtest_loop(row, pair, current_time, trade_dir, can_enter)
