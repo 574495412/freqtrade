@@ -1,0 +1,93 @@
+{
+  "deployment": {
+    "scope": "Archived configuration; latest running cloud worker has not been verified",
+    "strategy": "NFIManualFlatBoost",
+    "leverage": 3,
+    "margin_mode": "isolated",
+    "max_open_trades": 12,
+    "daily_pool_size": 80,
+    "capital_after_cutover": "available_balance",
+    "tradable_balance_ratio": 0.99,
+    "sources": [
+      {
+        "path": "/Users/chrise/GitHub/freqtrade/deploy/aliyun_20261111/README.md",
+        "sha256": "73f00da780e3f0879379adce4de52965634402e4ca63a5d266db995b34895ed4"
+      },
+      {
+        "path": "/Users/chrise/GitHub/freqtrade/deploy/mainnet_100_20261109/strategy/NFIManualFlatBoost.py",
+        "sha256": "54f7ea7bdd40e7c941f2cc63109abcda2efe08aa28bf6935d4d17c063692a4fc"
+      },
+      {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/deployment/aliyun-public-20261111T145059Z/candidate/futures-config.private.json",
+        "sha256": "726f69ee3164824c333971f7f59ae240bd025e4e4bb977195158e22f82f419c5"
+      }
+    ]
+  },
+  "native_historical_reference": {
+    "plan": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_historical_universe_20261109/v003/flatboost-plan.json",
+      "sha256": "9d785803d8b888b07251233d140e8a43f4ee3e67cb5e98849bbe52e996955a7e"
+    },
+    "verification": {
+      "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_historical_universe_20261109/v003/verification.json",
+      "sha256": "0a56f28106c70d67123aa7bc273c7ba593a31fff9811907527a31580725701a8"
+    },
+    "start_utc": "2026-01-01T00:00:00+00:00",
+    "common_mark_cutoff_utc": "2026-11-09T05:00:00+00:00",
+    "initial_virtual_usdt": 1000,
+    "accounts": [
+      {
+        "cost_bps_per_side": 15,
+        "net_return_pct": 145.55668532165905,
+        "max_five_minute_drawdown_pct": 16.83228894097153,
+        "natural_closes": 304,
+        "all_marks": 89917,
+        "marks_at_twelve": 283,
+        "continuous_full_episodes": 3,
+        "days_with_full_marks": 3,
+        "native_rejected_intents": 53,
+        "native_receipts": [
+          {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/result.json",
+            "sha256": "0c04751f0d251076cce14ca5b0a716a29db254132186b495a363ad27279008b5"
+          },
+          {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/native_results/backtest-result-2026-11-09_11-36-59.zip",
+            "sha256": "48381f6843d81002e70cdb18cd8a5e4105c11ad9716e8f2a11334b1e857ccf1e"
+          },
+          {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/five_minute_equity.parquet",
+            "sha256": "ccfa92f02e0bf5109869bf1a17462bb523db061464ccea2a762ca05fdf28d068"
+          }
+        ]
+      },
+      {
+        "cost_bps_per_side": 8,
+        "net_return_pct": 201.2353900815678,
+        "max_five_minute_drawdown_pct": 15.657333107831253,
+        "natural_closes": 306,
+        "all_marks": 89917,
+        "marks_at_twelve": 248,
+        "continuous_full_episodes": 2,
+        "days_with_full_marks": 2,
+        "native_rejected_intents": 41,
+        "native_receipts": [
+          {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_8bps/result.json",
+            "sha256": "41a912fb267df4f85689fb43215a0edc7af66e54931112a531c274300badb35d"
+          },
+          {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_8bps/native_results/backtest-result-2026-11-09_12-01-25.zip",
+            "sha256": "9e0554593bc987ad467ad6462a437af89d333ea5b5b07ed54fbbb48e1f6c57b0"
+          },
+          {
+            "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_8bps/five_minute_equity.parquet",
+            "sha256": "ea4c30a4a757fcd5d1eeb51286c9b3451fa4dade4781353fc319dd9b8c973de1"
+          }
+        ]
+      }
+    ]
+  },
+  "native_new_candidate_runs": 0,
+  "orders_enabled": false
+}

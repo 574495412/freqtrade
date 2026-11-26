@@ -1,0 +1,282 @@
+{
+  "synthetic": true,
+  "strategy_return_evidence": false,
+  "historical_account_count": 0,
+  "native_order_count": 4,
+  "snapshots": [
+    {
+      "stage": "initial",
+      "asof": "2025-01-02T14:00:00+00:00",
+      "orders": [],
+      "quote_cash": 1000.0,
+      "free": 1000.0,
+      "restricted": 0,
+      "holdings": {},
+      "entry_fee_reserve": 0.0,
+      "native_closed_profit": 0
+    },
+    {
+      "stage": "buy_with_fee_reserved",
+      "asof": "2025-01-02T15:00:00+00:00",
+      "orders": [
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-0",
+          "side": "buy",
+          "quantity": 5,
+          "price": 100,
+          "fee_rate": 0.01
+        }
+      ],
+      "quote_cash": 495.0,
+      "free": 495.0,
+      "restricted": 0,
+      "holdings": {
+        "ABC/USD": 5.0
+      },
+      "entry_fee_reserve": 5.0,
+      "native_closed_profit": 0
+    },
+    {
+      "stage": "partial_exit_unsettled",
+      "asof": "2025-01-03T15:00:00+00:00",
+      "orders": [
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-0",
+          "side": "buy",
+          "quantity": 5,
+          "price": 100,
+          "fee_rate": 0.01
+        },
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-1",
+          "side": "sell",
+          "quantity": 2,
+          "price": 110,
+          "fee_rate": 0.01
+        }
+      ],
+      "quote_cash": 712.8,
+      "free": 494.99999999999994,
+      "restricted": 217.8,
+      "holdings": {
+        "ABC/USD": 3.0
+      },
+      "entry_fee_reserve": 3.0,
+      "native_closed_profit": 0
+    },
+    {
+      "stage": "next_session_before_release",
+      "asof": "2025-01-06T15:00:00+00:00",
+      "orders": [
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-0",
+          "side": "buy",
+          "quantity": 5,
+          "price": 100,
+          "fee_rate": 0.01
+        },
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-1",
+          "side": "sell",
+          "quantity": 2,
+          "price": 110,
+          "fee_rate": 0.01
+        }
+      ],
+      "quote_cash": 712.8,
+      "free": 494.99999999999994,
+      "restricted": 217.8,
+      "holdings": {
+        "ABC/USD": 3.0
+      },
+      "entry_fee_reserve": 3.0,
+      "native_closed_profit": 0
+    },
+    {
+      "stage": "second_buy_using_settled_cash_only",
+      "asof": "2025-01-06T15:00:00+00:00",
+      "orders": [
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-0",
+          "side": "buy",
+          "quantity": 5,
+          "price": 100,
+          "fee_rate": 0.01
+        },
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-1",
+          "side": "sell",
+          "quantity": 2,
+          "price": 110,
+          "fee_rate": 0.01
+        },
+        {
+          "pair": "XYZ/USD",
+          "order_id": "2-0",
+          "side": "buy",
+          "quantity": 1,
+          "price": 50,
+          "fee_rate": 0.01
+        }
+      ],
+      "quote_cash": 662.3,
+      "free": 444.49999999999994,
+      "restricted": 217.8,
+      "holdings": {
+        "ABC/USD": 3.0,
+        "XYZ/USD": 1.0
+      },
+      "entry_fee_reserve": 3.5,
+      "native_closed_profit": 0
+    },
+    {
+      "stage": "full_exit_two_claims",
+      "asof": "2025-01-06T16:00:00+00:00",
+      "orders": [
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-0",
+          "side": "buy",
+          "quantity": 5,
+          "price": 100,
+          "fee_rate": 0.01
+        },
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-1",
+          "side": "sell",
+          "quantity": 2,
+          "price": 110,
+          "fee_rate": 0.01
+        },
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-2",
+          "side": "sell",
+          "quantity": 3,
+          "price": 90,
+          "fee_rate": 0.01
+        },
+        {
+          "pair": "XYZ/USD",
+          "order_id": "2-0",
+          "side": "buy",
+          "quantity": 1,
+          "price": 50,
+          "fee_rate": 0.01
+        }
+      ],
+      "quote_cash": 929.6,
+      "free": 444.5,
+      "restricted": 485.1,
+      "holdings": {
+        "XYZ/USD": 1.0
+      },
+      "entry_fee_reserve": 0.5,
+      "native_closed_profit": -19.900000000000002
+    },
+    {
+      "stage": "first_sale_released",
+      "asof": "2025-01-06T22:00:00+00:00",
+      "orders": [
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-0",
+          "side": "buy",
+          "quantity": 5,
+          "price": 100,
+          "fee_rate": 0.01
+        },
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-1",
+          "side": "sell",
+          "quantity": 2,
+          "price": 110,
+          "fee_rate": 0.01
+        },
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-2",
+          "side": "sell",
+          "quantity": 3,
+          "price": 90,
+          "fee_rate": 0.01
+        },
+        {
+          "pair": "XYZ/USD",
+          "order_id": "2-0",
+          "side": "buy",
+          "quantity": 1,
+          "price": 50,
+          "fee_rate": 0.01
+        }
+      ],
+      "quote_cash": 929.6,
+      "free": 662.3,
+      "restricted": 267.3,
+      "holdings": {
+        "XYZ/USD": 1.0
+      },
+      "entry_fee_reserve": 0.5,
+      "native_closed_profit": -19.900000000000002
+    },
+    {
+      "stage": "second_sale_released",
+      "asof": "2025-01-07T22:00:00+00:00",
+      "orders": [
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-0",
+          "side": "buy",
+          "quantity": 5,
+          "price": 100,
+          "fee_rate": 0.01
+        },
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-1",
+          "side": "sell",
+          "quantity": 2,
+          "price": 110,
+          "fee_rate": 0.01
+        },
+        {
+          "pair": "ABC/USD",
+          "order_id": "1-2",
+          "side": "sell",
+          "quantity": 3,
+          "price": 90,
+          "fee_rate": 0.01
+        },
+        {
+          "pair": "XYZ/USD",
+          "order_id": "2-0",
+          "side": "buy",
+          "quantity": 1,
+          "price": 50,
+          "fee_rate": 0.01
+        }
+      ],
+      "quote_cash": 929.6,
+      "free": 929.6,
+      "restricted": 0,
+      "holdings": {
+        "XYZ/USD": 1.0
+      },
+      "entry_fee_reserve": 0.5,
+      "native_closed_profit": -19.900000000000002
+    }
+  ],
+  "cash_and_quantity_reconciled": true,
+  "source_hashes": {
+    "/Users/chrise/GitHub/freqtrade/research/equity/settled_cash_native_20261114_v1/test_settlement.py": "c5664f7f3277b38a3900c5aa1a29a2f335eb57f157bd4794390a51db2b979a71"
+  }
+}

@@ -1,0 +1,18 @@
+Original Binance notices were read through the web tool. Direct public HTTP
+requests returned HTTP202 empty bodies for all three URLs; those bytes are
+retained and are not described as downloaded announcement text.
+
+The successful web extraction for bb0c704f3ca344c7a8741c551dd624ce states:
+publication wall time2026-04-25 13:25 (no displayed timezone), CRV effective
+2026-04-29 06:30 UTC,0.001->0.0001; GALA effective06:40UTC,
+0.00001->0.000001. Both have one-minute placement/cancel/amend suspension
+starting at the transition. Existing orders keep their original tick sizes.
+
+The indexed original21a1b8c2e3404cbcb6c89b6a78d5aa0f states RUNE0.001->0.0001,
+published2025-11-05 03:30 (no displayed timezone), effectiveNov7 07UTC.
+Opening this original URL redirected to the announcement index, so its rule
+is retained as an indexed-source lead, not a fully read original rule.
+
+These statements do not establish historical first-seen availability,
+continuous validity before publication, or a complete40pair rule history.
+Do not use the prior reported publication wall times as certified UTC.

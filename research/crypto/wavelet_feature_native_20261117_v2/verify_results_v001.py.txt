@@ -1,0 +1,148 @@
+"""Independent data, chronology, real-model receipts and native-output audit."""
+
+# ruff: noqa: S101
+# Verification assertions do not execute a predictor or account.
+import hashlib
+import json
+from decimal import ROUND_HALF_EVEN, Decimal
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+
+
+HERE = Path(__file__).resolve().parent
+if not __debug__:
+    raise RuntimeError("Verification requires assertions")
+
+
+def read(path):
+    return json.loads(Path(path).read_text())
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def main():
+    for filename, key in [
+        ("implementation_freeze.json", "files"),
+        ("native_interface_freeze.json", "files"),
+    ]:
+        for path, digest in read(HERE / filename)[key].items():
+            assert sha(path) == digest, path
+    matrices = 0
+    decimal_errors = []
+    for row in read(HERE / "data_receipts.json")["rows"]:
+        assert (
+            sha(row["input"]) == row["input_sha256"] and sha(row["output"]) == row["output_sha256"]
+        )
+        raw = pd.read_feather(row["input"])
+        raw = raw.loc[raw.date.lt(pd.Timestamp("2026-09-01T00:00Z"))]
+        independently_grouped = (
+            raw.set_index("date")
+            .resample("15min")
+            .agg({"open": "first", "high": "max", "low": "min", "close": "last", "volume": "sum"})
+        )
+        stored = pd.read_parquet(row["output"])
+        pd.testing.assert_frame_equal(independently_grouped, stored, check_freq=False)
+        asset = row["pair"].split("/")[0]
+        tables = {}
+        case_receipts = {}
+        for case, size in [("full6000", 6000), ("prefix5800", 5800), ("future_shock", 6000)]:
+            receipt = read(HERE / "numerical_outputs" / (asset + "_" + case + ".json"))
+            assert sha(receipt["output"]["path"]) == receipt["output"]["sha256"]
+            table = pd.read_parquet(receipt["output"]["path"])
+            assert len(table) == size
+            assert (
+                pd.DatetimeIndex(table.date).as_unit("ns").equals(stored.index[:size].as_unit("ns"))
+            )
+            assert (
+                table[["source_gain", "normalized_gain", "source_predicted_gain"]]
+                .notna()
+                .all()
+                .all()
+            )
+            assert table.source_predicted_gain.iloc[:1000].eq(0).all()
+            assert table.source_predicted_gain.between(-3, 3).all()
+            fits = [x for x in receipt["events"] if x["kind"] == "fit"]
+            predictions = [x for x in receipt["events"] if x["kind"] == "predict"]
+            assert len(fits) == len(predictions) == 2
+            for start, fit, pred in zip([1000, 3500], fits, predictions, strict=True):
+                assert fit["rows"] == start - 6 and fit["columns"] == 101
+                assert fit["latest_label_row"] == start - 1
+                assert fit["model_types"] == ["LGBMRegressor"]
+                params = fit["first_booster_parameters"]
+                assert params["num_iterations"] == 100 and params["random_state"] == 42
+                assert pred["rows"] == min(2500, size - start)
+            assert receipt["actual_wavelet"] == "bior3.9" and receipt["actual_mode"] == "symmetric"
+            assert not receipt["source_scale_results"] and receipt["strategy_config_scale_results"]
+            assert receipt["wavelet_roundtrip_max_error"] < 1e-10
+            matrices += len(fits)
+            tables[case] = table
+            case_receipts[case] = receipt
+        for case in ["prefix5800", "future_shock"]:
+            for column in ["source_gain", "normalized_gain", "source_predicted_gain"]:
+                np.testing.assert_array_equal(
+                    tables["full6000"][column].iloc[:5800], tables[case][column].iloc[:5800]
+                )
+            full_fits = [x for x in case_receipts["full6000"]["events"] if x["kind"] == "fit"]
+            for a, b in zip(
+                full_fits,
+                [x for x in case_receipts[case]["events"] if x["kind"] == "fit"],
+                strict=True,
+            ):
+                assert a["x_sha256"] == b["x_sha256"] and a["y_sha256"] == b["y_sha256"]
+        # Decimal audit of raw6-bar return rounding, independent of the predictor.
+        close = stored.close.iloc[:6000]
+        for i in range(6, 6000):
+            previous = Decimal(str(close.iloc[i - 6]))
+            current = Decimal(str(close.iloc[i]))
+            exact = (Decimal(100) * (current - previous) / previous).quantize(
+                Decimal(".0001"), rounding=ROUND_HALF_EVEN
+            )
+            decimal_errors.append(abs(float(exact) - tables["full6000"].source_gain.iloc[i]))
+    assert max(decimal_errors) < 1e-10
+    native = read(HERE / "native_feature_admission.json")
+    assert (
+        native["passed"] and not native["financial_start_called"] and native["native_trades"] == 0
+    )
+    for row in native["actual_feature_rows"]:
+        assert sha(row["feature_path"]) == row["sha256"]
+        data = pd.read_parquet(row["feature_path"])
+        ref = read(HERE / "numerical_outputs" / (row["pair"].split("/")[0] + "_full6000.json"))
+        table = pd.read_parquet(ref["output"]["path"]).iloc[:2000]
+        for column in ["source_gain", "normalized_gain", "source_predicted_gain"]:
+            np.testing.assert_array_equal(data[column], table[column])
+        expected = pd.DatetimeIndex(data.date) + pd.Timedelta(minutes=15)
+        assert pd.DatetimeIndex(data.known_at).as_unit("ns").equals(expected.as_unit("ns"))
+        assert data.model_ready.sum() == 1000
+    full = read(HERE / "native_full_numerical_parity.json")
+    assert full["passed"] and full["training_windows"] == 2
+    assert sha(full["output"]["path"]) == full["output"]["sha256"]
+    local = pd.read_parquet(full["output"]["path"])
+    source = pd.read_parquet(HERE / "numerical_outputs/BTC_full6000.parquet")
+    for column in ["source_gain", "normalized_gain", "source_predicted_gain"]:
+        np.testing.assert_array_equal(local[column], source[column])
+    for row in read(HERE / "storage_dedup_receipt.json")["replaced_paths"]:
+        assert sha(row["source"]) == sha(row["target"]) == row["sha256"]
+        assert Path(row["source"]).stat().st_ino == Path(row["target"]).stat().st_ino
+    result = {
+        "passed": True,
+        "source_real_fit_calls_checked": matrices,
+        "coefficient_models_per_fit": 101,
+        "real_source_cases": 6,
+        "decimal_gain_rows_checked": len(decimal_errors),
+        "maximum_decimal_rounded_gain_error": float(max(decimal_errors)),
+        "exact_prefix_forecasts_and_training_matrices": True,
+        "native_feature_rows": 4000,
+        "native_full_retraining_case_rows": 6000,
+        "financial_accounts_completed": 0,
+        "predictive_power_or_profitability_certified": False,
+    }
+    (HERE / "independent_verification.json").write_text(json.dumps(result, indent=2) + "\n")
+    print(json.dumps(result))
+
+
+if __name__ == "__main__":
+    main()

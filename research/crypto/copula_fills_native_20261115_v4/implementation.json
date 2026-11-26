@@ -1,0 +1,17 @@
+{
+  "native_engine": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "local_extension": "CopulaPortfolio IStrategy subclass and frozen copula_execution helper; native matcher/Trade/Order/Wallets untouched",
+  "source_files": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/copula_fills_native_20261115_v4/CopulaPortfolio.py": "c9bfae172c2d4ab98e8866acac60b46b29c6d7899e20cf06d8b967d20e64f8a2",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/copula_fills_native_20261115_v4/FixturePortfolio.py": "20f7693713a9aa8b01cf24e83352295cda0709791912a5b5fc05b7a0d12f7ab1",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/copula_fills_native_20261115_v4/run_fixture.py": "c24bc68d81d0041b19b022593a25816a6e14691e4be3eeedd1d4b68b68485ec5",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/copula_fills_native_20261115_v4/audit_fixtures.py": "0ad0f291f99cbfd7c191bd3b25b840ce724f825cf2641d503eae29bdecc4efa5",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/copula_fills_native_20261115_v4/test_fills.py": "bc1b13f8a7b8c3faf7c568efdfd2b893c2088a022aec05b14305188bf2b15b53",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/copula_execution_native_20261115_v3/ExecutionInputs.py": "2e5f373348b3d1507e92cc32fce6c448abc77e4edc84a4f07bb0af94c5fa841a",
+    "/Users/chrise/GitHub/freqtrade/freqtrade/data/copula_execution.py": "15d9377eb4b7e51685b88b93f88a22adf39d51d0e3e2bec9c1b7b5fa13473eb0"
+  },
+  "native_full_start_cases": 6,
+  "source20_financial_guard": "CopulaPortfolio.ft_bot_start always raises; only FixtureCopula with exact two FAKE symbols can invoke native start",
+  "source20_funded_accounts": 0,
+  "returns": null
+}

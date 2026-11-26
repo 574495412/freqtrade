@@ -1,0 +1,6 @@
+{
+  "failure": "Probe omitted predicted_gain column required by original rolling method",
+  "actual_source_precondition": "TSPredict.populate_indicators initializes predicted_gain=0.0 at source line538 before add_predictions",
+  "correction": "Initialize that column in diagnostic frame; no original source edits or parameter changes",
+  "native_or_model_runs": 0
+}

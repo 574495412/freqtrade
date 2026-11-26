@@ -1,0 +1,82 @@
+{
+  "passed": true,
+  "source_code_unchanged": true,
+  "past_only_checks": [
+    {
+      "pair": "BTC/USDT",
+      "cutoff": "2025-01-03 02:00:00+00:00",
+      "passed": true
+    },
+    {
+      "pair": "BTC/USDT",
+      "cutoff": "2025-06-10 10:00:00+00:00",
+      "passed": true
+    },
+    {
+      "pair": "BTC/USDT",
+      "cutoff": "2026-02-15 10:00:00+00:00",
+      "passed": true
+    },
+    {
+      "pair": "ETH/USDT",
+      "cutoff": "2025-01-03 02:00:00+00:00",
+      "passed": true
+    },
+    {
+      "pair": "ETH/USDT",
+      "cutoff": "2025-06-10 10:00:00+00:00",
+      "passed": true
+    },
+    {
+      "pair": "ETH/USDT",
+      "cutoff": "2026-02-15 10:00:00+00:00",
+      "passed": true
+    }
+  ],
+  "roi_native_threshold_cases": [
+    {
+      "duration_minutes": 719,
+      "threshold": 0.05
+    },
+    {
+      "duration_minutes": 720,
+      "threshold": 0.03
+    },
+    {
+      "duration_minutes": 1439,
+      "threshold": 0.03
+    },
+    {
+      "duration_minutes": 1440,
+      "threshold": 0.01
+    },
+    {
+      "duration_minutes": 2879,
+      "threshold": 0.01
+    },
+    {
+      "duration_minutes": 2880,
+      "threshold": -0.01
+    },
+    {
+      "duration_minutes": 4320,
+      "threshold": -0.01
+    }
+  ],
+  "sixty_hour_minus10pct_not_forced_exit": true,
+  "rsi_is_simple_rolling_not_wilder": true,
+  "effective_native_parameters": {
+    "timeframe": "1h",
+    "startup_candle_count": 150,
+    "stoploss": -0.15,
+    "minimal_roi": {
+      "0": 0.05,
+      "720": 0.03,
+      "1440": 0.01,
+      "2880": -0.01
+    },
+    "use_exit_signal": false,
+    "position_adjustment_enable": false
+  },
+  "new_financial_accounts": 0
+}

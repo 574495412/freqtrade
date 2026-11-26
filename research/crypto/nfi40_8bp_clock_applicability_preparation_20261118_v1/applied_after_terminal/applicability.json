@@ -1,0 +1,405 @@
+{
+  "schema": "individual-8bp-native-clock-applicability.v1",
+  "candidate": "nfi40_x8_500_cost8",
+  "status": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT_SCOPE",
+  "actual_terminal_process_sha256": "639779babb354ad1fdca37ac118281a009f6975642eb20f1044748149b643660",
+  "actual_result_sha256": "7f5fa86714af3f0d15fed49932c485e4137ac1fe58d9afd6b414ec9f7400db29",
+  "actual_archive_sha256": "086914032b658e26ce4e83ef77bdc5e071b76e1f4dee78e17b0858b1a375d139",
+  "actual_effective_config_sha256": "4f0ceefaea343c2a2497ee74a105bc0b53a78fb4f3edcff7e72404b011d821c7",
+  "actual_source_sha256": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3",
+  "owner_manifest_sha256": "c0d66d07ecd46b6506af8f5408c61185adb8fc0f63d1e7652f5bf4a104a3bc64",
+  "actual_runner_support_bindings": {
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost8/effective_config.json": "4f0ceefaea343c2a2497ee74a105bc0b53a78fb4f3edcff7e72404b011d821c7",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost8/strategies/NostalgiaForInfinityX8.py": "fc5cb221f29ebca5f336429d97920eb93917cdd87f9769381b23b467ca6d5bf3",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost8/native_results/backtest-result-2026-11-17_17-23-22.zip": "086914032b658e26ce4e83ef77bdc5e071b76e1f4dee78e17b0858b1a375d139",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost8/support/research/__init__.py": "a6867f2e50d1cbe4dee22ffe9fb3f39d6e2b8ce7e290a412d0506370985dc61a",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost8/support/research/data.py": "8a77e2721042db3d33f10b8c52579ceaa8141a953b154f062d56404d56fd00c0",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi40_allocation_native_20261117_v1/nfi40_x8_500_cost8/support/research/strategies.py": "63aa4c1a440716bd00025eb959e36708e43b169b44fc3b9a1ac16efdfed686cc",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/native_runner.py": "0385414d03817d1b3d21739f0e2671779d5411c5afd1f84019fbe48c49e07a15",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi40_allocation_native_20261117_v1/storage_adapter.py": "6754d5582b277ac5fdb16d016cdf5ffeb8ff6b900ee693d500513557fac7b95d",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_capacity_20261109/zstd_storage.py": "d1498c52dd541bc1fe6d254e622410db894aa1bcd46f1fc42ea68a30b2fccabf",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_historical_universe_20261109/v003/row_storage.py": "b9ae9a87cf246263e5031d3a473f4547b2f0158c01802095ecd5696f3ac8a260",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi_original_20261027_v001/fork_workspace/cz_research/observer_v2.py": "6201f470c84295f2e9713e6dd5bcbbda950006118a5df9caa5b5fe2068f45f15"
+  },
+  "freeze_sha256": "09edcb1765cdafeae8b692cb70cb02077e65bbd163006f1a1ea8c989fe12dfe3",
+  "root_release_sha256": "7b01c058b41c2a495f77a60d9e3631cf1eb8bf5e6c6eed69ef97ed82ba87b8ff",
+  "grid": [
+    {
+      "pair": "BTC/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "1b2aa3459498da24b5db7da63bd561283e6103b92af93c874e2238536637bb97",
+      "funding_calendar_sha256": "efe1f9d8482a6a1801005cc44874818a2c42e2020cdb0b46044a8077c38ad781",
+      "step_seconds": 300
+    },
+    {
+      "pair": "ETH/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "281eec14adadd01491868be303f4750c0dba87d1935ea14bbe4a7a7099ce6d40",
+      "funding_calendar_sha256": "a8d281b330a9793eceb94db22c7fd302cb55802aea8bb9a02e01e1e97fd048ae",
+      "step_seconds": 300
+    },
+    {
+      "pair": "SOL/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "6077e3730ddbe5d7f43cb8e58f7ba985533843a3d510beb6d1655e403c24b305",
+      "funding_calendar_sha256": "3263415561fd28b54c336ce73f80b3690f1fa7f7fcc99d40360ab7551fb40a1a",
+      "step_seconds": 300
+    },
+    {
+      "pair": "AVAX/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "d9c2046f5376baedb0c2f29b2d037fd9b1da39f4167ac8e5129e018211f6cd6c",
+      "funding_calendar_sha256": "d95d569acbbf9aa6d9857e0ce63cd33b2d1eeab73c3a3419a2538dda190f67ca",
+      "step_seconds": 300
+    },
+    {
+      "pair": "TRB/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "4a75d59b2ede089a153782a14a455af13b8988338247da9ffa39bf5df628fea7",
+      "funding_calendar_sha256": "155515ca31b685a51422a322f553ea20646bc1d4c112bd69903d9d03b981b1df",
+      "step_seconds": 300
+    },
+    {
+      "pair": "DOGE/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "ae6f2ced89e8a287001b6b5c6dfb0f2cc4e4a4491ea0455370d61f4caa2ef33f",
+      "funding_calendar_sha256": "830e678f0457dc3b947cf148a18d9db72345c6826a98fec3eeee85be9346b0e0",
+      "step_seconds": 300
+    },
+    {
+      "pair": "XRP/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "7c0aba62d70451d3bef3b7c91ce80f1d96e142b0b1cdd550afc67fe8ebfc84d6",
+      "funding_calendar_sha256": "8e8b88053fac5a77b584b6e7f1e7e091ad30f82db0f3d19ec04030828ec1a066",
+      "step_seconds": 300
+    },
+    {
+      "pair": "ADA/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "4d3a35290f5910a9b565644bc1da9dfde6ce09f3f9b9f2a66af778e771c1f15d",
+      "funding_calendar_sha256": "6d259e87775a44147a8d45cc83600526978fa42c8e18074eae767ac84ddef282",
+      "step_seconds": 300
+    },
+    {
+      "pair": "BNB/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "1a83dcd09c66344dc7ca612b145db26a965d92f510dbd4b9e736230ee089edda",
+      "funding_calendar_sha256": "e691fdc560d6ea0239d1425483ee432abec41f4282fe43f21c19ce6188e04602",
+      "step_seconds": 300
+    },
+    {
+      "pair": "LINK/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "571d05b49927e1a3e948163c712eb87621d30c1d55a6dd58471cbd79d6d7ce8e",
+      "funding_calendar_sha256": "bb6964f1df212cec1e2ce08c0d94a0798ae85d44cd891fd4884d1177f66355df",
+      "step_seconds": 300
+    },
+    {
+      "pair": "DOT/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "3b93602105f4e0f9c810b05ef4d5655af5907076855c262a27d3b63e0fcaa9c8",
+      "funding_calendar_sha256": "c85a55f55460516260a561e7817303985329e9dc187a5114ffb4c31d73811cce",
+      "step_seconds": 300
+    },
+    {
+      "pair": "FIL/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "0d1fad45ddc94ff0990bade9e2475a10a1f1e3d188a3f5996a4ccdd5e97bba51",
+      "funding_calendar_sha256": "1a2f34162dc84cc4f6d3939334abedb782e84e71ac0abe9e45c0bacfd6fc0482",
+      "step_seconds": 300
+    },
+    {
+      "pair": "NEAR/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "f8a392e1da14dc8fc905f00f2490b83cf475ef396cd0e4e19046daa3e072c685",
+      "funding_calendar_sha256": "d85e33c046420c8b9c791d5558f8d70bf4a17c1388f0643fa591f8e5b849de80",
+      "step_seconds": 300
+    },
+    {
+      "pair": "ATOM/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "2799232f4b6cb2f29fda13faf098bd629c071c5b313bf662b468125f2a295290",
+      "funding_calendar_sha256": "90f8af9757bd352cb2efe5b01f394babf27a851991f0cca48c4736bb526a8483",
+      "step_seconds": 300
+    },
+    {
+      "pair": "DYDX/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "7d6bc9de8dfa0c74e939182a2b64ef82dd0a10a26648f1aa3cc3b0b303f76c4b",
+      "funding_calendar_sha256": "8aecb4d38b1dde9c475b94053cdd466bf704346ebe4789233e8bd2b3e8d9b985",
+      "step_seconds": 300
+    },
+    {
+      "pair": "LTC/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "a837c95d7af0fbb6be3cd318d248a68ecf3442107003f8b8794e78a6ccb145e5",
+      "funding_calendar_sha256": "0b65b3911a3b0d3022691c7c068cc9aa14dd8978ab70bae726899e18b7675ce4",
+      "step_seconds": 300
+    },
+    {
+      "pair": "BCH/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "2fb7c149786a0d0f3a0e2066fbc79bffb95c9aff1497417e210e5fa7e222a4e6",
+      "funding_calendar_sha256": "79482f72686d4d0a1e9288216f2fdbfda01b45bed91aa861999e319272c174fb",
+      "step_seconds": 300
+    },
+    {
+      "pair": "ETC/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "e5a668da9c69eeb5b6cce39537137c9119bdca73566b00bf7ae58d431bc9240e",
+      "funding_calendar_sha256": "34d4e2864f4ff7f30520dd181744c847547017724cefa902e30e18e0b1ca07ba",
+      "step_seconds": 300
+    },
+    {
+      "pair": "GALA/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "24e093dfac93a90ea622df51361accd6f97298d446ccc9fc6541139e84979280",
+      "funding_calendar_sha256": "a232efac72de24e02db337938a95af7c918c472a80b339a9df254ba70c2ef78a",
+      "step_seconds": 300
+    },
+    {
+      "pair": "SAND/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "dc9a5ff2d55e6d076db883e030bd3a860ba68e160ab5ccfec83a833d7225db30",
+      "funding_calendar_sha256": "d01b188a0c1985b2765796ba5d5b8a2cfb0ef394ef91693eda28bea61cf385bc",
+      "step_seconds": 300
+    },
+    {
+      "pair": "UNI/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "4c1ffdd5ee222459f296623134b95c349806d441c22507ee5cc8b27976f42d4c",
+      "funding_calendar_sha256": "77f21bc104f82d061626ea18063437e1d5a78f997a8d96d6404102559f6097cd",
+      "step_seconds": 300
+    },
+    {
+      "pair": "IOTA/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "5ec399741c9fe86138841a5b7331b0a399093ac997eb55bac47c646315394e4a",
+      "funding_calendar_sha256": "b2409682586482416188798c0d609c4c721a3012ebd14a8eecb87ce6e13e73a4",
+      "step_seconds": 300
+    },
+    {
+      "pair": "RUNE/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "08ae814fad15ed6949e0aba529ddf40ef39dc741e1863cad8004e1fb7190d865",
+      "funding_calendar_sha256": "30a4cea7a8b973888776ceaa3702983c653d603ec85ce42bba2935c6fa1c6fe0",
+      "step_seconds": 300
+    },
+    {
+      "pair": "AXS/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "e9d551f3750b549f6b1acd724e36da4c934ea5d4f1f7a470d7bebab2e2932408",
+      "funding_calendar_sha256": "4024f9d50c7f7ec3e9272cb0583e14f7994df980d6f9426139195b8d3af1ccbb",
+      "step_seconds": 300
+    },
+    {
+      "pair": "AAVE/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "2701487f9ff3edd42dfe243da171e10d794573f68deddf4a18a9d2b6924c21a8",
+      "funding_calendar_sha256": "9e431f34772c37b80a0499e685b2791711cef79c422b4121a6ddd5d289579cfd",
+      "step_seconds": 300
+    },
+    {
+      "pair": "EGLD/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "e3d051e9b8cc6bec40f5af06517b6049e1fdcf6d420c41faea134920baf4ad0f",
+      "funding_calendar_sha256": "3bc59c4fc84748d380764b76cd6ee3ff52e5edd045a31c10cf808161583e7e9f",
+      "step_seconds": 300
+    },
+    {
+      "pair": "ALGO/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "9367ae342e072fe2aeb27e0f511fd913d763b50c4c7301407e112bbd3478c1fe",
+      "funding_calendar_sha256": "a20b2f8cb13cb528d20e21314de4b778255cd7ebebcaeb9ae925f590905cc8c1",
+      "step_seconds": 300
+    },
+    {
+      "pair": "SNX/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "d566bf9c67045b5c2329eb4d2816ceea7e5fd08033483e7404c610fe81fc4fa5",
+      "funding_calendar_sha256": "adb58a1605a61409b061e42c72abfcf5cffa38b7ec3ed1a3670227b705541539",
+      "step_seconds": 300
+    },
+    {
+      "pair": "CRV/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "3060bece47d71c10dbc970912ee6fef13931f0b399dc729948bcdb335a3ce1b3",
+      "funding_calendar_sha256": "11b6ca6c5c91277100725ddd8690ac6e4fabdbebfb8551b8a5bab4b86e4644ab",
+      "step_seconds": 300
+    },
+    {
+      "pair": "MASK/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "895699a9a1e1c8c158663eb990af6f54edc408d9995eb3f6d1ebbc69fcec9c72",
+      "funding_calendar_sha256": "38b3977cec46720ac0bd31686570d2740599581b16792db2860bdb0254d76986",
+      "step_seconds": 300
+    },
+    {
+      "pair": "SUSHI/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "4dd67484b0a653ca070ad3923e10369eedda84055fca1c31aa5c50cf77868adc",
+      "funding_calendar_sha256": "b0779c92c60739d77e3afdff8975ef9ea3daf0ed65aa66300d1eed3b7df13380",
+      "step_seconds": 300
+    },
+    {
+      "pair": "KSM/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "9b988636ba418ca845536eee758627acadf743924f8e45ef619e4610bf5455bc",
+      "funding_calendar_sha256": "9afa89cb47b2565baf7cbb537abbee24d0d5eba890f7e67ff6e8660ede4b7288",
+      "step_seconds": 300
+    },
+    {
+      "pair": "IOTX/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "c2b356195b6520bbb1cda3f22f51cf6d99bc9843485d7ece08f4b80c44e74aa6",
+      "funding_calendar_sha256": "031b5da64f82e6c88e30a0e1320ca211c2f670f873251faef61c2139de6f784b",
+      "step_seconds": 300
+    },
+    {
+      "pair": "MANA/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "b2ed80c11547ef4e600f4ae933275f659f982c26f6373335f637b11ef8b69e25",
+      "funding_calendar_sha256": "b8e03f091537920fb52ec05c06dd09cd8ff81c3a5982e28ae14bab6db008a1e5",
+      "step_seconds": 300
+    },
+    {
+      "pair": "NEO/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "5bb2dd00daf664949aeb1ac899e4f081019f4ccb189a6c7badc4ff1b528206df",
+      "funding_calendar_sha256": "cfbde3e68e8c981413537480ea8ddcc70f283b3b7c95b4858026c37b56c61979",
+      "step_seconds": 300
+    },
+    {
+      "pair": "GRT/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "9270e01d12e93665fd2c5ce59520fb91265788c73c150c37bb1af81464d0daf7",
+      "funding_calendar_sha256": "c3d617bbcc9b11f24001691cb8bbbf70f04fbb03d811435a89f0d6c483f93a71",
+      "step_seconds": 300
+    },
+    {
+      "pair": "TRX/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "8a0b74d8211e3bc1be63ff1631aac079a04f4fa3f82f3bfd6a6a6510c1011f1c",
+      "funding_calendar_sha256": "d99485ec1ec71242dbba4507194437c3c4fc6ea9ace994841595faf99c37a13b",
+      "step_seconds": 300
+    },
+    {
+      "pair": "CELO/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "b25f732494a36ebc48e1bdd4fc8e94e1f39aa40326a406e79b7ce395a7a6657c",
+      "funding_calendar_sha256": "7fd5ef9017ec48e532efe4f68352d46f61fd91ee81d2ddfb1517fbf380299244",
+      "step_seconds": 300
+    },
+    {
+      "pair": "SKL/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "b6cf4def22e57e03dd4a436067d3c2f49431656fad69625267b10162ba8a6498",
+      "funding_calendar_sha256": "15021e342d4781fa9adc070af01b7a92b69c15d64fea3ef14742aff9f20067bf",
+      "step_seconds": 300
+    },
+    {
+      "pair": "THETA/USDT:USDT",
+      "rows_including_startup": 175904,
+      "raw_sha256": "3ab9d189eceeadf20318a8368d655e6c1548c4ecc7130b3a5999044869a717fb",
+      "funding_calendar_sha256": "dfa1f681451486256f6b8eee20532fa1c97e6752749ae60b92669d5b1d67a5b5",
+      "step_seconds": 300
+    }
+  ],
+  "all_fills_examined": 684,
+  "all_fills_on_5m_grid": true,
+  "boundary_events": [
+    {
+      "trade_index": 33,
+      "pair": "IOTX/USDT:USDT",
+      "order_index": 1,
+      "event_role": "ordinary_final_exit",
+      "is_entry": false,
+      "filled_ms": 1738540800000,
+      "created_ms": null,
+      "raw_metadata_status": "UNKNOWN",
+      "classification": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT",
+      "unknown_reason": null,
+      "conditional_inferred_creation_ms": 1738540800000,
+      "native_exit_reason": "exit_long_rebuy_d_5_1 ( 63 )"
+    },
+    {
+      "trade_index": 111,
+      "pair": "GALA/USDT:USDT",
+      "order_index": 18,
+      "event_role": "ordinary_final_exit",
+      "is_entry": false,
+      "filled_ms": 1750377600000,
+      "created_ms": null,
+      "raw_metadata_status": "UNKNOWN",
+      "classification": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT",
+      "unknown_reason": null,
+      "conditional_inferred_creation_ms": 1750377600000,
+      "native_exit_reason": "exit_bad_trade_abandon_35d ( 120 )"
+    },
+    {
+      "trade_index": 130,
+      "pair": "CRV/USDT:USDT",
+      "order_index": 11,
+      "event_role": "additional_entry",
+      "is_entry": true,
+      "filled_ms": 1754841600000,
+      "created_ms": null,
+      "raw_metadata_status": "UNKNOWN",
+      "classification": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT",
+      "unknown_reason": null,
+      "conditional_inferred_creation_ms": 1754841600000,
+      "native_exit_reason": "exit_bad_trade_abandon_40d ( 120 )"
+    },
+    {
+      "trade_index": 130,
+      "pair": "CRV/USDT:USDT",
+      "order_index": 13,
+      "event_role": "additional_entry",
+      "is_entry": true,
+      "filled_ms": 1755043200000,
+      "created_ms": null,
+      "raw_metadata_status": "UNKNOWN",
+      "classification": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT",
+      "unknown_reason": null,
+      "conditional_inferred_creation_ms": 1755043200000,
+      "native_exit_reason": "exit_bad_trade_abandon_40d ( 120 )"
+    },
+    {
+      "trade_index": 130,
+      "pair": "CRV/USDT:USDT",
+      "order_index": 22,
+      "event_role": "ordinary_final_exit",
+      "is_entry": false,
+      "filled_ms": 1757289600000,
+      "created_ms": null,
+      "raw_metadata_status": "UNKNOWN",
+      "classification": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT",
+      "unknown_reason": null,
+      "conditional_inferred_creation_ms": 1757289600000,
+      "native_exit_reason": "exit_bad_trade_abandon_40d ( 120 )"
+    },
+    {
+      "trade_index": 284,
+      "pair": "XRP/USDT:USDT",
+      "order_index": 3,
+      "event_role": "additional_entry",
+      "is_entry": true,
+      "filled_ms": 1787472000000,
+      "created_ms": null,
+      "raw_metadata_status": "UNKNOWN",
+      "classification": "CONDITIONAL_NATIVE_SOURCE_CONSTRAINT",
+      "unknown_reason": null,
+      "conditional_inferred_creation_ms": 1787472000000,
+      "native_exit_reason": "exit_profit_long_tc_t_0_1_m ( 144 )"
+    }
+  ],
+  "unknown_boundary_events": 0,
+  "metadata_restored": false,
+  "fifteen_bps_event_inventory_inherited": false,
+  "numeric_cash_nav_funding_recomputed": false,
+  "cash_funding_formulas_or_economic_gates_changed": false,
+  "missing_actual_funding_rate_uncertainties_resolved": false,
+  "historical_rules_or_venue_execution_certified": false,
+  "audit_integration_authorized": false,
+  "orders_enabled": false
+}

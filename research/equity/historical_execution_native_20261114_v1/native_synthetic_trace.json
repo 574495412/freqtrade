@@ -1,0 +1,123 @@
+{
+  "synthetic": true,
+  "historical_financial_accounts": 0,
+  "funded_backtesting_start_called": false,
+  "return_metrics": null,
+  "native_fills": 3,
+  "snapshots": [
+    {
+      "label": "initial",
+      "asof": "2025-01-02T14:00:00+00:00",
+      "orders": [],
+      "native_quote_cash": 1000.0,
+      "native_free_cash": 1000.0,
+      "native_restricted_cash": 0,
+      "native_held_quantity": 0.0
+    },
+    {
+      "label": "guarded_native_entry",
+      "asof": "2025-01-02T15:00:00+00:00",
+      "orders": [
+        {
+          "id": "1-0",
+          "pair": "ABC/USD",
+          "side": "buy",
+          "quantity": 5,
+          "price": 100
+        }
+      ],
+      "native_quote_cash": 495.0,
+      "native_free_cash": 495.0,
+      "native_restricted_cash": 0,
+      "native_held_quantity": 5.0
+    },
+    {
+      "label": "guarded_native_partial_exit",
+      "asof": "2025-01-03T15:00:00+00:00",
+      "orders": [
+        {
+          "id": "1-0",
+          "pair": "ABC/USD",
+          "side": "buy",
+          "quantity": 5,
+          "price": 100
+        },
+        {
+          "id": "1-1",
+          "pair": "ABC/USD",
+          "side": "sell",
+          "quantity": 2,
+          "price": 110
+        }
+      ],
+      "native_quote_cash": 712.8,
+      "native_free_cash": 494.99999999999994,
+      "native_restricted_cash": 217.8,
+      "native_held_quantity": 3.0
+    },
+    {
+      "label": "guarded_native_final_exit",
+      "asof": "2025-01-06T15:00:00+00:00",
+      "orders": [
+        {
+          "id": "1-0",
+          "pair": "ABC/USD",
+          "side": "buy",
+          "quantity": 5,
+          "price": 100
+        },
+        {
+          "id": "1-1",
+          "pair": "ABC/USD",
+          "side": "sell",
+          "quantity": 2,
+          "price": 110
+        },
+        {
+          "id": "1-2",
+          "pair": "ABC/USD",
+          "side": "sell",
+          "quantity": 3,
+          "price": 90
+        }
+      ],
+      "native_quote_cash": 980.1,
+      "native_free_cash": 495.0,
+      "native_restricted_cash": 485.1,
+      "native_held_quantity": 0
+    },
+    {
+      "label": "all_proceeds_released",
+      "asof": "2025-01-07T22:00:00+00:00",
+      "orders": [
+        {
+          "id": "1-0",
+          "pair": "ABC/USD",
+          "side": "buy",
+          "quantity": 5,
+          "price": 100
+        },
+        {
+          "id": "1-1",
+          "pair": "ABC/USD",
+          "side": "sell",
+          "quantity": 2,
+          "price": 110
+        },
+        {
+          "id": "1-2",
+          "pair": "ABC/USD",
+          "side": "sell",
+          "quantity": 3,
+          "price": 90
+        }
+      ],
+      "native_quote_cash": 980.1,
+      "native_free_cash": 980.1,
+      "native_restricted_cash": 0,
+      "native_held_quantity": 0
+    }
+  ],
+  "cash_and_quantity_reconciled": true,
+  "test_source_sha256": "d9b54ea71f2319705e804fc157864835724466365b345a618e666f79f5288008"
+}

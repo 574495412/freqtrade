@@ -1,0 +1,47 @@
+{
+  "method": "Pinned pure functions via AST; no source financial loop invoked",
+  "future_backfill": {
+    "earlier_unknown_hours_changed_by_future_value_only": 24,
+    "earlier_full_values": [
+      20,
+      90
+    ],
+    "prefix_only_value": null,
+    "causal_pass": false
+  },
+  "same_day_release_fixture": {
+    "hypothetical_release_utc": "2025-01-01 12:00:00+00:00",
+    "pre_release_hours_assigned": 12,
+    "actual_provider_historical_release_proof": false
+  },
+  "actual_invalid_rsi_entries": [
+    {
+      "symbol": "BTCUSDT",
+      "bar_open_utc": "2020-01-01 01:00:00+00:00",
+      "bar_close_utc_exclusive": "2020-01-01 02:00:00+00:00",
+      "source_recorded_entry_price": 7216.27,
+      "official_same_bar_close": 7216.27,
+      "rsi14": null,
+      "source_entry_function_accepts": true,
+      "finite_rsi_gt_50": false
+    },
+    {
+      "symbol": "ETHUSDT",
+      "bar_open_utc": "2020-01-01 01:00:00+00:00",
+      "bar_close_utc_exclusive": "2020-01-01 02:00:00+00:00",
+      "source_recorded_entry_price": 130.64,
+      "official_same_bar_close": 130.64,
+      "rsi14": null,
+      "source_entry_function_accepts": true,
+      "finite_rsi_gt_50": false
+    }
+  ],
+  "trailing_semantics": {
+    "multiplier_fixed_at_entry": true,
+    "normal_entry_stop_despite_current_fg_80": 80.0,
+    "extreme_greed_entry_stop": 85.0,
+    "falling_price_tightening_example": 93.0,
+    "formula": "max(previous_stop, current_close - entry_regime_k * current_ATR)"
+  },
+  "financial_accounts_run": 0
+}

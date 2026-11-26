@@ -1,0 +1,231 @@
+{
+  "tail": {
+    "status": "VERIFIED",
+    "cost_bps_per_side": 15,
+    "initial_equity_usdt": 500,
+    "maximum_nav_error_usdt": 2.0219317775627133e-08,
+    "maximum_funding_error_usdt": 0.0,
+    "maximum_cash_error_usdt": 4.98833375e-09,
+    "missing_funding": [
+      {
+        "pair": "AXS/USDT:USDT",
+        "slot_ms": 1782273600000,
+        "campaigns": [],
+        "status": "NO_GROSS_EXPOSURE",
+        "rate_imputed": false
+      },
+      {
+        "pair": "TRB/USDT:USDT",
+        "slot_ms": 1782273600000,
+        "campaigns": [],
+        "status": "NO_GROSS_EXPOSURE",
+        "rate_imputed": false
+      }
+    ],
+    "independent_exit_reason_counts": {
+      "dc60_trail": 66,
+      "dc60_opposite": 1,
+      "force_exit": 6
+    },
+    "periods": [
+      {
+        "name": "continuous",
+        "net_return": 0.1728676029191214,
+        "initial_marked_equity": 500.0,
+        "ending_marked_equity": 586.4338014595608,
+        "hourly_mark_drawdown": 0.11795495220080143,
+        "cagr_365day": 0.100461929262595,
+        "complete_24h_daily_nav_sharpe": 0.7269855841736805,
+        "complete_24h_returns": 607,
+        "calendar_hours": 14592
+      },
+      {
+        "name": "calendar-2025",
+        "net_return": 0.14624211425593936,
+        "initial_marked_equity": 500.0,
+        "ending_marked_equity": 573.1210571279697,
+        "hourly_mark_drawdown": 0.11795495220080143,
+        "cagr_365day": 0.14624211425593936,
+        "complete_24h_daily_nav_sharpe": 1.037360536375731,
+        "complete_24h_returns": 365,
+        "calendar_hours": 8761
+      },
+      {
+        "name": "calendar-2026-through-august",
+        "net_return": 0.023228503238572396,
+        "initial_marked_equity": 573.1210571279697,
+        "ending_marked_equity": 586.4338014595608,
+        "hourly_mark_drawdown": 0.0758140407687774,
+        "cagr_365day": 0.03509934289793293,
+        "complete_24h_daily_nav_sharpe": 0.24209381556986312,
+        "complete_24h_returns": 242,
+        "calendar_hours": 5832
+      }
+    ],
+    "profit_distribution": {
+      "starting_usdt": 500,
+      "cost_bps_per_side": 15,
+      "marked_ending_usdt": 586.433801459218,
+      "marked_cumulative_return": 0.17286760291843595,
+      "maximum_hourly_drawdown": 0.11795495220964602,
+      "continuous_2025_return": 0.14624211425319777,
+      "continuous_2026_through_august_return": 0.023228503240421583,
+      "natural_campaigns_closed_before_endpoint": 67,
+      "profitable_campaigns": 30,
+      "losing_campaigns": 37,
+      "worst_natural_campaign_usdt": -8.74474466,
+      "gross_losing_campaign_pnl_usdt": -148.91044611,
+      "gross_winner_pnl_usdt": 232.21150694999992,
+      "winner_median_usdt": 7.154288025,
+      "winner_p90_usdt": 12.581953367000008,
+      "win_duration_median_minutes": 123120.0,
+      "winners_above_fraction_of_starting_capital": {
+        "0.01": {
+          "count": 18,
+          "gross_winner_pnl_share": 0.852791520889788
+        },
+        "0.02": {
+          "count": 6,
+          "gross_winner_pnl_share": 0.4495477384438034
+        },
+        "0.05": {
+          "count": 1,
+          "gross_winner_pnl_share": 0.138959114273988
+        }
+      },
+      "top_10_gross_winner_pnl_share": 0.6033172014174383,
+      "top_5_campaigns": [
+        {
+          "pair": "BNB/USDT:USDT",
+          "is_short": false,
+          "close": "2025-10-22T00:00:00.000Z",
+          "profit_abs": 32.26790533,
+          "minutes": 146880.0,
+          "enter_tag": "dc60_long"
+        },
+        {
+          "pair": "BCH/USDT:USDT",
+          "is_short": true,
+          "close": "2026-08-21T00:00:00.000Z",
+          "profit_abs": 21.62024107,
+          "minutes": 138240.0,
+          "enter_tag": "dc60_short"
+        },
+        {
+          "pair": "EGLD/USDT:USDT",
+          "is_short": true,
+          "close": "2026-04-18T00:00:00.000Z",
+          "profit_abs": 17.51310392,
+          "minutes": 321120.0,
+          "enter_tag": "dc60_short"
+        },
+        {
+          "pair": "IOTX/USDT:USDT",
+          "is_short": true,
+          "close": "2026-08-10T00:00:00.000Z",
+          "profit_abs": 12.03404775,
+          "minutes": 120960.0,
+          "enter_tag": "dc60_short"
+        },
+        {
+          "pair": "BCH/USDT:USDT",
+          "is_short": false,
+          "close": "2025-08-26T00:00:00.000Z",
+          "profit_abs": 10.49515726,
+          "minutes": 158400.0,
+          "enter_tag": "dc60_long"
+        }
+      ],
+      "completed_24h_marked_days": 607,
+      "largest_marked_day_ending_utc": "2025-08-23T00:00:00+00:00",
+      "largest_marked_day_gain_usdt": 20.470970040639827,
+      "top_5_days_share_of_positive_24h_cash_changes": 0.08917492926600284,
+      "last_partial_day_change_usdt": 4.204991214530082,
+      "open_campaigns_at_marked_endpoint": 6,
+      "native_terminal_trade_count_including_force": 73,
+      "archive_sha256": "1b9472f2dee6192896edcacfd8df61971f80c12d8adc57c6eecb7f00fc5080b5",
+      "curve_sha256": "656a9f86bd3d01a7172d6c89d22a2b06c6df91c298fad14cae33c8e9c07802d6"
+    },
+    "conditional_old_execution_model": true,
+    "historical_rules_certified": false,
+    "native_risk_exit_prices_independently_certified": false,
+    "orders_enabled": false
+  },
+  "combination": {
+    "periods": [
+      {
+        "name": "continuous",
+        "net_return": 0.7347507677515586,
+        "initial_marked_equity": 1000.0,
+        "ending_marked_equity": 1734.7507677515587,
+        "hourly_mark_drawdown": 0.03583067789720107,
+        "cagr_365day": 0.3919729396584086,
+        "complete_24h_daily_nav_sharpe": 2.9411585292339,
+        "complete_24h_returns": 607,
+        "calendar_hours": 14592
+      },
+      {
+        "name": "calendar-2025",
+        "net_return": 0.5598529948501272,
+        "initial_marked_equity": 1000.0,
+        "ending_marked_equity": 1559.8529948501273,
+        "hourly_mark_drawdown": 0.03583067789720107,
+        "cagr_365day": 0.5598529948501272,
+        "complete_24h_daily_nav_sharpe": 3.2905086154678833,
+        "complete_24h_returns": 365,
+        "calendar_hours": 8761
+      },
+      {
+        "name": "calendar-2026-through-august",
+        "net_return": 0.11212452293828878,
+        "initial_marked_equity": 1559.8529948501273,
+        "ending_marked_equity": 1734.7507677515587,
+        "hourly_mark_drawdown": 0.0267517050885977,
+        "cagr_365day": 0.17310525665137755,
+        "complete_24h_daily_nav_sharpe": 2.462454209528395,
+        "complete_24h_returns": 242,
+        "calendar_hours": 5832
+      }
+    ],
+    "nfi1000_periods": [
+      {
+        "name": "continuous",
+        "net_return": 1.356564040788781,
+        "initial_marked_equity": 1000.0,
+        "ending_marked_equity": 2356.564040788781,
+        "hourly_mark_drawdown": 0.045153827500363786,
+        "cagr_365day": 0.6730361502323292,
+        "complete_24h_daily_nav_sharpe": 2.901834881192922,
+        "complete_24h_returns": 607,
+        "calendar_hours": 14592
+      },
+      {
+        "name": "calendar-2025",
+        "net_return": 1.0000483008926202,
+        "initial_marked_equity": 1000.0,
+        "ending_marked_equity": 2000.04830089262,
+        "hourly_mark_drawdown": 0.045153827500363786,
+        "cagr_365day": 1.0000483008926202,
+        "complete_24h_daily_nav_sharpe": 3.110362371404533,
+        "complete_24h_returns": 365,
+        "calendar_hours": 8761
+      },
+      {
+        "name": "calendar-2026-through-august",
+        "net_return": 0.17825356504492817,
+        "initial_marked_equity": 2000.04830089262,
+        "ending_marked_equity": 2356.564040788781,
+        "hourly_mark_drawdown": 0.026807650417686846,
+        "cagr_365day": 0.2794492867894589,
+        "complete_24h_daily_nav_sharpe": 3.7518555129987603,
+        "complete_24h_returns": 242,
+        "calendar_hours": 5832
+      }
+    ],
+    "actual_initial_capital": 1000,
+    "sleeves_independently_verified": true,
+    "passed": false,
+    "weight_search_or_linear_scaling": false
+  },
+  "cost_bps": 15
+}

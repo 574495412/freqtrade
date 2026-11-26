@@ -1,0 +1,13 @@
+{
+  "failure": "Post-model roundtrip diagnostic passed a read-only pandas NumPy view into PyWavelets",
+  "native_source_algorithm_failed": false,
+  "source_prediction_fit_and_predict_pairs_completed_before_failure": 2,
+  "source_real_underlying_LGBM_fits_completed": 202,
+  "correction": "Make the standalone roundtrip input writable with to_numpy(copy=True), preserving values; original source already copies rolling wavelet windows",
+  "source_parameters_or_rule_changes": false,
+  "financial_runs": 0,
+  "original_scripts": {
+    "source_reference.py": "4976f63bc6f7502184f0715e3bdc0184834d4fc4dd3fba6da11e505cbbb811a6",
+    "numerical_probe.py": "7019df52efabecd54428d6d3f90b4e7e590d339e63c47318a2c3a07af5351aae"
+  }
+}

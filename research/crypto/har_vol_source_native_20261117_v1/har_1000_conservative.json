@@ -1,0 +1,123 @@
+{
+  "dry_run_wallet": 1000,
+  "max_open_trades": 2,
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "",
+  "timeframe": "1h",
+  "unfilledtimeout": {
+    "entry": 3,
+    "exit": 2,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "order_types": {
+    "entry": "market",
+    "exit": "market",
+    "emergency_exit": "market",
+    "force_entry": "market",
+    "force_exit": "market",
+    "stoploss": "market",
+    "stoploss_on_exchange": false
+  },
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0
+  },
+  "trading_mode": "spot",
+  "margin_mode": "",
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "bot_name": "har_1000_conservative",
+  "strategy": "HARVolTarget",
+  "dry_run": true,
+  "force_entry_enable": false,
+  "initial_state": "stopped",
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "username": "",
+    "password": ""
+  },
+  "telegram": {
+    "enabled": false,
+    "token": "",
+    "chat_id": ""
+  },
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "exchange": {
+    "name": "binance",
+    "key": "",
+    "secret": "",
+    "password": "",
+    "enable_ws": false,
+    "pair_whitelist": [
+      "BTC/USDT",
+      "ETH/USDT"
+    ],
+    "pair_blacklist": [],
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "timeout": 20000,
+      "options": {
+        "fetchMarkets": {
+          "types": [
+            "spot"
+          ]
+        },
+        "fetchCurrencies": false
+      }
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "timeout": 20000,
+      "options": {
+        "fetchMarkets": {
+          "types": [
+            "spot"
+          ]
+        },
+        "fetchCurrencies": false
+      }
+    }
+  },
+  "fee": 0.002,
+  "export": "trades",
+  "backtest_cache": "none",
+  "recursive_strategy_search": false,
+  "research_matched_nfi": true,
+  "timeframe_detail": "5m",
+  "position_adjustment_enable": true,
+  "max_entry_position_adjustment": -1,
+  "stoploss": -0.99,
+  "trailing_stop": false,
+  "minimal_roi": {},
+  "allocation_start_day": "2025-01-01T00:00:00Z",
+  "allocation_end_day": "2026-08-31T00:00:00Z",
+  "research_har_volatility": true,
+  "daily_feature_paths": {
+    "BTC/USDT": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/har_vol_source_native_20261117_v1/BTCUSDT_daily_features.parquet",
+    "ETH/USDT": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/har_vol_source_native_20261117_v1/ETHUSDT_daily_features.parquet"
+  }
+}

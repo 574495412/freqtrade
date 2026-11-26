@@ -1,0 +1,8 @@
+{
+  "reason": "git ls-tree -l lazily fetches unrelated blobs to obtain sizes in partial clone;stop own read-only inventory and use name-only tree plus selected blobs",
+  "observed_exact_command": "git -C research/crypto/trendcore_source_native_20261117_v1/sources/upstream.git ls-tree -r -l d62416ea52620c2e9f53584dd5347ddf6718efd2",
+  "observed_and_stopped_pids": [
+    17059
+  ],
+  "financial_processes_stopped": 0
+}

@@ -1,0 +1,124 @@
+{
+  "passed": true,
+  "accounts": [
+    {
+      "account": "macro_1000_conservative",
+      "budget_clocks": 609,
+      "actual_post_clock_quantity_matches_target": 72,
+      "remaining_target_differences_without_fill": 505,
+      "max_actual_target_notional_gap_usdt": 8.57233930000013,
+      "meaning": "actual filled quantity may differ from target under native limits;not a free weight reset"
+    },
+    {
+      "account": "full_1000_conservative",
+      "budget_clocks": 609,
+      "actual_post_clock_quantity_matches_target": 60,
+      "remaining_target_differences_without_fill": 549,
+      "max_actual_target_notional_gap_usdt": 7.507679399999912,
+      "meaning": "actual filled quantity may differ from target under native limits;not a free weight reset"
+    },
+    {
+      "account": "hold_1000_conservative",
+      "budget_clocks": 1,
+      "actual_post_clock_quantity_matches_target": 1,
+      "remaining_target_differences_without_fill": 0,
+      "max_actual_target_notional_gap_usdt": 0.0,
+      "meaning": "actual filled quantity may differ from target under native limits;not a free weight reset"
+    },
+    {
+      "account": "macro_1000_lower",
+      "budget_clocks": 609,
+      "actual_post_clock_quantity_matches_target": 96,
+      "remaining_target_differences_without_fill": 488,
+      "max_actual_target_notional_gap_usdt": 8.572339299999916,
+      "meaning": "actual filled quantity may differ from target under native limits;not a free weight reset"
+    },
+    {
+      "account": "full_1000_lower",
+      "budget_clocks": 609,
+      "actual_post_clock_quantity_matches_target": 55,
+      "remaining_target_differences_without_fill": 554,
+      "max_actual_target_notional_gap_usdt": 6.256399499999962,
+      "meaning": "actual filled quantity may differ from target under native limits;not a free weight reset"
+    },
+    {
+      "account": "hold_1000_lower",
+      "budget_clocks": 1,
+      "actual_post_clock_quantity_matches_target": 1,
+      "remaining_target_differences_without_fill": 0,
+      "max_actual_target_notional_gap_usdt": 0.0,
+      "meaning": "actual filled quantity may differ from target under native limits;not a free weight reset"
+    },
+    {
+      "account": "macro_500_conservative",
+      "budget_clocks": 609,
+      "actual_post_clock_quantity_matches_target": 108,
+      "remaining_target_differences_without_fill": 479,
+      "max_actual_target_notional_gap_usdt": 7.071622800000019,
+      "meaning": "actual filled quantity may differ from target under native limits;not a free weight reset"
+    },
+    {
+      "account": "full_500_conservative",
+      "budget_clocks": 609,
+      "actual_post_clock_quantity_matches_target": 92,
+      "remaining_target_differences_without_fill": 517,
+      "max_actual_target_notional_gap_usdt": 3.753839699999956,
+      "meaning": "actual filled quantity may differ from target under native limits;not a free weight reset"
+    },
+    {
+      "account": "hold_500_conservative",
+      "budget_clocks": 1,
+      "actual_post_clock_quantity_matches_target": 1,
+      "remaining_target_differences_without_fill": 0,
+      "max_actual_target_notional_gap_usdt": 0.0,
+      "meaning": "actual filled quantity may differ from target under native limits;not a free weight reset"
+    },
+    {
+      "account": "macro_500_lower",
+      "budget_clocks": 609,
+      "actual_post_clock_quantity_matches_target": 164,
+      "remaining_target_differences_without_fill": 421,
+      "max_actual_target_notional_gap_usdt": 7.427368200000019,
+      "meaning": "actual filled quantity may differ from target under native limits;not a free weight reset"
+    },
+    {
+      "account": "full_500_lower",
+      "budget_clocks": 609,
+      "actual_post_clock_quantity_matches_target": 122,
+      "remaining_target_differences_without_fill": 487,
+      "max_actual_target_notional_gap_usdt": 2.502559800000007,
+      "meaning": "actual filled quantity may differ from target under native limits;not a free weight reset"
+    },
+    {
+      "account": "hold_500_lower",
+      "budget_clocks": 1,
+      "actual_post_clock_quantity_matches_target": 1,
+      "remaining_target_differences_without_fill": 0,
+      "max_actual_target_notional_gap_usdt": 0.0,
+      "meaning": "actual filled quantity may differ from target under native limits;not a free weight reset"
+    }
+  ],
+  "full_hold_actual_financial_parity": [
+    {
+      "capital": 1000,
+      "scenario": "conservative",
+      "actual_trades_orders_and_full_NAV_exact": true
+    },
+    {
+      "capital": 1000,
+      "scenario": "lower",
+      "actual_trades_orders_and_full_NAV_exact": true
+    },
+    {
+      "capital": 500,
+      "scenario": "conservative",
+      "actual_trades_orders_and_full_NAV_exact": true
+    },
+    {
+      "capital": 500,
+      "scenario": "lower",
+      "actual_trades_orders_and_full_NAV_exact": true
+    }
+  ],
+  "all_quantities_from_actual_exported_orders": true
+}

@@ -1,0 +1,148 @@
+{
+  "scope": "Synthetic arithmetic using real admitted contract units;not account returns",
+  "expiry_cases": [
+    {
+      "option_type": "call",
+      "expiry": "2025-06-27T08:00:00+00:00",
+      "signed_amount_base": "1",
+      "strike_usd_per_base": "1.0E+5",
+      "delivery_price_usd_per_base": "125000",
+      "output": {
+        "intrinsic_before_fees": {
+          "currency": "BTC",
+          "amount": "0.2"
+        },
+        "route": "direct_coin",
+        "generated_futures_notional_usd": "0"
+      }
+    },
+    {
+      "option_type": "call",
+      "expiry": "2025-06-27T08:00:00+00:00",
+      "signed_amount_base": "-1",
+      "strike_usd_per_base": "1.0E+5",
+      "delivery_price_usd_per_base": "125000",
+      "output": {
+        "intrinsic_before_fees": {
+          "currency": "BTC",
+          "amount": "-0.2"
+        },
+        "route": "direct_coin",
+        "generated_futures_notional_usd": "0"
+      }
+    },
+    {
+      "option_type": "call",
+      "expiry": "2026-08-01T08:00:00+00:00",
+      "signed_amount_base": "1",
+      "strike_usd_per_base": "1.0E+5",
+      "delivery_price_usd_per_base": "125000",
+      "output": {
+        "intrinsic_before_fees": {
+          "currency": "BTC",
+          "amount": "0.2"
+        },
+        "route": "inverse_future_then_coin",
+        "generated_futures_notional_usd": "1.0E+5"
+      }
+    },
+    {
+      "option_type": "call",
+      "expiry": "2026-08-01T08:00:00+00:00",
+      "signed_amount_base": "-1",
+      "strike_usd_per_base": "1.0E+5",
+      "delivery_price_usd_per_base": "125000",
+      "output": {
+        "intrinsic_before_fees": {
+          "currency": "BTC",
+          "amount": "-0.2"
+        },
+        "route": "inverse_future_then_coin",
+        "generated_futures_notional_usd": "-1.0E+5"
+      }
+    },
+    {
+      "option_type": "put",
+      "expiry": "2025-06-27T08:00:00+00:00",
+      "signed_amount_base": "1",
+      "strike_usd_per_base": "1.0E+5",
+      "delivery_price_usd_per_base": "80000",
+      "output": {
+        "intrinsic_before_fees": {
+          "currency": "BTC",
+          "amount": "0.25"
+        },
+        "route": "direct_coin",
+        "generated_futures_notional_usd": "0"
+      }
+    },
+    {
+      "option_type": "put",
+      "expiry": "2025-06-27T08:00:00+00:00",
+      "signed_amount_base": "-1",
+      "strike_usd_per_base": "1.0E+5",
+      "delivery_price_usd_per_base": "80000",
+      "output": {
+        "intrinsic_before_fees": {
+          "currency": "BTC",
+          "amount": "-0.25"
+        },
+        "route": "direct_coin",
+        "generated_futures_notional_usd": "0"
+      }
+    },
+    {
+      "option_type": "put",
+      "expiry": "2026-08-01T08:00:00+00:00",
+      "signed_amount_base": "1",
+      "strike_usd_per_base": "1.0E+5",
+      "delivery_price_usd_per_base": "80000",
+      "output": {
+        "intrinsic_before_fees": {
+          "currency": "BTC",
+          "amount": "0.25"
+        },
+        "route": "inverse_future_then_coin",
+        "generated_futures_notional_usd": "-1.0E+5"
+      }
+    },
+    {
+      "option_type": "put",
+      "expiry": "2026-08-01T08:00:00+00:00",
+      "signed_amount_base": "-1",
+      "strike_usd_per_base": "1.0E+5",
+      "delivery_price_usd_per_base": "80000",
+      "output": {
+        "intrinsic_before_fees": {
+          "currency": "BTC",
+          "amount": "-0.25"
+        },
+        "route": "inverse_future_then_coin",
+        "generated_futures_notional_usd": "1.0E+5"
+      }
+    }
+  ],
+  "fee_cases": [
+    {
+      "amount_base": ".1",
+      "premium_base_per_base": "0.001",
+      "underlying_rate": ".0003",
+      "premium_cap": ".125",
+      "output": {
+        "currency": "BTC",
+        "amount": "0.0000125"
+      }
+    },
+    {
+      "amount_base": ".1",
+      "premium_base_per_base": "0.01",
+      "underlying_rate": ".0003",
+      "premium_cap": ".125",
+      "output": {
+        "currency": "BTC",
+        "amount": "0.00003"
+      }
+    }
+  ],
+  "funded_accounts": 0
+}

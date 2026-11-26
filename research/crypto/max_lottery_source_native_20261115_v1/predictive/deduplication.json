@@ -1,0 +1,79 @@
+{
+  "scope": "10declared peers only; six same40diagnostics, previous8residual and3previous6liquidity; no global novelty claim",
+  "parent_bindings": {
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/residual_momentum_source_native_20261114_v1/native_signal.parquet": "5fbcf2a86d941c0bb2b8b7902d90b412f51ac4e442e0968574b932073f9501b7",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/spread_liquidity_native_20261114_v1/EdgeLiquidity_1000_15bps/native_features.parquet": "31af9194b31ed4e4e4898419985145b9e4dd225df10776281f887f8f0f1ab396"
+  },
+  "comparisons": [
+    {
+      "peer": "mom21_skip7",
+      "shared_assets": 40,
+      "observations": 86,
+      "mean_abs_pearson": 0.367264866295035,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "lowvol28",
+      "shared_assets": 40,
+      "observations": 86,
+      "mean_abs_pearson": 0.863278783515312,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "raw28",
+      "shared_assets": 40,
+      "observations": 86,
+      "mean_abs_pearson": 0.40195969991964575,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "skew28",
+      "shared_assets": 40,
+      "observations": 86,
+      "mean_abs_pearson": 0.7179403753237147,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "annual_low_skew360_recomputed",
+      "shared_assets": 40,
+      "observations": 86,
+      "mean_abs_pearson": 0.17664526625267776,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "lowvol63_recomputed",
+      "shared_assets": 40,
+      "observations": 86,
+      "mean_abs_pearson": 0.6257624463095738,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "previous_eight_residual14",
+      "shared_assets": 8,
+      "observations": 86,
+      "mean_abs_pearson": 0.3840366097476191,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "previous_six_edge30",
+      "shared_assets": 6,
+      "observations": 86,
+      "mean_abs_pearson": 0.4502093037721831,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "previous_six_amihud30",
+      "shared_assets": 6,
+      "observations": 86,
+      "mean_abs_pearson": 0.3207154898564365,
+      "duplicate_gt_99": false
+    },
+    {
+      "peer": "previous_six_lowvol63",
+      "shared_assets": 6,
+      "observations": 86,
+      "mean_abs_pearson": 0.7288039487539163,
+      "duplicate_gt_99": false
+    }
+  ]
+}

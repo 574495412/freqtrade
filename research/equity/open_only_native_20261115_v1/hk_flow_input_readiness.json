@@ -1,0 +1,166 @@
+{
+  "source_pin": "edeaf5535b9c60c70e1e52077414af3ec3b0b05e",
+  "original_hk_universe": [
+    "0001.HK",
+    "0005.HK",
+    "0388.HK",
+    "0700.HK",
+    "0939.HK",
+    "0941.HK",
+    "1299.HK",
+    "1398.HK",
+    "2318.HK",
+    "2800.HK",
+    "3988.HK"
+  ],
+  "window": [
+    "2025-01-01",
+    "2026-08-31"
+  ],
+  "target_sessions": 408,
+  "verified_git_blobs": [
+    {
+      "path": "data/southbound_holdings/southbound_long.csv",
+      "bytes": 6326461,
+      "git_blob_sha1": "b888d9ba7e884848ab6fe87bbd30abb471afd659"
+    },
+    {
+      "path": "data/hkex_monthly_shares_history.csv",
+      "bytes": 392375,
+      "git_blob_sha1": "fa3da3f0f159a411983feeac199e7fbd37aafba8"
+    }
+  ],
+  "source_manifest_counts_match": true,
+  "source_rows": 117505,
+  "source_stocks": 262,
+  "records": [
+    {
+      "symbol": "0001.HK",
+      "source_rows": 472,
+      "window_rows": 393,
+      "window_unique_dates": 393,
+      "missing_target_sessions": 15,
+      "duplicate_window_keys": 0,
+      "missing_hold_shares": 0,
+      "monthly_share_rows": 0,
+      "historical_publication_clock_certified": false
+    },
+    {
+      "symbol": "0005.HK",
+      "source_rows": 472,
+      "window_rows": 393,
+      "window_unique_dates": 393,
+      "missing_target_sessions": 15,
+      "duplicate_window_keys": 0,
+      "missing_hold_shares": 0,
+      "monthly_share_rows": 130,
+      "historical_publication_clock_certified": false
+    },
+    {
+      "symbol": "0388.HK",
+      "source_rows": 472,
+      "window_rows": 393,
+      "window_unique_dates": 393,
+      "missing_target_sessions": 15,
+      "duplicate_window_keys": 0,
+      "missing_hold_shares": 0,
+      "monthly_share_rows": 130,
+      "historical_publication_clock_certified": false
+    },
+    {
+      "symbol": "0700.HK",
+      "source_rows": 472,
+      "window_rows": 393,
+      "window_unique_dates": 393,
+      "missing_target_sessions": 15,
+      "duplicate_window_keys": 0,
+      "missing_hold_shares": 0,
+      "monthly_share_rows": 130,
+      "historical_publication_clock_certified": false
+    },
+    {
+      "symbol": "0939.HK",
+      "source_rows": 472,
+      "window_rows": 393,
+      "window_unique_dates": 393,
+      "missing_target_sessions": 15,
+      "duplicate_window_keys": 0,
+      "missing_hold_shares": 0,
+      "monthly_share_rows": 129,
+      "historical_publication_clock_certified": false
+    },
+    {
+      "symbol": "0941.HK",
+      "source_rows": 472,
+      "window_rows": 393,
+      "window_unique_dates": 393,
+      "missing_target_sessions": 15,
+      "duplicate_window_keys": 0,
+      "missing_hold_shares": 0,
+      "monthly_share_rows": 129,
+      "historical_publication_clock_certified": false
+    },
+    {
+      "symbol": "1299.HK",
+      "source_rows": 472,
+      "window_rows": 393,
+      "window_unique_dates": 393,
+      "missing_target_sessions": 15,
+      "duplicate_window_keys": 0,
+      "missing_hold_shares": 0,
+      "monthly_share_rows": 130,
+      "historical_publication_clock_certified": false
+    },
+    {
+      "symbol": "1398.HK",
+      "source_rows": 472,
+      "window_rows": 393,
+      "window_unique_dates": 393,
+      "missing_target_sessions": 15,
+      "duplicate_window_keys": 0,
+      "missing_hold_shares": 0,
+      "monthly_share_rows": 90,
+      "historical_publication_clock_certified": false
+    },
+    {
+      "symbol": "2318.HK",
+      "source_rows": 472,
+      "window_rows": 393,
+      "window_unique_dates": 393,
+      "missing_target_sessions": 15,
+      "duplicate_window_keys": 0,
+      "missing_hold_shares": 0,
+      "monthly_share_rows": 110,
+      "historical_publication_clock_certified": false
+    },
+    {
+      "symbol": "2800.HK",
+      "source_rows": 0,
+      "window_rows": 0,
+      "window_unique_dates": 0,
+      "missing_target_sessions": 408,
+      "duplicate_window_keys": 0,
+      "missing_hold_shares": 0,
+      "monthly_share_rows": 0,
+      "historical_publication_clock_certified": false
+    },
+    {
+      "symbol": "3988.HK",
+      "source_rows": 472,
+      "window_rows": 393,
+      "window_unique_dates": 393,
+      "missing_target_sessions": 15,
+      "duplicate_window_keys": 0,
+      "missing_hold_shares": 0,
+      "monthly_share_rows": 0,
+      "historical_publication_clock_certified": false
+    }
+  ],
+  "missing_handling": "Unknown, never zero or previous observation carry",
+  "first_seen": "Latest public Git snapshot and observation dates are not historical dissemination receipts",
+  "source_flow": "Eastmoney per-stock holdings; not an authenticated exchange cash ledger",
+  "monthly_shares": "Monthly report issued/treasury/total with filing date and source URL; no exact release time or complete corporate-action event contract",
+  "admitted_for_prediction": false,
+  "factor_analysis_calls": 0,
+  "accounts": 0
+}

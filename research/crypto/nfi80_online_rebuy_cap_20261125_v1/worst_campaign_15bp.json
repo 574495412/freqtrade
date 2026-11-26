@@ -1,0 +1,38 @@
+{
+  "cohort_source": {
+    "control": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/native_results/backtest-result-2026-11-09_11-36-59.zip",
+      "sha256": "48381f6843d81002e70cdb18cd8a5e4105c11ad9716e8f2a11334b1e857ccf1e"
+    },
+    "candidate": {
+      "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_online_rebuy_cap_20261125_v1/cost_15bp/native_results/backtest-result-2026-11-25_16-29-25.zip",
+      "sha256": "9c48c36b86499698479c50aa2ac3a850ff093c054f9a9faa69eed83ba952779f"
+    }
+  },
+  "match_key": "same pair, entry timestamp, side and entry tag",
+  "native_campaign": {
+    "control": {
+      "pair": "NEAR/USDT:USDT",
+      "opened": "2026-08-14 07:45:00+00:00",
+      "closed": "2026-09-28 00:00:00+00:00",
+      "tag": "562 ",
+      "reported_trade_pnl_usdt": -402.68639123,
+      "historical_model_funding_usdt": 1.4658422734163357,
+      "filled_adds": 46,
+      "exit_reason": "exit_bad_trade_broken_237pct ( 562 )"
+    },
+    "candidate": {
+      "pair": "NEAR/USDT:USDT",
+      "opened": "2026-08-14 07:45:00+00:00",
+      "closed": "2026-09-04 19:50:00+00:00",
+      "tag": "562 ",
+      "reported_trade_pnl_usdt": -63.48822503,
+      "historical_model_funding_usdt": 0.29000046511111144,
+      "filled_adds": 1,
+      "exit_reason": "stop_loss"
+    }
+  },
+  "marked_account_net_lift_usdt": 310.641743613508,
+  "notes": "Matched trade PnL is a descriptive attribution. Account economics can change due to compounding or downstream occupancy.",
+  "orders_enabled": false
+}

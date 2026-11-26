@@ -1,0 +1,87 @@
+{
+  "created_at": "2026-11-16T22:41:55.383458+00:00",
+  "records": [
+    {
+      "original": "analyze.py",
+      "new": "analyze_v2.py",
+      "original_sha256": "dbe0966964b92756742e3ec76a8a5b93f860df3cde15e4814c2a375686458b57",
+      "new_sha256": "18bbb68229b237479ddd7b2e912b0bbcb63ffc3d6ac16b5cf77d4873a1af9d88",
+      "literal_replacements": [
+        [
+          "HERE / \"plan.json\"",
+          "HERE / \"plan_v2.json\""
+        ],
+        [
+          "HERE / \"execution_complete.json\"",
+          "HERE / \"execution_complete_v2.json\""
+        ],
+        [
+          "HERE / \"implementation_freeze.json\"",
+          "HERE / \"implementation_freeze_v2.json\""
+        ],
+        [
+          "nav.index.equals(grid)",
+          "nav.index.as_unit(\"ns\").equals(grid)"
+        ],
+        [
+          "save(\"budget_audit.json\",",
+          "save(\"budget_audit_v2.json\","
+        ],
+        [
+          "save(\"results.json\",",
+          "save(\"results_v2.json\","
+        ]
+      ]
+    },
+    {
+      "original": "audit_features.py",
+      "new": "audit_features_v2.py",
+      "original_sha256": "75cf2c8b8c88ae2c692d8538f0fe1a534c7e03145d29bfd2d1921f9539302450",
+      "new_sha256": "d60af9fd4b5b696d0542168907217967147458bc65d81e0460db039fe33ad18b",
+      "literal_replacements": [
+        [
+          "HERE / \"plan.json\"",
+          "HERE / \"plan_v2.json\""
+        ],
+        [
+          "HERE / \"feature_audit.json\"",
+          "HERE / \"feature_audit_v2.json\""
+        ]
+      ]
+    },
+    {
+      "original": "preflight.py",
+      "new": "preflight_v2.py",
+      "original_sha256": "f0280a7eaf54742e83f8114cf3187047ff8c6f831fd250227866fe6c1afca3a0",
+      "new_sha256": "722bcc272de8fb7556fc1335e6aabb6271a2328bc28539c0f9c569407c61cdbd",
+      "literal_replacements": [
+        [
+          "HERE / 'plan.json'",
+          "HERE / 'plan_v2.json'"
+        ]
+      ]
+    },
+    {
+      "original": "run.py",
+      "new": "run_v2.py",
+      "original_sha256": "dbc7ab9685d767b3eeec0eb622756ec35218bd18f0c080b4e2f40f0f3d0f7642",
+      "new_sha256": "84681021ecb0d8a83e134b2ab9054a55aebcda0a1e934aa823eec5301fc993d2",
+      "literal_replacements": [
+        [
+          "HERE / 'plan.json'",
+          "HERE / 'plan_v2.json'"
+        ],
+        [
+          "HERE / 'preflight.json'",
+          "HERE / 'preflight_v2.json'"
+        ],
+        [
+          "'execution_complete.json'",
+          "'execution_complete_v2.json'"
+        ]
+      ]
+    }
+  ],
+  "financial_metric_or_gate_changes": false,
+  "only_analysis_arithmetic_change": "normalize timestamp resolution to ns for combined curve equality"
+}

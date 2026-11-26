@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "exact_original_risk_weights": true,
+  "actual_native_strategies": [
+    {
+      "strategy": "ClockedCovarianceRiskTS",
+      "exact_source_weight_cells": 17632
+    },
+    {
+      "strategy": "ClockedDiagonalRiskTS",
+      "exact_source_weight_cells": 17632
+    },
+    {
+      "strategy": "ClockedGrossOneRiskTS",
+      "exact_source_weight_cells": 17632
+    }
+  ],
+  "source_native_flag_use": "Only Backtesting._check_trade_exit gates adjustment; stop/exit processing unchanged",
+  "pure_no_op_hours_skipped": true,
+  "technical_change_after_v1_output_disclosed": true,
+  "full_financial_parity_required_before_remaining_matrix": true
+}

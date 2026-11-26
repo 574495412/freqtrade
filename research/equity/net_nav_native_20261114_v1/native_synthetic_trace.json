@@ -1,0 +1,692 @@
+{
+  "stage": "synthetic native component with independent Decimal audit",
+  "native_fills": 8,
+  "native_nav_snapshots": 12,
+  "historical_strategy_accounts": 0,
+  "bench_records": 0,
+  "historical_performance": null,
+  "scenarios": [
+    {
+      "market": "XNYS",
+      "native_fills": 4,
+      "snapshots": 6,
+      "passed": true,
+      "snapshots_after_fills": [
+        {
+          "at": "2025-01-02 15:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 799.0,
+          "unsettled_receivable": 0,
+          "total_cash": 799.0,
+          "holdings": [
+            [
+              "ABC/USD",
+              2.0,
+              {
+                "pair": "ABC/USD",
+                "currency": "USD",
+                "at": "2025-01-02 15:00:00+00:00",
+                "price": 100,
+                "kind": "close",
+                "source_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+              }
+            ]
+          ],
+          "market_value": 200.0,
+          "net_nav": 999.0,
+          "execution_fees": "1",
+          "filled_orders": 1,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "1",
+              true
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-03 15:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 468.0,
+          "unsettled_receivable": 0,
+          "total_cash": 468.0,
+          "holdings": [
+            [
+              "ABC/USD",
+              5.0,
+              {
+                "pair": "ABC/USD",
+                "currency": "USD",
+                "at": "2025-01-03 15:00:00+00:00",
+                "price": 110,
+                "kind": "close",
+                "source_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+              }
+            ]
+          ],
+          "market_value": 550.0,
+          "net_nav": 1018.0,
+          "execution_fees": "2",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "2",
+              true
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-06 15:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 468.0,
+          "unsettled_receivable": 238.52,
+          "total_cash": 706.52,
+          "holdings": [
+            [
+              "ABC/USD",
+              3.0,
+              {
+                "pair": "ABC/USD",
+                "currency": "USD",
+                "at": "2025-01-06 15:00:00+00:00",
+                "price": 120,
+                "kind": "close",
+                "source_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+              }
+            ]
+          ],
+          "market_value": 360.0,
+          "net_nav": 1066.52,
+          "execution_fees": "3.48",
+          "filled_orders": 3,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "3.48",
+              true
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-07 15:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 468.0,
+          "unsettled_receivable": 506.98,
+          "total_cash": 974.98,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 974.98,
+          "execution_fees": "5.02",
+          "filled_orders": 4,
+          "closed_trade_net_cash_profit": "-25.02",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "5.02",
+              false
+            ]
+          ]
+        }
+      ],
+      "component_result": {
+        "evidence": "native component only; not an admitted historical strategy account",
+        "market": "XNYS",
+        "currency": "USD",
+        "mark_kind": "close",
+        "start": "2025-01-02T14:00:00+00:00",
+        "end": "2025-01-10T22:00:00+00:00",
+        "snapshots": 6,
+        "initial_cash": 1000.0,
+        "final_net_nav": 974.98,
+        "net_change_ratio": -0.02501999999999993,
+        "sampled_max_drawdown": 0.08583055170085883,
+        "execution_fees": "5.02",
+        "terminal": "flat cash plus receivables",
+        "terminal_unsettled_receivable": 0,
+        "closed_trade_net_cash_profit": "-25.02",
+        "historical_strategy_accounts": 0
+      },
+      "all_snapshots": [
+        {
+          "at": "2025-01-02 14:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 1000.0,
+          "unsettled_receivable": 0,
+          "total_cash": 1000.0,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 1000.0,
+          "execution_fees": "0",
+          "filled_orders": 0,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": []
+        },
+        {
+          "at": "2025-01-02 15:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 799.0,
+          "unsettled_receivable": 0,
+          "total_cash": 799.0,
+          "holdings": [
+            [
+              "ABC/USD",
+              2.0,
+              {
+                "pair": "ABC/USD",
+                "currency": "USD",
+                "at": "2025-01-02 15:00:00+00:00",
+                "price": 100,
+                "kind": "close",
+                "source_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+              }
+            ]
+          ],
+          "market_value": 200.0,
+          "net_nav": 999.0,
+          "execution_fees": "1",
+          "filled_orders": 1,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "1",
+              true
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-03 15:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 468.0,
+          "unsettled_receivable": 0,
+          "total_cash": 468.0,
+          "holdings": [
+            [
+              "ABC/USD",
+              5.0,
+              {
+                "pair": "ABC/USD",
+                "currency": "USD",
+                "at": "2025-01-03 15:00:00+00:00",
+                "price": 110,
+                "kind": "close",
+                "source_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+              }
+            ]
+          ],
+          "market_value": 550.0,
+          "net_nav": 1018.0,
+          "execution_fees": "2",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "2",
+              true
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-06 15:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 468.0,
+          "unsettled_receivable": 238.52,
+          "total_cash": 706.52,
+          "holdings": [
+            [
+              "ABC/USD",
+              3.0,
+              {
+                "pair": "ABC/USD",
+                "currency": "USD",
+                "at": "2025-01-06 15:00:00+00:00",
+                "price": 120,
+                "kind": "close",
+                "source_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+              }
+            ]
+          ],
+          "market_value": 360.0,
+          "net_nav": 1066.52,
+          "execution_fees": "3.48",
+          "filled_orders": 3,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "3.48",
+              true
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-07 15:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 468.0,
+          "unsettled_receivable": 506.98,
+          "total_cash": 974.98,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 974.98,
+          "execution_fees": "5.02",
+          "filled_orders": 4,
+          "closed_trade_net_cash_profit": "-25.02",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "5.02",
+              false
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-10 22:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 974.98,
+          "unsettled_receivable": 0,
+          "total_cash": 974.98,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 974.98,
+          "execution_fees": "5.02",
+          "filled_orders": 4,
+          "closed_trade_net_cash_profit": "-25.02",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "5.02",
+              false
+            ]
+          ]
+        }
+      ],
+      "native_gross_profit": -20.0,
+      "closed_net_profit": "-25.02"
+    },
+    {
+      "market": "XHKG",
+      "native_fills": 4,
+      "snapshots": 6,
+      "passed": true,
+      "snapshots_after_fills": [
+        {
+          "at": "2025-01-02 02:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 799.0,
+          "unsettled_receivable": 0,
+          "total_cash": 799.0,
+          "holdings": [
+            [
+              "ABC/HKD",
+              2.0,
+              {
+                "pair": "ABC/HKD",
+                "currency": "HKD",
+                "at": "2025-01-02 02:00:00+00:00",
+                "price": 100,
+                "kind": "close",
+                "source_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+              }
+            ]
+          ],
+          "market_value": 200.0,
+          "net_nav": 999.0,
+          "execution_fees": "1",
+          "filled_orders": 1,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "1",
+              true
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-03 02:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 468.0,
+          "unsettled_receivable": 0,
+          "total_cash": 468.0,
+          "holdings": [
+            [
+              "ABC/HKD",
+              5.0,
+              {
+                "pair": "ABC/HKD",
+                "currency": "HKD",
+                "at": "2025-01-03 02:00:00+00:00",
+                "price": 110,
+                "kind": "close",
+                "source_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+              }
+            ]
+          ],
+          "market_value": 550.0,
+          "net_nav": 1018.0,
+          "execution_fees": "2",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "2",
+              true
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-06 02:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 468.0,
+          "unsettled_receivable": 238.52,
+          "total_cash": 706.52,
+          "holdings": [
+            [
+              "ABC/HKD",
+              3.0,
+              {
+                "pair": "ABC/HKD",
+                "currency": "HKD",
+                "at": "2025-01-06 02:00:00+00:00",
+                "price": 120,
+                "kind": "close",
+                "source_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+              }
+            ]
+          ],
+          "market_value": 360.0,
+          "net_nav": 1066.52,
+          "execution_fees": "3.48",
+          "filled_orders": 3,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "3.48",
+              true
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-07 02:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 468.0,
+          "unsettled_receivable": 506.98,
+          "total_cash": 974.98,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 974.98,
+          "execution_fees": "5.02",
+          "filled_orders": 4,
+          "closed_trade_net_cash_profit": "-25.02",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "5.02",
+              false
+            ]
+          ]
+        }
+      ],
+      "component_result": {
+        "evidence": "native component only; not an admitted historical strategy account",
+        "market": "XHKG",
+        "currency": "HKD",
+        "mark_kind": "close",
+        "start": "2025-01-02T01:00:00+00:00",
+        "end": "2025-01-10T10:00:00+00:00",
+        "snapshots": 6,
+        "initial_cash": 1000.0,
+        "final_net_nav": 974.98,
+        "net_change_ratio": -0.02501999999999993,
+        "sampled_max_drawdown": 0.08583055170085883,
+        "execution_fees": "5.02",
+        "terminal": "flat cash plus receivables",
+        "terminal_unsettled_receivable": 0,
+        "closed_trade_net_cash_profit": "-25.02",
+        "historical_strategy_accounts": 0
+      },
+      "all_snapshots": [
+        {
+          "at": "2025-01-02 01:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 1000.0,
+          "unsettled_receivable": 0,
+          "total_cash": 1000.0,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 1000.0,
+          "execution_fees": "0",
+          "filled_orders": 0,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": []
+        },
+        {
+          "at": "2025-01-02 02:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 799.0,
+          "unsettled_receivable": 0,
+          "total_cash": 799.0,
+          "holdings": [
+            [
+              "ABC/HKD",
+              2.0,
+              {
+                "pair": "ABC/HKD",
+                "currency": "HKD",
+                "at": "2025-01-02 02:00:00+00:00",
+                "price": 100,
+                "kind": "close",
+                "source_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+              }
+            ]
+          ],
+          "market_value": 200.0,
+          "net_nav": 999.0,
+          "execution_fees": "1",
+          "filled_orders": 1,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "1",
+              true
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-03 02:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 468.0,
+          "unsettled_receivable": 0,
+          "total_cash": 468.0,
+          "holdings": [
+            [
+              "ABC/HKD",
+              5.0,
+              {
+                "pair": "ABC/HKD",
+                "currency": "HKD",
+                "at": "2025-01-03 02:00:00+00:00",
+                "price": 110,
+                "kind": "close",
+                "source_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+              }
+            ]
+          ],
+          "market_value": 550.0,
+          "net_nav": 1018.0,
+          "execution_fees": "2",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "2",
+              true
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-06 02:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 468.0,
+          "unsettled_receivable": 238.52,
+          "total_cash": 706.52,
+          "holdings": [
+            [
+              "ABC/HKD",
+              3.0,
+              {
+                "pair": "ABC/HKD",
+                "currency": "HKD",
+                "at": "2025-01-06 02:00:00+00:00",
+                "price": 120,
+                "kind": "close",
+                "source_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+              }
+            ]
+          ],
+          "market_value": 360.0,
+          "net_nav": 1066.52,
+          "execution_fees": "3.48",
+          "filled_orders": 3,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "3.48",
+              true
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-07 02:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 468.0,
+          "unsettled_receivable": 506.98,
+          "total_cash": 974.98,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 974.98,
+          "execution_fees": "5.02",
+          "filled_orders": 4,
+          "closed_trade_net_cash_profit": "-25.02",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "5.02",
+              false
+            ]
+          ]
+        },
+        {
+          "at": "2025-01-10 10:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "close",
+          "initial_cash": 1000.0,
+          "free_cash": 974.98,
+          "unsettled_receivable": 0,
+          "total_cash": 974.98,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 974.98,
+          "execution_fees": "5.02",
+          "filled_orders": 4,
+          "closed_trade_net_cash_profit": "-25.02",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "5.02",
+              false
+            ]
+          ]
+        }
+      ],
+      "native_gross_profit": -20.0,
+      "closed_net_profit": "-25.02"
+    }
+  ]
+}

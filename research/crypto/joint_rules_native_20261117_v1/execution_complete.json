@@ -1,0 +1,96 @@
+{
+  "cases": [
+    {
+      "case": "continue",
+      "started_at": "2026-11-17T14:37:45.222515+00:00",
+      "ended_at": "2026-11-17T14:37:47.807780+00:00",
+      "command": [
+        "/Users/chrise/GitHub/freqtrade/.venv-paper/bin/python",
+        "-B",
+        "-m",
+        "research.crypto.joint_rules_native_20261117_v1.run_native",
+        "--case",
+        "continue"
+      ],
+      "returncode": 0,
+      "log_sha256": "61831bda57f32b36ab2eee9fb7b1ffd5a9a5f507a9c5f0e954e0a93e596c6dc2",
+      "expected": "completed",
+      "producer_plan_sha256": "72b06f3d5834628ecd4abce5f7ad87d9ec096d438498101ecd1e1ae586d4dbe1"
+    },
+    {
+      "case": "stop",
+      "started_at": "2026-11-17T14:37:47.809113+00:00",
+      "ended_at": "2026-11-17T14:37:49.811666+00:00",
+      "command": [
+        "/Users/chrise/GitHub/freqtrade/.venv-paper/bin/python",
+        "-B",
+        "-m",
+        "research.crypto.joint_rules_native_20261117_v1.run_native",
+        "--case",
+        "stop"
+      ],
+      "returncode": 0,
+      "log_sha256": "39a5e99a997e2091aa2d569b044e1d43278fdaee7d41734c9989959e6dc62c0e",
+      "expected": "completed",
+      "producer_plan_sha256": "72b06f3d5834628ecd4abce5f7ad87d9ec096d438498101ecd1e1ae586d4dbe1"
+    },
+    {
+      "case": "coarse_dust",
+      "started_at": "2026-11-17T14:37:49.812986+00:00",
+      "ended_at": "2026-11-17T14:37:51.198510+00:00",
+      "command": [
+        "/Users/chrise/GitHub/freqtrade/.venv-paper/bin/python",
+        "-B",
+        "-m",
+        "research.crypto.joint_rules_native_20261117_v1.run_native",
+        "--case",
+        "coarse_dust"
+      ],
+      "returncode": 1,
+      "log_sha256": "bcb2d6f560b89a54eada12a9f4768cc3718277e01379df58438399a9b1314768",
+      "expected": "rejected",
+      "producer_plan_sha256": "72b06f3d5834628ecd4abce5f7ad87d9ec096d438498101ecd1e1ae586d4dbe1"
+    },
+    {
+      "case": "unknown_amount",
+      "started_at": "2026-11-17T14:37:51.199799+00:00",
+      "ended_at": "2026-11-17T14:37:52.398360+00:00",
+      "command": [
+        "/Users/chrise/GitHub/freqtrade/.venv-paper/bin/python",
+        "-B",
+        "-m",
+        "research.crypto.joint_rules_native_20261117_v1.run_native",
+        "--case",
+        "unknown_amount"
+      ],
+      "returncode": 1,
+      "log_sha256": "5806293d813e3702459323fbdfd96ad9b26a29e199d7a87d4e9963eeb1969a45",
+      "expected": "rejected",
+      "producer_plan_sha256": "72b06f3d5834628ecd4abce5f7ad87d9ec096d438498101ecd1e1ae586d4dbe1"
+    },
+    {
+      "case": "unknown_pending",
+      "started_at": "2026-11-17T14:37:52.399736+00:00",
+      "ended_at": "2026-11-17T14:37:53.701457+00:00",
+      "command": [
+        "/Users/chrise/GitHub/freqtrade/.venv-paper/bin/python",
+        "-B",
+        "-m",
+        "research.crypto.joint_rules_native_20261117_v1.run_native",
+        "--case",
+        "unknown_pending"
+      ],
+      "returncode": 1,
+      "log_sha256": "306075b98ba04d495bd91fc00b3f8379c64299f24ced904e92578eafd19d1754",
+      "expected": "rejected",
+      "producer_plan_sha256": "72b06f3d5834628ecd4abce5f7ad87d9ec096d438498101ecd1e1ae586d4dbe1"
+    }
+  ],
+  "synthetic_only": true,
+  "completed_native_cases": 2,
+  "expected_rejected_cases": 3,
+  "financial_economic_claim": false,
+  "new_historical_strategy_accounts": 0,
+  "orders_enabled": false,
+  "goal_complete": false
+}

@@ -1,0 +1,43 @@
+{
+  "recorded_at": "2026-11-17T16:15:37.051963+00:00",
+  "native_engine_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "local_owners": {
+    "freqtrade/optimize/backtesting.py": {
+      "path": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/optimize/backtesting.py",
+      "sha256": "1d45e0b34ddf30813bbdf51a20be6e8345a65b668f373f8ce2fbb6e93271b234"
+    },
+    "freqtrade/wallets.py": {
+      "path": "/Users/chrise/GitHub/CZ-Agent/vendor/freqtrade/freqtrade/wallets.py",
+      "sha256": "6a4809524fbb3ed44afba98ba8bdc7f4d8b79627c25210585ef86165ae263370"
+    }
+  },
+  "web_references": [
+    {
+      "url": "https://www.freqtrade.io/en/latest/backtesting/#backtesting-multiple-strategies",
+      "observed": "strategy-list compares independently reported strategies and uses one timeframe; not a joint shared-wallet strategy"
+    },
+    {
+      "url": "https://www.freqtrade.io/en/latest/configuration/#assign-available-capital",
+      "observed": "available_capital partitions a starting budget; overrides tradable_balance_ratio"
+    },
+    {
+      "url": "https://www.freqtrade.io/en/latest/leverage/",
+      "observed": "leverage/margin account liquidation assumptions require a sole bot account user"
+    }
+  ],
+  "web_pages_are_latest_not_pinned_native_revision": true,
+  "local_source_findings": [
+    "Backtesting.start loops strategylist and invokes backtest_one_strategy separately",
+    "Each backtest calls reset_backtest, resetting trades, locks, custom data and provider cache",
+    "Wallets.available_capital defines a starting budget plus closed profit; it is not a per-strategy shared portfolio allocator"
+  ],
+  "research_routes": [
+    "Actual independent500+500 research wallets total1000, with full NAV summed; this is a separate-wallet model, not same-account futures dual-bot deployment proof",
+    "One local IStrategy wrapper sharing native wallet/order flow, with originalNFI priority and explicit auxiliary policy; actual enabled execution still unimplemented/unvalidated"
+  ],
+  "existing_idle_protocol_unchanged": true,
+  "native_financial_accounts_started": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false
+}

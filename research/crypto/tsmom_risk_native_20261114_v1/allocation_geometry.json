@@ -1,0 +1,40 @@
+{
+  "scope": "Three frozen risk allocations share one fixed TSMOM signal; not independent alpha factors",
+  "correlations": [
+    {
+      "left": "ClockedCovarianceRiskTS",
+      "right": "ClockedDiagonalRiskTS",
+      "days": 608,
+      "mean_abs_cross_sectional_weight_pearson": 1.0,
+      "minimum_weight_cosine": 0.9999999999999994,
+      "maximum_weight_cosine": 1.0000000000000007
+    },
+    {
+      "left": "ClockedCovarianceRiskTS",
+      "right": "ClockedGrossOneRiskTS",
+      "days": 608,
+      "mean_abs_cross_sectional_weight_pearson": 1.0,
+      "minimum_weight_cosine": 0.9999999999999993,
+      "maximum_weight_cosine": 1.0000000000000007
+    },
+    {
+      "left": "ClockedDiagonalRiskTS",
+      "right": "ClockedGrossOneRiskTS",
+      "days": 608,
+      "mean_abs_cross_sectional_weight_pearson": 1.0,
+      "minimum_weight_cosine": 0.9999999999999993,
+      "maximum_weight_cosine": 1.0000000000000007
+    }
+  ],
+  "inputs": {
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/v002/preflight_weights_ClockedCovarianceRiskTS.parquet": "ad48f21e2004f27ff418af52d3e3cf73e6a9952888b84a8803fb0445b4e3cc71",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/v002/preflight_weights_ClockedDiagonalRiskTS.parquet": "de9d6fe5d988f0017cef401130f61251b8d152b779f4a449a76897f6d89283e3",
+    "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/tsmom_risk_native_20261114_v1/v002/preflight_weights_ClockedGrossOneRiskTS.parquet": "ae0384f8741f2b56954cb7f35271dca44920efd32b50f0abd8d596adc1eaac32"
+  },
+  "not_all_registry_dedup": true,
+  "not_funded_return_correlations": true,
+  "calculation_source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/geometry.py",
+    "sha256": "0848993fdb87ac8e40cf536e9f525a0138f954f7c7d7af6f968c0c5d1803a793"
+  }
+}

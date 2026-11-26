@@ -1,0 +1,341 @@
+{
+  "marked_window_utc": [
+    "2025-01-01T00:00:00+00:00",
+    "2026-08-31T23:00:00+00:00"
+  ],
+  "threshold_base": "Starting account capital, inclusive thresholds. Campaigns exclude forced liquidation at replay termination.",
+  "profit_concentration_denominator": "Sum of all positive natural completed campaign PnL after native fees and funding",
+  "daily_cash_changes_use_continuous_hourly_marked_equity": true,
+  "descriptive_attribution_no_trade_removal_counterfactual": true,
+  "conditional_old_execution_model": true,
+  "accounts": {
+    "original1000_15bp": {
+      "starting_usdt": 1000,
+      "cost_bps_per_side": 15,
+      "marked_ending_usdt": 2356.564040788781,
+      "marked_cumulative_return": 1.356564040788781,
+      "maximum_hourly_drawdown": 0.045153827500363786,
+      "continuous_2025_return": 1.0000483008926202,
+      "continuous_2026_through_august_return": 0.17825356504492817,
+      "natural_campaigns_closed_before_endpoint": 281,
+      "profitable_campaigns": 277,
+      "losing_campaigns": 4,
+      "gross_winner_pnl_usdt": 1444.5193386600001,
+      "winner_median_usdt": 2.32925205,
+      "winner_p90_usdt": 13.779806160000005,
+      "win_duration_median_minutes": 325.0,
+      "winners_above_fraction_of_starting_capital": {
+        "0.01": {
+          "count": 49,
+          "gross_winner_pnl_share": 0.5935867591882891
+        },
+        "0.02": {
+          "count": 13,
+          "gross_winner_pnl_share": 0.2501199103815118
+        },
+        "0.05": {
+          "count": 1,
+          "gross_winner_pnl_share": 0.04240046869626309
+        }
+      },
+      "top_10_gross_winner_pnl_share": 0.20799970558976355,
+      "top_5_campaigns": [
+        {
+          "pair": "ADA/USDT:USDT",
+          "is_short": false,
+          "close": "2025-10-10T21:45:00.000Z",
+          "profit_abs": 61.248297,
+          "minutes": 5.0,
+          "enter_tag": "145 "
+        },
+        {
+          "pair": "THETA/USDT:USDT",
+          "is_short": false,
+          "close": "2025-10-10T21:45:00.000Z",
+          "profit_abs": 48.62788008,
+          "minutes": 5.0,
+          "enter_tag": "145 "
+        },
+        {
+          "pair": "RUNE/USDT:USDT",
+          "is_short": false,
+          "close": "2025-10-10T21:45:00.000Z",
+          "profit_abs": 32.485606,
+          "minutes": 5.0,
+          "enter_tag": "145 "
+        },
+        {
+          "pair": "DYDX/USDT:USDT",
+          "is_short": false,
+          "close": "2026-06-18T20:30:00.000Z",
+          "profit_abs": 29.72401489,
+          "minutes": 280.0,
+          "enter_tag": "141 "
+        },
+        {
+          "pair": "SNX/USDT:USDT",
+          "is_short": false,
+          "close": "2026-07-06T15:55:00.000Z",
+          "profit_abs": 22.92327108,
+          "minutes": 245.0,
+          "enter_tag": "6 "
+        }
+      ],
+      "completed_24h_marked_days": 607,
+      "largest_marked_day_ending_utc": "2025-10-11T00:00:00+00:00",
+      "largest_marked_day_gain_usdt": 294.5330766205675,
+      "top_5_days_share_of_positive_24h_cash_changes": 0.2884894043237755,
+      "last_partial_day_change_usdt": -16.590356065134074,
+      "open_campaigns_at_marked_endpoint": 1,
+      "native_terminal_trade_count_including_force": 282,
+      "archive_sha256": "e2ff3c9a7de5960375b63270e2ce1ee35a4eca47a43a28ad1ad2cc3a08624fb3",
+      "curve_sha256": "43b2f8ba81621adef48080f17fb67e9ea985f3e95db616bbeb711886cf3c2fa2"
+    },
+    "actual500_15bp": {
+      "starting_usdt": 500,
+      "cost_bps_per_side": 15,
+      "marked_ending_usdt": 1148.316966291998,
+      "marked_cumulative_return": 1.2966339325839957,
+      "maximum_hourly_drawdown": 0.04473331082709697,
+      "continuous_2025_return": 0.9734638754443155,
+      "continuous_2026_through_august_return": 0.1637577769529328,
+      "natural_campaigns_closed_before_endpoint": 281,
+      "profitable_campaigns": 274,
+      "losing_campaigns": 7,
+      "gross_winner_pnl_usdt": 705.4208518,
+      "winner_median_usdt": 1.185549465,
+      "winner_p90_usdt": 6.54737019300001,
+      "win_duration_median_minutes": 322.5,
+      "winners_above_fraction_of_starting_capital": {
+        "0.01": {
+          "count": 48,
+          "gross_winner_pnl_share": 0.5887418279177099
+        },
+        "0.02": {
+          "count": 12,
+          "gross_winner_pnl_share": 0.23830087843456618
+        },
+        "0.05": {
+          "count": 1,
+          "gross_winner_pnl_share": 0.04287090312518034
+        }
+      },
+      "top_10_gross_winner_pnl_share": 0.20993564738285775,
+      "top_5_campaigns": [
+        {
+          "pair": "ADA/USDT:USDT",
+          "is_short": false,
+          "close": "2025-10-10T21:45:00.000Z",
+          "profit_abs": 30.242029,
+          "minutes": 5.0,
+          "enter_tag": "145 "
+        },
+        {
+          "pair": "THETA/USDT:USDT",
+          "is_short": false,
+          "close": "2025-10-10T21:45:00.000Z",
+          "profit_abs": 23.99577804,
+          "minutes": 5.0,
+          "enter_tag": "145 "
+        },
+        {
+          "pair": "RUNE/USDT:USDT",
+          "is_short": false,
+          "close": "2025-10-10T21:45:00.000Z",
+          "profit_abs": 16.028518,
+          "minutes": 5.0,
+          "enter_tag": "145 "
+        },
+        {
+          "pair": "DYDX/USDT:USDT",
+          "is_short": false,
+          "close": "2026-06-18T20:30:00.000Z",
+          "profit_abs": 14.50581093,
+          "minutes": 280.0,
+          "enter_tag": "141 "
+        },
+        {
+          "pair": "SNX/USDT:USDT",
+          "is_short": false,
+          "close": "2026-07-06T15:55:00.000Z",
+          "profit_abs": 11.16684684,
+          "minutes": 245.0,
+          "enter_tag": "6 "
+        }
+      ],
+      "completed_24h_marked_days": 607,
+      "largest_marked_day_ending_utc": "2025-10-11T00:00:00+00:00",
+      "largest_marked_day_gain_usdt": 138.45718709176276,
+      "top_5_days_share_of_positive_24h_cash_changes": 0.28276610572750865,
+      "last_partial_day_change_usdt": -7.81455350480087,
+      "open_campaigns_at_marked_endpoint": 1,
+      "native_terminal_trade_count_including_force": 282,
+      "archive_sha256": "7ab16d1dfac115a4d46c05c11e9c01d880951b75d4aecc45eed001e3bb0e5a3b",
+      "curve_sha256": "5cbd2af0fe12267924251f0eb949833793cd16a015b0b3dbd095a88f2f50e2d9"
+    },
+    "original1000_8bp": {
+      "starting_usdt": 1000,
+      "cost_bps_per_side": 8,
+      "marked_ending_usdt": 2412.0919597300003,
+      "marked_cumulative_return": 1.4120919597300001,
+      "maximum_hourly_drawdown": 0.038209224790953566,
+      "continuous_2025_return": 1.0282851802122295,
+      "continuous_2026_through_august_return": 0.1892272266553814,
+      "natural_campaigns_closed_before_endpoint": 286,
+      "profitable_campaigns": 282,
+      "losing_campaigns": 4,
+      "gross_winner_pnl_usdt": 1473.5041295500002,
+      "winner_median_usdt": 2.5206749100000003,
+      "winner_p90_usdt": 13.205497824000004,
+      "win_duration_median_minutes": 302.5,
+      "winners_above_fraction_of_starting_capital": {
+        "0.01": {
+          "count": 48,
+          "gross_winner_pnl_share": 0.5806593418175874
+        },
+        "0.02": {
+          "count": 13,
+          "gross_winner_pnl_share": 0.25073947407451974
+        },
+        "0.05": {
+          "count": 1,
+          "gross_winner_pnl_share": 0.042153214744616245
+        }
+      },
+      "top_10_gross_winner_pnl_share": 0.20877685524637762,
+      "top_5_campaigns": [
+        {
+          "pair": "ADA/USDT:USDT",
+          "is_short": false,
+          "close": "2025-10-10T21:45:00.000Z",
+          "profit_abs": 62.112936,
+          "minutes": 5.0,
+          "enter_tag": "145 "
+        },
+        {
+          "pair": "THETA/USDT:USDT",
+          "is_short": false,
+          "close": "2025-10-10T21:45:00.000Z",
+          "profit_abs": 49.4165056,
+          "minutes": 5.0,
+          "enter_tag": "145 "
+        },
+        {
+          "pair": "RUNE/USDT:USDT",
+          "is_short": false,
+          "close": "2025-10-10T21:45:00.000Z",
+          "profit_abs": 33.1502656,
+          "minutes": 5.0,
+          "enter_tag": "145 "
+        },
+        {
+          "pair": "DYDX/USDT:USDT",
+          "is_short": false,
+          "close": "2026-06-18T20:30:00.000Z",
+          "profit_abs": 30.6257234,
+          "minutes": 280.0,
+          "enter_tag": "141 "
+        },
+        {
+          "pair": "SNX/USDT:USDT",
+          "is_short": false,
+          "close": "2026-07-06T15:55:00.000Z",
+          "profit_abs": 23.75880874,
+          "minutes": 245.0,
+          "enter_tag": "6 "
+        }
+      ],
+      "completed_24h_marked_days": 607,
+      "largest_marked_day_ending_utc": "2025-10-11T00:00:00+00:00",
+      "largest_marked_day_gain_usdt": 299.16854354989323,
+      "top_5_days_share_of_positive_24h_cash_changes": 0.2839787519711353,
+      "last_partial_day_change_usdt": -1.1232460234109567,
+      "open_campaigns_at_marked_endpoint": 0,
+      "native_terminal_trade_count_including_force": 286,
+      "archive_sha256": "80e731e8528e6c95a424e71ae8867b1fe48f914ecbb4569e34c8f131f9743c73",
+      "curve_sha256": "b753e652a1c1301f00ef1ea2301e22fa226b9bde6361ff3b9fd31404d2bb8c21"
+    },
+    "actual500_8bp": {
+      "starting_usdt": 500,
+      "cost_bps_per_side": 8,
+      "marked_ending_usdt": 1178.1269717199998,
+      "marked_cumulative_return": 1.3562539434399996,
+      "maximum_hourly_drawdown": 0.038243622308149594,
+      "continuous_2025_return": 0.9879105046018446,
+      "continuous_2026_through_august_return": 0.18529176136726022,
+      "natural_campaigns_closed_before_endpoint": 286,
+      "profitable_campaigns": 281,
+      "losing_campaigns": 5,
+      "gross_winner_pnl_usdt": 712.6840419399999,
+      "winner_median_usdt": 1.21330104,
+      "winner_p90_usdt": 6.10775088,
+      "win_duration_median_minutes": 300.0,
+      "winners_above_fraction_of_starting_capital": {
+        "0.01": {
+          "count": 47,
+          "gross_winner_pnl_share": 0.579113010383284
+        },
+        "0.02": {
+          "count": 13,
+          "gross_winner_pnl_share": 0.2544597718455265
+        },
+        "0.05": {
+          "count": 1,
+          "gross_winner_pnl_share": 0.042728371912337144
+        }
+      },
+      "top_10_gross_winner_pnl_share": 0.2115266264832286,
+      "top_5_campaigns": [
+        {
+          "pair": "ADA/USDT:USDT",
+          "is_short": false,
+          "close": "2025-10-10T21:45:00.000Z",
+          "profit_abs": 30.4518288,
+          "minutes": 5.0,
+          "enter_tag": "145 "
+        },
+        {
+          "pair": "THETA/USDT:USDT",
+          "is_short": false,
+          "close": "2025-10-10T21:45:00.000Z",
+          "profit_abs": 24.22050547,
+          "minutes": 5.0,
+          "enter_tag": "145 "
+        },
+        {
+          "pair": "RUNE/USDT:USDT",
+          "is_short": false,
+          "close": "2025-10-10T21:45:00.000Z",
+          "profit_abs": 16.2280096,
+          "minutes": 5.0,
+          "enter_tag": "145 "
+        },
+        {
+          "pair": "DYDX/USDT:USDT",
+          "is_short": false,
+          "close": "2026-06-18T20:30:00.000Z",
+          "profit_abs": 14.98529264,
+          "minutes": 280.0,
+          "enter_tag": "141 "
+        },
+        {
+          "pair": "SNX/USDT:USDT",
+          "is_short": false,
+          "close": "2026-07-06T15:55:00.000Z",
+          "profit_abs": 11.60505174,
+          "minutes": 245.0,
+          "enter_tag": "6 "
+        }
+      ],
+      "completed_24h_marked_days": 607,
+      "largest_marked_day_ending_utc": "2025-10-11T00:00:00+00:00",
+      "largest_marked_day_gain_usdt": 139.79970797119393,
+      "top_5_days_share_of_positive_24h_cash_changes": 0.2818981083977112,
+      "last_partial_day_change_usdt": -0.5485729502047434,
+      "open_campaigns_at_marked_endpoint": 0,
+      "native_terminal_trade_count_including_force": 286,
+      "archive_sha256": "086914032b658e26ce4e83ef77bdc5e071b76e1f4dee78e17b0858b1a375d139",
+      "curve_sha256": "48caa8c7ad75a7c1e9297fee049dd2aa40bb4777199badc936e6e3604a087e1d"
+    }
+  }
+}

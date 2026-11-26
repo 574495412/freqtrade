@@ -1,0 +1,47 @@
+{
+  "source": {
+    "path": "/Users/chrise/GitHub/freqtrade/research/crypto/nfi80_online_baseline_20261125_v1/baseline_alignment.json",
+    "sha256": "59eb6aedf68e69c4cccab520d70f30d02290266598f1b0a41408fdcd63402841"
+  },
+  "cohort": "natural exits of exact 562 short entry only",
+  "by_cost": {
+    "15": {
+      "completed": 67,
+      "winners": 66,
+      "net_pnl_usdt": -218.04184936000001,
+      "positive_net_pnl_usdt": 184.64454187,
+      "worst_trade": {
+        "pair": "NEAR/USDT:USDT",
+        "open_date": "2026-08-14 07:45:00+00:00",
+        "close_date": "2026-09-28 00:00:00+00:00",
+        "profit_abs": -402.68639123,
+        "exit_reason": "exit_bad_trade_broken_237pct ( 562 )",
+        "funding_fees": 1.4658422734163357
+      },
+      "native_archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_15bps/native_results/backtest-result-2026-11-09_11-36-59.zip",
+        "sha256": "48381f6843d81002e70cdb18cd8a5e4105c11ad9716e8f2a11334b1e857ccf1e"
+      }
+    },
+    "8": {
+      "completed": 68,
+      "winners": 68,
+      "net_pnl_usdt": 188.13712561,
+      "positive_net_pnl_usdt": 188.13712561,
+      "worst_trade": {
+        "pair": "STRK/USDT:USDT",
+        "open_date": "2026-06-02 23:00:00+00:00",
+        "close_date": "2026-06-04 00:45:00+00:00",
+        "profit_abs": 0.09421814,
+        "exit_reason": "exit_profit_short_rebuy_t_0_1_m ( 562 )",
+        "funding_fees": 0.005978955645800399
+      },
+      "native_archive": {
+        "path": "/Users/chrise/GitHub/freqtrade/user_data/crypto_quant/nfi80_historical_universe_20261109_v001/accounts-v003/flatboost_8bps/native_results/backtest-result-2026-11-09_12-01-25.zip",
+        "sha256": "9e0554593bc987ad467ad6462a437af89d333ea5b5b07ed54fbbb48e1f6c57b0"
+      }
+    }
+  },
+  "orders_enabled": false,
+  "interpretation": "Historical control diagnostic. Cost changes can change native realized trade paths. This file does not select or test a new rule."
+}

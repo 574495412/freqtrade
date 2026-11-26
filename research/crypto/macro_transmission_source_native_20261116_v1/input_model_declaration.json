@@ -1,0 +1,12 @@
+{
+  "declared_at": "2026-11-15T18:43:42.686894+00:00",
+  "stage": "after raw schema review,before actual coverage calculation;no financial starts",
+  "default": "actual snapshot observed;never backdate current acquisition",
+  "explicit_sensitivity": "next source-session-calendar day06UTC as local assumed completion/availability boundary;not an exchange or vendor release certificate",
+  "source_calendar_window": "10calendar-day endpoints using most recent nonnull original quote at each endpoint",
+  "max_age_hours": 120,
+  "raw_missing": "retain all null rows;carry only an explicitly dated prior value whilewithinage;not certify why newerrawclosemissing",
+  "model_only": true,
+  "source_CSV_or_fixture_not_silently_refreshed": true,
+  "financial_accounts_admitted": false
+}

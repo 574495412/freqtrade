@@ -1,0 +1,533 @@
+{
+  "passed": true,
+  "scenarios": [
+    {
+      "market": "XNYS",
+      "callbacks": [
+        {
+          "at": "2025-01-02T14:00:00+00:00",
+          "known_close": "2025-01-01T20:00:00+00:00",
+          "signal_tag": "2025-01-01"
+        },
+        {
+          "at": "2025-01-03T14:00:00+00:00",
+          "known_close": "2025-01-02T21:00:00+00:00",
+          "signal_tag": "2025-01-02"
+        },
+        {
+          "at": "2025-01-06T14:00:00+00:00",
+          "known_close": "2025-01-03T21:00:00+00:00",
+          "signal_tag": "2025-01-03"
+        },
+        {
+          "at": "2025-01-07T14:00:00+00:00",
+          "known_close": "2025-01-06T21:00:00+00:00",
+          "signal_tag": "2025-01-06"
+        },
+        {
+          "at": "2025-01-08T14:00:00+00:00",
+          "known_close": "2025-01-07T21:00:00+00:00",
+          "signal_tag": "2025-01-07"
+        },
+        {
+          "at": "2025-01-09T14:00:00+00:00",
+          "known_close": "2025-01-08T21:00:00+00:00",
+          "signal_tag": "2025-01-08"
+        },
+        {
+          "at": "2025-01-10T14:00:00+00:00",
+          "known_close": "2025-01-09T21:00:00+00:00",
+          "signal_tag": "2025-01-09"
+        }
+      ],
+      "snapshots": [
+        {
+          "at": "2025-01-02 14:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 1000.0,
+          "unsettled_receivable": 0,
+          "total_cash": 1000.0,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 1000.0,
+          "execution_fees": "0",
+          "filled_orders": 0,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-02 14:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 799.0,
+          "unsettled_receivable": 198.6,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-03 14:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 799.0,
+          "unsettled_receivable": 198.6,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-06 14:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 997.6,
+          "unsettled_receivable": 0,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-07 14:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 997.6,
+          "unsettled_receivable": 0,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-08 14:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 997.6,
+          "unsettled_receivable": 0,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-09 14:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 997.6,
+          "unsettled_receivable": 0,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-10 14:00:00+00:00",
+          "market": "XNYS",
+          "currency": "USD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 997.6,
+          "unsettled_receivable": 0,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/USD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        }
+      ],
+      "orders": [
+        {
+          "trade_id": 1,
+          "side": "buy",
+          "quantity": 2,
+          "price": 100,
+          "at": "2025-01-02T14:00:00+00:00"
+        },
+        {
+          "trade_id": 1,
+          "side": "sell",
+          "quantity": 2,
+          "price": 100,
+          "at": "2025-01-02T14:00:00+00:00"
+        }
+      ],
+      "native_generator": "freqtrade.optimize.backtesting",
+      "synthetic": true
+    },
+    {
+      "market": "XHKG",
+      "callbacks": [
+        {
+          "at": "2025-01-02T01:00:00+00:00",
+          "known_close": "2025-01-01T07:00:00+00:00",
+          "signal_tag": "2025-01-01"
+        },
+        {
+          "at": "2025-01-03T01:00:00+00:00",
+          "known_close": "2025-01-02T08:00:00+00:00",
+          "signal_tag": "2025-01-02"
+        },
+        {
+          "at": "2025-01-06T01:00:00+00:00",
+          "known_close": "2025-01-03T08:00:00+00:00",
+          "signal_tag": "2025-01-03"
+        },
+        {
+          "at": "2025-01-07T01:00:00+00:00",
+          "known_close": "2025-01-06T08:00:00+00:00",
+          "signal_tag": "2025-01-06"
+        },
+        {
+          "at": "2025-01-08T01:00:00+00:00",
+          "known_close": "2025-01-07T08:00:00+00:00",
+          "signal_tag": "2025-01-07"
+        },
+        {
+          "at": "2025-01-09T01:00:00+00:00",
+          "known_close": "2025-01-08T08:00:00+00:00",
+          "signal_tag": "2025-01-08"
+        },
+        {
+          "at": "2025-01-10T01:00:00+00:00",
+          "known_close": "2025-01-09T08:00:00+00:00",
+          "signal_tag": "2025-01-09"
+        }
+      ],
+      "snapshots": [
+        {
+          "at": "2025-01-02 01:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 1000.0,
+          "unsettled_receivable": 0,
+          "total_cash": 1000.0,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 1000.0,
+          "execution_fees": "0",
+          "filled_orders": 0,
+          "closed_trade_net_cash_profit": "0",
+          "trade_fees": [],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-02 01:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 799.0,
+          "unsettled_receivable": 198.6,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-03 01:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 799.0,
+          "unsettled_receivable": 198.6,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-06 01:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 799.0,
+          "unsettled_receivable": 198.6,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-07 01:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 997.6,
+          "unsettled_receivable": 0,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-08 01:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 997.6,
+          "unsettled_receivable": 0,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-09 01:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 997.6,
+          "unsettled_receivable": 0,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        },
+        {
+          "at": "2025-01-10 01:00:00+00:00",
+          "market": "XHKG",
+          "currency": "HKD",
+          "mark_kind": "open",
+          "initial_cash": 1000.0,
+          "free_cash": 997.6,
+          "unsettled_receivable": 0,
+          "total_cash": 997.6,
+          "holdings": [],
+          "market_value": 0,
+          "net_nav": 997.6,
+          "execution_fees": "2.40",
+          "filled_orders": 2,
+          "closed_trade_net_cash_profit": "-2.40",
+          "trade_fees": [
+            [
+              1,
+              "ABC/HKD",
+              "2.40",
+              false
+            ]
+          ],
+          "dividend_receivable": "0",
+          "paid_dividends": "0"
+        }
+      ],
+      "orders": [
+        {
+          "trade_id": 1,
+          "side": "buy",
+          "quantity": 2,
+          "price": 100,
+          "at": "2025-01-02T01:00:00+00:00"
+        },
+        {
+          "trade_id": 1,
+          "side": "sell",
+          "quantity": 2,
+          "price": 100,
+          "at": "2025-01-02T01:00:00+00:00"
+        }
+      ],
+      "native_generator": "freqtrade.optimize.backtesting",
+      "synthetic": true
+    }
+  ],
+  "native_synthetic_fills": 4,
+  "generator_yields": 14,
+  "snapshots": 16,
+  "historical_strategy_accounts": 0,
+  "performance": null,
+  "note": "ABC fixtures, explicit synthetic fees/calendars; direct native generator and fill calls, not Configuration/Backtesting.start financial runs"
+}

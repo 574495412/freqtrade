@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "synthetic_semantic_witnesses": 3,
+  "source_signal_ratio_126_matches": true,
+  "source_empty_spy_defaults_LONG": true,
+  "source_clipped_first_return_in_metrics_but_not_equity": true,
+  "static_future_availability_filter": [
+    "total > 0",
+    "spy_past.empty or pd.isna(spy_past['MA50'].iloc[-1])",
+    "len(candidates) < max(LONG_N, SHORT_N)",
+    "above_ma50",
+    "date not in df.index",
+    "pd.isna(row['Momentum']) or pd.isna(row['Forward_Overnight'])",
+    "df.loc[:date, 'DollarVol'].tail(20).mean() < MIN_DOLLAR_VOL"
+  ],
+  "source_top_level_executed": false,
+  "source_downloaders_executed": false,
+  "author_account_reproduced": false,
+  "financial_accounts": 0,
+  "scope": "three pure function synthetic probes plus static AST; not historical error rates or account performance"
+}

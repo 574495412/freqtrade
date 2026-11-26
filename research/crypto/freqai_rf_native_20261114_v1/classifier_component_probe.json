@@ -1,0 +1,19 @@
+{
+  "synthetic": true,
+  "financial_accounts": 0,
+  "native_source_files_verified": 595,
+  "original_source_predict_error": {
+    "type": "ValueError",
+    "message": "y contains previously unseen labels: ['down' 'up']"
+  },
+  "actual_native_fit": true,
+  "actual_native_datakitchen": true,
+  "native_base_predict_correct": true,
+  "classes": [
+    "down",
+    "up"
+  ],
+  "identical_estimator_and_pipeline": true,
+  "probability_cells": 24,
+  "fix_scope": "Supported subclass calls BaseClassifierModel.predict directly; RF already predicts original string classes, so no second inverse transform"
+}

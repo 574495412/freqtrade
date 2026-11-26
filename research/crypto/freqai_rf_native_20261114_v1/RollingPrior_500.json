@@ -1,0 +1,126 @@
+{
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "dry_run_wallet": 500,
+  "max_open_trades": 1,
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "",
+  "unfilledtimeout": {
+    "entry": 3,
+    "exit": 2,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0
+  },
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "username": "",
+    "password": ""
+  },
+  "telegram": {
+    "enabled": false,
+    "token": "",
+    "chat_id": ""
+  },
+  "dry_run": true,
+  "backtest_cache": "none",
+  "position_adjustment_enable": false,
+  "trading_mode": "futures",
+  "fee": 0.0008,
+  "margin_mode": "isolated",
+  "exchange": {
+    "name": "binance",
+    "enable_ws": false,
+    "pair_whitelist": [
+      "BTC/USDT:USDT"
+    ],
+    "pair_blacklist": [],
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "timeout": 20000
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "timeout": 20000
+    }
+  },
+  "strategy": "RollingPrior",
+  "timeframe_detail": "5m",
+  "export": "trades",
+  "max_entry_position_adjustment": 0,
+  "timeframe": "1h",
+  "startup_candle_count": 80,
+  "freqaimodel": "TrainingPrior",
+  "freqaimodel_path": "/Users/chrise/GitHub/freqtrade/research/crypto/freqai_rf_native_20261114_v1",
+  "freqai": {
+    "enabled": true,
+    "identifier": "rolling_prior_v1",
+    "train_period_days": 30,
+    "backtest_period_days": 7,
+    "save_backtest_models": false,
+    "purge_old_models": 0,
+    "activate_tensorboard": false,
+    "data_kitchen_thread_count": 1,
+    "continual_learning": false,
+    "feature_parameters": {
+      "include_timeframes": [
+        "1h"
+      ],
+      "include_corr_pairlist": [],
+      "indicator_periods_candles": [
+        10,
+        20
+      ],
+      "include_shifted_candles": 2,
+      "label_period_candles": 20,
+      "DI_threshold": 0,
+      "weight_factor": 0,
+      "principal_component_analysis": false,
+      "use_SVM_to_remove_outliers": false,
+      "use_DBSCAN_to_remove_outliers": false,
+      "noise_standard_deviation": 0,
+      "shuffle_after_split": false,
+      "buffer_train_data_candles": 0,
+      "plot_feature_importances": 0
+    },
+    "data_split_parameters": {
+      "test_size": 0,
+      "shuffle": false
+    },
+    "model_training_parameters": {
+      "n_estimators": 100,
+      "max_depth": 5,
+      "min_samples_leaf": 5,
+      "max_features": "sqrt",
+      "n_jobs": 1,
+      "random_state": 42
+    }
+  }
+}

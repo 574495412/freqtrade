@@ -1,0 +1,59 @@
+{
+  "frozen_at": "2026-11-16T15:21:58.372756+00:00",
+  "task": "HK/US complete equity-account integration: explicit implemented split units on actual native trades; synthetic lifecycle validation",
+  "account_target_window": [
+    "2025-01-01",
+    "2026-08-31"
+  ],
+  "original_queue": "503 US + 11 HK; no narrowing; USD/HKD separate",
+  "scope": "unlevered single-entry full-exit ordinary same-currency shares, integer entitlement only; no cash in lieu, due bills, order carry, DCA, partial exits, shorts or historical input certification",
+  "source_commit": "QuantConnect/Lean@78de2ccd1e8d1544bd69f1b0494493f56559ec12",
+  "native_commit": "c051e9065c5b677f03817dd1f83cb980af1ed684",
+  "extension": "default-preserving native Backtesting trade construction seam; split-aware LocalTrade subclass uses native cost/profit recalc with read-only unit views, retains immutable actual orders; native fee/dividend/NAV quantity hooks",
+  "fixtures": {
+    "capital": 1000,
+    "stake": 600,
+    "markets": [
+      "XNYS",
+      "XHKG"
+    ],
+    "cases": [
+      "default",
+      "none",
+      "forward_exit",
+      "reverse_exit",
+      "forward_held",
+      "thirds_held",
+      "same_open_buy",
+      "forward_reverse",
+      "future2",
+      "future4",
+      "fractional_reject"
+    ],
+    "clocks": "inherited seven synthetic sessions; not a historical strategy account",
+    "fees": "unchanged inherited explicit fixture fee contract",
+    "dividends": "one post-split ordinary cash event plus paid credit, arithmetic fixture only"
+  },
+  "gates": [
+    "source/producer hashes",
+    "default no-event path equals existing parent and subclass no-event",
+    "raw order identity/price/quantity/timestamp never rebased",
+    "actual native entry, full exit, second entry, terminal held quantities and basis",
+    "no cash creation at integer split",
+    "post-split dividend quantity in new units",
+    "future ratio perturbation leaves earlier state exact",
+    "fractional entitlement rejected before wallet/trade mutation; preserve partial attempt",
+    "independent Decimal readback of every completed native cash/holding/fee/dividend/NAV boundary"
+  ],
+  "historical_accounts": 0,
+  "portfolio_accounts": 0,
+  "factor_analysis_calls": 0,
+  "bench_records": 0,
+  "orders_enabled": false,
+  "production_eligible": false,
+  "goal_complete": false,
+  "resource_policy": {
+    "minimum_free_bytes": 536870912,
+    "new_output_limit_bytes": 83886080
+  }
+}

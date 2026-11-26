@@ -1,0 +1,15 @@
+{
+  "parent": "/Users/chrise/GitHub/freqtrade/research/crypto/tsmom_risk_native_20261114_v1/native_runner.py",
+  "parent_sha256": "474a145adb67bb14eac25b525b730eb036523f641142300e47d865aed856e1a8",
+  "initial_copy": "/Users/chrise/GitHub/freqtrade/research/crypto/source_reversal_adx_native_20261115_v1/native_runner_initial.source.txt",
+  "current_sha256": "a72d67e30f5b092f81b0cf45ba07fdbe9fb43e3bc8388d044507e2b11a821cdd",
+  "changes": [
+    "capture native source signal hashes instead of daily factor-specific artifacts",
+    "persist source budget trace",
+    "abort before export on persisted native callback fatal state",
+    "fixed snapshot tick through local native extension instead of future-month decimal inference",
+    "daily Sharpe uses completed24hour intervals; full return/DD grid unchanged"
+  ],
+  "native_matcher_wallet_strategy_signal_exit_policy_replaced": false,
+  "local_alpha_combination_and_budget_owned_by": "SourcePortfolio.py"
+}

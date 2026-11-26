@@ -1,0 +1,49 @@
+{
+  "passed": true,
+  "rows": [
+    {
+      "pair": "BTC/USDT",
+      "model": "har",
+      "target_days": 607,
+      "first_target_day": "2025-01-01 00:00:00",
+      "last_target_day": "2026-08-30 00:00:00",
+      "qlike": 0.27326237393992786,
+      "mse_variance": 4.1937761885013513e-07,
+      "diagnostic_only_not_profit": true
+    },
+    {
+      "pair": "BTC/USDT",
+      "model": "naive",
+      "target_days": 607,
+      "first_target_day": "2025-01-01 00:00:00",
+      "last_target_day": "2026-08-30 00:00:00",
+      "qlike": 0.4483899424231106,
+      "mse_variance": 6.410538352364369e-07,
+      "diagnostic_only_not_profit": true
+    },
+    {
+      "pair": "ETH/USDT",
+      "model": "har",
+      "target_days": 607,
+      "first_target_day": "2025-01-01 00:00:00",
+      "last_target_day": "2026-08-30 00:00:00",
+      "qlike": 0.24906683260131152,
+      "mse_variance": 1.586381357637781e-06,
+      "diagnostic_only_not_profit": true
+    },
+    {
+      "pair": "ETH/USDT",
+      "model": "naive",
+      "target_days": 607,
+      "first_target_day": "2025-01-01 00:00:00",
+      "last_target_day": "2026-08-30 00:00:00",
+      "qlike": 0.3899913426441807,
+      "mse_variance": 2.328345147437543e-06,
+      "diagnostic_only_not_profit": true
+    }
+  ],
+  "final_partial_day_excluded": true,
+  "future_outcome_mask_not_used_for_native_forecast": true,
+  "independent_oos": false,
+  "new_factor_ic_claim": false
+}

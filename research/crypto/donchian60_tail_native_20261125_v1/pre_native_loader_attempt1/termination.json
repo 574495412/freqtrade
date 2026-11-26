@@ -1,0 +1,11 @@
+{
+  "cause": "Native setup_optimize_configuration used the temporary default data folder when explicit datadir was omitted from command options.",
+  "observed_loader_session": 94583,
+  "native_financial_accounts_started": 0,
+  "waiting_controller_session": 17216,
+  "waiting_controller_pid": 11891,
+  "actual_waiting_controller_exit_code": 143,
+  "downstream_waiter_session": 93227,
+  "actual_downstream_waiter_exit_code": 1,
+  "repair": "Pass the already frozen data directory via native options, and assert the effective path before resolving the exchange."
+}

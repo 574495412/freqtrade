@@ -1,0 +1,82 @@
+{
+  "stake_currency": "USDT",
+  "stake_amount": "unlimited",
+  "dry_run_wallet": 125.0,
+  "max_open_trades": 1,
+  "tradable_balance_ratio": 0.99,
+  "fiat_display_currency": "",
+  "unfilledtimeout": {
+    "entry": 3,
+    "exit": 2,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "entry_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0,
+    "check_depth_of_market": {
+      "enabled": false,
+      "bids_to_ask_delta": 1
+    }
+  },
+  "exit_pricing": {
+    "price_side": "other",
+    "use_order_book": true,
+    "order_book_top": 1,
+    "price_last_balance": 0
+  },
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "pairlists": [
+    {
+      "method": "StaticPairList"
+    }
+  ],
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "api_server": {
+    "enabled": false,
+    "listen_ip_address": "127.0.0.1",
+    "listen_port": 8080,
+    "username": "",
+    "password": ""
+  },
+  "telegram": {
+    "enabled": false,
+    "token": "",
+    "chat_id": ""
+  },
+  "dry_run": true,
+  "backtest_cache": "none",
+  "position_adjustment_enable": false,
+  "trading_mode": "futures",
+  "fee": 0.0008,
+  "margin_mode": "isolated",
+  "exchange": {
+    "name": "binance",
+    "enable_ws": false,
+    "pair_whitelist": [
+      "ETH/USDT:USDT"
+    ],
+    "pair_blacklist": [],
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "timeout": 20000
+    },
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "timeout": 20000
+    }
+  },
+  "strategy": "CarryShort",
+  "timeframe_detail": "",
+  "export": "trades",
+  "max_entry_position_adjustment": 0,
+  "timeframe": "5m",
+  "startup_candle_count": 1,
+  "research_carry_leg": true,
+  "research_quantity": 0.035
+}

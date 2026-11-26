@@ -1,0 +1,139 @@
+{
+  "passed_within_raw_native_and_public_api_scope": true,
+  "monthly_archives_verified": 670,
+  "native_files_verified": 80,
+  "daily_mark_archives_verified": 6,
+  "actual_daily_mark_rows_inserted": 144,
+  "public_funding_rows": 39412,
+  "funding_rate_maximum_rest_error": 0.0,
+  "public_rest_comparisons": [
+    {
+      "request": {
+        "symbol": "XTZUSDT",
+        "startTime": 1782216000000,
+        "endTime": 1782331200000,
+        "limit": 1000
+      },
+      "matched_rows": 7,
+      "missing_records_not_filled": true
+    },
+    {
+      "request": {
+        "symbol": "ONTUSDT",
+        "startTime": 1767369600000,
+        "endTime": 1767412800000,
+        "limit": 1000
+      },
+      "matched_rows": 6,
+      "missing_records_not_filled": true
+    },
+    {
+      "request": {
+        "symbol": "ONTUSDT",
+        "startTime": 1776081600000,
+        "endTime": 1776124800000,
+        "limit": 1000
+      },
+      "matched_rows": 5,
+      "missing_records_not_filled": true
+    },
+    {
+      "request": {
+        "symbol": "ONTUSDT",
+        "startTime": 1782216000000,
+        "endTime": 1782331200000,
+        "limit": 1000
+      },
+      "matched_rows": 7,
+      "missing_records_not_filled": true
+    }
+  ],
+  "cadence_issue_classifications": [
+    {
+      "original_issue": {
+        "symbol": "XTZ",
+        "kind": "cadence_gap",
+        "event_time": "2026-06-24 08:00:00.005000+00:00",
+        "delta_hours": 8.0
+      },
+      "previous_event": "2026-06-24 00:00:00.005000+00:00",
+      "previous_interval": 4,
+      "current_interval": 4,
+      "classification": "unresolved_public_event_gap",
+      "absent_old_grid_hour": "2026-06-24 04:00:00+00:00",
+      "zero_rate_assumed": false,
+      "nominal_forecast_exposure": {
+        "10": false,
+        "15": false,
+        "20": false
+      },
+      "actual_native_held_exposure_verified": false
+    },
+    {
+      "original_issue": {
+        "symbol": "ONT",
+        "kind": "cadence_gap",
+        "event_time": "2026-01-02 20:00:00+00:00",
+        "delta_hours": 2.0
+      },
+      "previous_event": "2026-01-02 18:00:00+00:00",
+      "previous_interval": 1,
+      "current_interval": 4,
+      "classification": "compatible_UTC_grid_interval_transition",
+      "absent_old_grid_hour": "2026-01-02 19:00:00+00:00",
+      "zero_rate_assumed": false,
+      "nominal_forecast_exposure": {
+        "10": false,
+        "15": false,
+        "20": false
+      },
+      "actual_native_held_exposure_verified": false
+    },
+    {
+      "original_issue": {
+        "symbol": "ONT",
+        "kind": "cadence_gap",
+        "event_time": "2026-04-13 16:00:00+00:00",
+        "delta_hours": 2.0
+      },
+      "previous_event": "2026-04-13 14:00:00.001000+00:00",
+      "previous_interval": 1,
+      "current_interval": 4,
+      "classification": "compatible_UTC_grid_interval_transition",
+      "absent_old_grid_hour": "2026-04-13 15:00:00+00:00",
+      "zero_rate_assumed": false,
+      "nominal_forecast_exposure": {
+        "10": false,
+        "15": false,
+        "20": false
+      },
+      "actual_native_held_exposure_verified": false
+    },
+    {
+      "original_issue": {
+        "symbol": "ONT",
+        "kind": "cadence_gap",
+        "event_time": "2026-06-24 08:00:00.005000+00:00",
+        "delta_hours": 8.0
+      },
+      "previous_event": "2026-06-24 00:00:00.005000+00:00",
+      "previous_interval": 4,
+      "current_interval": 4,
+      "classification": "unresolved_public_event_gap",
+      "absent_old_grid_hour": "2026-06-24 04:00:00+00:00",
+      "zero_rate_assumed": false,
+      "nominal_forecast_exposure": {
+        "10": false,
+        "15": false,
+        "20": false
+      },
+      "actual_native_held_exposure_verified": false
+    }
+  ],
+  "original_admission_unchanged": true,
+  "no_missing_funding_rates_filled": true,
+  "funded_admission": false,
+  "actual_native_funding_exposure_audit_required": true,
+  "native_funded_accounts": 0,
+  "original_input_admission_sha256": "0a7d16e2362778f119b7aececc54a7c2557a15b29850e5d88e227cd5cd225b94"
+}

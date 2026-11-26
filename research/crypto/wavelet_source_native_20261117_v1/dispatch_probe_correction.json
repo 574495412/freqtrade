@@ -1,0 +1,15 @@
+{
+  "recorded_at": "2026-11-16T23:07:05.527173+00:00",
+  "original_claim_withdrawn": "Current source default predict_data TypeError",
+  "cause": "Probe construction copied the parent add_jumping_predictions but omitted the later TS_Wavelet override at line505, so it tested an incorrect method resolution order",
+  "independent_check_that_detected_it": "verify_upstream.py asserted no subclass override and failed; source AST inventory showed the override",
+  "correct_source_default_path": "TSPredict.add_predictions -> TS_Wavelet.add_jumping_predictions -> TS_Wavelet.add_rolling_predictions",
+  "legacy_DWT_Predict_chronology_result_affected": false,
+  "original_claim_admitted_as_source_defect": false,
+  "new_financial_runs": 0,
+  "original_probe_inputs": {
+    "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_source_native_20261117_v1/invalid_dispatch_probe_v001/audit_upstream_dispatch.py": "0230d1ea2d2ff9b7aeb69acd494b877d7fb5fbf6734a9f63d8745f610cea5be7",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_source_native_20261117_v1/invalid_dispatch_probe_v001/upstream_dispatch_audit.json": "ef24cb6b89139bf841875b5c3a2723510f7a53bbf12ef8062f8c88f3ac4fb541",
+    "/Users/chrise/GitHub/freqtrade/research/crypto/wavelet_source_native_20261117_v1/invalid_dispatch_probe_v001/verify_upstream.py": "743126607925e5ff30a5cea640232f93120df2942167a7368fc741aa95ab2752"
+  }
+}

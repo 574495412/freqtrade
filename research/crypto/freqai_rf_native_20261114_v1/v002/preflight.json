@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "strategy": "RollingRF",
+      "actual_component_fits": 3,
+      "first_training_rows": 700,
+      "prefix_checks_passed": true
+    },
+    {
+      "strategy": "RollingPrior",
+      "actual_component_fits": 3,
+      "first_training_rows": 700,
+      "prefix_checks_passed": true
+    }
+  ],
+  "additional_native_component_fits": 6,
+  "requested_training_warmup_complete": true,
+  "initial_bootstrap_failure_retained": true,
+  "financial_accounts": 0
+}

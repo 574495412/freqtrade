@@ -1,0 +1,17 @@
+{
+  "cause": "default factor_analysis CSV parser collapses near-equal raw funding floats; source/native trading inputs unchanged",
+  "maximum_absolute_float_change": 9.999054535747565e-17,
+  "rank_changed_cells": 0,
+  "dates_with_rank_changes": 0,
+  "first_attempt_actual_native_factor_analysis_calls": 1,
+  "first_attempt_financial_accounts": 0,
+  "repair": "apply existing native rank transform before CSV, preserving raw Spearman/order/ties; no sign/window/universe/price rule change",
+  "first_native_summary": {
+    "ic_mean": 0.017368,
+    "ic_std": 0.208356,
+    "ir": 0.0834,
+    "ic_positive_ratio": 0.525,
+    "ic_count": 120
+  },
+  "first_failed_log_sha256": "5c3fa6f58dd328e136afba3ac29488573c0114abd743d34fd205e6d50918fc8c"
+}
